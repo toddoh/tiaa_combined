@@ -10,6 +10,9 @@ from scipy.sparse import csr_matrix
 from sklearn.cluster import KMeans
 from sklearn.neighbors import NearestNeighbors
 import matplotlib.pyplot as plt
+from sklearn.metrics import silhouette_samples, silhouette_score
+import matplotlib.cm as cm
+from sklearn.decomposition import PCA
 
 from sklearn.manifold import TSNE
 from sklearn.decomposition import TruncatedSVD
@@ -69,6 +72,40 @@ def parse_aggregated(data, kval=15):
 
     print('Determining k-means clusters...')
     tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
+    tfsX = load_sparse_csr(data_path + 'articles_tf_idf.npz').todense()
+
+    print('Determining k-means clusters: range of clusters: 2-30')
+    range_n_clusters = range(2, 21)
+
+    # pca = PCA(n_components=2).fit(model_tf_idf)
+    # data2D = pca.transform(model_tf_idf)
+
+    for num_clusters in range_n_clusters:
+        tfs_reduced = TruncatedSVD(n_components=num_clusters, random_state=0).fit_transform(tfs)
+        tfs_embedded = TSNE(n_components=2, perplexity=40, verbose=2).fit_transform(tfs_reduced)
+        # Create a subplot with 1 row and 2 columns
+        fig, (ax1, ax2) = plt.subplots(1, 2)
+        fig.set_size_inches(18, 7)
+
+        # The 1st subplot is the silhouette plot
+        # The silhouette coefficient can range from -1, 1 but in this example all
+        # lie within [-0.1, 1]
+        ax1.set_xlim([-0.1, 1])
+        # The (n_clusters+1)*10 is for inserting blank space between silhouette
+        # plots of individual clusters, to demarcate them clearly.
+        ax1.set_ylim([0, len(tfs_embedded) + (num_clusters + 1) * 10])
+
+        km = KMeans(n_clusters=num_clusters,
+                    random_state=10  # fixes the seed
+                    )
+
+        cluster_labels = km.fit_predict(tfs_embedded)
+
+        # The silhouette_score gives the average value for all the samples.
+        # This gives a perspective into the density and separation of the formed
+        # clusters
+        silhouette_avg = silhouette_score(tfs_embedded, cluster_labels)
+        print('Silhouette score of {0} amount of clusters: {1}'.format(num_clusters, silhouette_avg))
 
     k = kval
     km = KMeans(n_clusters=k, init='k-means++', max_iter=100, n_init=5,

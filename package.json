@@ -1,7 +1,7 @@
 {
-  "name": "policy",
+  "name": "minion_kingbob",
   "version": "1.0.0",
-  "description": "policy tracker",
+  "description": "thisisallabout front-end",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "webpack": "^3.6.0"

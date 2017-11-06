@@ -23,7 +23,8 @@ def cluster_articles(item, mode=None):
 
         cursor = list(collection.find({"ts": {"$gt": int(unix_time) }}).sort([('_id', 1)]))
     elif mode == 'unlimited':
-        cursor = list(collection.find({}).sort([('_id', 1)]))
+        cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
+        # cursor = list(collection.find({}).sort([('_id', 1)]))
         print(len(cursor))
 
     if len(cursor):
