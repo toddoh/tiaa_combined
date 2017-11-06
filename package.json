@@ -1,0 +1,19 @@
+{
+  "name": "policy",
+  "version": "1.0.0",
+  "description": "policy tracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
+}
