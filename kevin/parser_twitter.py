@@ -11,8 +11,6 @@ from sklearn.cluster import KMeans
 from sklearn.neighbors import NearestNeighbors
 import matplotlib.pyplot as plt
 from sklearn.metrics import silhouette_samples, silhouette_score
-import matplotlib.cm as cm
-from sklearn.decomposition import PCA
 
 from sklearn.manifold import TSNE
 from sklearn.decomposition import TruncatedSVD
@@ -35,7 +33,6 @@ def parse_aggregated(data, kval=15):
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
     tfs = tfidf.fit_transform(parsed_article.values())
 
-
     def save_sparse_csr(filename,array):
         np.savez(filename,data = array.data ,indices=array.indices,
                  indptr =array.indptr, shape=array.shape )
@@ -46,14 +43,12 @@ def parse_aggregated(data, kval=15):
         return csr_matrix((loader['data'], loader['indices'], loader['indptr']),
                              shape = loader['shape'])
 
-
     data_path = './dataset/'
     save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
 
-    print('Calculating cosine distance...')
-    model_tf_idf = NearestNeighbors(metric='cosine', algorithm='brute')
-    model_tf_idf.fit(tfs)
-
+    # print('Calculating cosine distance...')
+    # model_tf_idf = NearestNeighbors(metric='cosine', algorithm='brute')
+    # model_tf_idf.fit(tfs)
 
     def print_nearest_neighbors(query_tf_idf, full_article_dictionary, knn_model, k):
         print('Finding nearest articles from {0}...'.format(query_tf_idf))
@@ -66,23 +61,22 @@ def parse_aggregated(data, kval=15):
             else:
                 print('N_N {0}: {1}'.format(bill, nearest_neighbors[bill]))
 
-
-    bill_id = np.random.choice(tfs.shape[0])
+    # bill_id = np.random.choice(tfs.shape[0])
     # print_nearest_neighbors(tfs[bill_id], parsed_article, model_tf_idf, k=15)
 
     print('Determining k-means clusters...')
     tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
-    tfsX = load_sparse_csr(data_path + 'articles_tf_idf.npz').todense()
 
-    print('Determining k-means clusters: range of clusters: 2-30')
+    print('Determining k-means clusters: range of clusters: 2-20')
     range_n_clusters = range(2, 21)
+    cluster_silhouette_scores = []
 
     # pca = PCA(n_components=2).fit(model_tf_idf)
     # data2D = pca.transform(model_tf_idf)
 
     for num_clusters in range_n_clusters:
         tfs_reduced = TruncatedSVD(n_components=num_clusters, random_state=0).fit_transform(tfs)
-        tfs_embedded = TSNE(n_components=2, perplexity=40, verbose=2).fit_transform(tfs_reduced)
+        tfs_embedded = TSNE(n_components=2, perplexity=40, verbose=0).fit_transform(tfs_reduced)
         # Create a subplot with 1 row and 2 columns
         fig, (ax1, ax2) = plt.subplots(1, 2)
         fig.set_size_inches(18, 7)
@@ -96,8 +90,7 @@ def parse_aggregated(data, kval=15):
         ax1.set_ylim([0, len(tfs_embedded) + (num_clusters + 1) * 10])
 
         km = KMeans(n_clusters=num_clusters,
-                    random_state=10  # fixes the seed
-                    )
+                    random_state=10)
 
         cluster_labels = km.fit_predict(tfs_embedded)
 
@@ -106,10 +99,15 @@ def parse_aggregated(data, kval=15):
         # clusters
         silhouette_avg = silhouette_score(tfs_embedded, cluster_labels)
         print('Silhouette score of {0} amount of clusters: {1}'.format(num_clusters, silhouette_avg))
+        cluster_silhouette_scores.append(silhouette_avg)
 
-    k = kval
+    max_silhouette_scores = max(cluster_silhouette_scores)
+    max_silhouette_scores_i = [i for i, j in enumerate(cluster_silhouette_scores) if j == max_silhouette_scores]
+
+    k = max_silhouette_scores_i[0] + 2
+    print(max_silhouette_scores, max_silhouette_scores_i, k)
     km = KMeans(n_clusters=k, init='k-means++', max_iter=100, n_init=5,
-                    verbose=1)
+                    verbose=0)
     km.fit(tfs)
 
     cluster_assignments_dict = {}
@@ -135,7 +133,6 @@ def parse_aggregated(data, kval=15):
         return useful_words_string
 
     cluster_themes_dict = {}
-
     for key in cluster_assignments_dict.keys():
         current_tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
         current_tfs = current_tfidf.fit_transform(map(clean_text, cluster_assignments_dict[key]))
@@ -143,24 +140,6 @@ def parse_aggregated(data, kval=15):
         current_tf_idfs = dict(zip(current_tfidf.get_feature_names(), current_tfidf.idf_))
         tf_idfs_tuples = current_tf_idfs.items()
         cluster_themes_dict[key] = sorted(tf_idfs_tuples, key=lambda x: x[1])[:5]
-
     # print('Random Cluster {0} key words: {1}'.format(cluster_pick, [x[0] for x in cluster_themes_dict[cluster_pick]]))
 
     return cluster_themes_dict, cluster_assignments_dict
-
-    print('Cluster distribution plot:')
-    plt.hist(km.labels_, bins=k)
-    plt.show()
-
-
-    print('Transforming data into 2d dimensional data...')
-    k = 15
-    tfs_reduced = TruncatedSVD(n_components=k, random_state=0).fit_transform(tfs)
-    tfs_embedded = TSNE(n_components=2, perplexity=40, verbose=2).fit_transform(tfs_reduced)
-
-    fig = plt.figure(figsize = (10, 10))
-    ax = plt.axes()
-    plt.scatter(tfs_embedded[:, 0], tfs_embedded[:, 1], marker = "x", c = km.labels_)
-
-    print('2D representation:')
-    plt.show()
