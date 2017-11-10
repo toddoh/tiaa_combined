@@ -5,15 +5,17 @@ import numpy as np
 import nltk
 import re
 from nltk.stem.porter import PorterStemmer
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+import itertools
+from operator import itemgetter
+import pytz
+import json
 
 print('Initiating cluster unit...')
 print('Clustering unit: Setting up MongoClient kevin@main')
 client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
 db = client['main']
 
-theme_blacklists = ['periscope', 'pbs', 'newshour', 'npr']
+theme_blacklists = ['periscope', 'pbs', 'newshour', 'npr', 'watch']
 
 def cluster_ner(text):
     # entity recognition
@@ -64,7 +66,7 @@ def cluster_articles(item, mode=None):
 
         cursor = list(collection.find({"ts": {"$gt": int(unix_time) }}).sort([('_id', 1)]))
     elif mode == 'unlimited':
-        cursor = list(collection.find({}).sort([('_id', 1)]).limit(1000))
+        cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
         # cursor = list(collection.find({}).sort([('_id', 1)]))
         print(len(cursor))
 
@@ -82,7 +84,7 @@ def cluster_articles(item, mode=None):
         parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
         print('Clustering unit: Finished processing loaded articles')
 
-        parsed_data = parse_aggregated(parsed_article_dict, 20)
+        parsed_data = parse_aggregated(parsed_article_dict, 2, 21)
         origin_data_raw = cursor
 
         # print(parsed_data[0])
@@ -96,12 +98,6 @@ def cluster_articles(item, mode=None):
             parsed_data_themes.append(tokens)
 
         parsed_articlecluster_flattened = [val for sublist in parsed_data[1].values() for val in sublist]
-        parsed_articlecluster_raw = []
-        for title in parsed_articlecluster_flattened:
-            filter = next((item for item in origin_data_raw if item["title"] == title), False)
-            if filter:
-                parsed_articlecluster_raw.append(filter)
-
         parsed_articlecluster = []
         stemmer = PorterStemmer()
 
@@ -134,20 +130,53 @@ def cluster_articles(item, mode=None):
                 print('Clustring unit: there is one or more blacklisted words in themes')
             else:
                 ner_result = list(cluster_ner(' '.join(parsed_data[1][index])))
-                theme_data_ner = []
-                ner_result_split = [words for segments in ner_result for words in segments.split()]
-                ner_result_split_l = [i.lower() for i in ner_result_split]
-                ner_theme_common = list(set(ner_result_split_l).intersection(set(theme_data_l)))
-
-                print('Clustering unit: Found common theme items: {0}'.format(ner_theme_common))
 
                 zip_data['theme'] = theme_data
+                zip_data['namedentity'] = ner_result
                 zip_data['articles'] = parsed_data[1][index]
 
                 parsed_articlecluster.append(zip_data)
 
         print(parsed_articlecluster)
 
-        print(len(parsed_articlecluster_raw))
+        parsed_articlecluster_packed = []
+        us_eastern_time = pytz.timezone('US/Eastern')
+        for cluster in parsed_articlecluster:
+            cluster_data = {}
+            cluster_data['theme'] = cluster['theme']
+            cluster_data['namedentity'] = cluster['namedentity']
+            article_list = []
+
+            for title in cluster['articles']:
+                filter = next((item for item in origin_data_raw if item["title"] == title), False)
+                if filter:
+                    if 'text' in filter:
+                        del filter['text']
+                    if 'authors' in filter:
+                        del filter['authors']
+                    if '_id' in filter:
+                        filter['_id'] = str(filter['_id'])
+                    filter['date_month'] = datetime.fromtimestamp(filter['ts'], us_eastern_time).strftime("%Y-%m")
+                    article_list.append(filter)
+
+            cluster_data['groups'] = []
+            sorted_articles = sorted(article_list, key=itemgetter('date_month'))
+            for key, group in itertools.groupby(sorted_articles, key=lambda x: x['date_month']):
+                group_articles = {}
+                group_articles['month'] = key
+                group_articles['articles'] = list(group)
+                cluster_data['groups'].append(group_articles)
+                print('Clustering unit: total {0} articles in month {1}...'.format(key, len(list(group))))
+
+            parsed_articlecluster_packed.append(cluster_data)
+
+        print('Raw article data reference: ')
+        print(parsed_articlecluster_packed)
+
+        print('Clustering unit: finished processing')
+        with open('./dataset/trumptimemachine_result.json', 'w') as outfile:
+            json.dump(parsed_articlecluster_packed, outfile, indent=4, sort_keys=True)
+
+        print('Clustering unit: saved into json file.')
     else:
         print('Clustering unit: The collection is empty, unable to process.')

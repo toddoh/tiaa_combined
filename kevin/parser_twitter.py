@@ -9,6 +9,7 @@ from nltk.stem.porter import PorterStemmer
 from scipy.sparse import csr_matrix
 from sklearn.cluster import KMeans
 from sklearn.neighbors import NearestNeighbors
+from scipy.spatial.distance import euclidean
 import matplotlib.pyplot as plt
 from sklearn.metrics import silhouette_samples, silhouette_score
 
@@ -16,7 +17,7 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import TruncatedSVD
 
 
-def parse_aggregated(data, kval=15):
+def parse_aggregated(data, rangeMin=2, rangeMax=21):
     stemmer = PorterStemmer()
 
     def stem_words(words_list, stemmer):
@@ -67,47 +68,53 @@ def parse_aggregated(data, kval=15):
     print('Determining k-means clusters...')
     tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
 
-    print('Determining k-means clusters: range of clusters: 2-20')
-    range_n_clusters = range(2, 21)
-    cluster_silhouette_scores = []
+    mode = 'default'
+    kval = 0
+    if mode == 'default':
+        print('Determining k-means clusters: range of clusters: 2-20')
+        range_n_clusters = range(rangeMin, rangeMax)
+        cluster_silhouette_scores = []
 
-    # pca = PCA(n_components=2).fit(model_tf_idf)
-    # data2D = pca.transform(model_tf_idf)
+        # pca = PCA(n_components=2).fit(model_tf_idf)
+        # data2D = pca.transform(model_tf_idf)
 
-    for num_clusters in range_n_clusters:
-        tfs_reduced = TruncatedSVD(n_components=num_clusters, random_state=0).fit_transform(tfs)
-        tfs_embedded = TSNE(n_components=2, perplexity=40, verbose=0).fit_transform(tfs_reduced)
-        # Create a subplot with 1 row and 2 columns
-        fig, (ax1, ax2) = plt.subplots(1, 2)
-        fig.set_size_inches(18, 7)
+        for num_clusters in range_n_clusters:
+            tfs_reduced = TruncatedSVD(n_components=num_clusters, random_state=0).fit_transform(tfs)
+            tfs_embedded = TSNE(n_components=2, perplexity=40, verbose=1).fit_transform(tfs_reduced)
+            # Create a subplot with 1 row and 2 columns
+            fig, (ax1, ax2) = plt.subplots(1, 2)
+            fig.set_size_inches(18, 7)
 
-        # The 1st subplot is the silhouette plot
-        # The silhouette coefficient can range from -1, 1 but in this example all
-        # lie within [-0.1, 1]
-        ax1.set_xlim([-0.1, 1])
-        # The (n_clusters+1)*10 is for inserting blank space between silhouette
-        # plots of individual clusters, to demarcate them clearly.
-        ax1.set_ylim([0, len(tfs_embedded) + (num_clusters + 1) * 10])
+            # The 1st subplot is the silhouette plot
+            # The silhouette coefficient can range from -1, 1 but in this example all
+            # lie within [-0.1, 1]
+            ax1.set_xlim([-0.1, 1])
+            # The (n_clusters+1)*10 is for inserting blank space between silhouette
+            # plots of individual clusters, to demarcate them clearly.
+            ax1.set_ylim([0, len(tfs_embedded) + (num_clusters + 1) * 10])
 
-        km = KMeans(n_clusters=num_clusters,
-                    random_state=10)
+            km = KMeans(n_clusters=num_clusters,
+                        random_state=10)
 
-        cluster_labels = km.fit_predict(tfs_embedded)
+            cluster_labels = km.fit_predict(tfs_embedded)
 
-        # The silhouette_score gives the average value for all the samples.
-        # This gives a perspective into the density and separation of the formed
-        # clusters
-        silhouette_avg = silhouette_score(tfs_embedded, cluster_labels)
-        print('Silhouette score of {0} amount of clusters: {1}'.format(num_clusters, silhouette_avg))
-        cluster_silhouette_scores.append(silhouette_avg)
+            # The silhouette_score gives the average value for all the samples.
+            # This gives a perspective into the density and separation of the formed
+            # clusters
+            silhouette_avg = silhouette_score(tfs_embedded, cluster_labels)
+            print('Silhouette score of cluster k value {0}: {1}'.format(num_clusters, silhouette_avg))
+            cluster_silhouette_scores.append(silhouette_avg)
 
-    max_silhouette_scores = max(cluster_silhouette_scores)
-    max_silhouette_scores_i = [i for i, j in enumerate(cluster_silhouette_scores) if j == max_silhouette_scores]
+        max_silhouette_scores = max(cluster_silhouette_scores)
+        max_silhouette_scores_i = [i for i, j in enumerate(cluster_silhouette_scores) if j == max_silhouette_scores]
 
-    k = max_silhouette_scores_i[0] + 2
-    print(max_silhouette_scores, max_silhouette_scores_i, k)
-    km = KMeans(n_clusters=k, init='k-means++', max_iter=100, n_init=5,
-                    verbose=0)
+        kval = max_silhouette_scores_i[0] + 2
+        print(max_silhouette_scores, max_silhouette_scores_i, kval)
+    else:
+        kval = 10
+
+    km = KMeans(n_clusters=kval, init='k-means++', max_iter=100, n_init=5,
+                    verbose=1)
     km.fit(tfs)
 
     cluster_assignments_dict = {}
@@ -139,7 +146,7 @@ def parse_aggregated(data, kval=15):
 
         current_tf_idfs = dict(zip(current_tfidf.get_feature_names(), current_tfidf.idf_))
         tf_idfs_tuples = current_tf_idfs.items()
-        cluster_themes_dict[key] = sorted(tf_idfs_tuples, key=lambda x: x[1])[:5]
+        cluster_themes_dict[key] = sorted(tf_idfs_tuples, key=lambda x: x[1])[:15]
     # print('Random Cluster {0} key words: {1}'.format(cluster_pick, [x[0] for x in cluster_themes_dict[cluster_pick]]))
 
     return cluster_themes_dict, cluster_assignments_dict
