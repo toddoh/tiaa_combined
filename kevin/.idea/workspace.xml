@@ -17,25 +17,27 @@
     <SUITE FILE_PATH="coverage/backend$cluster.coverage" NAME="cluster Coverage Results" MODIFIED="1508250674133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$action_clustering.coverage" NAME="action_clustering Coverage Results" MODIFIED="1509593177836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$unit_cluster.coverage" NAME="unit_cluster Coverage Results" MODIFIED="1508859080887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/kevin$action_aggregation.coverage" NAME="action_aggregation Coverage Results" MODIFIED="1510115007395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kevin$action_aggregation.coverage" NAME="action_aggregation Coverage Results" MODIFIED="1510574454768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$read_csv.coverage" NAME="read_csv Coverage Results" MODIFIED="1509450852473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$twitter.coverage" NAME="twitter Coverage Results" MODIFIED="1508304105799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$read_dataset.coverage" NAME="read_dataset Coverage Results" MODIFIED="1509450563263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$aggregator.coverage" NAME="aggregator Coverage Results" MODIFIED="1508213747977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$cluster_t.coverage" NAME="cluster_t Coverage Results" MODIFIED="1508135065756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$unit_aggregator.coverage" NAME="unit_aggregator Coverage Results" MODIFIED="1508858111395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/kevin$action_clustering.coverage" NAME="action_clustering Coverage Results" MODIFIED="1510279420426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kevin$action_clustering.coverage" NAME="action_clustering Coverage Results" MODIFIED="1510584685171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$api.coverage" NAME="api Coverage Results" MODIFIED="1508161936193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$parser.coverage" NAME="parser Coverage Results" MODIFIED="1508305708927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kevin$test.coverage" NAME="test Coverage Results" MODIFIED="1510574269962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="aggregator_twitter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aggregator_twitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="42" column="31" lean-forward="false" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="-454">
+              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
+                <element signature="e#0#31#0" expanded="true" />
                 <element signature="e#1369#2554#0" expanded="false" />
                 <element signature="e#6160#7398#0" expanded="false" />
               </folding>
@@ -43,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unit_cluster.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="unit_cluster.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit_cluster.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="156" column="39" lean-forward="true" selection-start-line="156" selection-start-column="39" selection-end-line="156" selection-end-column="39" />
+            <state relative-caret-position="-107">
+              <caret line="69" column="8" lean-forward="false" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -55,16 +57,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parser_twitter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parser_twitter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parser_twitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-295">
-              <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+            <state relative-caret-position="599">
+              <caret line="109" column="28" lean-forward="true" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#1820#2330#0" expanded="false" />
-                <element signature="e#4997#5041#0" expanded="false" />
-                <element signature="e#5248#5607#0" expanded="false" />
+                <element signature="e#1638#2148#0" expanded="false" />
+                <element signature="e#3718#4077#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -73,7 +74,7 @@
       <file leaf-file-name="action_clustering.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/action_clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="120">
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
@@ -83,8 +84,18 @@
       <file leaf-file-name="action_aggregation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/action_aggregation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="-90">
+              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unit_aggregator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit_aggregator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -101,10 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>synapse_0</find>
-      <find>stops</find>
-      <find>fantastic</find>
-      <find>Remember when banning bump stocks was a thing?</find>
       <find>Remember when banning bump stocks was a thing? Remember when banning bump stocks was a thing?</find>
       <find>Nikki Haley and the awful dilemma posed by South Sudan</find>
       <find>kevin</find>
@@ -131,6 +138,10 @@
       <find>theme'</find>
       <find>Nunes</find>
       <find>'theme':</find>
+      <find>i think folds</find>
+      <find>coming up in 30 min</find>
+      <find>silhouette_score</find>
+      <find>&quot;theme&quot;:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,9 +169,10 @@
         <option value="$PROJECT_DIR$/action_aggregation.py" />
         <option value="$PROJECT_DIR$/read_dataset.py" />
         <option value="$PROJECT_DIR$/read_csv.py" />
-        <option value="$PROJECT_DIR$/aggregator_twitter.py" />
         <option value="$PROJECT_DIR$/unit_aggregator.py" />
         <option value="$PROJECT_DIR$/action_clustering.py" />
+        <option value="$PROJECT_DIR$/aggregator_twitter.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/unit_cluster.py" />
         <option value="$PROJECT_DIR$/parser_twitter.py" />
       </list>
@@ -172,11 +184,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="36" />
-    <option name="y" value="58" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="34" />
+    <option name="y" value="46" />
     <option name="width" value="1356" />
-    <option name="height" value="810" />
+    <option name="height" value="799" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -186,12 +198,75 @@
             <id />
           </State>
           <State>
+            <id>Assignment issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>Flow type checkerJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
             <id>Python</id>
+          </State>
+          <State>
+            <id>RegExp</id>
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>XML</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>PyCompatibilityInspection</id>
+            <id>JavaScript</id>
           </State>
         </selected-state>
       </profile-state>
@@ -215,6 +290,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,13 +308,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -339,7 +414,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="unit_cluster" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -352,25 +427,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="backend" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_cluster.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.unit_cluster" />
-      <item index="1" class="java.lang.String" itemvalue="Python.read_csv" />
-      <item index="2" class="java.lang.String" itemvalue="Python.read_dataset" />
-      <item index="3" class="java.lang.String" itemvalue="Python.action_aggregation" />
-      <item index="4" class="java.lang.String" itemvalue="Python.action_clustering" />
+      <item index="0" class="java.lang.String" itemvalue="Python.read_csv" />
+      <item index="1" class="java.lang.String" itemvalue="Python.read_dataset" />
+      <item index="2" class="java.lang.String" itemvalue="Python.action_aggregation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.action_clustering" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.action_clustering" />
         <item index="1" class="java.lang.String" itemvalue="Python.action_aggregation" />
-        <item index="2" class="java.lang.String" itemvalue="Python.read_csv" />
-        <item index="3" class="java.lang.String" itemvalue="Python.read_dataset" />
-        <item index="4" class="java.lang.String" itemvalue="Python.unit_cluster" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.read_csv" />
+        <item index="4" class="java.lang.String" itemvalue="Python.read_dataset" />
       </list>
     </recent_temporary>
   </component>
@@ -400,16 +475,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="58" width="1356" height="810" extended-state="1" />
-    <editor active="true" />
+    <frame x="34" y="46" width="1356" height="799" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18188737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18873668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35944057" sideWeight="0.35996956" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4167832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7076923" sideWeight="0.64003044" order="2" side_tool="true" content_ui="tabs" x="58" y="328" width="1314" height="262" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4161932" sideWeight="0.49695587" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39488637" sideWeight="0.5030441" order="2" side_tool="true" content_ui="tabs" x="58" y="328" width="1314" height="262" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -449,18 +523,11 @@
           <properties exception="BaseException" />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser_twitter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -645,13 +712,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/codebeautify.json" />
     <entry file="file://$PROJECT_DIR$/cluster_t.py" />
-    <entry file="file://$PROJECT_DIR$/dataset/trump_promises.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.vscode/aggregator_rss.py" />
     <entry file="file://$PROJECT_DIR$/structure.json" />
     <entry file="file://$PROJECT_DIR$/synapses.json">
@@ -670,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/dataset_newshour_cluster.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -684,26 +737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="982">
-          <caret line="123" column="38" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classify.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="215" column="61" lean-forward="true" selection-start-line="214" selection-start-column="4" selection-end-line="215" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,37 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1157">
           <caret line="94" column="24" lean-forward="false" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-            <element signature="e#162#317#0" expanded="false" />
-            <element signature="e#341#445#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aggregator_direct.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_aggregator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/action_clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,70 +755,121 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kmeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="123" column="38" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aggregator_direct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding>
-            <element signature="e#0#13#0" expanded="false" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/action_aggregation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="-90">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_aggregator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aggregator_twitter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="42" column="31" lean-forward="false" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="-454">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
+            <element signature="e#0#31#0" expanded="true" />
             <element signature="e#1369#2554#0" expanded="false" />
             <element signature="e#6160#7398#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/trumptimemachine_result.json">
+    <entry file="file://$PROJECT_DIR$/action_clustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="14841" column="5" lean-forward="false" selection-start-line="14841" selection-start-column="5" selection-end-line="14841" selection-end-column="5" />
-          <folding>
-            <element signature="e#26#171682#0" expanded="false" />
-            <element signature="e#171707#175151#0" expanded="false" />
-            <element signature="e#175520#483229#0" expanded="false" />
-            <element signature="e#483254#489494#0" expanded="false" />
-            <element signature="e#489856#564175#0" expanded="false" />
-            <element signature="e#489870#492365#0" expanded="false" />
-            <element signature="e#564200#565203#0" expanded="false" />
-            <element signature="e#565592#578693#0" expanded="false" />
-            <element signature="e#578718#579070#0" expanded="false" />
-            <element signature="e#579457#837902#0" expanded="false" />
-            <element signature="e#837927#843830#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parser_twitter.py">
+    <entry file="file://$PROJECT_DIR$/dataset/trumptimemachine_result.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-295">
-          <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#1820#2330#0" expanded="false" />
-            <element signature="e#4997#5041#0" expanded="false" />
-            <element signature="e#5248#5607#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="5">
+          <caret line="42754" column="16" lean-forward="false" selection-start-line="42754" selection-start-column="8" selection-end-line="42754" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit_cluster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="156" column="39" lean-forward="true" selection-start-line="156" selection-start-column="39" selection-end-line="156" selection-end-column="39" />
+        <state relative-caret-position="-107">
+          <caret line="69" column="8" lean-forward="false" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/trump_promises.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser_twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="109" column="28" lean-forward="true" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#1638#2148#0" expanded="false" />
+            <element signature="e#3718#4077#0" expanded="false" />
           </folding>
         </state>
       </provider>

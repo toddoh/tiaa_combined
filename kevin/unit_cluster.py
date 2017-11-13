@@ -66,8 +66,8 @@ def cluster_articles(item, mode=None):
 
         cursor = list(collection.find({"ts": {"$gt": int(unix_time) }}).sort([('_id', 1)]))
     elif mode == 'unlimited':
-        cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
-        # cursor = list(collection.find({}).sort([('_id', 1)]))
+        # cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
+        cursor = list(collection.find({}).sort([('_id', 1)]))
         print(len(cursor))
 
     if len(cursor):
@@ -84,7 +84,7 @@ def cluster_articles(item, mode=None):
         parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
         print('Clustering unit: Finished processing loaded articles')
 
-        parsed_data = parse_aggregated(parsed_article_dict, 2, 21)
+        parsed_data = parse_aggregated(parsed_article_dict, 2, 26)
         origin_data_raw = cursor
 
         # print(parsed_data[0])

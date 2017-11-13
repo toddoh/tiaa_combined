@@ -5,16 +5,11 @@ import re
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem.porter import PorterStemmer
-
+import pandas as pd
 from scipy.sparse import csr_matrix
 from sklearn.cluster import KMeans
-from sklearn.neighbors import NearestNeighbors
-from scipy.spatial.distance import euclidean
+from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
-from sklearn.metrics import silhouette_samples, silhouette_score
-
-from sklearn.manifold import TSNE
-from sklearn.decomposition import TruncatedSVD
 
 
 def parse_aggregated(data, rangeMin=2, rangeMax=21):
@@ -68,66 +63,39 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     print('Determining k-means clusters...')
     tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
 
-    mode = 'default'
-    kval = 0
-    if mode == 'default':
-        print('Determining k-means clusters: range of clusters: 2-20')
-        range_n_clusters = range(rangeMin, rangeMax)
-        cluster_silhouette_scores = []
+    # kval = 10
+    range_n_clusters = range(rangeMin, rangeMax)
+    km_err = []
+    pca = PCA(n_components=2).fit(tfs.todense())
+    data2D = pca.transform(tfs.todense())
 
-        # pca = PCA(n_components=2).fit(model_tf_idf)
-        # data2D = pca.transform(model_tf_idf)
+    for kval in range_n_clusters:
+        km = KMeans(n_clusters=kval, init='k-means++')
+        km.fit(data2D)
+        km_err.append(km.inertia_)
 
-        for num_clusters in range_n_clusters:
-            tfs_reduced = TruncatedSVD(n_components=num_clusters, random_state=0).fit_transform(tfs)
-            tfs_embedded = TSNE(n_components=2, perplexity=40, verbose=1).fit_transform(tfs_reduced)
-            # Create a subplot with 1 row and 2 columns
-            fig, (ax1, ax2) = plt.subplots(1, 2)
-            fig.set_size_inches(18, 7)
+    km_df = pd.DataFrame({"num_clusters": range_n_clusters, "cluster_errors": km_err})
+    plt.figure(figsize=(12, 6))
+    elbow_data = plt.plot(km_df.num_clusters, km_df.cluster_errors, marker="o")
 
-            # The 1st subplot is the silhouette plot
-            # The silhouette coefficient can range from -1, 1 but in this example all
-            # lie within [-0.1, 1]
-            ax1.set_xlim([-0.1, 1])
-            # The (n_clusters+1)*10 is for inserting blank space between silhouette
-            # plots of individual clusters, to demarcate them clearly.
-            ax1.set_ylim([0, len(tfs_embedded) + (num_clusters + 1) * 10])
+    # elbow_xvalues = elbow_data[0].get_xdata()
+    # elbow_yvalues = elbow_data[0].get_ydata()
+    # elbow_idx = np.where(elbow_yvalues >= 9) and np.where(elbow_yvalues <= 12)
+    plt.savefig('./dataset/elbow_plot.png')
+    # print(elbow_idx)
+    plt.show()
+    k_final_val = int(input('Provide the elbow value for k and press enter: '))
+    print('Found optimal k value: {0}'.format(k_final_val))
 
-            km = KMeans(n_clusters=num_clusters,
-                        random_state=10)
-
-            cluster_labels = km.fit_predict(tfs_embedded)
-
-            # The silhouette_score gives the average value for all the samples.
-            # This gives a perspective into the density and separation of the formed
-            # clusters
-            silhouette_avg = silhouette_score(tfs_embedded, cluster_labels)
-            print('Silhouette score of cluster k value {0}: {1}'.format(num_clusters, silhouette_avg))
-            cluster_silhouette_scores.append(silhouette_avg)
-
-        max_silhouette_scores = max(cluster_silhouette_scores)
-        max_silhouette_scores_i = [i for i, j in enumerate(cluster_silhouette_scores) if j == max_silhouette_scores]
-
-        kval = max_silhouette_scores_i[0] + 2
-        print(max_silhouette_scores, max_silhouette_scores_i, kval)
-    else:
-        kval = 10
-
-    km = KMeans(n_clusters=kval, init='k-means++', max_iter=100, n_init=5,
-                    verbose=1)
-    km.fit(tfs)
+    km_final = KMeans(n_clusters=k_final_val, init='k-means++', max_iter=100, n_init=5, verbose=1)
+    km_final.fit(tfs)
 
     cluster_assignments_dict = {}
 
-    for i in set(km.labels_):
+    for i in set(km_final.labels_):
         #print i
-        current_cluster_bills = [list(parsed_article.keys())[x] for x in np.where(km.labels_ == i)[0]]
+        current_cluster_bills = [list(parsed_article.keys())[x] for x in np.where(km_final.labels_ == i)[0]]
         cluster_assignments_dict[i] = current_cluster_bills
-
-    # print('Randomly picked article cluster: ')
-    # cluster_pick = np.random.choice(len(set(km.labels_)))
-    # print('Article Cluster{0}'.format(cluster_pick))
-    # print(cluster_assignments_dict[cluster_pick])
 
     def clean_text(raw_text):
         letters_only = re.sub('[^a-zA-Z]', ' ', str(raw_text))

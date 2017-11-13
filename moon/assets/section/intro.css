@@ -1,0 +1,160 @@
+#banana-moon-intro{
+    display: flex;
+    color: #252525;
+    font-size: 1.6em;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: initial;
+    background: #f9f9f9;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#banana-moon-intro .intro-date{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    flex-basis: 100%;
+}
+
+#banana-moon-intro .intro-keypolicies{
+    font-size: 0.9em;
+    text-align: initial;
+    margin-bottom: 60px;
+}
+
+@media all and (max-width: 1280px) {
+
+    #banana-moon-intro{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #banana-moon-intro .intro-keypolicies{
+        font-size: 0.7em;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media all and (max-width: 374px) and (max-height: 600px) {
+
+    #banana-moon-intro{
+        font-size: 1.5em;
+    }
+
+} 
+
+.intro-keypolicies #keypolicies{
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-keypolicies #keypolicies li{
+    margin: 6px 0;
+    opacity: 0;
+    position: relative;
+}
+
+.intro-keypolicies #totalprogress{
+    color: #00c1ff;
+}
+
+#banana-moon-intro .progress.animate{
+    animation: slideinprogress 2400ms forwards cubic-bezier(0.2, 1.0, 0.1, 1);
+}
+
+.intro-keypolicies #keypolicies.animate li{
+    animation: slidedown 2400ms forwards cubic-bezier(0.2, 1.0, 0.1, 1);
+}
+
+@keyframes slideinprogress {
+    0% {
+        transform: translate3d(0px, 0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    100% { 
+        transform: translate3d(0, 0, 0) rotate(-90deg);
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        transform: translate3d(-20px, 0, 0);
+        opacity: 0;
+    }
+    100% { 
+        transform: translate3d(0px, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+    100% { 
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+#banana-moon-intro .progress {
+    transform: rotate(-90deg);
+    opacity: 0;
+    margin-bottom: 60px;
+}
+
+#banana-moon-intro .progress__meter,
+.progress__value {
+	fill: none;
+}
+
+#banana-moon-intro .progress__meter {
+	stroke: #e6e6e6;
+}
+
+#banana-moon-intro .progress__value {
+	stroke: #00c1ff;
+	stroke-linecap: round;
+}
+
+#banana-moon-info{
+    display: flex;
+    color: #252525;
+    font-size: 1.6em;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: initial;
+}
+
+#banana-moon-info .update-guide{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#banana-moon-info .calcinfo-guide{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#banana-moon-info .calcinfo-content{
+    font-size: 0.6em;
+    line-height: 1.6em;
+    margin-bottom: 40px;
+    list-style: inside;
+}
+
+#banana-moon-info .calcinfo-content li{
+    list-style: inside;
+}
