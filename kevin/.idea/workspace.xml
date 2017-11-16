@@ -34,7 +34,7 @@
       <file leaf-file-name="aggregator_twitter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aggregator_twitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="0">
               <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -60,8 +60,8 @@
       <file leaf-file-name="parser_twitter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parser_twitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="57" column="75" lean-forward="true" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
+            <state relative-caret-position="262">
+              <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <element signature="e#1638#2148#0" expanded="false" />
@@ -74,8 +74,8 @@
       <file leaf-file-name="classify.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3165">
-              <caret line="215" column="61" lean-forward="true" selection-start-line="214" selection-start-column="4" selection-end-line="215" selection-end-column="61" />
+            <state relative-caret-position="1035">
+              <caret line="73" column="58" lean-forward="true" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -308,11 +308,6 @@
               <item name="kevin" type="b2602c69:ProjectViewProjectNode" />
               <item name="kevin" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="kevin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kevin" type="462c0819:PsiDirectoryNode" />
-              <item name="dataset" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -486,8 +481,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="57" width="1356" height="799" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19406393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19406393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35944057" sideWeight="0.35996956" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -673,13 +669,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/synapse_learn.py" />
     <entry file="file://$PROJECT_DIR$/trump_speech_sample.json" />
-    <entry file="file://$PROJECT_DIR$/aggregator_html.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/dataset_newshour_cluster.json" />
     <entry file="file://$PROJECT_DIR$/read_csv.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -717,7 +706,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aggregator_twitter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="0">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -759,18 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parser_twitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="57" column="75" lean-forward="true" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#1638#2148#0" expanded="false" />
-            <element signature="e#3718#4077#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -779,10 +756,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aggregator_html.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser_twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#1638#2148#0" expanded="false" />
+            <element signature="e#3718#4077#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3165">
-          <caret line="215" column="61" lean-forward="true" selection-start-line="214" selection-start-column="4" selection-end-line="215" selection-end-column="61" />
+        <state relative-caret-position="1035">
+          <caret line="73" column="58" lean-forward="true" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
           <folding />
         </state>
       </provider>
