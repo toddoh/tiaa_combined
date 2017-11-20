@@ -1,7 +1,7 @@
 .DS_Store
 **/.DS_Store
 node_modules
-**/__pycache__
-**/.idea
+kevin/__pycache__/
+kevin/.idea/
 **/.vscode
 kevin/logs/*
