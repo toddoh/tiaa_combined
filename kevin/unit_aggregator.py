@@ -2,9 +2,14 @@ from aggregator_twitter import aggregator
 from pymongo import MongoClient
 import datetime
 from datetime import timezone
+import sys
 
 
 def aggregator_storeobject(item):
+    orig_stdout = sys.stdout
+    f = open('./logs/aggregator.txt', 'w')
+    sys.stdout = f
+
     print('Initiating aggregator unit...')
     print('Setting up MongoClient kevin@main')
     client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@localhost:27017/main')
@@ -46,3 +51,5 @@ def aggregator_storeobject(item):
     else:
         print('Empty result returned from aggregator; finished.')
 
+    sys.stdout = orig_stdout
+    f.close()

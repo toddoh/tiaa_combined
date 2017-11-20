@@ -1,5 +1,6 @@
 from unit_aggregator import aggregator_storeobject
 import sys
+import argparse
 
 # today section
 def today():
@@ -16,8 +17,10 @@ def trumptimemachine():
 
 
 ## run task
+orig_stdout = sys.stdout
+f = open('./logs/action_aggregation.txt', 'w')
+sys.stdout = f
 
-import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--target", help="run aggregator for provided target")
 args = parser.parse_args()
@@ -29,3 +32,6 @@ elif vars(args)['target'] == 'today':
     today()
 else:
     print('No argument provided, finished with none.')
+
+sys.stdout = orig_stdout
+f.close()
