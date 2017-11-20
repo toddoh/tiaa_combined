@@ -23,9 +23,9 @@ parser.add_argument("--target", help="run aggregator for provided target")
 args = parser.parse_args()
 
 print(vars(args), vars(args)['target'])
-if vars(args)['target'] is 'trumptimemachine':
+if vars(args)['target'] == 'trumptimemachine':
     trumptimemachine()
-elif vars(args)['target'] is 'today':
+elif vars(args)['target'] == 'today':
     today()
 else:
     print('No argument provided, finished with none.')

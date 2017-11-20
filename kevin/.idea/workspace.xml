@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action_aggregation.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="action_aggregation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/action_aggregation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="405">
+              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -103,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unit_aggregator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="unit_aggregator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit_aggregator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -185,9 +185,9 @@
         <option value="$PROJECT_DIR$/unit_cluster.py" />
         <option value="$PROJECT_DIR$/parser_twitter.py" />
         <option value="$PROJECT_DIR$/aggregator_twitter.py" />
-        <option value="$PROJECT_DIR$/action_aggregation.py" />
         <option value="$PROJECT_DIR$/manage_crons.py" />
         <option value="$PROJECT_DIR$/unit_aggregator.py" />
+        <option value="$PROJECT_DIR$/action_aggregation.py" />
       </list>
     </option>
   </component>
@@ -763,21 +763,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/action_aggregation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit_aggregator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="9" column="71" lean-forward="false" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action_aggregation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
