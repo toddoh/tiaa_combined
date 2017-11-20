@@ -113,6 +113,7 @@ def aggregator(list=None, tweetid=None, mode=None, data=None):
             twitter_timeline = api.GetListTimeline(slug=list, owner_screen_name="tiaa_obv000",
                                                    include_rts=False, count="500")
         print(twitter_timeline)
+        print(len(twitter_timeline))
 
         if len(twitter_timeline) <= 0:
             print('Twitter data is up to date')

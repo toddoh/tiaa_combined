@@ -3,13 +3,13 @@ from pymongo import MongoClient
 import datetime
 from datetime import timezone
 
-print('Initiating aggregator unit...')
-print('Setting up MongoClient kevin@main')
-client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
-db = client['main']
-
 
 def aggregator_storeobject(item):
+    print('Initiating aggregator unit...')
+    print('Setting up MongoClient kevin@main')
+    client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@localhost:27017/main')
+    db = client['main']
+
     collection = db['aggregator_' + item]
     cursor = list(collection.find().sort('ts', -1).limit(1))
     # print(cursor)
