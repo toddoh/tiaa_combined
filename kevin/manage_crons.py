@@ -1,6 +1,6 @@
 from crontab import CronTab
 
-cron = CronTab(user="root")
+cron = CronTab(user="minion")
 
 print('Printing all cron tasks: ')
 for job in cron:
