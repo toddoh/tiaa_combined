@@ -1,0 +1,14 @@
+#banana-moon-fbsubscription{
+    display: flex;
+    color: #252525;
+    font-size: 1.0em;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: initial;
+    background: #F1F1F1;
+    padding: 20px 10%;
+}
+
+#banana-moon-fbsubscription a{
+    color: #252525;
+}

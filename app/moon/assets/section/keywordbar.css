@@ -1,0 +1,49 @@
+#banana-moon-keywordmodebar{
+    position: fixed;
+    width: 80%;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0 0 10px #d8d8d8;
+    color: #252525;
+    display: none;
+    padding: 14px 10%;
+    justify-content: space-between;
+}
+
+#banana-moon-keywordmodebar[banana-status="highlighted"]{
+    display: flex;
+}
+
+#banana-moon-keywordmodebar .keywords-guide{
+    padding: 0 15px;
+    margin-left: -15px;
+}
+
+#banana-moon-keywordmodebar .keywords-action-close{
+    padding: 10px;
+    margin-right: -10px;
+}
+
+#banana-moon-keywordmodebar .keywords-action-close p{
+    font-family: FontAwesome;
+    color: #252525;
+    margin-top: 1px;
+}
+
+#banana-moon-keywordmodebar[banana-type="keywords"] .keywords-action-share{
+    display: none;
+}
+
+#banana-moon-keywordmodebar .keywords-action-share{
+    padding: 4px 0 0 0;
+    font-size: 0.9em;
+    color: #1565C0;
+}
+
+#banana-moon-keywordmodebar input, #moonsharelink{
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+}
