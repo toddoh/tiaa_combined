@@ -1,0 +1,2075 @@
+[
+    {
+        "list": [
+            22,
+            69,
+            26,
+            129,
+            97,
+            80,
+            32,
+            31,
+            18,
+            14
+        ],
+        "months": [
+            "2017-02",
+            "2017-03",
+            "2017-04",
+            "2017-05",
+            "2017-06",
+            "2017-07",
+            "2017-08",
+            "2017-09",
+            "2017-10",
+            "2017-11"
+        ],
+        "peaks": [
+            [],
+            "2017-05"
+        ],
+        "theme": "Trump Russia Comey House says Senate Russian probe Investigations FBI Flynn White Sessions committee meeting",
+        "toparticles": [
+            [
+                {
+                    "_id": "59f863559b21b3529e577f9d",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/14/ap_17041828606141_wide-e6166ff17f0532365c155a481b11d9a2c8fff599.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Michael Flynn Resigns As Trump's National Security Adviser",
+                    "ts": 1487071980,
+                    "twitterid": "831466370537766913",
+                    "url": "http://n.pr/2l3GHGi"
+                },
+                {
+                    "_id": "59f863559b21b3529e577fa6",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/14/ap_17045667480481_wide-e2f2463499f6cc1a904262ad8d22e2d13ea1eeea.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "White House Press Secretary Says Trump Fired Flynn As National Security Adviser",
+                    "ts": 1487098200,
+                    "twitterid": "831576363232526336",
+                    "url": "http://n.pr/2l57SAh"
+                },
+                {
+                    "_id": "59f863559b21b3529e577f7b",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/10/gettyimages-633345586_wide-c7199396dc8d791b0057c55836bfc1aa618946a3.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump's National Security Adviser Reportedly Discussed Sanctions With Russia",
+                    "ts": 1486750140,
+                    "twitterid": "830116391546036224",
+                    "url": "http://n.pr/2lxhCT8"
+                },
+                {
+                    "_id": "59f863559b21b3529e578033",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/24/gettyimages-632765664_wide-fc50131a16ff4e131709cd801d5d50699dc99955.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "White House Asked FBI To Publicly Refute Reports Trump Associates Had Russia Contacts",
+                    "ts": 1487955660,
+                    "twitterid": "835172836176199682",
+                    "url": "http://n.pr/2lScGMf"
+                },
+                {
+                    "_id": "59f863209b21b3526e64369d",
+                    "date_month": "2017-02",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/05/RTX2D3Y0-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Officials: Trump adviser asked FBI to dispute Russia reports",
+                    "ts": 1487953200,
+                    "twitterid": "835162375422623744",
+                    "url": "http://to.pbs.org/2lAK8WZ"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e6436f3",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTX2UP0X-1024x698.jpg",
+                    "origin": "newshour",
+                    "title": "In a reversal, former Trump campaign adviser Carter Page now says he did have contact with Russia",
+                    "ts": 1488514200,
+                    "twitterid": "837515426963808261",
+                    "url": "http://to.pbs.org/2m15UmR"
+                },
+                {
+                    "_id": "59f863209b21b3526e643779",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTS11VKR-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "House Intelligence Committee says they have seen no evidence supporting Trump\u2019s wiretapping claims",
+                    "ts": 1489602000,
+                    "twitterid": "842077940410134532",
+                    "url": "http://to.pbs.org/2mt8EX3"
+                },
+                {
+                    "_id": "59f863209b21b3526e6437bc",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/08/RTSHXOE-1024x657.jpg",
+                    "origin": "newshour",
+                    "title": "Former Trump campaign chair Manafort secretly worked to advance Russian interests 10 years ago",
+                    "ts": 1490205600,
+                    "twitterid": "844609628537143296",
+                    "url": "http://to.pbs.org/2mVaYXI"
+                },
+                {
+                    "_id": "59f863209b21b3526e643809",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/01/RTX2YX27-1024x678.jpg",
+                    "origin": "newshour",
+                    "title": "Lawyer says Trump administration tried to stop former acting AG Sally Yates\u2019 Russia testimony",
+                    "ts": 1490726400,
+                    "twitterid": "846794017488687106",
+                    "url": "http://to.pbs.org/2nengdl"
+                },
+                {
+                    "_id": "59f863559b21b3529e5781cc",
+                    "date_month": "2017-03",
+                    "image": "https://media.npr.org/assets/img/2017/03/20/gettyimages-655564284_wide-f30e45a46a758249f627fef523f1f0456ca495e7.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Comey Confirms FBI Is Investigating Trump Campaign, Russia Ties",
+                    "ts": 1490018760,
+                    "twitterid": "843826020474077184",
+                    "url": "http://n.pr/2nVUgI7"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643870",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTX317D4-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trump removes Steve Bannon from National Security Council",
+                    "ts": 1491409320,
+                    "twitterid": "849658537554980864",
+                    "url": "http://to.pbs.org/2nEgj5v"
+                },
+                {
+                    "_id": "59f863559b21b3529e5784d4",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/20/gettyimages-653541954_wide-0dc8828a676a461c1c608c87128e26157e038e29.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Leader Of Justice Department National Security Division On The Way Out",
+                    "ts": 1492713480,
+                    "twitterid": "855128608557412352",
+                    "url": "http://n.pr/2o8yViX"
+                },
+                {
+                    "_id": "59f863209b21b3526e643969",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTS13VBP-1024x699.jpg",
+                    "origin": "newshour",
+                    "title": "What we know about the latest developments in the Russia investigations",
+                    "ts": 1493234400,
+                    "twitterid": "857313330456743940",
+                    "url": "http://to.pbs.org/2q3Zm9J"
+                },
+                {
+                    "_id": "59f863559b21b3529e578388",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/06/gettyimages-657311996_wide-24fd4ebae8d176bcd1df904d185092080cb2543a.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "House Intelligence Chairman Devin Nunes To Step Aside From Russia Probe",
+                    "ts": 1491487320,
+                    "twitterid": "849985574932856832",
+                    "url": "http://n.pr/2nOnVDq"
+                },
+                {
+                    "_id": "59f863209b21b3526e64387d",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTX31VI1-1024x743.jpg",
+                    "origin": "newshour",
+                    "title": "Devin Nunes recuses himself as House Intel chair during Russia probe",
+                    "ts": 1491488460,
+                    "twitterid": "849990387758505985",
+                    "url": "http://to.pbs.org/2oMNVzM"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643a6b",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTS16FFP-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Cornyn no longer a candidate for FBI director",
+                    "ts": 1494963000,
+                    "twitterid": "864563606024847360",
+                    "url": "http://to.pbs.org/2qozu84"
+                },
+                {
+                    "_id": "59f863209b21b3526e643a7a",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/schumer-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "What lawmakers are saying about Comey\u2019s memo",
+                    "ts": 1495041300,
+                    "twitterid": "864892020124401664",
+                    "url": "http://to.pbs.org/2pIexGp"
+                },
+                {
+                    "_id": "59f863559b21b3529e578601",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/09/gettyimages-677798454_wide-2f4eb0a4e5843c676d377f72d7545b77ba2f0003.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "President Trump Fires FBI Director James Comey",
+                    "ts": 1494375660,
+                    "twitterid": "862100158552702976",
+                    "url": "http://n.pr/2qoVctA"
+                },
+                {
+                    "_id": "59f863209b21b3526e643a26",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTS161SH-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "How a new FBI director could impact Congress\u2019 Russia probes",
+                    "ts": 1494473400,
+                    "twitterid": "862510074622865412",
+                    "url": "http://to.pbs.org/2r3oWJP"
+                },
+                {
+                    "_id": "59f863209b21b3526e643b41",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTS12SYS-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "AP report: Comey cleared to testify about Russia probe before Senate intel committee",
+                    "ts": 1496266560,
+                    "twitterid": "870031148499570688",
+                    "url": "http://to.pbs.org/2rcjlCN"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643c52",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTS16Y7C-1024x672.jpg",
+                    "origin": "newshour",
+                    "title": "D.C. lawyer says he\u2019s representing Jeff Sessions",
+                    "ts": 1498002000,
+                    "twitterid": "877310095138340864",
+                    "url": "http://to.pbs.org/2syCu0U"
+                },
+                {
+                    "_id": "59f863209b21b3526e643bf6",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTS16W17-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Rosenstein says he\u2019s seen no good cause to fire special counsel Mueller",
+                    "ts": 1497372300,
+                    "twitterid": "874668945957060608",
+                    "url": "http://to.pbs.org/2rrZUmy"
+                },
+                {
+                    "_id": "59f863559b21b3529e578891",
+                    "date_month": "2017-06",
+                    "image": "https://media.npr.org/assets/img/2017/06/13/gettyimages-695568944_wide-91032392af987f5fceb22aee8902cac6578e06ef.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Rosenstein Says He Wouldn't Fire Special Counsel Mueller Without Good Cause",
+                    "ts": 1497369120,
+                    "twitterid": "874655689297276928",
+                    "url": "http://n.pr/2skdyMO"
+                },
+                {
+                    "_id": "59f863209b21b3526e643bf2",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTX329H5-1024x707.jpg",
+                    "origin": "newshour",
+                    "title": "Rep. Schiff says firing special counsel Mueller would echo Watergate",
+                    "ts": 1497362400,
+                    "twitterid": "874627430874398720",
+                    "url": "http://to.pbs.org/2sjFXlO"
+                },
+                {
+                    "_id": "59f863559b21b3529e57883c",
+                    "date_month": "2017-06",
+                    "image": "https://media.npr.org/assets/img/2017/06/09/gettyimages-186114718-edit_wide-c629ffa6e0ea94cdbea75f7c318fdbc2e1ab4b65.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Special Counsel Robert Mueller Had Been On White House Shortlist To Run FBI",
+                    "ts": 1497041160,
+                    "twitterid": "873280255708016640",
+                    "url": "http://n.pr/2t3TsU3"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863559b21b3529e578ad1",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/07/ap_17172666758664-edit_wide-e98b3f1de80466546b4f2d905a80e484480b7bd6.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Special Counsel Mueller Lets His Actions Do The Talking: 15 Hires, More to Come",
+                    "ts": 1499599800,
+                    "twitterid": "884011756129046528",
+                    "url": "http://n.pr/2tYEkLs"
+                },
+                {
+                    "_id": "59f863559b21b3529e578baa",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/15/ap_17192804580431wh_wide-29ac8e97cd5019f4b4077f26a70001a29b6da95a.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump Taps Washington Lawyer To Become White House Special Counsel Amid Russia Probes",
+                    "ts": 1500269520,
+                    "twitterid": "886820763403255809",
+                    "url": "http://n.pr/2utpJb4"
+                },
+                {
+                    "_id": "59f863559b21b3529e578cd3",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/28/gettyimages-96218829_wide-b57fb1009bce7c7666a73fa796a6bad83884b5eb.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Amid Russia Scandals, Conservative Media Provides Air Cover For President Trump",
+                    "ts": 1501264260,
+                    "twitterid": "890993003778547712",
+                    "url": "http://n.pr/2eU1YDh"
+                },
+                {
+                    "_id": "59f863559b21b3529e578bf3",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/19/gettyimages-631527600_wide-b963a7af05bb03f688d4ef85f59a4f529551175a.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "As Team Trump Lawyers Up, Who's Paying The Attorney Fees?",
+                    "ts": 1500488700,
+                    "twitterid": "887740254760947712",
+                    "url": "http://n.pr/2vD4QaB"
+                },
+                {
+                    "_id": "59f863559b21b3529e578c14",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/20/gettyimages-698477696_wide-5d14023701a37d5ac3af719f5afdd78fb22bcddd.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "After Trump Slams Sessions, Attorney General Says He Will Stay On The Job",
+                    "ts": 1500566700,
+                    "twitterid": "888067228716769280",
+                    "url": "http://n.pr/2gN1rnd"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643ea1",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/RTS195QB-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Senate confirms Wray as FBI director",
+                    "ts": 1501633200,
+                    "twitterid": "892540449964961792",
+                    "url": "http://to.pbs.org/2vqp37L"
+                },
+                {
+                    "_id": "59f863209b21b3526e643eef",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/07/RTR2LVOR-1024x659.jpg",
+                    "origin": "newshour",
+                    "title": "White House: Trump \u2018not discussing\u2019 firing Mueller",
+                    "ts": 1502046000,
+                    "twitterid": "894271865555869696",
+                    "url": "http://to.pbs.org/2wjKXqj"
+                },
+                {
+                    "_id": "59f863209b21b3526e643eca",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTS1427I-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Can Congress protect special counsel Mueller from being fired?",
+                    "ts": 1501806000,
+                    "twitterid": "893265226669228032",
+                    "url": "http://to.pbs.org/2u89j90"
+                },
+                {
+                    "_id": "59f863209b21b3526e643ebd",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTX3BYN4-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Senators move to protect special counsel in Russia probe",
+                    "ts": 1501772400,
+                    "twitterid": "893124300189777920",
+                    "url": "http://to.pbs.org/2vwlMU7"
+                },
+                {
+                    "_id": "59f863209b21b3526e643e96",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTX3697K-1024x676.jpg",
+                    "origin": "newshour",
+                    "title": "House conservative calls for Mueller to resign as special counsel",
+                    "ts": 1501600500,
+                    "twitterid": "892403297797062656",
+                    "url": "http://to.pbs.org/2uUW6xE"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e64404f",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTS15WVA-1024x653.jpg",
+                    "origin": "newshour",
+                    "title": "AP CHECK: Here\u2019s how Donald Trump\u2019s tweet about James Comey compares to facts",
+                    "ts": 1504287000,
+                    "twitterid": "903671303634247680",
+                    "url": "http://to.pbs.org/2wtuYX2"
+                },
+                {
+                    "_id": "59f863209b21b3526e644184",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/03/RTR3VDKM-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "House panel demands details on Trump aides\u2019 private emails",
+                    "ts": 1506453300,
+                    "twitterid": "912757415245889536",
+                    "url": "http://to.pbs.org/2fpfg7S"
+                },
+                {
+                    "_id": "59f863209b21b3526e64409a",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/RTX3B182-1-1024x709.jpg",
+                    "origin": "newshour",
+                    "title": "Trump Jr. says he was \u2018open\u2019 to receiving Clinton intel, but there was \u2018no collusion\u2019 with Russians",
+                    "ts": 1504813500,
+                    "twitterid": "905879596465352705",
+                    "url": "http://to.pbs.org/2wcIpJd"
+                },
+                {
+                    "_id": "59f863209b21b3526e64410d",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/clinton-smile-1024x673.jpg",
+                    "origin": "newshour",
+                    "title": "Dissecting the election, Hillary Clinton sees dangers for democracy",
+                    "ts": 1505523600,
+                    "twitterid": "908857970666197003",
+                    "url": "http://to.pbs.org/2y4CCqw"
+                },
+                {
+                    "_id": "59f863209b21b3526e644193",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTX2PF5Z-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "President calls Facebook \u2018anti-Trump\u2019 on Twitter amid Russia probe",
+                    "ts": 1506542400,
+                    "twitterid": "913131133277057024",
+                    "url": "http://to.pbs.org/2xxG00G"
+                }
+            ],
+            [
+                {
+                    "_id": "59f864d89b21b3531fd10ed0",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/RTSQYAO-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Conservative site was original funder of anti-Trump dossier",
+                    "ts": 1509379200,
+                    "twitterid": "925029539964743680",
+                    "url": "https://www.pbs.org/newshour/show/conservative-site-was-original-funder-of-anti-trump-dossier"
+                },
+                {
+                    "_id": "59f8653d9b21b3535e203626",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/30/gettyimages-868291722_wide-7aeac19db693742174c9e06b4d3b59ff17157f38.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "2016 Under Scrutiny: A Timeline Of Russia Connections",
+                    "ts": 1509415321,
+                    "twitterid": 925316927131660288,
+                    "url": "http://www.npr.org/2017/10/31/537926933/2016-under-scrutiny-a-timeline-of-russia-connections?utm_source=twitter.com&utm_medium=social&utm_campaign=npr&utm_term=nprnews&utm_content=2058"
+                },
+                {
+                    "_id": "59f93ae99b21b361858ee1e2",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/RTS1HQNH-1024x683.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "Mueller probe of Trump administration enters new phase",
+                    "ts": 1509448502,
+                    "twitterid": 925456097913303040,
+                    "url": "https://www.pbs.org/newshour/politics/mueller-probe-of-trump-administration-enters-new-phase"
+                },
+                {
+                    "_id": "59f863209b21b3526e64424e",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/nunes-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Political research firm behind Trump-Russia dossier subpoenaed by House intelligence committee",
+                    "ts": 1507677600,
+                    "twitterid": "917892501456875520",
+                    "url": "http://to.pbs.org/2yf7Xtw"
+                },
+                {
+                    "_id": "59f863559b21b3529e57937c",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/18/gettyimages-862821792sessions_wide-9833d4319112a4e38aa89c37faab3ab57db3fb58.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Senators Grill Attorney General Sessions On Russia, Comey, 'Sanctuary Cities'",
+                    "ts": 1508337540,
+                    "twitterid": "920660585930518528",
+                    "url": "http://n.pr/2ikSSkL"
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "list": [
+            59,
+            211,
+            165,
+            176,
+            144,
+            150,
+            167,
+            202,
+            152,
+            95,
+            63
+        ],
+        "months": [
+            "2017-01",
+            "2017-02",
+            "2017-03",
+            "2017-04",
+            "2017-05",
+            "2017-06",
+            "2017-07",
+            "2017-08",
+            "2017-09",
+            "2017-10",
+            "2017-11"
+        ],
+        "peaks": [
+            "2017-02",
+            "2017-08"
+        ],
+        "theme": "Trump say house White Banned North President Court New Korea Travel Immigrants State Democrats",
+        "toparticles": [
+            [
+                {
+                    "_id": "59f863559b21b3529e577e6c",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/19/gettyimages-632002110_wide-96608f50c3b0623e3111eb005e1cb981ead35695.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "What To Expect For Donald Trump's Inauguration",
+                    "ts": 1484910000,
+                    "twitterid": "822398271209414656",
+                    "url": "http://n.pr/2k7Br2L"
+                },
+                {
+                    "_id": "59f863559b21b3529e577e6e",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/17/gettyimages-631616650_wide-975c29aaa4f66c0b78afff66566de0f03bcd9a16.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Make NPR Your Inauguration Day Headquarters",
+                    "ts": 1484914500,
+                    "twitterid": "822417140934275077",
+                    "url": "http://n.pr/2iFqhpC"
+                },
+                {
+                    "_id": "59f863559b21b3529e577e70",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/19/ap_99100701333_wide-086e6da1ce7fa150190ba8893959a720467e5f6c.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Donald Trump's Been Saying The Same Thing For 30 Years",
+                    "ts": 1484918880,
+                    "twitterid": "822435512325505024",
+                    "url": "http://n.pr/2iIX39s"
+                },
+                {
+                    "_id": "59f863559b21b3529e577e81",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/20/gettyimages-632201254_wide-6fb51e92621c421c5a1d2ba3a2725e8368d91b36.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "President Trump's Inaugural Address, Annotated",
+                    "ts": 1484935860,
+                    "twitterid": "822506731120959488",
+                    "url": "http://n.pr/2k8Slhu"
+                },
+                {
+                    "_id": "59f863559b21b3529e577ef2",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/30/gettyimages-633088042_wide-1c9a68a0b54c8a82e93b77e6a9a913adf0d8dad5.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump Acts To Roll Back Regulations On Businesses",
+                    "ts": 1485793380,
+                    "twitterid": "826103450056421376",
+                    "url": "http://n.pr/2kGfw3w"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e64369c",
+                    "date_month": "2017-02",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/02/manufac-1024x666.jpg",
+                    "origin": "newshour",
+                    "title": "Factory jobs exist, CEOs tell Trump. Skills don\u2019t.",
+                    "ts": 1487944800,
+                    "twitterid": "835127140941197312",
+                    "url": "http://to.pbs.org/2lBh0Nt"
+                },
+                {
+                    "_id": "59f863559b21b3529e577f07",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/01/2017-01-30-supreme-court-rally-charbage-7_wide-7a4dde0e61d504f584c22b0b367ec555eba23169.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Liberals To Senate Democrats: (Don't) Do Your Jobs",
+                    "ts": 1485959820,
+                    "twitterid": "826801531127164928",
+                    "url": "http://n.pr/2kRqljB"
+                },
+                {
+                    "_id": "59f863559b21b3529e577f9c",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/13/ap_17032746825679_wide-e36effffd6df971f7416b796456374dfc13004f1.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Senate Confirms First Nonveteran To Lead VA",
+                    "ts": 1487034480,
+                    "twitterid": "831309076000681985",
+                    "url": "http://n.pr/2lDGXiu"
+                },
+                {
+                    "_id": "59f863559b21b3529e578067",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/28/massey-run-1-of-1-2_wide-7e76d8ff6befdd961e843bd5f8a5d34ce56967a5.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump Aims To 'Eliminate' Clean Water Rule",
+                    "ts": 1488313140,
+                    "twitterid": "836672242977103874",
+                    "url": "http://n.pr/2m45b4E"
+                },
+                {
+                    "_id": "59f863559b21b3529e577fb6",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/15/gettyimages-634031348_wide-f2eab9c7699f49d0277ff82bff69b9d00dc9b98c.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Senate Blocks Obama-Era Rule Tightening Checks On Mentally Ill Gun Buyers",
+                    "ts": 1487190420,
+                    "twitterid": "831963070415015936",
+                    "url": "http://n.pr/2kyXEXa"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e6436fa",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/GettyImages-516707300-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "SXSW\u2019s immigration clauses are \u2018not standard,\u2019 lawyers say",
+                    "ts": 1488572400,
+                    "twitterid": "837759487846961152",
+                    "url": "http://to.pbs.org/2mOKjwp"
+                },
+                {
+                    "_id": "59f863209b21b3526e64375d",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/merkel-1024x682.jpg",
+                    "origin": "newshour",
+                    "title": "Merkel prepares for first U.S. visit with Trump",
+                    "ts": 1489423200,
+                    "twitterid": "841327998288584704",
+                    "url": "http://to.pbs.org/2mjq88d"
+                },
+                {
+                    "_id": "59f863209b21b3526e6437d5",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/securecomm-AdobeStock_49921993-1024x680.jpeg",
+                    "origin": "newshour",
+                    "title": "Senate votes to undo privacy rules that protect user data",
+                    "ts": 1490316300,
+                    "twitterid": "845073934387232768",
+                    "url": "http://to.pbs.org/2nHTSAn"
+                },
+                {
+                    "_id": "59f863209b21b3526e643823",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTX333SV-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trump administration seeks delay in ruling on climate plan",
+                    "ts": 1490878800,
+                    "twitterid": "847433233683894272",
+                    "url": "http://to.pbs.org/2nMS0G1"
+                },
+                {
+                    "_id": "59f863559b21b3529e5781a9",
+                    "date_month": "2017-03",
+                    "image": "https://media.npr.org/assets/img/2017/03/17/ap_17076727903386_wide-8d3c1295ba5f06322d51009eac829b957fee4ecb.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "The Axis Of Awkward: When Merkel Met Trump",
+                    "ts": 1489794780,
+                    "twitterid": "842886518117036032",
+                    "url": "http://n.pr/2mEHwVO"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643867",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTX33ZGM-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Dozens dead after suspected gas attack in rebel-held Syrian town",
+                    "ts": 1491328800,
+                    "twitterid": "849320687328256007",
+                    "url": "http://to.pbs.org/2o6jGGf"
+                },
+                {
+                    "_id": "59f863209b21b3526e643871",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/10/GettyImages-97212030-1024x680.jpg",
+                    "origin": "newshour",
+                    "title": "\u2018Winter White House\u2019 a winning brand for Trump\u2019s business",
+                    "ts": 1491410400,
+                    "twitterid": "849662920195678209",
+                    "url": "http://to.pbs.org/2o37s0K"
+                },
+                {
+                    "_id": "59f863209b21b3526e643881",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/dod-photo-1024x667.png",
+                    "origin": "newshour",
+                    "title": "U.S. fires missiles into Syria in first attack on Assad regime",
+                    "ts": 1491531120,
+                    "twitterid": "850169305601900544",
+                    "url": "http://to.pbs.org/2nQC42E"
+                },
+                {
+                    "_id": "59f863209b21b3526e643883",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/trumpsyria-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "WATCH: President Trump\u2019s full statement on U.S. missile attack on Syria",
+                    "ts": 1491534900,
+                    "twitterid": "850185110435487744",
+                    "url": "http://to.pbs.org/2o8umne"
+                },
+                {
+                    "_id": "59f863209b21b3526e643884",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/Shayrat_Afld-1024x732.jpg",
+                    "origin": "newshour",
+                    "title": "Timeline: How the U.S. has responded to Syria\u2019s civil war",
+                    "ts": 1491535080,
+                    "twitterid": "850185986856419329",
+                    "url": "http://to.pbs.org/2p7IjiV"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e64399f",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/ryanbudget-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Congress unveils $1 trillion spending plan to avoid government shutdown",
+                    "ts": 1493668560,
+                    "twitterid": "859134343016570880",
+                    "url": "http://to.pbs.org/2qvA9li"
+                },
+                {
+                    "_id": "59f863209b21b3526e6439b6",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTX32LZL-1024x627.jpg",
+                    "origin": "newshour",
+                    "title": "Trump\u2019s remarks often set off White House \u2018scramble drill\u2019",
+                    "ts": 1493828100,
+                    "twitterid": "859803499005128704",
+                    "url": "http://to.pbs.org/2p8XaKn"
+                },
+                {
+                    "_id": "59f863209b21b3526e6439ce",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTS12DXU-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "House approves new sanctions against North Korea",
+                    "ts": 1493933400,
+                    "twitterid": "860245278187806721",
+                    "url": "http://to.pbs.org/2pdNgXT"
+                },
+                {
+                    "_id": "59f863209b21b3526e6439da",
+                    "date_month": "2017-05",
+                    "image": "http://d279m997dpfwgl.cloudfront.net/wp/2017/05/ahc.jpg",
+                    "origin": "newshour",
+                    "title": "Week In The News: Health Care Vote, Comey\u2019s Nausea, Clinton\u2019s Blame",
+                    "ts": 1493994960,
+                    "twitterid": "860503562241138688",
+                    "url": "http://wbur.fm/2pfbwsR"
+                },
+                {
+                    "_id": "59f863209b21b3526e6439db",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTX2TT25-1024x701.jpg",
+                    "origin": "newshour",
+                    "title": "GOP House panel takes first step to gut Dodd-Frank law",
+                    "ts": 1493996400,
+                    "twitterid": "860509531545239552",
+                    "url": "http://to.pbs.org/2ph9ybh"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643b79",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTS16198-2-1024x635.jpg",
+                    "origin": "newshour",
+                    "title": "Trump criticizes London mayor after latest attack on city",
+                    "ts": 1496586600,
+                    "twitterid": "871373650607435778",
+                    "url": "http://to.pbs.org/2sEbEDD"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c14",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/scalise_Alexandria_RTS171V0-1024x682.jpg",
+                    "origin": "newshour",
+                    "title": "Attack on congressman first test for gun debate under Trump",
+                    "ts": 1497541500,
+                    "twitterid": "875378620499456001",
+                    "url": "http://to.pbs.org/2s4WkCd"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c1e",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/mulvaney-1024x630.jpg",
+                    "origin": "newshour",
+                    "title": "As deadline nears, White House without a debt ceiling plan",
+                    "ts": 1497573600,
+                    "twitterid": "875513255518756869",
+                    "url": "http://to.pbs.org/2tskNPI"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c36",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTS17F5J-1024x629.jpg",
+                    "origin": "newshour",
+                    "title": "Republicans divided as Trump reverses some Obama Cuba policy",
+                    "ts": 1497739500,
+                    "twitterid": "876209090518593536",
+                    "url": "http://to.pbs.org/2rHZmcw"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c39",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTX39E9K-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Biden: Democrats need better outreach to frightened voters",
+                    "ts": 1497806100,
+                    "twitterid": "876488433501339649",
+                    "url": "http://to.pbs.org/2rEZTRa"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643cf9",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTX390Q6-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "New poll: 70% of Americans think civility has gotten worse since Trump took office",
+                    "ts": 1499089500,
+                    "twitterid": "881871405410865152",
+                    "url": "http://to.pbs.org/2t93vKl"
+                },
+                {
+                    "_id": "59f863209b21b3526e643d1f",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/01/RTX2YFZR-1024x667.jpg",
+                    "origin": "newshour",
+                    "title": "New poll: 54% of Americans think Trump\u2019s dealings with Russia were unethical or illegal",
+                    "ts": 1499349600,
+                    "twitterid": "882962349241450496",
+                    "url": "http://to.pbs.org/2tUrrTf"
+                },
+                {
+                    "_id": "59f863209b21b3526e643d26",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/RTSDPEN-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Column: Let\u2019s put \u2018America First\u2019 by averting a Central American migrant crisis",
+                    "ts": 1499373000,
+                    "twitterid": "883060489269514241",
+                    "url": "http://to.pbs.org/2tWH10C"
+                },
+                {
+                    "_id": "59f863209b21b3526e643dd4",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/book1-1024x576.jpg",
+                    "origin": "newshour",
+                    "title": "How Steve Bannon pulled one of the greatest upsets in American politics",
+                    "ts": 1500552000,
+                    "twitterid": "888005577665789952",
+                    "url": "http://to.pbs.org/2vEcVvY"
+                },
+                {
+                    "_id": "59f863209b21b3526e643e2c",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/scaramucci-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "White House communications director says he\u2019s willing to \u2018fire everybody\u2019 for leaking",
+                    "ts": 1501029600,
+                    "twitterid": "890008769312239616",
+                    "url": "http://to.pbs.org/2uvPZ47"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643ebe",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTS184KN-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Most white millennials now disapprove of Trump, survey says",
+                    "ts": 1501776000,
+                    "twitterid": "893139416511918081",
+                    "url": "http://to.pbs.org/2vtp5dU"
+                },
+                {
+                    "_id": "59f863209b21b3526e643f13",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTS1AYNJ-1024x731.jpg",
+                    "origin": "newshour",
+                    "title": "North Korea says it\u2019s studying a plan to attack Guam",
+                    "ts": 1502242200,
+                    "twitterid": "895094781730209798",
+                    "url": "http://to.pbs.org/2hGYhSi"
+                },
+                {
+                    "_id": "59f863209b21b3526e643f1f",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTX3D28N-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trans troops sue Trump over proposed military ban",
+                    "ts": 1502311500,
+                    "twitterid": "895385447827951616",
+                    "url": "http://to.pbs.org/2uqnZkc"
+                },
+                {
+                    "_id": "59f863209b21b3526e643f2f",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTX35FHI-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "How powerful is North Korea\u2019s military?",
+                    "ts": 1502383500,
+                    "twitterid": "895687440014258177",
+                    "url": "http://to.pbs.org/2rAdpRU"
+                },
+                {
+                    "_id": "59f863209b21b3526e643f30",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/trumpkorea-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "AP FACT CHECK: How strong is America\u2019s nuclear arsenal?",
+                    "ts": 1502384400,
+                    "twitterid": "895691221032501250",
+                    "url": "http://to.pbs.org/2hOjpWH"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863559b21b3529e579202",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/27/gettyimages-468556534_wide-f2bc1a09d5ea508a94b86969e5ddd4b14e97abbb.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Why Is Chad On Trump's Travel Ban List?",
+                    "ts": 1506529800,
+                    "twitterid": "913078438528819201",
+                    "url": "http://n.pr/2fRn42J"
+                },
+                {
+                    "_id": "59f863559b21b3529e579072",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/07/ap_17182003294056_wide-496d29b9e2356921cb574ae96af3722d56f3fde3.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Appeals Court Rejects Family Limits In Trump Travel Ban",
+                    "ts": 1504830840,
+                    "twitterid": "905952328267599872",
+                    "url": "http://n.pr/2wNhNk0"
+                },
+                {
+                    "_id": "59f863209b21b3526e6441ba",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTS1834D-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trump says Price\u2019s travel becoming a distraction, AP sources say",
+                    "ts": 1506716100,
+                    "twitterid": "913859679452663808",
+                    "url": "http://to.pbs.org/2fY1wl7"
+                },
+                {
+                    "_id": "59f863559b21b3529e579245",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/29/gettyimages-855167940_wide-5d3e559815d58ba2367e678de95f21c3edee6fcc.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Price Resigns From Trump Cabinet Amid Private Jet Investigations",
+                    "ts": 1506738000,
+                    "twitterid": "913951535209390081",
+                    "url": "http://n.pr/2woFAFP"
+                },
+                {
+                    "_id": "59f863209b21b3526e644088",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/whdaca-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "AP FACT CHECK: What the Trump administration said about DACA",
+                    "ts": 1504705200,
+                    "twitterid": "905425353820094465",
+                    "url": "http://to.pbs.org/2wFgYcR"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e6441f5",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTS13XE0-1024x693.jpg",
+                    "origin": "newshour",
+                    "title": "This New York bill would ban anonymous political ads on Facebook",
+                    "ts": 1507123200,
+                    "twitterid": "915567180531372034",
+                    "url": "http://to.pbs.org/2xYv77M"
+                },
+                {
+                    "_id": "59f863209b21b3526e6441fc",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/RTX3E2UL-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Poll: Most Americans say \u2018dreamers\u2019 should be granted citizenship",
+                    "ts": 1507149000,
+                    "twitterid": "915675394317021184",
+                    "url": "http://to.pbs.org/2fRjPeX"
+                },
+                {
+                    "_id": "59f863209b21b3526e64420c",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2015/07/RTR3DK7T-1024x670.jpg",
+                    "origin": "newshour",
+                    "title": "Judge lets President Trump\u2019s pardon of former Sheriff Arpaio stand",
+                    "ts": 1507209600,
+                    "twitterid": "915929568904663040",
+                    "url": "http://to.pbs.org/2y20huT"
+                },
+                {
+                    "_id": "59f863209b21b3526e64420e",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/RTX3EU14-1024x659.jpg",
+                    "origin": "newshour",
+                    "title": "WATCH LIVE: Members of Congress to address DACA",
+                    "ts": 1507212480,
+                    "twitterid": "915941696185257984",
+                    "url": "http://to.pbs.org/2y1VSYE"
+                },
+                {
+                    "_id": "59f863209b21b3526e644210",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/07/RTX3D88D-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Senior Republicans weigh bump stock ban after Las Vegas shooting",
+                    "ts": 1507213800,
+                    "twitterid": "915947185593864194",
+                    "url": "http://to.pbs.org/2fLldMy"
+                }
+            ],
+            [
+                {
+                    "_id": "5a0286ad9b21b3a808e02c13",
+                    "date_month": "2017-11",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/11/RTS1IPWO-1024x706.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "What to watch in the Virginia governor\u2019s race",
+                    "ts": 1510043401,
+                    "twitterid": 927951284430344193,
+                    "url": "https://www.pbs.org/newshour/politics/what-to-watch-in-the-virginia-governors-race"
+                },
+                {
+                    "_id": "5a0286ad9b21b3a808e02c20",
+                    "date_month": "2017-11",
+                    "image": "https://media.npr.org/assets/img/2017/11/06/ap_17284698430536_wide-c3ec022aad126b39e3fd63d8e9a43ca6ee63e9fc.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "What To Watch In Tuesday's Elections Across The Country",
+                    "ts": 1510035900,
+                    "twitterid": 927919823878868992,
+                    "url": "https://www.npr.org/2017/11/07/562303931/election-day-2017-whats-on-the-ballot-and-what-s-at-stake-around-the-country?utm_source=twitter.com&utm_medium=social&utm_campaign=npr&utm_term=nprnews&utm_content=202807"
+                },
+                {
+                    "_id": "59feb85d9b21b340c9a35730",
+                    "date_month": "2017-11",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/courthousefront.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "Government says teen\u2019s lawyers misled them in abortion case",
+                    "ts": 1509704100,
+                    "twitterid": 926528154595860481,
+                    "url": "https://www.pbs.org/newshour/nation/government-says-teens-lawyers-misled-them-in-abortion-case"
+                },
+                {
+                    "_id": "5a006df29b21b37370281daa",
+                    "date_month": "2017-11",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/RTX11XUP-1024x705.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "\u2018Bleak\u2019 assessment of toll of destroying North Korea nukes",
+                    "ts": 1509864526,
+                    "twitterid": 927201029455826946,
+                    "url": "https://www.pbs.org/newshour/politics/bleak-assessment-of-toll-of-destroying-north-korea-nukes"
+                },
+                {
+                    "_id": "59feb85d9b21b340c9a35750",
+                    "date_month": "2017-11",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/GettyImages-609942630-1024x683.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "China disputes Trump\u2019s claim of \u2018flood\u2019 of fentanyl into U.S.",
+                    "ts": 1509683083,
+                    "twitterid": 926440003529592833,
+                    "url": "https://www.pbs.org/newshour/world/china-disputes-trumps-claim-of-flood-of-fentanyl-into-u-s"
+                }
+            ]
+        ]
+    },
+    {
+        "list": [
+            2,
+            26,
+            27,
+            40,
+            38,
+            21,
+            34,
+            26,
+            35,
+            14,
+            6
+        ],
+        "months": [
+            "2017-01",
+            "2017-02",
+            "2017-03",
+            "2017-04",
+            "2017-05",
+            "2017-06",
+            "2017-07",
+            "2017-08",
+            "2017-09",
+            "2017-10",
+            "2017-11"
+        ],
+        "peaks": [
+            [],
+            [],
+            [],
+            "2017-04",
+            "2017-09"
+        ],
+        "theme": "School Students College Education teachers DeVos Trump Helps Column States High Says loans Teaching Debt",
+        "toparticles": [
+            [],
+            [
+                {
+                    "_id": "59f863209b21b3526e6436bf",
+                    "date_month": "2017-02",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/04/classroomempty-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Analysis reveals racial disparities in school arrests",
+                    "ts": 1488230100,
+                    "twitterid": "836323791949168640",
+                    "url": "http://to.pbs.org/2mnxyfl"
+                },
+                {
+                    "_id": "59f863559b21b3529e578003",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/01/27/img_1039_wide-c255a7f231da0c319a773b54e8515d77a4d7740d.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Adulting School Teaches Young Adults Grown-Up Skills",
+                    "ts": 1487686320,
+                    "twitterid": "834043196137230341",
+                    "url": "http://n.pr/2kUVu4e"
+                },
+                {
+                    "_id": "59f863209b21b3526e6435f6",
+                    "date_month": "2017-02",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/02/ed-lee-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "San Francisco becomes first city to offer free community college tuition to all residents",
+                    "ts": 1486650360,
+                    "twitterid": "829698070661234688",
+                    "url": "http://to.pbs.org/2kLLeNa"
+                },
+                {
+                    "_id": "59f863559b21b3529e577f98",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/include/images/facebook-default-wide.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "School District In Canada Cancels Trips To U.S., Citing Border Policies, Safety",
+                    "ts": 1487015220,
+                    "twitterid": "831228211782561792",
+                    "url": "http://n.pr/2lIcP1e"
+                },
+                {
+                    "_id": "59f863559b21b3529e577fae",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2016/12/15/online-diploma2_wide-59542d76615c50ecc043063d1b7054f15347c619.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "These Top Schools Are Offering Big Savings On Master's Degrees, But There's A Catch",
+                    "ts": 1487162100,
+                    "twitterid": "831844259846320129",
+                    "url": "http://n.pr/2lh0nJ5"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e64373a",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/9608807888_d691ecb613_o.jpg",
+                    "origin": "newshour",
+                    "title": "Senate votes to end Obama school accountability rules",
+                    "ts": 1489094400,
+                    "twitterid": "839948913914310657",
+                    "url": "http://to.pbs.org/2m4O0w4"
+                },
+                {
+                    "_id": "59f863209b21b3526e6437be",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/04/classroomempty-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Supreme Court bolsters rights of learning-disabled students",
+                    "ts": 1490209200,
+                    "twitterid": "844624722868416512",
+                    "url": "http://to.pbs.org/2ndRy3b"
+                },
+                {
+                    "_id": "59f863559b21b3529e5780cb",
+                    "date_month": "2017-03",
+                    "image": "https://media.npr.org/assets/img/2017/02/15/ljohnson-daisyromero-1_wide-2f787596edd812739d1da9b98f68665cf95323f9.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "DACA, One Student's Story",
+                    "ts": 1488978720,
+                    "twitterid": "839463742312165380",
+                    "url": "http://n.pr/2lXKi7w"
+                },
+                {
+                    "_id": "59f863559b21b3529e578216",
+                    "date_month": "2017-03",
+                    "image": "https://media.npr.org/assets/img/2017/03/22/justice-roberts_wide-16b3af1f779d0fc7ed6f0f32d36cc1c1138eacd2.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "The Supreme Court Rules In Favor Of A Special Education Student",
+                    "ts": 1490202720,
+                    "twitterid": "844597676159225856",
+                    "url": "http://n.pr/2nnv8wI"
+                },
+                {
+                    "_id": "59f863209b21b3526e643813",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/speced2-e1490747481932-1024x568.jpg",
+                    "origin": "newshour",
+                    "title": "Is this Supreme Court ruling a game changer for special education?",
+                    "ts": 1490760000,
+                    "twitterid": "846934947155738625",
+                    "url": "http://to.pbs.org/2nKljZT"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e64389c",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTS6QBZ-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Is college worth the cost?",
+                    "ts": 1491783300,
+                    "twitterid": "851226974496239616",
+                    "url": "http://to.pbs.org/2oTtPGU"
+                },
+                {
+                    "_id": "59f863209b21b3526e6438b7",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2015/01/106298311-1024x681.jpg",
+                    "origin": "newshour",
+                    "title": "Column: Can librarians help solve the fake news problem?",
+                    "ts": 1491940020,
+                    "twitterid": "851884377508282369",
+                    "url": "http://to.pbs.org/2hYgHxM"
+                },
+                {
+                    "_id": "59f863209b21b3526e643915",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2015/12/RTX6DPA-1024x699.jpg",
+                    "origin": "newshour",
+                    "title": "Graduate students are underpaid and overstressed. Can academic unions change that?",
+                    "ts": 1492626000,
+                    "twitterid": "854761519166312448",
+                    "url": "http://to.pbs.org/2pCDUbG"
+                },
+                {
+                    "_id": "59f863559b21b3529e5783af",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/06/gettyimages-632685456_wide-dbc37ecbbdf9ba1c150da6a7906498ede4e3cef7.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Travel Ban's 'Chilling Effect' Could Cost Universities Hundreds Of Millions",
+                    "ts": 1491596040,
+                    "twitterid": "850441549825531904",
+                    "url": "http://n.pr/2oKJ9Gl"
+                },
+                {
+                    "_id": "59f863209b21b3526e643858",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/IMG_5316-1024x768.jpg",
+                    "origin": "newshour",
+                    "title": "Bill Nye on his \u2018codebreaker\u2019 mom and how science teachers can change the world",
+                    "ts": 1491262800,
+                    "twitterid": "849043839515938817",
+                    "url": "http://to.pbs.org/2nPWFFf"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643a46",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/04/classroomempty-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "6 ways Medicaid cuts under GOP health care overhaul could impact schools",
+                    "ts": 1494783000,
+                    "twitterid": "863808629031354368",
+                    "url": "http://to.pbs.org/2qGnShT"
+                },
+                {
+                    "_id": "59f863559b21b3529e578572",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/01/gettyimages-137701227_wide-4213ef12d2d96f4de1a9153e30aa8dc58033ca0f.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump Administration Rolls Back Michelle Obama's Healthy School Lunch Push",
+                    "ts": 1493681820,
+                    "twitterid": "859189950260051968",
+                    "url": "http://n.pr/2p2i6mx"
+                },
+                {
+                    "_id": "59f863559b21b3529e578593",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/03/g_emmanuel-williamshouse_wide-bec1fb4c7f907fd9ca387b5ee786208d42b8896c.jpeg?s=1400",
+                    "origin": "npr",
+                    "title": "Elite Prep Schools Experiment With 'All-Gender' Dorms",
+                    "ts": 1493853300,
+                    "twitterid": "859909186943152128",
+                    "url": "http://n.pr/2pajEdU"
+                },
+                {
+                    "_id": "59f863559b21b3529e57861c",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/09/peace-now_wide-90df8f3d4524854ef591203ea3f31feec069ba84.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "School Bullying Is Down. Why Don't Students Believe It?",
+                    "ts": 1494504600,
+                    "twitterid": "862640940321787904",
+                    "url": "http://n.pr/2qvaEod"
+                },
+                {
+                    "_id": "59f863559b21b3529e57863f",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/12/ap_16342086070587_cc_wide-f9d090b2b8129cb43b5bd67461e0df8efb3ad967.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "As White Supremacists Push Onto Campuses, Schools Wrestle With Response",
+                    "ts": 1494682440,
+                    "twitterid": "863386856892895232",
+                    "url": "http://n.pr/2r3Itwz"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863559b21b3529e5789a4",
+                    "date_month": "2017-06",
+                    "image": "https://media.npr.org/assets/img/2017/06/21/gettyimages-170409892_wide-e2b3a92620e073c862e6d5924865a2b0153874db.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Louisiana Is First State To Ban Public Colleges From Asking About Criminal History",
+                    "ts": 1498332420,
+                    "twitterid": "878695979628867584",
+                    "url": "http://n.pr/2u1oo7E"
+                },
+                {
+                    "_id": "59f863559b21b3529e578861",
+                    "date_month": "2017-06",
+                    "image": "https://media.npr.org/assets/img/2017/06/08/e-siner_toned_wide-5dd78599c0d41498e2c14053200cd628d753f220.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "The First State To Offer Free Community College To Nearly Every Adult",
+                    "ts": 1497208500,
+                    "twitterid": "873981914809593857",
+                    "url": "http://n.pr/2t9ZfHD"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c57",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTX394AK-1024x576.jpg",
+                    "origin": "newshour",
+                    "title": "Schools are watching students\u2019 social media, raising questions about free speech",
+                    "ts": 1498014000,
+                    "twitterid": "877360433279234049",
+                    "url": "http://to.pbs.org/2sO1x24"
+                },
+                {
+                    "_id": "59f863209b21b3526e643b9d",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTX39AXM-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "DeVos non-committal on banning discrimination against LGBTQ students in private schools",
+                    "ts": 1496840400,
+                    "twitterid": "872438001351237633",
+                    "url": "http://to.pbs.org/2rJx8iY"
+                },
+                {
+                    "_id": "59f863559b21b3529e5789a0",
+                    "date_month": "2017-06",
+                    "image": "https://media.npr.org/assets/img/2017/06/23/gettyimages-687799806_wide-f594ff235e9929241e2dfa49e8b0535c63c55b52.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "DeVos Appoints CEO Of A Student Loan Company To Head Federal Aid Agency",
+                    "ts": 1498306500,
+                    "twitterid": "878587260362346496",
+                    "url": "http://n.pr/2rMHTAo"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643d7a",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTR3C81W-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Real things teachers can do to combat fake news",
+                    "ts": 1499975100,
+                    "twitterid": "885585890931646465",
+                    "url": "http://to.pbs.org/2vdTZUv"
+                },
+                {
+                    "_id": "59f863559b21b3529e578bd8",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/18/debt-relief_wide-2097de230f392841af7314848a4b6b6acf21ffed.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Private Student Loans: The Rise And Fall (And Rise Again?)",
+                    "ts": 1500411600,
+                    "twitterid": "887416690501271552",
+                    "url": "http://n.pr/2vzz7qX"
+                },
+                {
+                    "_id": "59f863559b21b3529e578cc7",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/19/climate-change-earth_wide-c1a351f9472a81e517ec69675fdad1cca6d88391.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "The Ongoing Battle Between Science Teachers And Fake News",
+                    "ts": 1501238940,
+                    "twitterid": "890886871106170880",
+                    "url": "http://n.pr/2eT5jT1"
+                },
+                {
+                    "_id": "59f863559b21b3529e578d0b",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/14/npr_teachersok_final_wide-806cfa90caa9918bfd6c3238249845a3e0fb31ba.jpeg?s=1400",
+                    "origin": "npr",
+                    "title": "Teachers With Student Debt: These Are Their Stories",
+                    "ts": 1501455660,
+                    "twitterid": "891795794453331968",
+                    "url": "http://n.pr/2tUOdLa"
+                },
+                {
+                    "_id": "59f863209b21b3526e643e24",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/CrossingPhoto.png",
+                    "origin": "newshour",
+                    "title": "Column: How I use George Washington to make kids care about \u2018fake news\u2019",
+                    "ts": 1501017600,
+                    "twitterid": "889958440977780737",
+                    "url": "http://to.pbs.org/2uuTRm4"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643ea8",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/flint-e1501633244207-1024x568.jpg",
+                    "origin": "newshour",
+                    "title": "What Flint\u2019s superintendent did to protect children from lead",
+                    "ts": 1501671600,
+                    "twitterid": "892701522265550849",
+                    "url": "http://to.pbs.org/2f606aM"
+                },
+                {
+                    "_id": "59f863209b21b3526e643fc0",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/GettyImages-156382547-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Purdue invests in students\u2019 futures with new model of financing",
+                    "ts": 1503453600,
+                    "twitterid": "900175764691140608",
+                    "url": "http://to.pbs.org/2g3oyK5"
+                },
+                {
+                    "_id": "59f863209b21b3526e643fc8",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/college-debt_opt-3.jpg",
+                    "origin": "newshour",
+                    "title": "Twitter chat: How do we solve the student debt crisis?",
+                    "ts": 1503503100,
+                    "twitterid": "900383383733194756",
+                    "url": "http://to.pbs.org/2wETpD4"
+                },
+                {
+                    "_id": "59f863559b21b3529e578d55",
+                    "date_month": "2017-08",
+                    "image": "https://media.npr.org/assets/img/2017/08/02/cbeck_teacherstudentdebt_wide-a45e65441dc88f0481b5ea6f37b6e26d55529c6b.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "New Fears For Public Service Loan Forgiveness",
+                    "ts": 1501697640,
+                    "twitterid": "892810733527937030",
+                    "url": "http://n.pr/2hogyUg"
+                },
+                {
+                    "_id": "59f863209b21b3526e643eb1",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTX3CTS9-1-1024x677.jpg",
+                    "origin": "newshour",
+                    "title": "DeVos abandons plan to award federal student loan servicing to a single company",
+                    "ts": 1501703100,
+                    "twitterid": "892833634457092099",
+                    "url": "http://to.pbs.org/2u4uLM6"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e644085",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/MTG2-e1504659152643-1024x571.jpg",
+                    "origin": "newshour",
+                    "title": "How online graduate programs offer degrees at significant savings",
+                    "ts": 1504695600,
+                    "twitterid": "905385086282981376",
+                    "url": "http://to.pbs.org/2gLS0VD"
+                },
+                {
+                    "_id": "59f863209b21b3526e64411a",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/Sarah-Gonser-DACA2-1024x768.jpg",
+                    "origin": "newshour",
+                    "title": "What students protected by DACA are worried about",
+                    "ts": 1505690100,
+                    "twitterid": "909556326254092288",
+                    "url": "http://to.pbs.org/2xntYpZ"
+                },
+                {
+                    "_id": "59f863559b21b3529e579061",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/08/23/npr_final2_3_wide-cc1907911925436df8da51ba85609e6cebced4ae.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "In The Weeks Before Freshman Year, Money Worries Aplenty",
+                    "ts": 1504810560,
+                    "twitterid": "905867485265760256",
+                    "url": "http://n.pr/2vJP5iy"
+                },
+                {
+                    "_id": "59f863559b21b3529e579098",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/06/paigevickers_npr_finals_9-5-03_smaller_wide-022a46d50df7a70a973a93fc4d30320a6179e100.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "In The Age Of Screen Time, Is Paper Dead?",
+                    "ts": 1505098800,
+                    "twitterid": "907076231987814403",
+                    "url": "http://n.pr/2gUZ02p"
+                },
+                {
+                    "_id": "59f863559b21b3529e57909a",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/08/gettyimages-601088594_wide-4f65e3342d6029207222ab7fc0440c78c2becd78.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Teaching Sept. 11 To Students Who Were Born After The Attacks",
+                    "ts": 1505128680,
+                    "twitterid": "907201556545552384",
+                    "url": "http://n.pr/2vPigkh"
+                }
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "list": [
+            7,
+            25,
+            69,
+            19,
+            47,
+            62,
+            82,
+            24,
+            42,
+            22,
+            8
+        ],
+        "months": [
+            "2017-01",
+            "2017-02",
+            "2017-03",
+            "2017-04",
+            "2017-05",
+            "2017-06",
+            "2017-07",
+            "2017-08",
+            "2017-09",
+            "2017-10",
+            "2017-11"
+        ],
+        "peaks": [
+            [],
+            [],
+            "2017-03",
+            "2017-07"
+        ],
+        "theme": "health care GOP Trump Senators plan Obamacare Republicans insurance says Repeal Cut Medicaid tax House",
+        "toparticles": [
+            [],
+            [
+                {
+                    "_id": "59f863209b21b3526e6435b3",
+                    "date_month": "2017-02",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/09/RTSO349-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "GOP mulls \u2018repairing\u2019 Obamacare law it vowed to repeal",
+                    "ts": 1486154400,
+                    "twitterid": "827617658669408256",
+                    "url": "http://to.pbs.org/2kBAq6u"
+                },
+                {
+                    "_id": "59f863559b21b3529e577f7a",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/09/tom-price-confirmation_wide-2e6f602caeba34b22f6e41337c949f5d9c930f84.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "GOP Docs Rise To Power As Congress Retools Health Care Law",
+                    "ts": 1486749240,
+                    "twitterid": "830112697165438977",
+                    "url": "http://n.pr/2lsovJn"
+                },
+                {
+                    "_id": "59f863559b21b3529e577fd4",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/16/huizenga_wide-4b5efeb0c74137549b95c39a6c4cecb2e151ddda.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Republican Health Care Proposal Would Cover Fewer Low-Income Families",
+                    "ts": 1487337480,
+                    "twitterid": "832580074092257280",
+                    "url": "http://n.pr/2lpZsX6"
+                },
+                {
+                    "_id": "59f863209b21b3526e64360b",
+                    "date_month": "2017-02",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/02/price2-1024x697.jpg",
+                    "origin": "newshour",
+                    "title": "As HHS secretary, Tom Price has significant powers to change health care",
+                    "ts": 1486789200,
+                    "twitterid": "830280207160508416",
+                    "url": "http://to.pbs.org/2l3a3qq"
+                },
+                {
+                    "_id": "59f863559b21b3529e577f70",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/09/congress-building_wide-7e6559efe4a276c8043b8dc1696f463f58a264e7.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Health Insurers Face 'Massive Confusion' As GOP Wavers On Obamacare",
+                    "ts": 1486665120,
+                    "twitterid": "829759774552125442",
+                    "url": "http://n.pr/2lvm31s"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e6437ce",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/GettyImages-656937656-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "In stinging setback for Trump and Ryan, House GOP leaders delay vote on health care repeal bill",
+                    "ts": 1490298720,
+                    "twitterid": "845000284023721984",
+                    "url": "http://to.pbs.org/2oa9I3u"
+                },
+                {
+                    "_id": "59f863209b21b3526e6437d7",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/health1.jpg",
+                    "origin": "newshour",
+                    "title": "How GOP health bill could dramatically change lives of small business employees, Medicaid recipients",
+                    "ts": 1490324400,
+                    "twitterid": "845107907398127616",
+                    "url": "http://to.pbs.org/2ntsrd6"
+                },
+                {
+                    "_id": "59f863209b21b3526e64382d",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/RTX30LSP-1-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Pence casts decisive vote for bill that lets states block some Planned Parenthood money",
+                    "ts": 1490906880,
+                    "twitterid": "847551002370875392",
+                    "url": "http://to.pbs.org/2nPLCOv"
+                },
+                {
+                    "_id": "59f863559b21b3529e578237",
+                    "date_month": "2017-03",
+                    "image": "https://media.npr.org/assets/img/2017/03/23/ap_17083032310324_wide-a5ed7e26c6d24c228fc9c69cea0088b1bd67f7c1.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump Ultimatum For House GOP: Vote On Health Bill Or Affordable Care Act Stands",
+                    "ts": 1490298300,
+                    "twitterid": "844998595090792453",
+                    "url": "http://n.pr/2nsRJYH"
+                },
+                {
+                    "_id": "59f863559b21b3529e57820d",
+                    "date_month": "2017-03",
+                    "image": "https://media.npr.org/assets/img/2017/03/21/jan-brewer-1_wide-501df46628af5a31a39d9da86238ab5a80e83408.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Repeal Of Health Law Could Force Tough Decisions For Arizona Republicans",
+                    "ts": 1490181420,
+                    "twitterid": "844508203954008065",
+                    "url": "http://n.pr/2nmj66I"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643966",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/08/GettyImages-588662118-1024x688.jpg",
+                    "origin": "newshour",
+                    "title": "Leading GOP moderate opposes plan to move House health bill",
+                    "ts": 1493223600,
+                    "twitterid": "857268032950816769",
+                    "url": "http://to.pbs.org/2oJQi55"
+                },
+                {
+                    "_id": "59f863209b21b3526e643990",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/transpatients-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "GOP health plan for pre-existing conditions spawns worries",
+                    "ts": 1493483400,
+                    "twitterid": "858357719908089859",
+                    "url": "http://to.pbs.org/2oJqQBC"
+                },
+                {
+                    "_id": "59f863559b21b3529e5784d9",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/20/medication-prices-1_wide-881188bbabf6067cdc3f5bacacf0d1f39ac62938.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "GOP Plan To Trim Insurance Benefits Might Not Tame Premiums",
+                    "ts": 1492770540,
+                    "twitterid": "855367816719028224",
+                    "url": "http://n.pr/2ob1oow"
+                },
+                {
+                    "_id": "59f863209b21b3526e643977",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTS140BQ-e1498143794142-1024x781.jpg",
+                    "origin": "newshour",
+                    "title": "GOP\u2019s revised health care bill hasn\u2019t yet swayed enough moderate Republicans",
+                    "ts": 1493323260,
+                    "twitterid": "857686215851745280",
+                    "url": "http://to.pbs.org/2p8rZkV"
+                },
+                {
+                    "_id": "59f863559b21b3529e57845b",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/14/health-insurance-map_wide-57828b00001f71dd6b7e14e383248e5ad76f685d.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Maps Show A Dramatic Rise In Health Insurance Coverage Under ACA",
+                    "ts": 1492201260,
+                    "twitterid": "852980028149186560",
+                    "url": "http://n.pr/2ouiUkq"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e6439ca",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTS155KH-1024x730.jpg",
+                    "origin": "newshour",
+                    "title": "What\u2019s in the House GOP health care bill?",
+                    "ts": 1493924700,
+                    "twitterid": "860208778947514368",
+                    "url": "http://to.pbs.org/2pK5Zvy"
+                },
+                {
+                    "_id": "59f863209b21b3526e6439e8",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/trumpaustralia-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trump: \u2018Australians have better health care than we do\u2019",
+                    "ts": 1494029700,
+                    "twitterid": "860649059547086849",
+                    "url": "http://to.pbs.org/2pj61th"
+                },
+                {
+                    "_id": "59f863209b21b3526e6439f0",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTS157M3-1024x697.jpg",
+                    "origin": "newshour",
+                    "title": "Will Republicans\u2019 health care plan bring political fallout?",
+                    "ts": 1494115200,
+                    "twitterid": "861007682395832321",
+                    "url": "http://to.pbs.org/2pNMGmm"
+                },
+                {
+                    "_id": "59f863209b21b3526e643ac8",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTX377IK-1024x671.jpg",
+                    "origin": "newshour",
+                    "title": "Who are the winners and losers in Trump\u2019s budget proposal?",
+                    "ts": 1495567200,
+                    "twitterid": "867098029794500608",
+                    "url": "http://to.pbs.org/2recES4"
+                },
+                {
+                    "_id": "59f863559b21b3529e5785a4",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/04/seema-tom-mike_wide-0c2d0088aa62cc44b211ad52411511af40c21613.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Here Is What's In The House-Approved Health Care Bill",
+                    "ts": 1493930400,
+                    "twitterid": "860232566489657351",
+                    "url": "http://n.pr/2qJwvUU"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643bfa",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/AdobeStock_114044590-1024x756.jpeg",
+                    "origin": "newshour",
+                    "title": "What\u2019s at stake for children\u2019s health care?",
+                    "ts": 1497399600,
+                    "twitterid": "874783445720813568",
+                    "url": "http://to.pbs.org/2rojaGt"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c3b",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTX316WH-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "GOP senator warns against rushed vote on health care bill",
+                    "ts": 1497816000,
+                    "twitterid": "876529965096771585",
+                    "url": "http://to.pbs.org/2sEXx3X"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c5f",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/mcconnell-1-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "What we know about the Senate health care plan",
+                    "ts": 1498065300,
+                    "twitterid": "877575595986636800",
+                    "url": "http://to.pbs.org/2sQEYdY"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c81",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTS189DX-1024x716.jpg",
+                    "origin": "newshour",
+                    "title": "Senate GOP releases health care bill and battle lines form",
+                    "ts": 1498179600,
+                    "twitterid": "878055013138018304",
+                    "url": "http://to.pbs.org/2tUaLYf"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c86",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/07/RTX2CVL5-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Governors wary of Medicaid cost shift in Senate health plan",
+                    "ts": 1498228200,
+                    "twitterid": "878259059606073345",
+                    "url": "http://to.pbs.org/2sYNzuq"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643d85",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/transgender-medicaid-1_770.jpg",
+                    "origin": "newshour",
+                    "title": "Transgender health care targeted in crusade to undo ACA",
+                    "ts": 1500054300,
+                    "twitterid": "885918064709177344",
+                    "url": "http://to.pbs.org/2v0JLaz"
+                },
+                {
+                    "_id": "59f863209b21b3526e643d99",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/RTX3BLRJ-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Governors from both parties wary of GOP health care plan",
+                    "ts": 1500258600,
+                    "twitterid": "886774962949943300",
+                    "url": "http://to.pbs.org/2tgZkhk"
+                },
+                {
+                    "_id": "59f863209b21b3526e643da1",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/RTX3AWCA-1024x684.jpg",
+                    "origin": "newshour",
+                    "title": "For young adults, the GOP health bill is a hard sell",
+                    "ts": 1500313500,
+                    "twitterid": "887005230268792833",
+                    "url": "http://to.pbs.org/2u1x4Mx"
+                },
+                {
+                    "_id": "59f863209b21b3526e643e0f",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTS17W6B-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trump says GOP health care push is \u2018last chance\u2019",
+                    "ts": 1500909300,
+                    "twitterid": "889504195476414466",
+                    "url": "http://to.pbs.org/2vSNyqk"
+                },
+                {
+                    "_id": "59f863209b21b3526e643e2b",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/collins-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "The Senate voted to open debate on health care. Now what?",
+                    "ts": 1501029300,
+                    "twitterid": "890007509850771456",
+                    "url": "http://to.pbs.org/2eMa9kR"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643e97",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/RTX3BU94-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Despite Trump\u2019s prods, Senate GOP sees no path on health care",
+                    "ts": 1501601400,
+                    "twitterid": "892407078945300483",
+                    "url": "http://to.pbs.org/2vey9ni"
+                },
+                {
+                    "_id": "59f863209b21b3526e643e9a",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/07/marcshort-1024x621.jpg",
+                    "origin": "newshour",
+                    "title": "Trump\u2019s tax plan has aggressive deadline, but few details",
+                    "ts": 1501606800,
+                    "twitterid": "892429722172481536",
+                    "url": "http://to.pbs.org/2vgFClw"
+                },
+                {
+                    "_id": "59f863209b21b3526e643ec1",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/RTS13WVR-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "A (quick) guide to the upcoming battle over tax reform",
+                    "ts": 1501780500,
+                    "twitterid": "893158272215138304",
+                    "url": "http://to.pbs.org/2w3HyvI"
+                },
+                {
+                    "_id": "59f863209b21b3526e643ed1",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/tax3-1024x576.jpg",
+                    "origin": "newshour",
+                    "title": "Tax reform is the next big GOP push. Here\u2019s what to expect",
+                    "ts": 1501819200,
+                    "twitterid": "893320595336699905",
+                    "url": "http://to.pbs.org/2hsUyaP"
+                },
+                {
+                    "_id": "59f863209b21b3526e643f2d",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/trumpkorea-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trump taunts McConnell over failed attempt at health care reform",
+                    "ts": 1502378100,
+                    "twitterid": "895664788881145857",
+                    "url": "http://to.pbs.org/2uJJMhJ"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e644161",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/07/RTX3D7T1-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Trump criticizes McCain over health care bill",
+                    "ts": 1506173400,
+                    "twitterid": "911583436732633088",
+                    "url": "http://to.pbs.org/2wcvaJu"
+                },
+                {
+                    "_id": "59f863209b21b3526e644178",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/RTX3D76H-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Collins opposes latest GOP health care plan, jeopardizing chances for reform",
+                    "ts": 1506380940,
+                    "twitterid": "912454010749284352",
+                    "url": "http://to.pbs.org/2xsimm7"
+                },
+                {
+                    "_id": "59f863209b21b3526e644167",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/RTX3D76H-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Opposition from GOP senators grows, jeopardizes health bill",
+                    "ts": 1506263460,
+                    "twitterid": "911961168515883008",
+                    "url": "http://to.pbs.org/2yBeZqK"
+                },
+                {
+                    "_id": "59f863559b21b3529e57914f",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/19/gettyimages-846515598_wide-561d500ef90fd75e1a171ab1e73d346f8e2c3174.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Latest GOP Effort To Replace Obamacare Could End Health Care For Millions",
+                    "ts": 1505849160,
+                    "twitterid": "910223554423214080",
+                    "url": "http://n.pr/2xcIVve"
+                },
+                {
+                    "_id": "59f863209b21b3526e644054",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTX36B6A-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "GOP ability to dismantle health law expires at month\u2019s end",
+                    "ts": 1504298700,
+                    "twitterid": "903720368216649730",
+                    "url": "http://to.pbs.org/2eMDFUV"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e644218",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2015/12/RTR3NKL0-1-1024x705.jpg",
+                    "origin": "newshour",
+                    "title": "Poll: Most Americans disapprove of how Congress has handled health care",
+                    "ts": 1507249200,
+                    "twitterid": "916095665289220106",
+                    "url": "http://to.pbs.org/2yKDe4Q"
+                },
+                {
+                    "_id": "59f863209b21b3526e644275",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/GettyImages-860572118-sm2-1024x682.jpg",
+                    "origin": "newshour",
+                    "title": "Analysis: What you need to know about Trump\u2019s changes to the health law",
+                    "ts": 1507938300,
+                    "twitterid": "918985958334197760",
+                    "url": "http://to.pbs.org/2wUKYRy"
+                },
+                {
+                    "_id": "59f863559b21b3529e579275",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/03/childrens-health_wide-aff58728c002f262a117004c529f7696bdcb8167.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Lapse In Federal Funding Imperils Children's Health Coverage",
+                    "ts": 1507046160,
+                    "twitterid": "915244053024743424",
+                    "url": "http://n.pr/2kjDhCo"
+                },
+                {
+                    "_id": "59f863559b21b3529e5792bb",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/05/ap_943683648432trumpbirthcontrol_wide-eb98182bd65be675429b6251f96bb5369c295d94.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump Guts Requirement That Employer Health Plans Pay For Birth Control",
+                    "ts": 1507303200,
+                    "twitterid": "916322381018419200",
+                    "url": "http://n.pr/2ksmNIm"
+                },
+                {
+                    "_id": "59f863559b21b3529e5792dd",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/05/premiums-1_wide-06463472df8ddd3c3a1cc7e582d2ddbde7acf9b3.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Steep Premiums Challenge People Who Buy Health Insurance Without Subsidies",
+                    "ts": 1507545000,
+                    "twitterid": "917336341171494913",
+                    "url": "http://n.pr/2y2ewQK"
+                }
+            ],
+            []
+        ]
+    }
+]
