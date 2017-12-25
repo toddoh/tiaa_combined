@@ -174,7 +174,7 @@ def cluster_articles(item, mode=None):
         print(parsed_articlecluster_packed)
 
         print('Clustering unit: finished processing')
-        with open('./dataset/trumptimemachine_result.json', 'w') as outfile:
+        with open('dataset/trumptimemachine_result.json', 'w') as outfile:
             json.dump(parsed_articlecluster_packed, outfile, indent=4, sort_keys=True)
 
         print('Clustering unit: saved into json file.')
