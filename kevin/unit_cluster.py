@@ -12,7 +12,7 @@ import json
 
 print('Initiating cluster unit...')
 print('Clustering unit: Setting up MongoClient kevin@main')
-client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
+client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@localhost:27017/main')
 db = client['main']
 
 theme_blacklists = ['periscope', 'pbs', 'newshour', 'npr', 'watch']
@@ -66,8 +66,8 @@ def cluster_articles(item, mode=None):
 
         cursor = list(collection.find({"ts": {"$gt": int(unix_time) }}).sort([('_id', 1)]))
     elif mode == 'unlimited':
-        cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
-        # cursor = list(collection.find({}).sort([('_id', 1)]))
+        # cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
+        cursor = list(collection.find({}).sort([('_id', 1)]))
         print(len(cursor))
 
     if len(cursor):
