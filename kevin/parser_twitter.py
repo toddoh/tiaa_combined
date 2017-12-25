@@ -40,7 +40,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
                              shape = loader['shape'])
 
     data_path = './dataset/'
-    save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
+    #save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
 
     # print('Calculating cosine distance...')
     # model_tf_idf = NearestNeighbors(metric='cosine', algorithm='brute')
@@ -61,7 +61,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     # print_nearest_neighbors(tfs[bill_id], parsed_article, model_tf_idf, k=15)
 
     print('Determining k-means clusters...')
-    tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
+    #tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
 
     # kval = 10
     range_n_clusters = range(rangeMin, rangeMax)
