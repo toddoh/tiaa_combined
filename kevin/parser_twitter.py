@@ -39,7 +39,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
         return csr_matrix((loader['data'], loader['indices'], loader['indptr']),
                              shape = loader['shape'])
 
-    data_path = 'dataset/'
+    data_path = './dataset/'
     save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
 
     # print('Calculating cosine distance...')
