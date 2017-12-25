@@ -40,10 +40,10 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
                              shape = loader['shape'])
 
     data_path = './'
-    # save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
+    save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
 
     print('Determining k-means clusters...')
-    # tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
+    tfs = load_sparse_csr(data_path + 'articles_tf_idf.npz')
 
     # kval = 10
     range_n_clusters = range(rangeMin, rangeMax)
