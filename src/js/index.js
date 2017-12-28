@@ -1,11 +1,13 @@
 import styles from '../styles/core.css';
 import {html, render} from 'lit-html';
+import eastasia_korea_style from '../styles/eastasia/korea.css';
 
 const render_core = () => {
     const contentSections = [
         { id: 'nav-section-today', name: 'Today', path: '' },
-        { id: 'nav-section-situations', name: 'Situations', path: 'situations' },
-        { id: 'nav-section-trumptimemachine', name: 'TrumpTimeMachine', path: 'trumptimemachine' }
+        //{ id: 'nav-section-situations', name: 'Situations', path: 'situations' },
+        { id: 'nav-section-trump', name: 'TrumpFirstYear', path: 'trump' },
+        { id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
     ];
 
     const top_frame_markup = () => html`
@@ -28,6 +30,11 @@ const render_core = () => {
                 </ul>
             </div>
         </div>
+        <div class="minion-timestamp">
+            <div class="content-ts">
+                <span class="ts-date">...</span>
+            </div>
+        </div>
         <div class="minion-contents">
         </div>
     </div>
@@ -37,15 +44,16 @@ const render_core = () => {
 }
 
 render_core();
-const currentpath_type = window.location.pathname;
+var currentpath_whole = window.location.pathname;
+var currentpath_type = window.location.pathname.split('/')[1];
 
-if (currentpath_type !== '/') {
-    import('.' + currentpath_type).then(module => {
-        module.render_trumptimemachine();
+if (currentpath_type !== '') {
+    import('./' + currentpath_type).then(module => {
+        module.init_render();
     });
 } else {
     import('./today').then(module => {
-        module.render_today();
+        module.init_render();
     });
 }
 

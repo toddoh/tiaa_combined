@@ -1,7 +1,7 @@
 import {html, render} from 'lit-html';
 
 
-export function render_today() {
+export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='Today';
     document.querySelector('.navbox-sections li[data-sectionid="nav-section-today"]').remove();
 

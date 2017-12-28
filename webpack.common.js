@@ -25,7 +25,7 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js/,
+                test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 include: __dirname + '/src/js',
@@ -35,7 +35,8 @@ module.exports = {
                 loader: ExtractTextPlugin.extract({
                     use: [{
                         loader: "css-loader"
-                    }]
+                    }],
+                    allChunks: true
                 }),
                 exclude: /node_modules/
             },

@@ -12,7 +12,7 @@ import json
 
 print('Initiating cluster unit...')
 print('Clustering unit: Setting up MongoClient kevin@main')
-client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@localhost:27017/main')
+client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
 db = client['main']
 
 theme_blacklists = ['periscope', 'pbs', 'newshour', 'npr', 'watch']
@@ -84,7 +84,7 @@ def cluster_articles(item, mode=None):
         parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
         print('Clustering unit: Finished processing loaded articles')
 
-        parsed_data = parse_aggregated(parsed_article_dict, 2, 20)
+        parsed_data = parse_aggregated(parsed_article_dict, 1, 15)
         origin_data_raw = cursor
 
         # print(parsed_data[0])
@@ -170,8 +170,8 @@ def cluster_articles(item, mode=None):
 
             parsed_articlecluster_packed.append(cluster_data)
 
-        print('Raw article data reference: ')
-        print(parsed_articlecluster_packed)
+        # print('Raw article data reference: ')
+        # print(parsed_articlecluster_packed)
 
         print('Clustering unit: finished processing')
         with open('./dataset/trumptimemachine_result.json', 'w') as outfile:

@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6{
 html{
     user-select: none !important;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    overflow: hidden;
+    overflow: auto;
     height: auto;
     width: auto;
     position: relative;
@@ -42,6 +42,7 @@ body{
 .top-navbox{
     background: #fff;
     width: 279px;
+    position: absolute;
 }
 
 .top-navbox:hover{
@@ -64,12 +65,20 @@ body{
 }
 
 .navbox-currentpath{
+    width: 0;
+    overflow: hidden;
+    margin-right: 0;
+}
+
+.top-navbox:hover .navbox-currentpath{
     font-weight: 700;
     margin-right: 6px;
     font-size: 1.25em;
+    width: auto;
+    overflow: initial;
 }
 
-.navbox-currentpath.long{
+.top-navbox:hover .navbox-currentpath.long{
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -86,6 +95,13 @@ body{
     width: 15px;
     height: 9px;
     background-image: url('../resources/symbol_arrow_down.png');
+    background-size: cover;
+}
+
+.top-navbox:hover .navbox-reveal > div{
+    width: 15px;
+    height: 9px;
+    background-image: url('../resources/symbol_arrow_up.png');
     background-size: cover;
 }
 
@@ -143,6 +159,15 @@ body{
     background-image: url('../resources/section_trump.png');
 }
 
-.navbox-sections li[data-sectionid="nav-section-trumptimemachine"]:before{
+.navbox-sections li[data-sectionid="nav-section-trump"]:before{
     background-image: url('../resources/section_trump_timemachine.png');
+}
+
+.minion-timestamp{
+    width: 279px;
+    position: absolute;
+    right: 30px;
+    padding-top: 43px;
+    text-align: right;
+    color: #737373;
 }

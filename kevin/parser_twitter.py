@@ -78,13 +78,32 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     plt.figure(figsize=(12, 6))
     elbow_data = plt.plot(km_df.num_clusters, km_df.cluster_errors, marker="o")
 
-    # elbow_xvalues = elbow_data[0].get_xdata()
-    # elbow_yvalues = elbow_data[0].get_ydata()
-    # elbow_idx = np.where(elbow_yvalues >= 9) and np.where(elbow_yvalues <= 12)
-    plt.savefig('./dataset/elbow_plot.png')
-    # print(elbow_idx)
-    plt.show()
-    k_final_val = int(input('Provide the elbow value for k and press enter: '))
+    seg_threshold = 0.97  # Set this to your desired target
+
+    # The angle between three points
+    def segments_gain(p1, v, p2):
+        vp1 = np.linalg.norm(p1 - v)
+        vp2 = np.linalg.norm(p2 - v)
+        p1p2 = np.linalg.norm(p1 - p2)
+        return np.arccos((vp1 ** 2 + vp2 ** 2 - p1p2 ** 2) / (2 * vp1 * vp2)) / np.pi
+
+    # Normalize the data
+    criterion = np.array(km_df.cluster_errors)
+    criterion = (criterion - criterion.min()) / (criterion.max() - criterion.min())
+
+    # Compute the angles
+    seg_gains = np.array([0, ] + [segments_gain(*[np.array([range_n_clusters[j], criterion[j]])
+                                                  for j in range(i - 1, i + 2)])
+                                  for i in range(len(range_n_clusters) - 2)] + [np.nan, ])
+
+    # Get the first index satisfying the threshold
+    kIdx = np.argmax(seg_gains > seg_threshold)
+    # plt.plot(km_df.num_clusters[kIdx], km_df.cluster_errors[kIdx], marker="o", markersize=12,
+    # markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
+    # plt.savefig('./elbow_plot.png')
+    # plt.show()
+
+    k_final_val = kIdx + 1
     print('Found optimal k value: {0}'.format(k_final_val))
 
     km_final = KMeans(n_clusters=k_final_val, init='k-means++', max_iter=100, n_init=5, verbose=1)
