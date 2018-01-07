@@ -18,7 +18,6 @@
 
 .ea-korea-hero .hero2{
     font-size: 1.3em;
-    width: 70%;
     word-wrap: break-word;
     text-align: center;
     margin: 30px auto;
@@ -27,13 +26,14 @@
 
 .ea-korea-policydata{
     display: flex;
-    padding-top: 65px;
+    padding: 60px;
+    transform: translateZ(0);
 }
 
 /* policy keywords */
 
 .ea-korea-policykeywords{
-    display: flex;
+    display: none;
     flex-direction: column;
     color: #252525;
     font-size: 1.6em;
@@ -176,8 +176,7 @@
     color: #252525;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-    padding-right: 10%;
+    width: 100%;
 }
 
 .ea-korea-policylist .policylist-action-fold{
@@ -249,33 +248,30 @@
 
 .ea-korea-policylist .policy-container{
     margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .ea-korea-policylist .policy-container:after{
     content: '';
     width: 100%;
-    height: 4px;
-    background: #9E9E9E;
+    height: 1px;
+    background: #d2d2d2;
     display: block;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .policy-container .policyname{
-    font-size: 1.8em;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .policy-container .policy-strategycontainer{
-    padding: 20px 0 0 0;
-}
-
-.policy-strategycontainer:after{
-    width: 100%;
-    height: 2px;
-    background: #0277BD;
-    content: '';
-    display: block;
-    margin-top: 15px;
+    padding: 20px 0 20px 0;
 }
 
 .policy-container .policy-strategycontainer:nth-last-child(1):after{
@@ -285,14 +281,13 @@
 .policy-strategycontainer .substrategyinfo{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .policy-strategycontainer .substrategyname{
-    font-size: 1.3em;
-    padding: 0 10px;
+    font-size: 1.2em;
     margin-bottom: 5px;
-    border-left: 4px solid #03A9F4;
-    color: #03A9F4;
+    color: #2599ca;
 }
 
 .policy-strategycontainer .substrategy-action-fold{
@@ -318,13 +313,25 @@
 }
 
 .policy-strategycontainer[banana-status="unfolded"] .strategy{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .policy-strategycontainer .strategy .task{
-    padding: 20px 0;
+    padding: 20px;
     position: relative;
-    border-bottom: 1px solid #e2e2e2;
+    margin: 15px 30px 15px 0;
+    border: 4px solid #000;
+    width: 300px;
+    height: 300px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateZ(0);
 }
 
 .ea-korea-policylist[banana-status="highlighted"] .task{
@@ -333,10 +340,6 @@
 
 .ea-korea-policylist[banana-status="highlighted"] .task[banana-status="highlighted"]{
     display: block;
-}
-
-.policy-strategycontainer .strategy .task:nth-last-child(1) {
-    border-bottom: none;
 }
 
 .policy-strategycontainer .task .taskinfo{
@@ -348,9 +351,10 @@
 
 .policy-strategycontainer .task .taskname{
     align-self: baseline;
-    padding: 0 0 7px 0;
     font-size: 1.15em;
-    border-bottom: 3px solid #616161;
+    background: #000;
+    color: #fff;
+    padding: 8px 10px;
 }
 
 .policy-strategycontainer .task .departmentinfo{
@@ -361,20 +365,19 @@
 }
 
 .policy-strategycontainer .departmentinfo .departmentname{
-    padding: 4px 5px;
-    background: #616161;
-    color: #fff;
+    padding: 6px 10px;
     display: flex;
     align-self: baseline;
+    background: #2c2c2c;
+    color: #fff;
 }
 
 .policy-strategycontainer .taskstatus{
     position: absolute;
-    top: 30px;
-    right: 0;
+    top: 20px;
+    right: 20px;
     width: 15%;
     height: 9px;
-    border-radius: 7px;
     display: flex;
     flex-direction: column;
     background: #ececec;
@@ -386,22 +389,7 @@
     left: 0;
     width: 20%;
     height: 9px;
-    border-radius: 7px;
-    background: linear-gradient(-45deg, #3F51B5, #1E88E5, #03A9F4, #00c1ff);
-	background-size: 400% 400%;
-	animation: Gradient 3000ms ease infinite;
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+    background: #1E88E5;
 }
 
 .policy-strategycontainer .taskstatus p{

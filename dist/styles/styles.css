@@ -157,7 +157,7 @@ body{
     background-image: url(../res/section_trump.ee03f8b33e95090748741f10afc371b9.png);
 }
 
-.navbox-sections li[data-sectionid="nav-section-trump"]:before{
+.navbox-sections li[data-sectionid="nav-section-presidenttrump"]:before{
     background-image: url(../res/section_trump_timemachine.25559de484b977c089be94d36f5c9131.png);
 }
 
@@ -185,7 +185,6 @@ body{
 
 .ea-korea-hero .hero2{
     font-size: 1.3em;
-    width: 70%;
     word-wrap: break-word;
     text-align: center;
     margin: 30px auto;
@@ -194,13 +193,14 @@ body{
 
 .ea-korea-policydata{
     display: flex;
-    padding-top: 65px;
+    padding: 60px;
+    transform: translateZ(0);
 }
 
 /* policy keywords */
 
 .ea-korea-policykeywords{
-    display: flex;
+    display: none;
     flex-direction: column;
     color: #252525;
     font-size: 1.6em;
@@ -343,8 +343,7 @@ body{
     color: #252525;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-    padding-right: 10%;
+    width: 100%;
 }
 
 .ea-korea-policylist .policylist-action-fold{
@@ -416,33 +415,30 @@ body{
 
 .ea-korea-policylist .policy-container{
     margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .ea-korea-policylist .policy-container:after{
     content: '';
     width: 100%;
-    height: 4px;
-    background: #9E9E9E;
+    height: 1px;
+    background: #d2d2d2;
     display: block;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .policy-container .policyname{
-    font-size: 1.8em;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .policy-container .policy-strategycontainer{
-    padding: 20px 0 0 0;
-}
-
-.policy-strategycontainer:after{
-    width: 100%;
-    height: 2px;
-    background: #0277BD;
-    content: '';
-    display: block;
-    margin-top: 15px;
+    padding: 20px 0 20px 0;
 }
 
 .policy-container .policy-strategycontainer:nth-last-child(1):after{
@@ -452,14 +448,13 @@ body{
 .policy-strategycontainer .substrategyinfo{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .policy-strategycontainer .substrategyname{
-    font-size: 1.3em;
-    padding: 0 10px;
+    font-size: 1.2em;
     margin-bottom: 5px;
-    border-left: 4px solid #03A9F4;
-    color: #03A9F4;
+    color: #2599ca;
 }
 
 .policy-strategycontainer .substrategy-action-fold{
@@ -485,13 +480,25 @@ body{
 }
 
 .policy-strategycontainer[banana-status="unfolded"] .strategy{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .policy-strategycontainer .strategy .task{
-    padding: 20px 0;
+    padding: 20px;
     position: relative;
-    border-bottom: 1px solid #e2e2e2;
+    margin: 15px 30px 15px 0;
+    border: 4px solid #000;
+    width: 300px;
+    height: 300px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateZ(0);
 }
 
 .ea-korea-policylist[banana-status="highlighted"] .task{
@@ -500,10 +507,6 @@ body{
 
 .ea-korea-policylist[banana-status="highlighted"] .task[banana-status="highlighted"]{
     display: block;
-}
-
-.policy-strategycontainer .strategy .task:nth-last-child(1) {
-    border-bottom: none;
 }
 
 .policy-strategycontainer .task .taskinfo{
@@ -515,9 +518,10 @@ body{
 
 .policy-strategycontainer .task .taskname{
     align-self: baseline;
-    padding: 0 0 7px 0;
     font-size: 1.15em;
-    border-bottom: 3px solid #616161;
+    background: #000;
+    color: #fff;
+    padding: 8px 10px;
 }
 
 .policy-strategycontainer .task .departmentinfo{
@@ -528,20 +532,19 @@ body{
 }
 
 .policy-strategycontainer .departmentinfo .departmentname{
-    padding: 4px 5px;
-    background: #616161;
-    color: #fff;
+    padding: 6px 10px;
     display: flex;
     align-self: baseline;
+    background: #2c2c2c;
+    color: #fff;
 }
 
 .policy-strategycontainer .taskstatus{
     position: absolute;
-    top: 30px;
-    right: 0;
+    top: 20px;
+    right: 20px;
     width: 15%;
     height: 9px;
-    border-radius: 7px;
     display: flex;
     flex-direction: column;
     background: #ececec;
@@ -553,22 +556,7 @@ body{
     left: 0;
     width: 20%;
     height: 9px;
-    border-radius: 7px;
-    background: linear-gradient(-45deg, #3F51B5, #1E88E5, #03A9F4, #00c1ff);
-	background-size: 400% 400%;
-	animation: Gradient 3000ms ease infinite;
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+    background: #1E88E5;
 }
 
 .policy-strategycontainer .taskstatus p{
@@ -644,5 +632,125 @@ body{
 
 .policy-strategycontainer .descriptions p[banana-taskcode="done"]{
     background: #00c1ff;
+}.presidenttrump-hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.presidenttrump-hero .hero1{
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.presidenttrump-hero .hero1.strike{
+    text-decoration: line-through;
+}
+
+.presidenttrump-hero .hero2{
+    font-size: 1.3em;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* data */
+.presidenttrump-analysis-data{
+    display: flex;
+}
+
+.presidenttrump-analysis-data .analysis-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.analysis-list .analysis-item{
+    height: 90vh;
+    margin: 30px 0;
+    padding: 0 60px;
+    position: relative;
+}
+
+.analysis-list .analysis-item .item-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analysis-list .analysis-item .item-theme{
+    display: flex;
+    width: 42%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-self: baseline;
+}
+
+.analysis-list .theme-header{
+    align-self: baseline;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.15em;
+}
+
+.analysis-list .analysis-item .themes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-self: baseline;
+    margin-top: 9px;
+    margin-left: -9px;
+}
+
+.analysis-list .analysis-item .themes > p{
+    padding: 3px 9px;
+    flex-shrink: 0;
+}
+
+.analysis-list .analysis-item .item-peakinfo{
+    position: relative;
+    display: flex;
+    width: 28%;
+    height: 5%;
+}
+
+.analysis-list .analysis-item .toparticle-content-container{
+    position: relative;
+    margin-top: 25px;
+    height: 50vh;
+}
+
+.analysis-list .analysis-item .toparticle-content-container .toparticle-month{
+    padding: 8px 0;
+    display: none;
+}
+
+.analysis-list .analysis-item .toparticle-content-container .toparticle-month.selected {
+    display: block;
+}
+
+.analysis-list .analysis-item .toparticle-month-container{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    margin-left: -13px;
+}
+
+.analysis-list .analysis-item .toparticle-month-container .toparticle-month{
+    margin: 0 13px;
+    padding: 8px 0;
+    font-size: 0.9em;
+    color: #424242;
+}
+
+.analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
+    border-top: 1px solid;
+    color: #00bdec;
 }
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMvc3R5bGVzLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/

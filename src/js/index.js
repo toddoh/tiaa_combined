@@ -1,12 +1,11 @@
 import styles from '../styles/core.css';
 import {html, render} from 'lit-html';
-import eastasia_korea_style from '../styles/eastasia/korea.css';
 
 const render_core = () => {
     const contentSections = [
         { id: 'nav-section-today', name: 'Today', path: '' },
         //{ id: 'nav-section-situations', name: 'Situations', path: 'situations' },
-        { id: 'nav-section-trump', name: 'TrumpFirstYear', path: 'trump' },
+        { id: 'nav-section-presidenttrump', name: 'TrumpFirstYear', path: 'presidenttrump' },
         { id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
     ];
 

@@ -159,7 +159,7 @@ body{
     background-image: url('../resources/section_trump.png');
 }
 
-.navbox-sections li[data-sectionid="nav-section-trump"]:before{
+.navbox-sections li[data-sectionid="nav-section-presidenttrump"]:before{
     background-image: url('../resources/section_trump_timemachine.png');
 }
 

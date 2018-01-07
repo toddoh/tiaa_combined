@@ -10,8 +10,8 @@ module.exports = {
         vendor: ['babel-polyfill']
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
-        new ExtractTextPlugin("styles/styles.css"),
+        new CleanWebpackPlugin(['dist'], { watch: false }),
+        new ExtractTextPlugin({filename: "styles/styles.css", allChunks: true}),
         new HTMLWebpackPlugin({
             title: 'THISISALLABOUT'
         }),
@@ -35,8 +35,7 @@ module.exports = {
                 loader: ExtractTextPlugin.extract({
                     use: [{
                         loader: "css-loader"
-                    }],
-                    allChunks: true
+                    }]
                 }),
                 exclude: /node_modules/
             },
