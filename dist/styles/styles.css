@@ -301,13 +301,21 @@ body{
     padding-top: 80%;
 }
 
-.analysis-list .toparticle-month .toparticle-object .article-title{
+.analysis-list .toparticle-month .toparticle-object .article-info{
     position: absolute;
     top: 0;
-    padding: 18px;
-    font-size: 1.2em;
-    font-weight: 600;
+    padding: 20px;
     color: #fff;
+}
+
+.analysis-list .toparticle-month .toparticle-object .article-title{
+    font-size: 1.33em;
+    font-weight: 600;
+}
+
+.analysis-list .toparticle-month .toparticle-object .article-desc{
+    font-size: 0.9em;
+    margin-top: 3px;
 }
 
 .analysis-list .analysis-item .toparticle-month-container{

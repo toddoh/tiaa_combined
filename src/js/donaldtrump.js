@@ -71,8 +71,11 @@ const render_data = () => {
                                 ${arti.length > 0 ? html`
                                 <div class="toparticle-month" banana-month="${arti[0].date_month}">
                                     ${arti.map((a) => html`
-                                        <div class="toparticle-object" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
-                                            <p class="article-title">${a.title}</p>
+                                        <div class="toparticle-object" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
+                                            <div class="article-info">
+                                                <p class="article-title">${a.title}</p>
+                                                <p class="article-origin">${a.origin}</p>
+                                            </div>
                                         </div>
                                     `
                                     )}
@@ -172,6 +175,15 @@ const postrender_data = () => {
 
             parent.querySelector('.toparticle-content-container .toparticle-month[banana-month="' + month + '"]').classList.add('selected');
             parent.querySelector('.toparticle-month-container .toparticle-month[banana-month="' + month + '"]').classList.add('selected');
+        });
+    }
+
+    var ta_objs = document.querySelectorAll('.toparticle-content-container .toparticle-object');
+    for (var i=0; i < ta_objs.length; i++) {
+        ta_objs[i].addEventListener('click', function (e) {
+            var url = this.getAttribute('banana-link');
+            if (url == null || url == undefined || url == '') return;
+            window.open(url, "_blank");
         });
     }
 }
