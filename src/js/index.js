@@ -5,7 +5,7 @@ const render_core = () => {
     const contentSections = [
         //{ id: 'nav-section-today', name: 'Today', path: '' },
         //{ id: 'nav-section-situations', name: 'Situations', path: 'situations' },
-        { id: 'nav-section-presidenttrump', name: 'TrumpFirstYear', path: 'presidenttrump' },
+        { id: 'nav-section-donaldtrump', name: 'TrumpFirstYear', path: 'donaldtrump' },
         { id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
     ];
 

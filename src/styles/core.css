@@ -159,12 +159,8 @@ body{
     background-image: url('../resources/section_default_black.png');
 }
 
-.navbox-sections li[data-sectionid="nav-section-lifeundertrump"]:before{
+.navbox-sections li[data-sectionid="nav-section-donaldtrump"]:before{
     background-image: url('../resources/section_trump.png');
-}
-
-.navbox-sections li[data-sectionid="nav-section-presidenttrump"]:before{
-    background-image: url('../resources/section_trump_timemachine.png');
 }
 
 .minion-timestamp{

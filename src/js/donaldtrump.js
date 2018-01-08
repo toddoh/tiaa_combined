@@ -1,12 +1,12 @@
 import {html, render} from 'lit-html';
-import presidenttrump_style from '../styles/presidenttrump.css';
+import presidenttrump_style from '../styles/donaldtrump.css';
 import Chart from 'chart.js';
 import Scrollbar from 'smooth-scrollbar';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='TrumpFirstYear';
     document.querySelector('.navbox-static').classList.add('donaldtrump');
-    document.querySelector('.navbox-sections li[data-sectionid="nav-section-presidenttrump"]').remove();
+    document.querySelector('.navbox-sections li[data-sectionid="nav-section-donaldtrump"]').remove();
 
     const hero_markup = () => html`
     <div class="presidenttrump-hero">
@@ -33,7 +33,7 @@ export function init_render() {
 
 const render_data = () => {
     var trump_data = null;
-    import('./presidenttrump_data').then(module => {
+    import('./donaldtrump_data').then(module => {
         trump_data = module.data_init();
 
         const analysis_markup = () => html`
