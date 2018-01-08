@@ -30,7 +30,7 @@ export function init_render() {
         <div class="ea-all-hero">
             <div class="ea-all-herotext">
                 <p class="hero1">New Perspectives on East Asia's Role</p>
-                <p class="hero1">in the Global Issues</p>
+                <p class="hero1">in Global Issues</p>
                 <div class="hero2">
                     <p>As East Asia plays a significant role in many global issues,</p>
                     <p>a deep understanding of East Asian countries are emphasized than ever before.</p>
