@@ -1,9 +1,11 @@
 import {html, render} from 'lit-html';
 import presidenttrump_style from '../styles/presidenttrump.css';
 import Chart from 'chart.js';
+import Scrollbar from 'smooth-scrollbar';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='TrumpFirstYear';
+    document.querySelector('.navbox-static').classList.add('donaldtrump');
     document.querySelector('.navbox-sections li[data-sectionid="nav-section-presidenttrump"]').remove();
 
     const hero_markup = () => html`
@@ -14,6 +16,7 @@ export function init_render() {
             <div class="hero2">
                 <p>This is all about President Trump’s first year</p>
                 <p>by rediscovering five major issues.</p>
+                <p>// Not for Public Distribtution, Under Preview Stage //</p>
             </div>
         </div>
     </div>
@@ -24,7 +27,7 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 20, 2018 ET';
+    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 8, 2018 ET';
     render_data();
 }
 
@@ -55,7 +58,7 @@ const render_data = () => {
                         <div class="toparticle-month-container">
                             ${i.toparticles.map((arti) => html`
                                 ${arti.length > 0 ? html`
-                                <div class="toparticle-month">
+                                <div class="toparticle-month" banana-month="${arti[0].date_month}">
                                     <p>${arti[0].date_month}</p>
                                 </div>
                                 ` : ''}
@@ -68,8 +71,9 @@ const render_data = () => {
                                 ${arti.length > 0 ? html`
                                 <div class="toparticle-month" banana-month="${arti[0].date_month}">
                                     ${arti.map((a) => html`
-                                    
-                                        <p class="article-title">${a.title}</p>
+                                        <div class="toparticle-object" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
+                                            <p class="article-title">${a.title}</p>
+                                        </div>
                                     `
                                     )}
                                 </div>
@@ -141,10 +145,35 @@ const postrender_data = () => {
         });
     });
 
+    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .toparticle-content-container'), function(el, index, array) {
+        Scrollbar.init(el, {
+            damping: 0.55
+        });
+    });
+
     Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
         el.querySelectorAll('.toparticle-month-container .toparticle-month')[0].classList.add('selected');
         el.querySelectorAll('.toparticle-content-container .toparticle-month')[0].classList.add('selected');
     });
+
+    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
+        el.style.backgroundImage = 'url(' + el.getAttribute('banana-imagesrc') + '), linear-gradient(#000, transparent)'
+    });
+
+    var ta_months = document.querySelectorAll('.toparticle-month-container .toparticle-month');
+    for (var i=0; i < ta_months.length; i++) {
+        ta_months[i].addEventListener('click', function (e) {
+            var month = this.getAttribute('banana-month');
+            var parent = getParents(this, '.analysis-item')[0];
+
+            if (parent == null || parent == undefined) return;
+            parent.querySelector('.toparticle-content-container .toparticle-month.selected').classList.remove('selected');
+            parent.querySelector('.toparticle-month-container .toparticle-month.selected').classList.remove('selected');
+
+            parent.querySelector('.toparticle-content-container .toparticle-month[banana-month="' + month + '"]').classList.add('selected');
+            parent.querySelector('.toparticle-month-container .toparticle-month[banana-month="' + month + '"]').classList.add('selected');
+        });
+    }
 }
 
 var getClosest = function ( elem, selector ) {
@@ -170,4 +199,43 @@ var getClosest = function ( elem, selector ) {
     }
 
     return null;
+};
+
+var getParents = function ( elem, selector ) {
+
+    // Element.matches() polyfill
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+    }
+
+    // Setup parents array
+    var parents = [];
+
+    // Get matching parent elements
+    for ( ; elem && elem !== document; elem = elem.parentNode ) {
+
+        // Add matching parents to array
+        if ( selector ) {
+            if ( elem.matches( selector ) ) {
+                parents.push( elem );
+            }
+        } else {
+            parents.push( elem );
+        }
+
+    }
+
+    return parents;
+
 };

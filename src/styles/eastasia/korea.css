@@ -331,7 +331,6 @@
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
-    transform: translateZ(0);
 }
 
 .ea-korea-policylist[banana-status="highlighted"] .task{

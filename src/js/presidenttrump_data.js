@@ -32,7 +32,7 @@ export function data_init() {
                 "2017-08",
                 "2017-11"
             ],
-            "header": "it was such a high tension back then",
+            "header": "Threats from North Korea continues",
             "theme": ["North Korea", "Launches Missile", "Trump Tillerson Says", "South Korean", "nuclear Test", "Sanctions", "Japan", "new"],
             "toparticles": [
                 [],
@@ -234,7 +234,7 @@ export function data_init() {
                 "2017-03",
                 "2017-07"
             ],
-            "header": "was it really for the majority of american people?",
+            "header": "It started with healthcare repeal, then tax reform for rich.",
             "theme": ["Health care", "GOP", "tax Cut", "Trump", "Senate plan", "Republicans", "Obamacare Repeal", "Insurance", "House", "Medicaid"],
             "toparticles": [
                 [],
@@ -845,7 +845,7 @@ export function data_init() {
                 "2017-02",
                 "2017-08"
             ],
-            "header": "we'll see if it's worth to sacrifice equality",
+            "header": "Travel ban- it doesn't protect us from terror attacks.",
             "theme": ["president Trump say", "White House", "travel ban", "Court Ruling", "Senate", "Democrats", "immigrants"],
             "toparticles": [
                 [
@@ -1504,7 +1504,7 @@ export function data_init() {
             "peaks": [
                 "2017-05"
             ],
-            "header": "national security threat ...from trump campaign?",
+            "header": "Keep an eye on Trump-Russia ties as investigation continues",
             "theme": ["Trump", "Russia", "Comey", "White House", "probe", "Senate", "investigation", "FBI", "Flynn", "Mueller", "Sessions", "Committee"],
             "toparticles": [
                 [

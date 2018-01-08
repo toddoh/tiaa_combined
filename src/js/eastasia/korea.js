@@ -11,6 +11,7 @@ export function init_render() {
             <div class="hero2">
                 <p>이것은 촛불로 이뤄낸 민주주의, 그리고 대한민국의 미래에 대한 모든 것입니다.</p>
                 <p>문재인정부의 100대 국정과제 이행 과정을 영역 별로 추적해보며 다함께 고민해봅시다.</p>
+                <p>///// 데이터 전면 개편 작업 중입니다 (1/20 완료 예정) /////</p>
             </div>
         </div>
     </div>
@@ -31,7 +32,7 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = '1월 20일 마지막 업데이트됨';
+    document.querySelector('.minion-timestamp .ts-date').innerHTML = '1월 8일 마지막 업데이트됨';
     render_data();
     //attach_events();
 }

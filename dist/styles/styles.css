@@ -62,6 +62,10 @@ body{
     flex-shrink: 0;
 }
 
+.navbox-static.donaldtrump .navbox-logo{
+    background-image: url(../res/section_trump.ee03f8b33e95090748741f10afc371b9.png);
+}
+
 .navbox-currentpath{
     width: 0;
     overflow: hidden;
@@ -168,6 +172,68 @@ body{
     padding-top: 43px;
     text-align: right;
     color: #737373;
+}.ea-all-hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.ea-all-hero .hero1{
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.ea-all-hero .hero2{
+    font-size: 1.3em;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.ea-all-list{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 30vh 0;
+    margin-top: -10vh;
+}
+
+.ea-all-list > a{
+    position: relative;
+    margin: 0 20px 0 0;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    width: 35vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.ea-all-list > a:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.ea-all-list .ea-all-contentitem{
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    transform: translateY(-50%);
+}
+
+.ea-all-list .ea-all-contentitem .title{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.ea-all-list .ea-all-contentitem .desc{
+    margin-top: 20px;
 }.ea-korea-hero{
     width: 100%;
     height: 100vh;
@@ -498,7 +564,6 @@ body{
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
-    transform: translateZ(0);
 }
 
 .ea-korea-policylist[banana-status="highlighted"] .task{
@@ -669,9 +734,7 @@ body{
 }
 
 .analysis-list .analysis-item{
-    height: 90vh;
-    margin: 30px 0;
-    padding: 0 60px;
+    margin: 10vh 0;
     position: relative;
 }
 
@@ -680,6 +743,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 60px;
 }
 
 .analysis-list .analysis-item .item-theme{
@@ -693,9 +757,8 @@ body{
 
 .analysis-list .theme-header{
     align-self: baseline;
-    text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.15em;
+    font-size: 1.65em;
 }
 
 .analysis-list .analysis-item .themes{
@@ -722,23 +785,64 @@ body{
 
 .analysis-list .analysis-item .toparticle-content-container{
     position: relative;
-    margin-top: 25px;
-    height: 50vh;
+    padding: 30px 0;
+    width: 100%;
 }
 
 .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
     padding: 8px 0;
     display: none;
+    width: 100%;
 }
 
 .analysis-list .analysis-item .toparticle-content-container .toparticle-month.selected {
+    display: flex;
+}
+
+.analysis-list .analysis-item .toparticle-content-container .scrollbar-thumb{
+    display: none;
+}
+
+.analysis-list .analysis-item .toparticle-content-container .scrollbar-track{
+    display: none !important;
+}
+
+.analysis-list .toparticle-month .toparticle-object{
+    position: relative;
+    width: 30%;
+    flex-shrink: 0;
+    margin-right: 19px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    background-size: cover;
+}
+
+.analysis-list .toparticle-month .toparticle-object:nth-child(1){
+    margin-left: 60px;
+}
+
+.analysis-list .toparticle-month .toparticle-object:nth-last-child(1){
+    margin-right: 60px;
+}
+
+.analysis-list .toparticle-month .toparticle-object:before{
+    content: '';
     display: block;
+    padding-top: 80%;
+}
+
+.analysis-list .toparticle-month .toparticle-object .article-title{
+    position: absolute;
+    top: 0;
+    padding: 18px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
 }
 
 .analysis-list .analysis-item .toparticle-month-container{
-    position: absolute;
-    bottom: 0;
     display: flex;
+    padding: 0 60px;
+    margin-top: 15px;
     margin-left: -13px;
 }
 
@@ -746,11 +850,30 @@ body{
     margin: 0 13px;
     padding: 8px 0;
     font-size: 0.9em;
+    font-weight: 600;
     color: #424242;
 }
 
 .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
-    border-top: 1px solid;
+    box-shadow: 0 2px 0 0;
     color: #00bdec;
+}.today-hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMvc3R5bGVzLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
+
+.today-hero .hero1{
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.today-hero .hero2{
+    font-size: 1.3em;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 30px auto;
+}

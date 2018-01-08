@@ -64,6 +64,10 @@ body{
     flex-shrink: 0;
 }
 
+.navbox-static.donaldtrump .navbox-logo{
+    background-image: url('../resources/section_trump.png');
+}
+
 .navbox-currentpath{
     width: 0;
     overflow: hidden;
