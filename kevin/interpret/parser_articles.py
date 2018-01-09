@@ -27,7 +27,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
 
     print('Calculating tf-idf vectors...')
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
-    tfs = tfidf.fit_transform(parsed_article)
+    tfs = tfidf.fit_transform(parsed_article.values())
 
     def save_sparse_csr(filename,array):
         np.savez(filename,data = array.data ,indices=array.indices,
@@ -52,7 +52,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     data2D = pca.transform(tfs.todense())
 
     for kval in range_n_clusters:
-        km = KMeans(n_clusters=kval, init='k-means++')
+        km = KMeans(n_clusters=kval, init='k-means++', max_iter=500)
         km.fit(data2D)
         km_err.append(km.inertia_)
 
@@ -61,7 +61,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     # plt.grid(True)
     # plt.plot(km_df.num_clusters, km_df.cluster_errors, marker="o")
 
-    seg_threshold = 0.97  # Set this to your desired target
+    seg_threshold = 0.99  # Set this to your desired target
 
     # The angle between three points
     def segments_gain(p1, v, p2):
@@ -86,10 +86,10 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     # plt.savefig('./elbow_plot.png')
     # plt.show()
 
-    k_final_val = kIdx+1
-    print('Found optimal k value: {0}'.format(k_final_val))
+    kIdx += 1
+    print('Found optimal k value: {0}'.format(kIdx))
 
-    km_final = KMeans(n_clusters=k_final_val, init='k-means++', max_iter=500, n_init=5, verbose=0)
+    km_final = KMeans(n_clusters=kIdx, init='k-means++', max_iter=500, n_init=10, verbose=0)
     km_final.fit(tfs)
 
     cluster_assignments_dict = {}

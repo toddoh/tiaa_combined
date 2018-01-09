@@ -84,7 +84,7 @@ def cluster_articles(item, mode=None):
         parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
         print('Clustering unit: Finished processing loaded articles')
 
-        parsed_data = parse_aggregated(parsed_article_dict, 1, 15)
+        parsed_data = parse_aggregated(parsed_article_dict, 3, 15)
         origin_data_raw = cursor
 
         # print(parsed_data[0])
@@ -126,16 +126,16 @@ def cluster_articles(item, mode=None):
                         theme_data.append(token)
 
             theme_data_l = [x.lower() for x in theme_data]
-            if any(x in theme_data_l for x in theme_blacklists):
-                print('Clustring unit: there is one or more blacklisted words in themes')
-            else:
-                ner_result = list(cluster_ner(' '.join(parsed_data[1][index])))
+            #if any(x in theme_data_l for x in theme_blacklists):
+                #print('Clustring unit: there is one or more blacklisted words in themes')
+            #else:
+            ner_result = list(cluster_ner(' '.join(parsed_data[1][index])))
 
-                zip_data['theme'] = theme_data
-                zip_data['namedentity'] = ner_result
-                zip_data['articles'] = parsed_data[1][index]
+            zip_data['theme'] = theme_data
+            zip_data['namedentity'] = ner_result
+            zip_data['articles'] = parsed_data[1][index]
 
-                parsed_articlecluster.append(zip_data)
+            parsed_articlecluster.append(zip_data)
 
         print(parsed_articlecluster)
 
@@ -150,8 +150,8 @@ def cluster_articles(item, mode=None):
             for title in cluster['articles']:
                 filter = next((item for item in origin_data_raw if item["title"] == title), False)
                 if filter:
-                    if 'text' in filter:
-                        del filter['text']
+                    # if 'text' in filter:
+                        # del filter['text']
                     if 'authors' in filter:
                         del filter['authors']
                     if '_id' in filter:

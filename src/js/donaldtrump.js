@@ -14,8 +14,8 @@ export function init_render() {
             <p class="hero1 strike">Make America Great Again</p>
             <p class="hero1">So far, it's been chaos.</p>
             <div class="hero2">
-                <p>This is all about President Trump’s first year</p>
-                <p>by rediscovering five major issues.</p>
+                <p>To celebrate President Trump’s first year in the White House,</p>
+                <p>we rediscovered what has happened in our nation last year.</p>
                 <p>// Not for Public Distribtution, Under Preview Stage //</p>
             </div>
         </div>
@@ -27,7 +27,7 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 8, 2018 ET';
+    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 9, 2018 ET';
     render_data();
 }
 

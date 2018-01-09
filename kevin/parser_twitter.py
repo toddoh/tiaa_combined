@@ -70,7 +70,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     data2D = pca.transform(tfs.todense())
 
     for kval in range_n_clusters:
-        km = KMeans(n_clusters=kval, init='k-means++')
+        km = KMeans(n_clusters=kval, init='k-means++', max_iter=500)
         km.fit(data2D)
         km_err.append(km.inertia_)
 
@@ -78,7 +78,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     plt.figure(figsize=(12, 6))
     elbow_data = plt.plot(km_df.num_clusters, km_df.cluster_errors, marker="o")
 
-    seg_threshold = 0.97  # Set this to your desired target
+    seg_threshold = 0.99  # Set this to your desired target
 
     # The angle between three points
     def segments_gain(p1, v, p2):
@@ -98,15 +98,16 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
 
     # Get the first index satisfying the threshold
     kIdx = np.argmax(seg_gains > seg_threshold)
-    # plt.plot(km_df.num_clusters[kIdx], km_df.cluster_errors[kIdx], marker="o", markersize=12,
-    # markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
-    # plt.savefig('./elbow_plot.png')
-    # plt.show()
+    plt.plot(km_df.num_clusters[kIdx], km_df.cluster_errors[kIdx], marker="o", markersize=12,
+     markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
 
-    k_final_val = kIdx + 1
-    print('Found optimal k value: {0}'.format(k_final_val))
+    kIdx += 2
+    plt.savefig('./elbow_plot.png')
+    plt.show()
 
-    km_final = KMeans(n_clusters=k_final_val, init='k-means++', max_iter=100, n_init=5, verbose=1)
+    print('Found optimal k value: {0}'.format(kIdx))
+
+    km_final = KMeans(n_clusters=kIdx, init='k-means++', max_iter=500, n_init=10, verbose=1)
     km_final.fit(tfs)
 
     cluster_assignments_dict = {}

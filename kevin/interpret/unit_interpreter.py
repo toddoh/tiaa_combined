@@ -7,6 +7,9 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 import nltk
 from nltk.stem.porter import PorterStemmer
+from whoosh.index import create_in
+from whoosh.fields import *
+import whoosh.qparser
 
 def interpret(type):
     result_file = '../dataset/' + type + '_result.json'
@@ -23,21 +26,29 @@ def interpret(type):
         print('Interpreter: theme: ', pick_theme)
 
         for item in group['groups']:
-            all_documents = []
-            for article in item['articles']:
-                all_documents.append(article['title'])
+            all_documents_title = []
+            all_documents_text = []
+            schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT)
+            ix = create_in("./indexes", schema)
+            writer = ix.writer()
 
+            for article in item['articles']:
+                all_documents_title.append(article['title'])
+                all_documents_text.append(article['text'])
+                writer.add_document(title=article['title'], path=article['_id'], content=article['text'])
+
+            writer.commit()
             pick_list.append(len(item['articles']))
             pick_months.append(item['month'])
-            print(pick_list, pick_months, len(all_documents))
+            print(pick_list, pick_months, len(all_documents_title))
+            all_documents_dict = dict(zip(all_documents_title, all_documents_text))
 
-            if len(all_documents) <= 15:
+            if len(all_documents_dict) <= 12:
                 pick_toparticles.append([])
-
                 print('@@@@@@@@ ERRRR')
                 continue
             else:
-                parsed_data = parse_aggregated(all_documents, 1, 15)
+                parsed_data = parse_aggregated(all_documents_dict, 1, 12)
 
             print('+++++++ PARSING')
             parsed_data_themes = []
@@ -86,19 +97,27 @@ def interpret(type):
                     noduplicates.append(theme)
 
             if len(noduplicates) <= 0:
-                query = ' '.join(theme_data)
+                querytext = ' '.join(theme_data)
             else:
-                query = ' '.join(noduplicates)
+                querytext = ' '.join(noduplicates)
 
-            article_pick = process.extract(query, all_documents)
-            print(query, article_pick)
-
+            article_pick = []
             toparticles_matched = []
-            for index, picked in enumerate(article_pick):
-                converted_np = np.array(article_pick[index]).tolist()
-                for article in item['articles']:
-                    if converted_np[0] == article['title']:
-                        toparticles_matched.append(article)
+            with ix.searcher() as searcher:
+                query = whoosh.qparser.QueryParser("title", ix.schema, group=whoosh.qparser.OrGroup).parse(querytext)
+                results = searcher.search(query)
+
+                if len(results):
+                    article_pick = results[0:5]
+                    print(article_pick)
+
+                    for a in article_pick:
+                        for article in item['articles']:
+                            if a['path'] == article['_id']:
+                                if 'text' in article:
+                                    del article['text']
+                                toparticles_matched.append(article)
+
 
             pick_toparticles.append(toparticles_matched)
             print(toparticles_matched)
@@ -114,7 +133,7 @@ def interpret(type):
             peak_indexes_months.append(pick_months[int(item)])
 
         result_pick_data = {}
-        result_pick_data['theme'] = pick_theme
+        result_pick_data['theme'] = group['theme']
         result_pick_data['list'] = pick_list
         result_pick_data['months'] = pick_months
         result_pick_data['toparticles'] = pick_toparticles
