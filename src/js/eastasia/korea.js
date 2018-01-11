@@ -39,8 +39,9 @@ export function init_render() {
 
 const render_data = () => {
     var policy_data = null;
-    import('./korea_data').then(module => {
-        policy_data = module.data_init();
+    fetch('//thisisallabout.com/dataset/korea_data.json').then(response => response.text()).then(function(text) {
+        var module = eval(text);
+        policy_data = module;
         
         const policy_markup = () => html`
         <div id="policygroup">

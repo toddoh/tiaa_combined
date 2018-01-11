@@ -6,8 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/js/index.js',
-        vendor: ['babel-polyfill']
+        index: './src/js/index.js'
     },
     plugins: [
         new CleanWebpackPlugin(['dist'], { watch: false }),
@@ -15,6 +14,11 @@ module.exports = {
         new HTMLWebpackPlugin({
             title: 'THISISALLABOUT'
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: ({ resource }) => /node_modules/.test(resource),
+        }),
+        new webpack.optimize.CommonsChunkPlugin('manifest'),
         new webpack.HashedModuleIdsPlugin()
     ],
     output: {

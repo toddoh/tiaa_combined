@@ -2,5 +2,5 @@
     "presets":[
         "es2015"
     ],
-    "plugins": ["dynamic-import-webpack", "syntax-dynamic-import"]
+    "plugins": ["dynamic-import-webpack"]
 }

@@ -1,5 +1,4 @@
-export function data_init() {
-    const koreagov_policies = [
+[
         {
             "theme": "gov_politics",
             "keys": [
@@ -13344,7 +13343,4 @@ export function data_init() {
                 }
             ]
         }
-    ];
-
-    return koreagov_policies;
-}
+    ]

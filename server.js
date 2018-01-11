@@ -16,6 +16,11 @@ app.listen(3000, function () {
 });
 
 app.use(express.static(path.join(__dirname, '/dist/')));
+
+app.get('/dataset/:id/:type', function (request, response) {
+    response.sendFile(path.join(__dirname, '/dataset/' + request.params.id + '/' + request.params.type));
+});
+
 app.get('/*', function (request, response) {
     if (request.url.split('/').length <= 2) {
         if (request.url.endsWith('/')) {
@@ -24,6 +29,11 @@ app.get('/*', function (request, response) {
             response.sendFile(path.join(__dirname, '/dist/index.html'));
         }
     } else {
+        if (request.url.split('/')[1] == 'dataset') {
+            response.sendFile(path.join(__dirname, '/dataset/' + request.url.split('/')[2]));
+            return;
+        }
+
         var param = '';
         if (request.url.split('/')[1] != '' && 
             request.url.split('/')[2] != null) param = '?type=' + request.url.split('/')[2]

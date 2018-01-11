@@ -1,5 +1,4 @@
-export function data_init() {
-    const trump_result = [
+[
         {
             "list": [
                 2,
@@ -3329,7 +3328,4 @@ export function data_init() {
                 []
             ]
         }
-    ];
-
-    return trump_result;
-}
+    ]

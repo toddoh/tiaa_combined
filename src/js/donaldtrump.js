@@ -33,8 +33,9 @@ export function init_render() {
 
 const render_data = () => {
     var trump_data = null;
-    import('./donaldtrump_data').then(module => {
-        trump_data = module.data_init();
+    fetch('//thisisallabout.com/dataset/donaldtrump_data.json').then(response => response.text()).then(function(text) {
+        var module = eval(text);
+        trump_data = module;
 
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
