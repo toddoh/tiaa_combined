@@ -39,7 +39,13 @@ export function init_render() {
 
 const render_data = () => {
     var policy_data = null;
-    fetch('//thisisallabout.com/dataset/korea_data.json').then(response => response.text()).then(function(text) {
+    var dataset_url;
+    if (process.env.NODE_ENV == 'dev') {
+        dataset_url = '//localhost:3000/dataset/korea_data.json';
+    } else {
+        dataset_url = '//thisisallabout.com/dataset/korea_data.json'
+    }
+    fetch(dataset_url).then(response => response.text()).then(function(module) {
         var module = eval(text);
         policy_data = module;
         

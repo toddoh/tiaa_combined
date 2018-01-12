@@ -27,13 +27,19 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 9, 2018 ET';
+    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 12, 2018 ET';
     render_data();
 }
 
 const render_data = () => {
     var trump_data = null;
-    fetch('//thisisallabout.com/dataset/donaldtrump_data.json').then(response => response.text()).then(function(text) {
+    var dataset_url;
+    if (process.env.NODE_ENV == 'dev') {
+        dataset_url = '//localhost:3000/dataset/donaldtrump_data.json';
+    } else {
+        dataset_url = '//thisisallabout.com/dataset/donaldtrump_data.json'
+    }
+    fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
 
@@ -43,19 +49,8 @@ const render_data = () => {
                     <div class="item-info">
                         <div class="item-theme">
                             <p class="theme-header">${i.header}</p>
-                            <div class="themes">
-                                ${i.theme.map((thm) => html`
-                                    <p class="theme-keywords">${thm}</p>
-                                `
-                                )}
-                            </div>
+                            <p class="themes">${i.message}</p>
                         </div>
-                        <div class="item-peakinfo" banana-peakdata="${JSON.stringify(i.list)}">
-                            <canvas id="item-peakchart" width="200px" height="125px"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="item-toparticle-container">
                         <div class="toparticle-month-container">
                             ${i.toparticles.map((arti) => html`
                                 ${arti.length > 0 ? html`
@@ -66,7 +61,12 @@ const render_data = () => {
                             `
                             )}
                         </div>
+                        <div class="item-peakinfo" banana-peakdata="${JSON.stringify(i.list)}" banana-peaks="${JSON.stringify(i.peaks)}" banana-months="${JSON.stringify(i.months)}">
+                            <canvas id="item-peakchart" width="200px" height="125px"></canvas>
+                        </div>
+                    </div>
 
+                    <div class="item-toparticle-container">
                         <div class="toparticle-content-container">
                             ${i.toparticles.map((arti) => html`
                                 ${arti.length > 0 ? html`
@@ -97,7 +97,7 @@ const render_data = () => {
 }
 
 const postrender_data = () => {
-    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-info'), function(el, index, array) {
+    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-infooo'), function(el, index, array) {
         el.querySelector('.item-peakinfo').style.height = (el.querySelector('.item-theme').offsetHeight-25) + 'px';
 
         var ctx = el.querySelector('.item-peakinfo');
@@ -149,10 +149,24 @@ const postrender_data = () => {
         });
     });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .toparticle-content-container'), function(el, index, array) {
-        Scrollbar.init(el, {
-            damping: 0.55
-        });
+    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .toparticle-month-container .toparticle-month'), function(el, index, array) {
+        var month_raw = el.querySelector('p').textContent;
+        var converted = '';
+
+        if (month_raw == '2017-01') converted = 'Jan';
+        if (month_raw == '2017-02') converted = 'Feb';
+        if (month_raw == '2017-03') converted = 'Mar';
+        if (month_raw == '2017-04') converted = 'Apr';
+        if (month_raw == '2017-05') converted = 'May';
+        if (month_raw == '2017-06') converted = 'Jun';
+        if (month_raw == '2017-07') converted = 'Jul';
+        if (month_raw == '2017-08') converted = 'Aug';
+        if (month_raw == '2017-09') converted = 'Sep';
+        if (month_raw == '2017-10') converted = 'Oct';
+        if (month_raw == '2017-11') converted = 'Nov';
+        if (month_raw == '2017-12') converted = 'Dec';
+        if (month_raw == '2018-01') converted = 'Jan 18';
+        el.querySelector('p').innerHTML = converted;
     });
 
     Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
