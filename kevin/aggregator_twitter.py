@@ -116,10 +116,11 @@ def aggregator(list=None, tweetid=None, mode=None, data=None):
         print(len(twitter_timeline))
 
         def timeline_enum(tm):
-            for index, status in enumerate(twitter_timeline):
+            for index, status in enumerate(tm):
                 if len(status.urls):
                     if status.urls[0].expanded_url:
                         try:
+                            print(status.urls[0].expanded_url)
                             resp = session.head(status.urls[0].expanded_url, allow_redirects=True)
                             if 'twitter.com/' not in resp.url:
                                 parse_target = Article(resp.url)
@@ -127,7 +128,7 @@ def aggregator(list=None, tweetid=None, mode=None, data=None):
                                                               status.created_at)
 
                                 if parse_data:
-                                    print('Index {0}/{1}, parsed title: {2}'.format(index, len(twitter_timeline),
+                                    print('Index {0}/{1}, parsed title: {2}'.format(index, len(tm),
                                                                                     parse_data['title']))
                                     parsed_article_title.append(parse_data['title'])
                                     parsed_article_text.append(parse_data['text'])
@@ -136,7 +137,7 @@ def aggregator(list=None, tweetid=None, mode=None, data=None):
                                 print('Skipped parsing: the url contains twitter.com')
                                 print('Index {0}/{1}, Skipped parsing: the url contains twitter.com {2}'.format(index,
                                                                                                                 len(
-                                                                                                                    twitter_timeline),
+                                                                                                                    tm),
                                                                                                                 resp.url))
                         except requests.TooManyRedirects:
                             print('Article Parse Error: too many redirects')
