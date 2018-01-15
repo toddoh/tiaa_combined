@@ -12,7 +12,7 @@ import metadata_parser
 import dateutil.parser
 
 
-def aggregator(list=None, tweetid=None, mode=None, data=None):
+def aggregator(list=None, tweetid=0, mode=None, data=None):
     config = Config()
     config.follow_meta_refresh = True
 
@@ -104,7 +104,7 @@ def aggregator(list=None, tweetid=None, mode=None, data=None):
                                      access_token_key='826316996564226050-KA5pVjPBKqgwBxs1S121hZwFaWqPZWZ',
                                      access_token_secret='2l1WWaZQ3XZp6DrRflY10B6cGXDBbRMVaNltXsfKFWMZ0')
 
-        if tweetid is not None:
+        if tweetid != 0:
             print('Start retrieving twitter timeline: since_id {0}'.format(tweetid))
             twitter_timeline = api.GetListTimeline(slug=list, owner_screen_name="tiaa_obv000",
                                                include_rts=False, since_id=tweetid, count="1000")
@@ -115,45 +115,33 @@ def aggregator(list=None, tweetid=None, mode=None, data=None):
         print(twitter_timeline)
         print(len(twitter_timeline))
 
-        def timeline_enum(tm):
-            for index, status in enumerate(tm):
+        if len(twitter_timeline) <= 0:
+            print('Twitter data is up to date')
+        elif twitter_timeline[0].id == int(tweetid):
+            print('Twitter data is up to date: {0}'.format(twitter_timeline[0].id))
+        else:
+            for index, status in enumerate(twitter_timeline):
                 if len(status.urls):
                     if status.urls[0].expanded_url:
                         try:
-                            print(status.urls[0].expanded_url)
                             resp = session.head(status.urls[0].expanded_url, allow_redirects=True)
                             if 'twitter.com/' not in resp.url:
                                 parse_target = Article(resp.url)
-                                parse_data = get_article_info(parse_target, status.user.name, status.id,
-                                                              status.created_at)
+                                parse_data = get_article_info(parse_target, status.user.name, status.id, status.created_at)
 
                                 if parse_data:
-                                    print('Index {0}/{1}, parsed title: {2}'.format(index, len(tm),
-                                                                                    parse_data['title']))
+                                    print('Index {0}/{1}, parsed title: {2}'.format(index, len(twitter_timeline), parse_data['title']))
                                     parsed_article_title.append(parse_data['title'])
                                     parsed_article_text.append(parse_data['text'])
                                     parsed_article_data.append(parse_data)
                             else:
                                 print('Skipped parsing: the url contains twitter.com')
-                                print('Index {0}/{1}, Skipped parsing: the url contains twitter.com {2}'.format(index,
-                                                                                                                len(
-                                                                                                                    tm),
+                                print('Index {0}/{1}, Skipped parsing: the url contains twitter.com {2}'.format(index, len(twitter_timeline),
                                                                                                                 resp.url))
                         except requests.TooManyRedirects:
                             print('Article Parse Error: too many redirects')
                         except requests.RequestException as e:
                             print('Article Parse Error: {0}'.format(e))
-
-        if len(twitter_timeline) <= 0:
-            print('Twitter data is up to date')
-        else:
-            if tweetid:
-                if twitter_timeline[0].id == int(tweetid):
-                    print('Twitter data is up to date: {0}'.format(twitter_timeline[0].id))
-                else:
-                    timeline_enum(twitter_timeline)
-            else:
-                timeline_enum(twitter_timeline)
     elif mode == 'direct':
         for index, item in enumerate(data):
             try:

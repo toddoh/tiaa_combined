@@ -17,13 +17,13 @@ def trumptimemachine():
 
 
 ## run task
-orig_stdout = sys.stdout
-f = open('./logs/action_aggregation.txt', 'w')
-sys.stdout = f
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--target", help="run aggregator for provided target")
 args = parser.parse_args()
+
+orig_stdout = sys.stdout
+f = open('./logs/action_aggregation_' + vars(args)['target'] + '.txt', 'w')
+sys.stdout = f
 
 print(vars(args), vars(args)['target'])
 if vars(args)['target'] == 'trumptimemachine':
