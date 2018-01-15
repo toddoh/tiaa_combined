@@ -51,21 +51,9 @@
 
 .analysis-list .analysis-item:nth-child(2n) .item-info {
     flex-direction: row-reverse;
-    margin-right: 90px;
+    margin-right: 80px;
     margin-left: 0;
     text-align: right;
-}
-
-.analysis-list .analysis-item:nth-child(3n) .item-info {
-    margin-left: 50px;
-}
-
-.analysis-list .analysis-item:nth-child(4n) .item-info {
-    margin-right: 40px;
-}
-
-.analysis-list .analysis-item:nth-child(5n) .item-info {
-    margin-left: 80px;
 }
 
 .analysis-list .analysis-item .item-theme{
@@ -110,7 +98,7 @@
 }
 
 .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container {
-    flex-direction: row-reverse;
+    justify-content: flex-end;
     padding: 0 25px 20px 0;
 }
 
@@ -121,6 +109,17 @@
     color: #424242;
 }
 
+.analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak > p:after{
+    content: 'peak';
+    text-transform: uppercase;
+    background: #f34e00;
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    margin-left: 5px;
+}
+
 .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container .toparticle-month{
     flex-direction: row-reverse;
 }
@@ -128,6 +127,10 @@
 .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
     box-shadow: 0 2px 0 0;
     color: #00bdec;
+}
+
+.analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak.selected{
+    color: #ff3f00;
 }
 
 .analysis-list .analysis-item .toparticle-content-container{
@@ -147,30 +150,17 @@
 
 .analysis-list .analysis-item:nth-child(2n) .toparticle-content-container .toparticle-month{
     flex-direction: row-reverse;
-    margin-right: 80px;
+    margin-right: 70px;
     margin-left: 0;
-}
-
-.analysis-list .analysis-item:nth-child(3n) .toparticle-content-container .toparticle-month{
-    margin-left: 40px;
-}
-
-.analysis-list .analysis-item:nth-child(4n) .toparticle-content-container .toparticle-month{
-    flex-direction: row-reverse;
-    margin-right: 30px;
-    margin-left: 0;
-}
-
-.analysis-list .analysis-item:nth-child(5n) .toparticle-content-container .toparticle-month{
-    margin-left: 70px;
 }
 
 .analysis-list .toparticle-month .toparticle-object{
     position: relative;
-    width: 25%;
+    width: 20%;
     flex-shrink: 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background-size: cover;
+    cursor: pointer;
 }
 
 .analysis-list .toparticle-month .toparticle-object:before{
@@ -184,11 +174,11 @@
     top: 0;
     padding: 20px;
     color: #fff;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
 .analysis-list .toparticle-month .toparticle-object .article-title{
-    font-size: 1.1em;
+    font-size: 1.05em;
     font-weight: 600;
 }
 

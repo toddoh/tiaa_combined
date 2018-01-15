@@ -1,7 +1,5 @@
 import {html, render} from 'lit-html';
 import presidenttrump_style from '../styles/donaldtrump.css';
-import Chart from 'chart.js';
-import Scrollbar from 'smooth-scrollbar';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='TrumpFirstYear';
@@ -39,10 +37,12 @@ const render_data = () => {
     } else {
         dataset_url = '//thisisallabout.com/dataset/donaldtrump_data.json'
     }
+
+    document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
-
+        document.querySelector('.minion-dataload').setAttribute('status', '');
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
                 <div class="analysis-item">
@@ -51,7 +51,7 @@ const render_data = () => {
                             <p class="theme-header">${i.header}</p>
                             <p class="themes">${i.message}</p>
                         </div>
-                        <div class="toparticle-month-container">
+                        <div class="toparticle-month-container" banana-peakdata="${JSON.stringify(i.list)}" banana-peaks="${JSON.stringify(i.peaks)}" banana-months="${JSON.stringify(i.months)}">
                             ${i.toparticles.map((arti) => html`
                                 ${arti.length > 0 ? html`
                                 <div class="toparticle-month" banana-month="${arti[0].date_month}">
@@ -60,9 +60,6 @@ const render_data = () => {
                                 ` : ''}
                             `
                             )}
-                        </div>
-                        <div class="item-peakinfo" banana-peakdata="${JSON.stringify(i.list)}" banana-peaks="${JSON.stringify(i.peaks)}" banana-months="${JSON.stringify(i.months)}">
-                            <canvas id="item-peakchart" width="200px" height="125px"></canvas>
                         </div>
                     </div>
 
@@ -97,76 +94,31 @@ const render_data = () => {
 }
 
 const postrender_data = () => {
-    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-infooo'), function(el, index, array) {
-        el.querySelector('.item-peakinfo').style.height = (el.querySelector('.item-theme').offsetHeight-25) + 'px';
+    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .toparticle-month-container'), function(pel, index, array) {
+        var peak_data = JSON.parse(pel.getAttribute('banana-peaks'));
+        
+        Array.prototype.forEach.call(pel.querySelectorAll('.toparticle-month'), function(el, index, array) {
+            var month_raw = el.getAttribute('banana-month');
+            var converted = '';
+    
+            if (month_raw == '2017-01') converted = 'Jan';
+            if (month_raw == '2017-02') converted = 'Feb';
+            if (month_raw == '2017-03') converted = 'Mar';
+            if (month_raw == '2017-04') converted = 'Apr';
+            if (month_raw == '2017-05') converted = 'May';
+            if (month_raw == '2017-06') converted = 'Jun';
+            if (month_raw == '2017-07') converted = 'Jul';
+            if (month_raw == '2017-08') converted = 'Aug';
+            if (month_raw == '2017-09') converted = 'Sep';
+            if (month_raw == '2017-10') converted = 'Oct';
+            if (month_raw == '2017-11') converted = 'Nov';
+            if (month_raw == '2017-12') converted = 'Dec';
+            if (month_raw == '2018-01') converted = 'Jan 18';
+            el.querySelector('p').innerHTML = converted;
 
-        var ctx = el.querySelector('.item-peakinfo');
-        var ctx_data = JSON.parse(ctx.getAttribute('banana-peakdata'));
-        var myChart = new Chart(el.querySelector('#item-peakchart'), {
-            type: 'line',
-            data: {
-                labels: ["Feb 2017", "Mar 2017", "Apr 2017", "May 2017", "Jun 2017", "Jul 2017", "Aug 2017", "Sep 2017", "Oct 2017", "Nov 2017", "Dec 2017"],
-                datasets: [{
-                    data: ctx_data,
-                    backgroundColor: 'transparent',
-                    borderColor: '#cacaca',
-                    pointBackgroundColor: '#808080',
-                    pointBorderColor: '#808080',
-                    borderWidth: 3
-                }]
-            },
-            options: {
-                layout: {
-                    padding: {
-                        left: 10,
-                        right: 10,
-                        top: 5,
-                        bottom: 5
-                    }
-                },
-                maintainAspectRatio: false,
-                legend: {
-                    display: false
-                },
-                scales: {
-                    yAxes: [{
-                        display: false
-                    }],
-                    xAxes: [{
-                        display: false
-                    }],
-                    gridLines: [{
-                        drawBorder: false,
-                        drawOnChartArea: false,
-                        drawTicks: false,
-                        display: false
-                    }]
-                },
-                tooltips: {
-                    mode: 'point'
-                }
-            }
+            var peak_match = peak_data.includes(month_raw);
+            if (peak_match) el.classList.add('peak');
         });
-    });
-
-    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .toparticle-month-container .toparticle-month'), function(el, index, array) {
-        var month_raw = el.querySelector('p').textContent;
-        var converted = '';
-
-        if (month_raw == '2017-01') converted = 'Jan';
-        if (month_raw == '2017-02') converted = 'Feb';
-        if (month_raw == '2017-03') converted = 'Mar';
-        if (month_raw == '2017-04') converted = 'Apr';
-        if (month_raw == '2017-05') converted = 'May';
-        if (month_raw == '2017-06') converted = 'Jun';
-        if (month_raw == '2017-07') converted = 'Jul';
-        if (month_raw == '2017-08') converted = 'Aug';
-        if (month_raw == '2017-09') converted = 'Sep';
-        if (month_raw == '2017-10') converted = 'Oct';
-        if (month_raw == '2017-11') converted = 'Nov';
-        if (month_raw == '2017-12') converted = 'Dec';
-        if (month_raw == '2018-01') converted = 'Jan 18';
-        el.querySelector('p').innerHTML = converted;
     });
 
     Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
@@ -266,3 +218,54 @@ var getParents = function ( elem, selector ) {
     return parents;
 
 };
+
+if (!Array.prototype.includes) {
+    Object.defineProperty(Array.prototype, 'includes', {
+      value: function(searchElement, fromIndex) {
+  
+        if (this == null) {
+          throw new TypeError('"this" is null or not defined');
+        }
+  
+        // 1. Let O be ? ToObject(this value).
+        var o = Object(this);
+  
+        // 2. Let len be ? ToLength(? Get(O, "length")).
+        var len = o.length >>> 0;
+  
+        // 3. If len is 0, return false.
+        if (len === 0) {
+          return false;
+        }
+  
+        // 4. Let n be ? ToInteger(fromIndex).
+        //    (If fromIndex is undefined, this step produces the value 0.)
+        var n = fromIndex | 0;
+  
+        // 5. If n ≥ 0, then
+        //  a. Let k be n.
+        // 6. Else n < 0,
+        //  a. Let k be len + n.
+        //  b. If k < 0, let k be 0.
+        var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
+  
+        function sameValueZero(x, y) {
+          return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
+        }
+  
+        // 7. Repeat, while k < len
+        while (k < len) {
+          // a. Let elementK be the result of ? Get(O, ! ToString(k)).
+          // b. If SameValueZero(searchElement, elementK) is true, return true.
+          if (sameValueZero(o[k], searchElement)) {
+            return true;
+          }
+          // c. Increase k by 1. 
+          k++;
+        }
+  
+        // 8. Return false
+        return false;
+      }
+    });
+  }

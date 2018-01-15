@@ -34,6 +34,7 @@ const render_core = () => {
                 <span class="ts-date">...</span>
             </div>
         </div>
+        <div class="minion-dataload"></div>
         <div class="minion-contents">
         </div>
     </div>
@@ -47,12 +48,15 @@ var currentpath_whole = window.location.pathname;
 var currentpath_type = window.location.pathname.split('/')[1];
 
 if (currentpath_type !== '') {
+    document.querySelector('.minion-dataload').setAttribute('status', 'dl_e_1');
     import('./' + currentpath_type).then(module => {
         module.init_render();
+        document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 } else {
     import('./today').then(module => {
         module.init_render();
+        document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 }
 

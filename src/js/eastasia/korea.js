@@ -45,9 +45,12 @@ const render_data = () => {
     } else {
         dataset_url = '//thisisallabout.com/dataset/korea_data.json'
     }
-    fetch(dataset_url).then(response => response.text()).then(function(module) {
+
+    document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+    fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         policy_data = module;
+        document.querySelector('.minion-dataload').setAttribute('status', '');
         
         const policy_markup = () => html`
         <div id="policygroup">

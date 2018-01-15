@@ -168,6 +168,65 @@ body{
     padding-top: 43px;
     text-align: right;
     color: #737373;
+}
+
+.minion-dataload{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    z-index: 800;
+    background: #202020;
+    transform: translateX(100%);
+}
+
+.minion-dataload[status="dl_e_1"]{
+    display: block;
+    animation: shift-rightwards 1s ease-in-out infinite;
+    animation-delay: .4s;
+}
+
+.minion-dataload[status="dl_d_1"]{
+    display: block;
+    animation: shift-rightwards 1s ease-in-out infinite;
+    animation-delay: .4s;
+    background: #00bdec;
+}
+
+@keyframes shift-rightwards{
+    0%
+    {
+        -webkit-transform:translateX(-100%);
+        -moz-transform:translateX(-100%);
+        -o-transform:translateX(-100%);
+        transform:translateX(-100%);
+    }
+
+    40%
+    {
+        -webkit-transform:translateX(0%);
+        -moz-transform:translateX(0%);
+        -o-transform:translateX(0%);
+        transform:translateX(0%);
+    }
+
+    60%
+    {
+        -webkit-transform:translateX(0%);
+        -moz-transform:translateX(0%);
+        -o-transform:translateX(0%);
+        transform:translateX(0%);
+    }
+
+    100%
+    {
+        -webkit-transform:translateX(100%);
+        -moz-transform:translateX(100%);
+        -o-transform:translateX(100%);
+        transform:translateX(100%);
+    }
 }.presidenttrump-hero{
     width: 100%;
     height: 100vh;
@@ -221,21 +280,9 @@ body{
 
 .analysis-list .analysis-item:nth-child(2n) .item-info {
     flex-direction: row-reverse;
-    margin-right: 90px;
+    margin-right: 80px;
     margin-left: 0;
     text-align: right;
-}
-
-.analysis-list .analysis-item:nth-child(3n) .item-info {
-    margin-left: 50px;
-}
-
-.analysis-list .analysis-item:nth-child(4n) .item-info {
-    margin-right: 40px;
-}
-
-.analysis-list .analysis-item:nth-child(5n) .item-info {
-    margin-left: 80px;
 }
 
 .analysis-list .analysis-item .item-theme{
@@ -280,7 +327,7 @@ body{
 }
 
 .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container {
-    flex-direction: row-reverse;
+    justify-content: flex-end;
     padding: 0 25px 20px 0;
 }
 
@@ -291,6 +338,17 @@ body{
     color: #424242;
 }
 
+.analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak > p:after{
+    content: 'peak';
+    text-transform: uppercase;
+    background: #f34e00;
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    margin-left: 5px;
+}
+
 .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container .toparticle-month{
     flex-direction: row-reverse;
 }
@@ -298,6 +356,10 @@ body{
 .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
     box-shadow: 0 2px 0 0;
     color: #00bdec;
+}
+
+.analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak.selected{
+    color: #ff3f00;
 }
 
 .analysis-list .analysis-item .toparticle-content-container{
@@ -317,30 +379,17 @@ body{
 
 .analysis-list .analysis-item:nth-child(2n) .toparticle-content-container .toparticle-month{
     flex-direction: row-reverse;
-    margin-right: 80px;
+    margin-right: 70px;
     margin-left: 0;
-}
-
-.analysis-list .analysis-item:nth-child(3n) .toparticle-content-container .toparticle-month{
-    margin-left: 40px;
-}
-
-.analysis-list .analysis-item:nth-child(4n) .toparticle-content-container .toparticle-month{
-    flex-direction: row-reverse;
-    margin-right: 30px;
-    margin-left: 0;
-}
-
-.analysis-list .analysis-item:nth-child(5n) .toparticle-content-container .toparticle-month{
-    margin-left: 70px;
 }
 
 .analysis-list .toparticle-month .toparticle-object{
     position: relative;
-    width: 25%;
+    width: 20%;
     flex-shrink: 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background-size: cover;
+    cursor: pointer;
 }
 
 .analysis-list .toparticle-month .toparticle-object:before{
@@ -354,11 +403,11 @@ body{
     top: 0;
     padding: 20px;
     color: #fff;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
 .analysis-list .toparticle-month .toparticle-object .article-title{
-    font-size: 1.1em;
+    font-size: 1.05em;
     font-weight: 600;
 }
 
