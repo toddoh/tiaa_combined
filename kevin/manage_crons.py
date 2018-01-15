@@ -9,9 +9,9 @@ for job in cron:
 
 
 print('Adding a new cron tasks: ')
-job = cron.new(command='cd /var/www/kevin/kevin/ && /var/envs/kevin/bin/python action_aggregation.py --target=trumptimemachine',
-               comment='minion_trumptimemachine_aggregator')
-job.hour.every(12)
+job = cron.new(command='cd /var/www/kevin/kevin/ && /var/envs/kevin/bin/python action_aggregation.py --target=today',
+               comment='minion_usasociety_aggregator')
+job.hour.every(6)
 
 job.enable()
 cron.write()
