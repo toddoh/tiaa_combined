@@ -28,7 +28,8 @@ def aggregator_storeobject(item):
         cursor_readable.append(element)
 
     print(cursor_readable)
-    last_id = cursor[0]['twitterid']
+    if len(cursor)
+        last_id = cursor[0]['twitterid']
 
     twitter_list_target = 'usasociety'
     if item == 'usasociety':
