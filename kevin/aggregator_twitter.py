@@ -104,7 +104,7 @@ def aggregator(list=None, tweetid=None, mode=None, data=None):
                                      access_token_key='826316996564226050-KA5pVjPBKqgwBxs1S121hZwFaWqPZWZ',
                                      access_token_secret='2l1WWaZQ3XZp6DrRflY10B6cGXDBbRMVaNltXsfKFWMZ0')
 
-        if tweetid:
+        if tweetid is not None:
             print('Start retrieving twitter timeline: since_id {0}'.format(tweetid))
             twitter_timeline = api.GetListTimeline(slug=list, owner_screen_name="tiaa_obv000",
                                                include_rts=False, since_id=tweetid, count="1000")
