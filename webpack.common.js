@@ -12,7 +12,8 @@ module.exports = {
         new CleanWebpackPlugin(['dist'], { watch: false }),
         new ExtractTextPlugin({filename: "styles/styles.css", allChunks: true}),
         new HTMLWebpackPlugin({
-            title: 'THISISALLABOUT'
+            title: 'THISISALLABOUT',
+            template: 'src/index.html'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',

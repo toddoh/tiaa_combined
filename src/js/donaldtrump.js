@@ -1,10 +1,19 @@
 import {html, render} from 'lit-html';
 import presidenttrump_style from '../styles/donaldtrump.css';
 
+const check_mobile  = () => {
+    var status = false;
+    document.body.setAttribute('banana-type', 'mobile') ? status = true : status = false;
+    return status;
+}
+
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='TrumpFirstYear';
     document.querySelector('.navbox-static').classList.add('donaldtrump');
     document.querySelector('.navbox-sections li[data-sectionid="nav-section-donaldtrump"]').remove();
+    if (window.screen.width <= 980) {
+        document.body.setAttribute('banana-type', 'mobile');
+    }
 
     const hero_markup = () => html`
     <div class="presidenttrump-hero">
@@ -48,6 +57,7 @@ const render_data = () => {
                 <div class="analysis-item">
                     <div class="item-info">
                         <div class="item-theme">
+                            <div class="item-bg" banana-imagesrc=""></div>
                             <p class="theme-header">${i.header}</p>
                             <p class="themes">${i.message}</p>
                         </div>
@@ -82,6 +92,10 @@ const render_data = () => {
                             `
                             )}
                         </div>
+                    </div>
+
+                    <div class="item-close-action">
+                        <div class="icon"></div>
                     </div>
                 </div>
             `
@@ -124,11 +138,80 @@ const postrender_data = () => {
     Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
         el.querySelectorAll('.toparticle-month-container .toparticle-month')[0].classList.add('selected');
         el.querySelectorAll('.toparticle-content-container .toparticle-month')[0].classList.add('selected');
+        
+        var firstmonth = el.querySelectorAll('.toparticle-content-container .toparticle-month')[0];
+        el.querySelector('.item-bg').style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + firstmonth.querySelectorAll('.toparticle-object')[0].getAttribute('banana-imagesrc') + ')';
     });
 
     Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
-        el.style.backgroundImage = 'url(' + el.getAttribute('banana-imagesrc') + '), linear-gradient(#000, transparent)'
+        el.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + el.getAttribute('banana-imagesrc') + ')';
     });
+
+    if (check_mobile) {
+        var mobile_ithm = document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-theme');
+        for (var i=0; i < mobile_ithm.length; i++) {
+            mobile_ithm[i].addEventListener('click', function (e) {
+                var parent = getParents(this, '.analysis-item')[0];
+                if (!parent.classList.contains('selected')) {
+                    parent.classList.add('selected');
+
+                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
+                    if (!list.classList.contains('highlighted')) {
+                        list.classList.add('highlighted');
+                    }
+
+                    var list = document.querySelector('.presidenttrump-hero');
+                    if (!list.classList.contains('highlighted')) {
+                        list.classList.add('highlighted');
+                    }
+                } else {
+                    parent.classList.remove('selected');
+
+                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
+                    if (list.classList.contains('highlighted')) {
+                        list.classList.remove('highlighted');
+                    }
+
+                    var list = document.querySelector('.presidenttrump-hero');
+                    if (list.classList.contains('highlighted')) {
+                        list.classList.remove('highlighted');
+                    }
+                }
+            });
+        }
+
+        var mobile_ithm_close = document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-close-action');
+        for (var i=0; i < mobile_ithm_close.length; i++) {
+            mobile_ithm_close[i].addEventListener('click', function (e) {
+                var parent = getParents(this, '.analysis-item')[0];
+                if (!parent.classList.contains('selected')) {
+                    parent.classList.add('selected');
+
+                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
+                    if (!list.classList.contains('highlighted')) {
+                        list.classList.add('highlighted');
+                    }
+
+                    var list = document.querySelector('.presidenttrump-hero');
+                    if (!list.classList.contains('highlighted')) {
+                        list.classList.add('highlighted');
+                    }
+                } else {
+                    parent.classList.remove('selected');
+
+                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
+                    if (list.classList.contains('highlighted')) {
+                        list.classList.remove('highlighted');
+                    }
+
+                    var list = document.querySelector('.presidenttrump-hero');
+                    if (list.classList.contains('highlighted')) {
+                        list.classList.remove('highlighted');
+                    }
+                }
+            });
+        }
+    }
 
     var ta_months = document.querySelectorAll('.toparticle-month-container .toparticle-month');
     for (var i=0; i < ta_months.length; i++) {
