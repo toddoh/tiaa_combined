@@ -254,6 +254,8 @@ body{
 }
 
 .presidenttrump-hero .hero1.strike{
+    margin: 0 auto;
+    display: table;
     position: relative;
 }
 
@@ -271,8 +273,8 @@ body{
     height: 5px;
     background: #b91900;
     animation-name: strike;
-    animation-duration: 1300ms;
-    animation-timing-function: ease;
+    animation-duration: 1500ms;
+    animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; 
 }
@@ -284,10 +286,21 @@ body{
     margin: 30px auto;
 }
 
+.presidenttrump-hero .presidenttrump-herotpdetails{
+    font-size: 0.8em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #929292;
+}
+
 /* data */
 .presidenttrump-analysis-data{
     display: flex;
-    margin-top: -20vh;
+    margin-top: -10vh;
+}
+
+.presidenttrump-analysis-data.hidden{
+    display: none;
 }
 
 .presidenttrump-analysis-data .analysis-list{
@@ -453,6 +466,77 @@ body{
     margin-top: 3px;
 }
 
+/* tp details */
+.presidenttrump-tpdetails{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    transition: all 200ms ease;
+}
+
+.presidenttrump-tpdetails.revealed{
+    overflow: auto;
+    width: auto;
+    padding: 120px 10%;
+    height: 100vh;
+    background: #fff;
+}
+
+.presidenttrump-tpdetails .tpdetails-reveal > p{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.presidenttrump-tpdetails .tpdetails-text{
+    margin-top: 15px;
+}
+
+.presidenttrump-tpdetails .tpdetails-text > p{
+    margin-top: 6px;
+}
+
+.presidenttrump-tpdetails .datasets{
+    border-top: 1px solid #e4e4e4;
+    margin-top: 20px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.presidenttrump-tpdetails .datasets > a{
+    display: flex;
+}
+
+.presidenttrump-tpdetails .datasets > a > p{
+    text-transform: uppercase;
+    background: #ec7100;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 8px;
+    align-self: baseline;
+}
+
+.presidenttrump-tpdetails .tpdetails-close-action{
+    width: 17px;
+    height: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.presidenttrump-tpdetails .tpdetails-close-action .icon{
+    width: 17px;
+    height: 15px;
+    background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-size: cover;
+}
+
 @media all and (max-width: 980px) {
     .presidenttrump-hero{
         width: 85%;
@@ -478,6 +562,10 @@ body{
 
     .presidenttrump-hero .hero2{
         font-size: 1.05em;
+    }
+
+    .presidenttrump-hero .presidenttrump-herotpdetails{
+        font-size: 0.97em;
     }
 
     .analysis-list .analysis-item{

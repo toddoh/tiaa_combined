@@ -17,11 +17,30 @@ export function init_render() {
             <div class="hero2">
                 <p>To celebrate President Trump’s first year in the White House,</p>
                 <p>we rediscovered what has happened in our nation last year.</p>
+                <p class="presidenttrump-herotpdetails">More</p>
             </div>
         </div>
     </div>
     <div class="presidenttrump-analysis-data">
         <div class="analysis-list">
+        </div>
+    </div>
+    <div class="presidenttrump-tpdetails">
+        <div class="tpdetails-reveal">
+            <p>Journalism Transparency Details</p>
+        </div>
+        <div class="tpdetails-text">
+            <p>This content renders the clustering result of our processing system.</p>
+            <p>We aggregated and processed stories from NPR and PBS NewsHour between January 20th, 2017 and January 15th, 2018 ET through Twitter. Based on the data, the system did run a full natural language processing and clustering to sort out key topics.</p>
+            <p>Our clustering system uses a sophisticated algorithm to automatically determine a reasonable and optimal size of clusters. Once the initial data processing is done, our editorial team manually verifies the result, reformat theme keywords for bettery relevancy, and removes unnecessary cluster theme that contains PBS and/or NPR promotional keywords. Lastly, the "interpreter" unit creates a final result ready to be published.</p>
+            <div class="datasets">
+                <p>As a part of our commitment to journalism transparency, we share the untouched initial result data.</p>
+                <a href="https://thisisallabout.com/dataset/donaldtrump_data_untouched.json" target="_blank"><p>Plain JSON (untouched)</p></a>
+                <a href="https://thisisallabout.com/dataset/donaldtrump_data.json" target="_blank"><p>Plain JSON (final revision)</p></a>
+            </div>
+        </div>
+        <div class="tpdetails-close-action">
+            <div class="icon"></div>
         </div>
     </div>
     `;
@@ -126,7 +145,7 @@ const postrender_data = () => {
             if (month_raw == '2017-10') converted = 'Oct';
             if (month_raw == '2017-11') converted = 'Nov';
             if (month_raw == '2017-12') converted = 'Dec';
-            if (month_raw == '2018-01') converted = 'Jan 18';
+            if (month_raw == '2018-01') converted = 'Jan \'18';
             el.querySelector('p').innerHTML = converted;
 
             var peak_match = peak_data.includes(month_raw);
@@ -235,6 +254,22 @@ const postrender_data = () => {
             window.open(url, "_blank");
         });
     }
+
+    document.querySelector('.presidenttrump-herotpdetails').addEventListener('click', function (e) {
+        if (!document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
+            document.querySelector('.presidenttrump-tpdetails').classList.add('revealed');
+
+        if (!document.querySelector('.presidenttrump-analysis-data').classList.contains('hidden'))
+            document.querySelector('.presidenttrump-analysis-data').classList.add('hidden');
+    });
+
+    document.querySelector('.presidenttrump-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
+        if (document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
+            document.querySelector('.presidenttrump-tpdetails').classList.remove('revealed');
+
+        if (document.querySelector('.presidenttrump-analysis-data').classList.contains('hidden'))
+            document.querySelector('.presidenttrump-analysis-data').classList.remove('hidden');
+    });
 }
 
 var getClosest = function ( elem, selector ) {
