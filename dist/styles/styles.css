@@ -434,7 +434,8 @@ body{
         width: 85%;
         margin: 0 auto;
         overflow: hidden;
-        max-height: 100vh;
+        max-height: 110vh;
+        height: 110vh;
         transition: all 200ms ease;
     }
 

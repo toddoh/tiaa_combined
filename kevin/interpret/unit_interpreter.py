@@ -28,16 +28,28 @@ def interpret(type):
         for item in group['groups']:
             all_documents_title = []
             all_documents_text = []
-            schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT)
+            schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT(stored=True))
             ix = create_in("./indexes", schema)
             writer = ix.writer()
 
             for article in item['articles']:
-                all_documents_title.append(article['title'])
-                all_documents_text.append(article['text'])
                 writer.add_document(title=article['title'], path=article['_id'], content=article['text'])
 
             writer.commit()
+
+            with ix.searcher() as searcher:
+                query = whoosh.qparser.QueryParser("title", ix.schema, group=whoosh.qparser.OrGroup).parse(pick_theme)
+                results = searcher.search(query, limit=200)
+
+                if len(results):
+                    article_pick = results
+                    print('Clustering: index length:')
+                    print(len(article_pick))
+
+                    for a in article_pick:
+                        all_documents_title.append(a['title'])
+                        all_documents_text.append(a['content'])
+
             pick_list.append(len(item['articles']))
             pick_months.append(item['month'])
             print(pick_list, pick_months, len(all_documents_title))

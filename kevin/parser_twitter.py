@@ -101,7 +101,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     plt.plot(km_df.num_clusters[kIdx], km_df.cluster_errors[kIdx], marker="o", markersize=12,
      markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
 
-    kIdx += 2
+    kIdx += 1
     plt.savefig('./elbow_plot.png')
     plt.show()
 
