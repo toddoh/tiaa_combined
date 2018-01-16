@@ -35,8 +35,6 @@
             "2017-08",
             "2017-12"
         ],
-        "header": "Travel ban wasn't the only one. All Trump legal battles:",
-        "message": "The most widely-known legal battle of Trump administration is travel ban that was announced back in February. Ever since then, the administration continuously got stuck in legal battle over many issues. Here's a recap of all key battles you should know.",
         "theme": [
             "Trump",
             "says",
@@ -1120,6 +1118,947 @@
     },
     {
         "list": [
+            61,
+            282,
+            483,
+            496,
+            474,
+            526,
+            523,
+            562,
+            537,
+            412,
+            536,
+            640,
+            311
+        ],
+        "months": [
+            "2017-01",
+            "2017-02",
+            "2017-03",
+            "2017-04",
+            "2017-05",
+            "2017-06",
+            "2017-07",
+            "2017-08",
+            "2017-09",
+            "2017-10",
+            "2017-11",
+            "2017-12",
+            "2018-01"
+        ],
+        "peaks": [
+            "2017-04",
+            "2017-08",
+            "2017-12"
+        ],
+        "theme": [
+            "PBS",
+            "NewsHour",
+            "WATCH",
+            "Says",
+            "new",
+            "Periscope",
+            "Trump",
+            "years",
+            "Dies",
+            "living",
+            "Help",
+            "news",
+            "Making",
+            "Reported"
+        ],
+        "toparticles": [
+            [
+                {
+                    "_id": "59f863559b21b3529e577ead",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/20/gettyimages-472383522_wide-50d33756c2d68cb8f8d58dacfa45a8659bb8da36.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Trump's Telecom Chief Is Ajit Pai, Critic Of Net Neutrality Rules",
+                    "ts": 1485210300,
+                    "twitterid": "823657851902009344",
+                    "url": "http://n.pr/2iXDTgc"
+                },
+                {
+                    "_id": "59f863559b21b3529e577ed4",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/26/ap_16295749258179_wide-0cd5d379c01475b72ea8374d55ac65b76b87991f.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "TransCanada Submits New Application To Build Keystone XL Pipeline",
+                    "ts": 1485482160,
+                    "twitterid": "824798227367092224",
+                    "url": "http://n.pr/2kqqzxH"
+                },
+                {
+                    "_id": "59f863559b21b3529e577eaf",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/23/abi_full_disk_low_res_jan_15_2017_wide-b335339801f9cab2012612db1645f18f3d8237dc.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "'Like High-Definition From The Heavens'; NOAA Releases New Images Of Earth",
+                    "ts": 1485212760,
+                    "twitterid": "823668269148057600",
+                    "url": "http://n.pr/2kliKZA"
+                },
+                {
+                    "_id": "59f863559b21b3529e577edf",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/27/lagrange_wide-e33e6f67c8f2547510c6ce04df9a6aef22c5631a.png?s=1400",
+                    "origin": "npr",
+                    "title": "In Apology For Decades-Old Lynching, Police Chief Aims To 'Interrupt The Past'",
+                    "ts": 1485559140,
+                    "twitterid": "825120992754151424",
+                    "url": "http://n.pr/2kcCFx7"
+                },
+                {
+                    "_id": "59f863559b21b3529e577ecf",
+                    "date_month": "2017-01",
+                    "image": "https://media.npr.org/assets/img/2017/01/26/hanlontown-edit_wide-9c1544f3629daf72e4b516c40401d7401829fe83.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "'It's A Big One': Iowa Pipeline Leaks Nearly 140,000 Gallons Of Diesel",
+                    "ts": 1485453060,
+                    "twitterid": "824676053658464256",
+                    "url": "http://n.pr/2kxA9OP"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863559b21b3529e577fe4",
+                    "date_month": "2017-02",
+                    "image": "https://media.npr.org/assets/img/2017/02/18/ap_071005011524_mini_wide-46d9c5665b3b3346b2ef674c379a319f55389b6b.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Norma McCorvey, Roe Of Landmark 'Roe V. Wade' Ruling On Abortion, Dies At 69",
+                    "ts": 1487444340,
+                    "twitterid": "833028081413545984",
+                    "url": "http://n.pr/2m8Zijs"
+                },
+                {
+                    "_id": "59f863209b21b3526e643660",
+                    "date_month": "2017-02",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/02/RTRAKDN-1024x760.jpg",
+                    "origin": "newshour",
+                    "title": "Norma McCorvey, plaintiff in Roe v. Wade, dies at 69",
+                    "ts": 1487448780,
+                    "twitterid": "833046921631653888",
+                    "url": "http://to.pbs.org/2l6PYis"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e6436d9",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/gwen-ifill-desk-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "PBS NEWSHOUR AND THE WASHINGTON PRESS CLUB FOUNDATION CREATE JOURNALISM FELLOWSHIP IN HONOR OF GWEN IFILL",
+                    "ts": 1488391320,
+                    "twitterid": "837000169853956096",
+                    "url": "http://to.pbs.org/2mFBuF7"
+                },
+                {
+                    "_id": "59f863209b21b3526e6436e7",
+                    "date_month": "2017-03",
+                    "image": "http://www.adweek.com/tvnewser/wp-content/uploads/sites/3/2017/03/GwenIfill_office.jpg",
+                    "origin": "newshour",
+                    "title": "Washington Press Club, PBS NewsHour Honor The Late Gwen Ifill With Journalism Fellowship",
+                    "ts": 1488469800,
+                    "twitterid": "837329182237523968",
+                    "url": "http://adweek.it/2lAcBcF"
+                },
+                {
+                    "_id": "59f863209b21b3526e6437c0",
+                    "date_month": "2017-03",
+                    "image": "https://opcofamerica.org/wp-content/themes/opc/library/images/apple-touch-icon.png",
+                    "origin": "newshour",
+                    "title": "OPC Overseas Press Club Announces 22 Award Winners",
+                    "ts": 1490214000,
+                    "twitterid": "844644858509869059",
+                    "url": "http://bit.ly/2nD941v"
+                },
+                {
+                    "_id": "59f863209b21b3526e64380e",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/Screen-Shot-2017-03-28-at-6.51.43-PM-1024x616.png",
+                    "origin": "newshour",
+                    "title": "Remembering Bill Minor, a lion of journalism in the South",
+                    "ts": 1490744400,
+                    "twitterid": "846869514088153088",
+                    "url": "http://to.pbs.org/2mNLLTb"
+                },
+                {
+                    "_id": "59f863209b21b3526e64377c",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2015/04/184358375-1024x681.jpg",
+                    "origin": "newshour",
+                    "title": "Can I work and still collect my late husband\u2019s Social Security benefits?",
+                    "ts": 1489621200,
+                    "twitterid": "842158470161870852",
+                    "url": "http://to.pbs.org/2ntkfqP"
+                },
+                {
+                    "_id": "59f863209b21b3526e6436ee",
+                    "date_month": "2017-03",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/03/Pop-Up-Magazine-Contributor-Jamie-Meltzer-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "How a pop-up magazine experiment is turning journalism into performance art",
+                    "ts": 1488501600,
+                    "twitterid": "837462529244737536",
+                    "url": "http://to.pbs.org/2mRelPj"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863559b21b3529e57845f",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/14/goldlink_npr_6_wide-f4f121da78335771c90c3e333d2c68f111b0561b.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "GoldLink On Go-Go And Making The Best Of A Bittersweet History",
+                    "ts": 1492206000,
+                    "twitterid": "852999908818698240",
+                    "url": "http://n.pr/2ozMQNM"
+                },
+                {
+                    "_id": "59f863209b21b3526e643946",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/march_for_science-e1492981079309.png",
+                    "origin": "newshour",
+                    "title": "Stitch by stitch, a brief history of knitting and activism",
+                    "ts": 1492986600,
+                    "twitterid": "856273986283589633",
+                    "url": "http://to.pbs.org/2pUtOTI"
+                },
+                {
+                    "_id": "59f863559b21b3529e578416",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/03/28/030817_dearfield_jackson_house_wide-6c8b798b77ae3b05e12f4a0e72bac7d795d3c7c5.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "A Forgotten Piece Of African-American History On The Great Plains",
+                    "ts": 1492016100,
+                    "twitterid": "852203409914568704",
+                    "url": "http://n.pr/2p8H9Vr"
+                },
+                {
+                    "_id": "59f863559b21b3529e578518",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/25/img2879-notes-on-france_wide-540145e66f5262ac3ac6b66808bc3d961c447cb5.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Now You Can Own JFK's Personal Reflections On History, For A Hefty Price",
+                    "ts": 1493208720,
+                    "twitterid": "857205853241430016",
+                    "url": "http://n.pr/2q56gc4"
+                },
+                {
+                    "_id": "59f863559b21b3529e5783ef",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/10/gallery-holding-cell_aw_bcs3_wide-38e8353c0214651e6bc69ec7c957b22168dc7b56.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "'Better Call Saul' Launches Its 3rd Season, Still The Best Drama Series On TV",
+                    "ts": 1491871560,
+                    "twitterid": "851597165503942656",
+                    "url": "http://n.pr/2o1m8Lb"
+                },
+                {
+                    "_id": "59f863559b21b3529e57855d",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/27/obit_bts_bruceshoot_benwolf_rev_wide-4c1cbe0bbcdcf6123edcbb040b4f3c7952f04a38.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "'Obit' Follows The 'Times' Team Charged With Turning Lives Into History",
+                    "ts": 1493586180,
+                    "twitterid": "858788808028016640",
+                    "url": "http://n.pr/2ph81oe"
+                },
+                {
+                    "_id": "59f863209b21b3526e6438e1",
+                    "date_month": "2017-04",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/04/sing3-1024x576.jpg",
+                    "origin": "newshour",
+                    "title": "Inspired by internment camp history, students write a musical work and hear echoes of today",
+                    "ts": 1492167600,
+                    "twitterid": "852838847939575808",
+                    "url": "http://to.pbs.org/2nKBtnk"
+                },
+                {
+                    "_id": "59f863559b21b3529e578445",
+                    "date_month": "2017-04",
+                    "image": "https://media.npr.org/assets/img/2017/04/13/gettyimages-56753310_wide-73d3a07078a2f4500871ac7c38853d76873cce7a.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Steelers Chairman Dan Rooney, 'One Of The Finest Men' In NFL History, Dies At 84",
+                    "ts": 1492121340,
+                    "twitterid": "852644852042874880",
+                    "url": "http://n.pr/2peua4v"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863559b21b3529e57867e",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/17/ap_106674183314_wide-626db85247b16734a53babfe3fc883e7670e9e6a.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Chelsea Manning, Once Sentenced To 35 Years, Walks Free After 7 Years",
+                    "ts": 1495020360,
+                    "twitterid": "864804204958830592",
+                    "url": "http://n.pr/2pTOVlX"
+                },
+                {
+                    "_id": "59f863209b21b3526e643a69",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/01/RTSVZ3Q-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Chelsea Manning to stay on active duty when released from prison tomorrow",
+                    "ts": 1494960300,
+                    "twitterid": "864552284679700486",
+                    "url": "http://to.pbs.org/2rcNkM2"
+                },
+                {
+                    "_id": "59f863559b21b3529e578691",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/17/ap_17137780971682_wide-e1d2165949083709350729ffb03ebbec239c873e.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "U.S. Navy Admiral Sentenced To Prison In Bribery Scandal",
+                    "ts": 1495063260,
+                    "twitterid": "864984285429678080",
+                    "url": "http://n.pr/2pVcvPg"
+                },
+                {
+                    "_id": "59f863559b21b3529e578775",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/26/handshake-1_wide-199de045ba2e584740fa5163ca52b1717503e35a.jpeg?s=1400",
+                    "origin": "npr",
+                    "title": "Handshake-Free Zones Target Spread Of Germs In The Hospital",
+                    "ts": 1496116800,
+                    "twitterid": "869402996425281536",
+                    "url": "http://n.pr/2sfZaS6"
+                },
+                {
+                    "_id": "59f863559b21b3529e578727",
+                    "date_month": "2017-05",
+                    "image": "https://media.npr.org/assets/img/2017/05/25/gettyimages-687838746_wide-cd6c7ea316523bf486b740be7c362c26ff030d25.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "'Playboy' Model Sentenced Over Body-Shaming Woman At Gym",
+                    "ts": 1495716720,
+                    "twitterid": "867724960982220800",
+                    "url": "http://n.pr/2qjEvw4"
+                },
+                {
+                    "_id": "59f863209b21b3526e6439c1",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTX32POP-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "By murder, prison and rhetoric, here\u2019s how the global free press is being suppressed",
+                    "ts": 1493866800,
+                    "twitterid": "859965812135927812",
+                    "url": "http://to.pbs.org/2pyWz7o"
+                },
+                {
+                    "_id": "59f863209b21b3526e643aae",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/UNI197652-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Number of unaccompanied child migrants surged in recent years",
+                    "ts": 1495392300,
+                    "twitterid": "866364218861174784",
+                    "url": "http://to.pbs.org/2r6bCHF"
+                },
+                {
+                    "_id": "59f863209b21b3526e643ad4",
+                    "date_month": "2017-05",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/05/cicadas_mike-Raupp-e1495487664866-1024x655.jpeg",
+                    "origin": "newshour",
+                    "title": "Cicadas strike back four years early. But why?",
+                    "ts": 1495633500,
+                    "twitterid": "867375885699080193",
+                    "url": "http://to.pbs.org/2ruUfAh"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643be4",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/image.png",
+                    "origin": "newshour",
+                    "title": "Twitter Chat: How to change the conversation about living with disabilities",
+                    "ts": 1497298500,
+                    "twitterid": "874359401993256961",
+                    "url": "http://to.pbs.org/2rSlowE"
+                },
+                {
+                    "_id": "59f863209b21b3526e643bef",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/polimon-1-e1497315092880-1024x568.jpg",
+                    "origin": "newshour",
+                    "title": "Why it\u2019s so hard for the White House to change the conversation",
+                    "ts": 1497322800,
+                    "twitterid": "874461325715361793",
+                    "url": "http://to.pbs.org/2tf6OwL"
+                },
+                {
+                    "_id": "59f863209b21b3526e643bca",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/bbs1-1-e1497053209582-1024x568.jpg",
+                    "origin": "newshour",
+                    "title": "Why the world needs more filmmakers with disabilities",
+                    "ts": 1497096000,
+                    "twitterid": "873510064761524224",
+                    "url": "http://to.pbs.org/2s6vuu1"
+                },
+                {
+                    "_id": "59f863559b21b3529e5787bd",
+                    "date_month": "2017-06",
+                    "image": "https://media.npr.org/assets/img/2017/06/02/6f6a7343-2_wide-38753ee75fced9e02e5f54c9d877a8bdce867837.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "The Soprano And The Scientist: A Conversation About Music And Medicine",
+                    "ts": 1496440200,
+                    "twitterid": "870759430006030336",
+                    "url": "http://n.pr/2qPJbZY"
+                },
+                {
+                    "_id": "59f863209b21b3526e643cdc",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/RTS196HY-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "How do Trump\u2019s Twitter taunts affect the presidency?",
+                    "ts": 1498788000,
+                    "twitterid": "880606823203692544",
+                    "url": "http://to.pbs.org/2trvNAb"
+                },
+                {
+                    "_id": "59f863209b21b3526e643c9b",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/MarshallsDroneCREDITYALEKRAMER0-1.jpg",
+                    "origin": "newshour",
+                    "title": "Fighting for freshwater amid climate change",
+                    "ts": 1498428000,
+                    "twitterid": "879096869267415040",
+                    "url": "http://to.pbs.org/2taGJD4"
+                },
+                {
+                    "_id": "59f863559b21b3529e578a27",
+                    "date_month": "2017-06",
+                    "image": "https://media.npr.org/assets/img/2017/06/29/climate-damage-promo_wide-911f90775a7d3d7fd3cce43a2f5102e4920da0dd.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Mapping The Potential Economic Effects Of Climate Change",
+                    "ts": 1498772280,
+                    "twitterid": "880540915483410432",
+                    "url": "http://n.pr/2tr0SEm"
+                },
+                {
+                    "_id": "59f863209b21b3526e643bf0",
+                    "date_month": "2017-06",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/06/canc2-e1497315316501-1024x568.jpg",
+                    "origin": "newshour",
+                    "title": "Cervical cancer is most deadly in India. This program is trying to change that.",
+                    "ts": 1497326400,
+                    "twitterid": "874476427495653376",
+                    "url": "http://to.pbs.org/2teYo8s"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643e4d",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/07/award-nasme1-1024x584.jpg",
+                    "origin": "newshour",
+                    "title": "PBS NewsHour's 2016 series The End of AIDS? named recipient of NAS 2017 Communication Award",
+                    "ts": 1501183500,
+                    "twitterid": "890654417577496576",
+                    "url": "http://to.pbs.org/2uGBQiT"
+                },
+                {
+                    "_id": "59f863209b21b3526e643e39",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/themes/pbs-newshour/assets/img/ios/favicon.ico",
+                    "origin": "newshour",
+                    "title": "PBS NewsHour Nominated for Two News & Documentary Emmy Awards",
+                    "ts": 1501112940,
+                    "twitterid": "890358396540604417",
+                    "url": "http://to.pbs.org/2v0pTqC"
+                },
+                {
+                    "_id": "59f863559b21b3529e578bfd",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/19/gettyimages-609735160_wide-f24bed3394d88adac9df0786da539ec4ed35acbd.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Plastic Is Everywhere And Recycling Isn't The End Of It",
+                    "ts": 1500499920,
+                    "twitterid": "887787338478215168",
+                    "url": "http://n.pr/2tgiYWJ"
+                },
+                {
+                    "_id": "59f863209b21b3526e643d4e",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/24829139264_0d188827c4_k-1-1024x834.jpg",
+                    "origin": "newshour",
+                    "title": "Native American artists call for an end to counterfeits",
+                    "ts": 1499641200,
+                    "twitterid": "884185399219822592",
+                    "url": "http://to.pbs.org/2u7xF28"
+                },
+                {
+                    "_id": "59f863559b21b3529e578b4b",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/13/ap_17132592358067_wide-01a5f32d59fa0d9185e0cba58dca359f65fcc716.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Emmy Nominations 2017: 'Saturday Night Live' And 'Westworld' Lead The Way",
+                    "ts": 1499964420,
+                    "twitterid": "885541113188171776",
+                    "url": "http://n.pr/2udHjzS"
+                },
+                {
+                    "_id": "59f863559b21b3529e578ce9",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/29/gettyimages-634030160_wide-78ea1f76d6a08fa0c7d6e5949be75507cf0eb976.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "NFL, NIH End Partnership For Concussion Research With $16M Unspent",
+                    "ts": 1501344540,
+                    "twitterid": "891329750953676800",
+                    "url": "http://n.pr/2uLwhjn"
+                },
+                {
+                    "_id": "59f863209b21b3526e643d4b",
+                    "date_month": "2017-07",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/07/AH080-labeija-TheFirstTenYears_-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "AIDS activists fought for public recognition. This exhibit shows their lives at home",
+                    "ts": 1499632200,
+                    "twitterid": "884147650353741824",
+                    "url": "http://to.pbs.org/2tE72Po"
+                },
+                {
+                    "_id": "59f863559b21b3529e578ba9",
+                    "date_month": "2017-07",
+                    "image": "https://media.npr.org/assets/img/2017/07/16/gettyimages-140061239_wide-ac70ede15e6e8d3142f2a316542f93d4553a2d09.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Award-Winning Actor Martin Landau, Known For 'Mission: Impossible,' Dies At 89",
+                    "ts": 1500265080,
+                    "twitterid": "886802283899441152",
+                    "url": "http://n.pr/2uq3CTk"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e643f83",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/GettyImages-515419384-small-1024x684.jpg",
+                    "origin": "newshour",
+                    "title": "WATCH LIVE: Race and Racism in the Age of Trump | 2017 Hutchins Forum",
+                    "ts": 1502995500,
+                    "twitterid": "898254351541587968",
+                    "url": "http://to.pbs.org/2x5SokF"
+                },
+                {
+                    "_id": "59f863209b21b3526e643f84",
+                    "date_month": "2017-08",
+                    "image": "https://prod-thumbnail.pscp.tv/KePstkz24zC0XPBoCtXtanFohAZDE2C2NoCBIG7gomB4JK5BCZXRPOx1-z1630txJdXP3dybrs9vSRtvPsZdVg/chunk_1503010462523902751_3448_c.jpg?Expires=1818371073&Signature=hB0mP0Ff7Rpy31ZWZ9l-AsqMh6paMl-cuIP2TWqyiJhnW0syabgIcM3WmpXI4zqK4w9v~lgnX6GwMIRdmy6z0nIGkczub865BvWW0hiLgsqtih4LdyhSK4qTESEMvFIaEAzG~4R8FElnPR7CNOLGYLdmxxtTaSPA0lZ5-23ky9asW6nmVfqMVRcrVlGtLOYNqzBwv-qKtjClna5PKtAIHRBWdF9OcwUGkLi1NOZh535IIIRRA~avPWH6J3HDS62eJltA22wbtRDugiJKcPdBAxnWzDT5-1NSR8UF5DmexEM-YMM0neJwjcTGnb47qABWcErbEZhIAFZsgLMjnqns1g__&Key-Pair-Id=APKAIHCXHHQVRTVSFRWQ",
+                    "origin": "newshour",
+                    "title": "PBS NewsHour: \"Join us for a discussion of 'Race and Racism in the Age of Trump' at the 2017 Hutchins Forum\"",
+                    "ts": 1503003840,
+                    "twitterid": "898289568025255936",
+                    "url": "http://bit.ly/2wks1dn"
+                },
+                {
+                    "_id": "59f863209b21b3526e643f2e",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2015/12/5950870440_77a79721b4_o.jpg",
+                    "origin": "newshour",
+                    "title": "What it\u2019s like to age with asthma",
+                    "ts": 1502380800,
+                    "twitterid": "895676122234486786",
+                    "url": "http://to.pbs.org/2uJRrws"
+                },
+                {
+                    "_id": "59f863559b21b3529e578eec",
+                    "date_month": "2017-08",
+                    "image": "https://media.npr.org/assets/img/2017/08/21/gettyimages-836293600_wide-7f5929a6eba8070ecfa6af8dc9f4b1d48234d5b8.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Replay Live Coverage: Follow The Solar Eclipse",
+                    "ts": 1503325860,
+                    "twitterid": "899639998881738753",
+                    "url": "http://n.pr/2fYloHq"
+                },
+                {
+                    "_id": "59f863559b21b3529e578f03",
+                    "date_month": "2017-08",
+                    "image": "https://media.npr.org/assets/img/2017/08/21/hayeri_canonaward_018-61_wide-675816e255a861e93285ae9baa5603ed9439c861.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "PHOTOS: Single Mothers Of Afghanistan Live On The Fringe",
+                    "ts": 1503426720,
+                    "twitterid": "900063018243026944",
+                    "url": "http://n.pr/2ioafk5"
+                },
+                {
+                    "_id": "59f863559b21b3529e578fbc",
+                    "date_month": "2017-08",
+                    "image": "https://media.npr.org/assets/img/2017/08/30/gettyimages-601196616-2_wide-44f6981a43bb44f2c6174212e6c85412244d29a8.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Live In Hawaii, And Odds Are You'll Need Fewer Prescription Meds",
+                    "ts": 1504186140,
+                    "twitterid": "903248258205589505",
+                    "url": "http://n.pr/2iKybyx"
+                },
+                {
+                    "_id": "59f863209b21b3526e643ede",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2016/08/RTX2LYCQ-1024x680.jpg",
+                    "origin": "newshour",
+                    "title": "The last race for Usain Bolt, the fastest man alive",
+                    "ts": 1501892400,
+                    "twitterid": "893627615453618176",
+                    "url": "http://to.pbs.org/2v51jo3"
+                },
+                {
+                    "_id": "59f863209b21b3526e643ee4",
+                    "date_month": "2017-08",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/RTS126LY-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Controversial appointment clouds U.S. Senate race in Alabama",
+                    "ts": 1501956000,
+                    "twitterid": "893894382671331328",
+                    "url": "http://to.pbs.org/2wvljye"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863209b21b3526e6441af",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/GettyImages-474343828-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Biggest challenge of Yemen\u2019s humanitarian crisis is making the world pay attention",
+                    "ts": 1506654000,
+                    "twitterid": "913599211358314497",
+                    "url": "http://to.pbs.org/2ywRrT2"
+                },
+                {
+                    "_id": "59f863559b21b3529e5790c3",
+                    "date_month": "2017-09",
+                    "image": "http://d279m997dpfwgl.cloudfront.net/wp/2017/09/0912_shabbat02.jpg",
+                    "origin": "npr",
+                    "title": "Kind World #44: Turning Point",
+                    "ts": 1505242320,
+                    "twitterid": "907678200225972225",
+                    "url": "http://www.wbur.org/kindworld/2017/09/12/kind-world-44-turning-point"
+                },
+                {
+                    "_id": "59f863209b21b3526e64411b",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/DSC07834-1024x576.jpg",
+                    "origin": "newshour",
+                    "title": "Projection artists bring light to social issues with attention-grabbing protests",
+                    "ts": 1505740500,
+                    "twitterid": "909767722757636098",
+                    "url": "http://to.pbs.org/2xdGEiH"
+                },
+                {
+                    "_id": "59f863209b21b3526e6441b2",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/Screen-Shot-2017-09-28-at-7.22.23-PM.png",
+                    "origin": "newshour",
+                    "title": "The identity crisis of losing a baby to miscarriage",
+                    "ts": 1506686400,
+                    "twitterid": "913735109102133248",
+                    "url": "http://to.pbs.org/2ywxc83"
+                },
+                {
+                    "_id": "59f863209b21b3526e64404c",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/08/bbs1-2-1024x574.jpg",
+                    "origin": "newshour",
+                    "title": "Every child can in the world have a microscope. Here\u2019s how.",
+                    "ts": 1504267200,
+                    "twitterid": "903588253391052801",
+                    "url": "http://to.pbs.org/2wr3ph0"
+                },
+                {
+                    "_id": "59f863209b21b3526e6440d8",
+                    "date_month": "2017-09",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/09/RTX3FXYU-1024x682.jpg",
+                    "origin": "newshour",
+                    "title": "Florida begins recovery but restoring power poses big challenge",
+                    "ts": 1505264400,
+                    "twitterid": "907770807706939392",
+                    "url": "http://to.pbs.org/2w5S3lD"
+                },
+                {
+                    "_id": "59f863559b21b3529e5791ef",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/25/ap_17095396131882_wide-251e1fcfcf3e38ffae9e17bbf1f622532ca7965f.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "More Healthful Kids Meals? Panera CEO Dishes Out A Challenge",
+                    "ts": 1506456600,
+                    "twitterid": "912771256390361088",
+                    "url": "http://n.pr/2fP1dJp"
+                },
+                {
+                    "_id": "59f863559b21b3529e579116",
+                    "date_month": "2017-09",
+                    "image": "https://media.npr.org/assets/img/2017/09/15/dsc_7562-53_wide-a29f7fe314e5552987811ac881c80d8e6a4df43c.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "PHOTOS: Children Caught In The Crossfire Of Rohingya Crisis",
+                    "ts": 1505521620,
+                    "twitterid": "908849776808153088",
+                    "url": "http://n.pr/2xEmLTm"
+                }
+            ],
+            [
+                {
+                    "_id": "59f863559b21b3529e579287",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/27/gettyimages-867059952_wide-88735403f87bece486862c3a8d0bb20f033624e6.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "NPR : National Public Radio : News & Analysis, World, US, Music & Arts : NPR",
+                    "ts": 1507109040,
+                    "twitterid": "915507962935955457",
+                    "url": "http://NPR.org"
+                },
+                {
+                    "_id": "59f863209b21b3526e644243",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/RTS1FPYP-1024x683.jpg",
+                    "origin": "newshour",
+                    "title": "Richard Thaler earns Nobel prize for making \u2018economics more human\u2019",
+                    "ts": 1507594800,
+                    "twitterid": "917545213224251393",
+                    "url": "http://to.pbs.org/2yBynHk"
+                },
+                {
+                    "_id": "59f863559b21b3529e5792dc",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/09/ap_17282507309804_wide-d8866723647a50ab9ebc8f05c71c4c41f15e6354.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Nobel Goes To American Richard Thaler For Work In Behavioral Economics",
+                    "ts": 1507542960,
+                    "twitterid": "917327995035033601",
+                    "url": "http://n.pr/2y4XFga"
+                },
+                {
+                    "_id": "59f863559b21b3529e579290",
+                    "date_month": "2017-10",
+                    "image": "http://is3.mzstatic.com/image/thumb/Music71/v4/50/d3/30/50d33068-e245-49e1-40a2-2e463caa2c5a/source/1200x630bb.jpg",
+                    "origin": "npr",
+                    "title": "Radio Ambulante by NPR on Apple Podcasts",
+                    "ts": 1507142280,
+                    "twitterid": "915647209772867599",
+                    "url": "http://n.pr/RadioAmbulanteiTunes"
+                },
+                {
+                    "_id": "59f863209b21b3526e644215",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/RTS1F7KS-1024x759.jpg",
+                    "origin": "newshour",
+                    "title": "Kazuo Ishiguro wins Nobel Prize for Literature",
+                    "ts": 1507236300,
+                    "twitterid": "916041556573876224",
+                    "url": "http://to.pbs.org/2y4fdIU"
+                },
+                {
+                    "_id": "59f863559b21b3529e57929a",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/05/ap_17278397439832_wide-e761b1f510732253b400348b17f11381494e04a2.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "Kazuo Ishiguro Wins Nobel Prize In Literature",
+                    "ts": 1507202160,
+                    "twitterid": "915898528974688261",
+                    "url": "http://n.pr/2xU0ctN"
+                },
+                {
+                    "_id": "59f863559b21b3529e5792aa",
+                    "date_month": "2017-10",
+                    "image": "https://media.npr.org/assets/img/2017/10/03/59ba9c3c4_wide-b25cc4c3a9d0d1b934d6d92df91bd67df499d55f.jpg?s=1400",
+                    "origin": "npr",
+                    "title": "His School For 540 Needy Kids Earns Him A U.N. Prize",
+                    "ts": 1507237140,
+                    "twitterid": "916045079730671616",
+                    "url": "http://n.pr/2gg43Hv"
+                },
+                {
+                    "_id": "59f863209b21b3526e644247",
+                    "date_month": "2017-10",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/10/RTS1FRTX-1024x692.jpg",
+                    "origin": "newshour",
+                    "title": "Economics Nobel winner Thaler shed light on how real people behave",
+                    "ts": 1507602600,
+                    "twitterid": "917577931257507840",
+                    "url": "http://to.pbs.org/2y8z1ZN"
+                }
+            ],
+            [
+                {
+                    "_id": "59fa90359b21b317315479d6",
+                    "date_month": "2017-11",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/11/Rockaways_Hurricane-Sandy_RTR3CGHI-1024x712.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "New York City\u2019s search for resilience continues five years after Sandy",
+                    "ts": 1509550801,
+                    "twitterid": 925885169852022784,
+                    "url": "https://www.pbs.org/newshour/science/new-york-citys-search-for-resilience-continues-five-years-after-sandy"
+                },
+                {
+                    "_id": "5a160fa3421aa95a349c170f",
+                    "date_month": "2017-11",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/11/saipov-1024x768.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "New York City truck attack suspect indicted on terrorism, murder charges",
+                    "ts": 1511366413,
+                    "twitterid": 933364503575744512,
+                    "url": "https://www.pbs.org/newshour/nation/new-york-city-truck-attack-suspect-indicted-on-terrorism-murder-charges"
+                },
+                {
+                    "_id": "59fa90359b21b31731547a0d",
+                    "date_month": "2017-11",
+                    "image": "https://media.npr.org/assets/img/2017/11/01/ap_17304756586513_wide-8166e571d5f9803f51a7e684146094f52928f0ee.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "What Manafort's Indictment Reveals About His New York City Real Estate Deals",
+                    "ts": 1509520801,
+                    "twitterid": 925759341348753410,
+                    "url": "http://www.npr.org/2017/11/01/561330641/what-manaforts-indictment-reveals-his-new-york-city-real-estate-deals?utm_source=twitter.com&utm_medium=social&utm_campaign=npr&utm_term=nprnews&utm_content=202801"
+                },
+                {
+                    "_id": "5a16b850421aa96927632996",
+                    "date_month": "2017-11",
+                    "image": "https://media.npr.org/assets/img/2017/11/23/ap_17326592248206_wide-8f7d6ad87328cbac175442edee5b9b917670d734.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Search Continues For Missing Sailors After Navy Plane Crash In Philippine Sea",
+                    "ts": 1511424485,
+                    "twitterid": 933608074660651008,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/11/23/566206063/search-continues-for-missing-sailors-after-navy-plane-crash-in-philippine-sea?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a1ea152421aa9238986185b",
+                    "date_month": "2017-11",
+                    "image": "https://media.npr.org/assets/img/2017/11/29/ap_17332647224460_wide-60b9b92d042f13461448b46bbe78d1bab4eda831.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Suspect In October New York Truck Attack Pleads Not Guilty",
+                    "ts": 1511935865,
+                    "twitterid": 935752960713330688,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/11/29/567125421/suspect-in-october-new-york-truck-attack-pleads-not-guilty?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a1dfa2a421aa915c32136e3",
+                    "date_month": "2017-11",
+                    "image": "https://media.npr.org/assets/img/2017/11/28/gettyimages-843454912_wide-da86b0b52e5bd15b6fa33e5578d5daeee426b814.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Hospital Improperly Billed Patients For Rape Exams, Says New York Attorney General",
+                    "ts": 1511913965,
+                    "twitterid": 935661102020440064,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/11/28/567071372/hospital-improperly-billed-patients-for-rape-exams-says-new-york-attorney-genera?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "59fa90359b21b317315479d4",
+                    "date_month": "2017-11",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2017/11/RTS1I29M-1024x683.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "New York suspect reportedly planned attack for a long time. What more could law enforcement do to prevent terrorism?",
+                    "ts": 1509552002,
+                    "twitterid": 925890208897183744,
+                    "url": "https://www.pbs.org/newshour/show/new-york-suspect-reportedly-planned-attack-for-a-long-time-what-more-could-law-enforcement-do-to-prevent-terrorism"
+                },
+                {
+                    "_id": "5a1ea152421aa9238986185a",
+                    "date_month": "2017-11",
+                    "image": "https://media.npr.org/assets/img/2017/11/29/ap_17332378057204_wide-0b82aa06511ff555be17852fe9f39d696d896b50.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Bali's Airport To Reopen As Volcano Continues To Belch And Rumble",
+                    "ts": 1511946424,
+                    "twitterid": 935797244900417537,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/11/29/567129847/balis-airport-to-reopen-as-volcano-continues-to-belch-and-rumble?utm_source=dlvr.it&utm_medium=twitter"
+                }
+            ],
+            [
+                {
+                    "_id": "5a2f1c39421aa95b4cfbb5c5",
+                    "date_month": "2017-12",
+                    "image": "https://media.npr.org/assets/img/2017/12/11/as17-134-20387_wide-d0f3b217718d77a6e7a0cf63f7af7fa1f2696cdd.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "President Trump Is Sending NASA Back To The Moon",
+                    "ts": 1513031580,
+                    "twitterid": 940348720872386561,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/12/11/569936446/president-trump-is-sending-nasa-back-to-the-moon?utm_source=twitter.com&utm_medium=social&utm_campaign=npr&utm_term=nprnews&utm_content=2040"
+                },
+                {
+                    "_id": "5a25e1b1421aa92e27765754",
+                    "date_month": "2017-12",
+                    "image": "https://media.npr.org/assets/img/2017/12/04/gettyimages-631820062_wide-549bd71b07b9be32fd8da26791cbdd94a54965e4.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Venezuela Will Create New 'Petro' Cryptocurrency, President Maduro Says",
+                    "ts": 1512406568,
+                    "twitterid": 937727230100176896,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/12/04/568299704/venezuela-will-create-new-petro-cryptocurrency-president-maduro-says?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a273336421aa94bfd589980",
+                    "date_month": "2017-12",
+                    "image": "https://media.npr.org/assets/img/2017/12/05/ap_17339489204323_wide-f7aba088ec8787d5d8d60a18df9fde539418224d.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Ex-Georgian President Escapes Custody In Dramatic Confrontation In Kiev",
+                    "ts": 1512512343,
+                    "twitterid": 938170883075481601,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/12/05/568589953/amid-chaos-in-kiev-ex-georgian-president-escapes-custody?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a29d62f421aa96a3ccc188a",
+                    "date_month": "2017-12",
+                    "image": "https://media.npr.org/assets/img/2017/12/07/gettyimages-886824100_wide-d5d77f879bba5c3447bdc3a03790cbf5d727e0d5.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "What Is An Ex-Georgian President Doing Camping Outside Ukraine's Parliament?",
+                    "ts": 1512690306,
+                    "twitterid": 938917312593199105,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/12/07/569132334/what-is-an-ex-georgian-president-doing-camping-outside-ukraines-parliament?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a37add3421aa92b6fbeae54",
+                    "date_month": "2017-12",
+                    "image": "https://media.npr.org/assets/img/2017/12/18/gettyimages-894254262_wide-9c0884a8cfb82b0edd4a5af6cb59ed020954931f.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "South Africa's ANC To Choose President Zuma's Replacement On 2019 Ballot",
+                    "ts": 1513589526,
+                    "twitterid": 942688915718258688,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/12/18/571576431/south-africas-anc-to-chose-president-zuma-s-replacement-on-2019-ballot?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a3856b2421aa9477c6c27b7",
+                    "date_month": "2017-12",
+                    "image": "https://i.ytimg.com/vi/qsXiUddxbiI/hqdefault.jpg",
+                    "origin": "NPR",
+                    "title": "President Trump Delivers Remarks Regarding the Administration\u2019s National Security Strategy",
+                    "ts": 1513624861,
+                    "twitterid": 942837120493850632,
+                    "url": "https://www.youtube.com/watch?v=qsXiUddxbiI"
+                },
+                {
+                    "_id": "5a42e29d421aa940b0cc8edd",
+                    "date_month": "2017-12",
+                    "image": "https://media.npr.org/assets/img/2017/12/26/gettyimages-898734670_wide-120091deb5fc607a3d346f5b5ca758d8fc8ef6b8.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Liberians Vote For Next President, As Ellen Johnson Sirleaf Steps Down",
+                    "ts": 1514304547,
+                    "twitterid": 945687932509155328,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/12/26/573482816/liberians-vote-for-next-president-as-ellen-johnson-sirleaf-steps-down?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a45859c421aa9652be7e71e",
+                    "date_month": "2017-12",
+                    "image": "https://media.npr.org/assets/img/2017/12/28/gettyimages-859060196_wide-61c519cdc5d85c2b280da9e2f6b70d1cf0b0c0b7.jpg?s=1400",
+                    "origin": "NPR",
+                    "title": "Liberia Elects Soccer Star George Weah Its Next President",
+                    "ts": 1514490243,
+                    "twitterid": 946466798160842752,
+                    "url": "https://www.npr.org/sections/thetwo-way/2017/12/28/574172627/liberia-elects-soccer-star-george-weah-its-next-president?utm_source=dlvr.it&utm_medium=twitter"
+                }
+            ],
+            [
+                {
+                    "_id": "5a4f68d0421aa91df6ade6af",
+                    "date_month": "2018-01",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2018/01/RTX3E8JU-1024x683.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "How Trump could vastly expand offshore drilling",
+                    "ts": 1515117600,
+                    "twitterid": 949098123703521280,
+                    "url": "https://www.pbs.org/newshour/show/how-trump-could-vastly-expand-offshore-drilling"
+                }
+            ]
+        ]
+    },
+    {
+        "list": [
             7,
             26,
             71,
@@ -1154,8 +2093,6 @@
             "2017-07",
             "2017-12"
         ],
-        "header": "Health care repeal is dead, then tax cut for rich",
-        "message": "For the first time, our clustering shows how Trump administration is trying to change the nation. It all began with health care repeal and once it's dead, they suddnely switched to a new line of \"reforming\": tax reform. See month-to-month clusters to track down the moves lying on the same line.",
         "theme": [
             "Health care",
             "Health",
@@ -2069,8 +3006,6 @@
             "2017-09",
             "2017-12"
         ],
-        "header": "Our education system is in danger",
-        "message": "There have been a gigantic amount of problems nested in education. It gets even worse that nobody cares about it, moreover, Trump-Betsy DeVos administration ignores the reality. From high student debt to diversity, it covers a wide range of the issues threatening nation's future.",
         "theme": [
             "student",
             "School",
@@ -2496,8 +3431,6 @@
             "2017-05",
             "2017-12"
         ],
-        "header": "Trump Administration's ties to Russia and new evidences",
-        "message": "It reached peak on May and December last year. According to cluster themes, it started with Michael Flynn and James Comey testify hearing, but that was not the end of whole story. Stories from May to January this year covers key stories of it.",
         "theme": [
             "Trump",
             "Jared Kushner",
@@ -3321,8 +4254,6 @@
             "2017-08",
             "2017-11"
         ],
-        "header": "North Korea threat and Trump",
-        "message": "North Korea continuously poses to our nation with their newest missiles and nuclear test facility, yet there's no clear solution at the moment. Our cluster highlights how Trump and Tillerson responded to it, furthermore, the global hegemony around this.",
         "theme": [
             "North Korea",
             "Trump",

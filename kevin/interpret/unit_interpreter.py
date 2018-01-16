@@ -39,7 +39,7 @@ def interpret(type):
 
             with ix.searcher() as searcher:
                 query = whoosh.qparser.QueryParser("title", ix.schema, group=whoosh.qparser.OrGroup).parse(pick_theme)
-                results = searcher.search(query, limit=200)
+                results = searcher.search(query, limit=50)
 
                 if len(results):
                     article_pick = results
@@ -60,7 +60,7 @@ def interpret(type):
                 print('@@@@@@@@ ERRRR')
                 continue
             else:
-                parsed_data = parse_aggregated(all_documents_dict, 1, 12)
+                parsed_data = parse_aggregated(all_documents_dict, 2, 13)
 
             print('+++++++ PARSING')
             parsed_data_themes = []
@@ -120,7 +120,7 @@ def interpret(type):
                 results = searcher.search(query)
 
                 if len(results):
-                    article_pick = results[0:5]
+                    article_pick = results[0:8]
                     print(article_pick)
 
                     for a in article_pick:

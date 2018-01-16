@@ -5,3 +5,6 @@ kevin/__pycache__/
 kevin/.idea/
 **/.vscode
 kevin/logs/*
+kevin/interpret/indexes/
+kevin/interpret/indexes/*
+**/articles_tf_idf.npz
