@@ -12,7 +12,7 @@ if (process.env.NODE_ENV == 'dev') {
 
 // Serve the files on port 3000.
 app.listen(3000, function () {
-    console.log('Example app listening on port 3000!\n');
+    console.log('thisisallabout app listening on port 3000!\n');
 });
 
 app.use(function (req, res, next) {

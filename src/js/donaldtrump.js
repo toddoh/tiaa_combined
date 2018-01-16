@@ -1,12 +1,6 @@
 import {html, render} from 'lit-html';
 import presidenttrump_style from '../styles/donaldtrump.css';
 
-const check_mobile  = () => {
-    var status = false;
-    document.body.setAttribute('banana-type', 'mobile') ? status = true : status = false;
-    return status;
-}
-
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='TrumpFirstYear';
     document.querySelector('.navbox-static').classList.add('donaldtrump');
@@ -23,7 +17,6 @@ export function init_render() {
             <div class="hero2">
                 <p>To celebrate President Trump’s first year in the White House,</p>
                 <p>we rediscovered what has happened in our nation last year.</p>
-                <p>// Not for Public Distribtution, Under Preview Stage //</p>
             </div>
         </div>
     </div>
@@ -34,8 +27,14 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 12, 2018 ET';
+    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 16, 2018 ET';
     render_data();
+}
+
+const check_mobile = () => {
+    var status = false;
+    document.body.getAttribute('banana-type', 'mobile') ? status = true : status = false;
+    return status;
 }
 
 const render_data = () => {
@@ -146,8 +145,8 @@ const postrender_data = () => {
     Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
         el.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + el.getAttribute('banana-imagesrc') + ')';
     });
-
-    if (check_mobile) {
+    
+    if (check_mobile()) {
         var mobile_ithm = document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-theme');
         for (var i=0; i < mobile_ithm.length; i++) {
             mobile_ithm[i].addEventListener('click', function (e) {

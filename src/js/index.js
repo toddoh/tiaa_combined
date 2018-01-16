@@ -41,6 +41,9 @@ const render_core = () => {
     `;
 
     render(top_frame_markup(), document.body);
+    if (window.screen.width <= 980) {
+        document.body.setAttribute('banana-type', 'mobile');
+    }
 }
 
 render_core();
@@ -60,16 +63,48 @@ if (currentpath_type !== '') {
     });
 }
 
-document.querySelector('.top-navbox').addEventListener('mouseenter', (e) => {
-    if (document.querySelector('.navbox-currentpath').offsetWidth >= 165) {
-        document.querySelector('.navbox-currentpath').classList.add('long');
-    } else {
-        if (!document.querySelector('.navbox-currentpath').classList.contains('long'))
-            document.querySelector('.navbox-currentpath').classList.remove('long');
-    }
-});
+const check_mobile  = () => {
+    var status = false;
+    document.body.getAttribute('banana-type', 'mobile') ? status = true : status = false;
+    return status;
+}
 
-document.querySelector('.top-navbox').addEventListener('mouseleave', (e) => {
-    if (document.querySelector('.navbox-currentpath').classList.contains('long'))
-            document.querySelector('.navbox-currentpath').classList.remove('long');
-});
+if (check_mobile()) {
+    document.querySelector('.top-navbox').addEventListener('click', (e) => {
+        if (!document.querySelector('.top-navbox').classList.contains('visible')) {
+            document.querySelector('.top-navbox').classList.add('visible');
+            if (document.querySelector('.navbox-currentpath').offsetWidth >= 165) {
+                document.querySelector('.navbox-currentpath').classList.add('long');
+            } else {
+                if (!document.querySelector('.navbox-currentpath').classList.contains('long'))
+                    document.querySelector('.navbox-currentpath').classList.remove('long');
+            }
+        } else {
+            if (document.querySelector('.top-navbox').classList.contains('visible'))
+                document.querySelector('.top-navbox').classList.remove('visible');
+
+            if (document.querySelector('.navbox-currentpath').classList.contains('long'))
+                    document.querySelector('.navbox-currentpath').classList.remove('long');
+        }
+    });
+} else {
+    document.querySelector('.top-navbox').addEventListener('mouseenter', (e) => {
+        if (!document.querySelector('.top-navbox').classList.contains('visible'))
+                document.querySelector('.top-navbox').classList.add('visible');
+
+        if (document.querySelector('.navbox-currentpath').offsetWidth >= 165) {
+            document.querySelector('.navbox-currentpath').classList.add('long');
+        } else {
+            if (!document.querySelector('.navbox-currentpath').classList.contains('long'))
+                document.querySelector('.navbox-currentpath').classList.remove('long');
+        }
+    });
+
+    document.querySelector('.top-navbox').addEventListener('mouseleave', (e) => {
+        if (document.querySelector('.top-navbox').classList.contains('visible'))
+                document.querySelector('.top-navbox').classList.remove('visible');
+
+        if (document.querySelector('.navbox-currentpath').classList.contains('long'))
+                document.querySelector('.navbox-currentpath').classList.remove('long');
+    });
+}

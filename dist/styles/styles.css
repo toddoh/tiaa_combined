@@ -38,12 +38,13 @@ body{
 }
 
 .top-navbox{
-    background: #fff;
     width: 279px;
     position: absolute;
+    z-index: 1;
 }
 
-.top-navbox:hover{
+.top-navbox.visible{
+    background: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
 
@@ -72,7 +73,7 @@ body{
     margin-right: 0;
 }
 
-.top-navbox:hover .navbox-currentpath{
+.top-navbox.visible .navbox-currentpath{
     font-weight: 700;
     margin-right: 6px;
     font-size: 1.25em;
@@ -80,7 +81,7 @@ body{
     overflow: initial;
 }
 
-.top-navbox:hover .navbox-currentpath.long{
+.top-navbox.visible .navbox-currentpath.long{
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -100,7 +101,7 @@ body{
     background-size: cover;
 }
 
-.top-navbox:hover .navbox-reveal > div{
+.top-navbox.visible .navbox-reveal > div{
     width: 15px;
     height: 9px;
     background-image: url(../res/symbol_arrow_up.afc88a5b2d1c12602c867adf6b976664.png);
@@ -119,7 +120,7 @@ body{
     font-weight: 700;
 }
 
-.top-navbox:hover .navbox-sections{
+.top-navbox.visible .navbox-sections{
     display: block;
     animation: fadeIn 300ms;
 }
@@ -247,10 +248,33 @@ body{
 .presidenttrump-hero .hero1{
     font-size: 3em;
     font-weight: 800;
+    background: linear-gradient(to right, #ea2000 , #ff7800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .presidenttrump-hero .hero1.strike{
-    text-decoration: line-through;
+    position: relative;
+}
+
+@keyframes strike{
+    0%   { width : 0; }
+    100% { width: 100%; }
+}
+
+.presidenttrump-hero .hero1.strike:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #b91900;
+    animation-name: strike;
+    animation-duration: 1300ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
 }
 
 .presidenttrump-hero .hero2{
@@ -345,8 +369,8 @@ body{
 }
 
 .analysis-list .analysis-item .toparticle-month-container .toparticle-month{
-    margin: 0 10px;
-    padding: 8px 0;
+    margin: 3px 10px;
+    padding: 5px 0;
     font-weight: 600;
     color: #424242;
 }
@@ -368,7 +392,7 @@ body{
 
 .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
     box-shadow: 0 2px 0 0;
-    color: #00bdec;
+    color: #ec7100;
 }
 
 .analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak.selected{
@@ -445,11 +469,15 @@ body{
     }
 
     .presidenttrump-hero .hero1{
-        font-size: 1.85em;
+        font-size: 1.3em;
+    }
+
+    .presidenttrump-hero .hero1.strike:after {
+        height: 3px;
     }
 
     .presidenttrump-hero .hero2{
-        font-size: 1.2em;
+        font-size: 1.05em;
     }
 
     .analysis-list .analysis-item{
