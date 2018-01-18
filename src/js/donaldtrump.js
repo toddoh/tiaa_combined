@@ -69,7 +69,7 @@ const render_data = () => {
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
-        document.querySelector('.minion-dataload').setAttribute('status', '');
+        
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
                 <div class="analysis-item">
@@ -122,6 +122,7 @@ const render_data = () => {
 
         render(analysis_markup(), document.querySelector('.presidenttrump-analysis-data .analysis-list'));
         postrender_data();
+        document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 }
 

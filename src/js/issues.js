@@ -66,7 +66,6 @@ const render_data = () => {
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
-        document.querySelector('.minion-dataload').setAttribute('status', '');
         
         var content_length = ' thing ';
         if (trump_data.length > 1) {
@@ -108,6 +107,7 @@ const render_data = () => {
 
         render(analysis_markup(), document.querySelector('.issues-analysis-data .analysis-list'));
         postrender_data();
+        document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 }
 
