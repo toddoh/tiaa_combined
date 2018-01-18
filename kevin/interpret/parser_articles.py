@@ -2,6 +2,7 @@ from __future__ import division
 import nltk
 from nltk.corpus import stopwords
 import re
+import os
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem.porter import PorterStemmer
@@ -12,7 +13,7 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 
-def parse_aggregated(data, rangeMin=2, rangeMax=21):
+def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./interpret/'):
     stemmer = PorterStemmer()
 
     def stem_words(words_list, stemmer):
@@ -30,6 +31,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     tfs = tfidf.fit_transform(parsed_article.values())
 
     def save_sparse_csr(filename,array):
+        os.makedirs(data_path, exist_ok=True)
         np.savez(filename,data = array.data ,indices=array.indices,
                  indptr =array.indptr, shape=array.shape )
         print('Stored article tf-idf data')
@@ -39,7 +41,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
         return csr_matrix((loader['data'], loader['indices'], loader['indptr']),
                              shape = loader['shape'])
 
-    data_path = './'
+    data_path = tfidfpath
     save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
 
     print('Determining k-means clusters...')
@@ -83,7 +85,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
     kIdx = np.argmax(seg_gains > seg_threshold)
     # plt.plot(km_df.num_clusters[kIdx], km_df.cluster_errors[kIdx], marker="o", markersize=12,
             # markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
-    # plt.savefig('./elbow_plot.png')
+    plt.savefig(data_path + 'elbow_plot.png')
     # plt.show()
 
     kIdx += 1

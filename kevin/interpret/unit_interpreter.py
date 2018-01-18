@@ -3,20 +3,22 @@ import numpy as np
 import pprint
 from interpret import detect_peaks
 from interpret.parser_articles import parse_aggregated
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
 import nltk
+import os
 from nltk.stem.porter import PorterStemmer
 from whoosh.index import create_in
 from whoosh.fields import *
 import whoosh.qparser
 
 def interpret(type):
-    result_file = '../dataset/' + type + '_result.json'
+    datapath = './dataset/' + type + '/'
+    interpret_datapath = './interpret/' + type + '/'
+    result_file = datapath + 'result.json'
     with open(result_file) as data_file:
         result_data = json.load(data_file)
 
     all_results = []
+
     for group in result_data:
         pick_list = []
         pick_months = []
@@ -29,7 +31,8 @@ def interpret(type):
             all_documents_title = []
             all_documents_text = []
             schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT(stored=True))
-            ix = create_in("./indexes", schema)
+            os.makedirs(interpret_datapath + "indexes", exist_ok=True)
+            ix = create_in(interpret_datapath + "indexes", schema)
             writer = ix.writer()
 
             for article in item['articles']:
@@ -60,7 +63,7 @@ def interpret(type):
                 print('@@@@@@@@ ERRRR')
                 continue
             else:
-                parsed_data = parse_aggregated(all_documents_dict, 2, 13)
+                parsed_data = parse_aggregated(all_documents_dict, 2, 13, interpret_datapath)
 
             print('+++++++ PARSING')
             parsed_data_themes = []
@@ -155,9 +158,6 @@ def interpret(type):
         all_results.append(result_pick_data)
         print('--------- CLUSTER DONE: {0}'.format(group['theme']))
 
-    with open('../interpret/' + type + '_result.json', 'w') as f:
+    with open(interpret_datapath + 'result.json', 'w') as f:
         json.dump(all_results, f, indent=4, sort_keys=True)
 
-
-# run task
-interpret('trumptimemachine')

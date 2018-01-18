@@ -145,8 +145,9 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
     elif mode == 'direct':
         for index, item in enumerate(data):
             try:
+                print(item['url'])
                 resp = session.head(item['url'], allow_redirects=True)
-                if 'twitter.com/' not in resp.url:
+                if 'twitteri.com/' not in resp.url:
                     parse_target = Article(resp.url)
                     parse_data = get_article_info(parse_target, item['origin'], item['twitterid'], item['ts'])
 
@@ -164,6 +165,7 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
                 print('Article Parse Error: too many redirects')
             except requests.RequestException as e:
                 print('Article Parse Error: {0}'.format(e))
+                continue
 
     parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
     print('Finished parsing all articles in timeline: ')

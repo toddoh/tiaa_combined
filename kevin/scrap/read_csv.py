@@ -2,8 +2,12 @@ import csv
 import re
 import pickle
 from aggregator_twitter import aggregator
+from unit_cluster import cluster_articles_offline
 import json
 import jsonpickle
+import time
+import datetime
+import dateutil.parser
 from pymongo import MongoClient
 
 def chunks(l, n):
@@ -18,9 +22,9 @@ def split(a, n):
     return (a[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(n))
 
 
-def read_parse_csv(source_origin):
+def read_parse_csv(source_origin, type):
     print('Reading fetched csv data...')
-    filename = './TrumpTimeMachine_datasets/output_' + source_origin + '_1026to1031.csv'
+    filename = '../scrap/output_' + source_origin + '.csv'
     reader = csv.DictReader(open(filename), delimiter=';')
     csv_tweets = []
 
@@ -28,7 +32,7 @@ def read_parse_csv(source_origin):
         url_string = re.findall(r'(https?://[^\s]+)', line['text'])
         if url_string:
             url_string_filtered = re.sub('\\xa0$', '', url_string[0])
-            if 'twitter.com/' in url_string_filtered:
+            if 'twitteri.com/' in url_string_filtered:
                 print('Skips item: social channel')
             else:
                 line_converted = dict(line)
@@ -37,7 +41,13 @@ def read_parse_csv(source_origin):
                 data['twitterid'] = line_converted['id']
                 data['origin'] = source_origin
                 data['url'] = url_string_filtered
-                data['ts'] = line_converted['date']
+                if type == 'offline_text':
+                    data['title'] = line_converted['text']
+                    dt = dateutil.parser.parse(line_converted['date'])
+                    unixts = int(time.mktime(dt.timetuple()))
+                    data['ts'] = unixts
+                else:
+                    data['ts'] = line_converted['date']
                 url_duplicate_check = []
                 for item in csv_tweets:
                     if item['url'] == url_string_filtered:
@@ -54,42 +64,53 @@ def read_parse_csv(source_origin):
     print('Successfully fetched csv data, total length: {0}'.format(len(final_csv_tweets)))
     # print(csv_tweets[::-1])
 
-    origin_data = aggregator(None, None, 'direct', final_csv_tweets)
-    try:
-        pkl_filename = './dataset/dataset_' + source_origin + '_1031_db.pkl'
-        pkl_c_filename = './dataset/dataset_' + source_origin + '_1031_cluster.pkl'
-        with open(pkl_filename, 'wb') as f:
-            pickle.dump(origin_data[1], f, pickle.HIGHEST_PROTOCOL)
-        print('Fetched origin data stored in {0} for mongodb'.format(pkl_filename))
 
-        with open(pkl_c_filename, 'wb') as f:
-            pickle.dump(origin_data[0], f, pickle.HIGHEST_PROTOCOL)
-            print('Fetched origin data stored in {0} for clustering'.format(pkl_c_filename))
-        print(len(origin_data))
+    if type == 'offline_text':
+        print('Initializing offline clustering module...')
+        cluster_articles_offline(final_csv_tweets, 'text', 90000009)
+    elif type == 'offline':
+        origin_data = aggregator(None, None, 'direct', final_csv_tweets)
 
-        print('Initiating dataset reader...')
-        with open(pkl_filename, 'rb') as handle:
-            unserialized_data = pickle.load(handle)
+        print('Initializing offline clustering module...')
+        cluster_articles_offline(origin_data[1], None, 90000009)
+    else:
+        origin_data = aggregator(None, None, 'direct', final_csv_tweets)
 
-        print('Fetched pickled dataset: total length: {0}'.format(len(unserialized_data)))
-        # print(unserialized_data)
+        try:
+            pkl_filename = './scrap/dataset_' + source_origin + '_db.pkl'
+            pkl_c_filename = './scrap/dataset_' + source_origin + '_cluster.pkl'
+            with open(pkl_filename, 'wb') as f:
+                pickle.dump(origin_data[1], f, pickle.HIGHEST_PROTOCOL)
+            print('Fetched origin data stored in {0} for mongodb'.format(pkl_filename))
 
-        print('Initiating aggregator unit...')
-        print('Setting up MongoClient kevin@main')
-        client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
-        db = client['main']
+            with open(pkl_c_filename, 'wb') as f:
+                pickle.dump(origin_data[0], f, pickle.HIGHEST_PROTOCOL)
+                print('Fetched origin data stored in {0} for clustering'.format(pkl_c_filename))
+            print(len(origin_data))
 
-        collection = db['aggregator_trumptimemachine']
+            print('Initiating dataset reader...')
+            with open(pkl_filename, 'rb') as handle:
+                unserialized_data = pickle.load(handle)
 
-        json_converted = jsonpickle.encode(unserialized_data)
+            print('Fetched pickled dataset: total length: {0}'.format(len(unserialized_data)))
+            # print(unserialized_data)
 
-        print('Saving data into mongodb...')
-        result = collection.insert_many(json.loads(json_converted))
-        print('DB Insert result: {0}'.format(result))
-        print('DB Insert result ids: {0}'.format(result.inserted_ids))
-    except Exception as e:
-        print('There was a problem saving data into a dataset file: ')
-        print(origin_data)
+            print('Initiating aggregator unit...')
+            print('Setting up MongoClient kevin@main')
+            client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
+            db = client['main']
+
+            collection = db['aggregator_trumptimemachine']
+
+            json_converted = jsonpickle.encode(unserialized_data)
+
+            print('Saving data into mongodb...')
+            result = collection.insert_many(json.loads(json_converted))
+            print('DB Insert result: {0}'.format(result))
+            print('DB Insert result ids: {0}'.format(result.inserted_ids))
+        except Exception as e:
+            print('There was a problem saving data into a dataset file: ')
+            print(origin_data)
 
 
-read_parse_csv('newshour')
+read_parse_csv('realdonaldtrump', 'offline_text')

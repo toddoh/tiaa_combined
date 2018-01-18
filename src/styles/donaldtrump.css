@@ -71,12 +71,12 @@
     width: 100%;
 }
 
-.analysis-list .analysis-item{
+.presidenttrump-analysis-data .analysis-list .analysis-item{
     margin: 30px 0;
     position: relative;
 }
 
-.analysis-list .analysis-item .item-info{
+.presidenttrump-analysis-data .analysis-list .analysis-item .item-info{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -85,18 +85,18 @@
     margin-left: 80px;
 }
 
-.analysis-list .analysis-item .item-bg{
+.presidenttrump-analysis-data .analysis-list .analysis-item .item-bg{
     display: none;
 }
 
-.analysis-list .analysis-item:nth-child(2n) .item-info {
+.presidenttrump-analysis-data .analysis-list .analysis-item:nth-child(2n) .item-info {
     flex-direction: row-reverse;
     margin-right: 80px;
     margin-left: 0;
     text-align: right;
 }
 
-.analysis-list .analysis-item .item-theme{
+.presidenttrump-analysis-data .analysis-list .analysis-item .item-theme{
     position: relative;
     display: flex;
     width: 27%;
@@ -108,14 +108,14 @@
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
-.analysis-list .theme-header{
+.presidenttrump-analysis-data .analysis-list .theme-header{
     align-self: baseline;
     font-weight: 600;
     font-size: 1.15em;
     text-transform: uppercase;
 }
 
-.analysis-list .analysis-item .themes{
+.presidenttrump-analysis-data .analysis-list .analysis-item .themes{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -124,33 +124,33 @@
     margin-top: 16px;
 }
 
-.analysis-list .analysis-item .item-peakinfo{
+.presidenttrump-analysis-data .analysis-list .analysis-item .item-peakinfo{
     position: relative;
     display: none;
     width: 28%;
     height: 5%;
 }
 
-.analysis-list .analysis-item .toparticle-month-container{
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-month-container{
     display: flex;
     width: 35%;
     padding: 0 0 20px 25px;
     flex-wrap: wrap;
 }
 
-.analysis-list .analysis-item:nth-child(2n) .toparticle-month-container {
+.presidenttrump-analysis-data .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container {
     justify-content: flex-end;
     padding: 0 25px 20px 0;
 }
 
-.analysis-list .analysis-item .toparticle-month-container .toparticle-month{
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month{
     margin: 3px 10px;
     padding: 5px 0;
     font-weight: 600;
     color: #424242;
 }
 
-.analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak > p:after{
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak > p:after{
     content: 'peak';
     text-transform: uppercase;
     background: #f34e00;
@@ -161,41 +161,41 @@
     margin-left: 5px;
 }
 
-.analysis-list .analysis-item:nth-child(2n) .toparticle-month-container .toparticle-month{
+.presidenttrump-analysis-data .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container .toparticle-month{
     flex-direction: row-reverse;
 }
 
-.analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
     box-shadow: 0 2px 0 0;
     color: #ec7100;
 }
 
-.analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak.selected{
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak.selected{
     color: #ff3f00;
 }
 
-.analysis-list .analysis-item .toparticle-content-container{
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-content-container{
     position: relative;
     padding: 30px 0;
 }
 
-.analysis-list .analysis-item .toparticle-content-container .toparticle-month{
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
     display: none;
     flex-wrap: wrap;
     margin-left: 70px;
 }
 
-.analysis-list .analysis-item .toparticle-content-container .toparticle-month.selected {
+.presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month.selected {
     display: flex;
 }
 
-.analysis-list .analysis-item:nth-child(2n) .toparticle-content-container .toparticle-month{
+.presidenttrump-analysis-data .analysis-list .analysis-item:nth-child(2n) .toparticle-content-container .toparticle-month{
     flex-direction: row-reverse;
     margin-right: 70px;
     margin-left: 0;
 }
 
-.analysis-list .toparticle-month .toparticle-object{
+.presidenttrump-analysis-data .analysis-list .toparticle-month .toparticle-object{
     position: relative;
     width: 20%;
     flex-shrink: 0;
@@ -204,13 +204,13 @@
     cursor: pointer;
 }
 
-.analysis-list .toparticle-month .toparticle-object:before{
+.presidenttrump-analysis-data .analysis-list .toparticle-month .toparticle-object:before{
     content: '';
     display: block;
     padding-top: 80%;
 }
 
-.analysis-list .toparticle-month .toparticle-object .article-info{
+.presidenttrump-analysis-data .analysis-list .toparticle-month .toparticle-object .article-info{
     position: absolute;
     top: 0;
     padding: 20px;
@@ -218,12 +218,12 @@
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
-.analysis-list .toparticle-month .toparticle-object .article-title{
+.presidenttrump-analysis-data .analysis-list .toparticle-month .toparticle-object .article-title{
     font-size: 1.05em;
     font-weight: 600;
 }
 
-.analysis-list .toparticle-month .toparticle-object .article-desc{
+.presidenttrump-analysis-data .analysis-list .toparticle-month .toparticle-object .article-desc{
     font-size: 0.9em;
     margin-top: 3px;
 }
@@ -330,36 +330,36 @@
         font-size: 0.97em;
     }
 
-    .analysis-list .analysis-item{
+    .presidenttrump-analysis-data .analysis-list .analysis-item{
         margin: 20px 0;
         transition: all 200ms ease;
     }
 
-    .analysis-list.highlighted .analysis-item{
+    .presidenttrump-analysis-data .analysis-list.highlighted .analysis-item{
         opacity: 0.3;
     }
 
-    .analysis-list .analysis-item.selected{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected{
         display: block;
         opacity: 1;
         margin-bottom: 40px;
         box-shadow: 0 0 3px rgba(0,0,0,0.3);
     }
 
-    .analysis-list .analysis-item .item-info{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .item-info{
         justify-content: center;
         margin-left: 0;
         color: #fff;
         transition: all 200ms ease;
     }
 
-    .analysis-list .analysis-item.selected .item-info{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .item-info{
         flex-direction: column;
         align-items: flex-start;
         color: #000;
     }
 
-    .analysis-list .analysis-item .item-bg{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .item-bg{
         position: absolute;
         display: block;
         width: 100%;
@@ -370,79 +370,79 @@
         z-index: -1;
     }
 
-    .analysis-list .analysis-item.selected .item-bg{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .item-bg{
         display: none;
     }
 
-    .analysis-list .analysis-item:nth-child(2n) .item-info{
+    .presidenttrump-analysis-data .analysis-list .analysis-item:nth-child(2n) .item-info{
         flex-direction: row;
         margin-right: 0;
         margin-left: 0;
         text-align: left;
     }
 
-    .analysis-list .analysis-item.selected:nth-child(2n) .item-info{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected:nth-child(2n) .item-info{
         flex-direction: column;
         margin-right: 0;
         margin-left: 0;
         text-align: left;
     }
 
-    .analysis-list .analysis-item .item-theme{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .item-theme{
         width: 230px;
         height: 230px;
         justify-content: center;
         padding: 20px;
     }
 
-    .analysis-list .analysis-item.selected .item-theme{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .item-theme{
         height: auto;
         width: auto;
         padding: 30px 30px;
         box-shadow: none;
     }
 
-    .analysis-list .analysis-item .theme-header{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .theme-header{
         font-size: 1.35em;
     }
 
-    .analysis-list .analysis-item.selected .theme-header{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .theme-header{
         font-size: 1.15em;
     }
 
-    .analysis-list .analysis-item .themes{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .themes{
         display: none;
     }
 
-    .analysis-list .analysis-item.selected .themes{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .themes{
         display: flex;
     }
 
-    .analysis-list .analysis-item .toparticle-month-container{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-month-container{
         display: none;
         transition: all 200ms ease;
     }
 
-    .analysis-list .analysis-item.selected .toparticle-month-container{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .toparticle-month-container{
         display: flex;
         width: 80%;
         padding: 0 0 0 20px;
     }
 
-    .analysis-list .analysis-item.selected:nth-child(2n) .toparticle-month-container{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected:nth-child(2n) .toparticle-month-container{
         justify-content: initial;
     }
 
-    .analysis-list .analysis-item .toparticle-content-container{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-content-container{
         display: none;
         transition: all 200ms ease;
     }
 
-    .analysis-list .analysis-item.selected .toparticle-content-container{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .toparticle-content-container{
         display: block;
     }
 
-    .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
+    .presidenttrump-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
         display: flex;
         max-height: 0px;
         overflow: hidden;
@@ -450,30 +450,30 @@
         transition-delay: 250ms;
     }
 
-    .analysis-list .analysis-item.selected .toparticle-content-container .toparticle-month.selected{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .toparticle-content-container .toparticle-month.selected{
         display: flex;
         margin-left: 0;
         justify-content: center;
         max-height: 1000px;
     }
 
-    .analysis-list .analysis-item.selected:nth-child(2n) .toparticle-content-container .toparticle-month{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected:nth-child(2n) .toparticle-content-container .toparticle-month{
         flex-direction: row;
         margin-right: 0;
         margin-left: 0;
     }
 
-    .analysis-list .analysis-item.selected .toparticle-month .toparticle-object:before{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .toparticle-month .toparticle-object:before{
         content: '';
         display: block;
         padding-top: 60%;
     }
 
-    .analysis-list .analysis-item.selected .toparticle-month .toparticle-object{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .toparticle-month .toparticle-object{
         width: 90%;
     }
 
-    .analysis-list .analysis-item.selected .item-close-action{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .item-close-action{
         margin: 0 auto;
         width: 17px;
         height: 15px;
@@ -481,7 +481,7 @@
         margin-top: -10px;
     }
 
-    .analysis-list .analysis-item.selected .item-close-action .icon{
+    .presidenttrump-analysis-data .analysis-list .analysis-item.selected .item-close-action .icon{
         width: 17px;
         height: 15px;
         background-image: url('../resources/symbol_close.png');

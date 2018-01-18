@@ -2,6 +2,7 @@ from __future__ import division
 import nltk
 from nltk.corpus import stopwords
 import re
+import os
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem.porter import PorterStemmer
@@ -12,7 +13,7 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 
-def parse_aggregated(data, rangeMin=2, rangeMax=21):
+def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type=None):
     stemmer = PorterStemmer()
 
     def stem_words(words_list, stemmer):
@@ -27,9 +28,14 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
 
     print('Calculating tf-idf vectors...')
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
-    tfs = tfidf.fit_transform(parsed_article.values())
+
+    if type == 'offline_text':
+        tfs = tfidf.fit_transform(parsed_article)
+    else:
+        tfs = tfidf.fit_transform(parsed_article.values())
 
     def save_sparse_csr(filename,array):
+        os.makedirs(data_path, exist_ok=True)
         np.savez(filename,data = array.data ,indices=array.indices,
                  indptr =array.indptr, shape=array.shape )
         print('Stored article tf-idf data')
@@ -39,7 +45,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
         return csr_matrix((loader['data'], loader['indices'], loader['indptr']),
                              shape = loader['shape'])
 
-    data_path = './dataset/'
+    data_path = tfidfpath
     save_sparse_csr(data_path + 'articles_tf_idf.npz', tfs)
 
     # print('Calculating cosine distance...')
@@ -102,8 +108,8 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
      markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
 
     kIdx += 1
-    plt.savefig('./elbow_plot.png')
-    plt.show()
+    plt.savefig(tfidfpath + 'elbow_plot.png')
+    # plt.show()
 
     print('Found optimal k value: {0}'.format(kIdx))
 
@@ -114,7 +120,10 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21):
 
     for i in set(km_final.labels_):
         #print i
-        current_cluster_bills = [list(parsed_article.keys())[x] for x in np.where(km_final.labels_ == i)[0]]
+        if type == 'offline_text':
+            current_cluster_bills = [list(parsed_article)[x] for x in np.where(km_final.labels_ == i)[0]]
+        else:
+            current_cluster_bills = [list(parsed_article.keys())[x] for x in np.where(km_final.labels_ == i)[0]]
         cluster_assignments_dict[i] = current_cluster_bills
 
     def clean_text(raw_text):
