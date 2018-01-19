@@ -1,0 +1,460 @@
+[
+    {
+        "list": [
+            637,
+            94
+        ],
+        "months": [
+            "2018-01-18",
+            "2018-01-19"
+        ],
+        "peaks": [],
+        "theme": [
+            "Says",
+            "Year",
+            "New",
+            "Amazon",
+            "Trump",
+            "killing",
+            "government",
+            "Plans",
+            "police",
+            "report",
+            "sexual",
+            "Time",
+            "Death",
+            "headquarters"
+        ],
+        "toparticles": [
+            [
+                {
+                    "_id": "5a60e106421aa918b20fc59a",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/gorkasebastian_101417gn7_lead.jpg",
+                    "origin": "The Hill",
+                    "title": "Former Trump adviser Gorka wanted for arrest in Hungary: report",
+                    "ts": 1516296669,
+                    "twitterid": 954043496255709185,
+                    "url": "http://thehill.com/blogs/blog-briefing-room/369548-sebastian-gorka-has-an-active-warrant-for-his-arrest-in-hungary?__twitter_impression=true&__twitter_impression=true"
+                },
+                {
+                    "_id": "5a608c7c421aa914a6e47c0d",
+                    "date_month": "2018-01-18",
+                    "image": "http://www.trbimg.com/img-5a607c97/turbine/la-na-pol-trump-environment-20180118",
+                    "origin": "L.A. Times National",
+                    "title": "One year in, Trump's environmental agenda is already taking a measurable toll",
+                    "ts": 1516273685,
+                    "twitterid": 953947093235744768,
+                    "url": "http://www.latimes.com/politics/la-na-pol-trump-environment-20180118-story.html"
+                },
+                {
+                    "_id": "5a615f6f421aa92189ccaf21",
+                    "date_month": "2018-01-18",
+                    "image": "https://www.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/08/26/National-Politics/Images/679239968.jpg?t=20170517",
+                    "origin": "Washington Post",
+                    "title": "Former Trump aide Sebastian Gorka listed as \u2018wanted\u2019 on Hungarian police website",
+                    "ts": 1516329066,
+                    "twitterid": 954179381127188486,
+                    "url": "https://www.washingtonpost.com/news/worldviews/wp/2018/01/18/former-trump-aide-sebastian-gorka-listed-as-wanted-on-hungarian-police-website/?tid=sm_tw"
+                },
+                {
+                    "_id": "5a60a8a6421aa91623a1fc0c",
+                    "date_month": "2018-01-18",
+                    "image": "https://si.wsj.net/public/resources/images/BN-WY394_capito_P_20180111082719.jpg",
+                    "origin": "Capital Journal",
+                    "title": "A Government Shutdown This Year Would Be Different",
+                    "ts": 1516280937,
+                    "twitterid": 953977511167307778,
+                    "url": "https://blogs.wsj.com/washwire/2018/01/18/capital-journal-170/?mod=e2twp"
+                },
+                {
+                    "_id": "5a611926421aa91c023b9c0e",
+                    "date_month": "2018-01-18",
+                    "image": "https://si.wsj.net/public/resources/images/BN-XB409_wmvior_E_20180118145025.jpg",
+                    "origin": "The Wall Street Journal",
+                    "title": "A Millennial Adviser on Working With Millennial Clients",
+                    "ts": 1516312208,
+                    "twitterid": 954108670043967494,
+                    "url": "https://www.wsj.com/articles/a-millennial-adviser-on-working-with-millennial-clients-1516306180?mod=e2tw"
+                },
+                {
+                    "_id": "5a60ef03421aa9195f567a64",
+                    "date_month": "2018-01-18",
+                    "image": "https://www.washingtonpost.com/pbox.php?url=http://www.washingtonpost.com/news/true-crime/wp-content/uploads/sites/55/2018/01/GhaisarScene3.jpg&w=1484&op=resize&opt=1&filter=antialias&t=20170517",
+                    "origin": "Washington Post",
+                    "title": "Park Police shooting victim was rear-ended by another car at start of incident, then fled, report says",
+                    "ts": 1516300386,
+                    "twitterid": 954059088626843650,
+                    "url": "https://www.washingtonpost.com/news/true-crime/wp/2018/01/18/park-police-shooting-victim-was-rear-ended-by-another-car-at-start-of-incident-then-fled-report-says/?utm_term=.fcaf5ed6651f&tid=sm_tw"
+                },
+                {
+                    "_id": "5a608c7c421aa914a6e47bdc",
+                    "date_month": "2018-01-18",
+                    "image": "http://www.trbimg.com/img-5a6079b5/turbine/ct-met-chicago-violence-shootings-20180117",
+                    "origin": "Chicago Tribune",
+                    "title": "2 killed in South Side shooting mark first shooting deaths in 7 days",
+                    "ts": 1516276791,
+                    "twitterid": 953960120832192512,
+                    "url": "http://www.chicagotribune.com/news/local/breaking/ct-met-chicago-violence-shootings-20180117-story.html"
+                },
+                {
+                    "_id": "5a61354b421aa91ecb1d6635",
+                    "date_month": "2018-01-18",
+                    "image": "http://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2018/01/18/0/0/694940094001_5714591747001_5714573793001-vs.jpg?ve=1",
+                    "origin": "Fox News",
+                    "title": "Michigan State University officials knew of Nassar sex abuse allegations, but failed to stop him, report says",
+                    "ts": 1516317420,
+                    "twitterid": 954130532396277760,
+                    "url": "http://www.foxnews.com/us/2018/01/18/michigan-state-university-officials-knew-nassar-sex-abuse-allegations-but-failed-to-stop-him-report-says.html"
+                }
+            ],
+            [
+                {
+                    "_id": "5a61b3b2421aa92fd9445fba",
+                    "date_month": "2018-01-19",
+                    "image": "http://a57.foxnews.com/images.foxnews.com/content/fox-news/us/2018/01/18/alabama-man-kills-kids-daughters-fiancee-then-self-police-say/_jcr_content/par/featured_image/media-0.img.jpg/0/0/1516331776157.jpg?ve=1",
+                    "origin": "Fox News",
+                    "title": "Alabama man kills kids, daughter's fiance, then self, police say",
+                    "ts": 1516349100,
+                    "twitterid": 954263407707897857,
+                    "url": "http://www.foxnews.com/us/2018/01/18/alabama-man-kills-kids-daughters-fiance-then-self-police-say.html"
+                },
+                {
+                    "_id": "5a61a5a3421aa92aa125dad5",
+                    "date_month": "2018-01-19",
+                    "image": "https://media.newyorker.com/photos/59097cbaebe912338a37891b/16:9/w_1200,h_630,c_limit/Altman-TheYearofHyggetheDanishWayofGettingCozy-4.jpg",
+                    "origin": "The New Yorker",
+                    "title": "The Year of Hygge, the Danish Obsession with Getting Cozy",
+                    "ts": 1516345238,
+                    "twitterid": 954247210778157057,
+                    "url": "https://www.newyorker.com/culture/culture-desk/the-year-of-hygge-the-danish-obsession-with-getting-cozy?mbid=social_twitter"
+                },
+                {
+                    "_id": "5a61c1c3421aa93545287684",
+                    "date_month": "2018-01-19",
+                    "image": "https://cbsnews2.cbsistatic.com/hub/i/r/2014/03/17/1f3764f4-402e-48bf-ad55-04e1926906cb/thumbnail/1200x630/9e7d0577b5fd4ade7d78db038ee7e6e4/dustin-friedland.jpg",
+                    "origin": "CBS News",
+                    "title": "3 men sentenced in deadly New Jersey mall carjacking",
+                    "ts": 1516354384,
+                    "twitterid": 954285572029407232,
+                    "url": "https://www.cbsnews.com/news/3-men-sentenced-in-deadly-new-jersey-mall-carjacking/?ftag=COS-05-10aaa0g&utm_campaign=trueAnthem:+Trending+Content&utm_content=5a61bb4f3ed3f000070a71ad&utm_medium=trueAnthem&utm_source=twitter"
+                },
+                {
+                    "_id": "5a61c1c3421aa9354528769f",
+                    "date_month": "2018-01-19",
+                    "image": "https://cbsnews1.cbsistatic.com/hub/i/r/2018/01/19/e293edb1-6a18-4fd6-b511-f16ab9666941/thumbnail/1200x630/364da49f177dc6126acff19641cd7887/gettyimages-906736892.jpg",
+                    "origin": "CBS News",
+                    "title": "New Zealand prime minister Jacinda Ardern announces pregnancy",
+                    "ts": 1516352416,
+                    "twitterid": 954277317563600896,
+                    "url": "https://www.cbsnews.com/news/new-zealand-prime-minister-jacinda-ardern-announces-pregnancy/?ftag=COS-05-10aaa0g&utm_campaign=trueAnthem:+New+Content+(Feed)&utm_content=5a61b39b04d30156e4c1316b&utm_medium=trueAnthem&utm_source=twitter"
+                },
+                {
+                    "_id": "5a61898e421aa925de25c1f1",
+                    "date_month": "2018-01-19",
+                    "image": "http://a.abcnews.com/images/US/larry-nassar-rt-ml-180116_16x9_992.jpg",
+                    "origin": "ABC News",
+                    "title": "After Larry Nassar, how to talk to kids about sexual abuse",
+                    "ts": 1516338367,
+                    "twitterid": 954218388624158720,
+                    "url": "http://abcnews.go.com/Lifestyle/larry-nassar-talk-kids-sexual-abuse/story?id=52434084&cid=social_twitter_abcn"
+                },
+                {
+                    "_id": "5a61a5a3421aa92aa125daba",
+                    "date_month": "2018-01-19",
+                    "image": "https://cbsnews1.cbsistatic.com/hub/i/r/2018/01/17/7cffcd93-fd50-4021-a63b-2775ba29ef4d/thumbnail/1200x630/a7c0bdd28fcee99d0ca454f609edc011/0117-en-vancleave-winterweather-1484136-640x360.jpg",
+                    "origin": "CBS News",
+                    "title": "Winter weather in the South turns deadly",
+                    "ts": 1516348088,
+                    "twitterid": 954259164628430848,
+                    "url": "https://www.cbsnews.com/video/winter-weather-in-the-south-turns-deadly/?ftag=COS-05-10aaa0g&utm_campaign=trueAnthem:+Trending+Content&utm_content=5a61a2b304d30126f9cddd24&utm_medium=trueAnthem&utm_source=twitter"
+                },
+                {
+                    "_id": "5a61898e421aa925de25c1e9",
+                    "date_month": "2018-01-19",
+                    "image": "https://cbsnews2.cbsistatic.com/hub/i/r/2018/01/18/7fa0505b-009d-4698-9bd4-2419f75bf503/thumbnail/1200x630/0b31fa2a1a5e6ceb37f7c20a50500357/volcano.jpg",
+                    "origin": "CBS News",
+                    "title": "Scientist says volcano could erupt in Papua New Guinea soon",
+                    "ts": 1516339086,
+                    "twitterid": 954221405117263872,
+                    "url": "https://www.cbsnews.com/news/scientist-says-volcano-could-erupt-in-papua-new-guinea-soon/?ftag=COS-05-10aaa0g&utm_campaign=trueAnthem:+Trending+Content&utm_content=5a617f8b3ed3f000072dd5d8&utm_medium=trueAnthem&utm_source=twitter"
+                },
+                {
+                    "_id": "5a61979c421aa9271e1f65e7",
+                    "date_month": "2018-01-19",
+                    "image": "http://cdn.cnn.com/cnnnext/dam/assets/170418150340-north-korea-military-parade-tease-04-super-tease.jpg",
+                    "origin": "CNN",
+                    "title": "North Korea plans military parade on eve of the Olympics, diplomats say",
+                    "ts": 1516342343,
+                    "twitterid": 954235065361424384,
+                    "url": "http://www.cnn.com/2018/01/19/asia/north-korea-military-parade-olympics-intl/index.html?sr=twCNN011918north-korea-military-parade-olympics-intl0143PMVODtop"
+                }
+            ]
+        ]
+    },
+    {
+        "list": [
+            106,
+            4
+        ],
+        "months": [
+            "2018-01-18",
+            "2018-01-19"
+        ],
+        "peaks": [],
+        "theme": [
+            "shutdown",
+            "Senate",
+            "govern",
+            "House",
+            "GOP",
+            "votes",
+            "Trump",
+            "spending",
+            "Republicans",
+            "term",
+            "Democrats",
+            "Looming",
+            "says",
+            "Avoid",
+            "Budget"
+        ],
+        "toparticles": [
+            [
+                {
+                    "_id": "5a617b76421aa924f44f8a29",
+                    "date_month": "2018-01-18",
+                    "image": "https://storage.googleapis.com/afs-prod/media/media:58dbfab5744341f0a9a9ae33d1a79f16/800.jpeg",
+                    "origin": "AP Politics",
+                    "title": "House votes to avert federal shutdown, Senate chances dim",
+                    "ts": 1516335418,
+                    "twitterid": 954206020942942208,
+                    "url": "https://apnews.com/d9d4f06448b84025bf70f258f302f557/House-votes-to-avert-federal-shutdown,-Senate-chances-dim?utm_campaign=SocialFlow&utm_source=Twitter&utm_medium=AP_Politics"
+                },
+                {
+                    "_id": "5a615169421aa920d6c81dbb",
+                    "date_month": "2018-01-18",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2018/01/RTX4EJUM-1024x683.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "Senate chances dim, House votes to avert federal shutdown with short-term measure",
+                    "ts": 1516324800,
+                    "twitterid": 954161485864824832,
+                    "url": "https://www.pbs.org/newshour/politics/senate-chances-dim-house-votes-to-avert-federal-shutdown-with-short-term-measure"
+                },
+                {
+                    "_id": "5a607e5c421aa913eec7ce21",
+                    "date_month": "2018-01-18",
+                    "image": "https://storage.googleapis.com/afs-prod/media/media:57865d89b8e44f96a0f781765593a2bf/800.jpeg",
+                    "origin": "AP Politics",
+                    "title": "Democrats dig in on immigration, shutdown risk or no",
+                    "ts": 1516272403,
+                    "twitterid": 953941715957829632,
+                    "url": "https://www.apnews.com/ac314cd428794b70af4a71469cfcf0eb?utm_campaign=SocialFlow&utm_source=Twitter&utm_medium=AP_Politics"
+                },
+                {
+                    "_id": "5a609a96421aa9154f2b6fbd",
+                    "date_month": "2018-01-18",
+                    "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7jMc9intBkk/v0/1200x800.jpg",
+                    "origin": "Bloomberg Politics",
+                    "title": "Ryan Herds Divided GOP on Spending With Little Help From Trump",
+                    "ts": 1516276815,
+                    "twitterid": 953960222644633601,
+                    "url": "https://www.bloomberg.com/news/articles/2018-01-18/ryan-herds-divided-gop-on-spending-with-little-help-from-trump?utm_content=politics&utm_campaign=socialflow-organic&utm_source=twitter&utm_medium=social&cmpid%3D=socialflow-twitter-politics"
+                },
+                {
+                    "_id": "5a60a8a6421aa91623a1fbe3",
+                    "date_month": "2018-01-18",
+                    "image": "https://static.politico.com/d1/0e/c0834c40414c8cd29544432d4cb4/180117-pete-sessions-gettyimages-656468150.jpg",
+                    "origin": "POLITICO",
+                    "title": "GOP opens door to weekend votes on spending, immigration",
+                    "ts": 1516282804,
+                    "twitterid": 953985342763356160,
+                    "url": "https://www.politico.com/story/2018/01/17/republicans-house-procedures-spending-345494"
+                },
+                {
+                    "_id": "5a607e5c421aa913eec7ce44",
+                    "date_month": "2018-01-18",
+                    "image": "http://cdn.cnn.com/cnnnext/dam/assets/180116220011-harris-trump-booker-split-super-tease.jpg",
+                    "origin": "CNN Politics",
+                    "title": "How three elections are snarling the immigration fight",
+                    "ts": 1516270207,
+                    "twitterid": 953932507300401153,
+                    "url": "http://www.cnn.com/2018/01/17/politics/immigration-republicans-democrats-elections/index.html?CNNPolitics=Tw"
+                },
+                {
+                    "_id": "5a607e5c421aa913eec7ce1e",
+                    "date_month": "2018-01-18",
+                    "image": "https://storage.googleapis.com/afs-prod/media/media:2b0349700e19468c91db0e9328ccbe9f/800.jpeg",
+                    "origin": "AP Politics",
+                    "title": "White House official: Trump immigration views have evolved",
+                    "ts": 1516272679,
+                    "twitterid": 953942873753444352,
+                    "url": "https://www.apnews.com/74d54cdd43ad4a50b2e2d713f1fc7d79?utm_campaign=SocialFlow&utm_source=Twitter&utm_medium=AP_Politics"
+                },
+                {
+                    "_id": "5a60c4d1421aa917c534e65d",
+                    "date_month": "2018-01-18",
+                    "image": "https://media.npr.org/assets/img/2018/01/18/gettyimages-906260376_wide-9a974a3921611cd66d950c2bc8a0b8b9b6de2cd8.jpg?s=1400",
+                    "origin": "NPR Politics",
+                    "title": "Trump Tweet Scrambles Efforts To Avert A Government Shutdown",
+                    "ts": 1516290307,
+                    "twitterid": 954016811158159360,
+                    "url": "https://www.npr.org/2018/01/18/578838003/trump-tweet-scrambles-efforts-efforts-to-avert-a-government-shutdown?utm_source=dlvr.it&utm_medium=twitter"
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "list": [
+            32
+        ],
+        "months": [
+            "2018-01-18"
+        ],
+        "peaks": [],
+        "theme": [
+            "House",
+            "Bannon",
+            "testimony",
+            "Trump",
+            "interview",
+            "Russia",
+            "Fusion",
+            "GPS",
+            "releases",
+            "Transcript",
+            "White",
+            "founder",
+            "Intel",
+            "Mueller",
+            "committee"
+        ],
+        "toparticles": [
+            [
+                {
+                    "_id": "5a61354b421aa91ecb1d6600",
+                    "date_month": "2018-01-18",
+                    "image": "https://www.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/01/03/Local/Images/Congress014.JPG?t=20170517",
+                    "origin": "Washington Post",
+                    "title": "Congress\u2019s ability to twist arms is limited \u2014 unless it wants to arrest Bannon itself",
+                    "ts": 1516319707,
+                    "twitterid": 954140124446691328,
+                    "url": "https://www.washingtonpost.com/news/politics/wp/2018/01/18/congress-ability-to-twist-arms-is-limited-unless-it-wants-to-arrest-bannon-itself/?utm_term=.3c50c2c0786d&tid=sm_tw&__twitter_impression=true"
+                }
+            ]
+        ]
+    },
+    {
+        "list": [
+            369,
+            17
+        ],
+        "months": [
+            "2018-01-18",
+            "2018-01-19"
+        ],
+        "peaks": [],
+        "theme": [
+            "Trump",
+            "says",
+            "wall",
+            "news",
+            "Poll",
+            "GOP",
+            "House",
+            "shutdown",
+            "Donald",
+            "Senate",
+            "Year",
+            "Fake",
+            "Immigration",
+            "border"
+        ],
+        "toparticles": [
+            [
+                {
+                    "_id": "5a60d2e3421aa918439c222a",
+                    "date_month": "2018-01-18",
+                    "image": "https://twt-media.washtimes.com/media/image/2017/11/01/Congress_Bike_Path_Attack_10336.jpg-f67be.jpg",
+                    "origin": "The Washington Times",
+                    "title": "Lindsey Graham: Some White House aides have \u2018irrational\u2019 view on immigration",
+                    "ts": 1516293420,
+                    "twitterid": 954029867267391488,
+                    "url": "https://www.washingtontimes.com/news/2018/jan/18/lindsey-graham-says-some-white-house-aides-have-ir/"
+                },
+                {
+                    "_id": "5a60e106421aa918b20fc5b0",
+                    "date_month": "2018-01-18",
+                    "image": "https://twt-media.washtimes.com/media/image/2018/01/18/Trump_12844.jpg-07538.jpg",
+                    "origin": "The Washington Times",
+                    "title": "White House says Trump\u2019s trip to Pittsburgh is about policy, not politics",
+                    "ts": 1516295867,
+                    "twitterid": 954040132780417025,
+                    "url": "https://www.washingtontimes.com/news/2018/jan/18/white-house-says-trumps-trip-pittsburgh-about-poli/"
+                },
+                {
+                    "_id": "5a60c4d1421aa917c534e69f",
+                    "date_month": "2018-01-18",
+                    "image": "https://asset.wsj.net/images/im-1458/social",
+                    "origin": "Capital Journal",
+                    "title": "As Shutdown Nears, Trump Says \u2018the Wall is the Wall\u2019",
+                    "ts": 1516288075,
+                    "twitterid": 954007450923012096,
+                    "url": "https://www.wsj.com/articles/as-shutdown-nears-trump-says-the-wall-is-the-wall-1516287479?mod=e2twp"
+                },
+                {
+                    "_id": "5a60e106421aa918b20fc5bf",
+                    "date_month": "2018-01-18",
+                    "image": "https://asset.wsj.net/images/im-1464/social",
+                    "origin": "The Wall Street Journal",
+                    "title": "As Shutdown Nears, Trump Says \u2018the Wall Is the Wall\u2019",
+                    "ts": 1516295406,
+                    "twitterid": 954038201089445890,
+                    "url": "https://www.wsj.com/articles/as-shutdown-nears-trump-says-the-wall-is-the-wall-1516287479?mod=e2tw"
+                },
+                {
+                    "_id": "5a60a8a6421aa91623a1fbed",
+                    "date_month": "2018-01-18",
+                    "image": "https://asset.wsj.net/images/im-1454/social",
+                    "origin": "The Wall Street Journal",
+                    "title": "Trump Visit to Pennsylvania Aims to Boost GOP House Candidate",
+                    "ts": 1516282231,
+                    "twitterid": 953982940479967232,
+                    "url": "https://www.wsj.com/articles/trump-visit-to-pennsylvania-aims-to-boost-gop-house-candidate-1516279276?mod=e2tw"
+                },
+                {
+                    "_id": "5a60e106421aa918b20fc5bb",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/trumpdonald_010518getty.jpg",
+                    "origin": "The Hill",
+                    "title": "White House denies Trump's Pennsylvania trip is for Saccone campaign",
+                    "ts": 1516295585,
+                    "twitterid": 954038948086591488,
+                    "url": "http://thehill.com/homenews/campaign/369543-white-house-denies-trumps-pennsylvania-trip-is-for-saccone-campaign"
+                },
+                {
+                    "_id": "5a617b76421aa924f44f8a1d",
+                    "date_month": "2018-01-18",
+                    "image": "https://static.politico.com/11/73/06c0f03043ce844ad4d80906bc65/26-donald-trump-13-ap-1160.jpg",
+                    "origin": "POLITICO",
+                    "title": "Trump gives shout-out to special election candidate at Pennsylvania speech",
+                    "ts": 1516336565,
+                    "twitterid": 954210831880937472,
+                    "url": "https://www.politico.com/story/2018/01/18/trump-rick-saccone-pennsylvania-345534"
+                },
+                {
+                    "_id": "5a60b6b8421aa916b9f43286",
+                    "date_month": "2018-01-18",
+                    "image": "http://a57.foxnews.com/images.foxnews.com/content/fox-news/politics/2018/01/18/trump-heading-to-pennsylvania-to-back-gop-candidate-rick-saccone-in-key-special-house-race/_jcr_content/par/featured_image/media-0.img.jpg/0/0/1516283702417.jpg?ve=1",
+                    "origin": "Fox News",
+                    "title": "Trump heading to Pennsylvania to back GOP candidate Rick Saccone in key special House race",
+                    "ts": 1516286330,
+                    "twitterid": 954000133611454464,
+                    "url": "http://www.foxnews.com/politics/2018/01/18/trump-heading-to-pennsylvania-to-back-gop-candidate-rick-saccone-in-key-special-house-race.html"
+                }
+            ],
+            []
+        ]
+    }
+]

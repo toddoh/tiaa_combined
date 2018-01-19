@@ -158,6 +158,11 @@ def interpret(type):
         all_results.append(result_pick_data)
         print('--------- CLUSTER DONE: {0}'.format(group['theme']))
 
-    with open(interpret_datapath + 'result.json', 'w') as f:
-        json.dump(all_results, f, indent=4, sort_keys=True)
+    if type == 'today':
+        interpret_datapath_today = '../dataset/' + type + '_data.json'
+        with open(interpret_datapath_today, 'w') as f:
+            json.dump(all_results, f, indent=4, sort_keys=True)
+    else:
+        with open(interpret_datapath + 'result.json', 'w') as f:
+            json.dump(all_results, f, indent=4, sort_keys=True)
 
