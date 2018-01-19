@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')
+
 from __future__ import division
 import nltk
 from nltk.corpus import stopwords
@@ -10,9 +13,7 @@ import pandas as pd
 from scipy.sparse import csr_matrix
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-import matplotlib
 import matplotlib.pyplot as plt
-matplotlib.use('Agg')
 
 def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./interpret/'):
     stemmer = PorterStemmer()
