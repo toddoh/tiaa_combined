@@ -3,7 +3,7 @@ import {html, render} from 'lit-html';
 
 const render_core = () => {
     const contentSections = [
-        //{ id: 'nav-section-today', name: 'Today', path: '' },
+        { id: 'nav-section-today', name: 'Today', path: '' },
         { id: 'nav-section-issues', name: 'Issues', path: 'issues' },
         { id: 'nav-section-donaldtrump', name: 'TrumpFirstYear', path: 'donaldtrump' },
         { id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
@@ -53,6 +53,11 @@ var currentpath_type = window.location.pathname.split('/')[1];
 if (currentpath_type !== '') {
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_e_1');
     import('./' + currentpath_type).then(module => {
+        module.init_render();
+        document.querySelector('.minion-dataload').setAttribute('status', '');
+    });
+} else {
+    import('./today').then(module => {
         module.init_render();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
