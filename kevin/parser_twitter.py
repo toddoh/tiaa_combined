@@ -11,6 +11,8 @@ from scipy.sparse import csr_matrix
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
 
 
 def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type=None):
