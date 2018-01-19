@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 from parser_twitter import parse_aggregated
 from datetime import datetime, timedelta
+from action_interpret import interpreter_run
 import numpy as np
 import nltk
 import re
@@ -106,7 +107,10 @@ def cluster_articles(item, type=None, mode=None):
         print('Clustering unit: Finished processing loaded articles')
 
         tfidfpath = './dataset/' + type + '/'
-        parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath)
+        if type == 'today':
+            parsed_data = parse_aggregated(parsed_article_dict, 2, 10, tfidfpath)
+        else:
+            parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath)
         origin_data_raw = cursor
 
         # print(parsed_data[0])
@@ -205,6 +209,9 @@ def cluster_articles(item, type=None, mode=None):
             json.dump(parsed_articlecluster_packed, outfile, indent=4, sort_keys=True)
 
         print('Clustering unit: saved into json file.')
+
+        if type == 'today':
+            interpreter_run(type)
     else:
         print('Clustering unit: The collection is empty, unable to process.')
 

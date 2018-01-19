@@ -1,831 +1,305 @@
 [
     {
         "list": [
-            29,
-            18
+            637,
+            94
         ],
         "months": [
-            "2018-01-16",
-            "2018-01-17"
+            "2018-01-18",
+            "2018-01-19"
         ],
         "peaks": [],
         "theme": [
-            "Carolina",
-            "South",
-            "California",
-            "house",
-            "officer",
-            "police",
-            "say",
-            "children",
-            "horrors",
-            "shot",
-            "kids",
-            "Parents",
-            "siblings",
-            "Home",
-            "Shackled"
-        ],
-        "toparticles": [
-            [
-                {
-                    "_id": "5a5e682f421aa92cbb6d282d",
-                    "date_month": "2018-01-16",
-                    "image": "http://www.trbimg.com/img-5a5e59cb/turbine/la-na-vegas-shooting-indictment-20180116",
-                    "origin": "L.A. Times National",
-                    "title": "Indictment in Las Vegas mass shooting possible, police say",
-                    "ts": 1516133433,
-                    "twitterid": 953358834570903552,
-                    "url": "http://beta.latimes.com/nation/la-na-vegas-shooting-indictment-20180116-story.html"
-                },
-                {
-                    "_id": "5a5eae6c421aa93076435c4e",
-                    "date_month": "2018-01-16",
-                    "image": "http://www.trbimg.com/img-5a5e9f4d/turbine/la-na-southern-storm-20180116",
-                    "origin": "L.A. Times National",
-                    "title": "Deep South grapples with yet another winter storm",
-                    "ts": 1516151585,
-                    "twitterid": 953434971275902976,
-                    "url": "http://beta.latimes.com/nation/la-na-southern-storm-20180116-story.html"
-                }
-            ],
-            [
-                {
-                    "_id": "5a600dfe421aa948f0ad9f37",
-                    "date_month": "2018-01-17",
-                    "image": "http://a57.foxnews.com/images.foxnews.com/content/fox-news/us/2018/01/17/girls-escape-exposes-horror-13-siblings-kept-captive/_jcr_content/par/featured-media/media-0.img.png/0/0/1516240665534.png?ve=1",
-                    "origin": "Fox News",
-                    "title": "13 siblings held captive were likely coerced to remain quiet",
-                    "ts": 1516244100,
-                    "twitterid": 953823006945619968,
-                    "url": "http://www.foxnews.com/us/2018/01/17/girls-escape-exposes-horror-13-siblings-kept-captive.html"
-                },
-                {
-                    "_id": "5a5ffff0421aa94874e17925",
-                    "date_month": "2018-01-17",
-                    "image": "http://a57.foxnews.com/images.foxnews.com/content/dam/fox-news/images/2018/01/16/york_county_2_featured_720.jpg.img.png/0/0/1516141665997.png?ve=1",
-                    "origin": "Fox News",
-                    "title": "South Carolina deputy dies, 3 others remain wounded, after 'ambush' shooting",
-                    "ts": 1516239898,
-                    "twitterid": 953805381893021696,
-                    "url": "http://www.foxnews.com/us/2018/01/17/south-carolina-officers-ambushed-in-shooting-1-deputy-hanging-on-to-life.html"
-                },
-                {
-                    "_id": "5a600dfe421aa948f0ad9f5d",
-                    "date_month": "2018-01-17",
-                    "image": "http://a57.foxnews.com/images.foxnews.com/content/dam/fox-news/images/2018/01/16/york_county_2_featured_720.jpg.img.png/0/0/1516141665997.png?ve=1",
-                    "origin": "Fox News",
-                    "title": "South Carolina officer dies, 3 others remain wounded, after 'ambush' shooting",
-                    "ts": 1516242130,
-                    "twitterid": 953814743034167297,
-                    "url": "http://www.foxnews.com/us/2018/01/17/south-carolina-officer-dies-3-others-remain-wounded-after-ambush-shooting.html"
-                }
-            ]
-        ]
-    },
-    {
-        "list": [
-            54,
-            51
-        ],
-        "months": [
-            "2018-01-16",
-            "2018-01-17"
-        ],
-        "peaks": [],
-        "theme": [
-            "North",
-            "Korea",
-            "Trump",
-            "Olympic",
-            "South",
-            "Hawaii",
-            "Korean",
-            "missile",
-            "alert",
-            "false",
-            "nuclear",
-            "says",
-            "Russia",
-            "sanctions",
-            "button"
-        ],
-        "toparticles": [
-            [
-                {
-                    "_id": "5a5df7b9421aa9262fb27b05",
-                    "date_month": "2018-01-16",
-                    "image": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/01/02/104924335-RTX42TPU-kim-jong-un.1910x1000.jpg",
-                    "origin": "CNBC Politics",
-                    "title": "North Korea scoffs at Trump 'nuclear button' tweet, says it was the 'spasm of a lunatic'",
-                    "ts": 1516104459,
-                    "twitterid": 953237308811091969,
-                    "url": "https://www.cnbc.com/2018/01/16/north-korea-scoffs-at-trump-nuclear-button-tweet-says-it-was-the-spasm-of-a-lunatic.html?__source=Twitter"
-                },
-                {
-                    "_id": "5a5de979421aa923d7104845",
-                    "date_month": "2018-01-16",
-                    "image": "https://twt-media.washtimes.com/media/image/2017/12/25/North_Korea_Sanctions_43150.jpg-ff494.jpg",
-                    "origin": "The Washington Times",
-                    "title": "North Korea scoffs at Donald Trump\u2019s \u2018nuclear button\u2019 tweet",
-                    "ts": 1516101132,
-                    "twitterid": 953223353497726976,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/16/north-korea-scoffs-donald-trumps-nuclear-button-tw/"
-                },
-                {
-                    "_id": "5a5de979421aa923d710482d",
-                    "date_month": "2018-01-16",
-                    "image": "https://www.gannett-cdn.com/-mm-/471911a0df89354af1ad1697f0766432f925badb/c=0-199-3000-1894&r=x803&c=1600x800/local/-/media/2018/01/16/USATODAY/USATODAY/636516742345486354-AFP-AFP-WM1CD-96561313.JPG",
-                    "origin": "USA TODAY",
-                    "title": "North Korea: President Trump\u2019s nuclear button boast the 'spasm of a lunatic'",
-                    "ts": 1516103021,
-                    "twitterid": 953231276177281024,
-                    "url": "https://www.usatoday.com/story/news/world/2018/01/16/north-korea-president-trumps-nuclear-button-boast-spasm-lunatic/1035181001/"
-                },
-                {
-                    "_id": "5a5e05b8421aa927bbff7ca5",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/trumpdonald_memo_122017getty_1.jpg",
-                    "origin": "The Hill",
-                    "title": "North Korea: Trump\u2019s \u2018nuclear button\u2019 tweet the \u2018spasm of a lunatic\u2019",
-                    "ts": 1516110787,
-                    "twitterid": 953263849431535616,
-                    "url": "http://thehill.com/policy/international/369087-north-korea-trumps-nuclear-button-tweet-the-spasm-of-a-lunatic?rnd=1516108166"
-                },
-                {
-                    "_id": "5a5de979421aa923d7104830",
-                    "date_month": "2018-01-16",
-                    "image": "https://www.washingtonpost.com/pbox.php?url=http://www.washingtonpost.com/blogs/worldviews/files/2018/01/AFP_VK1ZE.jpg&w=1484&op=resize&opt=1&filter=antialias&t=20170517",
-                    "origin": "Washington Post",
-                    "title": "North Korea calls Trump a \u2018lunatic\u2019 and a \u2018loser\u2019 in response to nuclear button tweet",
-                    "ts": 1516102737,
-                    "twitterid": 953230086999891969,
-                    "url": "https://www.washingtonpost.com/news/worldviews/wp/2018/01/16/north-korea-calls-trump-a-lunatic-and-a-loser-in-response-to-nuclear-button-tweet/?utm_term=.0651b1fe5fb1&tid=sm_tw"
-                },
-                {
-                    "_id": "5a5ddb52421aa922c5b9a89f",
-                    "date_month": "2018-01-16",
-                    "image": "http://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2018/01/16/0/0/694940094001_5712562207001_5712542823001-vs.jpg?ve=1",
-                    "origin": "Fox News",
-                    "title": "Trump's nuclear button tweet is the 'spasm of a lunatic,' North Korean state media says",
-                    "ts": 1516099036,
-                    "twitterid": 953214564505739264,
-                    "url": "http://www.foxnews.com/politics/2018/01/16/trumps-nuclear-button-tweet-is-spasm-lunatic-north-korean-state-media-says.html"
-                },
-                {
-                    "_id": "5a5e05b8421aa927bbff7cc5",
-                    "date_month": "2018-01-16",
-                    "image": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/12/07/104884989-GettyImages-633855276-olympics.1910x1000.jpg",
-                    "origin": "CNBC Politics",
-                    "title": "North Korean news agency threatens Olympics pullout after Seoul praises Trump",
-                    "ts": 1516109228,
-                    "twitterid": 953257311446867969,
-                    "url": "https://www.cnbc.com/2018/01/14/north-korea-media-warns-of-olympic-withdrawal-after-moon-jae-in-speech.html?__source=Twitter"
-                },
-                {
-                    "_id": "5a5e2fe6421aa929d58de005",
-                    "date_month": "2018-01-16",
-                    "image": "https://twt-media.washtimes.com/media/image/2018/01/10/China_New_Silk_Road_Hurdles_72275.jpg-f4fff.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Donald Trump tells Xi Jinping of \u2018disappointment\u2019 with growing U.S. trade deficit",
-                    "ts": 1516120692,
-                    "twitterid": 953305395992387587,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/16/donald-trump-tells-xi-jinping-disappointment-growi/"
-                }
-            ],
-            [
-                {
-                    "_id": "5a602a05421aa90f98ccdffc",
-                    "date_month": "2018-01-17",
-                    "image": "http://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2018/01/16/0/0/694940094001_5712199574001_5712192888001-vs.jpg?ve=1",
-                    "origin": "Fox News",
-                    "title": "Newt Gingrich: Hawaii\u2019s false missile alert shows America must urgently develop a missile defense system",
-                    "ts": 1516250580,
-                    "twitterid": 953850185062535168,
-                    "url": "http://www.foxnews.com/opinion/2018/01/17/newt-gingrich-hawaii-s-false-missile-alert-shows-america-must-urgently-develop-missile-defense-system.html"
-                },
-                {
-                    "_id": "5a5f492c421aa93888bac7d6",
-                    "date_month": "2018-01-17",
-                    "image": "https://www.washingtonpost.com/pbox.php?url=https://www.washingtonpost.com/pb/resources/img/twp-social-share.png&w=1484&op=resize&opt=1&filter=antialias&t=20170517",
-                    "origin": "Washington Post",
-                    "title": "A nuclear North Korea is bringing back Cold War paranoia",
-                    "ts": 1516191966,
-                    "twitterid": 953604340966621185,
-                    "url": "https://www.washingtonpost.com/news/worldviews/wp/2018/01/17/the-challenge-of-north-korea-raises-the-specter-of-the-cold-war/?utm_term=.0dd637daa046&tid=sm_tw"
-                },
-                {
-                    "_id": "5a5ee697421aa934709732b4",
-                    "date_month": "2018-01-17",
-                    "image": "https://www.gannett-cdn.com/-mm-/88c94106989b769bdc8d861e4d7137a730d46868/c=0-105-1022-682&r=x803&c=1600x800/local/-/media/2018/01/16/USATODAY/USATODAY/636516787831633930-AX168-112E-9.JPG",
-                    "origin": "USA TODAY",
-                    "title": "How to prepare for a nuclear blast, other disasters",
-                    "ts": 1516167007,
-                    "twitterid": 953499653114400770,
-                    "url": "https://www.usatoday.com/story/news/nation-now/2018/01/16/how-prepare-nuclear-blast-other-disasters/1035348001/"
-                },
-                {
-                    "_id": "5a5f654d421aa93987628413",
-                    "date_month": "2018-01-17",
-                    "image": "http://thehill.com/sites/default/files/gettyimages-893882944_1.jpg",
-                    "origin": "The Hill",
-                    "title": "Give Trump new nukes and we are that much closer to war",
-                    "ts": 1516198925,
-                    "twitterid": 953633526515159040,
-                    "url": "http://thehill.com/opinion/national-security/369248-give-trump-new-nukes-and-we-are-that-much-closer-to-war"
-                },
-                {
-                    "_id": "5a5f654d421aa939876283e0",
-                    "date_month": "2018-01-17",
-                    "image": "https://cbsnews3.cbsistatic.com/hub/i/r/2018/01/17/8d50cc2e-c22a-4548-a51a-1374d458bf25/thumbnail/1200x630/9dd99408c141fb0508d7e9291bd0ec1e/tillerson-north-korea-canada.jpg",
-                    "origin": "CBS Evening News",
-                    "title": "China accuses U.S. of \"Cold War thinking\" with North Korea summit",
-                    "ts": 1516201172,
-                    "twitterid": 953642951078481920,
-                    "url": "https://www.cbsnews.com/news/us-north-korea-summit-china-donald-trump-cold-war-thinking/?ftag=CNM-00-10aab8a&linkId=47051207"
-                },
-                {
-                    "_id": "5a5f1ec6421aa936e965b4a3",
-                    "date_month": "2018-01-17",
-                    "image": "https://www.gannett-cdn.com/-mm-/06b8ea9ee198b69f36d07fdfbf129de983974c30/c=0-7-1021-584&r=x803&c=1600x800/local/-/media/2018/01/16/USATODAY/USATODAY/636517047826926414-AX188-3D00-9.JPG",
-                    "origin": "USA TODAY",
-                    "title": "Risk of nuclear weapons, extreme weather top threats for 2018: report",
-                    "ts": 1516180055,
-                    "twitterid": 953554383383379968,
-                    "url": "https://www.usatoday.com/story/news/world/2018/01/17/risk-nuclear-weapons-extreme-weather-top-risks-2018-report/1035252001/?utm_source=dlvr.it&utm_medium=twitter"
-                },
-                {
-                    "_id": "5a5f735e421aa939f96ded29",
-                    "date_month": "2018-01-17",
-                    "image": "http://thehill.com/sites/default/files/cruzted_072717gn2_lead.jpg",
-                    "origin": "The Hill",
-                    "title": "Cruz: 'It\u2019s time for North Korea to fear what America will do next'",
-                    "ts": 1516204142,
-                    "twitterid": 953655411521064960,
-                    "url": "http://thehill.com/homenews/senate/369314-cruz-its-time-for-north-korea-to-fear-what-america-will-do-next"
-                }
-            ]
-        ]
-    },
-    {
-        "list": [
-            44,
-            24,
-            1
-        ],
-        "months": [
-            "2018-01-16",
-            "2018-01-17",
-            "2018-01-18"
-        ],
-        "peaks": [],
-        "theme": [
-            "Trump",
-            "doctor",
-            "health",
-            "House",
-            "White",
-            "Cognition",
-            "test",
-            "says",
-            "Excellent",
-            "mentally",
-            "physical",
-            "fit",
-            "President",
-            "disease",
-            "heart"
-        ],
-        "toparticles": [
-            [
-                {
-                    "_id": "5a5e8449421aa92e338166eb",
-                    "date_month": "2018-01-16",
-                    "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMYE6t9kk39A/v1/1200x809.jpg",
-                    "origin": "Bloomberg Politics",
-                    "title": "Trump Passes Cognitive Screen And Is \u2018Fit for Duty,\u2019 Doctor Says",
-                    "ts": 1516142697,
-                    "twitterid": 953397690485780480,
-                    "url": "https://www.bloomberg.com/news/articles/2018-01-16/trump-s-doctor-says-cognitive-test-president-requested-is-normal?cmpid=socialflow-twitter-business&utm_content=business&utm_campaign=socialflow-organic&utm_source=twitter&utm_medium=social"
-                },
-                {
-                    "_id": "5a5e8449421aa92e33816728",
-                    "date_month": "2018-01-16",
-                    "image": "http://static1.businessinsider.com/image/5a5e702e28eecc420c8b50f2-1190-625/trumps-doctor-said-hes-fit-for-duty-but-needs-to-lose-10-15-pounds.jpg",
-                    "origin": "Politics Insider",
-                    "title": "Trump's doctor said he's 'fit for duty' but needs to lose 10-15 pounds",
-                    "ts": 1516140391,
-                    "twitterid": 953388020530630656,
-                    "url": "http://www.businessinsider.com/trump-doctor-fit-for-duty-but-needs-to-lose-10-15-pounds-2018-1"
-                },
-                {
-                    "_id": "5a5e8449421aa92e338166ee",
-                    "date_month": "2018-01-16",
-                    "image": "http://www.trbimg.com/img-5a5e7cc9/turbine/la-na-pol-trump-health-20180116",
-                    "origin": "L.A. Times National",
-                    "title": "White House doctor says Trump scored perfect marks on cognitive test, needs to lose weight",
-                    "ts": 1516142433,
-                    "twitterid": 953396585500631041,
-                    "url": "http://www.latimes.com/politics/la-na-pol-trump-health-20180116-story.html"
-                },
-                {
-                    "_id": "5a5e8449421aa92e3381672e",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/jacksonronny01162018getty.jpg",
-                    "origin": "The Hill",
-                    "title": "WH doctor: Trump in 'excellent' health, mentally fit for office",
-                    "ts": 1516140242,
-                    "twitterid": 953387392571985920,
-                    "url": "http://thehill.com/homenews/administration/369205-wh-doctor-declares-trump-in-excellent-health-mentally-fit-for-office"
-                },
-                {
-                    "_id": "5a5e7650421aa92d677b25cc",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/jacksonronny01162018wh.jpg",
-                    "origin": "The Hill",
-                    "title": "WH doctor declares Trump in 'excellent' health, mentally fit for office",
-                    "ts": 1516136658,
-                    "twitterid": 953372361084014592,
-                    "url": "http://thehill.com/homenews/administration/369205-wh-doctor-declares-trump-in-excellent-health-mentally-fit-for-office"
-                },
-                {
-                    "_id": "5a5e682f421aa92cbb6d27e3",
-                    "date_month": "2018-01-16",
-                    "image": "https://twt-media.washtimes.com/media/image/2018/01/16/Trump_62846.jpg-d36fb.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Donald Trump\u2019s doctor says he is fit for office physically and mentally",
-                    "ts": 1516136045,
-                    "twitterid": 953369789975728128,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/16/trump-doctor-he-is-fit-office-physically-mentally/"
-                },
-                {
-                    "_id": "5a5e7650421aa92d677b25b5",
-                    "date_month": "2018-01-16",
-                    "image": "https://www.gannett-cdn.com/-mm-/c31c6f820478be0c4b787959a25cd862348aee8a/c=0-78-1800-1095&r=x803&c=1600x800/local/-/media/2018/01/16/USATODAY/USATODAY/636517115737437735-AP-TRUMP-PHYSICAL-96519813.JPG",
-                    "origin": "USA TODAY",
-                    "title": "White House doctor: Trump healthy, passed cognitive assessment, but needs to lose weight and exercise",
-                    "ts": 1516137430,
-                    "twitterid": 953375600709836800,
-                    "url": "https://www.usatoday.com/story/news/politics/2018/01/16/white-house-doctor-trump-medically-fit-serve/1037199001/?utm_source=dlvr.it&utm_medium=twitter"
-                },
-                {
-                    "_id": "5a5e8449421aa92e3381670c",
-                    "date_month": "2018-01-16",
-                    "image": "https://media.npr.org/assets/img/2018/01/16/gettyimages-904309370_wide-67dae56ccc264f99af596a6f81bb028e68909c77.jpg?s=1400",
-                    "origin": "NPR Politics",
-                    "title": "White House Doctor Says Trump Is In 'Excellent' Physical, Cognitive Health",
-                    "ts": 1516141375,
-                    "twitterid": 953392144798031872,
-                    "url": "https://www.npr.org/2018/01/16/578424523/white-house-doctor-says-trump-is-in-excellent-physical-cognitive-health?utm_source=dlvr.it&utm_medium=twitter"
-                }
-            ],
-            [
-                {
-                    "_id": "5a5fc7b5421aa94162bc9951",
-                    "date_month": "2018-01-17",
-                    "image": "https://www.bostonglobe.com/rf/image_585w/Boston/2011-2020/2018/01/17/BostonGlobe.com/National/Images/905748862-5195[1].jpg",
-                    "origin": "The Boston Globe",
-                    "title": "The brain test that Trump passed was created by a Lebanese immigrant",
-                    "ts": 1516225926,
-                    "twitterid": 953746778192601089,
-                    "url": "https://www.bostonglobe.com/news/nation/2018/01/17/the-brain-test-that-trump-passed-was-created-lebanese-immigrant/eowDRXg3ffufY8kYKM3BSM/story.html?camp=bg%3Abrief%3Arss%3Afeedly&rss_id=feedly_rss_brief&s_campaign=bostonglobe%3Asocialflow%3Atwitter"
-                },
-                {
-                    "_id": "5a5f735e421aa939f96ded2c",
-                    "date_month": "2018-01-17",
-                    "image": "https://www.washingtonpost.com/pbox.php?url=http://www.washingtonpost.com/news/morning-mix/wp-content/uploads/sites/21/2018/01/nasreddine2.jpg&w=1484&op=resize&opt=1&filter=antialias&t=20170517",
-                    "origin": "Washington Post",
-                    "title": "Trump\u2019s cognitive test was created by a Lebanese immigrant to Canada",
-                    "ts": 1516204051,
-                    "twitterid": 953655028711124992,
-                    "url": "https://www.washingtonpost.com/news/morning-mix/wp/2018/01/17/trumps-cognitive-test-was-created-by-a-lebanese-immigrant-to-canada/?utm_term=.f864549745b4&tid=sm_tw"
-                },
-                {
-                    "_id": "5a5fd5bc421aa944907b3ec2",
-                    "date_month": "2018-01-17",
-                    "image": "http://thehill.com/sites/default/files/trumpdonald_011718gn3_lead.jpg",
-                    "origin": "The Hill",
-                    "title": "Trump touts high score on cognitive test",
-                    "ts": 1516228093,
-                    "twitterid": 953755867949780997,
-                    "url": "http://thehill.com/blogs/blog-briefing-room/369426-trump-touts-high-scores-on-cognitive-test"
-                },
-                {
-                    "_id": "5a5f654d421aa93987628412",
-                    "date_month": "2018-01-17",
-                    "image": "https://www.gannett-cdn.com/-mm-/ec02d439cec67fe3fbd365c99403bc12276256da/c=0-0-5518-3118&r=x1683&c=3200x1680/local/-/media/2018/01/16/USATODAY/USATODAY/636517214320122631-AFP-AFP-WU01C-96616435.JPG",
-                    "origin": "USA TODAY",
-                    "title": "What's the Montreal Cognitive Assessment test Trump took?",
-                    "ts": 1516198961,
-                    "twitterid": 953633679032705026,
-                    "url": "https://www.usatoday.com/story/news/politics/onpolitics/2018/01/17/whats-montreal-cognitive-assessment-test-trump-took/1039482001/"
-                },
-                {
-                    "_id": "5a5f02a8421aa935f5eaf074",
-                    "date_month": "2018-01-17",
-                    "image": "https://cbsnews2.cbsistatic.com/hub/i/r/2018/01/14/32bfdcae-5655-4c43-af6e-f18de12a8a4f/thumbnail/1200x630/6f6fa9215d97977b32146b28e1ad4662/0114-en-barnett-trump-1481909-640x360.jpg",
-                    "origin": "CBS News",
-                    "title": "White House doctor: \"No concerns\" about Trump's cognitive health",
-                    "ts": 1516175525,
-                    "twitterid": 953535382603337729,
-                    "url": "https://www.cbsnews.com/news/white-house-doctor-no-concerns-about-trumps-cognitive-health/?ftag=COS-05-10aaa0g&utm_campaign=trueAnthem:+Trending+Content&utm_content=5a5effb304d301543f424487&utm_medium=trueAnthem&utm_source=twitter"
-                }
-            ],
-            []
-        ]
-    },
-    {
-        "list": [
-            749,
-            762,
-            20
-        ],
-        "months": [
-            "2018-01-16",
-            "2018-01-17",
-            "2018-01-18"
-        ],
-        "peaks": [
-            "2018-01-17"
-        ],
-        "theme": [
-            "Trump",
-            "say",
-            "News",
+            "Says",
             "Year",
-            "Taxes",
-            "charge",
-            "report",
-            "officers",
-            "man",
-            "State",
-            "China",
-            "ex",
-            "face",
-            "abuse"
-        ],
-        "toparticles": [
-            [
-                {
-                    "_id": "5a5e9289421aa92ed9ee724e",
-                    "date_month": "2018-01-16",
-                    "image": "https://media3.s-nbcnews.com/j/newscms/2017_22/2023191/170602-cia-259p-rs_4efdb0cbbefaf78483edfb1ab6a373f4.nbcnews-fp-1200-630.jpg",
-                    "origin": "NBC News",
-                    "title": "Ex-CIA officer Jerry Chun Shing Lee suspected of spying for China",
-                    "ts": 1516146641,
-                    "twitterid": 953414233508659201,
-                    "url": "https://www.nbcnews.com/news/us-news/ex-cia-officer-jerry-chun-shing-lee-suspected-spying-china-n838186"
-                },
-                {
-                    "_id": "5a5eca80421aa9319905d88f",
-                    "date_month": "2018-01-16",
-                    "image": "https://si.wsj.net/public/resources/images/BN-XA482_3mydr_TOP_20180116220733.jpg",
-                    "origin": "The Wall Street Journal",
-                    "title": "Ex-CIA Officer, Suspected of Outing U.S. Informants in China, Is Arrested",
-                    "ts": 1516160472,
-                    "twitterid": 953472244201631746,
-                    "url": "https://www.wsj.com/articles/former-cia-officer-charged-with-illegally-retaining-classified-information-1516155923?mod=e2tw"
-                },
-                {
-                    "_id": "5a5e8449421aa92e33816704",
-                    "date_month": "2018-01-16",
-                    "image": "https://twt-media.washtimes.com/media/image/2017/08/02/Justice_Department_Affirmative_Action_12764.jpg-37b15.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Jerry Chun Shing Lee, former CIA officer, arrested for keeping classified records",
-                    "ts": 1516141767,
-                    "twitterid": 953393791481851904,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/16/ex-cia-officer-arrested-keeping-classified-records/"
-                },
-                {
-                    "_id": "5a5e9289421aa92ed9ee7270",
-                    "date_month": "2018-01-16",
-                    "image": "https://static.politico.com/17/6d/fbd10be0465d845fa55f168320fe/160531-justice-department-ap-1160.jpg",
-                    "origin": "POLITICO",
-                    "title": "Former CIA officer arrested on Espionage Act charge",
-                    "ts": 1516145326,
-                    "twitterid": 953408719051780096,
-                    "url": "https://www.politico.com/story/2018/01/16/cia-espionage-arrest-342115"
-                },
-                {
-                    "_id": "5a5ea054421aa92fdce65818",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/cia_0.jpg",
-                    "origin": "The Hill",
-                    "title": "Ex-CIA officer arrested after keeping notebooks with classified info",
-                    "ts": 1516150682,
-                    "twitterid": 953431182410215424,
-                    "url": "http://thehill.com/policy/national-security/369244-ex-cia-officer-arrested-after-keeping-notebooks-with-classified-info"
-                },
-                {
-                    "_id": "5a5ea054421aa92fdce65842",
-                    "date_month": "2018-01-16",
-                    "image": "https://www.gannett-cdn.com/-mm-/1c791d37a6acf90e4f0c92d9f4b3b3cba3b919cc/c=0-200-3800-2347&r=x1683&c=3200x1680/local/-/media/2017/03/20/USATODAY/USATODAY/636256250112572986-AFP-AFP-MH3D6-89368545.JPG",
-                    "origin": "USA TODAY",
-                    "title": "Ex-CIA officer arrested for illegally possessing classified defense information",
-                    "ts": 1516149006,
-                    "twitterid": 953424151011889153,
-                    "url": "https://www.usatoday.com/story/news/politics/2018/01/16/ex-cia-officer-arrested-illegally-possessing-classified-defense-information/1038352001/"
-                },
-                {
-                    "_id": "5a5ed881421aa9320fab9a5f",
-                    "date_month": "2018-01-16",
-                    "image": "http://cdn.cnn.com/cnnnext/dam/assets/170128113431-jfk-airport-file-super-tease.jpg",
-                    "origin": "CNN Politics",
-                    "title": "Former CIA officer arrested, accused of stashing top secret info",
-                    "ts": 1516162683,
-                    "twitterid": 953481516474093568,
-                    "url": "http://www.cnn.com/2018/01/16/politics/former-cia-officer-arrested-top-secret/index.html?sr=twCNNp011618former-cia-officer-arrested-top-secret0912PMStory&CNNPolitics=Tw"
-                },
-                {
-                    "_id": "5a5ebc73421aa9311dafec63",
-                    "date_month": "2018-01-16",
-                    "image": "https://si.wsj.net/public/resources/images/BN-WY666_CPROP__TOP_20180111155005.jpg",
-                    "origin": "The Wall Street Journal",
-                    "title": "China\u2019s Hot Housing Market Begins to Cool",
-                    "ts": 1516156807,
-                    "twitterid": 953456874409652225,
-                    "url": "https://www.wsj.com/articles/chinas-hot-housing-market-begins-to-cool-1516098600?mod=e2tw"
-                }
-            ],
-            [
-                {
-                    "_id": "5a5f492c421aa93888bac7b0",
-                    "date_month": "2018-01-17",
-                    "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iOinSBmV1Pds/v1/1200x845.jpg",
-                    "origin": "Bloomberg Politics",
-                    "title": "Duterte Decries \u2018Fake News\u2019 as Critics Warn of Media Crackdown",
-                    "ts": 1516193470,
-                    "twitterid": 953610647455006720,
-                    "url": "https://www.bloomberg.com/news/articles/2018-01-17/duterte-hits-fake-news-as-critics-warn-of-media-crackdown?utm_content=politics&utm_campaign=socialflow-organic&utm_source=twitter&utm_medium=social&cmpid%3D=socialflow-twitter-politics"
-                },
-                {
-                    "_id": "5a5f735e421aa939f96ded4d",
-                    "date_month": "2018-01-17",
-                    "image": "https://prod-video-us-east-1.pscp.tv/Xhtg8hGmmYqM2FlnYe_veTdXZ2okzDyVLM_0nObHtvJEgjqGuiAY2MK79veGNCiClxnYZsbqfGIqrrWMA2olTQ/replay_thumbnail/us-east-1/periscope-replay-direct-prod-us-east-1-public/eyJkIjowfQ/chunk_1516203537654221060_300_a.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJBbGxvd2VkUHJvdG9jb2xzIjpbInRodW1iIl0sIkJyb2FkY2FzdElkIjoiMVJEeGxuYURuVlZHTCIsIkdyYW50VHlwZSI6InJlYWQiLCJHcmFudGVkQXQiOjE1MTYyMDQ4NjksIkdyYW50ZWRUbyI6IndlYi1yYXRlLWxpbWl0ZWQtYzViMjUzMzliNmYxZGEyMjcwOWQwZGMyNTQwYmE3OGMiLCJTdHJlYW1OYW1lIjoiWGh0ZzhoR21tWXFNMkZsblllX3ZlVGRYWjJva3pEeVZMTV8wbk9iSHR2SkVnanFHdWlBWTJNSzc5dmVHTkNpQ2x4bllac2JxZkdJcXJyV01BMm9sVFEiLCJleHAiOjE1MTYyOTEyNjl9.n1bMf3xwrBWP4aZo7WlVET3QR4Sm2Y8QVhFLtIwBbRE&service=proxsee&digest=9DvrGbMsluvLTswK-6FhWbJzue1dU0U33xGcEpESMLQ",
-                    "origin": "ABC News",
-                    "title": "ABC News: \"Sen. Jeff Flake delivers speech on Senate floor criticizing Pres. Trump.\"",
-                    "ts": 1516203036,
-                    "twitterid": 953650771110883328,
-                    "url": "https://www.periscope.tv/ABC/1RDxlnaDnVVGL?t=16s&cid=social_twitter_abcn"
-                },
-                {
-                    "_id": "5a5fb9c3421aa93c55d31350",
-                    "date_month": "2018-01-17",
-                    "image": "https://prod-video-us-east-1.pscp.tv/9UyWdYwvQ9QmwKWkTUiv_F5r8e4KGX_HQQufOccuJGKu7TGpy4hICAOYusGAJEGrnp8-qTf0sowixLs3u4ASdg/live_thumbnail/us-east-1/eyJkIjowfQ/latest.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJBbGxvd2VkUHJvdG9jb2xzIjpbInRodW1iIl0sIkJyb2FkY2FzdElkIjoiMXpxSlZNUG9ZbWRHQiIsIkdyYW50VHlwZSI6InJlYWQiLCJHcmFudGVkQXQiOjE1MTYyMjI4OTgsIkdyYW50ZWRUbyI6IndlYi1yYXRlLWxpbWl0ZWQtYWZlODQzMzgzMGE2ZDkzYjVmMDZiYmRjMjNhM2Q4MzgiLCJTdHJlYW1OYW1lIjoiOVV5V2RZd3ZROVFtd0tXa1RVaXZfRjVyOGU0S0dYX0hRUXVmT2NjdUpHS3U3VEdweTRoSUNBT1l1c0dBSkVHcm5wOC1xVGYwc293aXhMczN1NEFTZGciLCJleHAiOjE1MTYzMDkyOTh9.L1QnqzuSUuuUve3eVVNC1Z85GoVzkCKeE2NRNsv9_vQ&service=proxsee&digest=wFmcuuDqYvNQXlQ4HX_KtiEEfGu85I8fZZ-VdQf6dhU&ts=758111449",
-                    "origin": "ABC News",
-                    "title": "ABC News: \"Pres. Trump attends Gold Medal ceremony for former Sen. Bob Dole.\"",
-                    "ts": 1516220032,
-                    "twitterid": 953722056960561153,
-                    "url": "https://www.periscope.tv/ABC/1zqJVMPoYmdGB?cid=social_twitter_abcn"
-                },
-                {
-                    "_id": "5a5fb9c3421aa93c55d31335",
-                    "date_month": "2018-01-17",
-                    "image": "https://static.politico.com/da/f5/44342c424c68b675719324b1106b/politico.jpg",
-                    "origin": "POLITICO",
-                    "title": "Playback: Fake news awards and Trump's health",
-                    "ts": 1516221064,
-                    "twitterid": 953726385826205696,
-                    "url": "https://www.politico.com/video/2018/01/17/playback-064741"
-                },
-                {
-                    "_id": "5a602a05421aa90f98cce00f",
-                    "date_month": "2018-01-17",
-                    "image": "https://static.politico.com/da/f5/44342c424c68b675719324b1106b/politico.jpg",
-                    "origin": "POLITICO",
-                    "title": "Today in Trumpworld: Ethics and Fake News Awards",
-                    "ts": 1516249357,
-                    "twitterid": 953845053797134336,
-                    "url": "https://www.politico.com/video/2018/01/17/today-in-trumpworld-ethics-and-fake-news-awards-064751?lo=ap_f1"
-                },
-                {
-                    "_id": "5a5ffff0421aa94874e1794b",
-                    "date_month": "2018-01-17",
-                    "image": "http://beta.latimes.com/resizer/mv1l3TgBUxxxDEmMYadNqw_z8Tw=/1200x0/www.trbimg.com/img-5a5ffd0e/turbine/la-na-fake-news-20180117",
-                    "origin": "L.A. Times National",
-                    "title": "Here are our own Fake News Awards, for the fakest news there ever was, starring... us! \u2013 LA Times",
-                    "ts": 1516238406,
-                    "twitterid": 953799124138082304,
-                    "url": "http://www.latimes.com/nation/la-na-fake-news-20180117-story.html?utm_source=dlvr.it&utm_medium=twitter"
-                },
-                {
-                    "_id": "5a5f9d8d421aa93b566e4fe3",
-                    "date_month": "2018-01-17",
-                    "image": "https://prod-video-us-east-1.pscp.tv/cKxeK15wBl0CAi4lD8MqrSQJRomjkin3yNZ2TUZg22hYGGHVwO7GsDWQRjnNMBrBnf_PsDMq3EpU8wp7A3Repw/live_thumbnail/us-east-1/eyJkIjowfQ/latest.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJBbGxvd2VkUHJvdG9jb2xzIjpbInRodW1iIl0sIkJyb2FkY2FzdElkIjoiMW1ueGVyUlpwZVJLWCIsIkdyYW50VHlwZSI6InJlYWQiLCJHcmFudGVkQXQiOjE1MTYyMTU2NjcsIkdyYW50ZWRUbyI6IndlYi1yYXRlLWxpbWl0ZWQtZWFjZWQxODI4OGJiYzI5NWVjMGViMmM0MDViMjJjMGMiLCJTdHJlYW1OYW1lIjoiY0t4ZUsxNXdCbDBDQWk0bEQ4TXFyU1FKUm9tamtpbjN5TloyVFVaZzIyaFlHR0hWd083R3NEV1FSam5OTUJyQm5mX1BzRE1xM0VwVTh3cDdBM1JlcHciLCJleHAiOjE1MTYzMDIwNjd9.eTtXlqpZH8AEKTQCJSfh9tfclRph70YkN3wlYZkKlqA&service=proxsee&digest=Smih1KAWRzlbjgPF7UkYFdHsEH9ZqwroJcZ_Ahgko-0&ts=758107833",
-                    "origin": "ABC News",
-                    "title": "ABC News: \"White House Press Sec. Sarah Sanders briefs reporters.\"",
-                    "ts": 1516213109,
-                    "twitterid": 953693019286523906,
-                    "url": "https://www.periscope.tv/ABC/1mnxerRZpeRKX?cid=social_twitter_abcn"
-                },
-                {
-                    "_id": "5a5f735e421aa939f96ded49",
-                    "date_month": "2018-01-17",
-                    "image": "https://scontent-lga3-1.xx.fbcdn.net/v/t15.0-10/s640x640/24555204_2295695510450466_6948487035946532864_n.jpg?oh=b2eddc2f175b10a3d042f736d066be9c&oe=5AEDC723",
-                    "origin": "NBC News",
-                    "title": "NBC News",
-                    "ts": 1516203091,
-                    "twitterid": 953651002384834560,
-                    "url": "https://www.facebook.com/NBCNews/videos/2295688287117855/"
-                }
-            ],
-            []
-        ]
-    },
-    {
-        "list": [
-            162,
-            193,
-            3
-        ],
-        "months": [
-            "2018-01-16",
-            "2018-01-17",
-            "2018-01-18"
-        ],
-        "peaks": [
-            "2018-01-17"
-        ],
-        "theme": [
+            "New",
+            "Amazon",
             "Trump",
-            "Bannon",
-            "House",
-            "news",
-            "White",
-            "Fake",
-            "Russia",
-            "says",
-            "Flake",
-            "Steve",
-            "Awards",
-            "President",
-            "probe",
-            "subpoenaed",
-            "year"
+            "killing",
+            "government",
+            "Plans",
+            "police",
+            "report",
+            "sexual",
+            "Time",
+            "Death",
+            "headquarters"
         ],
         "toparticles": [
             [
                 {
-                    "_id": "5a5e3e09421aa92a5cb86d61",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/nielsenkirstjen_011618gn4_lead.jpg",
-                    "origin": "The Hill",
-                    "title": "Nielsen says 'possible' Trump used vulgar language in meeting",
-                    "ts": 1516123506,
-                    "twitterid": 953317196616302593,
-                    "url": "http://thehill.com/homenews/administration/369141-nielsen-says-possible-trump-used-vulgar-language-in-meeting"
+                    "_id": "5a608c7c421aa914a6e47bec",
+                    "date_month": "2018-01-18",
+                    "image": "https://si.wsj.net/public/resources/images/BN-XB214_3knXQ_TOP_20180118050027.jpg",
+                    "origin": "The Wall Street Journal",
+                    "title": "Bloomberg Plans To Discontinue Financial Commentary Brand Gadfly",
+                    "ts": 1516275609,
+                    "twitterid": 953955164255408128,
+                    "url": "https://www.wsj.com/articles/bloomberg-plans-to-discontinue-financial-commentary-brand-gadfly-1516273570?mod=e2tw"
                 },
                 {
-                    "_id": "5a5e5a21421aa92beb7da256",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/acostajim.jpg",
-                    "origin": "The Hill",
-                    "title": "CNN's Acosta says White House staff sought to drown out his questions",
-                    "ts": 1516129808,
-                    "twitterid": 953343632228212736,
-                    "url": "http://thehill.com/homenews/media/369167-cnns-acosta-says-white-house-staff-sought-to-drown-out-his-questions"
+                    "_id": "5a60e106421aa918b20fc571",
+                    "date_month": "2018-01-18",
+                    "image": "https://si.wsj.net/public/resources/images/BN-XB214_3knXQ_TOP_20180118050027.jpg",
+                    "origin": "The Wall Street Journal",
+                    "title": "Bloomberg Plans to Discontinue Financial Commentary Brand Gadfly",
+                    "ts": 1516298402,
+                    "twitterid": 954050767060656128,
+                    "url": "https://www.wsj.com/articles/bloomberg-plans-to-discontinue-financial-commentary-brand-gadfly-1516273570?mod=e2tw"
                 },
                 {
-                    "_id": "5a5e5a21421aa92beb7da263",
-                    "date_month": "2018-01-16",
-                    "image": "http://cdn.cnn.com/cnnnext/dam/assets/171229130634-donald-trump-12-15-2017-super-tease.jpg",
-                    "origin": "CNN Politics",
-                    "title": "Trump says he wants immigrants from 'everywhere'",
-                    "ts": 1516129267,
-                    "twitterid": 953341361935220738,
-                    "url": "http://www.cnn.com/2018/01/16/politics/donald-trump-norway-immigrants/index.html?sr=twCNNp011618donald-trump-norway-immigrants0118PMStory&CNNPolitics=Tw"
-                },
-                {
-                    "_id": "5a5e4c08421aa92b0658437a",
-                    "date_month": "2018-01-16",
-                    "image": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/01/11/104941801-GettyImages-903660780.1910x1000.jpg",
-                    "origin": "CNBC Politics",
-                    "title": "Trump says he wants more immigrants from 'everywhere'",
-                    "ts": 1516127771,
-                    "twitterid": 953335088049094656,
-                    "url": "https://www.cnbc.com/2018/01/16/trump-says-he-wants-more-immigrants-from-everywhere.html?__source=Twitter"
-                },
-                {
-                    "_id": "5a5e13d3421aa9288e56fbca",
-                    "date_month": "2018-01-16",
-                    "image": "https://www.washingtonpost.com/resizer/deuLJRvK6ShvbItUjVJzHCCuIPM=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HTXUAW5FLYZFJJEI4KVNGFLJZQ.jpg",
+                    "_id": "5a60e106421aa918b20fc5b9",
+                    "date_month": "2018-01-18",
+                    "image": "https://www.washingtonpost.com/pbox.php?url=http://www.washingtonpost.com/blogs/wonkblog/files/2014/07/Cigarettes.jpg&w=1484&op=resize&opt=1&filter=antialias&t=20170517",
                     "origin": "Washington Post",
-                    "title": "South African government wants to know why Trump thinks its people are 'undesirable' immigrants",
-                    "ts": 1516113966,
-                    "twitterid": 953277182977208320,
-                    "url": "https://www.washingtonpost.com/news/post-nation/wp/2018/01/15/south-african-government-wants-to-know-why-trump-thinks-its-people-are-undesirable-immigrants/?utm_term=.e5ed03b9d703&tid=sm_tw&__twitter_impression=true"
+                    "title": "If we want to improve global health, we need to tax the things that are killing us",
+                    "ts": 1516295589,
+                    "twitterid": 954038967300775938,
+                    "url": "https://www.washingtonpost.com/news/wonk/wp/2018/01/18/if-we-want-to-improve-global-health-we-need-to-start-taxing-the-things-that-are-killing-us/?utm_term=.009f51d36362&tid=sm_tw"
                 },
                 {
-                    "_id": "5a5e8449421aa92e33816708",
-                    "date_month": "2018-01-16",
-                    "image": "https://static.politico.com/9b/74/393688d44f0582d598053a49fc38/180116-shs-ap-18016799617337.jpg",
-                    "origin": "POLITICO",
-                    "title": "White House: Focus should be on immigration policy, not vulgarity",
-                    "ts": 1516141556,
-                    "twitterid": 953392905787445248,
-                    "url": "https://www.politico.com/story/2018/01/16/trump-sanders-shithole-vulgarity-341613"
+                    "_id": "5a60a8a6421aa91623a1fc0c",
+                    "date_month": "2018-01-18",
+                    "image": "https://si.wsj.net/public/resources/images/BN-WY394_capito_P_20180111082719.jpg",
+                    "origin": "Capital Journal",
+                    "title": "A Government Shutdown This Year Would Be Different",
+                    "ts": 1516280937,
+                    "twitterid": 953977511167307778,
+                    "url": "https://blogs.wsj.com/washwire/2018/01/18/capital-journal-170/?mod=e2twp"
                 },
                 {
-                    "_id": "5a5e4c08421aa92b0658437c",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/trump_010518getty_0.jpg",
-                    "origin": "The Hill",
-                    "title": "Trump: I want immigrants from 'everywhere'",
-                    "ts": 1516127649,
-                    "twitterid": 953334576360972294,
-                    "url": "http://thehill.com/homenews/administration/369148-trump-i-want-immigrants-from-everywhere"
+                    "_id": "5a615169421aa920d6c81d79",
+                    "date_month": "2018-01-18",
+                    "image": "https://si.wsj.net/public/resources/images/OG-BB950_201801_TOP_20180118182013.jpg",
+                    "origin": "The Wall Street Journal",
+                    "title": "How the Contenders for Amazon\u2019s Next Headquarters Stack Up",
+                    "ts": 1516327202,
+                    "twitterid": 954171560373489665,
+                    "url": "https://www.wsj.com/graphics/amazon-headquarters-city-list/?mod=e2tw"
                 },
                 {
-                    "_id": "5a5df7b9421aa9262fb27b15",
-                    "date_month": "2018-01-16",
-                    "image": "http://cdn.cnn.com/cnnnext/dam/assets/180115090225-03-national-action-network-breakfast-mlk-iiii-super-tease.jpg",
-                    "origin": "CNN",
-                    "title": "MLK III: Trump's vulgar comments are 'extremely racist'",
-                    "ts": 1516104016,
-                    "twitterid": 953235451007197185,
-                    "url": "http://www.cnn.com/2018/01/16/politics/martin-luther-king-iii-trump-vulgar-immigration-cuomo-cnntv/index.html?sr=twCNN011618martin-luther-king-iii-trump-vulgar-immigration-cuomo-cnntv0654AMVODtop"
+                    "_id": "5a61273a421aa91cd7adb144",
+                    "date_month": "2018-01-18",
+                    "image": "https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/01/RTSNYTA-1024x683.jpg",
+                    "origin": "PBS NewsHour",
+                    "title": "How a government shutdown could affect your health",
+                    "ts": 1516313700,
+                    "twitterid": 954114930579472384,
+                    "url": "https://www.pbs.org/newshour/health/how-a-government-shutdown-could-affect-your-health"
+                },
+                {
+                    "_id": "5a61354b421aa91ecb1d6609",
+                    "date_month": "2018-01-18",
+                    "image": "https://si.wsj.net/img/WSJ_Logo_black_social.gif",
+                    "origin": "The Wall Street Journal",
+                    "title": "The Fed Is Losing Control of the Financial Markets",
+                    "ts": 1516319403,
+                    "twitterid": 954138848417763328,
+                    "url": "https://www.wsj.com/articles/the-fed-is-losing-control-of-the-financial-markets-1516307260?mod=e2tw"
+                },
+                {
+                    "_id": "5a608c7c421aa914a6e47c02",
+                    "date_month": "2018-01-18",
+                    "image": "https://storage.googleapis.com/afs-prod/media/media:9a5fb7215078483a8e1e05d60bba0e30/800.jpeg",
+                    "origin": "AP Politics",
+                    "title": "Senate panel advances Trump health secretary pick",
+                    "ts": 1516274115,
+                    "twitterid": 953948897403195392,
+                    "url": "https://www.apnews.com/43c2aeb6ebbf44c3b2a1c9f7b6a8990c?utm_campaign=SocialFlow&utm_source=Twitter&utm_medium=AP_Politics"
                 }
             ],
             [
                 {
-                    "_id": "5a5fb9c3421aa93c55d31338",
-                    "date_month": "2018-01-17",
-                    "image": "https://media4.s-nbcnews.com/j/newscms/2018_03/2295476/180117-nesting-dolls-trump-lenin-putin-ew-1130a_6b70a8cd37055aab63e518196bf9457e.1200;630;7;70;5.jpg",
-                    "origin": "MSNBC",
-                    "title": "Donald Trump's not quite Joseph Stalin. But his 'Fake News Awards' should scare us.",
-                    "ts": 1516221011,
-                    "twitterid": 953726162181787648,
-                    "url": "https://www.nbcnews.com/think/opinion/donald-trump-s-not-quite-joseph-stalin-his-fake-news-ncna838456?cid=sm_npd_ms_tw_ma"
+                    "_id": "5a61979c421aa9271e1f65e3",
+                    "date_month": "2018-01-19",
+                    "image": "http://www.trbimg.com/img-5a6168d9/turbine/ct-government-dropping-most-inaugural-rioting-cases-20180118",
+                    "origin": "Chicago Tribune",
+                    "title": "Government says it is dropping most remaining Inaugural Day rioting cases",
+                    "ts": 1516342616,
+                    "twitterid": 954236213002686464,
+                    "url": "http://www.chicagotribune.com/news/nationworld/ct-government-dropping-most-inaugural-rioting-cases-20180118-story.html"
                 },
                 {
-                    "_id": "5a5f8175421aa93a67350953",
-                    "date_month": "2018-01-17",
-                    "image": "https://cbsnews3.cbsistatic.com/hub/i/r/2017/12/25/a6384757-f499-4ffe-b8dc-a25038a21807/thumbnail/1200x630/892208cc93b2f0727465fe77e0072972/ap-17358609571738.jpg",
-                    "origin": "CBS News",
-                    "title": "Transcript: Sen. Jeff Flake's speaks about the dangers of calling facts \"fake news\"",
-                    "ts": 1516205136,
-                    "twitterid": 953659580910882817,
-                    "url": "https://www.cbsnews.com/news/jeff-flake-speech-trump-rebuke-senate-full-transcript/?ftag=CNM-00-10aab7e&linkId=47054710"
-                },
-                {
-                    "_id": "5a5f8f78421aa93ae449142f",
-                    "date_month": "2018-01-17",
-                    "image": "https://www.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/12/24/National-Politics/Images/AFP_UW30J.jpg?t=20170517",
-                    "origin": "Washington Post",
-                    "title": "Jeff Flake: \u2018President uses words infamously spoken by Joseph Stalin to describe his enemies\u2019",
-                    "ts": 1516211721,
-                    "twitterid": 953687198464987136,
-                    "url": "https://www.washingtonpost.com/news/powerpost/wp/2018/01/17/jeff-flake-president-uses-words-infamously-spoken-by-joseph-stalin-to-describe-his-enemies/?utm_term=.7debc8224272&tid=sm_tw"
-                },
-                {
-                    "_id": "5a5f8f78421aa93ae449147d",
-                    "date_month": "2018-01-17",
-                    "image": "http://v.politico.com/images/1155968404/201801/319/1155968404_5713627373001_5713606670001-vs.jpg?pubId=1155968404",
-                    "origin": "POLITICO",
-                    "title": "Flake says truth 'battered and abused' under Trump",
-                    "ts": 1516208737,
-                    "twitterid": 953674684918325248,
-                    "url": "https://www.politico.com/story/2018/01/17/jeff-flake-trump-speech-343244"
-                },
-                {
-                    "_id": "5a5f735e421aa939f96ded58",
-                    "date_month": "2018-01-17",
-                    "image": "https://images.c-span.org/Files/94a/20180117100208002_hd.jpg/Thumbs/height.630.no_border.width.1200.jpg",
-                    "origin": "CSPAN",
-                    "title": "Arizona Senator Jeff Flake Condemns President Trump's Fake News Attacks Media",
-                    "ts": 1516202797,
-                    "twitterid": 953649769393590273,
-                    "url": "https://www.c-span.org/video/?439881-1/arizona-senator-jeff-flake-condemns-president-trumps-fake-news-attacks-media"
-                },
-                {
-                    "_id": "5a5ee697421aa934709732bd",
-                    "date_month": "2018-01-17",
-                    "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0WD3rwjaTSQ/v1/1200x800.jpg",
+                    "_id": "5a61979c421aa9271e1f65f1",
+                    "date_month": "2018-01-19",
+                    "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ir2sPqZNpvY4/v1/1200x675.jpg",
                     "origin": "Bloomberg Politics",
-                    "title": "What Will Donald Trump Find in Davos?",
-                    "ts": 1516166412,
-                    "twitterid": 953497159260831744,
-                    "url": "https://www.bloomberg.com/news/articles/2018-01-10/what-will-donald-trump-find-in-davos?utm_content=politics&utm_campaign=socialflow-organic&utm_source=twitter&utm_medium=social&cmpid%3D=socialflow-twitter-politics"
+                    "title": "Workplace Lawyers Race Against the Trump Clock",
+                    "ts": 1516341613,
+                    "twitterid": 954232006744952832,
+                    "url": "https://www.bloomberg.com/news/articles/2018-01-16/workplace-lawyers-race-against-the-trump-clock?utm_content=politics&utm_campaign=socialflow-organic&utm_source=twitter&utm_medium=social&cmpid%3D=socialflow-twitter-politics"
                 },
                 {
-                    "_id": "5a5fab9d421aa93bce9c6420",
-                    "date_month": "2018-01-17",
-                    "image": "https://twt-media.washtimes.com/media/image/2017/08/04/abortion_politics_85221.jpg",
+                    "_id": "5a61898e421aa925de25c1ec",
+                    "date_month": "2018-01-19",
+                    "image": "https://www.washingtonpost.com/graphics/2018/politics/shutdown-who-gets-sent-home/img/2300-shutdown-2018-promo.jpg",
+                    "origin": "Washington Post",
+                    "title": "Who gets sent home if the government shuts down?",
+                    "ts": 1516338782,
+                    "twitterid": 954220130954858498,
+                    "url": "https://www.washingtonpost.com/graphics/2018/politics/shutdown-who-gets-sent-home/?utm_term=.3aa174504dd3&tid=sm_tw"
+                },
+                {
+                    "_id": "5a61898e421aa925de25c1c9",
+                    "date_month": "2018-01-19",
+                    "image": "https://media3.s-nbcnews.com/j/newscms/2017_20/2002956/170517-stock-exchange-mn-0930_07329d17b05329ce663fe165ebb3abc9.nbcnews-fp-1200-630.jpg",
+                    "origin": "NBC News",
+                    "title": "How will Wall Street react if the government shuts down \u2014 and is your 401(k) safe?",
+                    "ts": 1516341606,
+                    "twitterid": 954231976646598656,
+                    "url": "https://www.nbcnews.com/business/economy/how-will-wall-street-react-if-government-shuts-down-your-n838846?cid=sm_npd_nn_tw_ma"
+                },
+                {
+                    "_id": "5a61898e421aa925de25c1f3",
+                    "date_month": "2018-01-19",
+                    "image": "https://www.gannett-cdn.com/-mm-/75dfbab8b145cf2c67bdf93e6908313f85013a22/c=0-20-2998-1714&r=x803&c=1600x800/local/-/media/2018/01/18/USATODAY/USATODAY/636519083074292813-GTY-906667956-96674301.JPG",
+                    "origin": "USA TODAY",
+                    "title": "RuPaul appoints Nancy Pelosi to 'Drag Race' judgeship",
+                    "ts": 1516338302,
+                    "twitterid": 954218119731580930,
+                    "url": "https://www.usatoday.com/story/life/tv/2018/01/18/rupaul-nancy-pelosi-drag-race-judge/1046824001/"
+                },
+                {
+                    "_id": "5a61c1c3421aa93545287699",
+                    "date_month": "2018-01-19",
+                    "image": "https://www.bostonglobe.com/rf/image_585w/Boston/2011-2020/2018/01/19/BostonGlobe.com/Arts/Images/NancyRu.jpg",
+                    "origin": "The Boston Globe",
+                    "title": "Nancy Pelosi will be a guest judge on \u2018RuPaul\u2019s Drag Race\u2019",
+                    "ts": 1516352524,
+                    "twitterid": 954277768434475008,
+                    "url": "https://www.bostonglobe.com/arts/television/2018/01/18/nancy-pelosi-will-guest-judge-rupaul-drag-race/s9XpWmKy5fw5IyjzK63ccN/story.html?camp=bg%3Abrief%3Arss%3Afeedly&rss_id=feedly_rss_brief&s_campaign=bostonglobe%3Asocialflow%3Atwitter"
+                },
+                {
+                    "_id": "5a61979c421aa9271e1f65e6",
+                    "date_month": "2018-01-19",
+                    "image": "https://www.gannett-cdn.com/-mm-/7ee3c3f31c39855dff2e578e4f5ed353dbe21919/c=0-5-743-425&r=x803&c=1600x800/local/-/media/2018/01/18/Phoenix/Phoenix/636518733281292788-Religious-Pamphlet.png",
+                    "origin": "USA TODAY",
+                    "title": "Lawsuit: Vistaprint sent gay couple Satan pamphlets instead of wedding programs",
+                    "ts": 1516342503,
+                    "twitterid": 954235739859976192,
+                    "url": "https://www.usatoday.com/story/news/nation-now/2018/01/18/lawsuit-vistaprint-sent-gay-couple-satan-pamphlets-instead-wedding-programs/1046873001/"
+                },
+                {
+                    "_id": "5a61c1c3421aa9354528768b",
+                    "date_month": "2018-01-19",
+                    "image": "https://www.washingtonpost.com/rf/image_1484w/WashingtonPost/Content/Blogs/Images/201303/wonk1018.jpg?t=20170517",
+                    "origin": "Washington Post",
+                    "title": "The top 10 places people are moving, and how their choices differ by race",
+                    "ts": 1516353910,
+                    "twitterid": 954283581337227264,
+                    "url": "https://www.washingtonpost.com/news/wonk/wp/2018/01/18/the-top-10-places-people-are-moving-and-how-their-choices-differ-by-race/?utm_term=.c0e1600e6a58&tid=sm_tw"
+                }
+            ]
+        ]
+    },
+    {
+        "list": [
+            106,
+            4
+        ],
+        "months": [
+            "2018-01-18",
+            "2018-01-19"
+        ],
+        "peaks": [],
+        "theme": [
+            "shutdown",
+            "Senate",
+            "govern",
+            "House",
+            "GOP",
+            "votes",
+            "Trump",
+            "spending",
+            "Republicans",
+            "term",
+            "Democrats",
+            "Looming",
+            "says",
+            "Avoid",
+            "Budget"
+        ],
+        "toparticles": [
+            [
+                {
+                    "_id": "5a60b6b8421aa916b9f4328c",
+                    "date_month": "2018-01-18",
+                    "image": "https://twt-media.washtimes.com/media/image/2017/07/26/trump_transgender_recruits_30312.jpg",
                     "origin": "The Washington Times",
-                    "title": "Donald Trump to address the March for Life",
-                    "ts": 1516216063,
-                    "twitterid": 953705409113665536,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/17/donald-trump-address-march-life/"
+                    "title": "Paul Ryan: Pentagon needs a long-term budget for military readiness",
+                    "ts": 1516286078,
+                    "twitterid": 953999072884555776,
+                    "url": "https://www.washingtontimes.com/news/2018/jan/18/paul-ryan-pentagon-needs-a-long-term-budget-for-mi/"
                 },
                 {
-                    "_id": "5a5f5738421aa9390a52ad98",
-                    "date_month": "2018-01-17",
-                    "image": "https://static01.nyt.com/images/2018/01/18/world/17USBriefing-Amcore/17USBriefing-Trump-facebookJumbo.jpg",
-                    "origin": "NYT National News",
-                    "title": "C.I.A., Donald Trump, Simone Biles: Your Wednesday Briefing",
-                    "ts": 1516195811,
-                    "twitterid": 953620466547257344,
-                    "url": "https://www.nytimes.com/2018/01/17/briefing/cia-donald-trump-simone-biles.html?partner=socialflow&smid=tw-nytnational&smtyp=cur"
+                    "_id": "5a60c4d1421aa917c534e670",
+                    "date_month": "2018-01-18",
+                    "image": "https://twt-media.washtimes.com/media/image/2017/12/01/Congress_Taxes_82641.jpg-7eaa6.jpg",
+                    "origin": "The Washington Times",
+                    "title": "John Kennedy says Republicans need as many Democratic votes on a CR as they can get",
+                    "ts": 1516289733,
+                    "twitterid": 954014406899388417,
+                    "url": "https://www.washingtontimes.com/news/2018/jan/18/john-kennedy-says-republicans-many-democratic-vote/"
+                },
+                {
+                    "_id": "5a60e106421aa918b20fc5d0",
+                    "date_month": "2018-01-18",
+                    "image": "https://twt-media.washtimes.com/media/image/2018/01/18/Trump_14867.jpg-7ad2a.jpg",
+                    "origin": "The Washington Times",
+                    "title": "GOP challenges Schumer to avoid shutdown",
+                    "ts": 1516294861,
+                    "twitterid": 954035915244044288,
+                    "url": "https://www.washingtontimes.com/news/2018/jan/18/gop-challenges-schumer-avoid-shutdown/"
+                },
+                {
+                    "_id": "5a609a96421aa9154f2b6f7b",
+                    "date_month": "2018-01-18",
+                    "image": "https://twt-media.washtimes.com/media/image/2017/10/17/Congress_08439.jpg-1bd75.jpg",
+                    "origin": "The Washington Times",
+                    "title": "Angus King, Mike Rounds say they will not support CR without long-term budget deal in place",
+                    "ts": 1516279934,
+                    "twitterid": 953973305924640768,
+                    "url": "https://www.washingtontimes.com/news/2018/jan/18/angus-king-mike-rounds-say-they-will-not-support-c/"
+                },
+                {
+                    "_id": "5a607e5c421aa913eec7ce1d",
+                    "date_month": "2018-01-18",
+                    "image": "https://storage.googleapis.com/afs-prod/media/media:55d884263ae142a3a05b394b94646f02/800.jpeg",
+                    "origin": "AP Politics",
+                    "title": "'Very strong' Democratic sentiment to oppose GOP budget bill",
+                    "ts": 1516273192,
+                    "twitterid": 953945026333159426,
+                    "url": "https://www.apnews.com/5166b20b113c47589ba5045723c3b552?utm_campaign=SocialFlow&utm_source=Twitter&utm_medium=AP_Politics"
+                },
+                {
+                    "_id": "5a60d2e3421aa918439c2245",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/ryanpaul_011118gn2_lead.jpg",
+                    "origin": "The Hill",
+                    "title": "Ryan: Budget fights have pushed military 'past the breaking point'",
+                    "ts": 1516292163,
+                    "twitterid": 954024598286323715,
+                    "url": "http://thehill.com/policy/defense/369527-ryan-budget-fights-have-pushed-military-past-the-breaking-point"
+                },
+                {
+                    "_id": "5a60e106421aa918b20fc574",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/moranjerry_gregnash.jpg",
+                    "origin": "The Hill",
+                    "title": "Senators float days-long funding bill",
+                    "ts": 1516298288,
+                    "twitterid": 954050285508415488,
+                    "url": "http://thehill.com/homenews/senate/369558-senators-float-days-long-funding-bill?__twitter_impression=true"
+                },
+                {
+                    "_id": "5a60fd1f421aa919ce1cdc18",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/paulrand_101217gn2_lead.jpg",
+                    "origin": "The Hill",
+                    "title": "Paul opposes House GOP funding plan",
+                    "ts": 1516305487,
+                    "twitterid": 954080482005864448,
+                    "url": "http://thehill.com/homenews/senate/369590-paul-opposes-house-gop-funding-plan"
                 }
             ],
             []
@@ -833,196 +307,221 @@
     },
     {
         "list": [
-            136,
-            126,
-            1
+            32
         ],
         "months": [
-            "2018-01-16",
-            "2018-01-17",
             "2018-01-18"
         ],
         "peaks": [],
         "theme": [
-            "Trump",
-            "shutdown",
-            "DACA",
-            "Senator",
-            "immigrant",
-            "government",
-            "Democrats",
-            "GOP",
-            "Republicans",
-            "says",
-            "deal",
             "House",
-            "Dem",
-            "spending",
-            "Funds"
+            "Bannon",
+            "testimony",
+            "Trump",
+            "interview",
+            "Russia",
+            "Fusion",
+            "GPS",
+            "releases",
+            "Transcript",
+            "White",
+            "founder",
+            "Intel",
+            "Mueller",
+            "committee"
         ],
         "toparticles": [
             [
                 {
-                    "_id": "5a5e4c08421aa92b065843ae",
-                    "date_month": "2018-01-16",
-                    "image": "https://twt-media.washtimes.com/media/image/2018/01/13/Congress_Immigration_55307.jpg-e9352.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Lindsey Graham blames White House staff for problems from immigration meeting",
-                    "ts": 1516125854,
-                    "twitterid": 953327044577976320,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/16/lindsey-graham-blames-white-house-staff-problems-i/?utm_campaign=shareaholic&utm_medium=twitter&utm_source=socialnetwork"
+                    "_id": "5a609a96421aa9154f2b6fbc",
+                    "date_month": "2018-01-18",
+                    "image": "https://media1.s-nbcnews.com/j/MSNBC/Components/Video/201801/n_maddow_asubpoena_180117_1920x1080.video_1067x600.jpg",
+                    "origin": "MSNBC",
+                    "title": "Mueller subpoena blocks Bannon congressional testimony: NBC News",
+                    "ts": 1516276821,
+                    "twitterid": 953960247806316546,
+                    "url": "http://www.msnbc.com/rachel-maddow/watch/mueller-subpoena-blocks-bannon-congressional-testimony-nbc-news-1139461699820?cid=sm_npd_ms_tw_ma"
                 },
                 {
-                    "_id": "5a5e7650421aa92d677b2574",
-                    "date_month": "2018-01-16",
-                    "image": "https://d3i6fh83elv35t.cloudfront.net/static/2018/01/dreamer-1024x683.jpg",
-                    "origin": "PBS NewsHour",
-                    "title": "Deal on \u2018Dreamers\u2019 uncertain as lawmakers try to avert government shutdown",
-                    "ts": 1516140003,
-                    "twitterid": 953386389848121344,
-                    "url": "https://www.pbs.org/newshour/politics/deal-on-dreamers-uncertain-as-lawmakers-try-to-avert-government-shutdown"
+                    "_id": "5a615f6f421aa92189ccaf10",
+                    "date_month": "2018-01-18",
+                    "image": "https://media1.s-nbcnews.com/j/MSNBC/Components/Video/201801/n_hardball_schiff_180118_1920x1080.video_1067x600.jpg",
+                    "origin": "MSNBC",
+                    "title": "Rep. Schiff on Russia investigation: Money laundering could be...",
+                    "ts": 1516329784,
+                    "twitterid": 954182392398467073,
+                    "url": "http://www.msnbc.com/hardball/watch/rep-schiff-on-russia-investigation-money-laundering-could-be-compromising-1140287555576?cid=sm_npd_ms_tw_ma"
                 },
                 {
-                    "_id": "5a5e8449421aa92e338166ef",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/mcconnellmitch_010918gn2_lead.jpg",
+                    "_id": "5a61435a421aa91fad772938",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/trumpdonald_010518getty.jpg",
                     "origin": "The Hill",
-                    "title": "McConnell to Dems: Don't hold government 'hostage' over DACA",
-                    "ts": 1516142415,
-                    "twitterid": 953396509592244225,
-                    "url": "http://thehill.com/policy/finance/369228-mcconnell-to-dems-dont-hold-government-hostage-over-daca"
+                    "title": "'Steele dossier' firm suspected Trump-Russia money laundering",
+                    "ts": 1516320423,
+                    "twitterid": 954143128021340161,
+                    "url": "http://thehill.com/policy/national-security/369654-steele-dossier-firm-suspected-trump-russia-money-laundering"
                 },
                 {
-                    "_id": "5a5e682f421aa92cbb6d2809",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/blogs/mialovegetty.jpg",
+                    "_id": "5a615169421aa920d6c81d9e",
+                    "date_month": "2018-01-18",
+                    "image": "https://www.gannett-cdn.com/-mm-/c3c7eaae6276cbe0dcca939b5720b07bfd37f926/c=0-401-4759-3090&r=x1683&c=3200x1680/local/-/media/2018/01/18/USATODAY/USATODAY/636519027748538163-AP-Trump-Russia-Probe-Congress.jpg",
+                    "origin": "USA TODAY",
+                    "title": "Transcript: Fusion GPS looked into possible money laundering between Trump, Russians",
+                    "ts": 1516325769,
+                    "twitterid": 954165551126859776,
+                    "url": "https://www.usatoday.com/story/news/politics/2018/01/18/house-intel-transcriptfusion-gps-founder-firm-looked-into-possible-money-laundering-between-trump-ru/1046390001/?utm_source=dlvr.it&utm_medium=twitter"
+                },
+                {
+                    "_id": "5a60d2e3421aa918439c225a",
+                    "date_month": "2018-01-18",
+                    "image": "https://www.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2018/01/18/National-Politics/Images/Trump_Russia_Probe_91551-ce297.jpg?t=20170517",
+                    "origin": "Washington Post",
+                    "title": "Bannon interview with House intelligence panel postponed, despite subpoena",
+                    "ts": 1516291416,
+                    "twitterid": 954021464184950784,
+                    "url": "https://www.washingtonpost.com/powerpost/bannon-interview-with-house-intelligence-panel-postponed-despite-subpoena/2018/01/18/f1cbdc5e-fc62-11e7-8f66-2df0b94bb98a_story.html?utm_term=.7713443908b3&tid=sm_tw"
+                },
+                {
+                    "_id": "5a61273a421aa91cd7adb143",
+                    "date_month": "2018-01-18",
+                    "image": "http://cdn.cnn.com/cnnnext/dam/assets/170816083119-02-hope-hicks-super-tease.jpg",
+                    "origin": "CNN Politics",
+                    "title": "House Intel delays Hope Hicks interview in Russia investigation",
+                    "ts": 1516313764,
+                    "twitterid": 954115199006576643,
+                    "url": "http://www.cnn.com/2018/01/18/politics/hope-hicks-house-intelligence-testimony-delayed/index.html?sr=twCNNp011818hope-hicks-house-intelligence-testimony-delayed0426PMStory&CNNPolitics=Tw"
+                },
+                {
+                    "_id": "5a611926421aa91c023b9c26",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/article_images/schiffa_nunesd03202017gn.jpg",
                     "origin": "The Hill",
-                    "title": "Haitian-American GOP lawmaker meets with Trump",
-                    "ts": 1516134681,
-                    "twitterid": 953364069943300099,
-                    "url": "http://thehill.com/homenews/administration/369194-haitian-american-gop-lawmaker-meets-with-trump"
+                    "title": "Read congressional testimony by co-founder of firm tied to Trump dossier",
+                    "ts": 1516311246,
+                    "twitterid": 954104638218915840,
+                    "url": "http://thehill.com/homenews/house/369617-read-congressional-testimony-by-co-founder-of-firm-tied-to-trump-dossier"
                 },
                 {
-                    "_id": "5a5e05b8421aa927bbff7ce1",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/pelosischumerhoyer_011518getty.jpg",
-                    "origin": "The Hill",
-                    "title": "Dems search for winning playbook",
-                    "ts": 1516107661,
-                    "twitterid": 953250740184735744,
-                    "url": "http://thehill.com/homenews/campaign/369021-dems-search-for-winning-playbook"
-                },
-                {
-                    "_id": "5a5e4c08421aa92b0658436b",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/grahamlindsey_120617gn_lead.jpg",
-                    "origin": "The Hill",
-                    "title": "Graham: 'This has turned into an s-show'",
-                    "ts": 1516128543,
-                    "twitterid": 953338325821255681,
-                    "url": "http://thehill.com/homenews/senate/369162-graham-this-has-turned-into-an-s-show?rnd=1516126886"
-                },
-                {
-                    "_id": "5a5e5a21421aa92beb7da219",
-                    "date_month": "2018-01-16",
-                    "image": "http://thehill.com/sites/default/files/grahamlindsey_120617gn_lead.jpg",
-                    "origin": "The Hill",
-                    "title": "Graham: 'This has turned into a s-show'",
-                    "ts": 1516132686,
-                    "twitterid": 953355701644136452,
-                    "url": "http://thehill.com/homenews/senate/369162-graham-this-has-turned-into-an-s-show?__twitter_impression=true&__twitter_impression=true&__twitter_impression=true&__twitter_impression=true"
-                },
-                {
-                    "_id": "5a5e13d3421aa9288e56fbcd",
-                    "date_month": "2018-01-16",
-                    "image": "https://twt-media.washtimes.com/media/image/2018/01/15/1_152018_2018--1-15-20-33-378201.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Democrats decree death in the swamp for the Dreamers",
-                    "ts": 1516113904,
-                    "twitterid": 953276923848937473,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/15/democrats-decree-death-in-the-swamp-for-the-dreame/"
+                    "_id": "5a615f6f421aa92189ccaf13",
+                    "date_month": "2018-01-18",
+                    "image": "https://static.politico.com/a9/40/65311ca54ad18ebb07e51d8391cf/180118-adam-schiff-ap-18017803914681-1.jpg",
+                    "origin": "POLITICO",
+                    "title": "Schiff, White House clash over Hope Hicks testimony in Russia probe",
+                    "ts": 1516329668,
+                    "twitterid": 954181905183903744,
+                    "url": "https://www.politico.com/story/2018/01/18/adam-schiff-hope-hicks-russia-investigation-349257"
                 }
-            ],
+            ]
+        ]
+    },
+    {
+        "list": [
+            369,
+            17
+        ],
+        "months": [
+            "2018-01-18",
+            "2018-01-19"
+        ],
+        "peaks": [],
+        "theme": [
+            "Trump",
+            "says",
+            "wall",
+            "news",
+            "Poll",
+            "GOP",
+            "House",
+            "shutdown",
+            "Donald",
+            "Senate",
+            "Year",
+            "Fake",
+            "Immigration",
+            "border"
+        ],
+        "toparticles": [
             [
                 {
-                    "_id": "5a5f5738421aa9390a52adb3",
-                    "date_month": "2018-01-17",
-                    "image": "https://twt-media.washtimes.com/media/image/2015/01/25/adam.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Adam Kinzinger: Lawmakers may pass spending measure without immigration deal",
-                    "ts": 1516194139,
-                    "twitterid": 953613455063441408,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/17/adam-kinzinger-lawmakers-may-pass-spending-measure/"
+                    "_id": "5a609a96421aa9154f2b6f98",
+                    "date_month": "2018-01-18",
+                    "image": "https://cbsnews1.cbsistatic.com/hub/i/r/2017/04/24/a9838a36-c384-45b1-8e23-56d40065b03f/thumbnail/1200x630/047e2f8b905ed427ec1b1861c50ed27d/170424-en-evans-border-wall-03.jpg",
+                    "origin": "CBS News Politics",
+                    "title": "Most Americans support DACA, but oppose border wall - CBS News poll",
+                    "ts": 1516278637,
+                    "twitterid": 953967865945907201,
+                    "url": "https://www.cbsnews.com/news/most-americans-support-daca-but-oppose-border-wall-cbs-news-poll/?ftag=CNM-00-10aab7i&linkId=47091557"
                 },
                 {
-                    "_id": "5a5f8f78421aa93ae449145b",
-                    "date_month": "2018-01-17",
-                    "image": "https://twt-media.washtimes.com/media/image/2018/01/08/health_care_democrats_65260.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Bernie Sanders says funding bill must include more than military spending",
-                    "ts": 1516209959,
-                    "twitterid": 953679809040863232,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/17/bernie-sanders-says-funding-bill-must-include-more/"
-                },
-                {
-                    "_id": "5a5f5738421aa9390a52ad89",
-                    "date_month": "2018-01-17",
-                    "image": "https://twt-media.washtimes.com/media/image/2017/05/16/Trump_Intelligence_Russia_98554.jpg-97a63.jpg",
-                    "origin": "The Washington Times",
-                    "title": "Richard Blumenthal says he will not vote for a short-term spending bill",
-                    "ts": 1516196452,
-                    "twitterid": 953623155326750720,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/17/richard-blumenthal-says-he-will-not-vote-short-ter/"
-                },
-                {
-                    "_id": "5a5f5738421aa9390a52ada5",
-                    "date_month": "2018-01-17",
-                    "image": "http://thehill.com/sites/default/files/pharmacy_drugs_032117getty.jpg",
+                    "_id": "5a610b14421aa91b0489e79e",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/dacaprotest_091017getty.jpg",
                     "origin": "The Hill",
-                    "title": "Lawmakers weigh measure to fight high drug prices",
-                    "ts": 1516194963,
-                    "twitterid": 953616909102190598,
-                    "url": "http://thehill.com/policy/healthcare/369253-lawmakers-weigh-measure-to-fight-high-drug-prices"
+                    "title": "Poll: Voters oppose bill combining DACA protections with border wall",
+                    "ts": 1516308185,
+                    "twitterid": 954091797973790721,
+                    "url": "http://thehill.com/blogs/ballot-box/369599-poll-voters-oppose-bill-combining-daca-protections-with-border-wall"
                 },
                 {
-                    "_id": "5a5fab9d421aa93bce9c63ef",
-                    "date_month": "2018-01-17",
-                    "image": "http://thehill.com/sites/default/files/grahamlindsey_092517gn_lead.jpg",
-                    "origin": "The Hill",
-                    "title": "Graham to oppose short-term House funding measure",
-                    "ts": 1516218016,
-                    "twitterid": 953713600241299456,
-                    "url": "http://thehill.com/homenews/senate/369380-graham-to-oppose-short-term-house-funding-measure"
+                    "_id": "5a60b6b8421aa916b9f43292",
+                    "date_month": "2018-01-18",
+                    "image": "https://cbsnews2.cbsistatic.com/hub/i/r/2018/01/11/ae6a3feb-4b58-45b1-b661-7a5c67084cff/thumbnail/1200x630g2/e5379b33b9edc2bcaf726e8d731e2bf4/gettyimages-903910010.jpg",
+                    "origin": "CBS News Politics",
+                    "title": "Trump at one year: Low job approval, but economy is good - CBS News poll",
+                    "ts": 1516285800,
+                    "twitterid": 953997909619552258,
+                    "url": "https://www.cbsnews.com/news/trump-at-one-year-low-job-approval-but-economy-is-good-cbs-news-poll/?ftag=CNM-00-10aab7i&linkId=47091617"
                 },
                 {
-                    "_id": "5a5fab9d421aa93bce9c6415",
-                    "date_month": "2018-01-17",
-                    "image": "http://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2018/01/17/0/0/694940094001_5713638278001_5713615933001-vs.jpg?ve=1",
-                    "origin": "Fox News",
-                    "title": "Immigration, now military spending, threaten to shut down government",
-                    "ts": 1516216566,
-                    "twitterid": 953707518408249344,
-                    "url": "http://www.foxnews.com/politics/2018/01/17/immigration-now-military-spending-threaten-to-shut-down-government.html"
+                    "_id": "5a607e5c421aa913eec7ce3f",
+                    "date_month": "2018-01-18",
+                    "image": "https://media.npr.org/assets/img/2018/01/17/gettyimages-905679720_wide-7bd278828439c71178e92b3f33b41071eeaa668c.jpg?s=1400",
+                    "origin": "NPR Politics",
+                    "title": "Majority Of Americans See Trump's First Year As A Failure",
+                    "ts": 1516270567,
+                    "twitterid": 953934017669218304,
+                    "url": "https://www.npr.org/2018/01/18/578639915/majority-of-americans-see-trumps-first-year-as-a-failure?utm_source=dlvr.it&utm_medium=twitter"
                 },
                 {
-                    "_id": "5a5f8f78421aa93ae4491454",
-                    "date_month": "2018-01-17",
-                    "image": "http://thehill.com/sites/default/files/durbinrichard_011618gn_lead.jpg",
-                    "origin": "The Hill",
-                    "title": "Senate Democrats blast House GOP government funding measure",
-                    "ts": 1516210264,
-                    "twitterid": 953681086730657794,
-                    "url": "http://thehill.com/homenews/senate/369343-senate-democrats-blast-house-gop-government-funding-measure"
-                },
-                {
-                    "_id": "5a5f8175421aa93a67350921",
-                    "date_month": "2018-01-17",
-                    "image": "https://twt-media.washtimes.com/media/image/2018/01/11/Government_Surveillance_55628.jpg-0bb96.jpg",
+                    "_id": "5a60c4d1421aa917c534e651",
+                    "date_month": "2018-01-18",
+                    "image": "https://twt-assets.washtimes.com/v4/images/favicon.6bd96ab48f85.ico",
                     "origin": "The Washington Times",
-                    "title": "Paul Ryan: \u2018Wrong\u2019 to block military funding over unrelated issues",
-                    "ts": 1516206822,
-                    "twitterid": 953666650565423104,
-                    "url": "https://www.washingtontimes.com/news/2018/jan/17/ryan-wrong-block-military-funding-unrelated-issues/"
+                    "title": "\u2018Dreamer\u2019 supporters oppose government shutdown",
+                    "ts": 1516290870,
+                    "twitterid": 954019171733508096,
+                    "url": "https://www.washingtontimes.com/news/2018/jan/18/dreamer-supporters-oppose-government-shutdown/"
+                },
+                {
+                    "_id": "5a60e106421aa918b20fc5a1",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/article_images/pelosihousedems_031615getty.jpg",
+                    "origin": "The Hill",
+                    "title": "Poll: Dems' lead on House generic ballot shrinks to single digits",
+                    "ts": 1516296487,
+                    "twitterid": 954042732196106241,
+                    "url": "http://thehill.com/homenews/campaign/369549-poll-dems-lead-on-house-generic-ballot-shrinks-to-single-digits"
+                },
+                {
+                    "_id": "5a610b14421aa91b0489e7c4",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/pelosinancy_011118gn4_lead.jpg",
+                    "origin": "The Hill",
+                    "title": "Poll: Dems lead GOP by 11 points on generic 2018 House ballot",
+                    "ts": 1516306147,
+                    "twitterid": 954083249382412289,
+                    "url": "http://thehill.com/homenews/campaign/369591-poll-dems-lead-gop-by-11-on-generic-2018-house-ballot"
+                },
+                {
+                    "_id": "5a60a8a6421aa91623a1fbe0",
+                    "date_month": "2018-01-18",
+                    "image": "http://thehill.com/sites/default/files/trumpnatotwo05252017getty.jpg",
+                    "origin": "The Hill",
+                    "title": "Global approval of US leadership falls to new low",
+                    "ts": 1516282862,
+                    "twitterid": 953985583696830464,
+                    "url": "http://thehill.com/policy/international/369490-global-approval-of-us-leadership-falls-to-new-low"
                 }
             ],
             []

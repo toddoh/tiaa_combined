@@ -13,6 +13,13 @@ sys.stdout = f
 
 print(vars(args), vars(args)['target'])
 
+def interpreter_run(type):
+    if type != '':
+        interpret(type)
+    else:
+        print('Interpreter: No type provided, finished with none.')
+
+
 if vars(args)['target'] != '':
     interpret(vars(args)['target'])
 else:
