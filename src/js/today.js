@@ -30,14 +30,9 @@ export function init_render() {
             <p>Journalism Transparency Details</p>
         </div>
         <div class="tpdetails-text">
-            <p>This content renders the clustering result of our processing system.</p>
-            <p>We aggregated and processed stories from CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, and Financial Times from the past 48 hours. Based on the data, the system did run a full natural language processing and clustering to sort out key topics.</p>
-            <p>Our clustering system uses a sophisticated algorithm to automatically determine a reasonable and optimal size of clusters. Once the initial data processing is done, our editorial team manually verifies the result, reformat theme keywords for bettery relevancy, and removes unnecessary cluster theme that contains publisher promotional keywords. Lastly, the "interpreter" unit creates a final result ready to be published.</p>
-            <div class="datasets">
-                <p>As a part of our commitment to journalism transparency, we share the untouched initial result data.</p>
-                <a href="https://thisisallabout.com/dataset/today_data_untouched.json" target="_blank"><p>Plain JSON (untouched, large file size)</p></a>
-                <a href="https://thisisallabout.com/dataset/today_data.json" target="_blank"><p>Plain JSON (final revision)</p></a>
-            </div>
+            <p>This content renders clustering result created automatically by our processing system. We verify that the result is completely untouched.</p>
+            <p>We aggregated and processed stories from CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, and Financial Times from the past 24 hours. Based on the data, the system did run a full natural language processing and clustering to sort out key topics.</p>
+            <p>Our clustering system uses a sophisticated algorithm to automatically determine a reasonable and optimal size of clusters. Once the initial data processing is done, the "interpreter" unit creates a final result ready to be published. </p>
         </div>
         <div class="tpdetails-close-action">
             <div class="icon"></div>
@@ -48,7 +43,7 @@ export function init_render() {
     render(today_hero_markup(), document.querySelector('.minion-contents'));
     var today = new Date();
     var dd = today.getDate();
-    var mm = today.getMonth(); //January is 0!
+    var mm = today.getMonth();
     var yyyy = today.getFullYear();
     var m_names = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
@@ -89,39 +84,42 @@ const render_data = () => {
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
                 <div class="analysis-item">
-                    <div class="item-info">
-                        <div class="item-bg" banana-imagesrc=""></div>
-                        <div class="item-theme">
-                            <div class="themes">
-                            ${i.theme.map((t) => html`
-                                <p class="theme-header">${t}</p>
-                            `
-                            )}
+                    <div class="item-wrapper">
+                        <div class="item-info">
+                            <div class="item-theme">
+                                <div class="themes">
+                                ${i.theme.map((t) => html`
+                                    <p class="theme-header">${t}</p>
+                                `
+                                )}
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="item-toparticle-container">
-                        <div class="toparticle-content-container">
-                            ${i.toparticles.map((arti) => html`
-                                ${arti.length > 0 ? html`
-                                <div class="toparticle-month" banana-month="${arti[0].date_month}">
-                                    ${arti.map((a) => html`
-                                        <div class="toparticle-object" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
-                                            <div class="article-info">
-                                                <p class="article-title">${a.title}</p>
-                                                <p class="article-origin">${a.origin}</p>
+                        <div class="item-toparticle-container">
+                            <div class="toparticle-content-container">
+                                ${i.toparticles.map((arti) => html`
+                                    ${arti.length > 0 ? html`
+                                        ${arti.map((a) => html`
+                                            <div class="toparticle-object" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
+                                                <div class="article-info">
+                                                    <p class="article-title">${a.title}</p>
+                                                    <p class="article-origin">${a.origin}</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    `
-                                    )}
-                                </div>
-                                ` : ''}
-                            `
-                            )}
+                                        `
+                                        )}
+                                    ` : ''}
+                                `
+                                )}
+                            </div>
+                        </div>
+                        <div class="item-reveal-action">
+                            <div class="icon"></div>
+                            <p>More</p>
                         </div>
                     </div>
-
+                    
                     <div class="item-close-action">
                         <div class="icon"></div>
                     </div>
@@ -164,14 +162,31 @@ const postrender_data = () => {
         });
     });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.today-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
-        var firstmonth = el.querySelectorAll('.toparticle-content-container .toparticle-object')[0];
-        el.querySelector('.item-bg').style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + firstmonth.getAttribute('banana-imagesrc') + ')';
-    });
-
     Array.prototype.forEach.call(document.querySelectorAll('.today-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
         //el.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + //el.getAttribute('banana-imagesrc') + ')';
     });
+
+    var item_toggle = document.querySelectorAll('.today-analysis-data .analysis-item .item-reveal-action');
+    for (var i=0; i < item_toggle.length; i++) {
+        item_toggle[i].addEventListener('click', function (e) {
+            var parent = getParents(this, '.analysis-item')[0];
+            if (!parent.classList.contains('selected')) {
+                parent.classList.add('selected');
+
+                var list = document.querySelector('.today-analysis-data .analysis-list');
+                if (!list.classList.contains('selected')) {
+                    list.classList.add('selected');
+                }
+            } else {
+                parent.classList.remove('selected');
+
+                var list = document.querySelector('.today-analysis-data .analysis-list');
+                if (list.classList.contains('selected')) {
+                    list.classList.remove('selected');
+                }
+            }
+        });
+    }
     
     if (check_mobile()) {
         var mobile_ithm = document.querySelectorAll('.today-analysis-data .analysis-list .item-theme');
@@ -189,28 +204,6 @@ const postrender_data = () => {
                     parent.classList.remove('selected');
 
                     var list = document.querySelector('.today-analysis-data .analysis-list');
-                    if (list.classList.contains('highlighted')) {
-                        list.classList.remove('highlighted');
-                    }
-                }
-            });
-        }
-
-        var mobile_ithm_close = document.querySelectorAll('.today-analysis-data .analysis-list .item-close-action');
-        for (var i=0; i < mobile_ithm_close.length; i++) {
-            mobile_ithm_close[i].addEventListener('click', function (e) {
-                var parent = getParents(this, '.analysis-item')[0];
-                if (!parent.classList.contains('selected')) {
-                    parent.classList.add('selected');
-
-                    var list = document.querySelector('.today-analysis-data .analysis-list');
-                    if (!list.classList.contains('highlighted')) {
-                        list.classList.add('highlighted');
-                    }
-                } else {
-                    parent.classList.remove('selected');
-
-                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }

@@ -37,13 +37,58 @@
 
 .today-analysis-data .analysis-list{
     display: flex;
-    flex-direction: column;
     width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    justify-content: space-between;
 }
 
 .today-analysis-data .analysis-list .analysis-item{
-    margin: 30px 0 0 0;
+    margin: 3vh 0 0 0;
     position: relative;
+    display: flex;
+    align-self: baseline;
+    flex-shrink: 0;
+    min-width: 32%;
+    max-width: 32%;
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.today-analysis-data .analysis-list.selected .analysis-item.selected{
+    display: flex;
+    max-width: 100%;
+    min-width: 100%;
+    box-shadow: none;
+}
+
+.today-analysis-data .analysis-list.selected .analysis-item{
+    display: none;
+}
+
+.today-analysis-data .analysis-list .analysis-item:before{
+    content: '';
+    display: block;
+    padding-top: 120%;
+}
+
+.today-analysis-data .analysis-list .analysis-item .item-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 24px;
+    width: calc(100% - 48px);
+    height: calc(100% - 24px);
+    overflow: hidden;
+}
+
+.today-analysis-data .analysis-list.selected .analysis-item.selected .item-wrapper{
+    margin: 0;
+    height: auto;
+    padding-bottom: 50px;
 }
 
 .today-analysis-data .analysis-list .analysis-item .item-info{
@@ -52,7 +97,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-self: baseline;
-    margin-left: 60px;
 }
 
 .today-analysis-data .analysis-list .analysis-item .item-bg{
@@ -66,21 +110,26 @@
 .today-analysis-data .analysis-list .analysis-item .item-theme{
     position: relative;
     display: flex;
-    width: 45%;
+    width: 100%;
     flex-direction: row;
     align-items: flex-start;
     flex-shrink: 0;
     padding: 0;
 }
 
+.today-analysis-data .analysis-list.selected .analysis-item.selected .item-theme{
+    width: 47%;
+    font-size: 1.15em;
+}
+
 .today-analysis-data .analysis-list .theme-header{
     position: relative;
     align-self: baseline;
     font-weight: 600;
-    font-size: 1.2em;
-    padding: 7px 7px;
+    font-size: 1.1em;
+    padding: 6px 7px;
     color: #fff;
-    margin: 0 8px 10px 0;
+    margin: 0 7px 9px 0;
     background: #00b3f7;
 }
 
@@ -90,7 +139,7 @@
     position: absolute;
     bottom: -3px;
     left: 0;
-    height: 4px;
+    height: 3px;
     width: 90%;
     background: #007ec7;
 }
@@ -101,7 +150,6 @@
     flex-wrap: wrap;
     align-content: flex-start;
     align-self: baseline;
-    margin-left: 16px;
 }
 
 .today-analysis-data .analysis-list .analysis-item .item-peakinfo{
@@ -113,10 +161,15 @@
 
 .today-analysis-data .analysis-list .analysis-item .toparticle-content-container{
     position: relative;
-    padding: 30px 80px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+.today-analysis-data .analysis-list.selected .analysis-item.selected .toparticle-content-container{
+    width: 70%;
+    margin-left: 30px;
 }
 
 .today-analysis-data .analysis-list .toparticle-object{
@@ -129,6 +182,11 @@
 }
 
 .today-analysis-data .analysis-list .toparticle-object .article-title{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.today-analysis-data .analysis-list .analysis-item.selected .toparticle-object .article-title{
     font-size: 1.1em;
     font-weight: 600;
 }
@@ -137,6 +195,33 @@
     font-size: 0.85em;
     margin-top: 3px;
     color: #8a8a8a;
+}
+
+.today-analysis-data .analysis-list .analysis-item .item-reveal-action{
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    background: #fff;
+    width: 100%;
+    height: 17px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #505050;
+    font-size: 0.9em;
+}
+
+.today-analysis-data .analysis-list .analysis-item .item-reveal-action .icon{
+    width: 15px;
+    height: 9px;
+    background-image: url('../resources/symbol_arrow_down.png');
+    background-size: cover;
+    margin-right: 7px;
+}
+
+.today-analysis-data .analysis-list.selected .analysis-item.selected .item-reveal-action .icon{
+    background-image: url('../resources/symbol_arrow_up.png');
 }
 
 /* tp details */

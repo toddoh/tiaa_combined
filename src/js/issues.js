@@ -185,7 +185,7 @@ const postrender_data = () => {
                 } else {
                     parent.classList.remove('selected');
 
-                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
+                    var list = document.querySelector('.issues-analysis-data .analysis-list');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }
