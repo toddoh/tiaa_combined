@@ -77,8 +77,11 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     pca = PCA(n_components=2).fit(tfs.todense())
     data2D = pca.transform(tfs.todense())
 
+    maxit = 500
+    if type == 'today':
+        maxit = 2000;
     for kval in range_n_clusters:
-        km = KMeans(n_clusters=kval, init='k-means++', max_iter=500)
+        km = KMeans(n_clusters=kval, init='k-means++', max_iter=maxit)
         km.fit(data2D)
         km_err.append(km.inertia_)
 
@@ -115,7 +118,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
     print('Found optimal k value: {0}'.format(kIdx))
 
-    km_final = KMeans(n_clusters=kIdx, init='k-means++', max_iter=500, n_init=10, verbose=1)
+    km_final = KMeans(n_clusters=kIdx, init='k-means++', max_iter=maxit, n_init=10, verbose=1)
     km_final.fit(tfs)
 
     cluster_assignments_dict = {}
