@@ -63,7 +63,10 @@ def interpret(type):
                 print('@@@@@@@@ ERRRR')
                 continue
             else:
-                parsed_data = parse_aggregated(all_documents_dict, 2, 13, interpret_datapath)
+                if type == 'today':
+                    parsed_data = parse_aggregated(all_documents_dict, 2, 13, interpret_datapath, type)
+                else:
+                    parsed_data = parse_aggregated(all_documents_dict, 2, 13, interpret_datapath)
 
             print('+++++++ PARSING')
             parsed_data_themes = []
@@ -123,7 +126,10 @@ def interpret(type):
                 results = searcher.search(query)
 
                 if len(results):
-                    article_pick = results[0:8]
+                    if type == 'today':
+                        article_pick = results[0:4]
+                    else:
+                        article_pick = results[0:8]
                     print(article_pick)
 
                     for a in article_pick:
