@@ -1,7 +1,7 @@
+from __future__ import division
 import matplotlib
 matplotlib.use('Agg')
 
-from __future__ import division
 import nltk
 from nltk.corpus import stopwords
 import re
