@@ -173,20 +173,10 @@ const postrender_data = () => {
                     if (!list.classList.contains('highlighted')) {
                         list.classList.add('highlighted');
                     }
-
-                    var list = document.querySelector('.presidenttrump-hero');
-                    if (!list.classList.contains('highlighted')) {
-                        list.classList.add('highlighted');
-                    }
                 } else {
                     parent.classList.remove('selected');
 
                     var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
-                    if (list.classList.contains('highlighted')) {
-                        list.classList.remove('highlighted');
-                    }
-
-                    var list = document.querySelector('.presidenttrump-hero');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }
@@ -205,20 +195,10 @@ const postrender_data = () => {
                     if (!list.classList.contains('highlighted')) {
                         list.classList.add('highlighted');
                     }
-
-                    var list = document.querySelector('.presidenttrump-hero');
-                    if (!list.classList.contains('highlighted')) {
-                        list.classList.add('highlighted');
-                    }
                 } else {
                     parent.classList.remove('selected');
 
                     var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
-                    if (list.classList.contains('highlighted')) {
-                        list.classList.remove('highlighted');
-                    }
-
-                    var list = document.querySelector('.presidenttrump-hero');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }

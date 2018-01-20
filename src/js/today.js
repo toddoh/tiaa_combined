@@ -15,7 +15,7 @@ export function init_render() {
             <p class="hero1 dayinfo">Today in</p>
             <p class="hero1 things"></p>
             <div class="hero2">
-                <p>Here's a quick recap of what's happening now.</p>
+                <p>Here's a quick recap of what's happening now, updated every hour.</p>
                 <p>We automatically clustered stories from the past 24 hours.</p>
             </div>
             <p class="today-herotpdetails">More</p>
@@ -197,7 +197,7 @@ const postrender_data = () => {
     }
     
     if (check_mobile()) {
-        var mobile_ithm = document.querySelectorAll('.today-analysis-data .analysis-list .item-theme');
+        var mobile_ithm = document.querySelectorAll('.today-analysis-data .analysis-list .item-info');
         for (var i=0; i < mobile_ithm.length; i++) {
             mobile_ithm[i].addEventListener('click', function (e) {
                 var parent = getParents(this, '.analysis-item')[0];
@@ -205,34 +205,12 @@ const postrender_data = () => {
                     parent.classList.add('selected');
 
                     var list = document.querySelector('.today-analysis-data .analysis-list');
-                    if (!list.classList.contains('highlighted')) {
-                        list.classList.add('highlighted');
-                    }
-                } else {
-                    parent.classList.remove('selected');
-
-                    var list = document.querySelector('.today-analysis-data .analysis-list');
-                    if (list.classList.contains('highlighted')) {
-                        list.classList.remove('highlighted');
+                    if (!list.classList.contains('selected')) {
+                        list.classList.add('selected');
                     }
                 }
             });
         }
-    }
-
-    var ta_months = document.querySelectorAll('.toparticle-month-container .toparticle-month');
-    for (var i=0; i < ta_months.length; i++) {
-        ta_months[i].addEventListener('click', function (e) {
-            var month = this.getAttribute('banana-month');
-            var parent = getParents(this, '.analysis-item')[0];
-
-            if (parent == null || parent == undefined) return;
-            parent.querySelector('.toparticle-content-container .toparticle-month.selected').classList.remove('selected');
-            parent.querySelector('.toparticle-month-container .toparticle-month.selected').classList.remove('selected');
-
-            parent.querySelector('.toparticle-content-container .toparticle-month[banana-month="' + month + '"]').classList.add('selected');
-            parent.querySelector('.toparticle-month-container .toparticle-month[banana-month="' + month + '"]').classList.add('selected');
-        });
     }
 
     var ta_objs = document.querySelectorAll('.toparticle-content-container .toparticle-object');

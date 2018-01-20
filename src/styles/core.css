@@ -69,6 +69,10 @@ body{
     background-image: url('../resources/section_trump.png');
 }
 
+.navbox-static.thisweek .navbox-logo{
+    background-image: url('../resources/section_default_black.png');
+}
+
 .navbox-currentpath{
     width: 0;
     overflow: hidden;
@@ -156,7 +160,7 @@ body{
     flex-shrink: 0;
 }
 
-.navbox-sections li[data-sectionid="nav-section-issues"]:before{
+.navbox-sections li[data-sectionid="nav-section-thisweek"]:before{
     background-image: url('../resources/section_default_black.png');
 }
 

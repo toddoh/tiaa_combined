@@ -12,7 +12,7 @@ export function init_render() {
     const thisweek_hero_markup = () => html`
     <div class="thisweek-hero">
         <div class="thisweek-herotext">
-            <p class="hero1 dayinfo">#thisweek #ThisWeek</p>
+            <p class="hero1 dayinfo">#ThisWeek #Jan15to20th</p>
             <p class="hero1 things"></p>
             <p class="thisweek-herotpdetails">More</p>
         </div>
@@ -37,7 +37,7 @@ export function init_render() {
     `;
 
     render(thisweek_hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 18, 2018 ET';
+    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 20, 2018 ET';
     render_data();
 }
 
