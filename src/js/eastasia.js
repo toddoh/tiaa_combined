@@ -23,7 +23,7 @@ export function init_render() {
 
         const contentSections = [
             { id: 'ea-all-korea', name: 'South Korean Government Policy Progress Report', desc: 'Tracking down the progress of 100 key policies of the new regime.', path: 'eastasia/korea' },
-            { id: 'ea-all-nkthreat', name: 'In-depth: North Korea Threats and Reality', desc: 'Highlights North Korea threats in a completely different perspective based on reality.', path: 'eastasia/nkthreat' },
+            //{ id: 'ea-all-nkthreat', name: 'In-depth: North Korea Threats and Reality', desc: 'Highlights North Korea threats in a completely different perspective based on reality.', path: 'eastasia/nkthreat' },
         ];
 
         const hero_markup = () => html`

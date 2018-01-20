@@ -4,7 +4,7 @@ import {html, render} from 'lit-html';
 const render_core = () => {
     const contentSections = [
         { id: 'nav-section-today', name: 'Today', path: '' },
-        { id: 'nav-section-issues', name: 'Issues', path: 'issues' },
+        { id: 'nav-section-issues', name: 'ThisWeek', path: 'thisweek' },
         { id: 'nav-section-donaldtrump', name: 'TrumpFirstYear', path: 'donaldtrump' },
         { id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
     ];

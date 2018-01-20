@@ -27,17 +27,12 @@ export function init_render() {
     </div>
     <div class="presidenttrump-tpdetails">
         <div class="tpdetails-reveal">
-            <p>Journalism Transparency Details</p>
+            <p>Technical Details</p>
         </div>
         <div class="tpdetails-text">
             <p>This content renders the clustering result of our processing system.</p>
             <p>We aggregated and processed stories from NPR and PBS NewsHour between January 20th, 2017 and January 15th, 2018 ET through Twitter. Based on the data, the system did run a full natural language processing and clustering to sort out key topics.</p>
             <p>Our clustering system uses a sophisticated algorithm to automatically determine a reasonable and optimal size of clusters. Once the initial data processing is done, our editorial team manually verifies the result, reformat theme keywords for bettery relevancy, and removes unnecessary cluster theme that contains PBS and/or NPR promotional keywords. Lastly, the "interpreter" unit creates a final result ready to be published.</p>
-            <div class="datasets">
-                <p>As a part of our commitment to journalism transparency, we share the untouched initial result data.</p>
-                <a href="https://thisisallabout.com/dataset/donaldtrump_data_untouched.json" target="_blank"><p>Plain JSON (untouched)</p></a>
-                <a href="https://thisisallabout.com/dataset/donaldtrump_data.json" target="_blank"><p>Plain JSON (final revision)</p></a>
-            </div>
         </div>
         <div class="tpdetails-close-action">
             <div class="icon"></div>

@@ -27,7 +27,7 @@ export function init_render() {
     </div>
     <div class="today-tpdetails">
         <div class="tpdetails-reveal">
-            <p>Journalism Transparency Details</p>
+            <p>Technical Details</p>
         </div>
         <div class="tpdetails-text">
             <p>This content renders clustering result created automatically by our processing system. We verify that the result is completely untouched.</p>
@@ -177,7 +177,15 @@ const postrender_data = () => {
                 if (!list.classList.contains('selected')) {
                     list.classList.add('selected');
                 }
-            } else {
+            }
+        });
+    }
+
+    var item_close = document.querySelectorAll('.today-analysis-data .analysis-item .item-close-action');
+    for (var i=0; i < item_close.length; i++) {
+        item_close[i].addEventListener('click', function (e) {
+            var parent = getParents(this, '.analysis-item')[0];
+            if (parent.classList.contains('selected')) {
                 parent.classList.remove('selected');
 
                 var list = document.querySelector('.today-analysis-data .analysis-list');

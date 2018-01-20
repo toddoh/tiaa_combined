@@ -32,7 +32,7 @@
 .ea-all-list > a{
     position: relative;
     margin: 0 20px 0 0;
-    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
     width: 23%;
     flex-shrink: 0;
     display: flex;
