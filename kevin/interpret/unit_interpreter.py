@@ -9,6 +9,7 @@ from nltk.stem.porter import PorterStemmer
 from whoosh.index import create_in
 from whoosh.fields import *
 import whoosh.qparser
+import pytz
 
 def interpret(type):
     datapath = './dataset/' + type + '/'
@@ -159,6 +160,10 @@ def interpret(type):
         result_pick_data['months'] = pick_months
         result_pick_data['toparticles'] = pick_toparticles
         result_pick_data['peaks'] = peak_indexes_months
+
+        then = datetime.datetime.now(pytz.utc)
+        timeest = then.astimezone(pytz.timezone('US/Eastern'))
+        result_pick_data['timestamp'] = timeest
 
         print(result_pick_data)
         all_results.append(result_pick_data)

@@ -34,7 +34,6 @@ export function init_render() {
                 <div class="hero2">
                     <p>As East Asia plays a significant role in many global issues,</p>
                     <p>a deep understanding of East Asian countries are emphasized than ever before.</p>
-                    <p>// Not for Public Distribtution, Under Preview Stage //</p>
                 </div>
             </div>
         </div>

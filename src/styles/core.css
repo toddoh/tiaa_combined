@@ -168,6 +168,33 @@ body{
     background-image: url('../resources/section_trump.png');
 }
 
+
+.navbox-info{
+    display: none;
+    padding: 0 30px 30px;
+}
+
+.top-navbox.visible .navbox-info{
+    display: block;
+    animation: fadeIn 300ms;
+}
+
+.navbox-info > ul{
+    display: flex;
+    flex-wrap: wrap;
+    color: #505050;
+    font-size: 0.95em;
+}
+
+.navbox-info li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-right: 8px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
 .minion-timestamp{
     width: 279px;
     position: absolute;

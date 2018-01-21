@@ -166,6 +166,33 @@ body{
     background-image: url(../res/section_trump.ee03f8b33e95090748741f10afc371b9.png);
 }
 
+
+.navbox-info{
+    display: none;
+    padding: 0 30px 30px;
+}
+
+.top-navbox.visible .navbox-info{
+    display: block;
+    animation: fadeIn 300ms;
+}
+
+.navbox-info > ul{
+    display: flex;
+    flex-wrap: wrap;
+    color: #505050;
+    font-size: 0.95em;
+}
+
+.navbox-info li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-right: 8px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
 .minion-timestamp{
     width: 279px;
     position: absolute;
@@ -239,6 +266,49 @@ body{
         font-size: 0.8em;
         width: 32%;
         padding-top: 33px;
+    }
+}.about-hero{
+    padding: 27vh 200px 30px 60px;
+    display: flex;
+    align-items: center;
+}
+
+.about-hero .hero1{
+    font-size: 2.2em;
+    font-weight: 800;
+}
+
+.about-hero .hero2{
+    color: #505050;
+    font-size: 1.15em;
+    word-wrap: break-word;
+    margin-top: 14px;
+}
+
+
+@media all and (max-width: 980px) {
+    .today-hero{
+        padding: 27vh 30px 30px;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: all 200ms ease;
+    }
+
+    .today-hero.highlighted{
+        max-height: 35vh;
+        opacity: 0;
+    }
+
+    .today-hero .hero1{
+        font-size: 1.3em;
+    }
+
+    .today-hero .hero1.strike:after {
+        height: 3px;
+    }
+
+    .today-hero .hero2{
+        font-size: 1.05em;
     }
 }.presidenttrump-hero{
     width: 100%;

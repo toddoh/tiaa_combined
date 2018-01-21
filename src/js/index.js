@@ -28,6 +28,12 @@ const render_core = () => {
                     )}
                 </ul>
             </div>
+            <div class="navbox-info">
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
+                </ul>
+            </div>
         </div>
         <div class="minion-timestamp">
             <div class="content-ts">

@@ -10,7 +10,7 @@ def init_task(type):
     elif type == 'issues':
         collection_list = ['usasociety']
         for item in collection_list:
-            cluster_articles(item, 'issues', 72)
+            cluster_articles(item, 'issues', 168)
     elif type == 'trumptimemachine':
         collection_list = ['trumptimemachine']
         for item in collection_list:

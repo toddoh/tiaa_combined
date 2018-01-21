@@ -1,0 +1,44 @@
+.about-hero{
+    padding: 27vh 200px 30px 60px;
+    display: flex;
+    align-items: center;
+}
+
+.about-hero .hero1{
+    font-size: 2.2em;
+    font-weight: 800;
+}
+
+.about-hero .hero2{
+    color: #505050;
+    font-size: 1.15em;
+    word-wrap: break-word;
+    margin-top: 14px;
+}
+
+
+@media all and (max-width: 980px) {
+    .today-hero{
+        padding: 27vh 30px 30px;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: all 200ms ease;
+    }
+
+    .today-hero.highlighted{
+        max-height: 35vh;
+        opacity: 0;
+    }
+
+    .today-hero .hero1{
+        font-size: 1.3em;
+    }
+
+    .today-hero .hero1.strike:after {
+        height: 3px;
+    }
+
+    .today-hero .hero2{
+        font-size: 1.05em;
+    }
+}
