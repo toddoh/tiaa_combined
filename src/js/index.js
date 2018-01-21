@@ -6,7 +6,7 @@ const render_core = () => {
         { id: 'nav-section-today', name: 'Today', path: '' },
         { id: 'nav-section-thisweek', name: 'ThisWeek', path: 'thisweek' },
         { id: 'nav-section-donaldtrump', name: 'TrumpFirstYear', path: 'donaldtrump' },
-        { id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
+        //{ id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
     ];
 
     const top_frame_markup = () => html`

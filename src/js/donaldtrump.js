@@ -153,7 +153,7 @@ const postrender_data = () => {
         el.querySelectorAll('.toparticle-month-container .toparticle-month')[0].classList.add('selected');
         el.querySelectorAll('.toparticle-content-container .toparticle-month')[0].classList.add('selected');
         
-        var firstmonth = el.querySelectorAll('.toparticle-content-container .toparticle-month')[0];
+        var firstmonth = el.querySelectorAll('.toparticle-content-container .toparticle-month')[1];
         el.querySelector('.item-bg').style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + firstmonth.querySelectorAll('.toparticle-object')[0].getAttribute('banana-imagesrc') + ')';
     });
 

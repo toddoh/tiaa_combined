@@ -41,17 +41,6 @@ export function init_render() {
     `;
 
     render(today_hero_markup(), document.querySelector('.minion-contents'));
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth();
-    var yyyy = today.getFullYear();
-    var m_names = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-
-    if (dd<10) dd = '0'+dd
-
-    today = mm + '/' + dd + '/' + yyyy;
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on ' + m_names[mm] + ' ' + dd + ', 2018 ET';
-    document.querySelector('.today-hero .dayinfo').innerHTML = m_names[mm] + ' ' + dd + ', Today';
     render_data();
 }
 
@@ -81,6 +70,22 @@ const render_data = () => {
             content_length = ' things ';
         }
         document.querySelector('.today-hero .things').innerHTML = trump_data.length + content_length + 'happening now';
+
+        var contentts = trump_data[0].timestamp;
+        var dateTime = contentts.split(" ");
+        var date = dateTime[0].split("-");
+        var yyyy = date[0];
+        var mm = date[1]-1;
+        var dd = date[2];
+
+        var time = dateTime[1].split(":");
+        var h = time[0];
+        var m = time[1];
+        var s = parseInt(time[2]); //get rid of that 00.0;
+        var m_names = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+        document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on ' + m_names[mm] + ' ' + dd + ' ' + h + ':' + m + ', ' + yyyy + ' ET';
+        document.querySelector('.today-hero .dayinfo').innerHTML = m_names[mm] + ' ' + dd + ', Today';
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
                 <div class="analysis-item">

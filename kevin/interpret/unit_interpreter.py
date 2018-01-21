@@ -162,7 +162,7 @@ def interpret(type):
         result_pick_data['peaks'] = peak_indexes_months
 
         then = datetime.datetime.now(pytz.utc)
-        timeest = then.astimezone(pytz.timezone('US/Eastern'))
+        timeest = str(then.astimezone(pytz.timezone('US/Eastern')))
         result_pick_data['timestamp'] = timeest
 
         print(result_pick_data)
