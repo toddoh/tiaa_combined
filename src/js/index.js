@@ -31,6 +31,7 @@ const render_core = () => {
             <div class="navbox-info">
                 <ul>
                     <li><a href="/about">About Us</a></li>
+                    <li><a href="http://facebook.com/thisisallabout">Facebook Page</a></li>
                     <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
                 </ul>
             </div>
