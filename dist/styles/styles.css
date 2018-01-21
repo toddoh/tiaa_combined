@@ -287,27 +287,27 @@ body{
 
 
 @media all and (max-width: 980px) {
-    .today-hero{
+    .about-hero{
         padding: 27vh 30px 30px;
         margin: 0 auto;
         overflow: hidden;
         transition: all 200ms ease;
     }
 
-    .today-hero.highlighted{
+    .about-hero.highlighted{
         max-height: 35vh;
         opacity: 0;
     }
 
-    .today-hero .hero1{
+    .about-hero .hero1{
         font-size: 1.3em;
     }
 
-    .today-hero .hero1.strike:after {
+    .about-hero .hero1.strike:after {
         height: 3px;
     }
 
-    .today-hero .hero2{
+    .about-hero .hero2{
         font-size: 1.05em;
     }
 }.presidenttrump-hero{
@@ -556,7 +556,7 @@ body{
     overflow: auto;
     width: auto;
     padding: 120px 10%;
-    height: 100vh;
+    height: auto;
     background: #fff;
 }
 
@@ -1505,7 +1505,7 @@ body{
     overflow: auto;
     width: auto;
     padding: 120px 10%;
-    height: 100vh;
+    height: auto;
     background: #fff;
 }
 
@@ -1985,7 +1985,7 @@ body{
     overflow: auto;
     width: auto;
     padding: 120px 10%;
-    height: 100vh;
+    height: auto;
     background: #fff;
 }
 
