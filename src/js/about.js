@@ -17,6 +17,8 @@ export function init_render() {
                     <p>Editorial director: Todd Oh</p>
                     <a href="https://twitter.com/brklynfivefive" target="_blank"><div class="team-social twitter"></div></a>
                     <a href="mailto:brklynfivefive@gmail.com" target="_blank"><div class="team-social email"></div></a>
+                    <a href="https://facebook.com/brklynfivefive" target="_blank"><div class="team-social fb"></div></a>
+                    <a href="https://www.linkedin.com/in/toddoh/" target="_blank"><div class="team-social linkedin"></div></a>
                 </div>
                 <p class="detail">* We use a sophisticated clustering/natural language processing algorithm to provide our contents. Check the information attached to every section to find out details.</p>
             </div>

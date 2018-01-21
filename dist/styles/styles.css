@@ -59,7 +59,7 @@ body{
     height: 35px;
     margin-right: 10px;
     background-image: url(../res/tiaa_icon.55727c4592ee79bc0b97583405fda1ad.png);
-    background-size: cover;
+    background-size: 35px 35px;
     flex-shrink: 0;
 }
 
@@ -314,6 +314,22 @@ body{
     width: 19px;
     height: 20px;
     background-image: url(../res/symbol_gmail.1257ee259f1f134857f6471d434dab3e.png);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.about-hero .team > a > div.fb{
+    width: 20px;
+    height: 20px;
+    background-image: url(../res/symbol_fb.fb60f57f3ce3b0d90ffc1700ff9dbaf2.png);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.about-hero .team > a > div.linkedin{
+    width: 22px;
+    height: 20px;
+    background-image: url(../res/symbol_linkedin.304f55f232a1bc862cdbad6efa440393.png);
     background-size: cover;
     margin-left: 10px;
 }

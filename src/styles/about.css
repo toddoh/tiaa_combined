@@ -49,6 +49,22 @@
     margin-left: 10px;
 }
 
+.about-hero .team > a > div.fb{
+    width: 20px;
+    height: 20px;
+    background-image: url('../resources/symbol_fb.png');
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.about-hero .team > a > div.linkedin{
+    width: 22px;
+    height: 20px;
+    background-image: url('../resources/symbol_linkedin.png');
+    background-size: cover;
+    margin-left: 10px;
+}
+
 
 @media all and (max-width: 980px) {
     .about-hero{
