@@ -285,6 +285,39 @@ body{
     margin-top: 14px;
 }
 
+.about-hero .hero2 .detail{
+    font-size: 0.9em;
+}
+
+.about-hero .hero2.contact{
+    color: #000;
+    font-size: 1.0em;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+.about-hero .team{
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+}
+
+.about-hero .team > a > div{
+    width: 22px;
+    height: 19px;
+    background-image: url(../res/symbol_twitter.24c4d2f1c9f00a076eae65db0278e6d7.png);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.about-hero .team > a > div.email{
+    width: 19px;
+    height: 20px;
+    background-image: url(../res/symbol_gmail.1257ee259f1f134857f6471d434dab3e.png);
+    background-size: cover;
+    margin-left: 10px;
+}
+
 
 @media all and (max-width: 980px) {
     .about-hero{
