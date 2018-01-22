@@ -61,7 +61,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./interpret/', ty
 
     maxit = 500
     if type == 'today':
-        maxit = 2000
+        maxit = 1000
     elif type == 'trumpsaid':
         maxit = 2000
 
