@@ -31,7 +31,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     print('Calculating tf-idf vectors...')
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
 
-    if type == 'offline_text':
+    if type == 'titleonly':
         tfs = tfidf.fit_transform(parsed_article)
     else:
         tfs = tfidf.fit_transform(parsed_article.values())
@@ -79,7 +79,10 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
     maxit = 500
     if type == 'today':
-        maxit = 5000;
+        maxit = 2000
+    elif type == 'titleonly':
+        maxit = 2000
+
     for kval in range_n_clusters:
         km = KMeans(n_clusters=kval, init='k-means++', max_iter=maxit)
         km.fit(data2D)
@@ -125,7 +128,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
     for i in set(km_final.labels_):
         #print i
-        if type == 'offline_text':
+        if type == 'titleonly':
             current_cluster_bills = [list(parsed_article)[x] for x in np.where(km_final.labels_ == i)[0]]
         else:
             current_cluster_bills = [list(parsed_article.keys())[x] for x in np.where(km_final.labels_ == i)[0]]

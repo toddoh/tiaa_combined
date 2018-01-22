@@ -20,6 +20,8 @@ def aggregator_storeobject(item):
         twitter_list_target = 'usa-society1'
     elif item == 'trumptimemachine':
         twitter_list_target = 'usa-ttm'
+    elif item == 'trumpsaid':
+        twitter_list_target = 'usa-trump'
 
     collection = db['aggregator_' + item]
     if len(list(collection.find({}))):

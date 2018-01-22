@@ -152,8 +152,8 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
                     parse_data = get_article_info(parse_target, item['origin'], item['twitterid'], item['ts'])
 
                     if parse_data:
-                        print('Index {0}/{1}, parsed title: {2}'.format(index, len(data),
-                                                                        parse_data['title']))
+                        print('Index {0}/{1}, parsed title: {2}, {3}'.format(index, len(data),
+                                                                        parse_data['title'], parse_data['text']))
                         parsed_article_title.append(parse_data['title'])
                         parsed_article_text.append(parse_data['text'])
                         parsed_article_data.append(parse_data)

@@ -31,13 +31,13 @@ def interpret(type):
         for item in group['groups']:
             all_documents_title = []
             all_documents_text = []
-            schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT(stored=True))
+            schema = Schema(title=TEXT(stored=True), path=ID(stored=True))
             os.makedirs(interpret_datapath + "indexes", exist_ok=True)
             ix = create_in(interpret_datapath + "indexes", schema)
             writer = ix.writer()
 
             for article in item['articles']:
-                writer.add_document(title=article['title'], path=article['_id'], content=article['text'])
+                writer.add_document(title=article['title'], path=article['_id'])
 
             writer.commit()
 

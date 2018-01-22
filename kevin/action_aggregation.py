@@ -16,6 +16,13 @@ def trumptimemachine():
         aggregator_storeobject(item)
 
 
+# trumpsaid section
+def trumpsaid():
+    collection_list = ['trumpsaid']
+    for item in collection_list:
+        aggregator_storeobject(item)
+
+
 ## run task
 parser = argparse.ArgumentParser()
 parser.add_argument("--target", help="run aggregator for provided target")
@@ -30,6 +37,8 @@ if vars(args)['target'] == 'trumptimemachine':
     trumptimemachine()
 elif vars(args)['target'] == 'today':
     today()
+elif vars(args)['target'] == 'trumpsaid':
+    trumpsaid()
 else:
     print('No argument provided, finished with none.')
 

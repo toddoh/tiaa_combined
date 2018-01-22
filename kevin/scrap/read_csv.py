@@ -30,34 +30,49 @@ def read_parse_csv(source_origin, type):
 
     for line in reader:
         url_string = re.findall(r'(https?://[^\s]+)', line['text'])
-        if url_string:
-            url_string_filtered = re.sub('\\xa0$', '', url_string[0])
-            if 'twitteri.com/' in url_string_filtered:
-                print('Skips item: social channel')
-            else:
-                line_converted = dict(line)
-                data = {}
+        if type != '':
+            line_converted = dict(line)
+            data = {}
 
-                data['twitterid'] = line_converted['id']
-                data['origin'] = source_origin
+            data['twitterid'] = line_converted['id']
+            data['origin'] = source_origin
+            if url_string:
+                url_string_filtered = re.sub('\\xa0$', '', url_string[0])
                 data['url'] = url_string_filtered
-                if type == 'offline_text':
-                    data['title'] = line_converted['text']
-                    dt = dateutil.parser.parse(line_converted['date'])
-                    unixts = int(time.mktime(dt.timetuple()))
-                    data['ts'] = unixts
-                else:
-                    data['ts'] = line_converted['date']
-                url_duplicate_check = []
-                for item in csv_tweets:
-                    if item['url'] == url_string_filtered:
-                        url_duplicate_check.append(item)
 
-                if len(url_duplicate_check) > 0:
-                    print('Fetch process: there seems one or more duplicated url in the dataset: ')
-                    print(url_duplicate_check)
+            removeurl = re.sub(r"http\S+", "", line_converted['text'])
+            removetwturl = re.sub(r"pic.twitter\S+", "", removeurl)
+
+            data['title'] = removetwturl
+            dt = dateutil.parser.parse(line_converted['date'])
+            unixts = int(time.mktime(dt.timetuple()))
+            data['ts'] = unixts
+
+            csv_tweets.append(data)
+        else:
+            if url_string:
+                url_string_filtered = re.sub('\\xa0$', '', url_string[0])
+                if 'twitter.com/' in url_string_filtered:
+                    print('Skips item: social channel')
                 else:
-                    csv_tweets.append(data)
+                    line_converted = dict(line)
+                    data = {}
+
+                    data['twitterid'] = line_converted['id']
+                    data['origin'] = source_origin
+                    data['url'] = url_string_filtered
+                    data['ts'] = line_converted['date']
+
+                    url_duplicate_check = []
+                    for item in csv_tweets:
+                        if item['url'] == url_string_filtered:
+                            url_duplicate_check.append(item)
+
+                    if len(url_duplicate_check) > 0:
+                        print('Fetch process: there seems one or more duplicated url in the dataset: ')
+                        print(url_duplicate_check)
+                    else:
+                        csv_tweets.append(data)
 
 
     final_csv_tweets = csv_tweets[::-1]
@@ -67,13 +82,13 @@ def read_parse_csv(source_origin, type):
 
     if type == 'offline_text':
         print('Initializing offline clustering module...')
-        cluster_articles_offline(final_csv_tweets, 'text', 90000009)
+        cluster_articles_offline(final_csv_tweets, 'trumpsaid', 90000009)
     elif type == 'offline':
         origin_data = aggregator(None, None, 'direct', final_csv_tweets)
 
         print('Initializing offline clustering module...')
         cluster_articles_offline(origin_data[1], None, 90000009)
-    else:
+    elif type == '':
         origin_data = aggregator(None, None, 'direct', final_csv_tweets)
 
         try:
@@ -100,7 +115,7 @@ def read_parse_csv(source_origin, type):
             client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
             db = client['main']
 
-            collection = db['aggregator_trumptimemachine']
+            collection = db['aggregator_trumpsaid']
 
             json_converted = jsonpickle.encode(unserialized_data)
 
@@ -111,6 +126,24 @@ def read_parse_csv(source_origin, type):
         except Exception as e:
             print('There was a problem saving data into a dataset file: ')
             print(origin_data)
+    else:
+        try:
+            print('Initiating aggregator unit...')
+            print('Setting up MongoClient kevin@main')
+            client = MongoClient('mongodb://kevin:eHAdpMJze8XubCUWGXo@23.239.14.16:27017/main')
+            db = client['main']
+
+            collection = db['aggregator_trumpsaid']
+
+            json_converted = jsonpickle.encode(final_csv_tweets)
+
+            print('Saving data into mongodb...')
+            result = collection.insert_many(json.loads(json_converted))
+            print('DB Insert result: {0}'.format(result))
+            print('DB Insert result ids: {0}'.format(result.inserted_ids))
+        except Exception as e:
+            print('There was a problem saving data into a dataset file: ')
+            print(final_csv_tweets)
 
 
-read_parse_csv('realdonaldtrump', 'offline_text')
+# read_parse_csv('realdonaldtrump', 'save')

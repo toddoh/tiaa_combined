@@ -1,7 +1,6 @@
 from pymongo import MongoClient
 from parser_twitter import parse_aggregated
 from datetime import datetime, timedelta
-from action_interpret import interpreter_run
 import numpy as np
 import nltk
 import re
@@ -97,18 +96,28 @@ def cluster_articles(item, type=None, mode=None):
                     return i, i + len(small)
             return False
 
-        for article in cursor:
-            if isinstance(article['title'], str):
-                if isinstance(article['text'], str):
+        if type == 'titleonly':
+            for article in cursor:
+                if isinstance(article['title'], str):
                     parsed_article_title.append(article['title'])
-                    parsed_article_text.append(article['text'])
+        else:
+            for article in cursor:
+                if isinstance(article['title'], str):
+                    if isinstance(article['text'], str):
+                        parsed_article_title.append(article['title'])
+                        parsed_article_text.append(article['text'])
 
-        parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
+        if type == 'titleonly':
+            parsed_article_dict = parsed_article_title
+        else:
+            parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
         print('Clustering unit: Finished processing loaded articles')
 
         tfidfpath = './dataset/' + type + '/'
         if type == 'today':
             parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'today')
+        elif type == 'titleonly':
+            parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'titleonly')
         else:
             parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath)
         origin_data_raw = cursor
@@ -211,6 +220,7 @@ def cluster_articles(item, type=None, mode=None):
         print('Clustering unit: saved into json file.')
 
         if type == 'today':
+            from action_interpret import interpreter_run
             interpreter_run(type)
     else:
         print('Clustering unit: The collection is empty, unable to process.')
@@ -350,5 +360,8 @@ def cluster_articles_offline(item, type=None, mode=None):
             json.dump(parsed_articlecluster_packed, outfile, indent=4, sort_keys=True)
 
         print('Clustering unit: saved into json file.')
+
+        from action_interpret import interpreter_run
+        interpreter_run(type)
     else:
         print('Clustering unit: The collection is empty, unable to process.')

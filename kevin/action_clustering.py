@@ -1,4 +1,5 @@
 from unit_cluster import cluster_articles
+from unit_cluster import cluster_articles_offline
 import sys
 import argparse
 
@@ -15,6 +16,10 @@ def init_task(type):
         collection_list = ['trumptimemachine']
         for item in collection_list:
             cluster_articles(item, None, 90000009)
+    elif type == 'trumpsaid':
+        collection_list = ['trumpsaid']
+        for item in collection_list:
+            cluster_articles(item, 'titleonly', 90000009)
 
 
 # 168hr is 1 week
