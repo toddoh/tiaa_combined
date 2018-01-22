@@ -1,95 +1,22 @@
 [
     {
         "list": [
-            1,
-            1,
-            2,
-            1
+            45,
+            93,
+            72,
+            85,
+            80,
+            111,
+            144,
+            131,
+            157,
+            155,
+            162,
+            130,
+            126
         ],
         "months": [
-            "2017-08",
-            "2017-10",
-            "2017-12",
-            "2018-01"
-        ],
-        "peaks": [],
-        "theme": [
-            "say",
-            "Trump",
-            "time",
-            "WATCH",
-            "capital",
-            "crisis",
-            "emergency",
-            "envoy",
-            "fake",
-            "hole",
-            "Israel",
-            "Jerusalem",
-            "Korea",
-            "make",
-            "national"
-        ],
-        "toparticles": [
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "list": [
-            2,
-            1,
-            2,
-            1
-        ],
-        "months": [
-            "2017-03",
-            "2017-05",
-            "2017-07",
-            "2017-09"
-        ],
-        "peaks": [],
-        "theme": [
-            "Says",
-            "Trump",
-            "Care",
-            "Health",
-            "Check",
-            "Fact",
-            "GOP",
-            "Obamacare",
-            "Americans",
-            "chance",
-            "class",
-            "Country",
-            "cuts",
-            "explod",
-            "fail"
-        ],
-        "toparticles": [
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "list": [
-            1,
-            1,
-            2,
-            1,
-            2,
-            6,
-            3,
-            2,
-            3,
-            5,
-            4
-        ],
-        "months": [
+            "2017-01",
             "2017-02",
             "2017-03",
             "2017-04",
@@ -97,28 +24,942 @@
             "2017-06",
             "2017-07",
             "2017-08",
+            "2017-09",
             "2017-10",
             "2017-11",
             "2017-12",
             "2018-01"
         ],
-        "peaks": [],
+        "peaks": [
+            "2017-02",
+            "2017-07",
+            "2017-11"
+        ],
+        "theme": [
+            "great",
+            "people",
+            "news",
+            "Fake",
+            "Tax",
+            "Country",
+            "big",
+            "years",
+            "Jobs",
+            "Cuts",
+            "Democrat",
+            "Republican",
+            "many",
+            "stated"
+        ],
+        "timestamp": "2018-01-22 04:10:50.040354-05:00",
+        "toparticles": [
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf027c0",
+                    "date_month": "2017-01",
+                    "origin": "realdonaldtrump",
+                    "title": "Somebody with aptitude and conviction should buy the FAKE NEWS and failing @nytimes and either run it correctly or let it fold with dignity!",
+                    "ts": 1485694800,
+                    "twitterid": "825690087857995776"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf027bc",
+                    "date_month": "2017-01",
+                    "origin": "realdonaldtrump",
+                    "title": "The failing @nytimes has been wrong about me from the very beginning. Said I would lose the primaries, then the general election. FAKE NEWS!",
+                    "ts": 1485608640,
+                    "twitterid": "825328817833123840"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf027be",
+                    "date_month": "2017-01",
+                    "origin": "realdonaldtrump",
+                    "title": "...dwindling subscribers and readers.They got me wrong right from the beginning and still have not changed course, and never will. DISHONEST",
+                    "ts": 1485609360,
+                    "twitterid": "825331665509691393"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf027cf",
+                    "date_month": "2017-01",
+                    "origin": "realdonaldtrump",
+                    "title": "When will the Democrats give us our Attorney General and rest of Cabinet! They should be ashamed of themselves! No wonder D.C. doesn't work!",
+                    "ts": 1485862020,
+                    "twitterid": "826391334248407040"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0279c",
+                    "date_month": "2017-01",
+                    "origin": "realdonaldtrump",
+                    "title": "Watched protests yesterday but was under the impression that we just had an election! Why didn't these people vote? Celebs hurt cause badly.",
+                    "ts": 1485089220,
+                    "twitterid": "823150055418920960"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf027b1",
+                    "date_month": "2017-01",
+                    "origin": "realdonaldtrump",
+                    "title": "The U.S. has a 60 billion dollar trade deficit with Mexico. It has been a one-sided deal from the beginning of NAFTA with massive numbers...",
+                    "ts": 1485438660,
+                    "twitterid": "824615820391305216"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf027ce",
+                    "date_month": "2017-01",
+                    "origin": "realdonaldtrump",
+                    "title": "Nancy Pelosi and Fake Tears Chuck Schumer held a rally at the steps of The Supreme Court and mic did not work (a mess)-just like Dem party!",
+                    "ts": 1485861660,
+                    "twitterid": "826390034693623809"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02858",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "I will not be attending the White House Correspondents' Association Dinner this year. Please wish everyone well and have a great evening!",
+                    "ts": 1488059580,
+                    "twitterid": "835608648625836032"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02843",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Will be having many meetings this weekend at The Southern White House. Big 5:00 P.M. speech in Melbourne, Florida. A lot to talk about!",
+                    "ts": 1487425860,
+                    "twitterid": "832950628750127106"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0285d",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Big dinner with Governors tonight at White House. Much to be discussed, including healthcare.",
+                    "ts": 1488139980,
+                    "twitterid": "835946001873657858"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf027d6",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "If U.C. Berkeley does not allow free speech and practices violence on innocent people with a different point of view - NO FEDERAL FUNDS?",
+                    "ts": 1486033980,
+                    "twitterid": "827112633224544256"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02817",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "A working dinner tonight with Prime Minister Abe of Japan, and his representatives, at the Winter White House (Mar-a-Lago). Very good talks!",
+                    "ts": 1486855440,
+                    "twitterid": "830558065715998726"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02842",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Don't believe the main stream (fake news) media.The White House is running VERY WELL. I inherited a MESS and am in the process of fixing it.",
+                    "ts": 1487424660,
+                    "twitterid": "832945737625387008"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0283b",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Going to Charleston, South Carolina, in order to spend time with Boeing and talk jobs! Look forward to it.",
+                    "ts": 1487331480,
+                    "twitterid": "832554772318322688"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0285c",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Russia talk is FAKE NEWS put out by the Dems, and played up by the media, in order to mask the big election defeat and the illegal leaks!",
+                    "ts": 1488132960,
+                    "twitterid": "835916511944523777"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf028be",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Today, I was thrilled to announce a commitment of $25 BILLION & 20K AMERICAN JOBS over the next 4 years. THANK YOU Charter Communications!",
+                    "ts": 1490378340,
+                    "twitterid": "845334323045765121"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0287b",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "45,000 construction & manufacturing jobs in the U.S. Gulf Coast region. $20 billion investment. We are already winning again, America!",
+                    "ts": 1488835320,
+                    "twitterid": "838862312685637640"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0287d",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Buy American & hire American are the principles at the core of my agenda, which is: JOBS, JOBS, JOBS! Thank you @exxonmobil.",
+                    "ts": 1488858540,
+                    "twitterid": "838959869772328960"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02898",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Will be going to Detroit, Michigan (love), today for a big meeting on bringing back car production to State & U.S. Already happening!",
+                    "ts": 1489576380,
+                    "twitterid": "841970726341074945"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028c9",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Big announcement by Ford today. Major investment to be made in three Michigan plants. Car companies coming back to U.S. JOBS! JOBS! JOBS!",
+                    "ts": 1490697360,
+                    "twitterid": "846672219073863681"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028dc",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Mike Flynn should ask for immunity in that this is a witch hunt (excuse for big election loss), by media & Dems, of historic proportion!",
+                    "ts": 1490958240,
+                    "twitterid": "847766558520856578"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02864",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Since November 8th, Election Day, the Stock Market has posted $3.2 trillion in GAINS and consumer confidence is at a 15 year high. Jobs!",
+                    "ts": 1488452400,
+                    "twitterid": "837256338203881472"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02890",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "ObamaCare is imploding. It is a disaster and 2017 will be the worst year yet, by far! Republicans will come together and save the day.",
+                    "ts": 1489410660,
+                    "twitterid": "841275470796738560"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02949",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Don't let the fake media tell you that I have changed my position on the WALL. It will get built and help stop drugs, human trafficking etc.",
+                    "ts": 1493123760,
+                    "twitterid": "856849388026687492"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0291c",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "The Fake Media (not Real Media) has gotten even worse since the election. Every story is badly slanted. We have to hold them to the truth!",
+                    "ts": 1492431420,
+                    "twitterid": "853945633903923200"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02942",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "The Wall is a very important tool in stopping drugs from pouring into our country and poisoning our youth (and many others)! If",
+                    "ts": 1493036880,
+                    "twitterid": "856484873133060101"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0293d",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "The Democrats don't want money from budget going to border wall despite the fact that it will stop drugs and very bad MS 13 gang members.",
+                    "ts": 1492962120,
+                    "twitterid": "856171332521820165"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02943",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "....the wall is not built, which it will be, the drug situation will NEVER be fixed the way it should be! #BuildTheWall",
+                    "ts": 1493047860,
+                    "twitterid": "856531163799859201"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0293e",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Eventually, but at a later date so we can get started early, Mexico will be paying, in some form, for the badly needed border wall.",
+                    "ts": 1492962240,
+                    "twitterid": "856172056932700164"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028e3",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "When will Sleepy Eyes Chuck Todd and @NBCNews start talking about the Obama SURVEILLANCE SCANDAL and stop with the Fake Trump/Russia story?",
+                    "ts": 1491050580,
+                    "twitterid": "848153860602507264"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028ea",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Anybody (especially Fake News media) who thinks that Repeal & Replace of ObamaCare is dead does not know the love and strength in R Party!",
+                    "ts": 1491137760,
+                    "twitterid": "848519587675201538"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf029a1",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "Russia must be laughing up their sleeves watching as the U.S. tears itself apart over a Democrat EXCUSE for losing the election.",
+                    "ts": 1494534840,
+                    "twitterid": "862767872879325185"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02987",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "When will the Fake Media ask about the Dems dealings with Russia & why the DNC wouldn't allow the FBI to check their server or investigate?",
+                    "ts": 1494155700,
+                    "twitterid": "861177649179373569"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02972",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "...Trump/Russia story was an excuse used by the Democrats as justification for losing the election. Perhaps Trump just ran a great campaign?",
+                    "ts": 1493780760,
+                    "twitterid": "859604996236742656"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf029a3",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "Again, the story that there was collusion between the Russians & Trump campaign was fabricated by Dems as an excuse for losing the election.",
+                    "ts": 1494589860,
+                    "twitterid": "862998775731818496"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf029e4",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "Russian officials must be laughing at the U.S. & how a lame excuse for why the Dems lost the election has taken over the Fake News.",
+                    "ts": 1496142240,
+                    "twitterid": "869509894688387072"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf029da",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "Does anyone notice how the Montana Congressional race was such a big deal to Dems & Fake News until the Republican won? V was poorly covered",
+                    "ts": 1495975500,
+                    "twitterid": "868810522942164993"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf029e7",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "So now it is reported that the Democrats, who have excoriated Carter Page about Russia, don't want him to testify. He blows away their....",
+                    "ts": 1496227020,
+                    "twitterid": "869865463584620544"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0299f",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "'Presidential Executive Order on the Establishment of Presidential Advisory Commission on Election Integrity' \u00a0",
+                    "ts": 1494531300,
+                    "twitterid": "862753016193089536",
+                    "url": "http://45.wh.gov/g3PRF1"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02a7d",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "The failing @nytimes writes false story after false story about me. They don't even call to verify the facts of a story. A Fake News Joke!",
+                    "ts": 1498646940,
+                    "twitterid": "880015261004435456"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a5a",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "...Why did the DNC REFUSE to turn over its Server to the FBI, and still hasn't? It's all a big Dem scam and excuse for losing the election!",
+                    "ts": 1498140480,
+                    "twitterid": "877891129194102785"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a21",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "The Fake News Media has never been so wrong or so dirty. Purposely incorrect stories and phony sources to meet their agenda of hate. Sad!",
+                    "ts": 1497350100,
+                    "twitterid": "874576057579565056"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a59",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "...Why did Democratic National Committee turn down the DHS offer to protect against hacks (long prior to election). It's all a big Dem HOAX!",
+                    "ts": 1498140060,
+                    "twitterid": "877889199353077760"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a7a",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "So they caught Fake News CNN cold, but what about NBC, CBS & ABC? What about the failing @nytimes & @washingtonpost? They are all Fake News!",
+                    "ts": 1498567620,
+                    "twitterid": "879682547235651584"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a04",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "The FAKE MSM is working so hard trying to get me not to use Social Media. They hate that I can get the honest and unfiltered message out.",
+                    "ts": 1496750280,
+                    "twitterid": "872059997429022722"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a79",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "Fake News CNN is looking at big management changes now that they got caught falsely pushing their phony Russian stories. Ratings way down!",
+                    "ts": 1498566600,
+                    "twitterid": "879678356450676736"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a2d",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "They made up a phony collusion with the Russians story, found zero proof, so now they go for obstruction of justice on the phony story. Nice",
+                    "ts": 1497524100,
+                    "twitterid": "875305788708974592"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02ae6",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "Big WIN today for building the wall. It will secure the border & save lives. Now the full House & Senate must act! \u00a0",
+                    "ts": 1499901840,
+                    "twitterid": "885278633014812673",
+                    "url": "http://45.wh.gov/5L8g1q"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b49",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "The crowd in Ohio was amazing last night - broke all records. We all had a great time in a great State. Will be back soon!",
+                    "ts": 1501066140,
+                    "twitterid": "890162144884514820"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b41",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "Will be traveling to the Great State of Ohio tonight. Big crowd expected. See you there!",
+                    "ts": 1500985740,
+                    "twitterid": "889824817473605632"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b42",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "The American people have waited long enough. There has been enough talk and no action for seven years. Now is the time for action!",
+                    "ts": 1500996000,
+                    "twitterid": "889867842186649600"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02aca",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "...We negotiated a ceasefire in parts of Syria which will save lives. Now it is time to move forward in working constructively with Russia!",
+                    "ts": 1499600220,
+                    "twitterid": "884013689736769536"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02ab1",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "Getting ready to celebrate the 4th of July with a big crowd at the White House. Happy 4th to everyone. Our country will grow and prosper!",
+                    "ts": 1499197740,
+                    "twitterid": "882325456162361344"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b61",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "I am pleased to inform you that I have just named General/Secretary John F Kelly as White House Chief of Staff. He is a Great American....",
+                    "ts": 1501274940,
+                    "twitterid": "891038014314598400"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b67",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "The very outdated filibuster rule must go. Budget reconciliation is killing R's in Senate. Mitch M, go to 51 Votes NOW and WIN. IT'S TIME!",
+                    "ts": 1501327680,
+                    "twitterid": "891259245106278400"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02b7f",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "I am continuing to get rid of costly and unnecessary regulations. Much work left to do but effect will be great! Business & jobs will grow.",
+                    "ts": 1501762320,
+                    "twitterid": "893082107081244672"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b89",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Excellent Jobs Numbers just released - and I have only just begun. Many job stifling regulations continue to fall. Movement back to USA!",
+                    "ts": 1501850700,
+                    "twitterid": "893452922427715584"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bda",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Many meetings today in Bedminster including with Secretary Linda M and Small Business. Job numbers are looking great!",
+                    "ts": 1502974740,
+                    "twitterid": "898167282727366656"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bca",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Amazon is doing great damage to tax paying retailers. Towns, cities and states throughout the U.S. are being hurt - many jobs being lost!",
+                    "ts": 1502878320,
+                    "twitterid": "897763049226084352"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bc1",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": ". @Merck Pharma is a leader in higher & higher drug prices while at the same time taking jobs out of the U.S. Bring jobs back & LOWER PRICES!",
+                    "ts": 1502748540,
+                    "twitterid": "897218560937922564"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bc9",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "For every CEO that drops out of the Manufacturing Council, I have many to take their place. Grandstanders should not have gone on. JOBS!",
+                    "ts": 1502810460,
+                    "twitterid": "897478270442143744"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b7e",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Business is looking better than ever with business enthusiasm at record levels. Stock Market at an all-time high. That doesn't just happen!",
+                    "ts": 1501762080,
+                    "twitterid": "893081237082001409"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bb7",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Join me live from Bedminster, New Jersey: \u00a0",
+                    "ts": 1502565960,
+                    "twitterid": "896452967741747200",
+                    "url": "http://45.wh.gov/5HJcB8"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02d1b",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "In analyzing the Alabama Primary race,FAKE NEWS always fails to mention that the candidate I endorsed went up MANY points after endorsement!",
+                    "ts": 1506813840,
+                    "twitterid": "914269704440737792"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02cee",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Congratulations to Roy Moore on his Republican Primary win in Alabama. Luther Strange started way back & ran a good race. Roy, WIN in Dec!",
+                    "ts": 1506478620,
+                    "twitterid": "912863676792786946"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02cc5",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "It was great being with Luther Strange last night in Alabama. What great people, what a crowd! Vote Luther on Tuesday.",
+                    "ts": 1506165420,
+                    "twitterid": "911549980946714624"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02cbf",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Heading to Alabama now, big crowd!",
+                    "ts": 1506115080,
+                    "twitterid": "911338971250216960"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d17",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Results of recovery efforts will speak much louder than complaints by San Juan Mayor. Doing everything we can to help great people of PR!",
+                    "ts": 1506803820,
+                    "twitterid": "914227642131509248"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d14",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "My Administration, Governor @RicardoRossello, and many others are working together to help the people of Puerto Rico in every way...",
+                    "ts": 1506801300,
+                    "twitterid": "914217117695795201"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02cbc",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Will be in Alabama tonight. Luther Strange has gained mightily since my endorsement, but will be very close. He loves Alabama, and so do I!",
+                    "ts": 1506080340,
+                    "twitterid": "911193223921635335"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d18",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "I will be in PR on Tues. to further ensure we continue doing everything possible to assist & support the people in their time of great need.",
+                    "ts": 1506809700,
+                    "twitterid": "914252271982178306"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02d5d",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "The Democrats want MASSIVE tax increases & soft, crime producing borders.The Republicans want the biggest tax cut in history & the WALL!",
+                    "ts": 1507718160,
+                    "twitterid": "918062778522505216"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d97",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "The Democrats will only vote for Tax Increases. Hopefully, all Senate Republicans will vote for the largest Tax Cuts in U.S. history.",
+                    "ts": 1508323080,
+                    "twitterid": "920599916371693568"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02daf",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "....This now allows for the passage of large scale Tax Cuts (and Reform), which will be the biggest in the history of our country!",
+                    "ts": 1508494500,
+                    "twitterid": "921319017826091008"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02da5",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Republicans are going for the big Budget approval today, first step toward massive tax cuts. I think we have the votes, but who knows?",
+                    "ts": 1508410440,
+                    "twitterid": "920966294035451904"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02db5",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Budget that just passed is a really big deal, especially in terms of what will be the biggest tax cut in U.S. history - MSM barely covered!",
+                    "ts": 1508586720,
+                    "twitterid": "921705862992887808"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02dd4",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Working hard on the biggest tax cut in U.S. history. Great support from so many sides. Big winners will be the middle class, business & JOBS",
+                    "ts": 1508931300,
+                    "twitterid": "923150966551171073"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d5b",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "...if Congress gives us the massive tax cuts (and reform) I am asking for, those numbers will grow by leaps and bounds. #MAGA",
+                    "ts": 1507717560,
+                    "twitterid": "918060313748164608"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e0b",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "I hope people will start to focus on our Massive Tax Cuts for Business (jobs) and the Middle Class (in addition to Democrat corruption)!",
+                    "ts": 1509452460,
+                    "twitterid": "925336826717593600"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02eb4",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "...LaVar, you could have spent the next 5 to 10 years during Thanksgiving with your son in China, but no NBA contract to support you. But remember LaVar, shoplifting is NOT a little thing. It\u2019s a really big deal, especially in China. Ungrateful fool!",
+                    "ts": 1511346780,
+                    "twitterid": "933282274937733126"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02ea9",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "Now that the three basketball players are out of China and saved from years in jail, LaVar Ball, the father of LiAngelo, is unaccepting of what I did for his son and that shoplifting is no big deal. I should have left them in jail!",
+                    "ts": 1511113320,
+                    "twitterid": "932303108146892801"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02eab",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "Shoplifting is a very big deal in China, as it should be (5-10 years in jail), but not to father LaVar. Should have gotten his son out during my next trip to China instead. China told them why they were released. Very ungrateful!",
+                    "ts": 1511134560,
+                    "twitterid": "932392209445457920"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02eb3",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "It wasn\u2019t the White House, it wasn\u2019t the State Department, it wasn\u2019t father LaVar\u2019s so-called people on the ground in China that got his son out of a long term prison sentence - IT WAS ME. Too bad! LaVar is just a poor man\u2019s version of Don King, but without the hair. Just think..",
+                    "ts": 1511346300,
+                    "twitterid": "933280234220134401"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e95",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "Do you think the three UCLA Basketball Players will say thank you President Trump? They were headed for 10 years in jail!",
+                    "ts": 1510758660,
+                    "twitterid": "930815626460921856"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e9b",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "To the three UCLA basketball players I say: You're welcome, go out and give a big Thank You to President Xi Jinping of China who made.....",
+                    "ts": 1510831800,
+                    "twitterid": "931122234437046272"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02efb",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "The Christmas Story begins 2,000 years ago with a mother, a father, their baby son and the most extraordinary gift of all\u2014the gift of God\u2019s love for all of humanity. Whatever our beliefs, we know that the birth of Jesus Christ and the story of his life...",
+                    "ts": 1512088920,
+                    "twitterid": "936395008139198464"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e6e",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "I don\u2019t blame China, I blame the incompetence of past Admins for allowing China to take advantage of the U.S. on trade leading up to a point where the U.S. is losing $100's of billions. How can you blame China for taking advantage of people that had no clue? I would've done same!",
+                    "ts": 1510270740,
+                    "twitterid": "928769154345324544"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02f2e",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "CNN\u2019S slogan is CNN, THE MOST TRUSTED NAME IN NEWS. Everyone knows this is not true, that this could, in fact, be a fraud on the American Public. There are many outlets that are far more trusted than Fake News CNN. Their slogan should be CNN, THE LEAST TRUSTED NAME IN NEWS!",
+                    "ts": 1512825660,
+                    "twitterid": "939485131693322240"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f33",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": ". @daveweigel of the Washington Post just admitted that his picture was a FAKE (fraud?) showing an almost empty arena last night for my speech in Pensacola when, in fact, he knew the arena was packed (as shown also on T.V.). FAKE NEWS, he should be fired.",
+                    "ts": 1512861240,
+                    "twitterid": "939634404267380736"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f2d",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Fake News CNN made a vicious and purposeful mistake yesterday. They were caught red handed, just like lonely Brian Ross at ABC News (who should be immediately fired for his \u201cmistake\u201d). Watch to see if @CNN fires those responsible, or was it just gross incompetence?",
+                    "ts": 1512824520,
+                    "twitterid": "939480342779580416"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f08",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Many people in our Country are asking what the \u201cJustice\u201d Department is going to do about the fact that totally Crooked Hillary, AFTER receiving a subpoena from the United States Congress, deleted and \u201cacid washed\u201d 33,000 Emails? No justice!",
+                    "ts": 1512267180,
+                    "twitterid": "937142713211813889"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f69",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "I would like to congratulate @SenateMajLdr on having done a fantastic job both strategically & politically on the passing in the Senate of the MASSIVE TAX CUT & Reform Bill. I could have not asked for a better or more talented partner. Our team will go onto many more VICTORIES!",
+                    "ts": 1513787940,
+                    "twitterid": "943521141062238208"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f0a",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "I never asked Comey to stop investigating Flynn. Just more Fake News covering another Comey lie!",
+                    "ts": 1512299700,
+                    "twitterid": "937279001684598784"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f0e",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "People who lost money when the Stock Market went down 350 points based on the False and Dishonest reporting of Brian Ross of @ABC News (he has been suspended), should consider hiring a lawyer and suing ABC for the damages this bad reporting has caused - many millions of dollars!",
+                    "ts": 1512306900,
+                    "twitterid": "937309279257792512"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f39",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Another false story, this time in the Failing @nytimes, that I watch 4-8 hours of television a day - Wrong! Also, I seldom, if ever, watch CNN or MSNBC, both of which I consider Fake News. I never watch Don Lemon, who I once called the \u201cdumbest man on television!\u201d Bad Reporting.",
+                    "ts": 1513001820,
+                    "twitterid": "940223974985871360"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02fa7",
+                    "date_month": "2018-01",
+                    "origin": "realdonaldtrump",
+                    "title": "Iran is failing at every level despite the terrible deal made with them by the Obama Administration. The great Iranian people have been repressed for many years. They are hungry for food & for freedom. Along with human rights, the wealth of Iran is being looted. TIME FOR CHANGE!",
+                    "ts": 1514810640,
+                    "twitterid": "947810806430826496"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02fa9",
+                    "date_month": "2018-01",
+                    "origin": "realdonaldtrump",
+                    "title": "The people of Iran are finally acting against the brutal and corrupt Iranian regime. All of the money that President Obama so foolishly gave them went into terrorism and into their \u201cpockets.\u201d The people have little food, big inflation and no human rights. The U.S. is watching!",
+                    "ts": 1514894940,
+                    "twitterid": "948164289591902208"
+                },
+                {
+                    "_id": "5a65a705421aa969d2a7d168",
+                    "date_month": "2018-01",
+                    "origin": "Donald J. Trump",
+                    "title": "Reason I canceled my trip to London is that I am not a big fan of the Obama Administration having sold perhaps the\u2026 ",
+                    "ts": 1515733077,
+                    "twitterid": 951679619341737986,
+                    "url": "https://twitter.com/i/web/status/951679619341737986"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02fb9",
+                    "date_month": "2018-01",
+                    "origin": "realdonaldtrump",
+                    "title": "Such respect for the people of Iran as they try to take back their corrupt government. You will see great support from the United States at the appropriate time!",
+                    "ts": 1514986620,
+                    "twitterid": "948548807612084224"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02fad",
+                    "date_month": "2018-01",
+                    "origin": "realdonaldtrump",
+                    "title": "Sanctions and \u201cother\u201d pressures are beginning to have a big impact on North Korea. Soldiers are dangerously fleeing to South Korea. Rocket man now wants to talk to South Korea for first time. Perhaps that is good news, perhaps not - we will see!",
+                    "ts": 1514902080,
+                    "twitterid": "948194400114487296"
+                },
+                {
+                    "_id": "5a65a705421aa969d2a7d143",
+                    "date_month": "2018-01",
+                    "origin": "Donald J. Trump",
+                    "title": "Despite some very corrupt and dishonest media coverage, there are many great reporters I respect and lots of GOOD N\u2026 ",
+                    "ts": 1516237546,
+                    "twitterid": 953795518592843777,
+                    "url": "https://twitter.com/i/web/status/953795518592843777"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02fbc",
+                    "date_month": "2018-01",
+                    "origin": "realdonaldtrump",
+                    "title": "Stock Market had another good day but, now that the Tax Cut Bill has passed, we have tremendous upward potential. Dow just short of 25,000, a number that few thought would be possible this soon into my administration. Also, unemployment went down to 4.1%. Only getting better!",
+                    "ts": 1515031860,
+                    "twitterid": "948738634722742273"
+                },
+                {
+                    "_id": "5a65a705421aa969d2a7d12a",
+                    "date_month": "2018-01",
+                    "origin": "Donald J. Trump",
+                    "title": "The Trump Administration has terminated more UNNECESSARY Regulation, in just twelve months, than any other Administ\u2026 ",
+                    "ts": 1516495660,
+                    "twitterid": 954878124214415360,
+                    "url": "https://twitter.com/i/web/status/954878124214415360"
+                }
+            ]
+        ]
+    },
+    {
+        "list": [
+            2,
+            13,
+            9,
+            13,
+            10,
+            16,
+            15,
+            8,
+            12,
+            33,
+            5
+        ],
+        "months": [
+            "2017-01",
+            "2017-02",
+            "2017-03",
+            "2017-04",
+            "2017-05",
+            "2017-06",
+            "2017-07",
+            "2017-08",
+            "2017-09",
+            "2017-10",
+            "2017-11"
+        ],
+        "peaks": [
+            "2017-02",
+            "2017-06",
+            "2017-10"
+        ],
         "theme": [
             "Trump",
-            "Says",
-            "WATCH",
+            "Fake",
+            "news",
+            "President",
+            "big",
+            "said",
+            "stories",
+            "year",
+            "election",
             "Russia",
-            "Election",
-            "Meddling",
-            "probe",
-            "Putin",
-            "America",
-            "Clinton",
-            "Military",
-            "Mueller",
-            "Right",
-            "rule"
+            "Great",
+            "State",
+            "country",
+            "Democrats"
         ],
+        "timestamp": "2018-01-22 04:10:51.454546-05:00",
         "toparticles": [
             [],
             [],
@@ -129,92 +970,1012 @@
             [],
             [],
             [],
-            [],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02daa",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Keep up the GREAT work. I am with you 100%! ISIS is losing its grip...\" Army Colonel Ryan Dillon CJTF\u2013OIR \u00a0",
+                    "ts": 1508463780,
+                    "twitterid": "921189980843663360",
+                    "url": "http://45.wh.gov/OIR"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d50",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "A big salute to Jerry Jones, owner of the Dallas Cowboys, who will BENCH players who disrespect our Flag.Stand for Anthem or sit for game!\"\"",
+                    "ts": 1507600260,
+                    "twitterid": "917568245854605313"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02dd5",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Jeff Flake, with an 18% approval rating in Arizona, said a lot of my colleagues have spoken out.\" Really, they just gave me a standing O!\"",
+                    "ts": 1508934780,
+                    "twitterid": "923165619868131329"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02db4",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Great book just out, A Place Called Heaven,\" by Dr. Robert Jeffress - A wonderful man!\"",
+                    "ts": 1508543520,
+                    "twitterid": "921524504836395008"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d55",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Highly respected author, Christopher Bedford, just came out with book, The Art of the Donald, Lessons from America's....\" Really good book!\"",
+                    "ts": 1507637580,
+                    "twitterid": "917724872905777155"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d7e",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Such a wonderful statement from the great @LouDobbs. We take up what may be the most accomplished presidency in modern American history.\"\"",
+                    "ts": 1507944660,
+                    "twitterid": "919012714827145216"
+                }
+            ],
             []
         ]
     },
     {
         "list": [
-            1,
-            1,
-            1,
-            2,
-            1,
-            2,
-            1,
-            3
+            23,
+            50,
+            48,
+            38,
+            43,
+            41,
+            62,
+            47,
+            67,
+            61,
+            57,
+            36,
+            20
         ],
         "months": [
+            "2017-01",
+            "2017-02",
+            "2017-03",
             "2017-04",
             "2017-05",
+            "2017-06",
             "2017-07",
             "2017-08",
             "2017-09",
+            "2017-10",
             "2017-11",
             "2017-12",
             "2018-01"
         ],
-        "peaks": [],
-        "theme": [
-            "Trump",
-            "says",
-            "North",
-            "Korea",
-            "government",
-            "state",
-            "WATCH",
-            "act",
-            "alarm",
-            "alone",
-            "ap",
-            "becoming",
-            "bigger",
-            "button"
+        "peaks": [
+            "2017-02",
+            "2017-05",
+            "2017-09"
         ],
+        "theme": [
+            "great",
+            "Thank",
+            "AMERICA",
+            "Today",
+            "honor",
+            "MAKING",
+            "WhiteHouse",
+            "welcome",
+            "join",
+            "President",
+            "American",
+            "day",
+            "Nation",
+            "people",
+            "States"
+        ],
+        "timestamp": "2018-01-22 04:11:02.494658-05:00",
         "toparticles": [
             [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "list": [
-            1,
-            1,
-            1
-        ],
-        "months": [
-            "2017-09",
-            "2017-12",
-            "2018-01"
-        ],
-        "peaks": [],
-        "theme": [
-            "says",
-            "Trump",
-            "WATCH",
-            "blames",
-            "chain",
-            "charge",
-            "Congress",
-            "DACA",
-            "Democrats",
-            "gateway",
-            "government",
-            "happen",
-            "migration",
-            "provides",
-            "right"
-        ],
-        "toparticles": [
-            [],
-            [],
-            []
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf0280f",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Heading to Joint Base Andrews on #MarineOne with Prime Minister Shinz\u014d earlier today.",
+                    "ts": 1486769040,
+                    "twitterid": "830195857530183684"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02830",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Welcome to the United States, @IsraeliPM Benjamin & Sara! #ICYMIJoint Press Conference: \u00a0\u2026",
+                    "ts": 1487186220,
+                    "twitterid": "831945670324060164",
+                    "url": "https://www.facebook.com/DonaldTrump/posts/10158654390690725"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02814",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Having a great time hosting Prime Minister Shinzo Abe in the United States! \u00a0\u2026 \u00a0",
+                    "ts": 1486837680,
+                    "twitterid": "830483672096768001",
+                    "url": "https://www.facebook.com/DonaldTrump/posts/10158635419120725:0"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02821",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Welcome to the @WhiteHouse Prime Minister @JustinTrudeau!",
+                    "ts": 1487005140,
+                    "twitterid": "831185943482793986"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02818",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "#ICYMI: Joint Statement with Prime Minister Shinzo Abe on North Korea.",
+                    "ts": 1486875720,
+                    "twitterid": "830643095150657536"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02857",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Weekly Address from @WhiteHouse: \u00a0",
+                    "ts": 1488046320,
+                    "twitterid": "835553050530099200",
+                    "url": "http://45.wh.gov/Z6FYHt"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02822",
+                    "date_month": "2017-02",
+                    "origin": "realdonaldtrump",
+                    "title": "Wonderful meeting with Canadian PM @JustinTrudeau and a group of leading CEO's & business women from Canadaand the United States",
+                    "ts": 1487011800,
+                    "twitterid": "831214091993751552"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02885",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "I feel sure that my friend @RandPaul will come along with the new and great health care program because he knows Obamacare is a disaster!",
+                    "ts": 1488932040,
+                    "twitterid": "839268048313929729"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028d6",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Great op-ed from @RepKenBuck. Looks like some in the Freedom Caucus are helping me end #Obamacare.\u00a0\u2026",
+                    "ts": 1490908620,
+                    "twitterid": "847558426557337600",
+                    "url": "http://thehill.com/blogs/congress-blog/healthcare/326424-governing-means-supporting-ahca"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0287a",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "'President Trump Congratulates Exxon Mobil for Job-Creating Investment Program' \u00a0\u2026",
+                    "ts": 1488835140,
+                    "twitterid": "838861512999649286",
+                    "url": "https://www.whitehouse.gov/the-press-office/2017/03/06/president-trump-congratulates-exxon-mobil-job-creating-investment"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028a3",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Happy L\u00e1 Fheile Phadraig to all of my great Irish friends!",
+                    "ts": 1489752720,
+                    "twitterid": "842710123852320770"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028d8",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "Where are @RepMarkMeadows, @Jim_Jordan and @Raul_Labrador? #RepealANDReplace #Obamacare",
+                    "ts": 1490908860,
+                    "twitterid": "847559519085379584"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf028b9",
+                    "date_month": "2017-03",
+                    "origin": "realdonaldtrump",
+                    "title": "We are taking action to #RepealANDReplace #Obamacare! Contact your Rep & tell them you support #AHCA. #PassTheBill \u00a0",
+                    "ts": 1490285220,
+                    "twitterid": "844943801848414209",
+                    "url": "http://45.wh.gov/Rame8F"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02951",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Today, I signed an Executive Order @ the U.S. Dept. of @Interior: 'Review of Designations Under the Antiquities Act' \u00a0",
+                    "ts": 1493230200,
+                    "twitterid": "857295731929034753",
+                    "url": "http://45.wh.gov/sEyoN8"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02960",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Today, I signed an Executive Order on Improving Accountability and Whistleblower Protection at the @DeptVetAffairs: \u00a0",
+                    "ts": 1493332980,
+                    "twitterid": "857726884045496325",
+                    "url": "http://45.wh.gov/GSrvb2"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02946",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Today, I signed the Holocaust Remembrance Proclamation: \u00a0\u2026 #ICYMI- My statement last night at the @WorldJewishCong.",
+                    "ts": 1493065920,
+                    "twitterid": "856606707463725057",
+                    "url": "https://www.facebook.com/DonaldTrump/posts/10159027593260725"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0292a",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Today I signed the Veterans (OUR HEROES) Choice Program Extension & Improvement Act @ the @WhiteHouse. #S544 Watch\u00a0",
+                    "ts": 1492633560,
+                    "twitterid": "854793411110588418",
+                    "url": "http://45.wh.gov/7x5n53"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0292e",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "A great honor to host PM Paolo Gentiloni of Italy at the White House this afternoon! #ICYMI- Joint Press Conference: \u00a0",
+                    "ts": 1492724100,
+                    "twitterid": "855172998747348998",
+                    "url": "http://45.wh.gov/32jE1S"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02967",
+                    "date_month": "2017-04",
+                    "origin": "realdonaldtrump",
+                    "title": "Big excitement last night in the Great State of Pennsylvania! Fantastic crowd and people. MAKE AMERICA GREAT AGAIN!",
+                    "ts": 1493553900,
+                    "twitterid": "858653541094879232"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf029ad",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "I was thrilled to be back @LibertyU. Congratulations to the Class of 2017! This is your day, and you've earned it. \u00a0",
+                    "ts": 1494701820,
+                    "twitterid": "863468271668002817",
+                    "url": "http://45.wh.gov/yC4dRy"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf029b6",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "It was my great honor to deliver the #CGACommencement17 at the @USCGAcademy. CONGRATULATIONS to the Class of 2017! \u00a0",
+                    "ts": 1495053360,
+                    "twitterid": "864942610191978496",
+                    "url": "http://45.wh.gov/bbR882"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf029b9",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "A great honor to welcome President Juan Manuel Santos of Colombia to the White House today! Joint Press Conf\u00a0",
+                    "ts": 1495147500,
+                    "twitterid": "865337513245913089",
+                    "url": "http://45.wh.gov/C7xivQ"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf0298b",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "Congratulations to @PGA_JohnDaly on his big win yesterday. John is a great guy who never gave up - and now a winner again!",
+                    "ts": 1494243120,
+                    "twitterid": "861544307043467264"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02977",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "Congratulations to @foxandfriends on its unbelievable ratings hike.",
+                    "ts": 1493896020,
+                    "twitterid": "860088511202029569"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02970",
+                    "date_month": "2017-05",
+                    "origin": "realdonaldtrump",
+                    "title": "Congratulations to the winners of the Commander-in-Chief's Trophy, the great Air Force Falcons! Watch: \u00a0",
+                    "ts": 1493759280,
+                    "twitterid": "859514893418082310",
+                    "url": "http://45.wh.gov/g7r7ei"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02a3b",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "Thoughts and prayers with the sailors of USS Fitzgerald and their families. Thank you to our Japanese allies for their assistance.\u00a0\u2026",
+                    "ts": 1497708480,
+                    "twitterid": "876079184417882116",
+                    "url": "https://twitter.com/us7thfleet/status/876013519954628608"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a56",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "Great night in Iowa - special people. Thank you!",
+                    "ts": 1498129860,
+                    "twitterid": "877846483021602816"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a41",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "My heartfelt thoughts and prayers are with the 7 @USNavy sailors of the #USSFitzgerald and their families. \u00a0\u2026",
+                    "ts": 1497903300,
+                    "twitterid": "876896144944762880",
+                    "url": "http://www.navy.mil/submit/display.asp?story_id=101102"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a54",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "Just landed in Iowa. See everyone soon! #MAGA",
+                    "ts": 1498086240,
+                    "twitterid": "877663648713330688"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a37",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "Great news! #MAGA",
+                    "ts": 1497625920,
+                    "twitterid": "875732813278048256"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a10",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "Great reporting by @foxandfriends and so many others. Thank you!",
+                    "ts": 1497005640,
+                    "twitterid": "873131235614347264"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a43",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "....getting great border security and healthcare. #VoteRalphNorman tomorrow!",
+                    "ts": 1497904020,
+                    "twitterid": "876899250071904256"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02a61",
+                    "date_month": "2017-06",
+                    "origin": "realdonaldtrump",
+                    "title": "Together, we are going to MAKE AMERICA GREAT AGAIN! #AmericaFirst",
+                    "ts": 1498173120,
+                    "twitterid": "878027873650475008"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02af7",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "I will be at the @USGA #USWomensOpen in Bedminster, NJ tomorrow. Big crowds expected & the women are playing great-should be very exciting!",
+                    "ts": 1500087720,
+                    "twitterid": "886058483392622592"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02afd",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "The women played great today at the @USGA #USWomensOpen I look forward to being there tomorrow for the final round!",
+                    "ts": 1500174240,
+                    "twitterid": "886421324637380609"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02af6",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "Honored to serve as Commander-in-Chief to the courageous men and women of our U.S. Armed Forces. A grateful nation thanks you!",
+                    "ts": 1500082440,
+                    "twitterid": "886036222308757504"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02abf",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "I look forward to all meetings today with world leaders, including my meeting with Vladimir Putin. Much to discuss. #G20Summit #USA",
+                    "ts": 1499413320,
+                    "twitterid": "883229754077392896"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02afa",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "Will be at the Women's U.S. Open today!",
+                    "ts": 1500136380,
+                    "twitterid": "886262474277888002"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b05",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "Congratulations to Sung Hyun Park on winning the 2017 @USGA #USWomensOpen",
+                    "ts": 1500250920,
+                    "twitterid": "886742955251335168"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02ae8",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "Melania and I were thrilled to join the dedicated men and women of the @USEmbassyFrance, members of the U.S. Military and their families.",
+                    "ts": 1499950200,
+                    "twitterid": "885481504780013568"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b04",
+                    "date_month": "2017-07",
+                    "origin": "realdonaldtrump",
+                    "title": "I am at the @USGA #USWomensOpen. An amateur player is co-leading for the first time in many decades - very exciting!",
+                    "ts": 1500238800,
+                    "twitterid": "886691926233239556"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02bd4",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Join me at 7:00 P.M. on Tuesday, August 22nd in Phoenix, Arizona at the Phoenix Convention Center! Tickets at: \u00a0\u2026",
+                    "ts": 1502928660,
+                    "twitterid": "897974118959783937",
+                    "url": "https://www.donaldjtrump.com/rallies/phoenix-az"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bd5",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "THANK YOU @MayorGimenez for following the RULE OF LAW! Sanctuary cities make our country LESS SAFE! Full remarks: \u00a0\u2026",
+                    "ts": 1502938500,
+                    "twitterid": "898015350914138112",
+                    "url": "https://www.facebook.com/DonaldTrump/videos/10159677763575725/"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b84",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you West Virginia! All across the country, Americans of every kind are coming together w/one simple goal: to MAKE AMERICA GREAT AGAIN!",
+                    "ts": 1501820340,
+                    "twitterid": "893325503020642305"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bfa",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you Arizona. Beautiful turnout of 15,000 in Phoenix tonight! Full coverage of rally via my Facebook at: \u00a0\u2026",
+                    "ts": 1503465480,
+                    "twitterid": "900225712522657792",
+                    "url": "https://www.facebook.com/DonaldTrump/videos/10159709733805725/"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bf7",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "See you at 7:00 P.M. tonight Phoenix, Arizona! #MAGA Tickets: \u00a0\u2026",
+                    "ts": 1503432180,
+                    "twitterid": "900086092107571200",
+                    "url": "https://www.donaldjtrump.com/rallies/phoenix-az"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c1a",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "You are doing a great job - the world is watching! Be safe.\u00a0\u2026",
+                    "ts": 1503746460,
+                    "twitterid": "901404330024218624",
+                    "url": "https://twitter.com/fema_brock/status/901090547665907712"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02b8c",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "Prosperity is coming back to our shores because we are putting America WORKERS and FAMILIES first. #AmericaFirst",
+                    "ts": 1501948800,
+                    "twitterid": "893864420539068417"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02bf6",
+                    "date_month": "2017-08",
+                    "origin": "realdonaldtrump",
+                    "title": "We pray for our fallen heroes who died while serving our country in the @USNavy aboard the #USSJohnSMcCain, and their families.",
+                    "ts": 1503429300,
+                    "twitterid": "900074005205528578"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02c9f",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "So nice, thank you! \u00a0\u2026",
+                    "ts": 1505874780,
+                    "twitterid": "910331061409902592",
+                    "url": "https://twitter.com/10_gop/status/910328742165274630"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c8d",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you!\u00a0\u2026",
+                    "ts": 1505649420,
+                    "twitterid": "909385782275788800",
+                    "url": "https://twitter.com/glamourizes/status/909385022469062657"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02c54",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you, our great honor!\u00a0\u2026",
+                    "ts": 1504788660,
+                    "twitterid": "905775458557538304",
+                    "url": "https://twitter.com/gop/status/905541896738672641"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02ca4",
+                    "date_month": "2017-09",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you @foxandfriends - great show!",
+                    "ts": 1505905200,
+                    "twitterid": "910458657179086848"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02de8",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you @foxandfriends. Really great job and show!",
+                    "ts": 1509101940,
+                    "twitterid": "923866849451888640"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d67",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Clips from tax speech and @seanhannity on @foxandfriends now. Have a great day!",
+                    "ts": 1507802640,
+                    "twitterid": "918417002733154305"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02dac",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Big ratings getter @seanhannity and Apprentice Champion John Rich are right now going on stage in Las Vegas for #VegasStrong. Great Show!",
+                    "ts": 1508468400,
+                    "twitterid": "921209530628956161"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d27",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Great meeting with Governor Mapp of the #USVI. He is very thankful for the great job done by @FEMA and First Responders.",
+                    "ts": 1507067940,
+                    "twitterid": "915335645719121920"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e06",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Great job by MichaelCaputo on @foxandfriends.",
+                    "ts": 1509364200,
+                    "twitterid": "924966722544848896"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d2a",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "My Administration will continue to work around the clock with Governor @RicardoRossello & his team. Great progress being made! #PRStrong",
+                    "ts": 1507078380,
+                    "twitterid": "915379231454003200"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02db1",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Thank you @GeraldoRivera @FoxandFriends. Agree!",
+                    "ts": 1508524260,
+                    "twitterid": "921443729990397952"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02d23",
+                    "date_month": "2017-10",
+                    "origin": "realdonaldtrump",
+                    "title": "Congratulations to #TeamUSAon your great @PresidentsCup victory!",
+                    "ts": 1506907320,
+                    "twitterid": "914661855947366406"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02ea6",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "Today, it was an honor to celebrate the Collegiate National Champions of 2016/2017 at the @WhiteHouse! #NCAAChampionsPhotos: \u00a0\u2026",
+                    "ts": 1510960380,
+                    "twitterid": "931661592135168000",
+                    "url": "https://www.instagram.com/realdonaldtrump/"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e30",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "Congress must end chain migration so that we can have a system that is SECURITY BASED! We need to make AMERICA SAFE! #USA",
+                    "ts": 1509648180,
+                    "twitterid": "926157911151214592"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e33",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "Today, it was my pleasure and great honor to announce my nomination of Jerome Powell to be the next Chairman of the @FederalReserve.",
+                    "ts": 1509662100,
+                    "twitterid": "926216279287042048"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e37",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "The @TuckerCarlson opening statement about our once cherished and great FBI was so sad to watch. James Comey's leadership was a disaster!",
+                    "ts": 1509672360,
+                    "twitterid": "926259330474704900"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e4e",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "It was a true honor to be at Yokota Air Base with our GREAT @USForcesJapan!",
+                    "ts": 1509866880,
+                    "twitterid": "927075137131896832"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02e2e",
+                    "date_month": "2017-11",
+                    "origin": "realdonaldtrump",
+                    "title": "Congratulations to the Houston @Astros, 2017 #WorldSeries Champions #HoustonStrong #EarnHistory",
+                    "ts": 1509643860,
+                    "twitterid": "926139726129704960"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a3279b21b32c5bf02f4f",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Great job Kevin, we are all proud of you!\u00a0\u2026",
+                    "ts": 1513393920,
+                    "twitterid": "941868639199916037",
+                    "url": "https://twitter.com/repkevinbrady/status/941774942730846208"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f06",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Great job First Lady Melania!\u00a0\u2026",
+                    "ts": 1512265800,
+                    "twitterid": "937136868608626689",
+                    "url": "https://twitter.com/flotus/status/936006319076724742"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f20",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Tonight, @FLOTUS Melania and I were thrilled to welcome so many wonderful friends to the @WhiteHouse \u2013 and wish them all a very #HappyHanukkah \u00a0",
+                    "ts": 1512711360,
+                    "twitterid": "939005659982348291",
+                    "url": "https://instagram.com/p/BcbeSTVgqNj/"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f6b",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "WE ARE MAKING AMERICA GREAT AGAIN!",
+                    "ts": 1513806240,
+                    "twitterid": "943598090069536768"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f92",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Together, we are MAKING AMERICA GREAT AGAIN! \u00a0",
+                    "ts": 1514502840,
+                    "twitterid": "946519720450252800",
+                    "url": "https://instagram.com/p/BdQ5D6Xgd7P/"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f87",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "I hope everyone is having a great Christmas, then tomorrow it\u2019s back to work in order to Make America Great Again (which is happening faster than anyone anticipated)!",
+                    "ts": 1514244780,
+                    "twitterid": "945437479863291904"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f63",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "DOW RISES 5000 POINTS ON THE YEAR FOR THE FIRST TIME EVER - MAKE AMERICA GREAT AGAIN!",
+                    "ts": 1513681440,
+                    "twitterid": "943074475209355264"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02f6e",
+                    "date_month": "2017-12",
+                    "origin": "realdonaldtrump",
+                    "title": "Home Sales hit BEST numbers in 10 years! MAKE AMERICA GREAT AGAIN",
+                    "ts": 1513864560,
+                    "twitterid": "943842608631238656"
+                }
+            ],
+            [
+                {
+                    "_id": "5a65a705421aa969d2a7d133",
+                    "date_month": "2018-01",
+                    "origin": "Donald J. Trump",
+                    "title": "Excellent preliminary meeting in Oval with @SenSchumer - working on solutions for Security and our great Military t\u2026 ",
+                    "ts": 1516400273,
+                    "twitterid": 954478044487520257,
+                    "url": "https://twitter.com/i/web/status/954478044487520257"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02fd9",
+                    "date_month": "2018-01",
+                    "origin": "realdonaldtrump",
+                    "title": "We have been working every day to DELIVER for America\u2019s Farmers just as they work every day to deliver FOR US. #AFBF18",
+                    "ts": 1515452280,
+                    "twitterid": "950501926227136512"
+                },
+                {
+                    "_id": "5a65a3279b21b32c5bf02fe6",
+                    "date_month": "2018-01",
+                    "origin": "realdonaldtrump",
+                    "title": "I want to thank my @Cabinet for working tirelessly on behalf of our country. 2017 was a year of monumental achievement and we look forward to the year ahead. Together, we are delivering results and MAKING AMERICA GREAT AGAIN! \u00a0",
+                    "ts": 1515614880,
+                    "twitterid": "951184020150382592",
+                    "url": "http://45.wh.gov/CabinetMeeting"
+                }
+            ]
         ]
     }
 ]

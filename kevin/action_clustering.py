@@ -19,7 +19,7 @@ def init_task(type):
     elif type == 'trumpsaid':
         collection_list = ['trumpsaid']
         for item in collection_list:
-            cluster_articles(item, 'titleonly', 90000009)
+            cluster_articles(item, 'trumpsaid', 90000009)
 
 
 # 168hr is 1 week

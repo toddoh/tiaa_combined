@@ -96,7 +96,7 @@ def cluster_articles(item, type=None, mode=None):
                     return i, i + len(small)
             return False
 
-        if type == 'titleonly':
+        if type == 'trumpsaid':
             for article in cursor:
                 if isinstance(article['title'], str):
                     parsed_article_title.append(article['title'])
@@ -107,7 +107,7 @@ def cluster_articles(item, type=None, mode=None):
                         parsed_article_title.append(article['title'])
                         parsed_article_text.append(article['text'])
 
-        if type == 'titleonly':
+        if type == 'trumpsaid':
             parsed_article_dict = parsed_article_title
         else:
             parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
@@ -116,8 +116,8 @@ def cluster_articles(item, type=None, mode=None):
         tfidfpath = './dataset/' + type + '/'
         if type == 'today':
             parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'today')
-        elif type == 'titleonly':
-            parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'titleonly')
+        elif type == 'trumpsaid':
+            parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'trumpsaid')
         else:
             parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath)
         origin_data_raw = cursor

@@ -12,8 +12,8 @@ import whoosh.qparser
 import pytz
 
 def interpret(type):
-    datapath = './dataset/' + type + '/'
-    interpret_datapath = './interpret/' + type + '/'
+    datapath = './monthly/dataset/' + type + '/'
+    interpret_datapath = './monthly/interpret/' + type + '/'
     result_file = datapath + 'result.json'
     with open(result_file) as data_file:
         result_data = json.load(data_file)

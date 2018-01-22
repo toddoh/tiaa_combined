@@ -30,7 +30,11 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./interpret/', ty
 
     print('Calculating tf-idf vectors...')
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
-    tfs = tfidf.fit_transform(parsed_article.values())
+
+    if type == 'trumpsaid':
+        tfs = tfidf.fit_transform(parsed_article)
+    else:
+        tfs = tfidf.fit_transform(parsed_article.values())
 
     def save_sparse_csr(filename,array):
         os.makedirs(data_path, exist_ok=True)
@@ -105,7 +109,11 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./interpret/', ty
     cluster_assignments_dict = {}
 
     for i in set(km_final.labels_):
-        current_cluster_bills = [list(parsed_article)[x] for x in np.where(km_final.labels_ == i)[0]]
+        # print i
+        if type == 'trumpsaid':
+            current_cluster_bills = [list(parsed_article)[x] for x in np.where(km_final.labels_ == i)[0]]
+        else:
+            current_cluster_bills = [list(parsed_article.keys())[x] for x in np.where(km_final.labels_ == i)[0]]
         cluster_assignments_dict[i] = current_cluster_bills
 
     def clean_text(raw_text):
