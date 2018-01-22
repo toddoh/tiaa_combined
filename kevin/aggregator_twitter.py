@@ -80,6 +80,32 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
         except Exception as e:
             print("Article Parse Error: ", e)
 
+    def get_tweet_data(article, origin=None, id=None, ts=None):
+        try:
+            data = {}
+
+            if id:
+                data['twitterid'] = id
+            removeurl = re.sub(r"http\S+", "", article.text)
+            removetwturl = re.sub(r"pic.twitter\S+", "", removeurl)
+
+            data['title'] = removetwturl
+            if len(article.urls):
+                data['url'] = article.urls[0].expanded_url
+
+            if origin:
+                data['origin'] = origin
+            if ts:
+                dt = dateutil.parser.parse(ts)
+                unixts = int(time.mktime(dt.timetuple()))
+                data['ts'] = unixts
+
+            data['text'] = ''
+
+            return data
+        except Exception as e:
+            print("Tweet Parse Error: ", e)
+
     def clean_text(raw_text):
         letters_only = re.sub('[^a-zA-Z]', ' ', raw_text)
         words = letters_only.lower().split()
@@ -121,27 +147,36 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
             print('Twitter data is up to date: {0}'.format(twitter_timeline[0].id))
         else:
             for index, status in enumerate(twitter_timeline):
-                if len(status.urls):
-                    if status.urls[0].expanded_url:
-                        try:
-                            resp = session.head(status.urls[0].expanded_url, allow_redirects=True)
-                            if 'twitter.com/' not in resp.url:
-                                parse_target = Article(resp.url)
-                                parse_data = get_article_info(parse_target, status.user.name, status.id, status.created_at)
+                if list == 'usa-trump':
+                    parse_data = get_tweet_data(status, status.user.name, status.id, status.created_at)
 
-                                if parse_data:
-                                    print('Index {0}/{1}, parsed title: {2}'.format(index, len(twitter_timeline), parse_data['title']))
-                                    parsed_article_title.append(parse_data['title'])
-                                    parsed_article_text.append(parse_data['text'])
-                                    parsed_article_data.append(parse_data)
-                            else:
-                                print('Skipped parsing: the url contains twitter.com')
-                                print('Index {0}/{1}, Skipped parsing: the url contains twitter.com {2}'.format(index, len(twitter_timeline),
-                                                                                                                resp.url))
-                        except requests.TooManyRedirects:
-                            print('Article Parse Error: too many redirects')
-                        except requests.RequestException as e:
-                            print('Article Parse Error: {0}'.format(e))
+                    if parse_data:
+                        print('Index {0}/{1}, parsed title: {2}'.format(index, len(twitter_timeline),
+                                                                        parse_data['title']))
+                        parsed_article_title.append(parse_data['title'])
+                        parsed_article_data.append(parse_data)
+                else:
+                    if len(status.urls):
+                        if status.urls[0].expanded_url:
+                            try:
+                                resp = session.head(status.urls[0].expanded_url, allow_redirects=True)
+                                if 'twitter.com/' not in resp.url:
+                                    parse_target = Article(resp.url)
+                                    parse_data = get_article_info(parse_target, status.user.name, status.id, status.created_at)
+
+                                    if parse_data:
+                                        print('Index {0}/{1}, parsed title: {2}'.format(index, len(twitter_timeline), parse_data['title']))
+                                        parsed_article_title.append(parse_data['title'])
+                                        parsed_article_text.append(parse_data['text'])
+                                        parsed_article_data.append(parse_data)
+                                else:
+                                    print('Skipped parsing: the url contains twitter.com')
+                                    print('Index {0}/{1}, Skipped parsing: the url contains twitter.com {2}'.format(index, len(twitter_timeline),
+                                                                                                                    resp.url))
+                            except requests.TooManyRedirects:
+                                print('Article Parse Error: too many redirects')
+                            except requests.RequestException as e:
+                                print('Article Parse Error: {0}'.format(e))
     elif mode == 'direct':
         for index, item in enumerate(data):
             try:
@@ -167,7 +202,10 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
                 print('Article Parse Error: {0}'.format(e))
                 continue
 
-    parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
+    if list == 'usa-trump':
+        parsed_article_dict = parsed_article_title
+    else:
+        parsed_article_dict = dict(zip(parsed_article_title, parsed_article_text))
     print('Finished parsing all articles in timeline: ')
 
     return parsed_article_dict, parsed_article_data

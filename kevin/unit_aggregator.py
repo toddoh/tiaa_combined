@@ -3,6 +3,7 @@ from pymongo import MongoClient
 import datetime
 from datetime import timezone
 import sys
+import re
 
 
 def aggregator_storeobject(item):
@@ -26,17 +27,7 @@ def aggregator_storeobject(item):
     collection = db['aggregator_' + item]
     if len(list(collection.find({}))):
         cursor = list(collection.find().sort('ts', -1).limit(1))
-        # print(cursor)
-
-        cursor_readable = []
-        for element in cursor:
-            element['text'] = []
-            element['image'] = ''
-            element['url'] = ''
-            element['authors'] = []
-            cursor_readable.append(element)
-
-        print(cursor_readable)
+        print(cursor)
     else:
         cursor = []
 

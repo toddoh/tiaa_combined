@@ -146,4 +146,4 @@ def read_parse_csv(source_origin, type):
             print(final_csv_tweets)
 
 
-# read_parse_csv('realdonaldtrump', 'save')
+read_parse_csv('realdonaldtrump', 'save')
