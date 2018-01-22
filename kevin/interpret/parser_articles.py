@@ -59,7 +59,10 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./interpret/', ty
     pca = PCA(n_components=2).fit(tfs.todense())
     data2D = pca.transform(tfs.todense())
 
-    maxit = 400
+    maxit = 500
+    if type == 'today':
+        maxit = 1500
+
     for kval in range_n_clusters:
         km = KMeans(n_clusters=kval, init='k-means++', max_iter=maxit)
         km.fit(data2D)
