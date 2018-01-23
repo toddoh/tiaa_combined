@@ -12,11 +12,10 @@ export function init_render() {
     const today_hero_markup = () => html`
     <div class="today-hero">
         <div class="today-herotext">
-            <p class="hero1 dayinfo">Today in</p>
-            <p class="hero1 things"></p>
+            <p class="hero1 dayinfo">Today</p>
+            <p class="hero1 things">Things to know</p>
             <div class="hero2">
                 <p>Here's a quick recap of what's happening now, updated every hour.</p>
-                <p>We automatically clustered stories from the past 24 hours.</p>
             </div>
             <p class="today-herotpdetails">More</p>
         </div>
