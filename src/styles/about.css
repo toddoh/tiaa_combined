@@ -1,5 +1,5 @@
 .about-hero{
-    padding: 27vh 200px 30px 60px;
+    padding: 27vh 200px 50px 60px;
     display: flex;
     align-items: center;
 }
@@ -16,8 +16,8 @@
     margin-top: 14px;
 }
 
-.about-hero .hero2 .detail{
-    font-size: 0.9em;
+.about-hero .hero2 > p{
+    margin-top: 12px;
 }
 
 .about-hero .hero2.contact{
@@ -27,44 +27,128 @@
     margin-top: 20px;
 }
 
-.about-hero .team{
-    margin-bottom: 20px;
-    font-weight: 600;
+.about-team{
+    padding: 50px 200px 50px 60px;
     display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
 }
 
-.about-hero .team > a > div{
+.about-team .title-text{
+    font-size: 1.7em;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.about-team li{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.about-team li .member-title{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.about-team li .member-desc{
+    margin-top: 7px;
+}
+
+.about-team li .social-channels{
+    display: flex;
+    margin-top: 13px;
+}
+
+.about-team li .social-channels a > div{
     width: 22px;
     height: 19px;
     background-image: url('../resources/symbol_twitter.png');
     background-size: cover;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.about-hero .team > a > div.email{
+.about-team li .social-channels a > div.email{
     width: 19px;
     height: 20px;
     background-image: url('../resources/symbol_gmail.png');
     background-size: cover;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.about-hero .team > a > div.fb{
+.about-team li .social-channels a > div.fb{
     width: 20px;
     height: 20px;
     background-image: url('../resources/symbol_fb.png');
     background-size: cover;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.about-hero .team > a > div.linkedin{
+.about-team li .social-channels a > div.linkedin{
     width: 22px;
     height: 20px;
     background-image: url('../resources/symbol_linkedin.png');
     background-size: cover;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
+.about-technical{
+    padding: 50px 200px 50px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-technical .title-text{
+    font-size: 1.7em;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.about-technical > ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-technical .step-desc li{
+    display: flex;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+.about-technical .step-desc li:before {
+    content: '1.';
+    display: block;
+    position: absolute;
+    bottom: 17px;
+    right: 17px;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.about-technical .step-desc li:nth-child(2):before {
+    content: '2.';
+}
+
+.about-technical .step-desc li:nth-child(3):before {
+    content: '3.';
+}
+
+.about-technical .step-desc li:nth-child(4):before {
+    content: '4.';
+}
+
+.about-technical .step-desc li:nth-child(5):before {
+    content: '5.';
+}
+
+.about-technical .step-desc li:nth-child(6):before {
+    content: 'DONE';
+}
 
 @media all and (max-width: 980px) {
     .about-hero{
