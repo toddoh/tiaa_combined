@@ -1,0 +1,463 @@
+.pastyear-hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.pastyear-hero .hero1{
+    font-size: 3em;
+    font-weight: 800;
+    background: linear-gradient(to right, #ea2000 , #ff7800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pastyear-hero .hero2{
+    font-size: 1.3em;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.pastyear-hero .pastyear-herotpdetails{
+    font-size: 0.8em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #929292;
+}
+
+/* data */
+.pastyear-analysis-data{
+    display: flex;
+    margin-top: -10vh;
+}
+
+.pastyear-analysis-data.hidden{
+    display: none;
+}
+
+.pastyear-analysis-data .analysis-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item{
+    margin: 30px 0;
+    position: relative;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .item-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-self: baseline;
+    margin-left: 80px;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .item-bg{
+    display: none;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item:nth-child(2n) .item-info {
+    flex-direction: row-reverse;
+    margin-right: 80px;
+    margin-left: 0;
+    text-align: right;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .item-theme{
+    position: relative;
+    display: flex;
+    width: 27%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-shrink: 0;
+    padding: 25px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.pastyear-analysis-data .analysis-list .theme-header{
+    align-self: baseline;
+    font-weight: 600;
+    font-size: 1.15em;
+    text-transform: uppercase;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .themes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-self: baseline;
+    margin-top: 16px;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .item-peakinfo{
+    position: relative;
+    display: none;
+    width: 28%;
+    height: 5%;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-month-container{
+    display: flex;
+    width: 35%;
+    padding: 0 0 20px 25px;
+    flex-wrap: wrap;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container {
+    justify-content: flex-end;
+    padding: 0 25px 20px 0;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month{
+    margin: 3px 10px;
+    padding: 5px 0;
+    font-weight: 600;
+    color: #424242;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak > p:after{
+    content: 'peak';
+    text-transform: uppercase;
+    background: #f34e00;
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    margin-left: 5px;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item:nth-child(2n) .toparticle-month-container .toparticle-month{
+    flex-direction: row-reverse;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
+    box-shadow: 0 2px 0 0;
+    color: #ec7100;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak.selected{
+    color: #ff3f00;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-content-container{
+    position: relative;
+    padding: 30px 0;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
+    display: none;
+    flex-wrap: wrap;
+    margin-left: 70px;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month.selected {
+    display: flex;
+}
+
+.pastyear-analysis-data .analysis-list .analysis-item:nth-child(2n) .toparticle-content-container .toparticle-month{
+    flex-direction: row-reverse;
+    margin-right: 70px;
+    margin-left: 0;
+}
+
+.pastyear-analysis-data .analysis-list .toparticle-month .toparticle-object{
+    position: relative;
+    width: 20%;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.pastyear-analysis-data .analysis-list .toparticle-month .toparticle-object:before{
+    content: '';
+    display: block;
+    padding-top: 80%;
+}
+
+.pastyear-analysis-data .analysis-list .toparticle-month .toparticle-object .article-info{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.pastyear-analysis-data .analysis-list .toparticle-month .toparticle-object .article-title{
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.pastyear-analysis-data .analysis-list .toparticle-month .toparticle-object .article-desc{
+    font-size: 0.9em;
+    margin-top: 3px;
+}
+
+/* tp details */
+.pastyear-tpdetails{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    transition: all 200ms ease;
+}
+
+.pastyear-tpdetails.revealed{
+    overflow: auto;
+    width: auto;
+    padding: 120px 10%;
+    height: auto;
+    background: #fff;
+}
+
+.pastyear-tpdetails .tpdetails-reveal > p{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.pastyear-tpdetails .tpdetails-text{
+    margin-top: 15px;
+}
+
+.pastyear-tpdetails .tpdetails-text > p{
+    margin-top: 6px;
+}
+
+.pastyear-tpdetails .datasets{
+    border-top: 1px solid #e4e4e4;
+    margin-top: 20px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pastyear-tpdetails .datasets > a{
+    display: flex;
+}
+
+.pastyear-tpdetails .datasets > a > p{
+    text-transform: uppercase;
+    background: #ec7100;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 8px;
+    align-self: baseline;
+}
+
+.pastyear-tpdetails .tpdetails-close-action{
+    width: 17px;
+    height: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.pastyear-tpdetails .tpdetails-close-action .icon{
+    width: 17px;
+    height: 15px;
+    background-image: url('../../resources/symbol_close.png');
+    background-size: cover;
+}
+
+@media all and (max-width: 980px) {
+    .pastyear-hero{
+        width: 85%;
+        margin: 0 auto;
+        overflow: hidden;
+        max-height: 110vh;
+        height: 110vh;
+        transition: all 200ms ease;
+    }
+
+    .pastyear-hero .hero1{
+        font-size: 1.3em;
+    }
+
+    .pastyear-hero .hero1.strike:after {
+        height: 3px;
+    }
+
+    .pastyear-hero .hero2{
+        font-size: 1.05em;
+    }
+
+    .pastyear-hero .pastyear-herotpdetails{
+        font-size: 0.97em;
+    }
+
+    .pastyear-analysis-data{
+        margin-top: -20vh;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item{
+        margin: 0;
+        transition: all 200ms ease;
+    }
+
+    .pastyear-analysis-data .analysis-list.highlighted .analysis-item{
+        opacity: 0.3;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected{
+        display: block;
+        opacity: 1;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .item-info{
+        justify-content: center;
+        margin-left: 0;
+        color: #fff;
+        transition: all 200ms ease;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .item-info{
+        flex-direction: column;
+        align-items: flex-start;
+        color: #000;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .item-bg{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .item-bg{
+        display: none;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item:nth-child(2n) .item-info{
+        flex-direction: row;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected:nth-child(2n) .item-info{
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .item-theme{
+        width: 100%;
+        height: 230px;
+        justify-content: center;
+        box-shadow: none;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .item-theme{
+        height: auto;
+        width: auto;
+        padding: 30px 30px;
+        box-shadow: none;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .theme-header{
+        font-size: 1.25em;
+        padding: 30px;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .theme-header{
+        font-size: 1.15em;
+        padding: 0;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .themes{
+        display: none;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .themes{
+        display: flex;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .toparticle-month-container{
+        display: none;
+        transition: all 200ms ease;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .toparticle-month-container{
+        display: flex;
+        width: 80%;
+        padding: 0 0 0 20px;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected:nth-child(2n) .toparticle-month-container{
+        justify-content: initial;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .toparticle-content-container{
+        display: none;
+        transition: all 200ms ease;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .toparticle-content-container{
+        display: block;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
+        display: none;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .toparticle-content-container .toparticle-month.selected{
+        display: flex;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected:nth-child(2n) .toparticle-content-container .toparticle-month{
+        flex-direction: row;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .toparticle-month .toparticle-object:before{
+        content: '';
+        display: none;
+        padding-top: 0%;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .toparticle-month .toparticle-object{
+        width: 100%;
+    }
+
+    .pastyear-analysis-data .analysis-list .toparticle-month .toparticle-object .article-info {
+        position: relative;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .item-close-action{
+        margin: 0 auto;
+        width: 17px;
+        height: 15px;
+        padding: 20px;
+        margin-top: -10px;
+    }
+
+    .pastyear-analysis-data .analysis-list .analysis-item.selected .item-close-action .icon{
+        width: 17px;
+        height: 15px;
+        background-image: url('../../resources/symbol_close.png');
+        background-size: cover;
+    }
+}

@@ -1,10 +1,10 @@
 import {html, render} from 'lit-html';
-import pastyear_style from '../styles/pastyear/base.css';
+import pastyear_style from '../../styles/pastyear/base.css';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='TrumpFirstYear';
-    document.querySelector('.navbox-static').classList.add('donaldtrump');
-    document.querySelector('.navbox-sections li[data-sectionid="nav-section-donaldtrump"]').remove();
+    document.querySelector('.navbox-currentpath').textContent ='ThePastYear';
+    document.querySelector('.navbox-static').classList.add('pastyear');
+    document.querySelector('.navbox-sections li[data-sectionid="nav-section-pastyear"]').remove();
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }

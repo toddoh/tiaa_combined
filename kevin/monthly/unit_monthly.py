@@ -185,12 +185,31 @@ def sort_articles_month(item, type=None, mode=None):
                 # else:
                 ner_result = list(cluster_ner(' '.join(parsed_data[1][index])))
 
+                article_list = []
+                for title in parsed_data[1][index]:
+                    filter = next((item for item in cursor if item["title"] == title), False)
+                    if filter:
+                        if 'text' in filter:
+                            del filter['text']
+                        if 'authors' in filter:
+                            del filter['authors']
+                        if '_id' in filter:
+                            filter['_id'] = str(filter['_id'])
+
+                        article_list.append(filter)
+
                 zip_data['theme'] = theme_data
                 zip_data['namedentity'] = ner_result
-                zip_data['articles'] = parsed_data[1][index]
+                zip_data['articles'] = article_list
                 zip_data['month'] = monthlyitem['month']
 
                 parsed_articlecluster.append(zip_data)
+
+                print('Clustering unit: finished processing')
+                with open(datapath + '/' + monthlyitem['month'] + '.json', 'w') as outfile:
+                    json.dump(parsed_articlecluster, outfile, indent=4, sort_keys=True)
+
+                print('Clustering unit: saved into json file.')
 
             parsed_articlecluster_final.append(parsed_articlecluster)
 
@@ -199,11 +218,7 @@ def sort_articles_month(item, type=None, mode=None):
         # print('Raw article data reference: ')
         # print(parsed_articlecluster)
 
-        print('Clustering unit: finished processing')
-        with open(datapath + '/result.json', 'w') as outfile:
-            json.dump(parsed_articlecluster_final, outfile, indent=4, sort_keys=True)
 
-        print('Clustering unit: saved into json file.')
     else:
         print('Clustering unit: The collection is empty, unable to process.')
 

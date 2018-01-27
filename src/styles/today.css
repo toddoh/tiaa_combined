@@ -51,6 +51,7 @@
     flex-shrink: 0;
     min-width: 32%;
     max-width: 32%;
+    height: 30vw;
     overflow: hidden;
     transition: all 200ms ease;
     box-shadow: 0 0 2px rgba(0,0,0,0.2);
@@ -60,23 +61,12 @@
     display: flex;
     max-width: 100%;
     min-width: 100%;
+    height: 50vw;
     box-shadow: none;
 }
 
 .today-analysis-data .analysis-list.selected .analysis-item{
     display: none;
-}
-
-.today-analysis-data .analysis-list .analysis-item:before{
-    content: '';
-    display: block;
-    padding-top: 120%;
-}
-
-.today-analysis-data .analysis-list .analysis-item.selected:before{
-    content: '';
-    display: none;
-    padding-top: 0%;
 }
 
 .today-analysis-data .analysis-list .analysis-item .item-wrapper{

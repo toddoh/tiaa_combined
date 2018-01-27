@@ -1,12 +1,19 @@
 import styles from '../styles/core.css';
+import "babel-polyfill";
 import {html, render} from 'lit-html';
 
 const render_core = () => {
     const contentSections = [
         { id: 'nav-section-today', name: 'Today', path: '' },
         { id: 'nav-section-thisweek', name: 'ThisWeek', path: 'thisweek' },
+        //{ id: 'nav-section-pastyear', name: 'ThePastYear', path: 'pastyear' },
         { id: 'nav-section-donaldtrump', name: 'TrumpFirstYear', path: 'donaldtrump' },
-        //{ id: 'nav-section-eastasia', name: 'EastAsia', path: 'eastasia' },
+    ];
+
+    const issuesSections = [
+        { id: 'nav-section-issuesdaca', name: 'DACA', path: 'daca' },
+        { id: 'nav-section-issuesborderwall', name: 'BorderWall', path: 'borderwall' },
+        { id: 'nav-section-issuesnorthkorea', name: 'NorthKoreaThreats', path: 'northkorea' },
     ];
 
     const top_frame_markup = () => html`
