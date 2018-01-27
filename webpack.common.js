@@ -6,7 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: ['whatwg-fetch', 'babel-polyfill', './src/js/index.js']
+        index: ['whatwg-fetch', 'babel-polyfill', './src/js/index.js'],
+        vendor: ['babel-polyfill']
     },
     plugins: [
         new CleanWebpackPlugin(['dist'], { watch: false }),
