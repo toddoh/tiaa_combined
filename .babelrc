@@ -1,6 +1,20 @@
 {
-    "presets":[
-        "es2015"
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": [
+                        "ie 11",
+                        "safari >= 7",
+                        "edge >= 1",
+                        "chrome >= 55"
+                    ]
+                }
+            }
+        ]
     ],
-    "plugins": ["dynamic-import-webpack"]
+    "plugins": [
+        "dynamic-import-webpack"
+    ]
 }

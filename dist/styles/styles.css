@@ -2536,6 +2536,7 @@ body{
         margin: 20px 0 0;
         max-width: 100%;
         min-width: 100%;
+        height: 110vw;
         transition: all 200ms ease;
     }
 
@@ -2543,14 +2544,17 @@ body{
         padding-top: 100%;
     }
 
-    .today-analysis-data .analysis-list.highlighted .analysis-item{
+    .today-analysis-data .analysis-list.selected .analysis-item{
+        display: block;
         opacity: 0.3;
     }
 
-    .today-analysis-data .analysis-list .analysis-item.selected{
+    .today-analysis-data .analysis-list.selected .analysis-item.selected{
+        height: auto;
+        min-height: 110vw;
         display: block;
         opacity: 1;
-        margin-bottom: 40px;
+        margin-bottom: 0;
         box-shadow: 0 0 3px rgba(0,0,0,0.3);
     }
 
@@ -2617,6 +2621,7 @@ body{
     .today-analysis-data .analysis-list.selected .analysis-item.selected .item-close-action{
         position: absolute;
         right: 0;
-        top: 0;
+        left: 0;
+        bottom: 0;
     }
 }
