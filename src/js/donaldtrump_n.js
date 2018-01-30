@@ -5,9 +5,9 @@ import _ from 'lodash';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='WhatTrumpSaid';
-    document.querySelector('.navbox-static').classList.add('donaldtrump');
-    document.body.classList.add('donaldtrump');
-    document.querySelector('.navbox-sections li[data-sectionid="nav-section-donaldtrump"]').remove();
+    document.querySelector('.navbox-static').classList.add('whattrumpsaid');
+    document.body.classList.add('whattrumpsaid');
+    //document.querySelector('.navbox-sections li[data-sectionid="nav-section-whattrumpsaid"]').remove();
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
@@ -36,6 +36,52 @@ export function init_render() {
 
     render(hero_markup(), document.querySelector('.minion-contents'));
     document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Feb 5, 2018 ET';
+
+    var month_index_data = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12", "2018-01"];
+    const content_index_markup = () => html`
+    <ul>
+    ${month_index_data.map((ind) => html`
+        <li banana-month="${ind}">${ind}</li>
+    `
+    )}
+    </ul>
+    `;
+
+    var indexdiv = document.querySelector('.minion-content-index .content-indexes');
+    while (indexdiv.firstChild) {
+        indexdiv.removeChild(indexdiv.firstChild);
+    }
+    render(content_index_markup(), document.querySelector('.minion-content-index .content-indexes'));
+    Array.prototype.forEach.call(document.querySelectorAll('.minion-content-index .content-indexes li'), function(el, index, array) {
+        var month_raw = el.getAttribute('banana-month');
+        var converted = '';
+
+        if (month_raw == '2017-01') converted = 'Jan \'17';
+        if (month_raw == '2017-02') converted = 'Feb \'17';
+        if (month_raw == '2017-03') converted = 'Mar \'17';
+        if (month_raw == '2017-04') converted = 'Apr \'17';
+        if (month_raw == '2017-05') converted = 'May \'17';
+        if (month_raw == '2017-06') converted = 'Jun \'17';
+        if (month_raw == '2017-07') converted = 'Jul \'17';
+        if (month_raw == '2017-08') converted = 'Aug \'17';
+        if (month_raw == '2017-09') converted = 'Sep \'17';
+        if (month_raw == '2017-10') converted = 'Oct \'17';
+        if (month_raw == '2017-11') converted = 'Nov \'17';
+        if (month_raw == '2017-12') converted = 'Dec \'17';
+        if (month_raw == '2018-01') converted = 'Jan \'18';
+        el.innerHTML = converted;
+    });
+
+    var contentindexi = document.querySelectorAll('.minion-content-index .content-indexes li');
+    for (var i=0; i < contentindexi.length; i++) {
+        contentindexi[i].addEventListener('click', function (e) {
+            var month_raw = this.getAttribute('banana-month');
+            if (!this.classList.contains('current')) {
+                render_data(month_raw);
+            }
+        });
+    }
+
     render_data('2017-01');
 }
 
@@ -58,6 +104,25 @@ const render_data = (month) => {
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
+
+        Array.prototype.forEach.call(document.querySelectorAll('.minion-content-index .content-indexes li'), function(el, index, array) {
+            var month_raw = el.getAttribute('banana-month');
+            if (month_raw == month) {
+                el.classList.add('current');
+            } else {
+                el.classList.remove('current');
+            }
+        });
+
+        var bgdiv = document.querySelector('.presidenttrump-analysis-data-dynamicbg');
+        var datadiv = document.querySelector('.presidenttrump-analysis-data');
+        while (bgdiv.firstChild) {
+            bgdiv.removeChild(bgdiv.firstChild);
+        }
+
+        while (datadiv.firstChild) {
+            datadiv.removeChild(datadiv.firstChild);
+        }
 
         const base_markup = () => html`
         <div class="analysis-hero">
@@ -112,7 +177,7 @@ const render_data = (month) => {
         <div class="analysis-eom">
             <div class="analysis-eomtxt">
                 <p class="title-text">Next:</p>
-                <p class="title-text">Trump in February 2017</p>
+                <p class="title-text">February 2017</p>
             </div>
         </div>
         `;
@@ -167,9 +232,11 @@ const render_data = (month) => {
             if (this.scrollTop >= 150) {
                 document.querySelector('.top-navbox').classList.add('scroll_hidden');
                 document.querySelector('.minion-timestamp').classList.add('scroll_hidden');
+                document.querySelector('.minion-content-index').classList.add('scroll_hidden');
             } else {
                 document.querySelector('.top-navbox').classList.remove('scroll_hidden');
                 document.querySelector('.minion-timestamp').classList.remove('scroll_hidden');
+                document.querySelector('.minion-content-index').classList.remove('scroll_hidden');
             }
 
             var scroll_dynamicbg_list = ['hero', '1701c01', '1701c02', '1701c03', '1701c04', '1701c05', '1701c06', 'eom'];
@@ -182,16 +249,18 @@ const render_data = (month) => {
                         document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="hero"]').classList.remove('current');
                     }
                 } else if (dbg == 'eom') {
-                    if (checkVisible(document.querySelector('.presidenttrump-analysis-data .analysis-eom'), window.innerHeight * 0.4) == true) {
+                    if (checkVisible(document.querySelector('.presidenttrump-analysis-data .analysis-eom'), window.innerHeight * 0.35) == true) {
                         document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"]').classList.add('current');
                     } else {
                         document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"]').classList.remove('current');
                     }
                 } else {
-                    if (checkVisible(document.querySelector('.presidenttrump-analysis-data .analysis-item[banana-id="' + dbg + '"]'), window.innerHeight * 0.4) == true) {
+                    if (checkVisible(document.querySelector('.presidenttrump-analysis-data .analysis-item[banana-id="' + dbg + '"]'), window.innerHeight * 0.15) == true) {
                         document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + dbg + '"]').classList.add('current');
                         document.querySelector('.presidenttrump-analysis-data .analysis-item[banana-id="' + dbg + '"]').classList.add('current');
-                    } else {
+                    }
+                    
+                    if (checkVisible(document.querySelector('.presidenttrump-analysis-data .analysis-item[banana-id="' + dbg + '"]'), window.innerHeight * 0.25) == false) {
                         document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + dbg + '"]').classList.remove('current');
                         document.querySelector('.presidenttrump-analysis-data .analysis-item[banana-id="' + dbg + '"]').classList.remove('current');
                     }
@@ -271,93 +340,6 @@ const attach_events = () => {
     }
 
     document.querySelector('.presidenttrump-analysis-data .analysis-herotpdetails').addEventListener('click', function (e) {
-        if (!document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
-            document.querySelector('.presidenttrump-tpdetails').classList.add('revealed');
-
-        if (!document.querySelector('.presidenttrump-analysis-data').classList.contains('hidden'))
-            document.querySelector('.presidenttrump-analysis-data').classList.add('hidden');
-    });
-
-    document.querySelector('.presidenttrump-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
-        if (document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
-            document.querySelector('.presidenttrump-tpdetails').classList.remove('revealed');
-
-        if (document.querySelector('.presidenttrump-analysis-data').classList.contains('hidden'))
-            document.querySelector('.presidenttrump-analysis-data').classList.remove('hidden');
-    });
-}
-
-const postrender_data = () => {
-    document.querySelectorAll('.presidenttrump-analysis-data .analysis-month-target')[0].classList.add('selected');
-    document.querySelector('.presidenttrump-analysis-data .analysis-group[banana-month="2017-01"]').classList.add('selected');
-    
-    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-month-target'), function(el, index, array) {
-        var month_raw = el.getAttribute('banana-month');
-        var converted = '';
-
-        if (month_raw == '2017-01') converted = 'Jan \'17';
-        if (month_raw == '2017-02') converted = 'Feb \'17';
-        if (month_raw == '2017-03') converted = 'Mar \'17';
-        if (month_raw == '2017-04') converted = 'Apr \'17';
-        if (month_raw == '2017-05') converted = 'May \'17';
-        if (month_raw == '2017-06') converted = 'Jun \'17';
-        if (month_raw == '2017-07') converted = 'Jul \'17';
-        if (month_raw == '2017-08') converted = 'Aug \'17';
-        if (month_raw == '2017-09') converted = 'Sep \'17';
-        if (month_raw == '2017-10') converted = 'Oct \'17';
-        if (month_raw == '2017-11') converted = 'Nov \'17';
-        if (month_raw == '2017-12') converted = 'Dec \'17';
-        if (month_raw == '2018-01') converted = 'Jan \'18';
-        el.querySelector('p').innerHTML = converted;
-    });
-    
-    if (check_mobile()) {
-        var mobile_ithm = document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-theme');
-        for (var i=0; i < mobile_ithm.length; i++) {
-            mobile_ithm[i].addEventListener('click', function (e) {
-                var parent = getParents(this, '.analysis-item')[0];
-                if (!parent.classList.contains('selected')) {
-                    parent.classList.add('selected');
-
-                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
-                    if (!list.classList.contains('highlighted')) {
-                        list.classList.add('highlighted');
-                    }
-                } else {
-                    parent.classList.remove('selected');
-
-                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
-                    if (list.classList.contains('highlighted')) {
-                        list.classList.remove('highlighted');
-                    }
-                }
-            });
-        }
-
-        var mobile_ithm_close = document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .item-close-action');
-        for (var i=0; i < mobile_ithm_close.length; i++) {
-            mobile_ithm_close[i].addEventListener('click', function (e) {
-                var parent = getParents(this, '.analysis-item')[0];
-                if (!parent.classList.contains('selected')) {
-                    parent.classList.add('selected');
-
-                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
-                    if (!list.classList.contains('highlighted')) {
-                        list.classList.add('highlighted');
-                    }
-                } else {
-                    parent.classList.remove('selected');
-
-                    var list = document.querySelector('.presidenttrump-analysis-data .analysis-list');
-                    if (list.classList.contains('highlighted')) {
-                        list.classList.remove('highlighted');
-                    }
-                }
-            });
-        }
-    }
-
-    document.querySelector('.presidenttrump-herotpdetails').addEventListener('click', function (e) {
         if (!document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
             document.querySelector('.presidenttrump-tpdetails').classList.add('revealed');
 

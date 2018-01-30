@@ -194,7 +194,7 @@ body{
     width: 279px;
     position: absolute;
     right: 30px;
-    padding-top: 43px;
+    padding-top: 33px;
     text-align: right;
     color: #737373;
 }
@@ -256,6 +256,10 @@ body{
         -o-transform:translateX(100%);
         transform:translateX(100%);
     }
+}
+
+.minion-content-index{
+    display: none;
 }
 
 @media all and (max-width: 510px) {

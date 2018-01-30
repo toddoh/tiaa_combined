@@ -51,6 +51,16 @@ const render_core = () => {
         <div class="minion-dataload"></div>
         <div class="minion-contents">
         </div>
+        <div class="minion-content-index">
+            <div class="contentindex-guide">
+                <p>All months</p>
+                <div class="contentindex-reveal">
+                    <div class="icon"></div>
+                </div>
+            </div>
+            <div class="content-indexes">
+            </div>
+        </div>
         <div class="minion-datapopup">
             <div class="datapopup-contents">
             </div>
@@ -92,6 +102,15 @@ const check_mobile  = () => {
 
 document.querySelector('.minion-datapopup .datapopup-close-action').addEventListener('click', function (e) {
     document.querySelector('.minion-datapopup').classList.remove('visible');
+});
+
+document.querySelector('.minion-content-index').addEventListener('click', (e) => {
+    if (!document.querySelector('.minion-content-index').classList.contains('visible')) {
+        document.querySelector('.minion-content-index').classList.add('visible');
+    } else {
+        if (document.querySelector('.minion-content-index').classList.contains('visible'))
+            document.querySelector('.minion-content-index').classList.remove('visible');
+    }
 });
 
 if (check_mobile()) {

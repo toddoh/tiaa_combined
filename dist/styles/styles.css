@@ -192,7 +192,7 @@ body{
     width: 279px;
     position: absolute;
     right: 30px;
-    padding-top: 43px;
+    padding-top: 33px;
     text-align: right;
     color: #737373;
 }
@@ -254,6 +254,10 @@ body{
         -o-transform:translateX(100%);
         transform:translateX(100%);
     }
+}
+
+.minion-content-index{
+    display: none;
 }
 
 @media all and (max-width: 510px) {
@@ -900,43 +904,43 @@ body{
         background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
         background-size: cover;
     }
-}body.donaldtrump{
+}body.whattrumpsaid{
     height: 100vh;
     overflow: hidden;
 }
 
-body.donaldtrump .top-navbox{
+body.whattrumpsaid .top-navbox{
     left: 0;
     right: 0;
     top: 0;
-    margin: -5px auto;
+    margin: 0 auto;
     transition: all 200ms ease;
 }
 
-body.donaldtrump .top-navbox.scroll_hidden{
-    margin: -150px auto;
+body.whattrumpsaid .top-navbox.scroll_hidden{
+    opacity: 0;
 }
 
-.navbox-static.donaldtrump{
+.navbox-static.whattrumpsaid{
     justify-content: center;
 }
 
-.top-navbox.visible .navbox-static.donaldtrump {
+.top-navbox.visible .navbox-static.whattrumpsaid {
     justify-content: flex-start;
 }
 
-.navbox-static.donaldtrump .navbox-logo{
+.navbox-static.whattrumpsaid .navbox-logo{
     width: 30px;
     height: 30px;
     background-size: 30px 30px;
     background-image: url(../res/section_default_white.f9181fd0bdc36146d0465164d66b4a45.png);
 }
 
-.top-navbox.visible .navbox-static.donaldtrump .navbox-logo{
+.top-navbox.visible .navbox-static.whattrumpsaid .navbox-logo{
     background-image: url(../res/section_default.574d9650d28d94a658b60d3301435095.png);
 }
 
-.navbox-static.donaldtrump .navbox-currentpath{
+.navbox-static.whattrumpsaid .navbox-currentpath{
     font-weight: 700;
     margin-right: 6px;
     font-size: 1.15em;
@@ -945,34 +949,38 @@ body.donaldtrump .top-navbox.scroll_hidden{
     color: #fff;
 }
 
-.navbox-static.donaldtrump .navbox-reveal > div{
-    background-image: url(../res/symbol_arrow_down_white.a071fb0862e37472879c2cdb32d8a96e.png);
+.navbox-static.whattrumpsaid .navbox-reveal > div{
+    background-image: url(../res/symbol_arrow_down_white.040b59f1686105e4b39a221b451ce6fe.png);
 }
 
-.navbox-static.donaldtrump .navbox-reveal{
+.top-navbox.visible .navbox-static.whattrumpsaid .navbox-reveal > div{
+    background-image: url(../res/symbol_arrow_down.a071fb0862e37472879c2cdb32d8a96e.png);
+}
+
+.navbox-static.whattrumpsaid .navbox-reveal{
     display: none;
 }
 
-.top-navbox.visible .navbox-static.donaldtrump .navbox-reveal{
+.top-navbox.visible .navbox-static.whattrumpsaid .navbox-reveal{
     display: flex;
 }
 
-.top-navbox.visible .navbox-static.donaldtrump .navbox-currentpath{
+.top-navbox.visible .navbox-static.whattrumpsaid .navbox-currentpath{
     color: #000;
 }
 
-body.donaldtrump .minion-timestamp{
+body.whattrumpsaid .minion-timestamp{
     color: rgba(255, 255, 255, 0.4588235294117647);
     padding-top: 33px;
     font-size: 0.85em;
     transition: all 200ms ease;
 }
 
-body.donaldtrump .minion-timestamp.scroll_hidden{
-    margin: -150px auto;
+body.whattrumpsaid .minion-timestamp.scroll_hidden{
+    opacity: 0;
 }
 
-body.donaldtrump .minion-datapopup{
+body.whattrumpsaid .minion-datapopup{
     position: absolute;
     width: 100%;
     height: 0;
@@ -983,7 +991,7 @@ body.donaldtrump .minion-datapopup{
     transition: all 200ms ease;
 }
 
-body.donaldtrump .minion-datapopup.visible{
+body.whattrumpsaid .minion-datapopup.visible{
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     width: auto;
@@ -993,11 +1001,11 @@ body.donaldtrump .minion-datapopup.visible{
     z-index: 1;
 }
 
-body.donaldtrump .minion-datapopup .datapopup-close-action{
+body.whattrumpsaid .minion-datapopup .datapopup-close-action{
     display: none;
 }
 
-body.donaldtrump .minion-datapopup.visible .datapopup-close-action{
+body.whattrumpsaid .minion-datapopup.visible .datapopup-close-action{
     position: fixed;
     display: block;
     top: 0;
@@ -1008,12 +1016,67 @@ body.donaldtrump .minion-datapopup.visible .datapopup-close-action{
     margin-top: 20px;
     background: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    transform: translateZ(0);
 }
 
-body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
+body.whattrumpsaid .minion-datapopup .datapopup-close-action .icon{
     width: 17px;
     height: 15px;
     background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-size: cover;
+}
+
+body.whattrumpsaid .minion-content-index{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 0;
+    margin: 26px 30px;
+    transition: opacity 200ms ease;
+}
+
+body.whattrumpsaid .minion-content-index.scroll_hidden{
+    opacity: 0;
+}
+
+body.whattrumpsaid .minion-content-index .contentindex-guide{
+    display: flex;
+    align-items: center;
+    padding: 5px 9px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+body.whattrumpsaid .minion-content-index .content-indexes{
+    display: none;
+}
+
+body.whattrumpsaid .minion-content-index.visible .content-indexes{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5px;
+    justify-content: center;
+    padding: 10px 5px;
+    background: #fff;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 600;
+}
+
+body.whattrumpsaid .minion-content-index.visible .content-indexes li{
+    padding: 7px;
+    display: flex;
+    align-self: baseline;
+}
+
+body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-reveal{
+    width: 15px;
+    height: 9px;
+    margin-left: 6px;
+    background-image: url(../res/symbol_arrow_down_white.040b59f1686105e4b39a221b451ce6fe.png);
     background-size: cover;
 }
 
@@ -1044,7 +1107,7 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
 .presidenttrump-analysis-data-dynamicbg .dynamicbg-item{
     position: absolute;
     z-index: -1;
-    transition: opacity 200ms ease;
+    transition: opacity 160ms ease;
     opacity: 0; 
     height: 0;
 }
@@ -1054,14 +1117,34 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
     height: auto;
 }
 
-.presidenttrump-analysis-data-dynamicbg .dynamicbg-item > div{
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item .image{
+    position: absolute;
+    top: -5vh;
+    left: -5vw;
+    width: 110vw;
+    height: 110vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transform: translateZ(0);
+    transition: all 800ms ease;
+    transition-delay: 500ms;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item.current .image{
+    filter: blur(7px);
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-group[banana-month="hero"] .dynamicbg-item.current .image{
+    filter: none;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item .graphic{
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
     z-index: -1;
 }
 
@@ -1130,8 +1213,8 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
     text-transform: uppercase;
     margin-top: 45px;
     transform: rotate(15deg);
-    background: #fff;
-    color: #f10000;
+    background: #c52d00;
+    color: #6f0000;
     padding: 6px 13px;
     align-self: baseline;
 }
@@ -1141,7 +1224,7 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
     padding: 15vh 30px;
     width: calc(100vw - 60px);
     height: calc(100vh - 30vh);
-    background: #4a4a4a;
+    background: #1f1f1f;
     color: #fff;
     display: flex;
 }
@@ -1153,9 +1236,14 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
     text-transform: uppercase;
     margin-top: 35px;
     transform: rotate(-5deg);
-    padding: 6px 20px;
+    padding: 6px 60px;
     line-height: 1.3em;
     align-self: baseline;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic-box{
+    font-size: 3.5em;
+    margin-top: 50px;
 }
 
 .analysis-hero{
@@ -1250,7 +1338,7 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
 .presidenttrump-analysis-data .analysis-item .msg-text{
     margin-top: 10px;
     font-size: 1.7em;
-    font-weight: 600;
+    font-weight: 400;
     align-self: baseline;
     display: flex;
     width: 70vw;
@@ -1264,10 +1352,11 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
 .presidenttrump-analysis-data .analysis-item .item-pickedtweets .title-text {
     font-size: 1.1em;
     font-weight: 400;
-    width: 18vw;
-    height: 18vw;
-    padding: 17px;
+    width: 17vw;
+    height: 17vw;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.38);
+    -webkit-backdrop-filter: blur(10px);
     margin-right: 15px;
 }
 
@@ -1290,12 +1379,12 @@ body.donaldtrump .minion-datapopup .datapopup-close-action .icon{
     display: none;
 }
 
-body.donaldtrump .minion-datapopup .item-tweets{
+body.whattrumpsaid .minion-datapopup .item-tweets{
     display: flex;
     flex-wrap: wrap;
 }
 
-body.donaldtrump .minion-datapopup .item-tweets .tweet-item{
+body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item{
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -1307,7 +1396,7 @@ body.donaldtrump .minion-datapopup .item-tweets .tweet-item{
     color: #000;
 }
 
-body.donaldtrump .minion-datapopup .item-tweets .tweet-item .ts{
+body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
     font-size: 0.8em;
     font-weight: 400;
 }
@@ -1327,6 +1416,7 @@ body.donaldtrump .minion-datapopup .item-tweets .tweet-item .ts{
 
 .presidenttrump-tpdetails.revealed{
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     width: auto;
     padding: 120px 10%;
     height: calc(100vh - 240px);
@@ -1385,6 +1475,7 @@ body.donaldtrump .minion-datapopup .item-tweets .tweet-item .ts{
     margin-top: 20px;
     background: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    transform: translateZ(0);
 }
 
 .presidenttrump-tpdetails .tpdetails-close-action .icon{
@@ -1395,7 +1486,21 @@ body.donaldtrump .minion-datapopup .item-tweets .tweet-item .ts{
 }
 
 @media all and (max-width: 980px) {
-    body.donaldtrump .minion-timestamp{
+    .navbox-static.whattrumpsaid .navbox-currentpath{
+        width: 0;
+        overflow: hidden;
+        margin-right: 0;
+    }
+
+    .top-navbox.visible .navbox-currentpath{
+        font-weight: 700;
+        margin-right: 6px;
+        font-size: 1.25em;
+        width: auto;
+        overflow: initial;
+    }
+
+    body.whattrumpsaid .minion-timestamp{
         display: none;
     }
 
@@ -1435,12 +1540,13 @@ body.donaldtrump .minion-datapopup .item-tweets .tweet-item .ts{
     }
 
     .presidenttrump-analysis-data .analysis-item .title-text{
-        font-size: 1.4em;
+        font-size: 1.6em;
         width: auto;
     }
 
     .presidenttrump-analysis-data .analysis-item .msg-text{
-        font-size: 1.0em;
+        font-size: 1.2em;
+        font-weight: 400;
     }
 
     .presidenttrump-analysis-data .analysis-item .item-pickedtweets{
@@ -1494,9 +1600,21 @@ body.donaldtrump .minion-datapopup .item-tweets .tweet-item .ts{
         background-position: right;
     }
 
-    body.donaldtrump .minion-datapopup.visible{
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic-box{
+       padding-left: 20px;
+       font-size: 2.8em;
+    }
+
+    body.whattrumpsaid .minion-datapopup.visible{
         padding: 15vh 30px;
         height: 70vh;
+    }
+}
+
+@media all and (max-width: 340px) {
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic-box {
+        font-size: 2.2em;
+        margin-top: 0;
     }
 }.ea-all-hero{
     width: 100%;
