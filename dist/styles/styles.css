@@ -905,7 +905,7 @@ body{
         background-size: cover;
     }
 }body.whattrumpsaid{
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -1502,6 +1502,26 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 
     body.whattrumpsaid .minion-timestamp{
         display: none;
+    }
+
+    body.whattrumpsaid .minion-content-index{
+        margin-top: 30px;
+    }
+
+    body.whattrumpsaid .minion-content-index .contentindex-guide{
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    body.whattrumpsaid .minion-content-index .contentindex-guide > p{
+        display: none;
+    }
+
+    body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-reveal{
+        margin-left: 0;
     }
 
     .presidenttrump-analysis-data .analysis-hero{
