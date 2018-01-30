@@ -116,6 +116,8 @@ const render_data = (month) => {
 
         var bgdiv = document.querySelector('.presidenttrump-analysis-data-dynamicbg');
         var datadiv = document.querySelector('.presidenttrump-analysis-data');
+        bgdiv.style.height = window.innerHeight + 'px';
+        datadiv.style.height = window.innerHeight + 'px';
         while (bgdiv.firstChild) {
             bgdiv.removeChild(bgdiv.firstChild);
         }

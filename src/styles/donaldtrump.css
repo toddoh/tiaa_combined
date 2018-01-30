@@ -91,10 +91,13 @@ body.whattrumpsaid .minion-datapopup.visible{
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     width: auto;
-    padding: 10vh 100px;
-    height: 80vh;
+    height: 100%;
     background: #fff;
     z-index: 1;
+}
+
+body.whattrumpsaid .minion-datapopup.visible .datapopup-contents {
+    padding: 15vh 30px;
 }
 
 body.whattrumpsaid .minion-datapopup .datapopup-close-action{
@@ -125,7 +128,6 @@ body.whattrumpsaid .minion-datapopup .datapopup-close-action .icon{
 body.whattrumpsaid .minion-content-index{
     position: absolute;
     display: block;
-    z-index: 1;
     top: 0;
     margin: 26px 30px;
     transition: opacity 200ms ease;
@@ -181,6 +183,7 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     position: relative;
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
 }
@@ -223,16 +226,6 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     background-position: center;
     z-index: -1;
     transform: translateZ(0);
-    transition: all 800ms ease;
-    transition-delay: 500ms;
-}
-
-.presidenttrump-analysis-data-dynamicbg .dynamicbg-item.current .image{
-    filter: blur(7px);
-}
-
-.presidenttrump-analysis-data-dynamicbg .dynamicbg-group[banana-month="hero"] .dynamicbg-item.current .image{
-    filter: none;
 }
 
 .presidenttrump-analysis-data-dynamicbg .dynamicbg-item .graphic{
@@ -240,7 +233,7 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
@@ -258,6 +251,7 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     font-size: 2.3em;
     font-weight: 600;
     font-family: 'Fugaz One', cursive;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
     line-height: 1.2em;
 }
@@ -280,6 +274,7 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     font-size: 2.3em;
     font-weight: 600;
     font-family: 'Fugaz One', cursive;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
     line-height: 1.2em;
     transform: rotate(-5deg);
@@ -306,6 +301,7 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     font-size: 2em;
     font-weight: 600;
     font-family: 'Fugaz One', cursive;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
     margin-top: 45px;
     transform: rotate(15deg);
@@ -329,6 +325,7 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     font-size: 3em;
     font-weight: 600;
     font-family: 'Fugaz One', cursive;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
     margin-top: 35px;
     transform: rotate(-5deg);
@@ -343,7 +340,7 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
 }
 
 .analysis-hero{
-    height: 100vh;
+    height: 100%;
     display: flex;
     padding: 0 60px;
     align-items: center;
@@ -642,7 +639,6 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 
     .presidenttrump-analysis-data .analysis-eom{
         padding: 0 30px;
-        justify-content: flex-start;
     }
 
     .analysis-eom .title-text{
@@ -699,9 +695,9 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 
     .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c03"] .graphic{
         justify-content: space-between;
-        padding: 25vh 60px;
+        padding: 18vh 60px;
         width: calc(100vw - 120px);
-        height: calc(100vh - 50vh);
+        height: calc(100vh - 36vh);
     }
 
     .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c03"] .graphic-box{
@@ -718,12 +714,8 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 
     .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic-box{
        padding-left: 20px;
+       margin-top: 0;
        font-size: 2.8em;
-    }
-
-    body.whattrumpsaid .minion-datapopup.visible{
-        padding: 15vh 30px;
-        height: 70vh;
     }
 }
 
