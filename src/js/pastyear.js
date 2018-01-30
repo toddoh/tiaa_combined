@@ -1,5 +1,4 @@
 import {html, render} from 'lit-html';
-import pastyear_style from '../styles/pastyear.css';
 
 export function init_render() {
     const getpathparam = (name, url) => {

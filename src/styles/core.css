@@ -20,7 +20,6 @@ html{
     height: auto;
     width: auto;
     position: relative;
-    transform: translateZ(0);
 }
 
 body{
@@ -63,10 +62,6 @@ body{
     background-image: url('../resources/tiaa_icon.png');
     background-size: 35px 35px;
     flex-shrink: 0;
-}
-
-.navbox-static.donaldtrump .navbox-logo{
-    background-image: url('../resources/section_trump.png');
 }
 
 .navbox-static.thisweek .navbox-logo{

@@ -51,6 +51,13 @@ const render_core = () => {
         <div class="minion-dataload"></div>
         <div class="minion-contents">
         </div>
+        <div class="minion-datapopup">
+            <div class="datapopup-contents">
+            </div>
+            <div class="datapopup-close-action">
+                <div class="icon"></div>
+            </div>
+        </div>
     </div>
     `;
 
@@ -82,6 +89,10 @@ const check_mobile  = () => {
     document.body.getAttribute('banana-type', 'mobile') ? status = true : status = false;
     return status;
 }
+
+document.querySelector('.minion-datapopup .datapopup-close-action').addEventListener('click', function (e) {
+    document.querySelector('.minion-datapopup').classList.remove('visible');
+});
 
 if (check_mobile()) {
     document.querySelector('.top-navbox').addEventListener('click', (e) => {
