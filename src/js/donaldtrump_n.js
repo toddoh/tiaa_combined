@@ -269,6 +269,22 @@ const attach_events = () => {
             document.querySelector('.minion-datapopup').classList.add('visible');
         });
     }
+
+    document.querySelector('.presidenttrump-analysis-data .analysis-herotpdetails').addEventListener('click', function (e) {
+        if (!document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
+            document.querySelector('.presidenttrump-tpdetails').classList.add('revealed');
+
+        if (!document.querySelector('.presidenttrump-analysis-data').classList.contains('hidden'))
+            document.querySelector('.presidenttrump-analysis-data').classList.add('hidden');
+    });
+
+    document.querySelector('.presidenttrump-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
+        if (document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
+            document.querySelector('.presidenttrump-tpdetails').classList.remove('revealed');
+
+        if (document.querySelector('.presidenttrump-analysis-data').classList.contains('hidden'))
+            document.querySelector('.presidenttrump-analysis-data').classList.remove('hidden');
+    });
 }
 
 const postrender_data = () => {
