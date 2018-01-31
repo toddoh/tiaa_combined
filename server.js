@@ -36,7 +36,19 @@ app.use(function (req, res, next) {
 app.use(express.static(path.join(__dirname, '/dist/')));
 
 app.get('/dataset/:id/:type', function (request, response) {
-    response.sendFile(path.join(__dirname, '/dataset/' + request.params.id + '/' + request.params.type));
+    if (request.params.type) {
+        response.sendFile(path.join(__dirname, '/dataset/' + request.params.id + '/' + request.params.type));
+    } else {
+        response.sendFile(path.join(__dirname, '/dataset/' + request.params.id));
+    }
+});
+
+app.get('/remote/:type', function (request, response) {
+    response.sendFile(path.join(__dirname, '/remote/' + request.params.type));
+});
+
+app.get('/res/:type', function (request, response) {
+    response.sendFile(path.join(__dirname, '/dist/res/' + request.params.type));
 });
 
 app.get('/*', function (request, response) {

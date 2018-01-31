@@ -74,6 +74,7 @@ body.whattrumpsaid .minion-timestamp{
 
 body.whattrumpsaid .minion-timestamp.scroll_hidden{
     opacity: 0;
+    visibility: hidden;
 }
 
 body.whattrumpsaid .minion-datapopup{
@@ -127,24 +128,35 @@ body.whattrumpsaid .minion-datapopup .datapopup-close-action .icon{
 
 body.whattrumpsaid .minion-content-index{
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
     top: 0;
-    margin: 26px 30px;
-    transition: opacity 200ms ease;
+    padding: 33px 30px;
+    transition: all 100ms ease;
+}
+
+body.whattrumpsaid .minion-content-index.visible{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: #fff;
+    margin: 0 0;
 }
 
 body.whattrumpsaid .minion-content-index.scroll_hidden{
     opacity: 0;
+    visibility: hidden;
 }
 
 body.whattrumpsaid .minion-content-index .contentindex-guide{
     display: flex;
     align-items: center;
     padding: 5px 9px;
-    border: 2px solid #fff;
-    border-radius: 5px;
     color: #fff;
     font-weight: 600;
+    align-self: baseline;
+}
+
+body.whattrumpsaid .minion-content-index.visible .contentindex-guide{
+    color: #000;
 }
 
 body.whattrumpsaid .minion-content-index .content-indexes{
@@ -153,21 +165,37 @@ body.whattrumpsaid .minion-content-index .content-indexes{
 
 body.whattrumpsaid .minion-content-index.visible .content-indexes{
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 5px;
-    justify-content: center;
-    padding: 10px 5px;
-    background: #fff;
-    border-radius: 5px;
+    font-size: 0.95em;
     color: #000;
+    width: 210px;
+}
+
+body.whattrumpsaid .minion-content-index.visible .content-indexes .year-group{
+    display: flex;
+    flex-direction: column;
+}
+
+body.whattrumpsaid .minion-content-index.visible .content-indexes .year-group > p{
+    padding: 7px;
     font-weight: 600;
+    color: #a9a9a9;
+}
+
+body.whattrumpsaid .minion-content-index.visible .content-indexes .year-group ul{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 body.whattrumpsaid .minion-content-index.visible .content-indexes li{
     padding: 7px;
     display: flex;
-    align-self: baseline;
+}
+
+body.whattrumpsaid .minion-content-index.visible .content-indexes li.current{
+    color: #0098f7;
+    font-weight: 600;
 }
 
 body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-reveal{
@@ -175,6 +203,11 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     height: 9px;
     margin-left: 6px;
     background-image: url('../resources/symbol_arrow_down_white.png');
+    background-size: cover;
+}
+
+body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentindex-reveal{
+    background-image: url('../resources/symbol_arrow_up.png');
     background-size: cover;
 }
 
@@ -595,10 +628,6 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 
     body.whattrumpsaid .minion-timestamp{
         display: none;
-    }
-
-    body.whattrumpsaid .minion-content-index{
-        margin-top: 30px;
     }
 
     body.whattrumpsaid .minion-content-index .contentindex-guide{

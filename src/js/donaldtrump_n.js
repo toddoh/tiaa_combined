@@ -37,14 +37,30 @@ export function init_render() {
     render(hero_markup(), document.querySelector('.minion-contents'));
     document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Feb 5, 2018 ET';
 
-    var month_index_data = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12", "2018-01"];
+    var month_index_data = [
+        {
+            "year": "2017",
+            "months": ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12"]
+        }, 
+        {
+            "year": "2018",
+            "months": ["2018-01"]
+        }
+    ];
+
     const content_index_markup = () => html`
-    <ul>
     ${month_index_data.map((ind) => html`
-        <li banana-month="${ind}">${ind}</li>
+    <div class="year-group">
+        <p>${ind.year}</p>
+        <ul>
+        ${ind.months.map((mo) => html`
+            <li banana-month="${mo}">${mo}</li>
+        `
+        )}
+        </ul>
+    </div>
     `
     )}
-    </ul>
     `;
 
     var indexdiv = document.querySelector('.minion-content-index .content-indexes');
