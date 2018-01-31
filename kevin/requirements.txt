@@ -13,19 +13,14 @@ cycler==0.10.0
 docopt==0.6.2
 docutils==0.14
 feedfinder2==0.0.4
-feedparser==5.2.1
 future==0.16.0
-fuzzywuzzy==0.15.1
 gensim==3.2.0
 idna==2.6
 jieba3k==0.35.1
 jmespath==0.9.3
-JPype1-py3==0.5.5.2
 jsonpickle==0.9.5
-konlpy==0.4.4
 lxml==4.1.0
 matplotlib==2.1.0
-mecab-python===0.996-ko-0.9.0
 metadata-parser==0.9.14
 multidict==3.3.0
 newspaper3k==0.2.5
@@ -35,6 +30,7 @@ oauthlib==2.0.6
 olefile==0.44
 pandas==0.21.0
 Pillow==4.3.0
+pip-autoremove==0.9.0
 pymongo==3.5.1
 pyparsing==2.2.0
 python-crontab==2.2.7
