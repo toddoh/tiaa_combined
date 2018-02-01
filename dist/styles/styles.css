@@ -57,13 +57,13 @@ body{
     width: 35px;
     height: 35px;
     margin-right: 10px;
-    background-image: url(../res/tiaa_icon.55727c4592ee79bc0b97583405fda1ad.png);
+    background-image: url(../res/tiaa_icon.png);
     background-size: 35px 35px;
     flex-shrink: 0;
 }
 
 .navbox-static.thisweek .navbox-logo{
-    background-image: url(../res/section_default_black.2624ceae908af4a8c9838cfd4ffbb311.png);
+    background-image: url(../res/section_default_black.png);
 }
 
 .navbox-currentpath{
@@ -96,14 +96,14 @@ body{
 .navbox-reveal > div{
     width: 15px;
     height: 9px;
-    background-image: url(../res/symbol_arrow_down.a071fb0862e37472879c2cdb32d8a96e.png);
+    background-image: url(../res/symbol_arrow_down.png);
     background-size: cover;
 }
 
 .top-navbox.visible .navbox-reveal > div{
     width: 15px;
     height: 9px;
-    background-image: url(../res/symbol_arrow_up.afc88a5b2d1c12602c867adf6b976664.png);
+    background-image: url(../res/symbol_arrow_up.png);
     background-size: cover;
 }
 
@@ -147,18 +147,18 @@ body{
     content: '';
     width: 28px;
     height: 28px;
-    background-image: url(../res/section_default.574d9650d28d94a658b60d3301435095.png);
+    background-image: url(../res/section_default.png);
     background-size: cover;
     margin-right: 10px;
     flex-shrink: 0;
 }
 
 .navbox-sections li[data-sectionid="nav-section-thisweek"]:before{
-    background-image: url(../res/section_default_black.2624ceae908af4a8c9838cfd4ffbb311.png);
+    background-image: url(../res/section_default_black.png);
 }
 
 .navbox-sections li[data-sectionid="nav-section-donaldtrump"]:before{
-    background-image: url(../res/section_trump.ee03f8b33e95090748741f10afc371b9.png);
+    background-image: url(../res/section_trump.png);
 }
 
 
@@ -331,7 +331,7 @@ body{
 .about-team li .social-channels a > div{
     width: 22px;
     height: 19px;
-    background-image: url(../res/symbol_twitter.24c4d2f1c9f00a076eae65db0278e6d7.png);
+    background-image: url(../res/symbol_twitter.png);
     background-size: cover;
     margin-right: 10px;
 }
@@ -339,7 +339,7 @@ body{
 .about-team li .social-channels a > div.email{
     width: 19px;
     height: 20px;
-    background-image: url(../res/symbol_gmail.1257ee259f1f134857f6471d434dab3e.png);
+    background-image: url(../res/symbol_gmail.png);
     background-size: cover;
     margin-right: 10px;
 }
@@ -347,7 +347,7 @@ body{
 .about-team li .social-channels a > div.fb{
     width: 20px;
     height: 20px;
-    background-image: url(../res/symbol_fb.fb60f57f3ce3b0d90ffc1700ff9dbaf2.png);
+    background-image: url(../res/symbol_fb.png);
     background-size: cover;
     margin-right: 10px;
 }
@@ -355,7 +355,7 @@ body{
 .about-team li .social-channels a > div.linkedin{
     width: 22px;
     height: 20px;
-    background-image: url(../res/symbol_linkedin.304f55f232a1bc862cdbad6efa440393.png);
+    background-image: url(../res/symbol_linkedin.png);
     background-size: cover;
     margin-right: 10px;
 }
@@ -713,7 +713,7 @@ body{
 .pastyear-tpdetails .tpdetails-close-action .icon{
     width: 17px;
     height: 15px;
-    background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-image: url(../res/symbol_close.png);
     background-size: cover;
 }
 
@@ -901,7 +901,7 @@ body{
     .pastyear-analysis-data .analysis-list .analysis-item.selected .item-close-action .icon{
         width: 17px;
         height: 15px;
-        background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+        background-image: url(../res/symbol_close.png);
         background-size: cover;
     }
 }body.whattrumpsaid{
@@ -933,11 +933,11 @@ body.whattrumpsaid .top-navbox.scroll_hidden{
     width: 30px;
     height: 30px;
     background-size: 30px 30px;
-    background-image: url(../res/section_default_white.f9181fd0bdc36146d0465164d66b4a45.png);
+    background-image: url(../res/section_default_white.png);
 }
 
 .top-navbox.visible .navbox-static.whattrumpsaid .navbox-logo{
-    background-image: url(../res/section_default.574d9650d28d94a658b60d3301435095.png);
+    background-image: url(../res/section_default.png);
 }
 
 .navbox-static.whattrumpsaid .navbox-currentpath{
@@ -950,11 +950,11 @@ body.whattrumpsaid .top-navbox.scroll_hidden{
 }
 
 .navbox-static.whattrumpsaid .navbox-reveal > div{
-    background-image: url(../res/symbol_arrow_down_white.040b59f1686105e4b39a221b451ce6fe.png);
+    background-image: url(../res/symbol_arrow_down_white.png);
 }
 
 .top-navbox.visible .navbox-static.whattrumpsaid .navbox-reveal > div{
-    background-image: url(../res/symbol_arrow_down.a071fb0862e37472879c2cdb32d8a96e.png);
+    background-image: url(../res/symbol_arrow_down.png);
 }
 
 .navbox-static.whattrumpsaid .navbox-reveal{
@@ -1026,7 +1026,7 @@ body.whattrumpsaid .minion-datapopup.visible .datapopup-close-action{
 body.whattrumpsaid .minion-datapopup .datapopup-close-action .icon{
     width: 17px;
     height: 15px;
-    background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-image: url(../res/symbol_close.png);
     background-size: cover;
 }
 
@@ -1106,12 +1106,12 @@ body.whattrumpsaid .minion-content-index .contentindex-guide .contentindex-revea
     width: 15px;
     height: 9px;
     margin-left: 6px;
-    background-image: url(../res/symbol_arrow_down_white.040b59f1686105e4b39a221b451ce6fe.png);
+    background-image: url(../res/symbol_arrow_down_white.png);
     background-size: cover;
 }
 
 body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentindex-reveal{
-    background-image: url(../res/symbol_arrow_up.afc88a5b2d1c12602c867adf6b976664.png);
+    background-image: url(../res/symbol_arrow_up.png);
     background-size: cover;
 }
 
@@ -1511,7 +1511,7 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 .presidenttrump-tpdetails .tpdetails-close-action .icon{
     width: 17px;
     height: 15px;
-    background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-image: url(../res/symbol_close.png);
     background-size: cover;
 }
 
@@ -2415,7 +2415,7 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 .thisweek-tpdetails .tpdetails-close-action .icon{
     width: 17px;
     height: 15px;
-    background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-image: url(../res/symbol_close.png);
     background-size: cover;
 }
 
@@ -2573,7 +2573,7 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
     .thisweek-analysis-data .analysis-list .analysis-item.selected .item-close-action .icon{
         width: 17px;
         height: 15px;
-        background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+        background-image: url(../res/symbol_close.png);
         background-size: cover;
     }
 }.today-hero{
@@ -2794,7 +2794,7 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 .today-analysis-data .analysis-list .analysis-item .item-reveal-action .icon{
     width: 15px;
     height: 9px;
-    background-image: url(../res/symbol_arrow_down.a071fb0862e37472879c2cdb32d8a96e.png);
+    background-image: url(../res/symbol_arrow_down.png);
     background-size: cover;
     margin-right: 7px;
 }
@@ -2814,7 +2814,7 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 .today-analysis-data .analysis-list.selected .analysis-item.selected .item-close-action .icon{
     width: 17px;
     height: 15px;
-    background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-image: url(../res/symbol_close.png);
     background-size: cover;
 }
 
@@ -2885,7 +2885,7 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 .today-tpdetails .tpdetails-close-action .icon{
     width: 17px;
     height: 15px;
-    background-image: url(../res/symbol_close.f013c4b8b8bafa72aed6b0d3d46fc08b.png);
+    background-image: url(../res/symbol_close.png);
     background-size: cover;
 }
 

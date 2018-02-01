@@ -45,8 +45,8 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(png|jpg|gif)$/,
-                loader: 'file-loader?name=[name].[hash].[ext]&outputPath=res/&publicPath=../'
+                test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+                loader: 'file-loader?name=[name].[ext]&outputPath=res/&publicPath=../'
             }
         ],
     }

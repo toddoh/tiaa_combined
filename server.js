@@ -52,21 +52,25 @@ app.get('/res/:type', function (request, response) {
 });
 
 app.get('/*', function (request, response) {
-    if (request.url.split('/').length <= 2) {
-        if (request.url.endsWith('/')) {
-            response.redirect(301, request.url.slice(0, -1))
-        } else {
-            response.sendFile(path.join(__dirname, '/dist/index.html'));
-        }
+    if (request.url.endsWith('.png') || request.url.endsWith('.ico') || request.url.endsWith('.jpg')) {
+        response.sendFile(path.join(__dirname, '/dist/res/' + request.url.split('/')[1]));
     } else {
-        if (request.url.split('/')[1] == 'dataset') {
-            response.sendFile(path.join(__dirname, '/dataset/' + request.url.split('/')[2]));
-            return;
-        }
+        if (request.url.split('/').length <= 2) {
+            if (request.url.endsWith('/')) {
+                response.redirect(301, request.url.slice(0, -1))
+            } else {
+                response.sendFile(path.join(__dirname, '/dist/index.html'));
+            }
+        } else {
+            if (request.url.split('/')[1] == 'dataset') {
+                response.sendFile(path.join(__dirname, '/dataset/' + request.url.split('/')[2]));
+                return;
+            }
 
-        var param = '';
-        if (request.url.split('/')[1] != '' && 
-            request.url.split('/')[2] != null) param = '?type=' + request.url.split('/')[2]
-        response.redirect(301, hostn + request.url.split('/')[1] + param)
+            var param = '';
+            if (request.url.split('/')[1] != '' && 
+                request.url.split('/')[2] != null) param = '?type=' + request.url.split('/')[2]
+            response.redirect(301, hostn + request.url.split('/')[1] + param)
+        }
     }
 });

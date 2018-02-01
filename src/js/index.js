@@ -1,6 +1,14 @@
 import styles from '../styles/core.css';
 import "babel-polyfill";
 import {html, render} from 'lit-html';
+require('../resources/favicons/android-chrome-192x192.png');
+require('../resources/favicons/android-chrome-384x384.png');
+require('../resources/favicons/apple-touch-icon.png');
+require('../resources/favicons/favicon-16x16.png');
+require('../resources/favicons/favicon-32x32.png');
+require('../resources/favicons/favicon.ico');
+require('../resources/favicons/mstile-150x150.png');
+require('../resources/favicons/safari-pinned-tab.svg');
 
 const render_core = () => {
     const contentSections = [
