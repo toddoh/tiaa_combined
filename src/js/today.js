@@ -54,9 +54,9 @@ const render_data = () => {
     var trump_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/dataset/today_data.json';
+        dataset_url = '//localhost:3000/dataset/today/today_data.json';
     } else {
-        dataset_url = '//thisisallabout.com/dataset/today_data.json'
+        dataset_url = '//thisisallabout.com/dataset/today/today_data.json'
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');

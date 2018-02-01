@@ -55,9 +55,9 @@ const render_data = () => {
     var trump_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/dataset/pastyear_jan2018_data.json';
+        dataset_url = '//localhost:3000/dataset/pastyear/pastyear_jan2018_data.json';
     } else {
-        dataset_url = '//thisisallabout.com/dataset/pastyear_jan2018_data.json'
+        dataset_url = '//thisisallabout.com/dataset/pastyear/pastyear_jan2018_data.json'
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');

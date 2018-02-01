@@ -52,7 +52,7 @@ app.get('/res/:type', function (request, response) {
 });
 
 app.get('/*', function (request, response) {
-    if (request.url.endsWith('.png') || request.url.endsWith('.ico') || request.url.endsWith('.jpg')) {
+    if (request.url.endsWith('.png') || request.url.endsWith('.ico') || request.url.endsWith('.jpg') || request.url.endsWith('.svg')) {
         response.sendFile(path.join(__dirname, '/dist/res/' + request.url.split('/')[1]));
     } else {
         if (request.url.split('/').length <= 2) {
