@@ -4,7 +4,7 @@ import pastyear_style from '../../styles/pastyear/base.css';
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='ThePastYear';
     document.querySelector('.navbox-static').classList.add('pastyear');
-    document.querySelector('.navbox-sections li[data-sectionid="nav-section-pastyear"]').remove();
+    //document.querySelector('.navbox-sections li[data-sectionid="nav-section-pastyear"]').remove();
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
@@ -24,6 +24,9 @@ export function init_render() {
     <div class="pastyear-analysis-data">
         <div class="analysis-list">
         </div>
+    </div>
+    <div class="pastyear-copyrights">
+        <p>Articles/Images copyrights NPR, PBS. All images belong to NPR, PBS, and the rightful owner of images. We display images based on open metadata aggregation.</p>
     </div>
     <div class="pastyear-tpdetails">
         <div class="tpdetails-reveal">

@@ -40,11 +40,13 @@ export function init_render() {
     var month_index_data = [
         {
             "year": "2017",
-            "months": ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12"]
+            "months": ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12"],
+            "months_string": ["jan2017", "feb2017", "mar2017", "apr2017", "may2017", "jun2017", "jul2017", "aug2017", "sep2017", "oct2017", "nov2017", "dec2017"]
         }, 
         {
             "year": "2018",
-            "months": ["2018-01"]
+            "months": ["2018-01"],
+            "months_string": ["jan2018"]
         }
     ];
 
@@ -53,8 +55,8 @@ export function init_render() {
     <div class="year-group">
         <p>${ind.year}</p>
         <ul>
-        ${ind.months.map((mo) => html`
-            <li banana-month="${mo}">${mo}</li>
+        ${ind.months.map((mo, i) => html`
+            <li banana-month="${mo}" banana-monthstr="${ind.months_string[i]}">${mo}</li>
         `
         )}
         </ul>
@@ -88,17 +90,37 @@ export function init_render() {
         el.innerHTML = converted;
     });
 
-    var contentindexi = document.querySelectorAll('.minion-content-index .content-indexes li');
-    for (var i=0; i < contentindexi.length; i++) {
-        contentindexi[i].addEventListener('click', function (e) {
-            var month_raw = this.getAttribute('banana-month');
-            if (!this.classList.contains('current')) {
-                render_data(month_raw);
-            }
-        });
+    const getpathparam = (name, url) => {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)";
+        var regex = new RegExp( regexS );
+        var results = regex.exec( url );
+        return results == null ? null : results[1];
     }
+    
+    if (getpathparam('type') !== '' && getpathparam('type') !== null) {
+        var parammonth_raw = getpathparam('type');
+        var param_converted = '2017-01';
 
-    render_data('2017-01');
+        if (parammonth_raw == 'jan2017') param_converted = '2017-01';
+        if (parammonth_raw == 'feb2017') param_converted = '2017-02';
+        if (parammonth_raw == 'mar2017') param_converted = '2017-03';
+        if (parammonth_raw == 'apr2017') param_converted = '2017-04';
+        if (parammonth_raw == 'may2017') param_converted = '2017-05';
+        if (parammonth_raw == 'jun2017') param_converted = '2017-06';
+        if (parammonth_raw == 'jul2017') param_converted = '2017-07';
+        if (parammonth_raw == 'aug2017') param_converted = '2017-08';
+        if (parammonth_raw == 'sep2017') param_converted = '2017-09';
+        if (parammonth_raw == 'oct2017') param_converted = '2017-10';
+        if (parammonth_raw == 'nov2017') param_converted = '2017-11';
+        if (parammonth_raw == 'dec2017') param_converted = '2017-12';
+        if (parammonth_raw == 'jan2018') param_converted = '2018-01';
+        
+        render_data(param_converted);
+    } else {
+        render_data('2017-01');
+    }
 }
 
 const check_mobile = () => {
@@ -146,7 +168,7 @@ const render_data = (month) => {
         <div class="analysis-hero">
             <div class="analysis-herotext">
                 <p class="hero1">Reading Trump's moves</p>
-                <p class="hero1">through his tweets</p>
+                <p class="hero1">through his tweets /${trump_data[0].month_string}</p>
                 <div class="hero2">
                     <p>We all know that President Trump loves posting on Twitter.</p>
                     <p>And that means you can see through his fanciful game by tweets.</p>
@@ -233,18 +255,16 @@ const render_data = (month) => {
         `;
         
         render(base_dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg'));
-        attach_events();
-        dynamicbg_render_data('1701c03');
-        dynamicbg_render_data('1701c04');
-        dynamicbg_render_data('1701c05');
         document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="hero"]').classList.add('current');
-        
-        Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .tweet-item .ts'), function(el, index, array) {
-            var ts_raw = el.getAttribute('banana-ts');
-            var ts_cv = moment.unix(ts_raw).format("MMMM Do YYYY, hh:mm");
+        attach_events();
 
-            el.innerHTML = ts_cv;
-        });
+        if (trump_data[0].dynamicbg_list.length > 0) {
+            _.filter(trump_data[0].dynamicbg_list, function (dbg) {
+                import('./donaldtrump_dynamic').then(module => {
+                    module.dynamicbg_render_data(month, dbg);
+                });
+            });
+        }
 
         document.querySelector('.presidenttrump-analysis-data').addEventListener('scroll', function (e) {
             if (this.scrollTop >= 150) {
@@ -257,9 +277,7 @@ const render_data = (month) => {
                 document.querySelector('.minion-content-index').classList.remove('scroll_hidden');
             }
 
-            var scroll_dynamicbg_list = ['hero', '1701c01', '1701c02', '1701c03', '1701c04', '1701c05', '1701c06', 'eom'];
-            
-            _.filter(scroll_dynamicbg_list, function (dbg) {
+            _.filter(trump_data[0].dynamicscroll_list, function (dbg) {
                 if (dbg == 'hero') {
                     if (checkVisible(document.querySelector('.presidenttrump-analysis-data .analysis-hero'), window.innerHeight * 0.35) == true) {
                         document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="hero"]').classList.add('current');
@@ -290,57 +308,26 @@ const render_data = (month) => {
     });
 }
 
-const dynamicbg_render_data = (type) => {
-    if (type == '1701c03') {
-        const dynamicbg_markup = () => html`
-        <div class="graphic">
-            <div class="graphic-box">
-                <p>😈</p>
-                <p>EVIL AND FAKE</p>
-                <p>CNN?</p>
-            </div>
-            <div class="graphic-box">
-                <p>😇</p>
-                <p>GREAT AND NO.1</p>
-                <p>Fox News?</p>
-            </div>
-        </div>
-        `;
-        
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
-    }
 
-    if (type == '1701c04') {
-        const dynamicbg_markup = () => html`
-        <div class="graphic">
-            <div class="graphic-box">
-                <p>🤬</p>
-                <p>THE COVERAGE ABOUT ME IN</p>
-                <p>NYT AND WP HAS BEEN SO FALSE! ...</p>
-            </div>
-            <div class="graphic-box">
-                <p>😤</p>
-            </div>
-        </div>
-        `;
-        
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
-    }
-
-    if (type == '1701c05') {
-        const dynamicbg_markup = () => html`
-        <div class="graphic" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Donald_Trump_%2825953705015%29.jpg/1920px-Donald_Trump_%2825953705015%29.jpg')">
-            <div class="graphic-box">
-                <p>EXTREME</p>
-            </div>
-        </div>
-        `;
-        
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
-    }
-}
 
 const attach_events = () => {
+    var contentindexi = document.querySelectorAll('.minion-content-index .content-indexes li');
+    for (var i=0; i < contentindexi.length; i++) {
+        contentindexi[i].addEventListener('click', function (e) {
+            var month_raw = this.getAttribute('banana-monthstr');
+            if (!this.classList.contains('current')) {
+                window.location.href = window.location.protocol + "//" + window.location.host + "/donaldtrump?type=" + month_raw;
+            }
+        });
+    }
+    
+    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .tweet-item .ts'), function(el, index, array) {
+        var ts_raw = el.getAttribute('banana-ts');
+        var ts_cv = moment.unix(ts_raw).format("MMMM Do YYYY, hh:mm");
+
+        el.innerHTML = ts_cv;
+    });
+
     var revealtweets = document.querySelectorAll('.presidenttrump-analysis-data .item-revealtweets-action');
     for (var i=0; i < revealtweets.length; i++) {
         revealtweets[i].addEventListener('click', function (e) {

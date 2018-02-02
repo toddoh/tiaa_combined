@@ -311,6 +311,13 @@
     background-size: cover;
 }
 
+.today-copyrights {
+    padding: 30px 60px;
+    font-size: 0.8em;
+    width: 85%;
+    color: #868686;
+}
+
 @media all and (max-width: 980px) {
     .today-hero{
         padding: 27vh 30px 30px;
@@ -437,5 +444,9 @@
         right: 0;
         left: 0;
         bottom: 0;
+    }
+
+    .today-copyrights {
+        padding: 30px 30px;
     }
 }

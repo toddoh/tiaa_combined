@@ -10,6 +10,7 @@ from operator import itemgetter
 import pytz
 import json
 import os
+import pandas as pd
 
 print('Initiating cluster unit...')
 print('Clustering unit: Setting up MongoClient kevin@main')
@@ -143,7 +144,7 @@ def sort_articles_month(item, type=None, mode=None):
             os.makedirs(datapath, exist_ok=True)
 
             if type == 'trumpsaid':
-                parsed_data = parse_aggregated(parsed_article_dict, 2, 15, datapath, 'titleonly')
+                parsed_data = parse_aggregated(parsed_article_dict, 2, 15, datapath, 'titleonly', monthlyitem['month'])
 
             # print(parsed_data[0])
             parsed_data_themes = []
@@ -211,7 +212,7 @@ def sort_articles_month(item, type=None, mode=None):
 
                 print('Clustering unit: saved into json file.')
 
-            parsed_articlecluster_final.append(parsed_articlecluster)
+        parsed_articlecluster_final.append(parsed_articlecluster)
 
         print(parsed_articlecluster_final)
 
@@ -221,4 +222,5 @@ def sort_articles_month(item, type=None, mode=None):
 
     else:
         print('Clustering unit: The collection is empty, unable to process.')
+
 

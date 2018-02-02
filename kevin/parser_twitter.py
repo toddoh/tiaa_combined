@@ -27,9 +27,13 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
         return stems
 
     parsed_article = data
+    cachedStopWords = set(stopwords.words("english"))
+    # add custom words
+    if type == 'trumpsaid':
+        cachedStopWords.update(['great', 'MAGA', 'America', 'make', 'American', '...', 'Trump', 'Thank', 'country'])
 
     print('Calculating tf-idf vectors...')
-    tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
+    tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words=cachedStopWords)
 
     if type == 'trumpsaid':
         tfs = tfidf.fit_transform(parsed_article)
@@ -138,7 +142,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
         letters_only = re.sub('[^a-zA-Z]', ' ', str(raw_text))
         words = letters_only.lower().split()
         stopwords_eng = set(stopwords.words("english"))
-        useful_words = [x for x in words if x not in stopwords_eng]
+        useful_words = [x for x in words if x not in cachedStopWords]
 
         # Combine words into a paragraph again
         useful_words_string = ' '.join(useful_words)
@@ -146,7 +150,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
     cluster_themes_dict = {}
     for key in cluster_assignments_dict.keys():
-        current_tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
+        current_tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words=cachedStopWords)
         current_tfs = current_tfidf.fit_transform(map(clean_text, cluster_assignments_dict[key]))
 
         current_tf_idfs = dict(zip(current_tfidf.get_feature_names(), current_tfidf.idf_))

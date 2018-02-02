@@ -24,6 +24,9 @@ export function init_render() {
         <div class="analysis-list">
         </div>
     </div>
+    <div class="today-copyrights">
+        <p>Articles/Images copyrights CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, Financial Times. All images belong to the publishers and the rightful owner of images. We display images based on open metadata aggregation.</p>
+    </div>
     <div class="today-tpdetails">
         <div class="tpdetails-reveal">
             <p>Technical Details</p>

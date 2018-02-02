@@ -15,7 +15,7 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
-def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type=None):
+def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type=None, info=None):
     stemmer = PorterStemmer()
 
     def stem_words(words_list, stemmer):
@@ -29,7 +29,11 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     parsed_article = data
 
     print('Calculating tf-idf vectors...')
-    tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
+    cachedStopWords = set(stopwords.words("english"))
+    # add custom words
+    cachedStopWords.update(['great', 'MAGA', 'America', 'make', 'American', '...', 'Trump'])
+
+    tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words=cachedStopWords)
 
     if type == 'titleonly':
         tfs = tfidf.fit_transform(parsed_article)
@@ -77,7 +81,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     pca = PCA(n_components=2).fit(tfs.todense())
     data2D = pca.transform(tfs.todense())
 
-    maxit = 5000
+    maxit = 2000
 
     for kval in range_n_clusters:
         km = KMeans(n_clusters=kval, init='k-means++', max_iter=maxit)
@@ -112,7 +116,8 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
      markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
 
     kIdx += 1
-    plt.savefig(tfidfpath + 'elbow_plot.png')
+    plt.savefig(tfidfpath + 'elbow_plot_' + info + '.png')
+
     # plt.show()
 
     print('Found optimal k value: {0}'.format(kIdx))
@@ -133,8 +138,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     def clean_text(raw_text):
         letters_only = re.sub('[^a-zA-Z]', ' ', str(raw_text))
         words = letters_only.lower().split()
-        stopwords_eng = set(stopwords.words("english"))
-        useful_words = [x for x in words if x not in stopwords_eng]
+        useful_words = [x for x in words if x not in cachedStopWords]
 
         # Combine words into a paragraph again
         useful_words_string = ' '.join(useful_words)
@@ -142,7 +146,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
     cluster_themes_dict = {}
     for key in cluster_assignments_dict.keys():
-        current_tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
+        current_tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words=cachedStopWords)
         current_tfs = current_tfidf.fit_transform(map(clean_text, cluster_assignments_dict[key]))
 
         current_tf_idfs = dict(zip(current_tfidf.get_feature_names(), current_tfidf.idf_))

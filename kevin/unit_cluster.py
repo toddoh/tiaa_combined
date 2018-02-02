@@ -117,7 +117,7 @@ def cluster_articles(item, type=None, mode=None):
         if type == 'today':
             parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'today')
         elif type == 'trumpsaid':
-            parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'trumpsaid')
+            parsed_data = parse_aggregated(parsed_article_dict, 2, 25, tfidfpath, 'trumpsaid')
         else:
             parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath)
         origin_data_raw = cursor

@@ -196,6 +196,13 @@
     background-size: cover;
 }
 
+.thisweek-copyrights {
+    padding: 30px 60px;
+    font-size: 0.8em;
+    width: 85%;
+    color: #868686;
+}
+
 @media all and (max-width: 980px) {
     .thisweek-hero{
         padding: 27vh 30px 30px;
@@ -352,5 +359,9 @@
         height: 15px;
         background-image: url('../resources/symbol_close.png');
         background-size: cover;
+    }
+
+    .thisweek-copyrights {
+        padding: 30px 30px;
     }
 }
