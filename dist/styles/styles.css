@@ -1539,6 +1539,7 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     column-count: 3;
     width: 70vw;
     column-gap: 0em;
+    break-inside: avoid-column;
 }
 
 .presidenttrump-analysis-data .analysis-item .item-pickedtweets .title-text {
@@ -1547,12 +1548,13 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     width: 18vw;
     padding: 20px;
     background: rgb(255, 255, 255);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
     color: #000;
     border-radius: 12px;
     margin-right: 15px;
     margin-bottom: 15px;
     display: inline-block;
+    break-inside: avoid-column;
     margin: 0 0 1em;
 }
 

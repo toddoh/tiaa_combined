@@ -318,7 +318,7 @@ const attach_events = () => {
         contentindexi[i].addEventListener('click', function (e) {
             var month_raw = this.getAttribute('banana-monthstr');
             if (!this.classList.contains('current')) {
-                window.location.href = window.location.protocol + "//" + window.location.host + "/donaldtrump?type=" + month_raw;
+                window.location.href = window.location.protocol + "//" + window.location.host + "/donaldtrump_n?type=" + month_raw;
             }
         });
     }
