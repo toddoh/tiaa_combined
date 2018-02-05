@@ -222,6 +222,10 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     height: 0vh;
 }
 
+.presidenttrump-analysis-data-dynamicbg{
+    background: #000;
+}
+
 .presidenttrump-analysis-data-dynamicbg, .presidenttrump-analysis-data-dynamicbg > div{
     position: absolute;
     top: 0;
@@ -341,6 +345,139 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     align-self: baseline;
 }
 
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic{
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic-box{
+    padding: 15px;
+    align-self: baseline;
+    position: relative;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic-box.cnn{
+    transform: rotate(10deg);
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic-box.nyt{
+    transform: rotate(-5deg);
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic-box.cnn p{
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Fugaz One', cursive;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    transform: rotate(10deg);
+    background: #9a0000;
+    color: #ffffff;
+    padding: 4px 8px;
+    align-self: baseline;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic-box.nyt p {
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Fugaz One', cursive;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #3c3c3c;
+    padding: 3px 10px;
+    align-self: baseline;
+    transform: rotate(10deg);
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .nytlogo{
+    width: 350px;
+    height: 50px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .cnnlogo{
+    width: 190px;
+    height: 90px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png);
+    background-size: cover;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c00"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    background: #003475;
+    color: #fff;
+    display: flex;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c00"] .graphic-box{
+    font-size: 5em;
+    transform: rotate(15deg);
+    text-align: right;
+    align-self: baseline;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c00"] .trumpcare{
+    width: 200px;
+    height: 200px;
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1703_hcare.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c01"] .graphic {
+    justify-content: flex-start;
+    padding: 15vh 60px;
+    width: calc(100vw - 120px);
+    height: calc(100vh - 30vh);
+    background-size: cover;
+    background-position: left;
+    color: #fff;
+    display: flex;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c01"] .graphic-box {
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+    align-content: start;
+    transform: rotate(-30deg);
+    margin-top: -25vh;
+    margin-left: 10vw;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c01"] .graphic-box p {
+    font-size: 5em;
+    font-weight: 600;
+    font-family: 'Fugaz One', cursive;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 6px 13px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    filter: blur(5px);
+    align-self: baseline;
+    line-height: 1em;
+}
+
 .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic{
     justify-content: space-between;
     padding: 15vh 30px;
@@ -403,13 +540,14 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
 }
 
 .analysis-eomtxt{
-    padding: 50px 30px;
+    padding: 70px 30px;
     text-align: right;
 }
 
 .analysis-eom .title-text{
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 800;
+    text-transform: uppercase;
 }
 
 .analysis-hero .analysis-herotpdetails{
@@ -451,6 +589,19 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     margin: 30vh 0 10vh 0;
 }
 
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1702c02"]{
+    background: #fff;
+    color: #000;
+    padding: 60px 60px;
+    margin: 25vh 0;
+}
+
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1703c00"]{
+    color: #fff;
+    padding: 60px 60px;
+    margin: 25vh 0;
+}
+
 .presidenttrump-analysis-data .analysis-item .title-text{
     font-size: 3em;
     font-weight: 600;
@@ -468,9 +619,11 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     width: 70vw;
 }
 
-.presidenttrump-analysis-data .analysis-item .item-pickedtweets{
+.presidenttrump-analysis-data .analysis-item .item-pickedtweets {
     margin-top: 35px;
-    display: flex;
+    column-count: 3;
+    width: 70vw;
+    column-gap: 0em;
 }
 
 .presidenttrump-analysis-data .analysis-item .item-pickedtweets .title-text {
@@ -483,6 +636,9 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     color: #000;
     border-radius: 12px;
     margin-right: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    margin: 0 0 1em;
 }
 
 .presidenttrump-analysis-data .analysis-item .item-revealtweets-action{
@@ -700,6 +856,11 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 
     .presidenttrump-analysis-data .analysis-item .item-pickedtweets{
         flex-direction: column;
+        margin-top: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        column-count: auto;
+        width: auto;
     }
 
     .presidenttrump-analysis-data .analysis-item .item-pickedtweets .title-text{
@@ -731,6 +892,16 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
         padding: 5vh 30px;
     }
 
+    .presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1702c02"]{
+        padding: 60px 30px;
+    }
+
+    .presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1703c00"]{
+        background: #003475;
+        padding: 60px 30px;
+        margin: 50vh 0;
+    }
+
     .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c03"] .graphic{
         justify-content: space-between;
         padding: 18vh 60px;
@@ -754,6 +925,29 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
        padding-left: 20px;
        margin-top: 0;
        font-size: 2.8em;
+    }
+
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic {
+        justify-content: initial;
+        flex-direction: column;
+    }
+
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic-box.nyt p {
+        right: auto;
+        left: 10px;
+    }
+
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c00"] .graphic {
+        padding: 15vh 30px;
+        width: calc(100vw - 60px);
+    }
+
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c01"] .graphic{
+        background-position: center;
+    }
+
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c01"] .graphic-box{
+        margin-top: -10vh;
     }
 }
 

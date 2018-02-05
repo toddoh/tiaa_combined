@@ -214,10 +214,10 @@ const render_data = (month) => {
             )}
             </div>
         </div>
-        <div class="analysis-eom">
+        <div class="analysis-eom" banana-month="${trump_data[0].nextmonth}">
             <div class="analysis-eomtxt">
                 <p class="title-text">Next:</p>
-                <p class="title-text">February 2017</p>
+                <p class="title-text">${trump_data[0].nextmonth_string}</p>
             </div>
         </div>
         `;
@@ -245,8 +245,10 @@ const render_data = (month) => {
             <div class="dynamicbg-item" banana-id="eom">
                 <div class="graphic">
                     <div class="graphic-box">
-                        <p>FAKE NEWS,</p>
-                        <p>TRAVEL BAN,</p>
+                    ${trump_data[0].nextmonth_preview.map((item) => html`
+                        <p>${item},</p>
+                    `
+                    )}
                         <p>AND MORE</p>
                     </div>
                 </div>
@@ -344,6 +346,12 @@ const attach_events = () => {
         });
     }
 
+    document.querySelector('.presidenttrump-analysis-data .analysis-eom').addEventListener('click', function (e) {
+        var month_current = this.getAttribute('banana-month');
+        window.location.href = window.location.protocol + "//" + window.location.host + "/donaldtrump_n?type=" + month_current;
+        //render_data(month_current);
+    });
+
     document.querySelector('.presidenttrump-analysis-data .analysis-herotpdetails').addEventListener('click', function (e) {
         if (!document.querySelector('.presidenttrump-tpdetails').classList.contains('revealed'))
             document.querySelector('.presidenttrump-tpdetails').classList.add('revealed');
@@ -426,6 +434,7 @@ var getParents = function ( elem, selector ) {
 };
 
 function checkVisible(elm, threshold, mode) {
+    if (!elm) return;
     threshold = threshold || 0;
     mode = mode || 'visible';
   
