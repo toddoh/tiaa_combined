@@ -673,7 +673,6 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     display: inline-block;
     break-inside: avoid-column;
     margin: 0 0 1em;
-    transform: translateZ(0);
 }
 
 .presidenttrump-analysis-data .analysis-item .item-revealtweets-action{
