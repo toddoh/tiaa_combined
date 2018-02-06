@@ -478,6 +478,20 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     line-height: 1em;
 }
 
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1704c01"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1704_dparty.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
 .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic{
     justify-content: space-between;
     padding: 15vh 30px;
@@ -602,6 +616,24 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     margin: 25vh 0;
 }
 
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1703c00"]{
+    color: #fff;
+    padding: 60px 60px;
+    margin: 25vh 0;
+}
+
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1704c01"]{
+    background: linear-gradient(to bottom, rgba(40, 53, 25, 0.95) 70%,rgba(0, 0, 0, 0) 100%);
+    margin: 45vh 0 0 0;
+    padding-top: 60px;
+}
+
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1705c00"]{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 30%,rgba(0, 0, 0, 0) 100%);
+    margin: 25vh 0;
+    padding-top: 60px;
+}
+
 .presidenttrump-analysis-data .analysis-item .title-text{
     font-size: 3em;
     font-weight: 600;
@@ -641,6 +673,7 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     display: inline-block;
     break-inside: avoid-column;
     margin: 0 0 1em;
+    transform: translateZ(0);
 }
 
 .presidenttrump-analysis-data .analysis-item .item-revealtweets-action{
@@ -950,6 +983,11 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
 
     .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c01"] .graphic-box{
         margin-top: -10vh;
+    }
+
+    .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1704c01"] .graphic{
+        height: calc(100vh - 70vh);
+        background-position: 70%;
     }
 }
 

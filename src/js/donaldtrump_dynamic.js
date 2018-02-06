@@ -4,6 +4,7 @@ export function dynamicbg_render_data(month, dbg) {
     if (month == '2017-01') dynamicbg_201701(dbg);
     if (month == '2017-02') dynamicbg_201702(dbg);
     if (month == '2017-03') dynamicbg_201703(dbg);
+    if (month == '2017-04') dynamicbg_201704(dbg);
 }
 
 const dynamicbg_201701 = (type) => {
@@ -95,6 +96,17 @@ const dynamicbg_201703 = (type) => {
             <div class="graphic-box">
                 <p>MORE JOBS</p>
             </div>
+        </div>
+        `;
+        
+        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+    }
+}
+
+const dynamicbg_201704 = (type) => {
+    if (type == '1704c01') {
+        const dynamicbg_markup = () => html`
+        <div class="graphic">
         </div>
         `;
         
