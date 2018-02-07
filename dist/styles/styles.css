@@ -1406,6 +1406,31 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     background-position: bottom;
 }
 
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1706c03"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url(../res/whattrumpsaid_1706_trobama.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1706c05"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url(../res/whattrumpsaid_1706_trfx.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
 
 .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic{
     justify-content: space-between;
@@ -1547,6 +1572,18 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 30%,rgba(0, 0, 0, 0) 100%);
     margin: 25vh 0;
     padding-top: 60px;
+}
+
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1706c03"]{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 30%,rgba(0, 0, 0, 0) 100%);
+    margin: 35vh 0;
+    padding-top: 60px;
+}
+
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1706c05"]{
+    color: #000;
+    padding-top: 5vh;
+    margin: 20vh 20vw 10vh 0;
 }
 
 .presidenttrump-analysis-data .analysis-item .title-text{
