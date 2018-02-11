@@ -1,5 +1,4 @@
 import styles from '../styles/core.css';
-import "babel-polyfill";
 import {html, render} from 'lit-html';
 require('../resources/favicons/android-chrome-192x192.png');
 require('../resources/favicons/android-chrome-384x384.png');

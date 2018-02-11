@@ -517,6 +517,45 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     background-position: top right;
 }
 
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1707c01"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1707_hcare7yr.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1707c03"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1707_hillary.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="1707c04"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1707_repsen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
 .presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic{
     justify-content: space-between;
     padding: 15vh 30px;
@@ -671,6 +710,20 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
     margin: 20vh 20vw 10vh 0;
 }
 
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1707c01"]{
+    color: #000;
+    background: #fff;
+    padding-top: 7vh;
+    margin: 25vh 0;
+}
+
+.presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1707c04"]{
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 30%,rgba(0, 0, 0, 0) 100%);
+    padding-top: 7vh;
+    margin: 20vh 0 10vh 0;
+}
+
 .presidenttrump-analysis-data .analysis-item .title-text{
     font-size: 3em;
     font-weight: 600;
@@ -697,7 +750,7 @@ body.whattrumpsaid .minion-content-index.visible .contentindex-guide .contentind
 }
 
 .presidenttrump-analysis-data .analysis-item .item-pickedtweets .title-text {
-    font-size: 1.1em;
+    font-size: 0.98em;
     font-weight: 400;
     width: 18vw;
     padding: 20px;
@@ -940,10 +993,9 @@ body.whattrumpsaid .minion-datapopup .item-tweets .tweet-item .ts{
         width: 70vw;
         height: auto;
         padding: 17px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
         margin-right: 0;
         margin-bottom: 10px;
-        border-radius: 8px;
     }
 
     .presidenttrump-analysis-data .analysis-list .analysis-item[banana-id="1701c03"] {

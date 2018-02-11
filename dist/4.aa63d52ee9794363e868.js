@@ -1,1 +1,0 @@
-webpackJsonp([4],{"/+8H":function(a,b,c){function d(a){return c(e(a))}function e(a){var b=f[a];if(!(b+1))throw new Error("Cannot find module '"+a+"'.");return b}var f={"./jan2018":"Rjgx","./jan2018.js":"Rjgx"};d.keys=function(){return Object.keys(f)},d.resolve=e,a.exports=d,d.id="/+8H"}});

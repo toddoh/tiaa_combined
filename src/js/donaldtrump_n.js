@@ -196,19 +196,6 @@ const render_data = (month) => {
                         )}
                     </div>
                     ` : ''}
-
-                    <div class="item-revealtweets-action">
-                        <p>Show all tweets in this move</p>
-                    </div>
-                    <div class="item-tweets">
-                    ${item.articles.map((tweets) => html`
-                        <div class="tweet-item">
-                            <p class="text">${tweets.title}</p>
-                            <p class="ts" banana-ts="${tweets.ts}"></p>
-                        </div>
-                    `
-                    )}
-                    </div>
                 </div>
             `
             )}

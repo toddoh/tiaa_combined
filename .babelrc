@@ -4,7 +4,7 @@
             "env",
             {
                 "targets": {
-                    "browsers": ["last 4 versions", "iOS >= 8"]
+                    "browsers": ["ie >= 11"]
                 }
             }
         ],

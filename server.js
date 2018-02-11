@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const url = require('url');
+const UAParser = require('ua-parser-js');
 
 process.env.NODE_ENV = 'dev';
 
@@ -16,22 +17,25 @@ app.listen(3000, function () {
 });
 
 app.use(function (req, res, next) {
-
-    // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', '*');
-
-    // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Authorization');
     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    // Pass to next layer of middleware
-    next();
+    var parser = new UAParser();
+    var ua = req.headers['user-agent'];
+    var browserName = parser.setUA(ua).getBrowser().name;
+    var fullBrowserVersion = parser.setUA(ua).getBrowser().version;
+    var browserVersion = fullBrowserVersion.split(".",1).toString();
+    var browserVersionNumber = Number(browserVersion);
+
+    if (browserName == 'IE' && browserVersion <= 11) {
+        res.sendFile(path.join(__dirname, '/notice/index.html'));
+    } else if (browserName == 'Safari' && browserVersion <= 9) {
+        res.sendFile(path.join(__dirname, '/notice/index.html'));
+    } else {
+        next();
+    }
 });
 app.use(express.static(path.join(__dirname, '/dist/')));
 
