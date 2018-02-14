@@ -11,13 +11,13 @@ export function init_render() {
     }
 
     if (getpathparam('type') !== '' && getpathparam('type') !== null) {
-        document.querySelector('.navbox-currentpath').textContent ='ThePastYear';
+        document.querySelector('.navbox-currentpath').textContent ='TheYear';
 
-        import('./pastyear/' + getpathparam('type')).then(module => {
+        import('./theyear/' + getpathparam('type')).then(module => {
             module.init_render();
         });
     } else {
-        import('./pastyear/jan2018').then(module => {
+        import('./theyear/jan2018').then(module => {
             module.init_render();
         });
     }

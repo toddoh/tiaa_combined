@@ -1,30 +1,30 @@
 import {html, render} from 'lit-html';
-import thisweek_style from '../styles/thisweek.css';
+import theweek_style from '../styles/theweek.css';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='ThisWeek';
-    document.querySelector('.navbox-static').classList.add('thisweek');
-    document.querySelector('.navbox-sections li[data-sectionid="nav-section-thisweek"]').remove();
+    document.querySelector('.navbox-currentpath').textContent ='TheWeek';
+    document.querySelector('.navbox-static').classList.add('theweek');
+    document.querySelector('.minion-sections li[data-sectionid="nav-section-theweek"]').classList.add('current');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
 
-    const thisweek_hero_markup = () => html`
-    <div class="thisweek-hero">
-        <div class="thisweek-herotext">
-            <p class="hero1 dayinfo">#ThisWeek #Jan15to20th</p>
+    const theweek_hero_markup = () => html`
+    <div class="theweek-hero">
+        <div class="theweek-herotext">
+            <p class="hero1 dayinfo">#TheWeek #Jan15to20th</p>
             <p class="hero1 things"></p>
-            <p class="thisweek-herotpdetails">More</p>
+            <p class="theweek-herotpdetails">More</p>
         </div>
     </div>
-    <div class="thisweek-analysis-data">
+    <div class="theweek-analysis-data">
         <div class="analysis-list">
         </div>
     </div>
-    <div class="thisweek-copyrights">
+    <div class="theweek-copyrights">
         <p>Articles/Images copyrights CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, Financial Times. All images belong to the publishers and the rightful owner of images. We display images based on open metadata aggregation.</p>
     </div>
-    <div class="thisweek-tpdetails">
+    <div class="theweek-tpdetails">
         <div class="tpdetails-reveal">
             <p>Technical Details</p>
         </div>
@@ -39,7 +39,7 @@ export function init_render() {
     </div>
     `;
 
-    render(thisweek_hero_markup(), document.querySelector('.minion-contents'));
+    render(theweek_hero_markup(), document.querySelector('.minion-contents'));
     document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 20, 2018 ET';
     render_data();
 }
@@ -55,9 +55,9 @@ const render_data = () => {
     var trump_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/dataset/thisweek/thisweek_data.json';
+        dataset_url = '//localhost:3000/dataset/theweek/theweek_data.json';
     } else {
-        dataset_url = '//thisisallabout.com/dataset/thisweek/thisweek_data.json'
+        dataset_url = '//thisisallabout.com/dataset/theweek/theweek_data.json'
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -69,7 +69,7 @@ const render_data = () => {
         if (trump_data.length > 1) {
             content_length = ' things ';
         }
-        document.querySelector('.thisweek-hero .things').innerHTML = trump_data.length + content_length + 'to know';
+        document.querySelector('.theweek-hero .things').innerHTML = trump_data.length + content_length + 'to know';
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
                 <div class="analysis-item">
@@ -103,7 +103,7 @@ const render_data = () => {
             )}
         `;
 
-        render(analysis_markup(), document.querySelector('.thisweek-analysis-data .analysis-list'));
+        render(analysis_markup(), document.querySelector('.theweek-analysis-data .analysis-list'));
         postrender_data();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
@@ -137,31 +137,31 @@ const postrender_data = () => {
         });
     });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.thisweek-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
+    Array.prototype.forEach.call(document.querySelectorAll('.theweek-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
         var firstmonth = el.querySelectorAll('.toparticle-content-container .toparticle-object')[0];
         el.querySelector('.item-bg').style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + firstmonth.getAttribute('banana-imagesrc') + ')';
     });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.thisweek-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
+    Array.prototype.forEach.call(document.querySelectorAll('.theweek-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
         //el.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + //el.getAttribute('banana-imagesrc') + ')';
     });
     
     if (check_mobile()) {
-        var mobile_ithm = document.querySelectorAll('.thisweek-analysis-data .analysis-list .item-theme');
+        var mobile_ithm = document.querySelectorAll('.theweek-analysis-data .analysis-list .item-theme');
         for (var i=0; i < mobile_ithm.length; i++) {
             mobile_ithm[i].addEventListener('click', function (e) {
                 var parent = getParents(this, '.analysis-item')[0];
                 if (!parent.classList.contains('selected')) {
                     parent.classList.add('selected');
 
-                    var list = document.querySelector('.thisweek-analysis-data .analysis-list');
+                    var list = document.querySelector('.theweek-analysis-data .analysis-list');
                     if (!list.classList.contains('highlighted')) {
                         list.classList.add('highlighted');
                     }
                 } else {
                     parent.classList.remove('selected');
 
-                    var list = document.querySelector('.thisweek-analysis-data .analysis-list');
+                    var list = document.querySelector('.theweek-analysis-data .analysis-list');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }
@@ -169,21 +169,21 @@ const postrender_data = () => {
             });
         }
 
-        var mobile_ithm_close = document.querySelectorAll('.thisweek-analysis-data .analysis-list .item-close-action');
+        var mobile_ithm_close = document.querySelectorAll('.theweek-analysis-data .analysis-list .item-close-action');
         for (var i=0; i < mobile_ithm_close.length; i++) {
             mobile_ithm_close[i].addEventListener('click', function (e) {
                 var parent = getParents(this, '.analysis-item')[0];
                 if (!parent.classList.contains('selected')) {
                     parent.classList.add('selected');
 
-                    var list = document.querySelector('.thisweek-analysis-data .analysis-list');
+                    var list = document.querySelector('.theweek-analysis-data .analysis-list');
                     if (!list.classList.contains('highlighted')) {
                         list.classList.add('highlighted');
                     }
                 } else {
                     parent.classList.remove('selected');
 
-                    var list = document.querySelector('.thisweek-analysis-data .analysis-list');
+                    var list = document.querySelector('.theweek-analysis-data .analysis-list');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }
@@ -216,20 +216,20 @@ const postrender_data = () => {
         });
     }
 
-    document.querySelector('.thisweek-herotpdetails').addEventListener('click', function (e) {
-        if (!document.querySelector('.thisweek-tpdetails').classList.contains('revealed'))
-            document.querySelector('.thisweek-tpdetails').classList.add('revealed');
+    document.querySelector('.theweek-herotpdetails').addEventListener('click', function (e) {
+        if (!document.querySelector('.theweek-tpdetails').classList.contains('revealed'))
+            document.querySelector('.theweek-tpdetails').classList.add('revealed');
 
-        if (!document.querySelector('.thisweek-analysis-data').classList.contains('hidden'))
-            document.querySelector('.thisweek-analysis-data').classList.add('hidden');
+        if (!document.querySelector('.theweek-analysis-data').classList.contains('hidden'))
+            document.querySelector('.theweek-analysis-data').classList.add('hidden');
     });
 
-    document.querySelector('.thisweek-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
-        if (document.querySelector('.thisweek-tpdetails').classList.contains('revealed'))
-            document.querySelector('.thisweek-tpdetails').classList.remove('revealed');
+    document.querySelector('.theweek-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
+        if (document.querySelector('.theweek-tpdetails').classList.contains('revealed'))
+            document.querySelector('.theweek-tpdetails').classList.remove('revealed');
 
-        if (document.querySelector('.thisweek-analysis-data').classList.contains('hidden'))
-            document.querySelector('.thisweek-analysis-data').classList.remove('hidden');
+        if (document.querySelector('.theweek-analysis-data').classList.contains('hidden'))
+            document.querySelector('.theweek-analysis-data').classList.remove('hidden');
     });
 }
 

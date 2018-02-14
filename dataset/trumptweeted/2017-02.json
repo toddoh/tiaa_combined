@@ -3,13 +3,11 @@
         "month": "2017-02",
         "month_string": "Feb2017",
         "dynamicscroll_list": [
-            "hero",
             "1702c00",
             "1702c01",
             "1702c02",
             "1702c03",
-            "1702c04",
-            "eom"
+            "1702c04"
         ],
         "dynamicbg_list": [
             "1702c02"

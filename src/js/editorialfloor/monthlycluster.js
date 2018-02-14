@@ -166,9 +166,9 @@ const generate_data = () => {
             </textarea>
             `;
 
-            render(finaldata_markup(), document.querySelector('.minion-datapopup .datapopup-contents'));
-            document.querySelector('.minion-datapopup').classList.add('visible');
-            document.querySelector('.minion-datapopup textarea').value = JSON.stringify(data_packed);
+            //render(finaldata_markup(), document.querySelector('.minion-datapopup .datapopup-contents'));
+            //document.querySelector('.minion-datapopup').classList.add('visible');
+            //document.querySelector('.minion-datapopup textarea').value = JSON.stringify(data_packed);
 
             var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data_packed));
             var downloadAnchorNode = document.createElement('a');

@@ -2,13 +2,26 @@
     {
         "month": "2017-01",
         "month_string": "Jan2017",
-        "dynamicscroll_list": ["hero", "1701c01", "1701c02", "1701c03", "1701c04", "1701c05", "1701c06", "eom"],
-        "dynamicbg_list": ["1701c03", "1701c04", "1701c05"],
+        "dynamicscroll_list": [
+            "1701c01",
+            "1701c02",
+            "1701c03",
+            "1701c04",
+            "1701c05",
+            "1701c06"
+        ],
+        "dynamicbg_list": [
+            "1701c03",
+            "1701c04",
+            "1701c05"
+        ],
         "nextmonth": "feb2017",
         "nextmonth_string": "February 2017",
-        "nextmonth_preview": ["fake news", "travel ban"],
-        "data": 
-        [
+        "nextmonth_preview": [
+            "fake news",
+            "travel ban"
+        ],
+        "data": [
             {
                 "articles": [
                     {
@@ -485,6 +498,7 @@
                     "correctly",
                     "coverage"
                 ],
+                "image": "?",
                 "header": "He's mad at the coverage by non-conservative news publishers (again)"
             },
             {

@@ -1,15 +1,18 @@
 import {html, render} from 'lit-html';
 
 export function dynamicbg_render_data(month, dbg) {
-    if (month == '2017-01') dynamicbg_201701(dbg);
-    if (month == '2017-02') dynamicbg_201702(dbg);
-    if (month == '2017-03') dynamicbg_201703(dbg);
-    if (month == '2017-04') dynamicbg_201704(dbg);
-    if (month == '2017-06') dynamicbg_201706(dbg);
-    if (month == '2017-07') dynamicbg_201707(dbg);
+    if (month == '2017-01') dynamicbg_201701(month, dbg);
+    if (month == '2017-02') dynamicbg_201702(month, dbg);
+    if (month == '2017-03') dynamicbg_201703(month, dbg);
+    if (month == '2017-04') dynamicbg_201704(month, dbg);
+    if (month == '2017-06') dynamicbg_201706(month, dbg);
+    if (month == '2017-07') dynamicbg_201707(month, dbg);
+    if (month == '2017-08') dynamicbg_201708(month, dbg);
+
+    return;
 }
 
-const dynamicbg_201701 = (type) => {
+const dynamicbg_201701 = (month, type) => {
     if (type == '1701c03') {
         const dynamicbg_markup = () => html`
         <div class="graphic">
@@ -26,7 +29,7 @@ const dynamicbg_201701 = (type) => {
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 
     if (type == '1701c04') {
@@ -43,7 +46,7 @@ const dynamicbg_201701 = (type) => {
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 
     if (type == '1701c05') {
@@ -55,11 +58,11 @@ const dynamicbg_201701 = (type) => {
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 }
 
-const dynamicbg_201702 = (type) => {
+const dynamicbg_201702 = (month, type) => {
     if (type == '1702c02') {
         const dynamicbg_markup = () => html`
         <div class="graphic">
@@ -74,11 +77,11 @@ const dynamicbg_201702 = (type) => {
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 }
 
-const dynamicbg_201703 = (type) => {
+const dynamicbg_201703 = (month, type) => {
     if (type == '1703c00') {
         const dynamicbg_markup = () => html`
         <div class="graphic">
@@ -89,7 +92,7 @@ const dynamicbg_201703 = (type) => {
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 
     if (type == '1703c01') {
@@ -101,39 +104,50 @@ const dynamicbg_201703 = (type) => {
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
     }
 }
 
-const dynamicbg_201704 = (type) => {
+const dynamicbg_201704 = (month, type) => {
     if (type == '1704c01') {
         const dynamicbg_markup = () => html`
         <div class="graphic">
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 }
 
-const dynamicbg_201706 = (type) => {
-    if (type == '1706c03' || type == '1706c05') {
+const dynamicbg_201706 = (month, type) => {
+    if (type == '1706c05') {
         const dynamicbg_markup = () => html`
         <div class="graphic">
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 }
 
-const dynamicbg_201707 = (type) => {
+const dynamicbg_201707 = (month, type) => {
     if (type == '1707c01' || type == '1707c03' || type == '1707c03' || type == '1707c04') {
         const dynamicbg_markup = () => html`
         <div class="graphic">
         </div>
         `;
         
-        render(dynamicbg_markup(), document.querySelector('.presidenttrump-analysis-data-dynamicbg .dynamicbg-item[banana-id="' + type + '"]'));
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
+    }
+}
+
+const dynamicbg_201708 = (month, type) => {
+    if (type == '1708c05') {
+        const dynamicbg_markup = () => html`
+        <div class="graphic">
+        </div>
+        `;
+        
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
     }
 }

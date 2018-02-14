@@ -12,73 +12,69 @@ require('../resources/favicons/safari-pinned-tab.svg');
 const render_core = () => {
     const contentSections = [
         { id: 'nav-section-today', name: 'Today', path: '' },
-        { id: 'nav-section-thisweek', name: 'ThisWeek', path: 'thisweek' },
-        //{ id: 'nav-section-pastyear', name: 'ThePastYear', path: 'pastyear' },
-        { id: 'nav-section-donaldtrump', name: 'TrumpFirstYear', path: 'donaldtrump' },
+        { id: 'nav-section-theweek', name: 'TheWeek', path: 'theweek' },
+        { id: 'nav-section-theyear', name: 'TheYear', path: 'theyear' }
     ];
 
-    const issuesSections = [
-        { id: 'nav-section-issuesdaca', name: 'DACA', path: 'daca' },
-        { id: 'nav-section-issuesborderwall', name: 'BorderWall', path: 'borderwall' },
-        { id: 'nav-section-issuesnorthkorea', name: 'NorthKoreaThreats', path: 'northkorea' },
+    const projectSections = [
+        { id: 'nav-section-whattrumpsaid', name: 'WhatTrumpSaid', path: 'whattrumpsaid' }
     ];
 
     const top_frame_markup = () => html`
     <div class="minion-root">
-        <div class="top-navbox">
-            <div class="navbox-static">
-                <div class="navbox-logo"></div>
-                <p class="navbox-currentpath">Today</p>
-                <div class="navbox-reveal">
+        <div class="minion-header">
+            <div class="minion-sectionbox">
+                <div class="minion-sections-reveal">
+                    <p>Sections</p>
                     <div class="icon"></div>
                 </div>
             </div>
-            <div class="navbox-sections">
-                <p class="sections-desc">More on THISISALLABOUT:</p>
-                <ul>
-                    ${contentSections.map((i) => html`
-                        <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
-                    `
-                    )}
-                </ul>
-            </div>
-            <div class="navbox-info">
-                <ul>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="http://facebook.com/thisisallabout">Facebook Page</a></li>
-                    <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="minion-timestamp">
-            <div class="content-ts">
-                <span class="ts-date">...</span>
-            </div>
-        </div>
-        <div class="minion-dataload"></div>
-        <div class="minion-contents">
-        </div>
-        <div class="minion-content-index">
-            <div class="contentindex-guide">
-                <p>All months</p>
-                <div class="contentindex-reveal">
-                    <div class="icon"></div>
+            <div class="minion-navbox">
+                <div class="navbox-static">
+                    <div class="navbox-logo"></div>
+                    <p class="navbox-currentpath">Today</p>
                 </div>
             </div>
-            <div class="content-indexes">
+            <div class="minion-timestamp">
+                <div class="content-ts">
+                    <span class="ts-date">...</span>
+                </div>
             </div>
         </div>
-        <div class="minion-datapopup">
-            <div class="datapopup-contents">
-            </div>
-            <div class="datapopup-close-action">
+        <div class="minion-sections">
+            <div class="minion-sections-reveal">
+                <p>Sections</p>
                 <div class="icon"></div>
             </div>
+            <p class="section-guide">Regular</p>
+            <ul class="sections-list">
+                ${contentSections.map((i) => html`
+                    <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                `
+                )}
+            </ul>
+
+            <p class="section-guide">Projects</p>
+            <ul class="sections-list projects">
+                ${projectSections.map((i) => html`
+                    <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                `
+                )}
+            </ul>
+            <ul class="sections-tiaainfo">
+                <li><a href="/about">About Us</a></li>
+                <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>
+                <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
+            </ul>
         </div>
+        <div class="minion-contents">
+        </div>
+        <div class="minion-dataload"></div>
     </div>
     `;
 
     render(top_frame_markup(), document.body);
+    document.querySelector('.minion-dataload').setAttribute('status', 'dl_e_1');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
@@ -89,7 +85,6 @@ var currentpath_whole = window.location.pathname;
 var currentpath_type = window.location.pathname.split('/')[1];
 
 if (currentpath_type !== '') {
-    document.querySelector('.minion-dataload').setAttribute('status', 'dl_e_1');
     import('./' + currentpath_type).then(module => {
         module.init_render();
         document.querySelector('.minion-dataload').setAttribute('status', '');
@@ -107,55 +102,39 @@ const check_mobile  = () => {
     return status;
 }
 
-document.querySelector('.minion-datapopup .datapopup-close-action').addEventListener('click', function (e) {
-    document.querySelector('.minion-datapopup').classList.remove('visible');
-});
-
-document.querySelector('.minion-content-index').addEventListener('click', (e) => {
-    if (!document.querySelector('.minion-content-index').classList.contains('visible')) {
-        document.querySelector('.minion-content-index').classList.add('visible');
+window.addEventListener('scroll', function (e) {
+    if (this.scrollY >= 120) {
+        document.querySelector('.minion-header').classList.add('scroll_bar');
     } else {
-        if (document.querySelector('.minion-content-index').classList.contains('visible'))
-            document.querySelector('.minion-content-index').classList.remove('visible');
+        document.querySelector('.minion-header').classList.remove('scroll_bar');
     }
 });
 
-if (check_mobile()) {
-    document.querySelector('.top-navbox').addEventListener('click', (e) => {
-        if (!document.querySelector('.top-navbox').classList.contains('visible')) {
-            document.querySelector('.top-navbox').classList.add('visible');
-            if (document.querySelector('.navbox-currentpath').offsetWidth >= 165) {
-                document.querySelector('.navbox-currentpath').classList.add('long');
-            } else {
-                if (!document.querySelector('.navbox-currentpath').classList.contains('long'))
-                    document.querySelector('.navbox-currentpath').classList.remove('long');
-            }
+var section_reveal = document.querySelectorAll('.minion-sections-reveal');
+for (var i=0; i < section_reveal.length; i++) {
+    section_reveal[i].addEventListener('click', function (e) {
+        if (!document.querySelector('.minion-sections').classList.contains('opened')) {
+            document.querySelector('.minion-sections').classList.add('opened');
         } else {
-            if (document.querySelector('.top-navbox').classList.contains('visible'))
-                document.querySelector('.top-navbox').classList.remove('visible');
-
-            if (document.querySelector('.navbox-currentpath').classList.contains('long'))
-                    document.querySelector('.navbox-currentpath').classList.remove('long');
+            document.querySelector('.minion-sections').classList.remove('opened');
         }
     });
-} else {
-    document.querySelector('.top-navbox').addEventListener('mouseenter', (e) => {
-        if (!document.querySelector('.top-navbox').classList.contains('visible'))
-                document.querySelector('.top-navbox').classList.add('visible');
+}
 
+document.querySelector('.minion-navbox').addEventListener('click', (e) => {
+    if (!document.querySelector('.minion-navbox').classList.contains('visible')) {
+        document.querySelector('.minion-navbox').classList.add('visible');
         if (document.querySelector('.navbox-currentpath').offsetWidth >= 165) {
             document.querySelector('.navbox-currentpath').classList.add('long');
         } else {
             if (!document.querySelector('.navbox-currentpath').classList.contains('long'))
                 document.querySelector('.navbox-currentpath').classList.remove('long');
         }
-    });
-
-    document.querySelector('.top-navbox').addEventListener('mouseleave', (e) => {
-        if (document.querySelector('.top-navbox').classList.contains('visible'))
-                document.querySelector('.top-navbox').classList.remove('visible');
+    } else {
+        if (document.querySelector('.minion-navbox').classList.contains('visible'))
+            document.querySelector('.minion-navbox').classList.remove('visible');
 
         if (document.querySelector('.navbox-currentpath').classList.contains('long'))
                 document.querySelector('.navbox-currentpath').classList.remove('long');
-    });
-}
+    }
+});

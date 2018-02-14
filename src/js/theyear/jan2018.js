@@ -1,34 +1,34 @@
 import {html, render} from 'lit-html';
-import pastyear_style from '../../styles/pastyear/base.css';
+import theyear_style from '../../styles/theyear/base.css';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='ThePastYear';
-    document.querySelector('.navbox-static').classList.add('pastyear');
-    //document.querySelector('.navbox-sections li[data-sectionid="nav-section-pastyear"]').remove();
+    document.querySelector('.navbox-currentpath').textContent ='TheYear';
+    document.querySelector('.navbox-static').classList.add('theyear');
+    document.querySelector('.minion-sections li[data-sectionid="nav-section-theyear"]').classList.add('current');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
 
     const hero_markup = () => html`
-    <div class="pastyear-hero">
-        <div class="pastyear-herotext">
+    <div class="theyear-hero">
+        <div class="theyear-herotext">
             <p class="hero1 strike">#Jan2017toJan2018</p>
             <p class="hero1">It's been a giant mess.</p>
             <div class="hero2">
                 <p>This month, to celebrate Trump's first year mark in the White House.</p>
                 <p>we rediscovered what has happened in our nation during then.</p>
-                <p class="pastyear-herotpdetails">More</p>
+                <p class="theyear-herotpdetails">More</p>
             </div>
         </div>
     </div>
-    <div class="pastyear-analysis-data">
+    <div class="theyear-analysis-data">
         <div class="analysis-list">
         </div>
     </div>
-    <div class="pastyear-copyrights">
+    <div class="theyear-copyrights">
         <p>Articles/Images copyrights NPR, PBS. All images belong to NPR, PBS, and the rightful owner of images. We display images based on open metadata aggregation.</p>
     </div>
-    <div class="pastyear-tpdetails">
+    <div class="theyear-tpdetails">
         <div class="tpdetails-reveal">
             <p>Technical Details</p>
         </div>
@@ -58,9 +58,9 @@ const render_data = () => {
     var trump_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/dataset/pastyear/pastyear_jan2018_data.json';
+        dataset_url = '//localhost:3000/dataset/theyear/theyear_jan2018_data.json';
     } else {
-        dataset_url = '//thisisallabout.com/dataset/pastyear/pastyear_jan2018_data.json'
+        dataset_url = '//thisisallabout.com/dataset/theyear/theyear_jan2018_data.json'
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -118,14 +118,14 @@ const render_data = () => {
             )}
         `;
 
-        render(analysis_markup(), document.querySelector('.pastyear-analysis-data .analysis-list'));
+        render(analysis_markup(), document.querySelector('.theyear-analysis-data .analysis-list'));
         postrender_data();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 }
 
 const postrender_data = () => {
-    Array.prototype.forEach.call(document.querySelectorAll('.pastyear-analysis-data .analysis-list .toparticle-month-container'), function(pel, index, array) {
+    Array.prototype.forEach.call(document.querySelectorAll('.theyear-analysis-data .analysis-list .toparticle-month-container'), function(pel, index, array) {
         var peak_data = JSON.parse(pel.getAttribute('banana-peaks'));
         
         Array.prototype.forEach.call(pel.querySelectorAll('.toparticle-month'), function(el, index, array) {
@@ -152,7 +152,7 @@ const postrender_data = () => {
         });
     });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.pastyear-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
+    Array.prototype.forEach.call(document.querySelectorAll('.theyear-analysis-data .analysis-list .analysis-item'), function(el, index, array) {
         el.querySelectorAll('.toparticle-month-container .toparticle-month')[0].classList.add('selected');
         el.querySelectorAll('.toparticle-content-container .toparticle-month')[0].classList.add('selected');
         
@@ -160,26 +160,26 @@ const postrender_data = () => {
         el.querySelector('.item-bg').style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + firstmonth.querySelectorAll('.toparticle-object')[0].getAttribute('banana-imagesrc') + ')';
     });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.pastyear-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
+    Array.prototype.forEach.call(document.querySelectorAll('.theyear-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
         el.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + el.getAttribute('banana-imagesrc') + ')';
     });
     
     if (check_mobile()) {
-        var mobile_ithm = document.querySelectorAll('.pastyear-analysis-data .analysis-list .item-theme');
+        var mobile_ithm = document.querySelectorAll('.theyear-analysis-data .analysis-list .item-theme');
         for (var i=0; i < mobile_ithm.length; i++) {
             mobile_ithm[i].addEventListener('click', function (e) {
                 var parent = getParents(this, '.analysis-item')[0];
                 if (!parent.classList.contains('selected')) {
                     parent.classList.add('selected');
 
-                    var list = document.querySelector('.pastyear-analysis-data .analysis-list');
+                    var list = document.querySelector('.theyear-analysis-data .analysis-list');
                     if (!list.classList.contains('highlighted')) {
                         list.classList.add('highlighted');
                     }
                 } else {
                     parent.classList.remove('selected');
 
-                    var list = document.querySelector('.pastyear-analysis-data .analysis-list');
+                    var list = document.querySelector('.theyear-analysis-data .analysis-list');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }
@@ -187,21 +187,21 @@ const postrender_data = () => {
             });
         }
 
-        var mobile_ithm_close = document.querySelectorAll('.pastyear-analysis-data .analysis-list .item-close-action');
+        var mobile_ithm_close = document.querySelectorAll('.theyear-analysis-data .analysis-list .item-close-action');
         for (var i=0; i < mobile_ithm_close.length; i++) {
             mobile_ithm_close[i].addEventListener('click', function (e) {
                 var parent = getParents(this, '.analysis-item')[0];
                 if (!parent.classList.contains('selected')) {
                     parent.classList.add('selected');
 
-                    var list = document.querySelector('.pastyear-analysis-data .analysis-list');
+                    var list = document.querySelector('.theyear-analysis-data .analysis-list');
                     if (!list.classList.contains('highlighted')) {
                         list.classList.add('highlighted');
                     }
                 } else {
                     parent.classList.remove('selected');
 
-                    var list = document.querySelector('.pastyear-analysis-data .analysis-list');
+                    var list = document.querySelector('.theyear-analysis-data .analysis-list');
                     if (list.classList.contains('highlighted')) {
                         list.classList.remove('highlighted');
                     }
@@ -234,20 +234,20 @@ const postrender_data = () => {
         });
     }
 
-    document.querySelector('.pastyear-herotpdetails').addEventListener('click', function (e) {
-        if (!document.querySelector('.pastyear-tpdetails').classList.contains('revealed'))
-            document.querySelector('.pastyear-tpdetails').classList.add('revealed');
+    document.querySelector('.theyear-herotpdetails').addEventListener('click', function (e) {
+        if (!document.querySelector('.theyear-tpdetails').classList.contains('revealed'))
+            document.querySelector('.theyear-tpdetails').classList.add('revealed');
 
-        if (!document.querySelector('.pastyear-analysis-data').classList.contains('hidden'))
-            document.querySelector('.pastyear-analysis-data').classList.add('hidden');
+        if (!document.querySelector('.theyear-analysis-data').classList.contains('hidden'))
+            document.querySelector('.theyear-analysis-data').classList.add('hidden');
     });
 
-    document.querySelector('.pastyear-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
-        if (document.querySelector('.pastyear-tpdetails').classList.contains('revealed'))
-            document.querySelector('.pastyear-tpdetails').classList.remove('revealed');
+    document.querySelector('.theyear-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
+        if (document.querySelector('.theyear-tpdetails').classList.contains('revealed'))
+            document.querySelector('.theyear-tpdetails').classList.remove('revealed');
 
-        if (document.querySelector('.pastyear-analysis-data').classList.contains('hidden'))
-            document.querySelector('.pastyear-analysis-data').classList.remove('hidden');
+        if (document.querySelector('.theyear-analysis-data').classList.contains('hidden'))
+            document.querySelector('.theyear-analysis-data').classList.remove('hidden');
     });
 }
 

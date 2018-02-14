@@ -4,7 +4,7 @@ import today_style from '../styles/today.css';
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='Today';
     document.querySelector('.navbox-static').classList.add('today');
-    document.querySelector('.navbox-sections li[data-sectionid="nav-section-today"]').remove();
+    document.querySelector('.minion-sections li[data-sectionid="nav-section-today"]').classList.add('current');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }

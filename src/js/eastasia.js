@@ -19,7 +19,7 @@ export function init_render() {
         });
     } else {
         document.querySelector('.navbox-currentpath').textContent ='East Asia';
-        document.querySelector('.navbox-sections li[data-sectionid="nav-section-eastasia"]').remove();
+        document.querySelector('.minion-sections li[data-sectionid="nav-section-eastasia"]').remove();
 
         const contentSections = [
             { id: 'ea-all-korea', name: 'South Korean Government Policy Progress Report', desc: 'Tracking down the progress of 100 key policies of the new regime.', path: 'eastasia/korea' },
