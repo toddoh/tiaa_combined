@@ -21,12 +21,16 @@ export function init_render() {
                 <p>We all know that President Trump loves posting on Twitter.</p>
                 <p>And that means you can see through his fanciful game by tweets.</p>
                 <p>THISISALLABOUT did an analysis of his tweets since day one.</p>
+                <p class="content-timestamp">Updated on ...</p>
                 <p class="whattrumpsaid-action-details">Details</p>
             </div>
         </div>
     </div>
-    <div class="whattrumpsaid-analysis-group">
+    <div class="whattrumpsaid-section-monthly">
+        <p>Read by month</p>
+        <div class="whattrumpsaid-analysis-group">
 
+        </div>
     </div>
     <div class="whattrumpsaid-details">
         <div class="details-reveal">
@@ -51,7 +55,7 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Feb 5, 2018 ET';
+    document.querySelector('.content-timestamp').innerHTML = 'Updated on Feb 5, 2018 ET';
 
     var month_index_data = [
         {
@@ -65,7 +69,7 @@ export function init_render() {
             "months_string": ["jan2018"]
         }
     ];
-    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08"];
+    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09"];
 
     for (var i=0; i < month_render_index.length; i++) {
         var markup_init_container = document.createElement("div");
@@ -187,6 +191,7 @@ const check_mobile = () => {
     return status;
 }
 
+var renderdata_fetch = null;
 const render_data = (month) => {
     var trump_data = null;
     var dataset_url;
@@ -196,8 +201,29 @@ const render_data = (month) => {
         dataset_url = '//thisisallabout.com/dataset/trumptweeted/' + month + '.json';
     }
 
+    const base_markup = () => html`
+        <div class="whattrumpsaid-analysis-data-action-close">
+            <div class="icon"></div>
+        </div>
+    `;
+    
+    render(base_markup(), document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + month + '"] .whattrumpsaid-analysis-data-wrapper'));
+
+    document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + month + '"] .whattrumpsaid-analysis-data-wrapper').querySelector('.whattrumpsaid-analysis-data-action-close').addEventListener('click', function (e) {
+        getParents(this, '.whattrumpsaid-analysis-data')[0].classList.remove('selected');
+        document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
+        document.documentElement.className = '';
+        try {
+            if (renderdata_fetch !== null) renderdata_fetch.abort();
+        } catch (e) {
+            console.log(e);
+        }
+
+        document.querySelector('.minion-dataload').setAttribute('status', '');
+    });
+
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
-    fetch(dataset_url).then(response => response.text()).then(function(text) {
+    renderdata_fetch = fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
 
@@ -229,25 +255,33 @@ const render_data = (month) => {
 
                         ${item.picked ? html`
                         <div class="item-pickedtweets">
-                            ${item.picked.map((pkt) => html`
-                                <div class="tweet-item">
-                                    <p class="tweet-text">${pkt.title}</p>
-                                    ${pkt.url ? html`<p class="link-text">${pkt.url}</p>` : ''}
-                                </div>
-                            `
-                            )}
-                        </div>
-                        ` : ''}
-                        
-                        ${item.image ? html`
-                        <div class="item-revealtweets-action">
-                            <p>See more tweets in this move</p>
+                            <div class="tweet-item">
+                                <p class="tweet-text">“${item.picked[0].title}”</p>
+                                ${item.picked[0].url ? html`<p class="link-text">${item.picked[0].url}</p>` : ''}
+                            </div>
+                            ${item.image ? html`
+                            <div class="item-revealtweets-action">
+                                <p>MORE</p>
+                            </div>
+                            ` : html`
+                            <div class="item-revealtweets-action nobg">
+                                <p>MORE</p>
+                            </div>
+                            `}
                         </div>
                         ` : html`
-                        <div class="item-revealtweets-action nobg">
-                            <p>See more tweets in this move</p>
-                        </div>
+                            ${item.image ? html`
+                            <div class="item-revealtweets-action notweet">
+                                <p>MORE</p>
+                            </div>
+                            ` : html`
+                            <div class="item-revealtweets-action nobg notweet">
+                                <p>MORE</p>
+                            </div>
+                            `}
                         `}
+                        
+                        
                         <div class="item-tweets">
                         ${item.articles.map((tweets) => html`
                             <div class="tweet-item">
@@ -270,9 +304,15 @@ const render_data = (month) => {
         render(base_markup(), document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + trump_data[0].month + '"] .whattrumpsaid-analysis-data-wrapper'));
         //https://upload.wikimedia.org/wikipedia/commons/2/28/President_Donald_J._Trump’s_Visit_to_Springfield%2C_Missouri.jpg
 
+        targetnode.querySelector('.whattrumpsaid-analysis-data-action-close').addEventListener('click', function (e) {
+            getParents(this, '.whattrumpsaid-analysis-data')[0].classList.remove('selected');
+            document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
+            document.documentElement.className = '';
+        });
+
         if (trump_data[0].dynamicbg_list.length > 0) {
             _.filter(trump_data[0].dynamicbg_list, function (dbg) {
-                import('./donaldtrump_dynamic').then(module => {
+                import('./whattrumpsaid_dynamic').then(module => {
                     module.dynamicbg_render_data(month, dbg);
                 });
 
@@ -285,12 +325,6 @@ const render_data = (month) => {
             var ts_cv = moment.unix(ts_raw).format("MMMM Do YYYY, hh:mm");
     
             el.innerHTML = ts_cv;
-        });
-        
-        targetnode.querySelector('.whattrumpsaid-analysis-data-action-close').addEventListener('click', function (e) {
-            getParents(this, '.whattrumpsaid-analysis-data')[0].classList.remove('selected');
-            document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
-            document.documentElement.className = '';
         });
     
         var revealtweets = document.querySelectorAll('.whattrumpsaid-analysis-data .item-revealtweets-action');

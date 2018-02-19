@@ -1,26 +1,26 @@
 [
     {
         "month": "2017-01",
-        "header": "January 2017",
+        "header": "Jan 2017",
         "keytag": ["Inauguration", "MAGA"],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Inaugural_parade_Donald_Trump_and_Melania_Trump_01-20-17.jpg/2560px-Inaugural_parade_Donald_Trump_and_Melania_Trump_01-20-17.jpg",
         "image-copyright": "U.S. Army photo by Pvt. Gabriel Silva"
     },
     {
         "month": "2017-02",
-        "header": "February 2017",
+        "header": "Feb 2017",
         "keytag": ["Cabinets", "TravelBan"],
         "image": "https://www.whitehouse.gov/wp-content/uploads/2017/11/camp-david-mtg-1.jpg",
         "image-copyright": "The White House"
     },
     {
         "month": "2017-03",
-        "header": "March 2017",
+        "header": "Mar 2017",
         "keytag": ["Healthcare", "Jobs"]
     },
     {
         "month": "2017-04",
-        "header": "April 2017",
+        "header": "Apr 2017",
         "keytag": ["TaxReform", "Healthcare", "FoxNews"]
     },
     {
@@ -32,23 +32,30 @@
     },
     {
         "month": "2017-06",
-        "header": "June 2017",
+        "header": "Jun 2017",
         "keytag": ["SanctuaryCities", "AmericaFirst", "Russia"],
         "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Trump_signing_order_January_27.jpg",
         "image-copyright": "Staff of the President of the United States, Donald Trump"
     },
     {
         "month": "2017-07",
-        "header": "July 2017",
+        "header": "Jul 2017",
         "keytag": ["Veterans", "Senators", "Healthcare"],
         "image": "https://media.defense.gov/2017/Jul/27/2001783994/888/591/0/170725-F-UU934-2048.JPG",
         "image-copyright": "U.S. Air Force photo/Senior Airman Jeffrey Grossi"
     },
     {
         "month": "2017-08",
-        "header": "August 2017",
+        "header": "Aug 2017",
         "keytag": ["HurricaneHarvey", "Fakenews", "NorthKorea"],
         "image": "https://media.defense.gov/2017/Aug/30/2001800542/1088/820/0/170829-G-ZX620-872A.JPG",
         "image-copyright": "Petty Officer 1st Class Patrick Kelley"
+    },
+    {
+        "month": "2017-09",
+        "header": "Sep 2017",
+        "keytag": ["AnthemKneeling", "UNSpeech", "PuertoRico"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/San_Francisco_49ers_National_Anthem_Kneeling_%2837721041581%29.jpg/1600px-San_Francisco_49ers_National_Anthem_Kneeling_%2837721041581%29.jpg",
+        "image-copyright": "Keith Allison from Hanover, MD, USA"
     }
 ]
