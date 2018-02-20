@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         polyfills: ['./src/js/polyfill.js'],
-        vendor: ['babel-polyfill', 'whatwg-fetch'],
+        vendor: ['babel-polyfill'],
         index: ['babel-polyfill', './src/js/index.js'],
     },
     plugins: [
@@ -38,8 +38,7 @@ module.exports = {
                     use: [{
                         loader: "css-loader"
                     }]
-                }),
-                exclude: /node_modules/
+                })
             },
             {
                 test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,

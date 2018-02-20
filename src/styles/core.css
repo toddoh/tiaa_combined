@@ -97,6 +97,7 @@ html.safari .minion-header.scroll_bar{
 .navbox-currentpath{
     width: 0;
     overflow: hidden;
+    display: none;
     margin-left: 0;
 }
 
@@ -104,6 +105,7 @@ html.safari .minion-header.scroll_bar{
     font-weight: 700;
     margin-left: 10px;
     width: auto;
+    display: block;
     overflow: initial;
 }
 
@@ -291,4 +293,28 @@ html.safari .minion-header.scroll_bar{
         width: 32%;
         padding-top: 33px;
     }
+}
+
+.social-likes .email {
+    margin: 0.65em 0.45em;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.social-likes .email .icon {
+    color: #333;
+    background-size: cover;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAMAAABXc8oyAAAAVFBMVEUAAABVVVVVVVVcXFxYWFhVVVVbW1tVVVVUVFRWVlZUVFRTU1NUVFRTU1NUVFRUVFRUVFRTU1NUVFRTU1NUVFRTU1NUVFRTU1NUVFRUVFRTU1NTU1MbFdYNAAAAG3RSTlMAAwwZGhscM09QcJChpbDM4ePl5uvs8/v8/f4JIfyTAAAAtklEQVR42t3UzQ6CMBAE4AEtvy5IK1jt+7+nSgmDsZVedQ8Nga/ZmQvAUbTbGS0KOFxcwowKJ5c0gnMaNLg+z2r4Zobqdc4QeWtjzLY5CIGyD7u+BDy0HiJrpk82NRm2sCsAoOjeFd8vkDd9KZbgphkyiy/FEsxOyA+Ri7hxVb2sWqPUjEK4Dc8SQchSLBGCzMasEchSLEF4Xx9ZiiUikPOj0P0TNGlOQ9KgQI2JPyko2d1uROEBa5x2oxosvp4AAAAASUVORK5CYII=");
+    width: 1em;
+    height: 0.81em;
+}
+
+.social-likes .email:hover,
+.social-likes .email:active,
+.social-likes .email:focus {
+	-webkit-filter: saturate(0.85) brightness(1.2);
+    filter: saturate(0.85) brightness(1.2);
 }

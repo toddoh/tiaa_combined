@@ -57,5 +57,10 @@
         "keytag": ["AnthemKneeling", "UNSpeech", "PuertoRico"],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/San_Francisco_49ers_National_Anthem_Kneeling_%2837721041581%29.jpg/1600px-San_Francisco_49ers_National_Anthem_Kneeling_%2837721041581%29.jpg",
         "image-copyright": "Keith Allison from Hanover, MD, USA"
+    },
+    {
+        "month": "2017-10",
+        "header": "Oct 2017",
+        "keytag": ["TaxCuts", "PuertoRico", "LasVegas"]
     }
 ]

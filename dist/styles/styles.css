@@ -95,6 +95,7 @@ html.safari .minion-header.scroll_bar{
 .navbox-currentpath{
     width: 0;
     overflow: hidden;
+    display: none;
     margin-left: 0;
 }
 
@@ -102,6 +103,7 @@ html.safari .minion-header.scroll_bar{
     font-weight: 700;
     margin-left: 10px;
     width: auto;
+    display: block;
     overflow: initial;
 }
 
@@ -289,6 +291,30 @@ html.safari .minion-header.scroll_bar{
         width: 32%;
         padding-top: 33px;
     }
+}
+
+.social-likes .email {
+    margin: 0.65em 0.45em;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.social-likes .email .icon {
+    color: #333;
+    background-size: cover;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAMAAABXc8oyAAAAVFBMVEUAAABVVVVVVVVcXFxYWFhVVVVbW1tVVVVUVFRWVlZUVFRTU1NUVFRTU1NUVFRUVFRUVFRTU1NUVFRTU1NUVFRTU1NUVFRTU1NUVFRUVFRTU1NTU1MbFdYNAAAAG3RSTlMAAwwZGhscM09QcJChpbDM4ePl5uvs8/v8/f4JIfyTAAAAtklEQVR42t3UzQ6CMBAE4AEtvy5IK1jt+7+nSgmDsZVedQ8Nga/ZmQvAUbTbGS0KOFxcwowKJ5c0gnMaNLg+z2r4Zobqdc4QeWtjzLY5CIGyD7u+BDy0HiJrpk82NRm2sCsAoOjeFd8vkDd9KZbgphkyiy/FEsxOyA+Ri7hxVb2sWqPUjEK4Dc8SQchSLBGCzMasEchSLEF4Xx9ZiiUikPOj0P0TNGlOQ9KgQI2JPyko2d1uROEBa5x2oxosvp4AAAAASUVORK5CYII=");
+    width: 1em;
+    height: 0.81em;
+}
+
+.social-likes .email:hover,
+.social-likes .email:active,
+.social-likes .email:focus {
+	-webkit-filter: saturate(0.85) brightness(1.2);
+    filter: saturate(0.85) brightness(1.2);
 }.about-hero{
     padding: 27vh 200px 50px 60px;
     display: flex;
@@ -1515,18 +1541,18 @@ html.safari .minion-header.scroll_bar{
 }
 
 .editorial-prepare .hero2{
-    font-size: 1.6em;
+    font-size: 1.3em;
     margin-top: 7px;
 }
 
 .editorial-prepare input{
-    font-size: 1.6em;
+    font-size: 1.3em;
     word-wrap: break-word;
     margin: 20px auto;
     padding: 9px 0;
     width: 30vw;
     border: none;
-    border-bottom: 3px solid;
+    border-bottom: 2px solid;
 }
 
 .editorial-prepare input:focus {
@@ -1577,6 +1603,11 @@ html.safari .minion-header.scroll_bar{
     border-bottom: 2px solid #adadad;
 }
 
+.data-keyfield input:focus {
+    border-color: #00a1ff;
+    outline: 0;
+}
+
 .analysis-console-renderer .data-group {
     padding: 30px 0;
     border-bottom: 1px solid #eaeaea;
@@ -1589,7 +1620,7 @@ ul.cluster-themes {
 }
 
 ul.cluster-themes li {
-    padding: 6px 8px;
+    padding: 8px;
     background: #232323;
     color: #fff;
     font-size: 1.1em;
@@ -1630,66 +1661,6 @@ ul.cluster-articles li.selected {
     margin-bottom: 6px;
     font-size: 1em;
     border: 0px;
-}
-
-body.whattrumpsaid .minion-datapopup{
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    display: block;
-    overflow: hidden;
-    transition: all 200ms ease;
-}
-
-body.editorial .minion-datapopup.visible{
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-}
-
-body.editorial .minion-datapopup.visible .datapopup-contents {
-    padding: 120px 10%;
-}
-
-body.editorial .minion-datapopup .datapopup-close-action{
-    display: none;
-}
-
-body.editorial .minion-datapopup .datapopup-contents textarea {
-    display: none;
-}
-
-body.editorial .minion-datapopup.visible .datapopup-contents textarea {
-    width: 100%;
-    height: calc(100vh - 240px);
-    display: block;
-    font-size: 1em;
-    border: none;
-}
-
-body.editorial .minion-datapopup.visible .datapopup-close-action{
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    padding: 30px;
-    background: #fff;
-    box-shadow: 0 0 3px rgba(0,0,0,0.5);
-    transform: translateZ(0);
-}
-
-body.editorial .minion-datapopup .datapopup-close-action .icon{
-    width: 17px;
-    height: 15px;
-    background-image: url(../res/symbol_close.png);
-    background-size: cover;
 }.theweek-hero{
     padding: 27vh 60px 0 60px;
     display: flex;
@@ -2507,9 +2478,24 @@ body.editorial .minion-datapopup .datapopup-close-action .icon{
     .today-copyrights {
         padding: 30px 30px;
     }
-}.whattrumpsaid-hero{
+}.whattrumpsaid-share.social-likes {
+    z-index: 9999901;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    padding: 4px 6px;
+    margin: 0;
     display: flex;
-    padding: 18% 60px 5%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whattrumpsaid-hero{
+    display: flex;
+    padding: 18% 90px 5%;
     align-items: center;
 }
 
@@ -2545,7 +2531,7 @@ body.editorial .minion-datapopup .datapopup-close-action .icon{
 .whattrumpsaid-section-monthly{
     display: flex;
     flex-wrap: wrap;
-    padding: 60px 60px;
+    padding: 60px 90px;
 }
 
 .whattrumpsaid-section-monthly > p{
@@ -2658,7 +2644,7 @@ body.editorial .minion-datapopup .datapopup-close-action .icon{
     align-self: baseline;
 }
 
-.whattrumpsaid-analysis-data[banana-month="2017-03"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-04"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-05"] .whattrumpsaid-analysis-data-cover .month-tags li{
+.whattrumpsaid-analysis-data[banana-month="2017-03"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-04"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-05"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-10"] .whattrumpsaid-analysis-data-cover .month-tags li{
     color: #000;
 }
 
@@ -3263,6 +3249,40 @@ body.editorial .minion-datapopup .datapopup-close-action .icon{
     color: #fff;
 }
 
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"]{
+    background: #fff;
+    color: #000;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"] .msg-text{
+    color: rgba(0, 0, 0, 0.89);
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"] .item-pickedtweets{
+    background: #2b2b2b;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"] .item-pickedtweets .tweet-item{
+    color: #fff;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"]{
+    background: #fff;
+    color: #000;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"] .msg-text{
+    color: rgba(0, 0, 0, 0.89);
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"] .item-pickedtweets{
+    background: #2b2b2b;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"] .item-pickedtweets .tweet-item{
+    color: #fff;
+}
+
 .whattrumpsaid-analysis-data .analysis-item .title-text{
     font-size: 2.5em;
     font-weight: 600;
@@ -3318,9 +3338,9 @@ body.editorial .minion-datapopup .datapopup-close-action .icon{
     display: none;
 }
 
-.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close {
+.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-panelactions, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre {
     position: fixed;
-    padding: 20px 20px 20px 30px;
+    padding: 0 20px 0 30px;
     margin: 20px 0;
     display: flex;
     align-items: center;
@@ -3329,17 +3349,42 @@ body.editorial .minion-datapopup .datapopup-close-action .icon{
     transform: translateZ(0);
 }
 
-.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > p{
-    font-weight: 700;
-    margin-left: 7px;
-    letter-spacing: -0.2px;
+.whattrumpsaid-analysis-data-action-close {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > div{
+.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > p, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre > p{
+    font-weight: 700;
+    margin-left: 7px;
+}
+
+.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > div, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre > div{
     width: 9px;
     height: 15px;
     background-image: url(../res/symbol_arrow_left.png);
     background-size: cover;
+}
+
+.whattrumpsaid-analysis-data-action-share.social-likes {
+    line-height: initial;
+    margin: 0 -10px 0 15px;
+}
+
+.whattrumpsaid-analysis-data-action-share.social-likes .email {
+    margin: 0.45em 0.65em;
+    align-items: center;
+    display: flex;
+}
+
+.whattrumpsaid-analysis-data-action-share.social-likes:before {
+    content: '';
+    display: flex;
+    width: 2px;
+    margin-right: 10px;
+    background: #dedede;
+    align-content: center;
 }
 
 .whattrumpsaid-datapopup .item-tweets{
@@ -3628,4 +3673,220 @@ body.editorial .minion-datapopup .datapopup-close-action .icon{
         font-size: 2.2em;
         margin-top: 0;
     }
+}.social-likes,
+.social-likes__widget,
+.social-likes__button {
+  animation: none 0s ease 0s 1 normal none running;
+  backface-visibility: visible;
+  background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+  border: medium none currentColor;
+  border-collapse: separate;
+  border-image: none;
+  border-radius: 0;
+  border-spacing: 0;
+  bottom: auto;
+  box-shadow: none;
+  box-sizing: content-box;
+  caption-side: top;
+  clear: none;
+  clip: auto;
+  color: #000;
+  columns: auto;
+  column-count: auto;
+  column-fill: balance;
+  column-gap: normal;
+  column-rule: medium none currentColor;
+  column-span: 1;
+  column-width: auto;
+  content: normal;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: ltr;
+  display: inline;
+  empty-cells: show;
+  float: none;
+  font-family: serif;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: normal;
+  height: auto;
+  hyphens: none;
+  left: auto;
+  letter-spacing: normal;
+  list-style: disc outside none;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  orphans: 2;
+  outline: medium none invert;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0;
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: auto;
+  perspective: none;
+  perspective-origin: 50% 50%;
+  position: static;
+  right: auto;
+  tab-size: 8;
+  table-layout: auto;
+  text-align: left;
+  text-align-last: auto;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  top: auto;
+  transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
+  transition: none 0s ease 0s;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: visible;
+  white-space: normal;
+  widows: 2;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  all: initial;
+  box-sizing: border-box;
+}
+.social-likes::before,
+.social-likes::after,
+.social-likes__widget::before,
+.social-likes__widget::after,
+.social-likes__button::before,
+.social-likes__button::after {
+  display: none;
+}
+.social-likes {
+  opacity: 0;
+}
+.social-likes_visible {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+.social-likes > * {
+  display: block;
+  visibility: hidden;
+}
+.social-likes_visible > * {
+  visibility: inherit;
+}
+.social-likes {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  font-size: 16px;
+}
+.social-likes__widget {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: inherit;
+}
+.social-likes__button {
+  display: block;
+  text-rendering: optimizeLegibility;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.social-likes__invisible-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.social-likes__icon {
+  position: absolute;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
+.social-likes__widget_notext .social-likes__icon {
+  position: static;
+  display: block;
+  margin: 0.3125em;
+}
+.social-likes_vertical {
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.social-likes {
+  min-height: 36px;
+  margin: -0.4em -0.6em;
+  line-height: 1.45;
+}
+.social-likes__widget {
+  min-width: 0;
+  margin: 0.45em;
+  line-height: inherit;
+  border: 0;
+  text-align: left;
+}
+.social-likes__widget:hover,
+.social-likes__widget:active,
+.social-likes__widget:focus {
+  -webkit-filter: saturate(0.85) brightness(1.2);
+          filter: saturate(0.85) brightness(1.2);
+}
+.social-likes__widget:focus {
+  outline: 1px dotted;
+}
+.social-likes__button {
+  min-width: 0;
+  padding-left: 1.4em;
+  vertical-align: middle;
+  font-size: 0.95em;
+  font-weight: normal;
+  text-decoration: underline;
+}
+.social-likes__icon {
+  top: 0.2em;
+  left: 0.15em;
+}
+.social-likes__widget_notext {
+  margin: 0.45em 0.3em;
+}
+.social-likes__widget_facebook {
+  color: #3b5998;
+}
+.social-likes__widget_twitter {
+  color: #55acee;
+}
+.social-likes__widget_plusone {
+  color: #dc4e41;
+}
+.social-likes__widget_vkontakte {
+  color: #45668e;
+}
+.social-likes__widget_odnoklassniki {
+  color: #ed812b;
+}
+.social-likes__widget_pinterest {
+  color: #bd081c;
+}
+.social-likes__widget_telegram {
+  color: #08c;
+}
+.social-likes__widget_linkedin {
+  color: #0077b5;
 }

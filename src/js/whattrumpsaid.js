@@ -1,5 +1,7 @@
 import {html, render} from 'lit-html';
 import whattrumpsaid_style from '../styles/whattrumpsaid.css';
+import socialLikes from 'social-likes-next';
+import whattrumpsaid_style_social from 'social-likes-next/lib/social-likes_light.css';
 import moment from 'moment';
 import _ from 'lodash';
 
@@ -7,12 +9,23 @@ export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='WhatTrumpSaid';
     document.querySelector('.navbox-static').classList.add('whattrumpsaid');
     document.body.classList.add('whattrumpsaid');
+    document.title = "WhatTrumpSaid on THISISALLABOUT";
     document.querySelector('.minion-sections li[data-sectionid="nav-section-whattrumpsaid"]').classList.add('current');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
 
     const hero_markup = () => html`
+    <div class="whattrumpsaid-share" data-url="https://thisisallabout.com/whattrumpsaid" data-title="WhatTrumpSaid on THISISALLABOUT">
+        <div data-service="facebook" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div data-service="twitter" data-via="" data-related="realDonaldTrump"></div>
+        <div data-service="plusone" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div data-service="linkedin" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div data-service="pinterest" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div class="email" title="WhatTrumpSaid on THISISALLABOUT">
+            <div class="icon"></div>    
+        </div>
+    </div>
     <div class="whattrumpsaid-hero">
         <div class="whattrumpsaid-herotext">
             <p class="hero1">Reading Trump's moves</p>
@@ -55,7 +68,7 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.content-timestamp').innerHTML = 'Updated on Feb 5, 2018 ET';
+    document.querySelector('.content-timestamp').innerHTML = 'Updated on Feb 20, 2018 ET';
 
     var month_index_data = [
         {
@@ -69,50 +82,36 @@ export function init_render() {
             "months_string": ["jan2018"]
         }
     ];
-    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09"];
+    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10"];
+
+    if (getpathparam('type') == '' && getpathparam('type') !== null) window.history.replaceState({}, null, '/whattrumpsaid/');
 
     for (var i=0; i < month_render_index.length; i++) {
         var markup_init_container = document.createElement("div");
         markup_init_container.className = "whattrumpsaid-analysis-data";
         markup_init_container.setAttribute('banana-month', month_render_index[i]);
         document.querySelector('.whattrumpsaid-analysis-group').appendChild(markup_init_container);
-        render_list(month_render_index[i]);
-    }
-
-    const getpathparam = (name, url) => {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-        var regexS = "[\\?&]"+name+"=([^&#]*)";
-        var regex = new RegExp( regexS );
-        var results = regex.exec( url );
-        return results == null ? null : results[1];
-    }
-    
-    if (getpathparam('type') !== '' && getpathparam('type') !== null) {
-        var parammonth_raw = getpathparam('type');
-        var param_converted = '2017-01';
-
-        if (parammonth_raw == 'jan2017') param_converted = '2017-01';
-        if (parammonth_raw == 'feb2017') param_converted = '2017-02';
-        if (parammonth_raw == 'mar2017') param_converted = '2017-03';
-        if (parammonth_raw == 'apr2017') param_converted = '2017-04';
-        if (parammonth_raw == 'may2017') param_converted = '2017-05';
-        if (parammonth_raw == 'jun2017') param_converted = '2017-06';
-        if (parammonth_raw == 'jul2017') param_converted = '2017-07';
-        if (parammonth_raw == 'aug2017') param_converted = '2017-08';
-        if (parammonth_raw == 'sep2017') param_converted = '2017-09';
-        if (parammonth_raw == 'oct2017') param_converted = '2017-10';
-        if (parammonth_raw == 'nov2017') param_converted = '2017-11';
-        if (parammonth_raw == 'dec2017') param_converted = '2017-12';
-        if (parammonth_raw == 'jan2018') param_converted = '2018-01';
-        
-        render_data(param_converted);
+        if (getpathparam('type') !== '' && getpathparam('type') !== null && getpathparam('type') == month_render_index[i]) {
+            render_list(month_render_index[i], true);
+        } else {
+            render_list(month_render_index[i], false);
+        }
     }
 
     base_events();
+    
 }
 
-const render_list = (moindex) => {
+const getpathparam = (name, url) => {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+const render_list = (moindex, opt) => {
     var list_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
@@ -148,6 +147,15 @@ const render_list = (moindex) => {
                 `;
 
                 render(cover_markup(), document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + moindex +'"]'));
+                if (opt == true) {
+                    document.documentElement.className = 'n_scroll';
+                    var obj = document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + moindex +'"]');
+                    var month_tapped = obj.getAttribute('banana-month');
+                    document.querySelector('.whattrumpsaid-analysis-group').classList.add('selectionmode');
+                    obj.classList.add('selected');
+                    render_data(moindex);
+                }
+
                 document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + moindex +'"] .whattrumpsaid-analysis-data-cover').addEventListener('click', function (e) {
                     document.documentElement.className = 'n_scroll';
                     var obj = document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + moindex +'"]');
@@ -156,6 +164,8 @@ const render_list = (moindex) => {
                     obj.classList.add('selected');
                     render_data(month_tapped);
                 });
+
+                return false;
             }
         });
 
@@ -164,6 +174,8 @@ const render_list = (moindex) => {
 }
 
 const base_events = () => {
+    socialLikes(document.querySelector('.whattrumpsaid-share'));
+
     document.querySelector('.whattrumpsaid-hero .whattrumpsaid-action-details').addEventListener('click', function (e) {
         if (!document.querySelector('.whattrumpsaid-details').classList.contains('opened'))
             document.querySelector('.whattrumpsaid-details').classList.add('opened');
@@ -201,25 +213,21 @@ const render_data = (month) => {
         dataset_url = '//thisisallabout.com/dataset/trumptweeted/' + month + '.json';
     }
 
+    window.history.replaceState({}, null, '/whattrumpsaid/' + month + '/');
     const base_markup = () => html`
-        <div class="whattrumpsaid-analysis-data-action-close">
+        <div class="whattrumpsaid-analysis-data-action-close-pre">
             <div class="icon"></div>
         </div>
     `;
     
     render(base_markup(), document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + month + '"] .whattrumpsaid-analysis-data-wrapper'));
 
-    document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + month + '"] .whattrumpsaid-analysis-data-wrapper').querySelector('.whattrumpsaid-analysis-data-action-close').addEventListener('click', function (e) {
+    document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + month + '"] .whattrumpsaid-analysis-data-wrapper .whattrumpsaid-analysis-data-action-close-pre').addEventListener('click', function (e) {
         getParents(this, '.whattrumpsaid-analysis-data')[0].classList.remove('selected');
         document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
         document.documentElement.className = '';
-        try {
-            if (renderdata_fetch !== null) renderdata_fetch.abort();
-        } catch (e) {
-            console.log(e);
-        }
-
         document.querySelector('.minion-dataload').setAttribute('status', '');
+        window.history.replaceState({}, null, '/whattrumpsaid/');
     });
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -296,8 +304,21 @@ const render_data = (month) => {
                 )}
                 </div>
             </div>
-            <div class="whattrumpsaid-analysis-data-action-close">
-                <div class="icon"></div>
+            <div class="whattrumpsaid-analysis-data-panelactions">
+                <div class="whattrumpsaid-analysis-data-action-close">
+                    <div class="icon"></div>
+                    <p>Close</p>
+                </div>
+                <div class="whattrumpsaid-analysis-data-action-share" data-url="https://thisisallabout.com/whattrumpsaid/${trump_data[0].month}" data-title="WhatTrumpSaid on THISISALLABOUT">
+                    <div data-service="facebook" title="WhatTrumpSaid on THISISALLABOUT"></div>
+                    <div data-service="twitter" data-via="" data-related="realDonaldTrump"></div>
+                    <div data-service="plusone" title="WhatTrumpSaid on THISISALLABOUT"></div>
+                    <div data-service="linkedin" title="WhatTrumpSaid on THISISALLABOUT"></div>
+                    <div data-service="pinterest" title="WhatTrumpSaid on THISISALLABOUT"></div>
+                    <div class="email" title="WhatTrumpSaid on THISISALLABOUT">
+                        <div class="icon"></div>    
+                    </div>
+                </div>
             </div>
         `;
         
@@ -308,7 +329,10 @@ const render_data = (month) => {
             getParents(this, '.whattrumpsaid-analysis-data')[0].classList.remove('selected');
             document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
             document.documentElement.className = '';
+            window.history.replaceState({}, null, '/whattrumpsaid/');
         });
+
+        socialLikes(targetnode.querySelector('.whattrumpsaid-analysis-data-action-share'));
 
         if (trump_data[0].dynamicbg_list.length > 0) {
             _.filter(trump_data[0].dynamicbg_list, function (dbg) {

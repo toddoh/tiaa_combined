@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One');
 
+.whattrumpsaid-share.social-likes {
+    z-index: 9999901;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    padding: 4px 6px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .whattrumpsaid-hero{
     display: flex;
-    padding: 18% 60px 5%;
+    padding: 18% 90px 5%;
     align-items: center;
 }
 
@@ -38,7 +53,7 @@
 .whattrumpsaid-section-monthly{
     display: flex;
     flex-wrap: wrap;
-    padding: 60px 60px;
+    padding: 60px 90px;
 }
 
 .whattrumpsaid-section-monthly > p{
@@ -151,7 +166,7 @@
     align-self: baseline;
 }
 
-.whattrumpsaid-analysis-data[banana-month="2017-03"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-04"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-05"] .whattrumpsaid-analysis-data-cover .month-tags li{
+.whattrumpsaid-analysis-data[banana-month="2017-03"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-04"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-05"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-10"] .whattrumpsaid-analysis-data-cover .month-tags li{
     color: #000;
 }
 
@@ -756,6 +771,40 @@
     color: #fff;
 }
 
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"]{
+    background: #fff;
+    color: #000;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"] .msg-text{
+    color: rgba(0, 0, 0, 0.89);
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"] .item-pickedtweets{
+    background: #2b2b2b;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c01"] .item-pickedtweets .tweet-item{
+    color: #fff;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"]{
+    background: #fff;
+    color: #000;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"] .msg-text{
+    color: rgba(0, 0, 0, 0.89);
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"] .item-pickedtweets{
+    background: #2b2b2b;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"] .item-pickedtweets .tweet-item{
+    color: #fff;
+}
+
 .whattrumpsaid-analysis-data .analysis-item .title-text{
     font-size: 2.5em;
     font-weight: 600;
@@ -811,9 +860,9 @@
     display: none;
 }
 
-.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close {
+.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-panelactions, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre {
     position: fixed;
-    padding: 20px 20px 20px 30px;
+    padding: 0 20px 0 30px;
     margin: 20px 0;
     display: flex;
     align-items: center;
@@ -822,17 +871,42 @@
     transform: translateZ(0);
 }
 
-.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > p{
-    font-weight: 700;
-    margin-left: 7px;
-    letter-spacing: -0.2px;
+.whattrumpsaid-analysis-data-action-close {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > div{
+.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > p, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre > p{
+    font-weight: 700;
+    margin-left: 7px;
+}
+
+.whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > div, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre > div{
     width: 9px;
     height: 15px;
     background-image: url('../resources/symbol_arrow_left.png');
     background-size: cover;
+}
+
+.whattrumpsaid-analysis-data-action-share.social-likes {
+    line-height: initial;
+    margin: 0 -10px 0 15px;
+}
+
+.whattrumpsaid-analysis-data-action-share.social-likes .email {
+    margin: 0.45em 0.65em;
+    align-items: center;
+    display: flex;
+}
+
+.whattrumpsaid-analysis-data-action-share.social-likes:before {
+    content: '';
+    display: flex;
+    width: 2px;
+    margin-right: 10px;
+    background: #dedede;
+    align-content: center;
 }
 
 .whattrumpsaid-datapopup .item-tweets{
