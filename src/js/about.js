@@ -8,15 +8,14 @@ export function init_render() {
     <div class="about-hero">
         <div class="about-herotext">
             <p class="hero1">It's all about</p>
-            <p class="hero1">things that really matter.</p>
+            <p class="hero1">what really matters.</p>
             <div class="hero2">
-                <p>We're living in a time of unprecendented economic, political, and social hardships. And that's why knowing key issue has become more critical than ever. However, in the era of digital journalism, it's difficult to get clear information about things that would affect our daily lives. In a flood of stories and fake news, our aim is to help people understand issues in a easy and clear way.</p>
+                <p>We're living in a time of unprecedented economic, political, and social hardships. And that's why knowing key issues has become more critical than ever. However, in the era of digital journalism, it's difficult to get clear information about things that would affect our daily lives. In a flood of stories and fake news, our aim is to help people understand issues in an easy and clear way.</p>
                 
-                <p>On THISISALLABOUT, our story unravels complex issue and agenda by group, timeframe, and key topic using intelligent data analysis and great visualization. And with a delicate touch on curation, we help you navigate through a wide range of issues by a single click. Furthermore, our analysis algorithm eliminates the possibility of political biases, which fundamentally changes the way you read news.</p>
+                <p>On THISISALLABOUT, our aim is to unravel complex issues and agendas by group, timeframe, and key topic using intelligent data analysis and great visualization. And with a delicate touch on curation, we help you navigate through a wide range of issues by a single click. Furthermore, our algorithm analyzes without the possibility of political biases (see more about how it works below), which fundamentally changes the way you read news.</p>
                 
-                <p>Through a deliberate process of data analysis and story curation, we will never stop discovering every aspect of society. That's what and how we do.
-
-                <p>It's not just a news portal or an assistant. It's all about things that really matter.</p>
+                <p>Through a deliberate process of data analysis and story curation, we will never stop discovering every aspect of society. That's what and how we do.</p>
+                <p>THISISALLABOUT is not just a news portal or an assistant. It's all about things that really matter.</p>
             </div>
             <div class="hero2 contact">
                 <p><a href="mailto:hello@thisisallabout.com">Contact Us</a></p>
@@ -35,7 +34,6 @@ export function init_render() {
                 <div class="social-channels">
                     <a href="https://twitter.com/brklynfivefive" target="_blank"><div class="team-social twitter"></div></a>
                     <a href="mailto:brklynfivefive@gmail.com" target="_blank"><div class="team-social email"></div></a>
-                    <a href="https://facebook.com/brklynfivefive" target="_blank"><div class="team-social fb"></div></a>
                 </div>
             </li>
         </ul>
