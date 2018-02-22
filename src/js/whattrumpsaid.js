@@ -82,7 +82,7 @@ export function init_render() {
             "months_string": ["jan2018"]
         }
     ];
-    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10"];
+    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11"];
 
     if (getpathparam('type') == '' && getpathparam('type') !== null) window.history.replaceState({}, null, '/whattrumpsaid/');
 

@@ -62,5 +62,12 @@
         "month": "2017-10",
         "header": "Oct 2017",
         "keytag": ["TaxCuts", "PuertoRico", "LasVegas"]
+    },
+    {
+        "month": "2017-11",
+        "header": "Nov 2017",
+        "keytag": ["APEC2017", "TaxCuts", "EastAsia"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Vladimir_Putin_%26_Donald_Trump_at_APEC_Summit_in_Da_Nang%2C_Vietnam%2C_10_November_2017.jpg/1600px-Vladimir_Putin_%26_Donald_Trump_at_APEC_Summit_in_Da_Nang%2C_Vietnam%2C_10_November_2017.jpg",
+        "image-copyright": "Kremlin.ru"
     }
 ]

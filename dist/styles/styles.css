@@ -1650,6 +1650,14 @@ ul.cluster-articles li.selected {
     border-bottom: 6px solid #0090e4;
 }
 
+ul.cluster-articles .title {
+    margin-bottom: 6px;
+}
+
+ul.cluster-articles .objectid {
+    font-weight: 600;
+}
+
 .cluster-customfields {
     display: flex;
     flex-direction: column;
@@ -2620,7 +2628,7 @@ ul.cluster-articles li.selected {
     bottom: 10px;
 }
 
-.whattrumpsaid-analysis-data[banana-month="2017-01"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-02"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-06"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-07"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-08"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-09"] .whattrumpsaid-analysis-data-cover{
+.whattrumpsaid-analysis-data[banana-month="2017-01"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-02"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-06"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-07"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-08"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-09"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-11"] .whattrumpsaid-analysis-data-cover{
     color: #fff;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
@@ -2734,7 +2742,6 @@ ul.cluster-articles li.selected {
     justify-content: space-between;
     padding: 15% 60px;
     width: calc(100% - 120px);
-    height: calc(100% - 30%);
     background: #d63100;
     color: #fff;
     display: flex;
@@ -3022,6 +3029,32 @@ ul.cluster-articles li.selected {
     background-position: top right;
 }
 
+.whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1711c01"] .graphic{
+    justify-content: flex-end;
+    padding: 15% 30px;
+    width: calc(100% - 60px);
+    height: calc(100% - 30%);
+    color: #fff;
+    display: flex;
+    background-image: url(../res/whattrumpsaid_1711_trecon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1711c05"] .graphic{
+    justify-content: flex-end;
+    padding: 15% 30px;
+    width: calc(100% - 60px);
+    height: calc(100% - 30%);
+    color: #fff;
+    display: flex;
+    background-image: url(../res/whattrumpsaid_1711_taxcut.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
 .whattrumpsaid-analysis-data .analysis-group{
     display: flex;
     flex-direction: column;
@@ -3280,6 +3313,44 @@ ul.cluster-articles li.selected {
 }
 
 .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1710c02"] .item-pickedtweets .tweet-item{
+    color: #fff;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c04"]{
+    background: #fff;
+    color: #000;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c04"] .msg-text{
+    color: rgba(0, 0, 0, 0.89);
+    font-size: 3em;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c04"] .item-pickedtweets{
+    background: #2b2b2b;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c04"] .item-pickedtweets .tweet-item{
+    color: #fff;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c05"]{
+    width: 40%;
+    color: #000;
+    margin-left: auto;
+    flex-direction: column;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c05"] .msg-text{
+    color: rgba(0, 0, 0, 0.89);
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c05"] .item-pickedtweets{
+    background: #2b2b2b;
+    margin-top: 40px;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c05"] .item-pickedtweets .tweet-item{
     color: #fff;
 }
 

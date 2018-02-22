@@ -120,6 +120,14 @@ ul.cluster-articles li.selected {
     border-bottom: 6px solid #0090e4;
 }
 
+ul.cluster-articles .title {
+    margin-bottom: 6px;
+}
+
+ul.cluster-articles .objectid {
+    font-weight: 600;
+}
+
 .cluster-customfields {
     display: flex;
     flex-direction: column;

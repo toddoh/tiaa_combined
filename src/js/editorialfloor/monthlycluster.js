@@ -1,5 +1,6 @@
 import styles from '../../styles/editorialfloor/core.css';
 import {html, render} from 'lit-html';
+import moment from 'moment';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='Editorial /monthlycluster';
@@ -62,7 +63,8 @@ const render_data = (path) => {
             ${dset.articles.map((arti, i) => html`
                 <li banana-id="${arti.twitterid}" banana-json="${JSON.stringify(arti)}">
                     <p class="title">${arti.title}</p>
-                    <p class="ts">${arti.ts}</p>
+                    <p banana-ts="${arti.ts}" class="ts"></p>
+                    <p class="objectid">${arti.twitterid}</p>
                 </li>
             `
             )}
@@ -70,6 +72,7 @@ const render_data = (path) => {
             <div class="cluster-customfields">
                 <input type="text" class="field-header" placeholder="header" />
                 <input type="text" class="field-msg" placeholder="additional messages" />
+                <input type="text" class="field-pickedid" placeholder="an object id of picked tweet section" />
                 <input type="text" class="field-image" placeholder="image (optional)" />
                 <input type="text" class="field-imagecopy" placeholder="image copyright info (optional)" />
             </div>
@@ -85,6 +88,13 @@ const render_data = (path) => {
 }
 
 const attach_events = () => {
+    Array.prototype.forEach.call(document.querySelectorAll('.cluster-articles .ts'), function(el, index, array) {
+        var ts_raw = el.getAttribute('banana-ts');
+        var ts_cv = moment.unix(ts_raw).format("MMMM Do YYYY hh:mm");
+
+        el.innerHTML = ts_cv;
+    });
+
     var articles = document.querySelectorAll('.cluster-articles li');
     for (var i=0; i < articles.length; i++) {
         articles[i].addEventListener('click', function (e) {
@@ -133,8 +143,20 @@ const generate_data = () => {
                     var ejson = ael.getAttribute('banana-json');
                     article_group.push(JSON.parse(ejson));
                 });
-                data_group['picked'] = article_group;
-                data_group['articles'] = JSON.parse(el.querySelector('.cluster-articles').getAttribute('banana-json'));
+                data_group['articles'] = article_group;
+
+                
+                if (el.querySelector('.cluster-customfields .field-pickedid').value != '') {
+                    var picked_group = [];
+                    Array.prototype.forEach.call(el.querySelectorAll('.cluster-articles li.selected'), function(ael, index, array) {
+                        if (el.querySelector('.cluster-customfields .field-pickedid').value == ael.getAttribute('banana-id')) {
+                            var ejson = ael.getAttribute('banana-json');
+                            picked_group.push(JSON.parse(ejson));
+                            data_group['picked'] = picked_group;
+                        }
+                    });
+                }
+                
 
                 var theme_list = [];
                 Array.prototype.forEach.call(el.querySelectorAll('.cluster-themes li.selected'), function(tel, index, array) {
