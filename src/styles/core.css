@@ -288,10 +288,13 @@ html.safari .minion-header.scroll_bar{
 }
 
 @media all and (max-width: 510px) {
-    .minion-timestamp{
-        font-size: 0.8em;
-        width: 32%;
-        padding-top: 33px;
+    .minion-sectionbox{
+        margin: 0;
+        padding: 0 0 0 25px;
+    }
+
+    .minion-sections-reveal > p {
+        display: none;
     }
 }
 

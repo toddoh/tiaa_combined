@@ -10,6 +10,7 @@ export function dynamicbg_render_data(month, dbg) {
     if (month == '2017-08') dynamicbg_201708(month, dbg);
     if (month == '2017-09') dynamicbg_201709(month, dbg);
     if (month == '2017-11') dynamicbg_201711(month, dbg);
+    if (month == '2017-12') dynamicbg_201712(month, dbg);
 
     return;
 }
@@ -167,6 +168,17 @@ const dynamicbg_201709 = (month, type) => {
 
 const dynamicbg_201711 = (month, type) => {
     if (type == '1711c01' || type == '1711c05') {
+        const dynamicbg_markup = () => html`
+        <div class="graphic">
+        </div>
+        `;
+        
+        render(dynamicbg_markup(), document.querySelector('.whattrumpsaid-analysis-data-dynamicbg[banana-month="' + month + '"] .dynamicbg-item[banana-id="' + type + '"]'));
+    }
+}
+
+const dynamicbg_201712 = (month, type) => {
+    if (type == '1712c00' || type == '1712c02') {
         const dynamicbg_markup = () => html`
         <div class="graphic">
         </div>

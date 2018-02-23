@@ -142,7 +142,7 @@
     bottom: 10px;
 }
 
-.whattrumpsaid-analysis-data[banana-month="2017-01"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-02"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-06"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-07"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-08"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-09"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-11"] .whattrumpsaid-analysis-data-cover{
+.whattrumpsaid-analysis-data[banana-month="2017-01"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-02"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-06"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-07"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-08"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-09"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-11"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-12"] .whattrumpsaid-analysis-data-cover{
     color: #fff;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
@@ -231,9 +231,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c03"] .graphic{
     justify-content: space-between;
-    padding: 15% 60px;
+    padding: 15vh 60px;
     width: calc(100% - 120px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     background: #000;
     color: #fff;
     display: flex;
@@ -254,7 +254,7 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c04"] .graphic{
     justify-content: space-between;
-    padding: 15% 60px;
+    padding: 15vh 60px;
     width: calc(100% - 120px);
     background: #d63100;
     color: #fff;
@@ -279,9 +279,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c05"] .graphic{
     justify-content: flex-end;
-    padding: 15% 60px;
+    padding: 15vh 60px;
     width: calc(100% - 120px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     background-size: cover;
     background-position: left;
     color: #fff;
@@ -303,9 +303,9 @@
 }
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic{
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     background: #fff;
     display: flex;
     justify-content: space-between;
@@ -375,9 +375,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c00"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     background: #003475;
     color: #fff;
     display: flex;
@@ -401,9 +401,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c01"] .graphic {
     justify-content: flex-start;
-    padding: 15% 60px;
+    padding: 15vh 60px;
     width: calc(100% - 120px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     background-size: cover;
     background-position: left;
     color: #fff;
@@ -437,9 +437,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1704c01"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1704_dparty.png');
@@ -450,9 +450,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1706c03"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1706_trobama.png');
@@ -463,9 +463,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1706c05"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1706_trfx.png');
@@ -476,9 +476,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1707c01"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1707_hcare7yr.png');
@@ -489,9 +489,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1707c03"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1707_hillary.jpg');
@@ -502,9 +502,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1707c04"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1707_repsen.png');
@@ -519,9 +519,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1708c05"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1708_golfclub.jpeg');
@@ -532,9 +532,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1709c03"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1709_trmccain.png');
@@ -545,9 +545,9 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1711c01"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1711_trecon.png');
@@ -558,12 +558,38 @@
 
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1711c05"] .graphic{
     justify-content: flex-end;
-    padding: 15% 30px;
+    padding: 15vh 30px;
     width: calc(100% - 60px);
-    height: calc(100% - 30%);
+    height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
     background-image: url('../resources/donaldtrump/whattrumpsaid_1711_taxcut.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1712c00"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100% - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1712_trjones.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1712c02"] .graphic{
+    justify-content: flex-end;
+    padding: 15vh 30px;
+    width: calc(100% - 60px);
+    height: calc(100vh - 30vh);
+    color: #fff;
+    display: flex;
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1712_rallyfl.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top right;
@@ -575,6 +601,7 @@
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .whattrumpsaid-analysis-data .analysis-list .analysis-item{
@@ -583,7 +610,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 15% 60px 15% 60px;
+    padding: 12% 60px 12% 60px;
     color: #fff;
 }
 
@@ -597,7 +624,7 @@
 .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1701c03"]{
     color: #fff;
     padding: 5% 60px;
-    margin: 25% 0 15% 0;
+    margin: 25% 0 12% 0;
 }
 
 .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1701c04"]{
@@ -605,7 +632,7 @@
     color: #fff;
     width: 70%;
     padding: 8% 60px;
-    margin: 25% 0 15% 0;
+    margin: 25% 0 12% 0;
     justify-content: flex-start;
 }
 
@@ -868,6 +895,33 @@
     color: #fff;
 }
 
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1712c00"]{
+    margin-left: auto;
+    margin-top: 20%;
+    flex-direction: column;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1712c00"] .item-pickedtweets{
+    margin-top: 40px;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1712c04"]{
+    background: #fff;
+    color: #000;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1712c04"] .msg-text{
+    color: rgba(0, 0, 0, 0.89);
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1712c04"] .item-pickedtweets{
+    background: #2b2b2b;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1712c04"] .item-pickedtweets .tweet-item{
+    color: #fff;
+}
+
 .whattrumpsaid-analysis-data .analysis-item .title-text{
     font-size: 2.5em;
     font-weight: 600;
@@ -1107,49 +1161,66 @@
 }
 
 @media all and (max-width: 980px) {
+    .whattrumpsaid-share.social-likes {
+        bottom: 0;
+        top: initial;
+        transform: none;
+        flex-direction: row;
+    }
 
     .whattrumpsaid-hero{
-        padding: 0 30px;
+        padding: 45% 30px 5%;
     }
 
     .whattrumpsaid-hero .hero1{
-        font-size: 1.6em;
+        font-size: 1.8em;
     }
 
     .whattrumpsaid-hero .hero2{
         font-size: 1em;
     }
 
-    .whattrumpsaid-hero .whattrumpsaid-herotpdetails{
-        font-size: 1em;
+    .whattrumpsaid-section-monthly {
+        padding: 30px 30px 60px 30px;
     }
 
-    .whattrumpsaid-hero > div {
-        margin-top: 40%;
+    .whattrumpsaid-section-monthly > p {
+        font-size: 1.3em;
     }
 
-    .whattrumpsaid-analysis-data .analysis-eom{
-        padding: 0 30px;
+    .whattrumpsaid-analysis-data {
+        width: 100%;
+        height: 130px;
     }
 
-    .analysis-eom .title-text{
-        font-size: 1.9em;
-        font-weight: 700;
+    .whattrumpsaid-analysis-data-cover .month-title {
+        font-size: 1.5em;
+        width: auto;
+    }
+
+    .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > p, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre > p {
+        display: none;
+    }
+
+    .whattrumpsaid-analysis-data-action-share.social-likes {
+        display: none;
     }
 
     .whattrumpsaid-analysis-data .analysis-list .analysis-item{
-        padding: 20% 30px;
-        transition: all 200ms ease;
+        padding: 45% 30px 45% 30px;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item .item-title {
+        width: auto;
     }
 
     .whattrumpsaid-analysis-data .analysis-item .title-text{
-        font-size: 1.6em;
+        font-size: 1.5em;
         width: auto;
     }
 
     .whattrumpsaid-analysis-data .analysis-item .msg-text{
-        font-size: 1.2em;
-        font-weight: 400;
+        font-size: 0.95em;
     }
 
     .whattrumpsaid-analysis-data .analysis-item .item-pickedtweets{
@@ -1158,35 +1229,34 @@
         display: flex;
         flex-wrap: wrap;
         column-count: auto;
-        width: auto;
+        width: 82vw;
+        height: 82vw;
+        padding: 20px;
     }
 
-    .whattrumpsaid-analysis-data .analysis-item .item-pickedtweets .title-text{
-        font-size: 0.95em;
-        font-weight: 400;
-        width: 70%;
-        height: auto;
-        padding: 17px;
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-        margin-right: 0;
-        margin-bottom: 10px;
+    .whattrumpsaid-analysis-data .analysis-item .item-pickedtweets .tweet-item {
+        font-size: 1em;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-item .item-revealtweets-action {
+        bottom: 10px;
     }
 
     .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1701c03"] {
+        padding: 15% 30px 15% 60px;
+        margin: 45% 0 45% 0;
         background: #000;
-        padding: 5% 30px 5% 60px;
-        margin: 20% 0 10% 0;
     }
 
     .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1701c04"] {
         background: #9c2400;
-        padding: 5% 30px;
+        padding: 20% 30px;
         width: 65%;
-        margin: 30% 0 10% 0;
+        margin: 45% 0 45% 0;
     }
 
     .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1701c05"] {
-        padding: 5% 30px;
+        width: auto;
     }
 
     .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1702c02"]{
@@ -1196,14 +1266,49 @@
     .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1703c00"]{
         background: #003475;
         padding: 60px 30px;
-        margin: 50% 0;
+        margin: 90% 0 0 0;
+        width: auto;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1704c01"] {
+        background: rgba(0, 0, 0, 0.89);
+        margin: 30% 0 0 0;
+        padding: 12% 30px;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1705c00"] {
+        margin: 90% 0 0 0;
+        padding: 12% 30px;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1706c05"] {
+        padding: 25% 30px;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1707c01"] {
+        padding: 12% 30px;
+        margin: 30% 0 0 0;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1707c04"] {
+        padding: 10% 30px;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c04"] {
+        padding: 45% 30px 15% 30px;
+    }
+
+    .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1711c05"] {
+        width: auto;
+        color: #000;
+        background: #fff;
+        margin: 85% 0 0;
+        padding: 12% 30px;
+        margin-left: auto;
     }
 
     .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c03"] .graphic{
         justify-content: space-between;
-        padding: 18% 60px;
-        width: calc(100% - 120px);
-        height: calc(100% - 36%);
     }
 
     .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c03"] .graphic-box{
@@ -1218,12 +1323,6 @@
         background-position: right;
     }
 
-    .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="eom"] .graphic-box{
-       padding-left: 20px;
-       margin-top: 0;
-       font-size: 2.8em;
-    }
-
     .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .graphic {
         justify-content: initial;
         flex-direction: column;
@@ -1235,7 +1334,7 @@
     }
 
     .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1703c00"] .graphic {
-        padding: 15% 30px;
+        padding: 15vh 30px;
         width: calc(100% - 60px);
     }
 
@@ -1247,9 +1346,18 @@
         margin-top: -10%;
     }
 
-    .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1704c01"] .graphic{
-        height: calc(100% - 70%);
-        background-position: 70%;
+    .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1701c03"] .image{
+        background-position-x: right;
+    }
+
+    .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1711c05"] .graphic {
+        justify-content: flex-end;
+        padding: 35vh 30px;
+        background-position: top left;
+    }
+
+    .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1712c00"] .graphic {
+        background-position: top left;
     }
 }
 

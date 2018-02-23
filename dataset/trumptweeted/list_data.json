@@ -69,5 +69,12 @@
         "keytag": ["APEC2017", "TaxCuts", "EastAsia"],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Vladimir_Putin_%26_Donald_Trump_at_APEC_Summit_in_Da_Nang%2C_Vietnam%2C_10_November_2017.jpg/1600px-Vladimir_Putin_%26_Donald_Trump_at_APEC_Summit_in_Da_Nang%2C_Vietnam%2C_10_November_2017.jpg",
         "image-copyright": "Kremlin.ru"
+    },
+    {
+        "month": "2017-12",
+        "header": "Dec 2017",
+        "keytag": ["TaxCuts", "AlabamaSenate", "FakeNews"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Trump%2C_Pence%2C_Ryan%2C_McConnell_celebrate_tax_cut_passage.jpg/1599px-Trump%2C_Pence%2C_Ryan%2C_McConnell_celebrate_tax_cut_passage.jpg",
+        "image-copyright": "The White House from Washington, DC"
     }
 ]
