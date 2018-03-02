@@ -151,7 +151,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
         current_tf_idfs = dict(zip(current_tfidf.get_feature_names(), current_tfidf.idf_))
         tf_idfs_tuples = current_tf_idfs.items()
-        cluster_themes_dict[key] = sorted(tf_idfs_tuples, key=lambda x: x[1])[:15]
+        cluster_themes_dict[key] = sorted(tf_idfs_tuples, key=lambda x: x[1])[:7]
     # print('Random Cluster {0} key words: {1}'.format(cluster_pick, [x[0] for x in cluster_themes_dict[cluster_pick]]))
 
     return cluster_themes_dict, cluster_assignments_dict

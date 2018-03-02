@@ -4,6 +4,106 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
+                "title": "Congratulations to @FoxNews for being number one in inauguration ratings. They were many times higher than FAKE NEWS @CNN - public is smart!",
+                "ts": 1485310560,
+                "twitterid": "824078417213747200"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "I will be interviewed by @DavidMuir tonight at 10 o'clock on @ABC. Will be my first interview from the White House. Enjoy! \u2013 The White House\uc5d0\uc11c",
+                "ts": 1485381900,
+                "twitterid": "824377804590563339"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": " @romoabcnews: . @DavidMuir first @POTUS interview since taking office. Tonight on @ABCWorldNews @ABC2020 tonight. ",
+                "ts": 1485398700,
+                "twitterid": "824448156935081984"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Interview with David Muir of @ABC News in 10 minutes. Enjoy!",
+                "ts": 1485398880,
+                "twitterid": "824448880993509376"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Will be interviewed by @SeanHannity on @FoxNews at 10:00pm tonight. Enjoy!",
+                "ts": 1485474300,
+                "twitterid": "824765229527605248"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "The failing @nytimes has been wrong about me from the very beginning. Said I would lose the primaries, then the general election. FAKE NEWS!",
+                "ts": 1485608640,
+                "twitterid": "825328817833123840"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Thr coverage about me in the @nytimes and the @washingtonpost gas been so false and angry that the times actually apologized to its.....",
+                "ts": 1485608880,
+                "twitterid": "825329757646618624"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Somebody with aptitude and conviction should buy the FAKE NEWS and failing @nytimes and either run it correctly or let it fold with dignity!",
+                "ts": 1485694800,
+                "twitterid": "825690087857995776"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "I will be interviewed by @TheBrodyFile on @CBNNews tonight at 11pm. Enjoy!",
+                "ts": 1485733140,
+                "twitterid": "825850987348914184"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Only 109 people out of 325,000 were detained and held for questioning. Big problems at airports were caused by Delta computer outage,.....",
+                "ts": 1485778560,
+                "twitterid": "826041397232943104"
+            }
+        ],
+        "month": "2017-01",
+        "namedentity": [
+            "CNN",
+            "White House\uc5d0\uc11c",
+            "Thr",
+            "FAKE NEWS",
+            "ABCWorldNews",
+            "DavidMuir",
+            "White House",
+            "Tonight",
+            "David Muir",
+            "Interview",
+            "Delta",
+            "POTUS",
+            "Enjoy",
+            "FoxNews"
+        ],
+        "theme": [
+            "interviewed",
+            "Enjoy",
+            "news",
+            "tonight",
+            "ABC",
+            "FAKE",
+            "nytimes"
+        ]
+    },
+    {
+        "articles": [
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
                 "title": "Thank you for joining us at the Lincoln Memorial tonight- a very special evening! Together, we are going to MAKE AMERICA GREAT AGAIN!",
                 "ts": 1484872800,
                 "twitterid": "822242449053614081"
@@ -18,16 +118,52 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "If Chicago doesn't fix the horrible carnage\" going on, 228 shootings in 2017 with 42 killings (up 24% from 2016), I will send in the Feds!\"",
-                "ts": 1485311100,
-                "twitterid": "824080766288228352"
+                "title": "It all begins today! I will see you at 11:00 A.M. for the swearing-in. THE MOVEMENT CONTINUES - THE WORK BEGINS!",
+                "ts": 1484915460,
+                "twitterid": "822421390125043713"
             },
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "I will be making my Supreme Court pick on Thursday of next week.Thank you!",
-                "ts": 1485346620,
-                "twitterid": "824229586091307008"
+                "title": "Today we are not merely transferring power from one Administration to another, or from one party to another \u2013 but we are transferring...",
+                "ts": 1484934660,
+                "twitterid": "822501803615014918"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "The forgotten men and women of our country will be forgotten no longer. From this moment on, it\u2019s going to be #AmericaFirst",
+                "ts": 1484934840,
+                "twitterid": "822502450007515137"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Great meeting with automobile industry leaders at the @WhiteHouse this morning. Together, we will #MAGA!",
+                "ts": 1485277440,
+                "twitterid": "823939422743830528"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Great meeting with Ford CEO Mark Fields and General Motors CEO Mary Barra at the @WhiteHouse today.",
+                "ts": 1485305160,
+                "twitterid": "824055927200423936"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Beginning today, the United States of America gets back control of its borders. Full speech from today @DHSgov: \u00a0",
+                "ts": 1485388980,
+                "twitterid": "824407390674157568",
+                "url": "http://bit.ly/2jSZomhDHS"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Spoke at the Congressional @GOP Retreat in Philadelphia, PA. this afternoon w/ @VP, @SenateMajLdr, @SpeakerRyan. Thank you for your support!",
+                "ts": 1485458460,
+                "twitterid": "824698743630995457"
             },
             {
                 "date_month": "2017-01",
@@ -39,37 +175,17 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "I promise that our administration will ALWAYS have your back. We will ALWAYS be with you!",
-                "ts": 1485560760,
-                "twitterid": "825127844066054144"
+                "title": ". @VP Mike Pence will be speaking at today's #MarchForLife -- You have our full support!\u00a0\u2026",
+                "ts": 1485534600,
+                "twitterid": "825018149397463040",
+                "url": "https://twitter.com/vp/status/824757313441525761"
             },
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "Christians in the Middle-East have been executed in large numbers. We cannot allow this horror to continue!",
-                "ts": 1485702180,
-                "twitterid": "825721153142521858"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Where was all the outrage from Democrats and the opposition party (the media) when our jobs were fleeing our country?",
-                "ts": 1485786180,
-                "twitterid": "826073437735100418"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "The Democrats are delaying my cabinet picks for purely political reasons. They have nothing going but to obstruct. Now have an Obama A.G.",
-                "ts": 1485823500,
-                "twitterid": "826229971584708608"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Nancy Pelosi and Fake Tears Chuck Schumer held a rally at the steps of The Supreme Court and mic did not work (a mess)-just like Dem party!",
-                "ts": 1485861660,
-                "twitterid": "826390034693623809"
+                "title": "Today, we remember the crew of the Space Shuttle Challenger, 31 years later. #NeverForget",
+                "ts": 1485618120,
+                "twitterid": "825368580325773312"
             },
             {
                 "date_month": "2017-01",
@@ -81,34 +197,31 @@
         ],
         "month": "2017-01",
         "namedentity": [
-            "Lincoln Memorial",
-            "Fake Tears Chuck Schumer",
-            "GREAT",
-            "Supreme Court",
-            "Democrats",
-            "AMERICA",
-            "Chicago",
+            "AmericaFirst Great",
+            "MOVEMENT",
+            "MAGA",
+            "United States",
+            "Full",
+            "Philadelphia",
             "MarchForLife",
+            "WhiteHouse",
+            "Lincoln Memorial",
+            "WORK BEGINS",
             "Washington",
-            "ALWAYS",
-            "Obama",
+            "AMERICA",
+            "CONTINUES",
+            "Space Shuttle Challenger",
+            "Ford",
+            "GREAT",
             "MAKE"
         ],
         "theme": [
-            "Democrats",
-            "going",
+            "Today",
+            "full",
+            "support",
             "Thank",
-            "Cabinet",
-            "Court",
-            "evening",
-            "party",
-            "picks",
-            "Supreme",
-            "us",
-            "wonder",
-            "work",
-            "administration",
-            "allow"
+            "America",
+            "Beginning"
         ]
     },
     {
@@ -169,30 +282,6 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": ". @VP Mike Pence will be speaking at today's #MarchForLife -- You have our full support!\u00a0\u2026",
-                "ts": 1485534600,
-                "twitterid": "825018149397463040",
-                "url": "https://twitter.com/vp/status/824757313441525761"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Statement on International Holocaust Remembrance Day:\u00a0\u2026",
-                "ts": 1485548400,
-                "twitterid": "825075972659613696",
-                "url": "https://www.whitehouse.gov/the-press-office/2017/01/27/statement-president-international-holocaust-remembrance-day"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Statement Regarding Recent Executive Order Concerning Extreme Vetting: \u00a0\u2026",
-                "ts": 1485732480,
-                "twitterid": "825848204633731074",
-                "url": "https://www.facebook.com/DonaldTrump/posts/10158567643610725"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
                 "title": "The American dream is back. We\u2019re going to create an environment for small business like we haven\u2019t had in many, many decades!",
                 "ts": 1485810420,
                 "twitterid": "826175120238604288"
@@ -208,9 +297,8 @@
         ],
         "month": "2017-01",
         "namedentity": [
-            "International Holocaust Remembrance",
-            "American People",
             "Strong",
+            "American People",
             "WhiteHouse",
             "Washington",
             "HIRE AMERICAN"
@@ -222,25 +310,11 @@
             "live",
             "people",
             "small",
-            "Statement",
-            "business",
-            "BUY",
-            "city",
-            "Concerning",
-            "create",
-            "dade",
-            "Day"
+            "business"
         ]
     },
     {
         "articles": [
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Today we are not merely transferring power from one Administration to another, or from one party to another \u2013 but we are transferring...",
-                "ts": 1484934660,
-                "twitterid": "822501803615014918"
-            },
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
@@ -251,16 +325,9 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "January 20th 2017, will be remembered as the day the people became the rulers of this nation again.",
-                "ts": 1484934780,
-                "twitterid": "822502270503972872"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "The forgotten men and women of our country will be forgotten no longer. From this moment on, it\u2019s going to be #AmericaFirst",
+                "title": "We will bring back our jobs. We will bring back our borders. We will bring back our wealth - and we will bring back our dreams!",
                 "ts": 1484934840,
-                "twitterid": "822502450007515137"
+                "twitterid": "822502601304526848"
             },
             {
                 "date_month": "2017-01",
@@ -279,16 +346,16 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "Wow, television ratings just out: 31 million people watched the Inauguration, 11 million more than the very good ratings from 4 years ago!",
-                "ts": 1485089460,
-                "twitterid": "823151124815507460"
+                "title": "Peaceful protests are a hallmark of our democracy. Even if I don't always agree, I recognize the rights of people to express their views.",
+                "ts": 1485094980,
+                "twitterid": "823174199036542980"
             },
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "Peaceful protests are a hallmark of our democracy. Even if I don't always agree, I recognize the rights of people to express their views.",
-                "ts": 1485094980,
-                "twitterid": "823174199036542980"
+                "title": "Busy week planned with a heavy focus on jobs and national security. Top executives coming in at 9:00 A.M. to talk manufacturing in America.",
+                "ts": 1485171480,
+                "twitterid": "823495059010109440"
             },
             {
                 "date_month": "2017-01",
@@ -307,16 +374,16 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "Great meeting with automobile industry leaders at the @WhiteHouse this morning. Together, we will #MAGA!",
-                "ts": 1485277440,
-                "twitterid": "823939422743830528"
+                "title": "Signing orders to move forward with the construction of the Keystone XL and Dakota Access pipelines in the Oval Office. \u2013 The Oval Office\uc5d0\uc11c",
+                "ts": 1485280140,
+                "twitterid": "823950814163140609"
             },
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "Big day planned on NATIONAL SECURITY tomorrow. Among many other things, we will build the wall!",
-                "ts": 1485311820,
-                "twitterid": "824083821889015809"
+                "title": "If Chicago doesn't fix the horrible carnage\" going on, 228 shootings in 2017 with 42 killings (up 24% from 2016), I will send in the Feds!\"",
+                "ts": 1485311100,
+                "twitterid": "824080766288228352"
             },
             {
                 "date_month": "2017-01",
@@ -335,6 +402,13 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
+                "title": "I will be making my Supreme Court pick on Thursday of next week.Thank you!",
+                "ts": 1485346620,
+                "twitterid": "824229586091307008"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
                 "title": "Ungrateful TRAITOR Chelsea Manning, who should never have been released from prison, is now calling President Obama a weak leader. Terrible!",
                 "ts": 1485428640,
                 "twitterid": "824573698774601729"
@@ -342,243 +416,16 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "of jobs and companies lost. If Mexico is unwilling to pay for the badly needed wall, then it would be better to cancel the upcoming meeting.",
-                "ts": 1485438900,
-                "twitterid": "824616644370714627"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Today, we remember the crew of the Space Shuttle Challenger, 31 years later. #NeverForget",
-                "ts": 1485618120,
-                "twitterid": "825368580325773312"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Our country needs strong borders and extreme vetting, NOW. Look what is happening all over Europe and, indeed, the world - a horrible mess!",
-                "ts": 1485695280,
-                "twitterid": "825692045532618753"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "...Senators should focus their energies on ISIS, illegal immigration and border security instead of always looking to start World War III.",
-                "ts": 1485726540,
-                "twitterid": "825823217025691648"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Only 109 people out of 325,000 were detained and held for questioning. Big problems at airports were caused by Delta computer outage,.....",
-                "ts": 1485778560,
-                "twitterid": "826041397232943104"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Hope you like my nomination of Judge Neil Gorsuch for the United States Supreme Court. He is a good and brilliant man, respected by all.",
-                "ts": 1485920700,
-                "twitterid": "826637556787838976"
-            }
-        ],
-        "month": "2017-01",
-        "namedentity": [
-            "Celebs",
-            "Ungrateful",
-            "CIA Headquarters",
-            "VOTER FRAUD",
-            "Watched",
-            "Delta",
-            "ISIS",
-            "Great",
-            "WIN",
-            "Europe",
-            "TRAITOR Chelsea Manning",
-            "Wow",
-            "Space Shuttle Challenger",
-            "MAGA",
-            "NATIONAL",
-            "AmericaFirst",
-            "Wall",
-            "Mexico",
-            "United States Supreme Court",
-            "NOW",
-            "WhiteHouse"
-        ],
-        "theme": [
-            "people",
-            "meeting",
-            "voting",
-            "wall",
-            "yesterday",
-            "always",
-            "automobile",
-            "badly",
-            "Big",
-            "border",
-            "caused",
-            "country",
-            "day",
-            "even",
-            "good"
-        ]
-    },
-    {
-        "articles": [
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "A fantastic day and evening in Washington D.C.Thank you to @FoxNews and so many other news outlets for the GREAT reviews of the speech!",
-                "ts": 1484999580,
-                "twitterid": "822774162011910144"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Congratulations to @FoxNews for being number one in inauguration ratings. They were many times higher than FAKE NEWS @CNN - public is smart!",
-                "ts": 1485310560,
-                "twitterid": "824078417213747200"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "I will be interviewed by @DavidMuir tonight at 10 o'clock on @ABC. Will be my first interview from the White House. Enjoy! \u2013 The White House\uc5d0\uc11c",
-                "ts": 1485381900,
-                "twitterid": "824377804590563339"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": " @romoabcnews: . @DavidMuir first @POTUS interview since taking office. Tonight on @ABCWorldNews @ABC2020 tonight. ",
-                "ts": 1485398700,
-                "twitterid": "824448156935081984"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Interview with David Muir of @ABC News in 10 minutes. Enjoy!",
-                "ts": 1485398880,
-                "twitterid": "824448880993509376"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Spoke at the Congressional @GOP Retreat in Philadelphia, PA. this afternoon w/ @VP, @SenateMajLdr, @SpeakerRyan. Thank you for your support!",
-                "ts": 1485458460,
-                "twitterid": "824698743630995457"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Will be interviewed by @SeanHannity on @FoxNews at 10:00pm tonight. Enjoy!",
-                "ts": 1485474300,
-                "twitterid": "824765229527605248"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Thr coverage about me in the @nytimes and the @washingtonpost gas been so false and angry that the times actually apologized to its.....",
-                "ts": 1485608880,
-                "twitterid": "825329757646618624"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "I will be interviewed by @TheBrodyFile on @CBNNews tonight at 11pm. Enjoy!",
-                "ts": 1485733140,
-                "twitterid": "825850987348914184"
-            }
-        ],
-        "month": "2017-01",
-        "namedentity": [
-            "Thr",
-            "POTUS",
-            "Philadelphia",
-            "FAKE",
-            "GREAT",
-            "DavidMuir",
-            "Spoke",
-            "White House\uc5d0\uc11c",
-            "White House",
-            "Tonight",
-            "ABCWorldNews",
-            "Washington",
-            "David Muir",
-            "FoxNews",
-            "Interview",
-            "CNN",
-            "Enjoy"
-        ],
-        "theme": [
-            "interviewed",
-            "Enjoy",
-            "tonight",
-            "ABC",
-            "FoxNews",
-            "news",
-            "DavidMuir",
-            "first",
-            "many",
-            "pm",
-            "Thank",
-            "times",
-            "ABCWorldNews",
-            "actually",
-            "afternoon"
-        ]
-    },
-    {
-        "articles": [
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "It all begins today! I will see you at 11:00 A.M. for the swearing-in. THE MOVEMENT CONTINUES - THE WORK BEGINS!",
-                "ts": 1484915460,
-                "twitterid": "822421390125043713"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "We will bring back our jobs. We will bring back our borders. We will bring back our wealth - and we will bring back our dreams!",
-                "ts": 1484934840,
-                "twitterid": "822502601304526848"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Busy week planned with a heavy focus on jobs and national security. Top executives coming in at 9:00 A.M. to talk manufacturing in America.",
-                "ts": 1485171480,
-                "twitterid": "823495059010109440"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Signing orders to move forward with the construction of the Keystone XL and Dakota Access pipelines in the Oval Office. \u2013 The Oval Office\uc5d0\uc11c",
-                "ts": 1485280140,
-                "twitterid": "823950814163140609"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Great meeting with Ford CEO Mark Fields and General Motors CEO Mary Barra at the @WhiteHouse today.",
-                "ts": 1485305160,
-                "twitterid": "824055927200423936"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
-                "title": "Beginning today, the United States of America gets back control of its borders. Full speech from today @DHSgov: \u00a0",
-                "ts": 1485388980,
-                "twitterid": "824407390674157568",
-                "url": "http://bit.ly/2jSZomhDHS"
-            },
-            {
-                "date_month": "2017-01",
-                "origin": "realdonaldtrump",
                 "title": "The U.S. has a 60 billion dollar trade deficit with Mexico. It has been a one-sided deal from the beginning of NAFTA with massive numbers...",
                 "ts": 1485438660,
                 "twitterid": "824615820391305216"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "of jobs and companies lost. If Mexico is unwilling to pay for the badly needed wall, then it would be better to cancel the upcoming meeting.",
+                "ts": 1485438900,
+                "twitterid": "824616644370714627"
             },
             {
                 "date_month": "2017-01",
@@ -597,9 +444,9 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "The failing @nytimes has been wrong about me from the very beginning. Said I would lose the primaries, then the general election. FAKE NEWS!",
-                "ts": 1485608640,
-                "twitterid": "825328817833123840"
+                "title": "I promise that our administration will ALWAYS have your back. We will ALWAYS be with you!",
+                "ts": 1485560760,
+                "twitterid": "825127844066054144"
             },
             {
                 "date_month": "2017-01",
@@ -611,16 +458,23 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "Somebody with aptitude and conviction should buy the FAKE NEWS and failing @nytimes and either run it correctly or let it fold with dignity!",
-                "ts": 1485694800,
-                "twitterid": "825690087857995776"
+                "title": "Our country needs strong borders and extreme vetting, NOW. Look what is happening all over Europe and, indeed, the world - a horrible mess!",
+                "ts": 1485695280,
+                "twitterid": "825692045532618753"
             },
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
-                "title": "The joint statement of former presidential candidates John McCain & Lindsey Graham is wrong - they are sadly weak on immigration. The two...",
-                "ts": 1485726300,
-                "twitterid": "825822320128303110"
+                "title": "Christians in the Middle-East have been executed in large numbers. We cannot allow this horror to continue!",
+                "ts": 1485702180,
+                "twitterid": "825721153142521858"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "...Senators should focus their energies on ISIS, illegal immigration and border security instead of always looking to start World War III.",
+                "ts": 1485726540,
+                "twitterid": "825823217025691648"
             },
             {
                 "date_month": "2017-01",
@@ -646,55 +500,157 @@
             {
                 "date_month": "2017-01",
                 "origin": "realdonaldtrump",
+                "title": "Where was all the outrage from Democrats and the opposition party (the media) when our jobs were fleeing our country?",
+                "ts": 1485786180,
+                "twitterid": "826073437735100418"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "The Democrats are delaying my cabinet picks for purely political reasons. They have nothing going but to obstruct. Now have an Obama A.G.",
+                "ts": 1485823500,
+                "twitterid": "826229971584708608"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Nancy Pelosi and Fake Tears Chuck Schumer held a rally at the steps of The Supreme Court and mic did not work (a mess)-just like Dem party!",
+                "ts": 1485861660,
+                "twitterid": "826390034693623809"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
                 "title": "Getting ready to deliver a VERY IMPORTANT DECISION! 8:00 P.M.",
                 "ts": 1485909060,
                 "twitterid": "826588658304217088"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Hope you like my nomination of Judge Neil Gorsuch for the United States Supreme Court. He is a good and brilliant man, respected by all.",
+                "ts": 1485920700,
+                "twitterid": "826637556787838976"
             }
         ],
         "month": "2017-01",
         "namedentity": [
-            "John McCain",
-            "Gregg Phillips",
-            "Full",
-            "Ford",
-            "MOVEMENT",
-            "Oval Office",
-            "U.S.",
-            "United States",
-            "WORK BEGINS",
-            "Oval Office\uc5d0\uc11c Great",
-            "America",
-            "Lindsey Graham",
-            "DISHONEST",
-            "FAKE NEWS",
-            "VoteStand",
-            "Keystone XL",
-            "Massive",
-            "VERY",
-            "Mexico",
-            "United States Supreme Court",
-            "NOW",
+            "CIA Headquarters",
             "NAFTA",
-            "WhiteHouse",
+            "Watched",
+            "Oval Office",
+            "WIN",
+            "Ungrateful",
+            "Celebs",
+            "Wall",
+            "Gregg Phillips",
+            "ALWAYS",
+            "United States Supreme Court",
+            "Obama",
+            "VoteStand",
+            "America",
             "Dakota Access",
-            "CONTINUES"
+            "Supreme Court",
+            "VOTER FRAUD",
+            "DISHONEST",
+            "Oval Office\uc5d0\uc11c If Chicago",
+            "ISIS",
+            "TRAITOR Chelsea Manning",
+            "Massive",
+            "Europe",
+            "VERY",
+            "Fake Tears Chuck Schumer",
+            "U.S.",
+            "Keystone XL",
+            "NOW",
+            "Democrats",
+            "Mexico"
         ],
         "theme": [
-            "beginning",
+            "jobs",
             "border",
-            "today",
-            "wrong",
-            "America",
-            "announced",
-            "back",
-            "changed",
             "country",
-            "DECISION",
-            "deficits",
-            "failing",
-            "FAKE",
-            "forward",
-            "general"
+            "Court",
+            "people",
+            "Supreme",
+            "votes"
+        ]
+    },
+    {
+        "articles": [
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "January 20th 2017, will be remembered as the day the people became the rulers of this nation again.",
+                "ts": 1484934780,
+                "twitterid": "822502270503972872"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "A fantastic day and evening in Washington D.C.Thank you to @FoxNews and so many other news outlets for the GREAT reviews of the speech!",
+                "ts": 1484999580,
+                "twitterid": "822774162011910144"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Wow, television ratings just out: 31 million people watched the Inauguration, 11 million more than the very good ratings from 4 years ago!",
+                "ts": 1485089460,
+                "twitterid": "823151124815507460"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Big day planned on NATIONAL SECURITY tomorrow. Among many other things, we will build the wall!",
+                "ts": 1485311820,
+                "twitterid": "824083821889015809"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Statement on International Holocaust Remembrance Day:\u00a0\u2026",
+                "ts": 1485548400,
+                "twitterid": "825075972659613696",
+                "url": "https://www.whitehouse.gov/the-press-office/2017/01/27/statement-president-international-holocaust-remembrance-day"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "The joint statement of former presidential candidates John McCain & Lindsey Graham is wrong - they are sadly weak on immigration. The two...",
+                "ts": 1485726300,
+                "twitterid": "825822320128303110"
+            },
+            {
+                "date_month": "2017-01",
+                "origin": "realdonaldtrump",
+                "title": "Statement Regarding Recent Executive Order Concerning Extreme Vetting: \u00a0\u2026",
+                "ts": 1485732480,
+                "twitterid": "825848204633731074",
+                "url": "https://www.facebook.com/DonaldTrump/posts/10158567643610725"
+            }
+        ],
+        "month": "2017-01",
+        "namedentity": [
+            "Recent Executive Order",
+            "John McCain",
+            "NATIONAL",
+            "Wow",
+            "Washington",
+            "Lindsey Graham",
+            "Statement",
+            "FoxNews",
+            "GREAT",
+            "International Holocaust Remembrance"
+        ],
+        "theme": [
+            "Day",
+            "Statement",
+            "many",
+            "NATIONAL",
+            "people",
+            "ago",
+            "Among"
         ]
     }
 ]

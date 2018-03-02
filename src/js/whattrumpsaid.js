@@ -82,7 +82,7 @@ export function init_render() {
             "months_string": ["jan2018"]
         }
     ];
-    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12"];
+    var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12", "2018-01"];
 
     if (getpathparam('type') == '' && getpathparam('type') !== null) window.history.replaceState({}, null, '/whattrumpsaid/');
 
@@ -109,6 +109,16 @@ const getpathparam = (name, url) => {
     var regex = new RegExp( regexS );
     var results = regex.exec( url );
     return results == null ? null : results[1];
+}
+
+window.onpopstate = function() {
+    if (window.innerDocClick) {
+        window.innerDocClick = false;
+    } else {
+        if (window.location.pathname == '/whattrumpsaid/' || window.location.pathname == '/whattrumpsaid') {
+            page_go_back();
+        }
+    }
 }
 
 const render_list = (moindex, opt) => {
@@ -173,8 +183,18 @@ const render_list = (moindex, opt) => {
     });
 }
 
+const page_go_back = () => {
+    var opened_content = document.querySelector('.whattrumpsaid-analysis-data.selected');
+    if (opened_content !== null) {
+        opened_content.querySelector('.whattrumpsaid-analysis-data-action-close').click();
+    }
+}
+
 const base_events = () => {
     socialLikes(document.querySelector('.whattrumpsaid-share'));
+    document.querySelector('.whattrumpsaid-share .email').addEventListener('click', function (e) {
+        window.location.href = "mailto:?body=Hey, check this story: " + window.location.href;
+    });
 
     document.querySelector('.whattrumpsaid-hero .whattrumpsaid-action-details').addEventListener('click', function (e) {
         if (!document.querySelector('.whattrumpsaid-details').classList.contains('opened'))
@@ -213,7 +233,7 @@ const render_data = (month) => {
         dataset_url = '//thisisallabout.com/dataset/trumptweeted/' + month + '.json';
     }
 
-    window.history.replaceState({}, null, '/whattrumpsaid/' + month + '/');
+    window.history.pushState({}, null, '/whattrumpsaid/' + month + '/');
     const base_markup = () => html`
         <div class="whattrumpsaid-analysis-data-action-close-pre">
             <div class="icon"></div>
@@ -227,7 +247,7 @@ const render_data = (month) => {
         document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
         document.documentElement.className = '';
         document.querySelector('.minion-dataload').setAttribute('status', '');
-        window.history.replaceState({}, null, '/whattrumpsaid/');
+        window.history.pushState({}, null, '/whattrumpsaid/');
     });
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -323,13 +343,16 @@ const render_data = (month) => {
         `;
         
         render(base_markup(), document.querySelector('.whattrumpsaid-analysis-data[banana-month="' + trump_data[0].month + '"] .whattrumpsaid-analysis-data-wrapper'));
-        //https://upload.wikimedia.org/wikipedia/commons/2/28/President_Donald_J._Trump’s_Visit_to_Springfield%2C_Missouri.jpg
+
+        targetnode.querySelector('.whattrumpsaid-analysis-data-action-share .email').addEventListener('click', function (e) {
+            window.location.href = "mailto:?body=Hey, check this story: " + window.location.href;
+        });
 
         targetnode.querySelector('.whattrumpsaid-analysis-data-action-close').addEventListener('click', function (e) {
             getParents(this, '.whattrumpsaid-analysis-data')[0].classList.remove('selected');
             document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
             document.documentElement.className = '';
-            window.history.replaceState({}, null, '/whattrumpsaid/');
+            window.history.pushState({}, null, '/whattrumpsaid/');
         });
 
         socialLikes(targetnode.querySelector('.whattrumpsaid-analysis-data-action-share'));

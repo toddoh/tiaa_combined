@@ -26,13 +26,17 @@ app.use(function (req, res, next) {
     var ua = req.headers['user-agent'];
     var browserName = parser.setUA(ua).getBrowser().name;
     var fullBrowserVersion = parser.setUA(ua).getBrowser().version;
-    var browserVersion = fullBrowserVersion.split(".",1).toString();
-    var browserVersionNumber = Number(browserVersion);
+    if (fullBrowserVersion) {
+        var browserVersion = fullBrowserVersion.split(".",1).toString();
+        var browserVersionNumber = Number(browserVersion);
 
-    if (browserName == 'IE' && browserVersion <= 11) {
-        res.sendFile(path.join(__dirname, '/notice/index.html'));
-    } else if (browserName == 'Safari' && browserVersion <= 9) {
-        res.sendFile(path.join(__dirname, '/notice/index.html'));
+        if (browserName == 'IE' && browserVersion <= 11) {
+            res.sendFile(path.join(__dirname, '/notice/index.html'));
+        } else if (browserName == 'Safari' && browserVersion <= 9) {
+            res.sendFile(path.join(__dirname, '/notice/index.html'));
+        } else {
+            next();
+        }
     } else {
         next();
     }

@@ -1,4 +1,4 @@
-import styles from '../../styles/editorialfloor/core.css';
+import styles from '../../styles/editorialfloor/dataeditor.css';
 import {html, render} from 'lit-html';
 import moment from 'moment';
 
