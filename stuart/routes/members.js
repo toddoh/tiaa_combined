@@ -123,6 +123,36 @@ router.route('/')
 		});
 	});
 
+router.route('/:id').get(authUser, function(req, res, next){
+		var userid = req.params.id;
+
+		var collection = db.collection('editorial_members');
+		collection.count(function(err, total) {
+			if (err) {
+				return res.sysErr("DB_ERR", err);
+			} else {
+				if (total > 0) {
+					collection.find({_id: ObjectID(userid)}).toArray(function (err, result) {
+						if (err) {
+							return res.sysErr("DB_ERR", err);
+						}
+
+						if (!result.length) {
+							return res.clientErr("INVALID_SUBSCRIBER_CREDENTIAL");
+						} else {
+							var response = {};
+							response.username = result[0].username;
+
+							res.json(response);
+						}
+					});
+				} else {
+					return res.clientErr("NO_SUBSCRIBERS");
+				}
+			}
+		});
+	});
+
 router.route('/edit')
 	.post(authUser, function(req, res, next){
 		var usrname = req.body.username,
