@@ -60,7 +60,7 @@ router.route('/article/edit').post(authUser, function(req, res, next){
 
     var response = {};
 
-    if (!section || !title || !content || !reviewstatus)
+    if (!d_section || !d_title || !d_content || !d_reviewstatus)
         return res.clientErr("FILLOUT_ALL_CONTENTS");
 
     var collection = db.collection('editorial_track');
@@ -79,7 +79,7 @@ router.route('/article/edit').post(authUser, function(req, res, next){
             
             var revObjectid = (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
             
-            var d_revision_history = result[0].content_history;
+            var d_revision_history = result[0].revision_history;
             var d_rev_item = {
                 "revision_id": revObjectid,
                 "revision_item": d_content,

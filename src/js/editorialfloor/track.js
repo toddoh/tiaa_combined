@@ -3,6 +3,7 @@ import json_styles from '../../../node_modules/jsoneditor/dist/jsoneditor.min.cs
 import {html, render} from 'lit-html';
 import moment from 'moment';
 import JSONEditor from 'jsoneditor';
+import _ from 'lodash';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='Editorial /track';
@@ -10,7 +11,7 @@ export function init_render() {
     document.body.classList.add('editorial');
 
     const hero_markup = () => html`
-    <div class="editorial-prepare">
+    <div class="editorial-tracker">
         <div class="editorial-herotext">
             <p class="hero1">Editorial /tracker</p>
             <p class="hero1">(track edits/revise contents)</p>
@@ -128,7 +129,7 @@ export function init_render() {
             <div class="console-edithistory-list">
             </div>
         </div>
-        <div class="console-edit-action-cancel">
+        <div class="console-edithistory-action-cancel">
             <div class="icon"></div>
         </div>
     </div>
@@ -148,33 +149,27 @@ const attach_events = () => {
         document.querySelector('.editorial-track-console-add').classList.add('opened');
     });
 
-    var reviewstatus = document.querySelectorAll('.editorial-track-console-add .console-add-reviewstatus div');
-    for (var i=0; i < reviewstatus.length; i++) {
-        reviewstatus[i].addEventListener('click', function (e) {
-            if (!this.classList.contains('selected')) {
-                Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-add .console-add-reviewstatus div'), function(el, index, array) {
-                    el.classList.remove('selected');
-                });
-                this.classList.add('selected');
-            } else {
-                this.classList.remove('selected');
-            }
-        });
-    }
+    $('.editorial-track-console-add .console-add-reviewstatus div').on('click', function (e) {
+        if (!this.classList.contains('selected')) {
+            Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-add .console-add-reviewstatus div'), function(el, index, array) {
+                el.classList.remove('selected');
+            });
+            this.classList.add('selected');
+        } else {
+            this.classList.remove('selected');
+        }
+    });
 
-    var datatype = document.querySelectorAll('.editorial-track-console-add .console-add-datatype div');
-    for (var i=0; i < datatype.length; i++) {
-        datatype[i].addEventListener('click', function (e) {
-            if (!this.classList.contains('selected')) {
-                Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-add .console-add-datatype div'), function(el, index, array) {
-                    el.classList.remove('selected');
-                });
-                this.classList.add('selected');
-            } else {
-                this.classList.remove('selected');
-            }
-        });
-    }
+    $('.editorial-track-console-add .console-add-datatype div').on('click', function (e) {
+        if (!this.classList.contains('selected')) {
+            Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-add .console-add-datatype div'), function(el, index, array) {
+                el.classList.remove('selected');
+            });
+            this.classList.add('selected');
+        } else {
+            this.classList.remove('selected');
+        }
+    });
 
     document.querySelector('.editorial-track-console-add .console-add-action-cancel').addEventListener('click', function (e) {
         document.querySelector('.editorial-track-console-add').classList.remove('opened');
@@ -187,25 +182,33 @@ const attach_events = () => {
     document.querySelector('.editorial-track-console-edit .console-edit-action-cancel').addEventListener('click', function (e) {
         document.querySelector('.editorial-track-console-edit').classList.remove('opened');
         document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', '');
+        const editor_textmarkup = () => html`
+        `;
+        render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
     });
 
     document.querySelector('.editorial-track-console-edit .console-edit-action-send').addEventListener('click', function (e) {
         update_trackerdata();
     });
 
-    var edit_reviewstatus = document.querySelectorAll('.editorial-track-console-edit .console-edit-reviewstatus div');
-    for (var i=0; i < edit_reviewstatus.length; i++) {
-        edit_reviewstatus[i].addEventListener('click', function (e) {
-            if (!this.classList.contains('selected')) {
-                Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-edit .console-edit-reviewstatus div'), function(el, index, array) {
-                    el.classList.remove('selected');
-                });
-                this.classList.add('selected');
-            } else {
-                this.classList.remove('selected');
-            }
-        });
-    }
+    document.querySelector('.editorial-track-console-edithistory .console-edithistory-action-cancel').addEventListener('click', function (e) {
+        document.querySelector('.editorial-track-console-edithistory').classList.remove('opened');
+        const history_json_markup = () => html`
+        `;
+
+        render(history_json_markup(), document.querySelector('.editorial-track-console-edithistory .console-edithistory-list'));
+    });
+
+    $('.editorial-track-console-edit .console-edit-reviewstatus div').on('click', function (e) {
+        if (!this.classList.contains('selected')) {
+            Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-edit .console-edit-reviewstatus div'), function(el, index, array) {
+                el.classList.remove('selected');
+            });
+            this.classList.add('selected');
+        } else {
+            this.classList.remove('selected');
+        }
+    });
 }
 
 const post_trackerdata = () => {
@@ -229,7 +232,7 @@ const post_trackerdata = () => {
 
     var api_header = {
         "Content-Type": 'application/json',
-        "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWE5N2VkNjNkMjFlMzJiMTllZTRiN2MyIiwidXNlcm5hbWUiOiJ0b2RkIn0sImlhdCI6MTUxOTkwNjE0NywiZXhwIjoxNTgyOTc4MTQ3fQ.NWZao76TNX5-k8l2ynDa4c2FL9ibAXt3YcwIqzZNSH8"
+        "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
     };
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -261,7 +264,7 @@ const load_trackerdata = () => {
     }
 
     var api_header = {
-        "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWE5N2VkNjNkMjFlMzJiMTllZTRiN2MyIiwidXNlcm5hbWUiOiJ0b2RkIn0sImlhdCI6MTUxOTkwNjE0NywiZXhwIjoxNTgyOTc4MTQ3fQ.NWZao76TNX5-k8l2ynDa4c2FL9ibAXt3YcwIqzZNSH8"
+        "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -269,17 +272,18 @@ const load_trackerdata = () => {
         method: "GET",
         headers: api_header
       }).then(r => r.json()).then(function(response) {
+        var reversedresponse = response.reverse();
         const data_markup = () => html`
-        ${response.length <= 0 ? html`
+        ${reversedresponse.length <= 0 ? html`
             <p class="no-track-item">No tracker items yet</p>
         ` : html`
             <ul class="track-items">
-                ${response.map((dset) => html`
+                ${reversedresponse.map((dset) => html`
                 <li class="track-item-obj" banana-id="${dset._id}">
                     <div class="item-info">
                         <p class="item-title">${dset.title}</p>
                         <p class="item-section">${dset.section}</p>
-                        <p class="item-lasteditor" banana-id="${dset.edithistory[dset.edithistory.length - 1]}">...</p>
+                        <p class="item-lasteditor" banana-id="${dset.revision_history[dset.revision_history.length - 1].revision_user}">...</p>
                         <p class="item-reviewstatus" banana-id="${dset.reviewstatus}">${dset.reviewstatus}</p>
                     </div>
                     <div class="item-actions">
@@ -316,7 +320,7 @@ const get_editor_username = (element, id) => {
     }
 
     var api_header = {
-        "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWE5N2VkNjNkMjFlMzJiMTllZTRiN2MyIiwidXNlcm5hbWUiOiJ0b2RkIn0sImlhdCI6MTUxOTkwNjE0NywiZXhwIjoxNTgyOTc4MTQ3fQ.NWZao76TNX5-k8l2ynDa4c2FL9ibAXt3YcwIqzZNSH8"
+        "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -348,19 +352,17 @@ const update_trackerdata = () => {
         tracker_content = document.querySelector('.editorial-track-console-edit #consoleedit-content').value;
     }
 
-    console.log(tracker_content);
-    return;
-
     var api_post_data = {
         "title": document.querySelector('.editorial-track-console-edit #consoleedit-title').value,
         "section": document.querySelector('.editorial-track-console-edit #consoleedit-section').value,
         "content": tracker_content,
-        "reviewstatus": tracker_reviewstatus
+        "reviewstatus": tracker_reviewstatus,
+        "articleid": document.querySelector('.editorial-track-console-edit').getAttribute('banana-id')
     };
 
     var api_header = {
         "Content-Type": 'application/json',
-        "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWE5N2VkNjNkMjFlMzJiMTllZTRiN2MyIiwidXNlcm5hbWUiOiJ0b2RkIn0sImlhdCI6MTUxOTkwNjE0NywiZXhwIjoxNTgyOTc4MTQ3fQ.NWZao76TNX5-k8l2ynDa4c2FL9ibAXt3YcwIqzZNSH8"
+        "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
     };
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -374,10 +376,10 @@ const update_trackerdata = () => {
 
         document.querySelector('.editorial-track-console-edit #consoleedit-title').value = '';
         document.querySelector('.editorial-track-console-edit #consoleedit-section').value = '';
-        var editorelement = document.querySelector('.editorial-track-console-edit .console-edit-editor');
-        while (editorelement.firstChild) {
-            editorelement.removeChild(editorelement.firstChild);
-        }
+        document.querySelector('.editorial-track-console-edit').setAttribute('banana-id', '');
+        const editor_textmarkup = () => html`
+        `;
+        render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
         document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected').classList.remove('selected');
         document.querySelector('.editorial-track-console-edit').classList.remove('opened');
         load_trackerdata();
@@ -385,185 +387,154 @@ const update_trackerdata = () => {
     .catch(e => alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + e))
 }
 
-var consoleedit_editorelement = null;
 const attach_consolelist_events = () => {
-    var trackitem_action_del = document.querySelectorAll('.editorial-track-console .track-item-obj .action-delitem');
-    for (var i=0; i < trackitem_action_del.length; i++) {
-        trackitem_action_del[i].addEventListener('click', function (e) {
-            var item = getParents(this, '.track-item-obj')[0];
-            var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
-            var api_url;
-            if (process.env.NODE_ENV == 'dev') {
-                api_url = '//localhost:17502/track/article/' + itemid;
-            } else {
-                api_url = '//thisisallabout.com:17502/track/article/' + itemid;
-            }
+    $('.editorial-track-console .track-item-obj .action-delitem').on('click', function (e) {
+        var item = getParents(this, '.track-item-obj')[0];
+        var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
+        var api_url;
+        if (process.env.NODE_ENV == 'dev') {
+            api_url = '//localhost:17502/track/article/' + itemid;
+        } else {
+            api_url = '//thisisallabout.com:17502/track/article/' + itemid;
+        }
 
-            var api_header = {
-                "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWE5N2VkNjNkMjFlMzJiMTllZTRiN2MyIiwidXNlcm5hbWUiOiJ0b2RkIn0sImlhdCI6MTUxOTkwNjE0NywiZXhwIjoxNTgyOTc4MTQ3fQ.NWZao76TNX5-k8l2ynDa4c2FL9ibAXt3YcwIqzZNSH8"
-            }
+        var api_header = {
+            "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
+        }
 
-            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
-            fetch(api_url, {
-                method: "DELETE",
-                headers: api_header
-            }).then(r => r.json()).then(function(response) {
-                document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
-                if (response.error) return alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + response.error);
-                load_trackerdata();
-                //item.remove();
-            });
+        document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+        fetch(api_url, {
+            method: "DELETE",
+            headers: api_header
+        }).then(r => r.json()).then(function(response) {
+            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
+            if (response.error) return alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + response.error);
+            item.remove();
+            load_trackerdata();
         });
-    }
+    });
 
-    var trackitem_action_edit = document.querySelectorAll('.editorial-track-console .track-item-obj .action-edititem');
-    for (var i=0; i < trackitem_action_edit.length; i++) {
-        trackitem_action_edit[i].addEventListener('click', function (e) {
-            var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
-            var api_url;
-            if (process.env.NODE_ENV == 'dev') {
-                api_url = '//localhost:17502/track/article/' + itemid;
-            } else {
-                api_url = '//thisisallabout.com:17502/track/article/' + itemid;
-            }
+    $('.editorial-track-console .track-item-obj .action-edititem').on('click', function (e) {
+        var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
+        var api_url;
+        if (process.env.NODE_ENV == 'dev') {
+            api_url = '//localhost:17502/track/article/' + itemid;
+        } else {
+            api_url = '//thisisallabout.com:17502/track/article/' + itemid;
+        }
 
-            var api_header = {
-                "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWE5N2VkNjNkMjFlMzJiMTllZTRiN2MyIiwidXNlcm5hbWUiOiJ0b2RkIn0sImlhdCI6MTUxOTkwNjE0NywiZXhwIjoxNTgyOTc4MTQ3fQ.NWZao76TNX5-k8l2ynDa4c2FL9ibAXt3YcwIqzZNSH8"
-            }
+        var api_header = {
+            "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
+        }
 
-            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
-            fetch(api_url, {
-                method: "GET",
-                headers: api_header
-            }).then(r => r.json()).then(function(response) {
-                document.querySelector('.editorial-track-console-edit #consoleedit-title').value = response[0].title;
-                document.querySelector('.editorial-track-console-edit #consoleedit-section').value = response[0].section;
-                Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-edit .console-edit-reviewstatus div'), function(el, index, array) {
-                    el.classList.remove('selected');
-                });
-                document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div[banana-id="' + response[0].reviewstatus + '"]').classList.add('selected');
-
-                document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
-
-                var editorelement = document.querySelector('.editorial-track-console-edit .console-edit-editor');
-                while (editorelement.firstChild) {
-                    editorelement.removeChild(editorelement.firstChild);
-                }
-                if (response[0].datatype && response[0].datatype == 'json') {
-                    consoleedit_editorelement = new JSONEditor(document.querySelector('.editorial-track-console-edit .console-edit-editor'), {});
-                    consoleedit_editorelement.set(response[0].content_history[0]);
-                    document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'json');
-                } else {
-                    const editor_textmarkup = () => html`
-                    <textarea id="consoleedit-content" placeholder="Content (Provide raw JSON, or Dropbox Paper/Google Drive link)" rows="5"></textarea>
-                    `;
-                    render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
-                    document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'document');
-                    document.querySelector('.editorial-track-console-edit .console-edit-editor textarea').value = response[0].content_history[0];
-                }
-
-                document.querySelector('.editorial-track-console-edit').classList.add('opened');
+        document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+        fetch(api_url, {
+            method: "GET",
+            headers: api_header
+        }).then(r => r.json()).then(function(response) {
+            document.querySelector('.editorial-track-console-edit').setAttribute('banana-id', itemid);
+            document.querySelector('.editorial-track-console-edit #consoleedit-title').value = response[0].title;
+            document.querySelector('.editorial-track-console-edit #consoleedit-section').value = response[0].section;
+            Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-edit .console-edit-reviewstatus div'), function(el, index, array) {
+                el.classList.remove('selected');
             });
-        });
-    }
+            document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div[banana-id="' + response[0].reviewstatus + '"]').classList.add('selected');
 
-    var trackitem_action_history = document.querySelectorAll('.editorial-track-console .track-item-obj .action-itemhistory');
-    for (var i=0; i < trackitem_action_history.length; i++) {
-        trackitem_action_history[i].addEventListener('click', function (e) {
-            var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
-            var api_url;
-            if (process.env.NODE_ENV == 'dev') {
-                api_url = '//localhost:17502/track/article/' + itemid;
+            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
+
+            if (response[0].datatype && response[0].datatype == 'json') {
+                var consoleedit_editorelement = new JSONEditor(document.querySelector('.editorial-track-console-edit .console-edit-editor'), {});
+                consoleedit_editorelement.set(JSON.parse(response[0].revision_history[0].revision_item));
+                document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'json');
             } else {
-                api_url = '//thisisallabout.com:17502/track/article/' + itemid;
-            }
-
-            var api_header = {
-                "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWE5N2VkNjNkMjFlMzJiMTllZTRiN2MyIiwidXNlcm5hbWUiOiJ0b2RkIn0sImlhdCI6MTUxOTkwNjE0NywiZXhwIjoxNTgyOTc4MTQ3fQ.NWZao76TNX5-k8l2ynDa4c2FL9ibAXt3YcwIqzZNSH8"
-            }
-
-            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
-            fetch(api_url, {
-                method: "GET",
-                headers: api_header
-            }).then(r => r.json()).then(function(response) {
-                var historyelement = document.querySelector('.editorial-track-console-edithistory .console-edithistory-list');
-                while (historyelement.firstChild) {
-                    historyelement.removeChild(historyelement.firstChild);
-                }
-
-                const history_base_markup = () => html`
-                <ul class="console-item-contenthistory">
-                ${response.map((dset) => html`
-                    <li class="contenthistory-obj">
-                        
-                    </li>
-                `
-                )}
-                </ul>
+                const editor_textmarkup = () => html`
+                <textarea id="consoleedit-content" placeholder="Content (Provide raw JSON, or Dropbox Paper/Google Drive link)" rows="5"></textarea>
                 `;
-                render(history_base_markup(), document.querySelector('.editorial-track-console-edithistory .console-edithistory-list'));
-                _.filter(response, function (res) {
-                    render_revhistory(res);
-                });
+                render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
+                document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'document');
+                document.querySelector('.editorial-track-console-edit .console-edit-editor textarea').value = response[0].revision_history[0].revision_item;
+            }
 
-                const render_revhistory = (res) => {
-                    if (res.datatype && res.datatype == 'json') {
-                        const history_json_markup = () => html`
-                        <ul class="console-item-contenthistory">
-                        ${response.map((dset) => html`
-                            <li class="contenthistory-obj">
-                                <div class="contents">
-                                ${dset.content_history.map((hst) => html`
-                                    <div class="contenthistory-jsoneditor" banana-data="${JSON.stringify(hst)}"></div>
-                                `
-                                )} 
-                                </div>
-                                <div class="edithistory">
-                                ${dset.edithistory.map((ehst) => html`
-                                    <li class="edithistory-item" banana-id="${ehst}"></li>
-                                `
-                                )} 
-                                </div>
-                            </li>
+            document.querySelector('.editorial-track-console-edit').classList.add('opened');
+        });
+    });
+
+    $('.editorial-track-console .track-item-obj .action-itemhistory').on('click', function (e) {
+        var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
+        var api_url;
+        if (process.env.NODE_ENV == 'dev') {
+            api_url = '//localhost:17502/track/article/' + itemid;
+        } else {
+            api_url = '//thisisallabout.com:17502/track/article/' + itemid;
+        }
+
+        var api_header = {
+            "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
+        }
+
+        document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+        fetch(api_url, {
+            method: "GET",
+            headers: api_header
+        }).then(r => r.json()).then(function(response) {
+            _.filter(response, function (res) {
+                var reversedres = res.revision_history.reverse();
+                if (res.datatype && res.datatype == 'json') {
+                    const history_json_markup = () => html`
+                        ${reversedres.map((rvst) => html`
+                        <div class="revision-obj" banana-type="json" banana-id="${rvst.revision_id}">
+                            <div class="revision-details">
+                                <p class="rev-id" banana-id="${rvst.revision_id}">Revision ID ${rvst.revision_id}</p>
+                                <p class="rev-user" banana-id="${rvst.revision_user}"></p>
+                            </div>
+                            <div class="contenthistory-jsoneditor" banana-data="${JSON.stringify(rvst.revision_item)}"></div>
+                        </div>
                         `
                         )}
-                        </ul>
-                        `;
-                        consoleedit_editorelement = new JSONEditor(document.querySelector('.editorial-track-console-edit .console-edit-editor'), {});
-                        consoleedit_editorelement.set(response[0].content_history[0]);
-                        document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'json');
-                    } else {
-                        const editor_textmarkup = () => html`
-                        <div class="contents">
-                        ${dset.content_history.map((hst) => html`
-                            <textarea id="consolehistory-content" rows="5" banana-data="${hst}"></textarea>
-                        `
-                        )} 
+                    `;
+
+                    render(history_json_markup(), document.querySelector('.editorial-track-console-edithistory .console-edithistory-list'));
+                    
+                } else {
+                    const history_doc_markup = () => html`
+                        ${reversedres.map((rvst) => html`
+                        <div class="revision-obj" banana-type="document">
+                            <div class="revision-details">
+                                <p class="rev-id" banana-id="${rvst.revision_id}">Revision ID ${rvst.revision_id}</p>
+                                <p class="rev-user" banana-id="${rvst.revision_user}"></p>
+                            </div>
+                            <textarea id="consolehistory-content" rows="5" banana-data="${rvst.revision_item}"></textarea>
                         </div>
-                        <div class="edithistory">
-                        ${dset.edithistory.map((ehst) => html`
-                            <li class="edithistory-item" banana-id="${ehst}"></li>
                         `
-                        )} 
-                        </div>
-                        `;
-                        render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
-                        document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'document');
-                        document.querySelector('.editorial-track-console-edit .console-edit-editor textarea').value = response[0].content_history[0];
-                    }
+                        )}
+                    `;
+
+                    render(history_doc_markup(), document.querySelector('.editorial-track-console-edithistory .console-edithistory-list'));
+                    
                 }
-
-                
-
-                
-                
-                document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
-
-                document.querySelector('.editorial-track-console-edithistory').classList.add('opened');
             });
+
+            Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console-edithistory .console-edithistory-list .revision-obj'), function(el, index, array) {
+                var revitem = [];
+                _.filter(response, function (res) {
+                    _.filter(res.revision_history, function (rvst) {
+                        if (rvst.revision_id == el.getAttribute('banana-id')) revitem.push(rvst.revision_item);
+                    });
+                });
+
+                if (el.getAttribute('banana-type') == 'json') {
+                    var consoleedit_editorelement = new JSONEditor(el, {});
+                    consoleedit_editorelement.set(JSON.parse(revitem));
+                } else {
+                    el.querySelector('textarea').value = revitem;
+                }
+                get_editor_username(el.querySelector('.rev-user'), el.querySelector('.rev-user').getAttribute('banana-id'));
+            });
+            
+            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
+            document.querySelector('.editorial-track-console-edithistory').classList.add('opened');
         });
-    }
+    });
 }
 
 var getParents = function ( elem, selector ) {

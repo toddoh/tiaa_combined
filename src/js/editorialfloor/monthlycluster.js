@@ -10,8 +10,8 @@ export function init_render() {
     const hero_markup = () => html`
     <div class="editorial-prepare">
         <div class="editorial-herotext">
-            <p class="hero1">Editorial Dataset Editor</p>
-            <p class="hero1">/monthlycluster</p>
+            <p class="hero1">Editorial /monthlycluster</p>
+            <p class="hero1">(edit monthlycluster dataset file)</p>
             <p class="hero2">Type an appropriate dataset path to initiate process</p>
             <div class="editorial-pathfield">
                 <input type="text" placeholder="dataset path..." />

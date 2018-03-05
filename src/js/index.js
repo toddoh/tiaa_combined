@@ -1,5 +1,7 @@
 import styles from '../styles/core.css';
 import {html, render} from 'lit-html';
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 require('../resources/favicons/android-chrome-192x192.png');
 require('../resources/favicons/android-chrome-384x384.png');
 require('../resources/favicons/apple-touch-icon.png');
