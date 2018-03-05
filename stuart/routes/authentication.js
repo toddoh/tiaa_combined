@@ -31,7 +31,7 @@ router.post('/auth', function(req, res, next){
             if (total > 0) {
                 collection.find({username: usrname}).toArray(function (err, result) {
                     if (err) {
-                        return res.sysErr("DB_ERR", err);
+                        return res.clientErr("DB_ERR", err);
                     }
 
                     if (!result.length) {
@@ -53,7 +53,7 @@ router.post('/auth', function(req, res, next){
     });
 
 	function compareCypherHandler(err, verified){
-		if (err) return res.error("ENCRYPT_COMPARE_ERR", err);
+		if (err) return res.clientErr("ENCRYPT_COMPARE_ERR", err);
 		if (!verified) return res.clientErr("INVALID_SUBSCRIBER_CREDENTIAL_cypher");
 
 		var response = {};
