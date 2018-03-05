@@ -316,7 +316,7 @@ const get_editor_username = (element, id) => {
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/members/' + id;
     } else {
-        api_url = '//thisisallabout.com:5020/members' + id;
+        api_url = '//thisisallabout.com:5020/members/' + id;
     }
 
     var api_header = {
