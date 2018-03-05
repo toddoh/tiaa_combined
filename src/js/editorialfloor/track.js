@@ -216,7 +216,7 @@ const post_trackerdata = () => {
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/track/article/new';
     } else {
-        api_url = '//thisisallabout.com:17502/track/article/new';
+        api_url = '//thisisallabout.com/stuart/track/article/new';
     }
 
     var tracker_reviewstatus = document.querySelector('.editorial-track-console-add .console-add-reviewstatus div.selected').getAttribute('banana-id');
@@ -260,7 +260,7 @@ const load_trackerdata = () => {
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/track/article';
     } else {
-        api_url = '//thisisallabout.com:17502/track/article';
+        api_url = '//thisisallabout.com/stuart/track/article';
     }
 
     var api_header = {
@@ -316,7 +316,7 @@ const get_editor_username = (element, id) => {
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/members/' + id;
     } else {
-        api_url = '//thisisallabout.com:17502/members' + id;
+        api_url = '//thisisallabout.com/stuart/members' + id;
     }
 
     var api_header = {
@@ -341,7 +341,7 @@ const update_trackerdata = () => {
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/track/article/edit';
     } else {
-        api_url = '//thisisallabout.com:17502/track/article/edit';
+        api_url = '//thisisallabout.com/stuart/track/article/edit';
     }
 
     var tracker_reviewstatus = document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected').getAttribute('banana-id');
@@ -395,7 +395,7 @@ const attach_consolelist_events = () => {
         if (process.env.NODE_ENV == 'dev') {
             api_url = '//localhost:17502/track/article/' + itemid;
         } else {
-            api_url = '//thisisallabout.com:17502/track/article/' + itemid;
+            api_url = '//thisisallabout.com/stuart/track/article/' + itemid;
         }
 
         var api_header = {
@@ -420,7 +420,7 @@ const attach_consolelist_events = () => {
         if (process.env.NODE_ENV == 'dev') {
             api_url = '//localhost:17502/track/article/' + itemid;
         } else {
-            api_url = '//thisisallabout.com:17502/track/article/' + itemid;
+            api_url = '//thisisallabout.com/stuart/track/article/' + itemid;
         }
 
         var api_header = {
@@ -465,7 +465,7 @@ const attach_consolelist_events = () => {
         if (process.env.NODE_ENV == 'dev') {
             api_url = '//localhost:17502/track/article/' + itemid;
         } else {
-            api_url = '//thisisallabout.com:17502/track/article/' + itemid;
+            api_url = '//thisisallabout.com/stuart/track/article/' + itemid;
         }
 
         var api_header = {

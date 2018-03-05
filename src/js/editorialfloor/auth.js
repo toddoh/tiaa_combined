@@ -46,7 +46,7 @@ const attach_events = () => {
         if (process.env.NODE_ENV == 'dev') {
             api_url = '//localhost:17502/auth';
         } else {
-            api_url = '//thisisallabout.com:17502/auth';
+            api_url = '//thisisallabout.com/stuart/auth';
         }
 
         var api_post_data = {

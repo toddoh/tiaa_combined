@@ -20,7 +20,7 @@ export function init_render() {
         if (process.env.NODE_ENV == 'dev') {
             api_url = '//localhost:17502/members';
         } else {
-            api_url = '//thisisallabout.com:17502/members';
+            api_url = '//thisisallabout.com/stuart/members';
         }
 
         var api_header = {
