@@ -16,44 +16,45 @@
     width: 60%;
 }
 
-.editorial-track-action-add {
+.editorial-track-actions{
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    top: 0;
+    right: 145px;
+    display: flex;
+    height: 62px;
+    z-index: 9999901;
+    justify-content: flex-start;
+    transition: all 150ms ease;
+}
+
+.editorial-track-action-add {
+    padding: 0 17px;
+    height: 62px;
     background: #fff;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .editorial-track-action-add .icon{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     background-image: url('../../resources/symbol_add.png');
     background-size: cover;
 }
 
 .editorial-track-action-refresh {
-    position: fixed;
-    bottom: 95px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    padding: 0 17px;
+    height: 62px;
     background: #fff;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .editorial-track-action-refresh .icon{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     background-image: url('../../resources/symbol_refresh.png');
     background-size: cover;
 }
@@ -76,6 +77,22 @@
 
 .editorial-track-console-add.opened{
     transform: translate3d(0,0,0);
+}
+
+.track-console-header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    height: 62px;
+    z-index: 9999901;
+    justify-content: flex-start;
+    transition: all 150ms ease
+}
+
+.track-console-header.scroll_bar{
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
 
 .console-herotext{
@@ -164,8 +181,6 @@
 .console-add-reviewstatus {
     display: flex;
     margin-top: 30px;
-    width: 50%;
-    flex-wrap: wrap;
 }
 
 .console-add-reviewstatus > div > p {
@@ -205,12 +220,11 @@
 
 .editorial-track-console-add.opened .console-add-action-cancel{
     position: fixed;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 0 30px;
+    height: 62px;
     display: flex;
     top: 0;
     align-items: center;
-    background: #fff;
     transform: translateZ(0);
 }
 
@@ -223,13 +237,12 @@
 
 .editorial-track-console-add.opened .console-add-action-send{
     position: fixed;
-    padding: 20px 30px 20px 20px;
-    margin: 20px 0;
+    padding: 0 30px;
+    height: 62px;
     display: flex;
     top: 0;
     right: 0;
     align-items: center;
-    background: #fff;
     transform: translateZ(0);
 }
 
@@ -345,12 +358,11 @@
 
 .editorial-track-console-edit.opened .console-edit-action-cancel{
     position: fixed;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 0 30px;
+    height: 62px;
     display: flex;
     top: 0;
     align-items: center;
-    background: #fff;
     transform: translateZ(0);
 }
 
@@ -363,13 +375,12 @@
 
 .editorial-track-console-edit.opened .console-edit-action-send{
     position: fixed;
-    padding: 20px 30px 20px 20px;
-    margin: 20px 0;
+    padding: 0 30px;
+    height: 62px;
     display: flex;
     top: 0;
     right: 0;
     align-items: center;
-    background: #fff;
     transform: translateZ(0);
 }
 
@@ -383,7 +394,7 @@
 /* console */
 
 .editorial-track-console {
-    padding: 30px 90px 30px 60px;
+    padding: 30px 60px 30px 60px;
 }
 
 /* column guide */
@@ -536,8 +547,8 @@ ul.track-items {
 }
 
 .editorial-track-console-edithistory .revision-obj {
-    padding: 20px 0;
-    border-bottom: 1px solid #eaeaea;
+    padding: 25px 0;
+    border-bottom: 1px solid #a9a9a9;
 }
 
 .editorial-track-console-edithistory .revision-details {
@@ -545,7 +556,7 @@ ul.track-items {
     flex-direction: column;
     font-weight: 600;
     color: #383838;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .editorial-track-console-edithistory .revision-details .rev-user{
@@ -563,12 +574,11 @@ ul.track-items {
 
 .editorial-track-console-edithistory.opened .console-edithistory-action-cancel{
     position: fixed;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 0 30px;
+    height: 62px;
     display: flex;
     top: 0;
     align-items: center;
-    background: #fff;
     transform: translateZ(0);
 }
 

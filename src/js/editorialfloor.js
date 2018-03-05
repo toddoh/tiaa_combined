@@ -42,13 +42,13 @@ export function init_render() {
                 const hero_markup = () => html`
                 <div class="minion-stuart-head">
                     <div class="stuart-sections-reveal">
-                        <p>EditorFloors</p>
+                        <p>Editorial</p>
                         <div class="icon"></div>
                     </div>
                 </div>
                 <div class="minion-stuartbox">
                     <div class="stuart-sections-reveal">
-                        <p>EditorFloors</p>
+                        <p>Editorial</p>
                         <div class="icon"></div>
                     </div>
                     <ul class="stuart-sections-list">

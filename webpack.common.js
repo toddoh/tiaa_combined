@@ -3,22 +3,33 @@ const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: {
-        polyfills: ['./src/js/polyfill.js'],
-        vendor: ['babel-polyfill'],
-        index: ['babel-polyfill', './src/js/index.js'],
+        vendor: ['babel-polyfill', 'lit-html', 'lodash', 'moment', 'jquery', 'whatwg-fetch'],
+        index: ['./src/js/index.js']
     },
     plugins: [
         new CleanWebpackPlugin(['dist'], { watch: false }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            minChunks: Infinity
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            async: true, 
+            children: true
+        }),
         new ExtractTextPlugin({filename: "styles/styles.css", allChunks: true}),
         new HTMLWebpackPlugin({
             title: 'THISISALLABOUT',
             template: 'src/index.html'
         }),
-        new webpack.optimize.CommonsChunkPlugin('manifest'),
-        new webpack.HashedModuleIdsPlugin()
+        new webpack.HashedModuleIdsPlugin()/*,
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static'
+        })*/
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -30,6 +41,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
+                exclude: /node_modules/,
                 include: __dirname + '/src/js',
             },
             {

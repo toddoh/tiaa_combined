@@ -1,5 +1,5 @@
 import styles from '../../styles/editorialfloor/track.css';
-import json_styles from '../../../node_modules/jsoneditor/dist/jsoneditor.min.css';
+import json_styles from '../../styles/editorialfloor/jsoneditor.css';
 import {html, render} from 'lit-html';
 import moment from 'moment';
 import JSONEditor from 'jsoneditor';
@@ -18,11 +18,13 @@ export function init_render() {
             <p class="hero2">All changes you made will be saved into database with your editorial id. Once it's marked as 'ready for publish', it'll be saved as final data within 24hrs.</p>
         </div>
     </div>
-    <div class="editorial-track-action-refresh">
-        <div class="icon"></div>
-    </div>
-    <div class="editorial-track-action-add">
-        <div class="icon"></div>
+    <div class="editorial-track-actions">
+        <div class="editorial-track-action-refresh">
+            <div class="icon"></div>
+        </div>
+        <div class="editorial-track-action-add">
+            <div class="icon"></div>
+        </div>
     </div>
     <div class="editorial-track-console">
         <div class="track-console-list-column">
@@ -76,11 +78,13 @@ export function init_render() {
             </div>
             
         </div>
-        <div class="console-add-action-send">
-            <div class="icon"></div>
-        </div>
-        <div class="console-add-action-cancel">
-            <div class="icon"></div>
+        <div class="track-console-header">
+            <div class="console-add-action-send">
+                <div class="icon"></div>
+            </div>
+            <div class="console-add-action-cancel">
+                <div class="icon"></div>
+            </div>
         </div>
     </div>
 
@@ -113,11 +117,13 @@ export function init_render() {
             <div class="console-edit-historylist">
             </div>
         </div>
-        <div class="console-edit-action-send">
-            <div class="icon"></div>
-        </div>
-        <div class="console-edit-action-cancel">
-            <div class="icon"></div>
+        <div class="track-console-header">
+            <div class="console-edit-action-send">
+                <div class="icon"></div>
+            </div>
+            <div class="console-edit-action-cancel">
+                <div class="icon"></div>
+            </div>
         </div>
     </div>
 
@@ -129,8 +135,10 @@ export function init_render() {
             <div class="console-edithistory-list">
             </div>
         </div>
-        <div class="console-edithistory-action-cancel">
-            <div class="icon"></div>
+        <div class="track-console-header">
+            <div class="console-edithistory-action-cancel">
+                <div class="icon"></div>
+            </div>
         </div>
     </div>
     `;
@@ -141,12 +149,40 @@ export function init_render() {
 }
 
 const attach_events = () => {
+    $('.console-edithistory-wrapper').on('scroll', function (e) {
+        var item = $(this).parent().find('.track-console-header');
+        if (this.scrollTop >= 50) {
+            $(item).addClass('scroll_bar');
+        } else {
+            $(item).removeClass('scroll_bar');
+        }
+    });
+
+    $('.console-edit-wrapper').on('scroll', function (e) {
+        var item = $(this).parent().find('.track-console-header');
+        if (this.scrollTop >= 50) {
+            $(item).addClass('scroll_bar');
+        } else {
+            $(item).removeClass('scroll_bar');
+        }
+    });
+
+    $('.console-add-wrapper').on('scroll', function (e) {
+        var item = $(this).parent().find('.track-console-header');
+        if (this.scrollTop >= 50) {
+            $(item).addClass('scroll_bar');
+        } else {
+            $(item).removeClass('scroll_bar');
+        }
+    });
+
     document.querySelector('.editorial-track-action-refresh').addEventListener('click', function (e) {
-        load_trackerdata();
+        window.location.reload(false); 
     });
 
     document.querySelector('.editorial-track-action-add').addEventListener('click', function (e) {
         document.querySelector('.editorial-track-console-add').classList.add('opened');
+        document.documentElement.className = 'n_scroll';
     });
 
     $('.editorial-track-console-add .console-add-reviewstatus div').on('click', function (e) {
@@ -173,6 +209,7 @@ const attach_events = () => {
 
     document.querySelector('.editorial-track-console-add .console-add-action-cancel').addEventListener('click', function (e) {
         document.querySelector('.editorial-track-console-add').classList.remove('opened');
+        document.documentElement.className = '';
     });
 
     document.querySelector('.editorial-track-console-add .console-add-action-send').addEventListener('click', function (e) {
@@ -181,10 +218,14 @@ const attach_events = () => {
 
     document.querySelector('.editorial-track-console-edit .console-edit-action-cancel').addEventListener('click', function (e) {
         document.querySelector('.editorial-track-console-edit').classList.remove('opened');
+        document.documentElement.className = '';
         document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', '');
-        const editor_textmarkup = () => html`
+        $('.editorial-track-console-edit .console-edit-editor').find('div').remove();
+        $('.editorial-track-console-edit .console-edit-editor').find('textarea').remove();
+        const history_json_markup = () => html`
         `;
-        render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
+
+        render(history_json_markup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
     });
 
     document.querySelector('.editorial-track-console-edit .console-edit-action-send').addEventListener('click', function (e) {
@@ -193,10 +234,12 @@ const attach_events = () => {
 
     document.querySelector('.editorial-track-console-edithistory .console-edithistory-action-cancel').addEventListener('click', function (e) {
         document.querySelector('.editorial-track-console-edithistory').classList.remove('opened');
+        $('.editorial-track-console-edithistory .console-edithistory-list').find('div').remove();
         const history_json_markup = () => html`
         `;
 
         render(history_json_markup(), document.querySelector('.editorial-track-console-edithistory .console-edithistory-list'));
+        document.documentElement.className = '';
     });
 
     $('.editorial-track-console-edit .console-edit-reviewstatus div').on('click', function (e) {
@@ -212,6 +255,18 @@ const attach_events = () => {
 }
 
 const post_trackerdata = () => {
+    if (document.querySelector('.editorial-track-console-add #consoleadd-title').value == '' ||
+    document.querySelector('.editorial-track-console-add #consoleadd-section').value == '' ||
+    document.querySelector('.editorial-track-console-add #consoleadd-content').value == '') {
+        alert('Please provide title, section, and contents first.');
+        return;
+    }
+
+    if (document.querySelector('.editorial-track-console-add .console-add-reviewstatus div.selected') == null || document.querySelector('.editorial-track-console-add .console-add-datatype div.selected') == null) {
+        alert('Please select review stage status and data type of the content.');
+        return;
+    }
+
     var api_url;
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/track/article/new';
@@ -250,7 +305,8 @@ const post_trackerdata = () => {
         document.querySelector('.editorial-track-console-add .console-add-reviewstatus div.selected').classList.remove('selected');
         document.querySelector('.editorial-track-console-add .console-add-datatype div.selected').classList.remove('selected');
         document.querySelector('.editorial-track-console-add').classList.remove('opened');
-        load_trackerdata();
+        document.documentElement.className = '';
+        window.location.reload(false); 
     })
     .catch(e => alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + e))
 }
@@ -365,6 +421,18 @@ const update_trackerdata = () => {
         "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
     };
 
+    if (document.querySelector('.editorial-track-console-edit #consoleedit-title').value == '' ||
+    document.querySelector('.editorial-track-console-edit #consoleedit-section').value == '' ||
+    tracker_content == null) {
+        alert('Please provide title, section, and contents first.');
+        return;
+    }
+
+    if (document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected') == null) {
+        alert('Please select or update review stage status.');
+        return;
+    }
+
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
     fetch(api_url, {
         method: "POST",
@@ -382,36 +450,38 @@ const update_trackerdata = () => {
         render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
         document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected').classList.remove('selected');
         document.querySelector('.editorial-track-console-edit').classList.remove('opened');
-        load_trackerdata();
+        document.documentElement.className = '';
+        window.location.reload(false); 
     })
     .catch(e => alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + e))
 }
 
 const attach_consolelist_events = () => {
     $('.editorial-track-console .track-item-obj .action-delitem').on('click', function (e) {
-        var item = getParents(this, '.track-item-obj')[0];
-        var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
-        var api_url;
-        if (process.env.NODE_ENV == 'dev') {
-            api_url = '//localhost:17502/track/article/' + itemid;
-        } else {
-            api_url = '//thisisallabout.com:5020/track/article/' + itemid;
-        }
+        if (confirm('Are you sure you really want to delete this item?')) {
+            var item = getParents(this, '.track-item-obj')[0];
+            var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
+            var api_url;
+            if (process.env.NODE_ENV == 'dev') {
+                api_url = '//localhost:17502/track/article/' + itemid;
+            } else {
+                api_url = '//thisisallabout.com:5020/track/article/' + itemid;
+            }
 
-        var api_header = {
-            "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
-        }
+            var api_header = {
+                "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
+            }
 
-        document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
-        fetch(api_url, {
-            method: "DELETE",
-            headers: api_header
-        }).then(r => r.json()).then(function(response) {
-            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
-            if (response.error) return alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + response.error);
-            item.remove();
-            load_trackerdata();
-        });
+            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+            fetch(api_url, {
+                method: "DELETE",
+                headers: api_header
+            }).then(r => r.json()).then(function(response) {
+                document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
+                if (response.error) return alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + response.error);
+                item.remove();
+            });
+        }
     });
 
     $('.editorial-track-console .track-item-obj .action-edititem').on('click', function (e) {
@@ -432,6 +502,7 @@ const attach_consolelist_events = () => {
             method: "GET",
             headers: api_header
         }).then(r => r.json()).then(function(response) {
+            var reversedres = response[0].revision_history.reverse();
             document.querySelector('.editorial-track-console-edit').setAttribute('banana-id', itemid);
             document.querySelector('.editorial-track-console-edit #consoleedit-title').value = response[0].title;
             document.querySelector('.editorial-track-console-edit #consoleedit-section').value = response[0].section;
@@ -442,9 +513,9 @@ const attach_consolelist_events = () => {
 
             document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
 
-            if (response[0].datatype && response[0].datatype == 'json') {
+            if (response[0].datatype == 'json') {
                 var consoleedit_editorelement = new JSONEditor(document.querySelector('.editorial-track-console-edit .console-edit-editor'), {});
-                consoleedit_editorelement.set(JSON.parse(response[0].revision_history[0].revision_item));
+                consoleedit_editorelement.set(JSON.parse(reversedres[0].revision_item));
                 document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'json');
             } else {
                 const editor_textmarkup = () => html`
@@ -452,10 +523,11 @@ const attach_consolelist_events = () => {
                 `;
                 render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
                 document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'document');
-                document.querySelector('.editorial-track-console-edit .console-edit-editor textarea').value = response[0].revision_history[0].revision_item;
+                document.querySelector('.editorial-track-console-edit .console-edit-editor textarea').value = reversedres[0].revision_item;
             }
 
             document.querySelector('.editorial-track-console-edit').classList.add('opened');
+            document.documentElement.className = 'n_scroll';
         });
     });
 
@@ -479,7 +551,7 @@ const attach_consolelist_events = () => {
         }).then(r => r.json()).then(function(response) {
             _.filter(response, function (res) {
                 var reversedres = res.revision_history.reverse();
-                if (res.datatype && res.datatype == 'json') {
+                if (res.datatype == 'json') {
                     const history_json_markup = () => html`
                         ${reversedres.map((rvst) => html`
                         <div class="revision-obj" banana-type="json" banana-id="${rvst.revision_id}">
@@ -487,7 +559,7 @@ const attach_consolelist_events = () => {
                                 <p class="rev-id" banana-id="${rvst.revision_id}">Revision ID ${rvst.revision_id}</p>
                                 <p class="rev-user" banana-id="${rvst.revision_user}"></p>
                             </div>
-                            <div class="contenthistory-jsoneditor" banana-data="${JSON.stringify(rvst.revision_item)}"></div>
+                            <div class="contenthistory-jsoneditor"></div>
                         </div>
                         `
                         )}
@@ -498,7 +570,7 @@ const attach_consolelist_events = () => {
                 } else {
                     const history_doc_markup = () => html`
                         ${reversedres.map((rvst) => html`
-                        <div class="revision-obj" banana-type="document">
+                        <div class="revision-obj" banana-type="document" banana-id="${rvst.revision_id}">
                             <div class="revision-details">
                                 <p class="rev-id" banana-id="${rvst.revision_id}">Revision ID ${rvst.revision_id}</p>
                                 <p class="rev-user" banana-id="${rvst.revision_user}"></p>
@@ -526,13 +598,14 @@ const attach_consolelist_events = () => {
                     var consoleedit_editorelement = new JSONEditor(el, {});
                     consoleedit_editorelement.set(JSON.parse(revitem));
                 } else {
-                    el.querySelector('textarea').value = revitem;
+                    el.querySelector('textarea').value = revitem[0];
                 }
                 get_editor_username(el.querySelector('.rev-user'), el.querySelector('.rev-user').getAttribute('banana-id'));
             });
             
             document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
             document.querySelector('.editorial-track-console-edithistory').classList.add('opened');
+            document.documentElement.className = 'n_scroll';
         });
     });
 }
