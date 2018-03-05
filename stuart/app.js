@@ -88,12 +88,13 @@ app.use(function(err, req, res, next) {
 });
 
 var stuart_v = '0.2';
-console.log('Initiating minion_stuart - ', stuart_v);
 
 // Init db pool
 var mongoPool = require('./databasepool.js');
 
 new mongoPool.start(function () {
 	console.log('Successfully connected to mongoDB');
-	app.listen(process.env.APP_PORT || 17502);
+	app.listen(17502, function () {
+		console.log('Initiating minion_stuart - ', stuart_v);
+	});
 });
