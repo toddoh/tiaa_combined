@@ -287,6 +287,22 @@ html.safari .minion-header.scroll_bar{
     }
 }
 
+.minion-bidobido{
+    position: fixed;
+    width: 0;
+    height: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.minion-bidobido.opened{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transition: all 100ms ease;
+    z-index: 9999999;
+}
+
 @media all and (max-width: 510px) {
     .minion-sectionbox{
         margin: 0;

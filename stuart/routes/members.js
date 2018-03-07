@@ -112,6 +112,7 @@ router.route('/')
 						} else {
 							var response = {};
 							response.username = result[0].username;
+							response.userId = result[0]._id;
 
 							res.json(response);
 						}
@@ -142,6 +143,7 @@ router.route('/:id').get(authUser, function(req, res, next){
 						} else {
 							var response = {};
 							response.username = result[0].username;
+							response.userId = result[0]._id;
 
 							res.json(response);
 						}

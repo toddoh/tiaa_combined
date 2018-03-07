@@ -285,6 +285,22 @@ html.safari .minion-header.scroll_bar{
     }
 }
 
+.minion-bidobido{
+    position: fixed;
+    width: 0;
+    height: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.minion-bidobido.opened{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transition: all 100ms ease;
+    z-index: 9999999;
+}
+
 @media all and (max-width: 510px) {
     .minion-sectionbox{
         margin: 0;
@@ -1557,7 +1573,7 @@ html.safari .minion-header.scroll_bar{
     opacity: 1;
     z-index: 9999902;
     padding: 0 30px 30px 30px;
-    background: rgb(245, 245, 245);
+    background: rgb(255, 255, 255);
     box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
 
@@ -1566,6 +1582,15 @@ html.safari .minion-header.scroll_bar{
     height: 62px;
     display: flex;
     z-index: 9999902;
+}
+
+.minion-stuart-head:before {
+    content: '';
+    display: flex;
+    width: 2px;
+    margin: 10px 18px 10px 0;
+    background: #dedede;
+    align-content: center;
 }
 
 .stuart-sections-reveal{
@@ -1621,8 +1646,17 @@ html.safari .minion-header.scroll_bar{
     font-weight: 700;
 }
 
-.minion-stuartbox .stuart-usersession-action{
+.stuart-session-user {
+    font-weight: 600;
+    margin-right: 0;
+    text-align: right;
     margin-top: 35px;
+    color: #4c4c4c;
+    font-size: 0.9em;
+}
+
+.minion-stuartbox .stuart-usersession-action{
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -1635,7 +1669,6 @@ html.safari .minion-header.scroll_bar{
     display: flex;
     align-items: center;
     margin-bottom: 6px;
-    margin-right: 8px;
     word-break: break-all;
     word-wrap: break-word;
 }
@@ -2388,7 +2421,7 @@ ul.cluster-articles .objectid {
 }
 
 .column-lasteditor {
-    width: 100px;
+    width: 130px;
 }
 
 .column-reviewstatus {
@@ -2430,7 +2463,7 @@ ul.track-items {
 }
 
 .item-lasteditor {
-    width: 100px;
+    width: 130px;
 }
 
 .track-item-obj .item-section {
@@ -2457,17 +2490,30 @@ ul.track-items {
     margin-right: 12px;
 }
 
+.track-item-obj .item-reviewstatus[banana-id="revised"] {
+    background: #9c0f9e;
+}
+
+.track-item-obj .item-reviewstatus[banana-id="preapproval"] {
+    background: #0094da;
+}
+
+.track-item-obj .item-reviewstatus[banana-id="finalapproval"] {
+    background: #62ad00;
+}
+
 .item-actions {
     display: flex;
 }
 
 .track-item-obj .item-actions > p {
-    padding: 2px 5px;
-    color: #005baf;
+    padding: 2px 4px;
+    color: #007cda;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.9em;
-    margin-left: 8px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 

@@ -422,7 +422,7 @@
 }
 
 .column-lasteditor {
-    width: 100px;
+    width: 130px;
 }
 
 .column-reviewstatus {
@@ -464,7 +464,7 @@ ul.track-items {
 }
 
 .item-lasteditor {
-    width: 100px;
+    width: 130px;
 }
 
 .track-item-obj .item-section {
@@ -491,17 +491,30 @@ ul.track-items {
     margin-right: 12px;
 }
 
+.track-item-obj .item-reviewstatus[banana-id="revised"] {
+    background: #9c0f9e;
+}
+
+.track-item-obj .item-reviewstatus[banana-id="preapproval"] {
+    background: #0094da;
+}
+
+.track-item-obj .item-reviewstatus[banana-id="finalapproval"] {
+    background: #62ad00;
+}
+
 .item-actions {
     display: flex;
 }
 
 .track-item-obj .item-actions > p {
-    padding: 2px 5px;
-    color: #005baf;
+    padding: 2px 4px;
+    color: #007cda;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.9em;
-    margin-left: 8px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 

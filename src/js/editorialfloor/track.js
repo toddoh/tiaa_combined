@@ -149,25 +149,7 @@ export function init_render() {
 }
 
 const attach_events = () => {
-    $('.console-edithistory-wrapper').on('scroll', function (e) {
-        var item = $(this).parent().find('.track-console-header');
-        if (this.scrollTop >= 50) {
-            $(item).addClass('scroll_bar');
-        } else {
-            $(item).removeClass('scroll_bar');
-        }
-    });
-
-    $('.console-edit-wrapper').on('scroll', function (e) {
-        var item = $(this).parent().find('.track-console-header');
-        if (this.scrollTop >= 50) {
-            $(item).addClass('scroll_bar');
-        } else {
-            $(item).removeClass('scroll_bar');
-        }
-    });
-
-    $('.console-add-wrapper').on('scroll', function (e) {
+    $('.console-edithistory-wrapper, .console-edit-wrapper, .console-add-wrapper').on('scroll', function (e) {
         var item = $(this).parent().find('.track-console-header');
         if (this.scrollTop >= 50) {
             $(item).addClass('scroll_bar');
@@ -177,7 +159,8 @@ const attach_events = () => {
     });
 
     document.querySelector('.editorial-track-action-refresh').addEventListener('click', function (e) {
-        window.location.reload(false); 
+        //window.location.reload(false); 
+        load_trackerdata();
     });
 
     document.querySelector('.editorial-track-action-add').addEventListener('click', function (e) {
@@ -306,7 +289,9 @@ const post_trackerdata = () => {
         document.querySelector('.editorial-track-console-add .console-add-datatype div.selected').classList.remove('selected');
         document.querySelector('.editorial-track-console-add').classList.remove('opened');
         document.documentElement.className = '';
-        window.location.reload(false); 
+
+        load_trackerdata();
+        //window.location.reload(false); 
     })
     .catch(e => alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + e))
 }
@@ -368,28 +353,33 @@ const load_trackerdata = () => {
 }
 
 const get_editor_username = (element, id) => {
-    var api_url;
-    if (process.env.NODE_ENV == 'dev') {
-        api_url = '//localhost:17502/members/' + id;
+    if ($('.minion-root').find('[banana-id="' + id + '"].fetched').length > 0) {
+        element.innerHTML = $('.minion-root').find('[banana-id="' + id + '"].fetched').first().text();
     } else {
-        api_url = '//thisisallabout.com:5020/members/' + id;
+        var api_url;
+        if (process.env.NODE_ENV == 'dev') {
+            api_url = '//localhost:17502/members/' + id;
+        } else {
+            api_url = '//thisisallabout.com:5020/members/' + id;
+        }
+
+        var api_header = {
+            "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
+        }
+
+        document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+
+        fetch(api_url, {
+            method: "GET",
+            headers: api_header
+        }).then(r => r.json()).then(function(response) {
+            
+            if (response) element.innerHTML = response.username;
+            if (!element.classList.contains('fetched')) element.classList.add('fetched');
+            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
+        })
+        .catch(e => alert("Unable to load tracker data. ERR_MSG_CODE: " + JSON.stringify(e)));
     }
-
-    var api_header = {
-        "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
-    }
-
-    document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
-
-    fetch(api_url, {
-        method: "GET",
-        headers: api_header
-      }).then(r => r.json()).then(function(response) {
-        
-        if (response) element.innerHTML = response.username;
-        document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
-    })
-    .catch(e => alert("Unable to load tracker data. ERR_MSG_CODE: " + JSON.stringify(e)));
 }
 
 const update_trackerdata = () => {
@@ -451,13 +441,21 @@ const update_trackerdata = () => {
         document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected').classList.remove('selected');
         document.querySelector('.editorial-track-console-edit').classList.remove('opened');
         document.documentElement.className = '';
-        window.location.reload(false); 
+
+        load_trackerdata();
+        //window.location.reload(false); 
     })
     .catch(e => alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + e))
 }
 
+var consoleedit_editorelement = null;
 const attach_consolelist_events = () => {
+    $('.editorial-track-console .track-item-obj .action-delitem').off('click');
+    $('.editorial-track-console .track-item-obj .action-edititem').off('click');
+    $('.editorial-track-console .track-item-obj .action-itemhistory').off('click');
+
     $('.editorial-track-console .track-item-obj .action-delitem').on('click', function (e) {
+        document.querySelector('.minion-bidobido').classList.add('opened');
         if (confirm('Are you sure you really want to delete this item?')) {
             var item = getParents(this, '.track-item-obj')[0];
             var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
@@ -477,14 +475,18 @@ const attach_consolelist_events = () => {
                 method: "DELETE",
                 headers: api_header
             }).then(r => r.json()).then(function(response) {
+                document.querySelector('.minion-bidobido').classList.remove('opened');
                 document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
                 if (response.error) return alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + response.error);
                 item.remove();
             });
+        } else {
+            document.querySelector('.minion-bidobido').classList.remove('opened');
         }
     });
 
     $('.editorial-track-console .track-item-obj .action-edititem').on('click', function (e) {
+        document.querySelector('.minion-bidobido').classList.add('opened');
         var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
         var api_url;
         if (process.env.NODE_ENV == 'dev') {
@@ -502,6 +504,7 @@ const attach_consolelist_events = () => {
             method: "GET",
             headers: api_header
         }).then(r => r.json()).then(function(response) {
+            document.querySelector('.minion-bidobido').classList.remove('opened');
             var reversedres = response[0].revision_history.reverse();
             document.querySelector('.editorial-track-console-edit').setAttribute('banana-id', itemid);
             document.querySelector('.editorial-track-console-edit #consoleedit-title').value = response[0].title;
@@ -514,7 +517,7 @@ const attach_consolelist_events = () => {
             document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
 
             if (response[0].datatype == 'json') {
-                var consoleedit_editorelement = new JSONEditor(document.querySelector('.editorial-track-console-edit .console-edit-editor'), {});
+                consoleedit_editorelement = new JSONEditor(document.querySelector('.editorial-track-console-edit .console-edit-editor'), {});
                 consoleedit_editorelement.set(JSON.parse(reversedres[0].revision_item));
                 document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', 'json');
             } else {
@@ -532,6 +535,7 @@ const attach_consolelist_events = () => {
     });
 
     $('.editorial-track-console .track-item-obj .action-itemhistory').on('click', function (e) {
+        document.querySelector('.minion-bidobido').classList.add('opened');
         var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
         var api_url;
         if (process.env.NODE_ENV == 'dev') {
@@ -549,6 +553,7 @@ const attach_consolelist_events = () => {
             method: "GET",
             headers: api_header
         }).then(r => r.json()).then(function(response) {
+            document.querySelector('.minion-bidobido').classList.remove('opened');
             _.filter(response, function (res) {
                 var reversedres = res.revision_history.reverse();
                 if (res.datatype == 'json') {
@@ -595,8 +600,8 @@ const attach_consolelist_events = () => {
                 });
 
                 if (el.getAttribute('banana-type') == 'json') {
-                    var consoleedit_editorelement = new JSONEditor(el, {});
-                    consoleedit_editorelement.set(JSON.parse(revitem));
+                    var consoleedithist_editorelement = new JSONEditor(el, {});
+                    consoleedithist_editorelement.set(JSON.parse(revitem));
                 } else {
                     el.querySelector('textarea').value = revitem[0];
                 }

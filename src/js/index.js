@@ -72,6 +72,7 @@ const render_core = () => {
         <div class="minion-contents">
         </div>
         <div class="minion-dataload"></div>
+        <div class="minion-bidobido"</div>
     </div>
     `;
 

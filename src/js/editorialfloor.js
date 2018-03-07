@@ -57,7 +57,8 @@ export function init_render() {
                         `
                         )}
                     </ul>
-                    
+
+                    <p class="stuart-session-user fetched" banana-id="${response.userId}">${response.username}</p>
                     <ul class="stuart-usersession-action">
                         <li class="stuart-action-logout">Logout</li>
                     </ul>
