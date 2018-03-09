@@ -4310,13 +4310,14 @@ div.jsoneditor .jsoneditor-search input {
     .today-analysis-data .analysis-list{
         margin-left: 0;
         margin-right: 0;
-        column-count: 1;
+        grid-template-columns: auto;
     }
 
     .today-analysis-data .analysis-list .analysis-item{
         margin: 20px 0 0;
         max-width: 100%;
         min-width: 100%;
+        overflow-y: hidden;
         height: 120vw;
         transition: all 200ms ease;
     }
