@@ -1,21 +1,31 @@
 import {html, render} from 'lit-html';
 import today_style from '../styles/today.css';
+import socialLikes from 'social-likes-next';
+import social_style from 'social-likes-next/lib/social-likes_light.css';
+import moment from 'moment';
+import tz from 'moment-timezone';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='Today';
     document.querySelector('.navbox-static').classList.add('today');
     document.querySelector('.minion-sections li[data-sectionid="nav-section-today"]').classList.add('current');
-    if (window.screen.width <= 980) {
-        document.body.setAttribute('banana-type', 'mobile');
-    }
 
     const today_hero_markup = () => html`
+    <div class="today-share" data-url="https://thisisallabout.com/" data-title="Today on THISISALLABOUT">
+        <div data-service="facebook" title="Today on THISISALLABOUT"></div>
+        <div data-service="twitter" data-via="" data-related=""></div>
+        <div data-service="plusone" title="Today on THISISALLABOUT"></div>
+        <div data-service="linkedin" title="Today on THISISALLABOUT"></div>
+        <div data-service="pinterest" title="Today on THISISALLABOUT"></div>
+        <div class="email" title="Today on THISISALLABOUT">
+            <div class="icon"></div>    
+        </div>
+    </div>
     <div class="today-hero">
         <div class="today-herotext">
-            <p class="hero1 dayinfo">Today</p>
-            <p class="hero1 things">Things to know</p>
+            <p class="hero1 dayinfo">Today: </p>
             <div class="hero2">
-                <p>Here's a quick recap of what's happening now, updated every hour.</p>
+                <p>Updated Hourly: An unbiased content cluster of issues trending across mainstream media</p>
             </div>
             <p class="today-herotpdetails">More</p>
         </div>
@@ -32,9 +42,10 @@ export function init_render() {
             <p>Technical Details</p>
         </div>
         <div class="tpdetails-text">
-            <p>This content renders clustering result created automatically by our processing system. We verify that the result is completely untouched.</p>
-            <p>We aggregated and processed stories from CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, and Financial Times from the past 24 hours. Based on the data, the system did run a full natural language processing and clustering to sort out key topics.</p>
-            <p>Our clustering system uses a sophisticated algorithm to automatically determine a reasonable and optimal size of clusters. Once the initial data processing is done, the "interpreter" unit creates a final result ready to be published. </p>
+            <p>Our clustering system uses a sophisticated algorithm to automatically determine a reasonable and optimal size of clusters. Once the initial data processing is done, the "interpreter" unit creates a final result, ready to be published.</p>
+            <p>This content renders clustering results created automatically by our processing system. We verify that the result is completely untouched.</p>
+            <p>We aggregate and process stories from CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, and Financial Times from the past 24 hours.</p>
+            <p>Based on the data, the system runs a full natural language processing and clustering sequence to sort out key topics. </p>
         </div>
         <div class="tpdetails-close-action">
             <div class="icon"></div>
@@ -44,6 +55,11 @@ export function init_render() {
 
     render(today_hero_markup(), document.querySelector('.minion-contents'));
     render_data();
+
+    socialLikes(document.querySelector('.today-share'));
+    document.querySelector('.today-share .email').addEventListener('click', function (e) {
+        window.location.href = "mailto:?body=Hey, check trending issues of today: " + window.location.href;
+    });
 }
 
 
@@ -66,33 +82,15 @@ const render_data = () => {
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
-        
-        var content_length = ' thing ';
-        if (trump_data.length > 1) {
-            content_length = ' things ';
-        }
-        document.querySelector('.today-hero .things').innerHTML = trump_data.length + content_length + 'happening now';
 
         var contentts = trump_data[0].timestamp;
-        var dateTime = contentts.split(" ");
-        var date = dateTime[0].split("-");
-        var yyyy = date[0];
-        var mm = date[1]-1;
-        var dd = date[2];
-
-        var time = dateTime[1].split(":");
-        var h = time[0];
-        var m = time[1];
-        var s = parseInt(time[2]); //get rid of that 00.0;
-        var m_names = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-
-        document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on ' + m_names[mm] + ' ' + dd + ' ' + h + ':' + m + ', ' + yyyy + ' ET';
-        document.querySelector('.today-hero .dayinfo').innerHTML = m_names[mm] + ' ' + dd + ', Today';
+        var est_ts = moment.tz(contentts, "America/New_York").format("dddd: MMMM Do");
+        document.querySelector('.today-hero .dayinfo').innerHTML = est_ts;
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
                 <div class="analysis-item">
                     <div class="item-wrapper">
-                        <div class="item-info">
+                        <div class="item-info item-cover">
                             <div class="item-theme">
                                 <div class="themes">
                                 ${i.theme.map((t) => html`
@@ -103,27 +101,25 @@ const render_data = () => {
                             </div>
                         </div>
 
+                        <div class="item-image item-cover"></div>
+
                         <div class="item-toparticle-container">
                             <div class="toparticle-content-container">
                                 ${i.toparticles.map((arti) => html`
                                     ${arti.length > 0 ? html`
                                         ${arti.map((a) => html`
-                                            <div class="toparticle-object" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
+                                            <a href="${a.url}" target="_blank"><div class="toparticle-object" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
                                                 <div class="article-info">
                                                     <p class="article-title">${a.title}</p>
                                                     <p class="article-origin">${a.origin}</p>
                                                 </div>
-                                            </div>
+                                            </div></a>
                                         `
                                         )}
                                     ` : ''}
                                 `
                                 )}
                             </div>
-                        </div>
-                        <div class="item-reveal-action">
-                            <div class="icon"></div>
-                            <p>More</p>
                         </div>
                     </div>
                     
@@ -142,69 +138,16 @@ const render_data = () => {
 }
 
 const postrender_data = () => {
-    Array.prototype.forEach.call(document.querySelectorAll('.presidenttrump-analysis-data .analysis-list .toparticle-month-container'), function(pel, index, array) {
-        var peak_data = JSON.parse(pel.getAttribute('banana-peaks'));
-        
-        Array.prototype.forEach.call(pel.querySelectorAll('.toparticle-month'), function(el, index, array) {
-            var month_raw = el.getAttribute('banana-month');
-            var converted = '';
-    
-            if (month_raw == '2017-01') converted = 'Jan';
-            if (month_raw == '2017-02') converted = 'Feb';
-            if (month_raw == '2017-03') converted = 'Mar';
-            if (month_raw == '2017-04') converted = 'Apr';
-            if (month_raw == '2017-05') converted = 'May';
-            if (month_raw == '2017-06') converted = 'Jun';
-            if (month_raw == '2017-07') converted = 'Jul';
-            if (month_raw == '2017-08') converted = 'Aug';
-            if (month_raw == '2017-09') converted = 'Sep';
-            if (month_raw == '2017-10') converted = 'Oct';
-            if (month_raw == '2017-11') converted = 'Nov';
-            if (month_raw == '2017-12') converted = 'Dec';
-            if (month_raw == '2018-01') converted = 'Jan \'18';
-            el.querySelector('p').innerHTML = converted;
-
-            var peak_match = peak_data.includes(month_raw);
-            if (peak_match) el.classList.add('peak');
-        });
+    $('.today-analysis-data .analysis-item').each(function() {
+        console.log($($(this).find('.toparticle-object')[0]).attr('banana-imagesrc'));
+        if ($($(this).find('.toparticle-object')[0]).attr('banana-imagesrc') != '') {
+            $(this).find('.item-image').css('background-image', 'url(' + $($(this).find('.toparticle-object')[0]).attr('banana-imagesrc') + ')');
+            $(this).find('.item-image').addClass('exist');
+        }
     });
-
-    Array.prototype.forEach.call(document.querySelectorAll('.today-analysis-data .analysis-list .toparticle-content-container .toparticle-object'), function(el, index, array) {
-        //el.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url(' + //el.getAttribute('banana-imagesrc') + ')';
-    });
-
-    var item_toggle = document.querySelectorAll('.today-analysis-data .analysis-item .item-reveal-action');
-    for (var i=0; i < item_toggle.length; i++) {
-        item_toggle[i].addEventListener('click', function (e) {
-            var parent = getParents(this, '.analysis-item')[0];
-            if (!parent.classList.contains('selected')) {
-                parent.classList.add('selected');
-
-                var list = document.querySelector('.today-analysis-data .analysis-list');
-                if (!list.classList.contains('selected')) {
-                    list.classList.add('selected');
-                }
-            }
-        });
-    }
-
-    var item_close = document.querySelectorAll('.today-analysis-data .analysis-item .item-close-action');
-    for (var i=0; i < item_close.length; i++) {
-        item_close[i].addEventListener('click', function (e) {
-            var parent = getParents(this, '.analysis-item')[0];
-            if (parent.classList.contains('selected')) {
-                parent.classList.remove('selected');
-
-                var list = document.querySelector('.today-analysis-data .analysis-list');
-                if (list.classList.contains('selected')) {
-                    list.classList.remove('selected');
-                }
-            }
-        });
-    }
     
     if (check_mobile()) {
-        var mobile_ithm = document.querySelectorAll('.today-analysis-data .analysis-list .item-info');
+        var mobile_ithm = document.querySelectorAll('.today-analysis-data .analysis-list .item-cover');
         for (var i=0; i < mobile_ithm.length; i++) {
             mobile_ithm[i].addEventListener('click', function (e) {
                 var parent = getParents(this, '.analysis-item')[0];
@@ -218,28 +161,34 @@ const postrender_data = () => {
                 }
             });
         }
-    }
 
-    var ta_objs = document.querySelectorAll('.toparticle-content-container .toparticle-object');
-    for (var i=0; i < ta_objs.length; i++) {
-        ta_objs[i].addEventListener('click', function (e) {
-            var url = this.getAttribute('banana-link');
-            if (url == null || url == undefined || url == '') return;
-            window.open(url, "_blank");
-        });
+        var mobile_ithm_close = document.querySelectorAll('.today-analysis-data .analysis-list .item-close-action');
+        for (var i=0; i < mobile_ithm_close.length; i++) {
+            mobile_ithm_close[i].addEventListener('click', function (e) {
+                var parent = getParents(this, '.analysis-item')[0];
+                if (parent.classList.contains('selected')) {
+                    parent.classList.remove('selected');
+
+                    var list = document.querySelector('.today-analysis-data .analysis-list');
+                    if (list.classList.contains('selected')) {
+                        list.classList.remove('selected');
+                    }
+                }
+            });
+        }
     }
 
     document.querySelector('.today-herotpdetails').addEventListener('click', function (e) {
-        if (!document.querySelector('.today-tpdetails').classList.contains('revealed'))
-            document.querySelector('.today-tpdetails').classList.add('revealed');
+        if (!document.querySelector('.today-tpdetails').classList.contains('opened'))
+            document.querySelector('.today-tpdetails').classList.add('opened');
 
         if (!document.querySelector('.today-analysis-data').classList.contains('hidden'))
             document.querySelector('.today-analysis-data').classList.add('hidden');
     });
 
     document.querySelector('.today-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
-        if (document.querySelector('.today-tpdetails').classList.contains('revealed'))
-            document.querySelector('.today-tpdetails').classList.remove('revealed');
+        if (document.querySelector('.today-tpdetails').classList.contains('opened'))
+            document.querySelector('.today-tpdetails').classList.remove('opened');
 
         if (document.querySelector('.today-analysis-data').classList.contains('hidden'))
             document.querySelector('.today-analysis-data').classList.remove('hidden');

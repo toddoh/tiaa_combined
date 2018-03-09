@@ -115,7 +115,7 @@ def cluster_articles(item, type=None, mode=None):
 
         tfidfpath = './dataset/' + type + '/'
         if type == 'today':
-            parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath, 'today')
+            parsed_data = parse_aggregated(parsed_article_dict, 2, 15, tfidfpath, 'today')
         elif type == 'trumpsaid':
             parsed_data = parse_aggregated(parsed_article_dict, 2, 25, tfidfpath, 'trumpsaid')
         else:
@@ -190,7 +190,7 @@ def cluster_articles(item, type=None, mode=None):
 
                     timeformat = ''
                     if mode <= 72:
-                        timeformat = '%Y-%m-%d'
+                        timeformat = '%Y-%m'
                     elif mode <= 168:
                         timeformat = '%Y-%m-%d'
                     elif mode == 90000009:
@@ -220,8 +220,8 @@ def cluster_articles(item, type=None, mode=None):
         print('Clustering unit: saved into json file.')
 
         if type == 'today':
-            from action_interpret import interpreter_run
-            interpreter_run(type)
+            from interpret.unit_interpreter_today import interpret_today
+            interpret_today(type)
     else:
         print('Clustering unit: The collection is empty, unable to process.')
 

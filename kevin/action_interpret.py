@@ -1,4 +1,5 @@
 from interpret.unit_interpreter import interpret
+from interpret.unit_interpreter_today import interpret_today
 import sys
 import argparse
 
@@ -14,10 +15,13 @@ sys.stdout = f
 print(vars(args), vars(args)['target'])
 
 def interpreter_run(type):
-    if type != '':
-        interpret(type)
-    else:
+    if type == '':
         print('Interpreter: No type provided, finished with none.')
+    elif type == 'today':
+        interpret_today(type)
+    else:
+        interpret(type)
+
 
 
 if vars(args)['target'] != '':

@@ -83,7 +83,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
     maxit = 500
     if type == 'today':
-        maxit = 2000
+        maxit = 500
     elif type == 'trumpsaid':
         maxit = 500
 
@@ -96,7 +96,10 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     plt.figure(figsize=(12, 6))
     elbow_data = plt.plot(km_df.num_clusters, km_df.cluster_errors, marker="o")
 
-    seg_threshold = 0.99  # Set this to your desired target
+    if type == 'today':
+        seg_threshold = 0.97 # Set this to your desired target
+    else:
+        seg_threshold = 0.99  # Set this to your desired target
 
     # The angle between three points
     def segments_gain(p1, v, p2):
@@ -155,7 +158,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
         current_tf_idfs = dict(zip(current_tfidf.get_feature_names(), current_tfidf.idf_))
         tf_idfs_tuples = current_tf_idfs.items()
-        cluster_themes_dict[key] = sorted(tf_idfs_tuples, key=lambda x: x[1])[:15]
+        cluster_themes_dict[key] = sorted(tf_idfs_tuples, key=lambda x: x[1])[:7]
     # print('Random Cluster {0} key words: {1}'.format(cluster_pick, [x[0] for x in cluster_themes_dict[cluster_pick]]))
 
     return cluster_themes_dict, cluster_assignments_dict

@@ -2,16 +2,13 @@ import json
 import numpy as np
 import pprint
 from interpret import detect_peaks
-from interpret.parser_articles import parse_aggregated
-import nltk
 import os
-from nltk.stem.porter import PorterStemmer
 from whoosh.index import create_in
 from whoosh.fields import *
 import whoosh.qparser
 import pytz
 
-def interpret(type):
+def interpret_today(type):
     datapath = './dataset/' + type + '/'
     interpret_datapath = './interpret/' + type + '/'
     result_file = datapath + 'result.json'
@@ -65,71 +62,7 @@ def interpret(type):
             pick_list.append(len(item['articles']))
             pick_months.append(item['month'])
             print(pick_list, pick_months, len(all_documents_title))
-            if type == 'trumpsaid':
-                all_documents_dict = all_documents_title
-            else:
-                all_documents_dict = dict(zip(all_documents_title, all_documents_text))
-
-            if len(all_documents_dict) <= 12:
-                pick_toparticles.append([])
-                print('@@@@@@@@ ERRRR')
-                continue
-            else:
-                if type == 'today' or type == 'trumpsaid':
-                    parsed_data = parse_aggregated(all_documents_dict, 2, 13, interpret_datapath, type)
-                else:
-                    parsed_data = parse_aggregated(all_documents_dict, 2, 13, interpret_datapath)
-
-            print('+++++++ PARSING')
-            parsed_data_themes = []
-            for index, parseditem in enumerate(parsed_data[0]):
-                converted_np = np.array(parsed_data[0][index]).tolist()
-                tokens = []
-                for token in converted_np:
-                    tokens.append(token[0])
-
-                parsed_data_themes.append(tokens)
-
-            #print('Interpreter: all key themes:')
-            #print(parsed_data_themes)
-
-            stemmer = PorterStemmer()
-
-            def stem_words(words_list, stemmer):
-                return [stemmer.stem(word) for word in words_list]
-
-            for index, themeitem in enumerate(parsed_data_themes):
-                zip_data = {}
-                theme_data = []
-
-                for token in themeitem:
-                    title_tokens = nltk.word_tokenize(' '.join(parsed_data[1][index]))
-                    title_stems = stem_words(title_tokens, stemmer)
-                    title_token_zip = dict(zip(title_stems, title_tokens))
-
-                    matched_token = title_token_zip.get(token)
-                    # print('Target token: {0} / Matched: {1} / Tokens Dict: {2}'.format(token, matched_token, title_token_zip))
-                    if isinstance(matched_token, str):
-                        if len(matched_token) > 1:
-                            theme_data.append(matched_token)
-                    elif isinstance(matched_token, list):
-                        if len(matched_token[0]) > 1:
-                            theme_data.append(matched_token[0])
-                    else:
-                        if len(token) > 1:
-                            theme_data.append(token)
-
-            print(theme_data)
-
-            noduplicates = []
-            for theme in theme_data:
-                if theme not in group['theme']:
-                    noduplicates.append(theme)
-
-            if len(noduplicates) <= 0:
-                querytext = ' '.join(theme_data)
-            else:
-                querytext = ' '.join(noduplicates)
+            querytext = ' '.join(group['theme'])
 
             article_pick = []
             toparticles_matched = []
@@ -138,10 +71,7 @@ def interpret(type):
                 results = searcher.search(query)
 
                 if len(results):
-                    if type == 'today':
-                        article_pick = results[0:5]
-                    else:
-                        article_pick = results[0:8]
+                    article_pick = results[0:7]
                     print(article_pick)
 
                     for a in article_pick:
@@ -167,6 +97,7 @@ def interpret(type):
 
         result_pick_data = {}
         result_pick_data['theme'] = group['theme']
+        result_pick_data['ne'] = group['namedentity']
         result_pick_data['list'] = pick_list
         result_pick_data['months'] = pick_months
         result_pick_data['toparticles'] = pick_toparticles
