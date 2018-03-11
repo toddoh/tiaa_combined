@@ -5,7 +5,7 @@
 }
 
 .about-hero .hero1{
-    font-size: 2.2em;
+    font-size: 2.3em;
     font-weight: 700;
 }
 
@@ -13,7 +13,7 @@
     color: #505050;
     font-size: 1.15em;
     word-wrap: break-word;
-    margin-top: 14px;
+    margin-top: 23px;
 }
 
 .about-hero .hero2 > p{
@@ -152,7 +152,7 @@
 
 @media all and (max-width: 980px) {
     .about-hero{
-        padding: 27vh 30px 30px;
+        padding: 44% 30px 18%;
         margin: 0 auto;
         overflow: hidden;
         transition: all 200ms ease;
@@ -164,7 +164,7 @@
     }
 
     .about-hero .hero1{
-        font-size: 1.3em;
+        font-size: 1.8em;
     }
 
     .about-hero .hero1.strike:after {
@@ -172,6 +172,20 @@
     }
 
     .about-hero .hero2{
-        font-size: 1.05em;
+        font-size: 1em;
+    }
+
+    .about-team{
+        padding: 50px 30px;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: all 200ms ease;
+    }
+
+    .about-technical{
+        padding: 50px 30px;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: all 200ms ease;
     }
 }

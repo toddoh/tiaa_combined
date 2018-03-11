@@ -203,8 +203,7 @@ const attach_events = () => {
         document.querySelector('.editorial-track-console-edit').classList.remove('opened');
         document.documentElement.className = '';
         document.querySelector('.editorial-track-console-edit .console-edit-editor').setAttribute('banana-type', '');
-        $('.editorial-track-console-edit .console-edit-editor').find('div').remove();
-        $('.editorial-track-console-edit .console-edit-editor').find('textarea').remove();
+        $('.editorial-track-console-edit .console-edit-editor').empty();
         const history_json_markup = () => html`
         `;
 
@@ -217,7 +216,7 @@ const attach_events = () => {
 
     document.querySelector('.editorial-track-console-edithistory .console-edithistory-action-cancel').addEventListener('click', function (e) {
         document.querySelector('.editorial-track-console-edithistory').classList.remove('opened');
-        $('.editorial-track-console-edithistory .console-edithistory-list').find('div').remove();
+        $('.editorial-track-console-edithistory .console-edithistory-list').empty();
         const history_json_markup = () => html`
         `;
 

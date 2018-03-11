@@ -14,22 +14,28 @@
 }
 
 .today-hero{
-    padding: 13% 90px 5%;
+    padding: 15% 90px 6%;
     display: flex;
     align-items: center;
 }
 
 .today-hero .hero1{
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-weight: 700;
+    background: linear-gradient(to right, #000000 , #969696);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .today-hero .hero2{
-    color: #505050;
-    font-size: 1.3em;
+    font-weight: 600;
+    font-size: 1.5em;
     word-wrap: break-word;
     margin-top: 5px;
-    width: 50vw;
+    width: 60vw;
+    background: linear-gradient(to right, #000000 , #969696);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .today-hero .today-herotpdetails{
@@ -63,11 +69,11 @@
     position: relative;
     break-inside: avoid;
     -webkit-column-break-inside: avoid;
-    height: 70vh;
-    overflow-y: auto;
+    height: auto;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
     transition: all 200ms ease;
-    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transform: translateZ(0);
 }
 
@@ -108,9 +114,9 @@
     position: relative;
     align-self: baseline;
     font-weight: 700;
-    font-size: 1.5em;
-    padding: 1px 3px;
-    color: #000;
+    font-size: 1.3em;
+    padding: 2px 2px;
+    color: #0073bb;
 }
 
 .today-analysis-data .analysis-list .analysis-item .themes{
@@ -257,7 +263,7 @@
     }
 
     .today-hero{
-        padding: 27vh 30px 30px;
+        padding: 44% 30px 18%;
         margin: 0 auto;
         overflow: hidden;
         transition: all 200ms ease;
@@ -268,8 +274,13 @@
         opacity: 0;
     }
 
+    .today-hero .hero1{
+        font-size: 1.8em;
+    }
+
     .today-hero .hero2{
         width: auto;
+        font-size: 1em;
     }
 
     .today-hero .today-herotpdetails{

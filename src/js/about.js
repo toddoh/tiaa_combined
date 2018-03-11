@@ -22,7 +22,7 @@ export function init_render() {
             </div>
         </div>
     </div>
-
+    <!--
     <div class="about-team">
         <p class="title-text">Team</p>
         <ul>
@@ -37,7 +37,7 @@ export function init_render() {
                 </div>
             </li>
         </ul>
-    </div>
+    </div>-->
 
     <div class="about-technical">
         <p class="title-text">Technical details</p>
