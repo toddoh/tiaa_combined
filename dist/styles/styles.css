@@ -4079,6 +4079,9 @@ div.jsoneditor .jsoneditor-search input {
     word-wrap: break-word;
     margin-top: 5px;
     width: 60vw;
+}
+
+.today-hero .hero2 > p{
     background: linear-gradient(to right, #000000 , #969696);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
