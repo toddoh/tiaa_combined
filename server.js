@@ -32,6 +32,8 @@ app.use(function (req, res, next) {
 
         if (browserName == 'IE' && browserVersion <= 11) {
             res.sendFile(path.join(__dirname, '/notice/index.html'));
+        } else if (browserName == 'Mobile Safari' && browserVersion <= 9) {
+            res.sendFile(path.join(__dirname, '/notice/index.html'));
         } else if (browserName == 'Safari' && browserVersion <= 9) {
             res.sendFile(path.join(__dirname, '/notice/index.html'));
         } else {
