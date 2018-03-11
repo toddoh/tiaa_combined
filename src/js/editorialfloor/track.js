@@ -285,18 +285,18 @@ const post_trackerdata = () => {
         document.querySelector('.editorial-track-console-add #consoleadd-title').value = '';
         document.querySelector('.editorial-track-console-add #consoleadd-section').value = '';
         document.querySelector('.editorial-track-console-add #consoleadd-content').value = '';
-        document.querySelector('.editorial-track-console-add .console-add-reviewstatus div.selected').classList.remove('selected');
-        document.querySelector('.editorial-track-console-add .console-add-datatype div.selected').classList.remove('selected');
-        document.querySelector('.editorial-track-console-add').classList.remove('opened');
+        $('.editorial-track-console-add .console-add-reviewstatus div.selected').removeClass('selected');
+        $('.editorial-track-console-add .console-add-datatype div.selected').removeClass('selected');
+        $('.editorial-track-console-add').removeClass('opened');
         document.documentElement.className = '';
 
-        load_trackerdata();
+        load_trackerdata(true);
         //window.location.reload(false); 
     })
     .catch(e => alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + e))
 }
 
-const load_trackerdata = () => {
+const load_trackerdata = (refresh) => {
     var api_url;
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/track/article';
@@ -306,6 +306,15 @@ const load_trackerdata = () => {
 
     var api_header = {
         "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
+    }
+
+    if (refresh == true) {
+        $('.editorial-track-console .track-console-list').find('ul').remove();
+        $('.editorial-track-console .track-console-list > p').remove();
+        const history_json_markup = () => html`
+        `;
+
+        render(history_json_markup(), document.querySelector('.editorial-track-console .track-console-list'));
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -344,6 +353,7 @@ const load_trackerdata = () => {
         render(data_markup(), document.querySelector('.editorial-track-console .track-console-list'));
         Array.prototype.forEach.call(document.querySelectorAll('.editorial-track-console .track-console-list .track-item-obj'), function(el, index, array) {
             var uel = el.querySelector('.item-lasteditor');
+            $(uel).removeClass('fetched');
             get_editor_username(uel, uel.getAttribute('banana-id'));
         });
         
@@ -375,7 +385,7 @@ const get_editor_username = (element, id) => {
         }).then(r => r.json()).then(function(response) {
             
             if (response) element.innerHTML = response.username;
-            if (!element.classList.contains('fetched')) element.classList.add('fetched');
+            if (!$(element).hasClass('fetched')) $(element).addClass('fetched');
             document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
         })
         .catch(e => alert("Unable to load tracker data. ERR_MSG_CODE: " + JSON.stringify(e)));
@@ -383,6 +393,11 @@ const get_editor_username = (element, id) => {
 }
 
 const update_trackerdata = () => {
+    if (document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected') == null) {
+        alert('Please select or update review stage status.');
+        return;
+    }
+
     var api_url;
     if (process.env.NODE_ENV == 'dev') {
         api_url = '//localhost:17502/track/article/edit';
@@ -418,11 +433,6 @@ const update_trackerdata = () => {
         return;
     }
 
-    if (document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected') == null) {
-        alert('Please select or update review stage status.');
-        return;
-    }
-
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
     fetch(api_url, {
         method: "POST",
@@ -432,17 +442,17 @@ const update_trackerdata = () => {
         document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
         if (response.error) return alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + JSON.stringify(response.error));
 
-        document.querySelector('.editorial-track-console-edit #consoleedit-title').value = '';
-        document.querySelector('.editorial-track-console-edit #consoleedit-section').value = '';
-        document.querySelector('.editorial-track-console-edit').setAttribute('banana-id', '');
+        $('.editorial-track-console-edit #consoleedit-title').value = '';
+        $('.editorial-track-console-edit #consoleedit-section').value = '';
+        $('.editorial-track-console-edit').attr('banana-id', '');
         const editor_textmarkup = () => html`
         `;
         render(editor_textmarkup(), document.querySelector('.editorial-track-console-edit .console-edit-editor'));
-        document.querySelector('.editorial-track-console-edit .console-edit-reviewstatus div.selected').classList.remove('selected');
-        document.querySelector('.editorial-track-console-edit').classList.remove('opened');
+        $('.editorial-track-console-edit .console-edit-reviewstatus div.selected').removeClass('selected');
+        $('.editorial-track-console-edit').removeClass('opened');
         document.documentElement.className = '';
 
-        load_trackerdata();
+        load_trackerdata(true);
         //window.location.reload(false); 
     })
     .catch(e => alert("Unable to post a new article to tracker. ERR_MSG_CODE: " + e))

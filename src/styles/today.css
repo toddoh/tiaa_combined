@@ -283,7 +283,7 @@
     }
 
     .today-analysis-data .analysis-list .analysis-item{
-        margin: 20px 0 0;
+        margin: 0;
         max-width: 100%;
         min-width: 100%;
         overflow-y: hidden;
