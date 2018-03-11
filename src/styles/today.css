@@ -25,6 +25,7 @@
     background: linear-gradient(to right, #000000 , #969696);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: translateZ(0);
 }
 
 .today-hero .hero2{
@@ -36,6 +37,7 @@
     background: linear-gradient(to right, #000000 , #969696);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: translateZ(0);
 }
 
 .today-hero .today-herotpdetails{
@@ -116,7 +118,7 @@
     font-weight: 700;
     font-size: 1.3em;
     padding: 2px 2px;
-    color: #0073bb;
+    color: #000;
 }
 
 .today-analysis-data .analysis-list .analysis-item .themes{
