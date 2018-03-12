@@ -336,9 +336,12 @@ const load_trackerdata = (refresh) => {
                         <p class="item-reviewstatus" banana-id="${dset.reviewstatus}">${dset.reviewstatus}</p>
                     </div>
                     <div class="item-actions">
-                        <p class="action-itemhistory">Revisions</p>
+                        <p class="action-itemhistory">REV</p>
                         <p class="action-edititem">Edit</p>
-                        <p class="action-delitem">Delete</p>
+                        ${dset.datatype == 'json' &&  dset.reviewstatus == 'finalapproval' ? html`
+                            <p class="action-jsonmerge">MERGE</p>
+                        ` : ''}
+                        <p class="action-delitem">DEL</p>
                     </div>
                 </li>
                 `
@@ -621,6 +624,70 @@ const attach_consolelist_events = () => {
             document.querySelector('.editorial-track-console-edithistory').classList.add('opened');
             document.documentElement.className = 'n_scroll';
         });
+    });
+
+    $('.editorial-track-console .track-item-obj .action-jsonmerge').on('click', function (e) {
+        var filepath = prompt('Please provide the path of a dataset you\'re going to merge');
+        if (filepath) {
+            document.querySelector('.minion-bidobido').classList.add('opened');
+            var itemid = getParents(this, '.track-item-obj')[0].getAttribute('banana-id');
+            var api_url;
+            if (process.env.NODE_ENV == 'dev') {
+                api_url = '//localhost:17502/track/article/' + itemid;
+            } else {
+                api_url = '//thisisallabout.com:5020/track/article/' + itemid;
+            }
+
+            var api_header = {
+                "x-access-token": localStorage.getItem('tiaa_stuart_edt_ac_t')
+            }
+
+            document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+            fetch(api_url, {
+                method: "GET",
+                headers: api_header
+            }).then(r => r.json()).then(function(response) {
+                document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_0');
+                document.querySelector('.minion-bidobido').classList.remove('opened');
+                var reversedres = response[0].revision_history.reverse();
+
+                var d_content = [];
+                var dataset_d = null;
+                var dataset_url;
+                if (process.env.NODE_ENV == 'dev') {
+                    dataset_url = 'http://localhost:3000/dataset/' + filepath + '.json';
+                } else {
+                    dataset_url = 'https://thisisallabout.com/dataset/' + filepath + '.json';
+                }
+                fetch(dataset_url).then(response => response.text()).then(function(text) {
+                    var module = eval(text);
+                    var dataset_d = module;
+                    var d_content = [];
+                    var edited_content = JSON.parse(reversedres[0].revision_item);
+            
+                    var merged = _.filter(dataset_d, function (set) {
+                        var new_data = _.filter(set.data, function (d, index) {
+                            d['header'] = edited_content[index]['header'];
+                            if (edited_content[index]['msg']) d['msg'] = edited_content[index]['msg'];
+                            console.log(d);
+                            return d;
+                        });
+
+                        return new_data;
+                    });
+                    
+                    var filename = prompt('Please provide the file name');
+                    if (!filename) return alert('Failed to create a json file: NO_FILENAME');
+                    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(merged));
+                    var downloadAnchorNode = document.createElement('a');
+                    downloadAnchorNode.setAttribute("href", dataStr);
+                    downloadAnchorNode.setAttribute("download", filename + ".json");
+                    downloadAnchorNode.click();
+                    downloadAnchorNode.remove();
+                });
+                
+            });
+        }
     });
 }
 
