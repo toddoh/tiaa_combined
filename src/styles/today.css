@@ -1,12 +1,11 @@
 .today-share.social-likes {
     z-index: 9999901;
     position: fixed;
-    left: 0;
+    left: 30px;
     top: 50%;
     transform: translateY(-50%);
-    background: #ffffff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
-    padding: 4px 6px;
+    border-right: 3px solid rgba(0,0,0,0.1);
+    padding: 0 10px 0 0;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -14,7 +13,7 @@
 }
 
 .today-hero{
-    padding: 15% 90px 6%;
+    padding: 15% 120px 6%;
     display: flex;
     align-items: center;
 }
@@ -22,10 +21,6 @@
 .today-hero .hero1{
     font-size: 2.3em;
     font-weight: 700;
-    background: linear-gradient(to right, #000000 , #969696);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: translateZ(0);
 }
 
 .today-hero .hero2{
@@ -34,13 +29,6 @@
     word-wrap: break-word;
     margin-top: 5px;
     width: 60vw;
-}
-
-.today-hero .hero2 > p{
-    background: linear-gradient(to right, #000000 , #969696);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: translateZ(0);
 }
 
 .today-hero .today-herotpdetails{
@@ -63,8 +51,8 @@
     width: 100%;
     display: grid;
     grid-gap: 1.7em;
-    grid-template-columns: repeat(auto-fill, minmax(200px,26vw));
-    margin-left: 90px;
+    grid-template-columns: repeat(auto-fill, minmax(200px,25vw));
+    margin-left: 120px;
     margin-right: 90px;
     margin-bottom: 60px;
     transform: translateZ(0);
@@ -253,7 +241,7 @@
 }
 
 .today-copyrights {
-    padding: 30px 90px;
+    padding: 30px 120px;
     font-size: 0.7em;
     width: 85%;
     color: #868686;

@@ -3,12 +3,11 @@
 .whattrumpsaid-share.social-likes {
     z-index: 9999901;
     position: fixed;
-    left: 0;
+    left: 30px;
     top: 50%;
     transform: translateY(-50%);
-    background: #ffffff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
-    padding: 4px 6px;
+    border-right: 3px solid rgba(0,0,0,0.1);
+    padding: 0 10px 0 0;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -17,16 +16,14 @@
 
 .whattrumpsaid-hero{
     display: flex;
-    padding: 18% 90px 5%;
+    padding: 18% 120px 5%;
     align-items: center;
 }
 
 .whattrumpsaid-hero .hero1{
-    font-size: 3.5em;
+    font-size: 3.3em;
     font-weight: 700;
-    background: linear-gradient(to right, #e01f00 , #ff7a1b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #005ca2;
 }
 
 .whattrumpsaid-hero .hero2{
@@ -53,7 +50,7 @@
 .whattrumpsaid-section-monthly{
     display: flex;
     flex-wrap: wrap;
-    padding: 60px 90px;
+    padding: 60px 120px;
 }
 
 .whattrumpsaid-section-monthly > p{
@@ -1026,19 +1023,20 @@
 
 .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-panelactions, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre {
     position: fixed;
-    padding: 0 20px 0 30px;
-    margin: 20px 0;
+    padding: 0 20px 0 20px;
+    margin: 20px 20px;
     display: flex;
     align-items: center;
     background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
     transform: translateZ(0);
 }
 
-.whattrumpsaid-analysis-data-action-close {
+.whattrumpsaid-analysis-data-action-close, .whattrumpsaid-analysis-data-action-close-pre {
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close > p, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre > p{
@@ -1062,15 +1060,6 @@
     margin: 0.45em 0.65em;
     align-items: center;
     display: flex;
-}
-
-.whattrumpsaid-analysis-data-action-share.social-likes:before {
-    content: '';
-    display: flex;
-    width: 2px;
-    margin-right: 10px;
-    background: #dedede;
-    align-content: center;
 }
 
 .whattrumpsaid-datapopup .item-tweets{
@@ -1141,14 +1130,15 @@
 
 .whattrumpsaid-details.opened .details-close-action{
     position: fixed;
-    padding: 20px 20px 20px 30px;
-    margin: 20px 0;
-    top: 0;
     left: 0;
+    top: 0;
+    padding: 10px 20px;
+    margin: 20px 20px;
     display: flex;
     align-items: center;
     background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
     transform: translateZ(0);
 }
 
@@ -1190,13 +1180,13 @@
 
 .whattrumpsaid-datapopup.opened .datapopup-close-action{
     position: fixed;
-    padding: 20px 20px 20px 30px;
-    margin: 20px 0;
+    padding: 10px 20px;
+    margin: 20px 20px;
     display: flex;
-    top: 0;
     align-items: center;
     background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
     transform: translateZ(0);
 }
 

@@ -1,5 +1,7 @@
 import {html, render} from 'lit-html';
 import theweek_style from '../styles/theweek.css';
+import socialLikes from 'social-likes-next';
+import social_style from 'social-likes-next/lib/social-likes_light.css';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='TheWeek';
@@ -10,6 +12,16 @@ export function init_render() {
     }
 
     const theweek_hero_markup = () => html`
+    <div class="theweek-share" data-url="https://thisisallabout.com/theweek" data-title="TheWeek on THISISALLABOUT">
+        <div data-service="facebook" title="TheWeek on THISISALLABOUT"></div>
+        <div data-service="twitter" data-via="" data-related=""></div>
+        <div data-service="plusone" title="TheWeek on THISISALLABOUT"></div>
+        <div data-service="linkedin" title="TheWeek on THISISALLABOUT"></div>
+        <div data-service="pinterest" title="TheWeek on THISISALLABOUT"></div>
+        <div class="email" title="TheWeek on THISISALLABOUT">
+            <div class="icon"></div>    
+        </div>
+    </div>
     <div class="theweek-hero">
         <div class="theweek-herotext">
             <p class="hero1 dayinfo">#TheWeek #Jan15to20th</p>
@@ -40,6 +52,11 @@ export function init_render() {
     `;
 
     render(theweek_hero_markup(), document.querySelector('.minion-contents'));
+    socialLikes(document.querySelector('.theweek-share'));
+    document.querySelector('.theweek-share .email').addEventListener('click', function (e) {
+        window.location.href = "mailto:?body=Hey, check what happened this week: " + window.location.href;
+    });
+
     document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 20, 2018 ET';
     render_data();
 }

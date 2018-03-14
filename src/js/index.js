@@ -48,21 +48,27 @@ const render_core = () => {
                 <p>Sections</p>
                 <div class="icon"></div>
             </div>
-            <p class="section-guide">Regular</p>
-            <ul class="sections-list">
-                ${contentSections.map((i) => html`
-                    <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
-                `
-                )}
-            </ul>
+            <div class="sections-wrapper">
+                <div class="sections-group">
+                    <p class="section-guide">Regular</p>
+                    <ul class="sections-list">
+                        ${contentSections.map((i) => html`
+                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                        `
+                        )}
+                    </ul>
+                </div>
 
-            <p class="section-guide">Projects</p>
-            <ul class="sections-list projects">
-                ${projectSections.map((i) => html`
-                    <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
-                `
-                )}
-            </ul>
+                <div class="sections-group">
+                    <p class="section-guide">Projects</p>
+                    <ul class="sections-list projects">
+                        ${projectSections.map((i) => html`
+                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                        `
+                        )}
+                    </ul>
+                </div>
+            </div>
             <ul class="sections-tiaainfo">
                 <li><a href="/about">About Us</a></li>
                 <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>
