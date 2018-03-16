@@ -16,16 +16,6 @@ export function init_render() {
     }
 
     const hero_markup = () => html`
-    <div class="whattrumpsaid-share" data-url="https://thisisallabout.com/whattrumpsaid" data-title="WhatTrumpSaid on THISISALLABOUT">
-        <div data-service="facebook" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div data-service="twitter" data-via="" data-related="realDonaldTrump"></div>
-        <div data-service="plusone" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div data-service="linkedin" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div data-service="pinterest" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div class="email" title="WhatTrumpSaid on THISISALLABOUT">
-            <div class="icon"></div>    
-        </div>
-    </div>
     <div class="whattrumpsaid-hero">
         <div class="whattrumpsaid-herotext">
             <p class="hero1">Reading Trump's moves</p>
@@ -34,9 +24,19 @@ export function init_render() {
                 <p>We all know that President Trump loves posting on Twitter.</p>
                 <p>And that means you can see through his fanciful game by tweets.</p>
                 <p>THISISALLABOUT did an analysis of his tweets since day one.</p>
-                <p class="content-timestamp">Updated on ...</p>
-                <p class="whattrumpsaid-action-details">Details</p>
             </div>
+            <p class="whattrumpsaid-content-timestamp">Updated on ...</p>
+            <p class="whattrumpsaid-action-details">Details</p>
+        </div>
+    </div>
+    <div class="whattrumpsaid-share" data-url="https://thisisallabout.com/whattrumpsaid" data-title="WhatTrumpSaid on THISISALLABOUT">
+        <div data-service="facebook" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div data-service="twitter" data-via="" data-related="realDonaldTrump"></div>
+        <div data-service="plusone" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div data-service="linkedin" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div data-service="pinterest" title="WhatTrumpSaid on THISISALLABOUT"></div>
+        <div class="email" title="WhatTrumpSaid on THISISALLABOUT">
+            <div class="icon"></div>    
         </div>
     </div>
     <div class="whattrumpsaid-section-monthly">
@@ -68,7 +68,7 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.content-timestamp').innerHTML = 'Updated on Feb 20, 2018 ET';
+    document.querySelector('.whattrumpsaid-content-timestamp').innerHTML = 'Updated on Mar 30, 2018 ET';
 
     var month_index_data = [
         {

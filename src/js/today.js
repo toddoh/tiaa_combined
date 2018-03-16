@@ -11,6 +11,15 @@ export function init_render() {
     document.querySelector('.minion-sections li[data-sectionid="nav-section-today"]').classList.add('current');
 
     const today_hero_markup = () => html`
+    <div class="today-hero">
+        <div class="today-herotext">
+            <p class="hero1 dayinfo">Today: </p>
+            <div class="hero2">
+                <p>Updated Hourly: An unbiased content cluster of issues trending across mainstream media</p>
+            </div>
+            <p class="today-herotpdetails">More</p>
+        </div>
+    </div>
     <div class="today-share" data-url="https://thisisallabout.com/" data-title="Today on THISISALLABOUT">
         <div data-service="facebook" title="Today on THISISALLABOUT"></div>
         <div data-service="twitter" data-via="" data-related=""></div>
@@ -19,15 +28,6 @@ export function init_render() {
         <div data-service="pinterest" title="Today on THISISALLABOUT"></div>
         <div class="email" title="Today on THISISALLABOUT">
             <div class="icon"></div>    
-        </div>
-    </div>
-    <div class="today-hero">
-        <div class="today-herotext">
-            <p class="hero1 dayinfo">Today: </p>
-            <div class="hero2">
-                <p>Updated Hourly: An unbiased content cluster of issues trending across mainstream media</p>
-            </div>
-            <p class="today-herotpdetails">More</p>
         </div>
     </div>
     <div class="today-analysis-data">

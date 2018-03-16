@@ -1,5 +1,7 @@
 import {html, render} from 'lit-html';
 import theyear_style from '../../styles/theyear/base.css';
+import socialLikes from 'social-likes-next';
+import social_style from 'social-likes-next/lib/social-likes_light.css';
 
 export function init_render() {
     document.querySelector('.navbox-currentpath').textContent ='TheYear';
@@ -17,8 +19,18 @@ export function init_render() {
             <div class="hero2">
                 <p>This month, to celebrate Trump's first year mark in the White House.</p>
                 <p>we rediscovered what has happened in our nation during then.</p>
-                <p class="theyear-herotpdetails">More</p>
             </div>
+            <p class="theyear-herotpdetails">More</p>
+        </div>
+    </div>
+    <div class="theyear-share" data-url="https://thisisallabout.com/theweek" data-title="TheWeek on THISISALLABOUT">
+        <div data-service="facebook" title="TheWeek on THISISALLABOUT"></div>
+        <div data-service="twitter" data-via="" data-related=""></div>
+        <div data-service="plusone" title="TheWeek on THISISALLABOUT"></div>
+        <div data-service="linkedin" title="TheWeek on THISISALLABOUT"></div>
+        <div data-service="pinterest" title="TheWeek on THISISALLABOUT"></div>
+        <div class="email" title="TheWeek on THISISALLABOUT">
+            <div class="icon"></div>    
         </div>
     </div>
     <div class="theyear-analysis-data">
@@ -46,6 +58,11 @@ export function init_render() {
     render(hero_markup(), document.querySelector('.minion-contents'));
     document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 16, 2018 ET';
     render_data();
+
+    socialLikes(document.querySelector('.theyear-share'));
+    document.querySelector('.theyear-share .email').addEventListener('click', function (e) {
+        window.location.href = "mailto:?body=Hey, check trending issues of this year: " + window.location.href;
+    });
 }
 
 const check_mobile = () => {
@@ -235,16 +252,16 @@ const postrender_data = () => {
     }
 
     document.querySelector('.theyear-herotpdetails').addEventListener('click', function (e) {
-        if (!document.querySelector('.theyear-tpdetails').classList.contains('revealed'))
-            document.querySelector('.theyear-tpdetails').classList.add('revealed');
+        if (!document.querySelector('.theyear-tpdetails').classList.contains('opened'))
+            document.querySelector('.theyear-tpdetails').classList.add('opened');
 
         if (!document.querySelector('.theyear-analysis-data').classList.contains('hidden'))
             document.querySelector('.theyear-analysis-data').classList.add('hidden');
     });
 
     document.querySelector('.theyear-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
-        if (document.querySelector('.theyear-tpdetails').classList.contains('revealed'))
-            document.querySelector('.theyear-tpdetails').classList.remove('revealed');
+        if (document.querySelector('.theyear-tpdetails').classList.contains('opened'))
+            document.querySelector('.theyear-tpdetails').classList.remove('opened');
 
         if (document.querySelector('.theyear-analysis-data').classList.contains('hidden'))
             document.querySelector('.theyear-analysis-data').classList.remove('hidden');

@@ -1,5 +1,5 @@
 .about-hero{
-    padding: 27vh 200px 50px 60px;
+    padding: 18% 120px 5%;
     display: flex;
     align-items: center;
 }
@@ -28,7 +28,7 @@
 }
 
 .about-team{
-    padding: 50px 200px 50px 60px;
+    padding: 50px 200px 50px 120px;
     display: flex;
     flex-direction: column;
     background: #f9f9f9;
@@ -93,7 +93,7 @@
 }
 
 .about-technical{
-    padding: 50px 200px 50px 60px;
+    padding: 50px 200px 50px 120px;
     display: flex;
     flex-direction: column;
 }
@@ -187,5 +187,16 @@
         margin: 0 auto;
         overflow: hidden;
         transition: all 200ms ease;
+    }
+
+    .about-technical .step-desc li {
+        display: flex;
+        width: auto;
+        height: 120px;
+        padding: 20px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        position: relative;
+        box-shadow: 0 0 30px rgba(0,0,0,0.15);
     }
 }

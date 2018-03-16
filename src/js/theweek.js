@@ -12,6 +12,13 @@ export function init_render() {
     }
 
     const theweek_hero_markup = () => html`
+    <div class="theweek-hero">
+        <div class="theweek-herotext">
+            <p class="hero1 dayinfo">#TheWeek #Jan15to20th</p>
+            <p class="hero1 things"></p>
+            <p class="theweek-herotpdetails">More</p>
+        </div>
+    </div>
     <div class="theweek-share" data-url="https://thisisallabout.com/theweek" data-title="TheWeek on THISISALLABOUT">
         <div data-service="facebook" title="TheWeek on THISISALLABOUT"></div>
         <div data-service="twitter" data-via="" data-related=""></div>
@@ -20,13 +27,6 @@ export function init_render() {
         <div data-service="pinterest" title="TheWeek on THISISALLABOUT"></div>
         <div class="email" title="TheWeek on THISISALLABOUT">
             <div class="icon"></div>    
-        </div>
-    </div>
-    <div class="theweek-hero">
-        <div class="theweek-herotext">
-            <p class="hero1 dayinfo">#TheWeek #Jan15to20th</p>
-            <p class="hero1 things"></p>
-            <p class="theweek-herotpdetails">More</p>
         </div>
     </div>
     <div class="theweek-analysis-data">
@@ -234,16 +234,16 @@ const postrender_data = () => {
     }
 
     document.querySelector('.theweek-herotpdetails').addEventListener('click', function (e) {
-        if (!document.querySelector('.theweek-tpdetails').classList.contains('revealed'))
-            document.querySelector('.theweek-tpdetails').classList.add('revealed');
+        if (!document.querySelector('.theweek-tpdetails').classList.contains('opened'))
+            document.querySelector('.theweek-tpdetails').classList.add('opened');
 
         if (!document.querySelector('.theweek-analysis-data').classList.contains('hidden'))
             document.querySelector('.theweek-analysis-data').classList.add('hidden');
     });
 
     document.querySelector('.theweek-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
-        if (document.querySelector('.theweek-tpdetails').classList.contains('revealed'))
-            document.querySelector('.theweek-tpdetails').classList.remove('revealed');
+        if (document.querySelector('.theweek-tpdetails').classList.contains('opened'))
+            document.querySelector('.theweek-tpdetails').classList.remove('opened');
 
         if (document.querySelector('.theweek-analysis-data').classList.contains('hidden'))
             document.querySelector('.theweek-analysis-data').classList.remove('hidden');

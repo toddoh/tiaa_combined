@@ -6,8 +6,8 @@
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
-    border-right: 3px solid rgba(0,0,0,0.1);
-    padding: 0 10px 0 0;
+    background: #ffffff;
+    padding: 4px 0;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -27,19 +27,19 @@
 }
 
 .whattrumpsaid-hero .hero2{
-    font-size: 1.1em;
+    font-size: 1.5em;
+    font-weight: 600;
     word-wrap: break-word;
-    margin: 30px auto;
+    color: #003c69;
+    margin-top: 10px;
 }
 
-.whattrumpsaid-hero .content-timestamp {
-    font-size: 0.8em;
+.whattrumpsaid-hero .whattrumpsaid-content-timestamp {
     margin-top: 8px;
     color: #525252;
 }
 
 .whattrumpsaid-hero .whattrumpsaid-action-details{
-    font-size: 0.8em;
     padding-top: 8px;
     padding-bottom: 8px;
     color: #525252;
@@ -55,8 +55,8 @@
 
 .whattrumpsaid-section-monthly > p{
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 1.5em;
+    font-weight: 600;
+    font-size: 1.3em;
 }
 
 .whattrumpsaid-analysis-group {
@@ -1168,7 +1168,7 @@
 }
 
 .whattrumpsaid-datapopup.opened .datapopup-contents {
-    padding: 80px;
+    padding: 120px 10%;
     height: calc(100% - 160px);
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
@@ -1180,6 +1180,7 @@
 
 .whattrumpsaid-datapopup.opened .datapopup-close-action{
     position: fixed;
+    top: 0;
     padding: 10px 20px;
     margin: 20px 20px;
     display: flex;
@@ -1199,10 +1200,14 @@
 
 @media all and (max-width: 980px) {
     .whattrumpsaid-share.social-likes {
-        bottom: 0;
+        z-index: 1;
+        left: initial;
+        padding: 0 25px 0 20px;
+        margin-bottom: 20px;
         top: initial;
-        transform: none;
         flex-direction: row;
+        transform: none;
+        position: relative;
     }
 
     .whattrumpsaid-hero{
@@ -1216,6 +1221,14 @@
     .whattrumpsaid-hero .hero2{
         font-size: 1em;
         margin: 20px auto;
+    }
+
+    .whattrumpsaid-hero .content-timestamp {
+        font-size: 0.97em;
+    }
+
+    .whattrumpsaid-hero .whattrumpsaid-action-details {
+        font-size: 0.97em;
     }
 
     .whattrumpsaid-section-monthly {

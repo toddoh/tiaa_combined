@@ -5,6 +5,10 @@ body.editorial .minion-editorial-header{
     z-index: 9999901;
 }
 
+body.editorial .minion-navbox{
+    display: none;
+}
+
 .minion-stuartbox{
     display: block;
     position: fixed;
@@ -30,7 +34,7 @@ body.editorial .minion-editorial-header{
 
 .minion-stuart-head {
     margin-right: 30px;
-    height: 62px;
+    height: 55px;
     display: flex;
     z-index: 9999902;
 }
@@ -39,8 +43,8 @@ body.editorial .minion-editorial-header{
     content: '';
     display: flex;
     width: 2px;
-    margin: 10px 18px 10px 0;
-    background: #dedede;
+    margin: 13px 13px 13px 13px;
+    background: #a7a7a7;
     align-content: center;
 }
 
@@ -48,13 +52,15 @@ body.editorial .minion-editorial-header{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 62px;
+    height: 55px;
+    margin-left: 5px;
 }
 
 .stuart-sections-reveal > p{
     font-weight: 700;
     margin-right: 7px;
     letter-spacing: -0.2px;
+    font-size: 0.95em;
 }
 
 .stuart-sections-reveal > div{
