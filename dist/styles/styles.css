@@ -551,7 +551,7 @@ body{
 }
 
 .theyear-hero{
-    padding: 18% 120px 5%;
+    padding: 18% 0px 5% 120px;
     display: flex;
     align-items: center;
 }
@@ -835,9 +835,9 @@ body{
 }
 
 .theyear-copyrights {
-    padding: 30px 120px;
+    padding: 30px 0 30px 120px;
     font-size: 0.7em;
-    width: 85%;
+    width: 80%;
     color: #868686;
 }
 
@@ -3765,7 +3765,7 @@ div.jsoneditor .jsoneditor-search input {
 }
 
 .theweek-hero{
-    padding: 15% 120px 6%;
+    padding: 15% 0px 6% 120px;
     display: flex;
     align-items: center;
 }
@@ -3978,9 +3978,9 @@ div.jsoneditor .jsoneditor-search input {
 }
 
 .theweek-copyrights {
-    padding: 30px 120px;
+    padding: 30px 0 30px 120px;
     font-size: 0.7em;
-    width: 85%;
+    width: 80%;
     color: #868686;
 }
 
@@ -4394,7 +4394,7 @@ div.jsoneditor .jsoneditor-search input {
 }
 
 .today-hero{
-    padding: 15% 120px 6%;
+    padding: 15% 0px 6% 120px;
     display: flex;
     align-items: center;
 }
@@ -4434,7 +4434,7 @@ div.jsoneditor .jsoneditor-search input {
     grid-gap: 1.7em;
     grid-template-columns: repeat(auto-fill, minmax(200px,25vw));
     margin-left: 120px;
-    margin-right: 90px;
+    margin-right: 0;
     margin-bottom: 60px;
     transform: translateZ(0);
 }
@@ -4623,9 +4623,9 @@ div.jsoneditor .jsoneditor-search input {
 }
 
 .today-copyrights {
-    padding: 30px 120px;
+    padding: 30px 0 30px 120px;
     font-size: 0.7em;
-    width: 85%;
+    width: 80%;
     color: #868686;
 }
 

@@ -19,8 +19,8 @@ def aggregator_storeobject(item):
     twitter_list_target = 'usasociety'
     if item == 'usasociety':
         twitter_list_target = 'usa-society1'
-    elif item == 'trumptimemachine':
-        twitter_list_target = 'usa-ttm'
+    elif item == 'theyear':
+        twitter_list_target = 'usa-publicfunded'
     elif item == 'trumpsaid':
         twitter_list_target = 'usa-trump'
 

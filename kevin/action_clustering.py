@@ -8,12 +8,8 @@ def init_task(type):
         collection_list = ['usasociety']
         for item in collection_list:
             cluster_articles(item, 'today', 24)
-    elif type == 'issues':
-        collection_list = ['usasociety']
-        for item in collection_list:
-            cluster_articles(item, 'issues', 168)
-    elif type == 'trumptimemachine':
-        collection_list = ['trumptimemachine']
+    elif type == 'theyear':
+        collection_list = ['theyear']
         for item in collection_list:
             cluster_articles(item, None, 90000009)
     elif type == 'trumpsaid':

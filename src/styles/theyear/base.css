@@ -13,7 +13,7 @@
 }
 
 .theyear-hero{
-    padding: 18% 120px 5%;
+    padding: 18% 0px 5% 120px;
     display: flex;
     align-items: center;
 }
@@ -297,9 +297,9 @@
 }
 
 .theyear-copyrights {
-    padding: 30px 120px;
+    padding: 30px 0 30px 120px;
     font-size: 0.7em;
-    width: 85%;
+    width: 80%;
     color: #868686;
 }
 

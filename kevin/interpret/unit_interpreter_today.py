@@ -1,6 +1,4 @@
 import json
-import numpy as np
-import pprint
 from interpret import detect_peaks
 import os
 from whoosh.index import create_in
@@ -47,7 +45,7 @@ def interpret_today(type):
 
             with ix.searcher() as searcher:
                 query = whoosh.qparser.QueryParser("title", ix.schema, group=whoosh.qparser.OrGroup).parse(pick_theme)
-                results = searcher.search(query, limit=500)
+                results = searcher.search(query, limit=100)
 
                 if len(results):
                     article_pick = results
@@ -71,7 +69,7 @@ def interpret_today(type):
                 results = searcher.search(query)
 
                 if len(results):
-                    article_pick = results[0:7]
+                    article_pick = results[0:5]
                     print(article_pick)
 
                     for a in article_pick:
@@ -111,9 +109,16 @@ def interpret_today(type):
         all_results.append(result_pick_data)
         print('--------- CLUSTER DONE: {0}'.format(group['theme']))
 
+        time_file = datetime.datetime.now(pytz.timezone('US/Eastern'))
+        time_file_string = time_file.strftime("%Y%m%d-%H%M")
     if type == 'today':
         os.makedirs('../dataset/' + type + '/', exist_ok=True)
         interpret_datapath_today = '../dataset/' + type + '/' + type + '_data.json'
+        with open(interpret_datapath_today, 'w') as f:
+            json.dump(all_results, f, indent=4, sort_keys=True)
+
+        os.makedirs('../dataset/' + type + '/', exist_ok=True)
+        interpret_datapath_today = '../dataset/' + type + '/' + type + '_' + time_file_string + '_data.json'
         with open(interpret_datapath_today, 'w') as f:
             json.dump(all_results, f, indent=4, sort_keys=True)
     else:

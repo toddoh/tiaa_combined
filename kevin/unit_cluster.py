@@ -115,11 +115,11 @@ def cluster_articles(item, type=None, mode=None):
 
         tfidfpath = './dataset/' + type + '/'
         if type == 'today':
-            parsed_data = parse_aggregated(parsed_article_dict, 2, 15, tfidfpath, 'today')
+            parsed_data = parse_aggregated(parsed_article_dict, 2, 10, tfidfpath, 'today')
         elif type == 'trumpsaid':
             parsed_data = parse_aggregated(parsed_article_dict, 2, 25, tfidfpath, 'trumpsaid')
         else:
-            parsed_data = parse_aggregated(parsed_article_dict, 3, 15, tfidfpath)
+            parsed_data = parse_aggregated(parsed_article_dict, 3, 13, tfidfpath)
         origin_data_raw = cursor
 
         # print(parsed_data[0])

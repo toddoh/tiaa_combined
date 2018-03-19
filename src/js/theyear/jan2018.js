@@ -14,7 +14,7 @@ export function init_render() {
     const hero_markup = () => html`
     <div class="theyear-hero">
         <div class="theyear-herotext">
-            <p class="hero1 strike">#Jan2017toJan2018</p>
+            <p class="hero1 strike">#Jan2017-Jan2018</p>
             <p class="hero1">It's been a giant mess.</p>
             <div class="hero2">
                 <p>This month, to celebrate Trump's first year mark in the White House.</p>

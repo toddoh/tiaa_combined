@@ -9,9 +9,9 @@ def today():
         aggregator_storeobject(item)
 
 
-# trumptimemachine section
-def trumptimemachine():
-    collection_list = ['trumptimemachine']
+# theyear section
+def theyear():
+    collection_list = ['theyear']
     for item in collection_list:
         aggregator_storeobject(item)
 
@@ -33,8 +33,8 @@ f = open('./logs/action_aggregation_' + vars(args)['target'] + '.txt', 'w')
 sys.stdout = f
 
 print(vars(args), vars(args)['target'])
-if vars(args)['target'] == 'trumptimemachine':
-    trumptimemachine()
+if vars(args)['target'] == 'theyear':
+    theyear()
 elif vars(args)['target'] == 'today':
     today()
 elif vars(args)['target'] == 'trumpsaid':
