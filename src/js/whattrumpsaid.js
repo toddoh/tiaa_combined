@@ -68,7 +68,7 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.whattrumpsaid-content-timestamp').innerHTML = 'Updated on Mar 30, 2018 ET';
+    document.querySelector('.whattrumpsaid-content-timestamp').innerHTML = 'Updated on Mar 25, 2018 ET / Early-Preview Stage';
 
     var month_index_data = [
         {

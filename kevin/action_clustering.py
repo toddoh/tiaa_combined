@@ -11,7 +11,7 @@ def init_task(type):
     elif type == 'theyear':
         collection_list = ['theyear']
         for item in collection_list:
-            cluster_articles(item, None, 90000009)
+            cluster_articles(item, 'theyear', 90000001)
     elif type == 'trumpsaid':
         collection_list = ['trumpsaid']
         for item in collection_list:

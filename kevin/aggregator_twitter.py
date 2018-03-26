@@ -157,9 +157,9 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
                         parsed_article_data.append(parse_data)
                 else:
                     if len(status.urls):
-                        if status.urls[0].expanded_url:
+                        if status.urls[0].url:
                             try:
-                                resp = session.head(status.urls[0].expanded_url, allow_redirects=True)
+                                resp = session.head(status.urls[0].url, allow_redirects=True)
                                 if 'twitter.com/' not in resp.url:
                                     parse_target = Article(resp.url)
                                     parse_data = get_article_info(parse_target, status.user.name, status.id, status.created_at)

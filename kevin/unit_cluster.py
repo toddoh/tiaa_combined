@@ -74,6 +74,10 @@ def cluster_articles(item, type=None, mode=None):
         # cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
         cursor = list(collection.find({}).sort([('_id', 1)]))
         print(len(cursor))
+    elif mode == 90000001:
+        # cursor = list(collection.find({}).sort([('_id', 1)]).limit(3000))
+        cursor = list(collection.find({"ts": {"$gt": int(1489554000), "$lt": int(1521089999)}}).sort([('_id', 1)]))
+        print(len(cursor))
     else:
         last_hour_date_time = datetime.now() - timedelta(hours=mode)
         unix_time = last_hour_date_time.strftime("%s")
@@ -119,7 +123,7 @@ def cluster_articles(item, type=None, mode=None):
         elif type == 'trumpsaid':
             parsed_data = parse_aggregated(parsed_article_dict, 2, 25, tfidfpath, 'trumpsaid')
         else:
-            parsed_data = parse_aggregated(parsed_article_dict, 3, 13, tfidfpath)
+            parsed_data = parse_aggregated(parsed_article_dict, 2, 10, tfidfpath)
         origin_data_raw = cursor
 
         # print(parsed_data[0])
@@ -194,6 +198,8 @@ def cluster_articles(item, type=None, mode=None):
                     elif mode <= 168:
                         timeformat = '%Y-%m-%d'
                     elif mode == 90000009:
+                        timeformat = '%Y-%m'
+                    elif mode == 90000001:
                         timeformat = '%Y-%m'
 
                     filter['date_month'] = datetime.fromtimestamp(filter['ts'], us_eastern_time).strftime(timeformat)

@@ -50,7 +50,7 @@ def interpret(type):
 
             with ix.searcher() as searcher:
                 query = whoosh.qparser.QueryParser("title", ix.schema, group=whoosh.qparser.OrGroup).parse(pick_theme)
-                results = searcher.search(query, limit=500)
+                results = searcher.search(query, limit=200)
 
                 if len(results):
                     article_pick = results
@@ -121,27 +121,17 @@ def interpret(type):
 
             print(theme_data)
 
-            noduplicates = []
-            for theme in theme_data:
-                if theme not in group['theme']:
-                    noduplicates.append(theme)
-
-            if len(noduplicates) <= 0:
-                querytext = ' '.join(theme_data)
-            else:
-                querytext = ' '.join(noduplicates)
+            querytext = ' '.join(theme_data)
 
             article_pick = []
-            toparticles_matched = []
+            toparticles_matched = {}
+            toparticles_matched['articles'] = []
             with ix.searcher() as searcher:
                 query = whoosh.qparser.QueryParser("title", ix.schema, group=whoosh.qparser.OrGroup).parse(querytext)
                 results = searcher.search(query)
 
                 if len(results):
-                    if type == 'today':
-                        article_pick = results[0:5]
-                    else:
-                        article_pick = results[0:8]
+                    article_pick = results[0:5]
                     print(article_pick)
 
                     for a in article_pick:
@@ -149,9 +139,10 @@ def interpret(type):
                             if a['path'] == article['_id']:
                                 if 'text' in article:
                                     del article['text']
-                                toparticles_matched.append(article)
+                                toparticles_matched['articles'].append(article)
 
-
+            toparticles_matched['month'] = toparticles_matched['articles'][0]['date_month']
+            toparticles_matched['theme'] = theme_data
             pick_toparticles.append(toparticles_matched)
             print(toparticles_matched)
             print('########## DONE: {0}'.format(item['month']))

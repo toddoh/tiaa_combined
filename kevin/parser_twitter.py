@@ -31,6 +31,9 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     # add custom words
     if type == 'trumpsaid':
         cachedStopWords.update(['great', 'MAGA', 'America', 'make', 'American', '...', 'Trump', 'Thank', 'country'])
+    else:
+        cachedStopWords.update(['periscope', 'pbs', 'newshour', 'npr', 'watch'])
+
 
     print('Calculating tf-idf vectors...')
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words=cachedStopWords)
@@ -81,7 +84,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
     pca = PCA(n_components=2).fit(tfs.todense())
     data2D = pca.transform(tfs.todense())
 
-    maxit = 500
+    maxit = 200
     if type == 'today':
         maxit = 500
     elif type == 'trumpsaid':
@@ -124,6 +127,7 @@ def parse_aggregated(data, rangeMin=2, rangeMax=21, tfidfpath='./dataset/', type
 
     kIdx += 1
     plt.savefig(tfidfpath + 'elbow_plot.png')
+
     # plt.show()
 
     print('Found optimal k value: {0}'.format(kIdx))
