@@ -4,9 +4,7 @@ import socialLikes from 'social-likes-next';
 import social_style from 'social-likes-next/lib/social-likes_light.css';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='TheYear';
-    document.querySelector('.navbox-static').classList.add('theyear');
-    document.querySelector('.minion-sections li[data-sectionid="nav-section-theyear"]').classList.add('current');
+    document.querySelector('.minion-header li[data-sectionid="nav-section-theyear"]').classList.add('current');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
@@ -56,7 +54,6 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 16, 2018 ET';
     render_data();
 
     socialLikes(document.querySelector('.theyear-share'));

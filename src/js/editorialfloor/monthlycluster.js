@@ -3,8 +3,6 @@ import {html, render} from 'lit-html';
 import moment from 'moment';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='Editorial /monthlycluster';
-    document.querySelector('.navbox-static').classList.add('editorial');
     document.body.classList.add('editorial');
 
     const hero_markup = () => html`
@@ -28,7 +26,6 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'rev 1.2.0';
 
     generate_data();
 }

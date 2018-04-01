@@ -83,26 +83,6 @@ html.safari .minion-header.scroll_bar{
     flex-shrink: 0;
 }
 
-.navbox-currentpath{
-    width: 0;
-    overflow: hidden;
-    display: none;
-    margin-left: 0;
-}
-
-.minion-header .minion-navbox .navbox-currentpath{
-    font-weight: 700;
-    margin-left: 10px;
-    width: auto;
-    display: block;
-    overflow: initial;
-}
-
-.minion-navbox.visible .navbox-currentpath.long{
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
 /* sectionbox and sections */
 
 .minion-sectionbox {
@@ -205,16 +185,6 @@ html.safari .minion-header.scroll_bar{
     margin-right: 8px;
     word-break: break-all;
     word-wrap: break-word;
-}
-
-.minion-timestamp{
-    display: none;
-    width: 279px;
-    margin-left: auto;
-    margin-right: 30px;
-    padding-top: 33px;
-    text-align: right;
-    color: #737373;
 }
 
 .minion-dataload{

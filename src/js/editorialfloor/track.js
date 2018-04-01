@@ -6,8 +6,6 @@ import JSONEditor from 'jsoneditor';
 import _ from 'lodash';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='Editorial /track';
-    document.querySelector('.navbox-static').classList.add('editorial');
     document.body.classList.add('editorial');
 
     const hero_markup = () => html`

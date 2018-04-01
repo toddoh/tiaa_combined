@@ -6,11 +6,9 @@ import moment from 'moment';
 import _ from 'lodash';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='WhatTrumpSaid';
-    document.querySelector('.navbox-static').classList.add('whattrumpsaid');
     document.body.classList.add('whattrumpsaid');
     document.title = "WhatTrumpSaid on THISISALLABOUT";
-    document.querySelector('.minion-sections li[data-sectionid="nav-section-whattrumpsaid"]').classList.add('current');
+    document.querySelector('.minion-header li[data-sectionid="nav-section-whattrumpsaid"]').classList.add('current');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }

@@ -2,8 +2,6 @@ import {html, render} from 'lit-html';
 import theyear_style from '../styles/theyear/base.css';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='TrumpFirstYear';
-    document.querySelector('.navbox-static').classList.add('donaldtrump');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
     }
@@ -40,7 +38,6 @@ export function init_render() {
     `;
 
     render(hero_markup(), document.querySelector('.minion-contents'));
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 16, 2018 ET';
     render_data();
 }
 

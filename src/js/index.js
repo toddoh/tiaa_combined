@@ -17,7 +17,6 @@ require('../resources/favicons/safari-pinned-tab.svg');
 const render_core = () => {
     const contentSections = [
         { id: 'nav-section-today', name: 'Today', path: '' },
-        { id: 'nav-section-theweek', name: 'TheWeek', path: 'theweek' },
         { id: 'nav-section-theyear', name: 'TheYear', path: 'theyear' }
     ];
 
@@ -25,35 +24,49 @@ const render_core = () => {
         { id: 'nav-section-whattrumpsaid', name: 'WhatTrumpSaid', path: 'whattrumpsaid' }
     ];
 
+    const labSections = [
+        { id: 'nav-section-datatodaycluster', name: 'HourlyClusters', path: 'lab?type=hourlycluster' }
+    ];
+
+    const featuredSections = [
+        { id: 'nav-section-today', name: 'Today', path: '' },
+        { id: 'nav-section-theyear', name: 'TheYear', path: 'theyear' },
+        { id: 'nav-section-whattrumpsaid', name: 'WhatTrumpSaid', path: 'whattrumpsaid' },
+        { id: 'nav-section-about', name: 'About us', path: 'about' }
+    ];
+
     const top_frame_markup = () => html`
     <div class="minion-root">
         <div class="minion-header">
-            <div class="minion-sectionbox">
-                <div class="minion-sections-reveal">
-                    <p>Sections</p>
-                    <div class="icon"></div>
-                </div>
+            <div class="minion-reveal-navmenu">
+                <div class="icon"></div>
             </div>
-            <div class="minion-navbox">
-                <div class="navbox-static">
-                    <div class="navbox-logo"></div>
-                    <p class="navbox-currentpath">Today</p>
-                </div>
-            </div>
-            <div class="minion-timestamp">
-                <div class="content-ts">
-                    <span class="ts-date">...</span>
+            <div class="header-box">
+                <div class="minion-tiaa-logo">THISISALLABOUT</div>
+                <div class="minion-featured-sections">
+                    <ul class="sections-list">
+                        ${featuredSections.map((i) => html`
+                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                        `
+                        )}
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="minion-sections">
-            <div class="minion-sections-reveal">
-                <p>Sections</p>
+
+        <div class="minion-navmenu">
+            <div class="minion-close-navmenu">
                 <div class="icon"></div>
             </div>
+
+            <div class="navmenu-intro">
+                <p>This is all about</p>
+                <p>what really matters.</p>
+            </div>
+
             <div class="sections-wrapper">
                 <div class="sections-group">
-                    <p class="section-guide">Regular</p>
+                    <p class="section-guide">REGULAR</p>
                     <ul class="sections-list">
                         ${contentSections.map((i) => html`
                             <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
@@ -63,7 +76,7 @@ const render_core = () => {
                 </div>
 
                 <div class="sections-group">
-                    <p class="section-guide">Projects</p>
+                    <p class="section-guide">PROJECTS</p>
                     <ul class="sections-list projects">
                         ${projectSections.map((i) => html`
                             <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
@@ -71,13 +84,28 @@ const render_core = () => {
                         )}
                     </ul>
                 </div>
+
+                <div class="sections-group">
+                    <p class="section-guide">LABORATORY</p>
+                    <ul class="sections-list lab">
+                        ${labSections.map((i) => html`
+                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                        `
+                        )}
+                    </ul>
+                </div>
+
+                <div class="sections-group">
+                    <p class="section-guide">CONNECT WITH US</p>
+                    <ul class="sections-tiaainfo">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>
+                        <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="sections-tiaainfo">
-                <li><a href="/about">About Us</a></li>
-                <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>
-                <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
-            </ul>
         </div>
+
         <div class="minion-contents">
         </div>
         <div class="minion-dataload"></div>
@@ -122,31 +150,10 @@ window.addEventListener('scroll', function (e) {
     }
 });
 
-var section_reveal = document.querySelectorAll('.minion-sections-reveal');
-for (var i=0; i < section_reveal.length; i++) {
-    section_reveal[i].addEventListener('click', function (e) {
-        if (!document.querySelector('.minion-sections').classList.contains('opened')) {
-            document.querySelector('.minion-sections').classList.add('opened');
-        } else {
-            document.querySelector('.minion-sections').classList.remove('opened');
-        }
-    });
-}
+document.querySelector('.minion-reveal-navmenu').addEventListener('click', function (e) {
+    document.querySelector('.minion-navmenu').classList.add('opened');
+});
 
-document.querySelector('.minion-navbox').addEventListener('click', (e) => {
-    if (!document.querySelector('.minion-navbox').classList.contains('visible')) {
-        document.querySelector('.minion-navbox').classList.add('visible');
-        if (document.querySelector('.navbox-currentpath').offsetWidth >= 165) {
-            document.querySelector('.navbox-currentpath').classList.add('long');
-        } else {
-            if (!document.querySelector('.navbox-currentpath').classList.contains('long'))
-                document.querySelector('.navbox-currentpath').classList.remove('long');
-        }
-    } else {
-        if (document.querySelector('.minion-navbox').classList.contains('visible'))
-            document.querySelector('.minion-navbox').classList.remove('visible');
-
-        if (document.querySelector('.navbox-currentpath').classList.contains('long'))
-                document.querySelector('.navbox-currentpath').classList.remove('long');
-    }
+document.querySelector('.minion-close-navmenu').addEventListener('click', function (e) {
+    document.querySelector('.minion-navmenu').classList.remove('opened');
 });

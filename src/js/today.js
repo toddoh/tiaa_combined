@@ -6,9 +6,7 @@ import moment from 'moment';
 import tz from 'moment-timezone';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='Today';
-    document.querySelector('.navbox-static').classList.add('today');
-    document.querySelector('.minion-sections li[data-sectionid="nav-section-today"]').classList.add('current');
+    document.querySelector('.minion-header li[data-sectionid="nav-section-today"]').classList.add('current');
 
     const today_hero_markup = () => html`
     <div class="today-hero">
@@ -139,7 +137,6 @@ const render_data = () => {
 
 const postrender_data = () => {
     $('.today-analysis-data .analysis-item').each(function() {
-        console.log($($(this).find('.toparticle-object')[0]).attr('banana-imagesrc'));
         if ($($(this).find('.toparticle-object')[0]).attr('banana-imagesrc') != '') {
             $(this).find('.item-image').css('background-image', 'url(' + $($(this).find('.toparticle-object')[0]).attr('banana-imagesrc') + ')');
             $(this).find('.item-image').addClass('exist');

@@ -2,8 +2,6 @@ import styles from '../../styles/editorialfloor/dataextract.css';
 import {html, render} from 'lit-html';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='Editorial /datasetextract';
-    document.querySelector('.navbox-static').classList.add('editorial');
     document.body.classList.add('editorial');
 
     const hero_markup = () => html`

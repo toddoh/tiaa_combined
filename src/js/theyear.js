@@ -11,8 +11,6 @@ export function init_render() {
     }
 
     if (getpathparam('type') !== '' && getpathparam('type') !== null) {
-        document.querySelector('.navbox-currentpath').textContent ='TheYear';
-
         import('./theyear/' + getpathparam('type')).then(module => {
             module.init_render();
         });

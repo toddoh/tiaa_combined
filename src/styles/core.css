@@ -11,8 +11,6 @@ h1,h2,h3,h4,h5,h6{
     font-family:inherit;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
-
 html{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     overflow: auto;
@@ -47,115 +45,69 @@ body{
     width: 100%;
     height: 55px;
     z-index: 9999901;
-    justify-content: flex-start;
-    transition: all 150ms ease
+    align-items: center;
+    transition: all 150ms ease;
+    background: #f7f7f7;
 }
 
-.minion-header.scroll_bar{
-    background: #fff;
-    box-shadow: 0 0 1px rgba(0,0,0,0.3);
-}
 
-.minion-navbox {
-    margin-left: 24px;
-    align-self: flex-start;
-    display: flex;
-    justify-content: center;
-}
-
-.minion-navbox:before {
-    content: '';
-    display: flex;
-    width: 2px;
-    margin: 13px 2px 13px 0;
-    background: #a7a7a7;
-    align-content: center;
-}
-
-.navbox-static{
+.minion-reveal-navmenu {
+    position: fixed;
+    left: 0;
+    height: 55px;
+    padding: 0 35px 0 45px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 55px;
-    padding: 0 18px;
-    align-self: flex-start;
-    width: auto;
 }
 
-.navbox-logo{
-    width: 22px;
-    height: 22px;
-    background-image: url('../resources/tiaa_icon.png');
-    background-size: 22px;
-    flex-shrink: 0;
-}
-
-.navbox-currentpath{
-    width: 0;
-    overflow: hidden;
-    display: none;
-    margin-left: 0;
-}
-
-.minion-header.scroll_bar .minion-navbox .navbox-currentpath{
-    font-weight: 700;
-    margin-left: 10px;
-    font-size: 0.95em;
-    width: auto;
-    display: block;
-    overflow: initial;
-}
-
-.minion-navbox.visible .navbox-currentpath.long{
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-/* sectionbox and sections */
-
-.minion-sectionbox {
-    margin-left: 30px;
-    height: 55px;
-    display: flex;
-    z-index: 9999902;
-}
-
-.minion-sections-reveal{
-    display: flex;
-    align-items: center;
-    height: 55px;
-}
-
-.minion-sections-reveal > p{
-    font-weight: 700;
-    margin-right: 7px;
-    font-size: 0.95em;
-    letter-spacing: -0.2pt;
-    display: flex;
-}
-
-.minion-sections-reveal > div{
+.minion-reveal-navmenu > div{
     width: 15px;
     display: flex;
     height: 9px;
-    margin-top: 2px;
     background-image: url('../resources/symbol_arrow_down.png');
     background-size: cover;
 }
 
-.minion-sections.opened .minion-sections-reveal > div{
-    width: 15px;
-    height: 9px;
-    background-image: url('../resources/symbol_arrow_up.png');
-    background-size: cover;
+.minion-header .header-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 90px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+.minion-tiaa-logo{
+    width: 23px;
+    height: 23px;
+    background-image: url('../resources/tiaa_icon.png');
+    background-size: 23px;
+    flex-shrink: 0;
+    text-indent: -9999px;
 }
 
-.minion-sections{
+.minion-featured-sections{
+    margin-left: 10px;
+}
+
+.minion-featured-sections .sections-list {
+    display: flex;
+}
+
+.minion-featured-sections .sections-list li {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.83em;
+    padding: 0 10px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.minion-featured-sections .sections-list li.current {
+    color: rgba(0, 0, 0, 1);
+}
+
+
+/* nav sections */
+
+.minion-navmenu{
     display: block;
     position: fixed;
     width: 0;
@@ -165,30 +117,69 @@ body{
     font-weight: 700;
 }
 
-.minion-sections.opened {
-    width: auto;
-    height: auto;
+.minion-navmenu.opened {
+    width: calc(100% - 90px);
+    height: calc(100% - 70px);
     overflow: auto;
     opacity: 1;
     z-index: 9999902;
-    padding: 0 30px 30px 30px;
+    padding: 35px 45px;
     background: rgb(255, 255, 255);
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
 
-.minion-sections .section-guide{
+.minion-close-navmenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 55px;
+    padding: 0 35px 0 45px;
+    display: flex;
+    align-items: center;
+}
+
+.minion-close-navmenu > div{
+    width: 15px;
+    display: flex;
+    height: 9px;
+    background-image: url('../resources/symbol_arrow_up.png');
+    background-size: cover;
+}
+
+.minion-navmenu .navmenu-intro {
+    margin-top: 35px;
+    font-size: 1.3em;
+}
+
+.minion-navmenu .sections-wrapper {
+    margin-top: 45px;
+    display: flex;
+}
+
+.minion-navmenu .sections-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.minion-navmenu .section-guide{
     font-size: 0.8em;
-    color: #757575;
+    background: #000;
+    padding: 2px;
+    align-self: baseline;
+    font-weight: 700;
+    color: #fff;
     text-transform: uppercase;
     margin-bottom: 12px;
 }
 
-.minion-sections ul.sections-list{
-    font-weight: 400;
-    margin-bottom: 25px;
+.minion-navmenu ul.sections-list{
+    font-weight: 500;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-.minion-sections ul.sections-list li{
+.minion-navmenu ul.sections-list li{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -196,37 +187,25 @@ body{
     word-wrap: break-word;
 }
 
-.minion-sections ul.sections-list li.current{
+.minion-navmenu ul.sections-list li.current{
     color: #1976D2;
     font-weight: 700;
 }
 
-.minion-sections ul.sections-tiaainfo{
-    margin-top: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    color: #505050;
-    font-size: 0.85em;
-    font-weight: 400;
+.minion-navmenu ul.sections-tiaainfo{
+    font-weight: 500;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-.minion-sections ul.sections-tiaainfo li{
+.minion-navmenu ul.sections-tiaainfo li{
     display: flex;
     align-items: center;
-    margin-bottom: 6px;
-    margin-right: 8px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
     word-break: break-all;
     word-wrap: break-word;
-}
-
-.minion-timestamp{
-    display: none;
-    width: 279px;
-    margin-left: auto;
-    margin-right: 30px;
-    padding-top: 33px;
-    text-align: right;
-    color: #737373;
 }
 
 .minion-dataload{

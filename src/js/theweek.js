@@ -4,8 +4,6 @@ import socialLikes from 'social-likes-next';
 import social_style from 'social-likes-next/lib/social-likes_light.css';
 
 export function init_render() {
-    document.querySelector('.navbox-currentpath').textContent ='TheWeek';
-    document.querySelector('.navbox-static').classList.add('theweek');
     document.querySelector('.minion-sections li[data-sectionid="nav-section-theweek"]').classList.add('current');
     if (window.screen.width <= 980) {
         document.body.setAttribute('banana-type', 'mobile');
@@ -57,7 +55,6 @@ export function init_render() {
         window.location.href = "mailto:?body=Hey, check what happened this week: " + window.location.href;
     });
 
-    document.querySelector('.minion-timestamp .ts-date').innerHTML = 'Last updated on Jan 20, 2018 ET';
     render_data();
 }
 
