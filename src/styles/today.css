@@ -13,32 +13,117 @@
 }
 
 .today-hero{
-    padding: 15% 0px 6% 120px;
+    padding: 110px 45px 40px 45px;
     display: flex;
     align-items: center;
 }
 
 .today-hero .hero1{
-    font-size: 2.3em;
+    font-size: 1.1em;
     font-weight: 700;
-}
-
-.today-hero .hero2{
-    font-weight: 600;
-    font-size: 1.5em;
-    word-wrap: break-word;
-    margin-top: 10px;
-    width: 60vw;
+    text-transform: uppercase;
 }
 
 .today-hero .today-herotpdetails{
     font-size: 1em;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: #929292;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #696969;
 }
 
 /* data */
+
+.today-head-data{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.today-head-data::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.today-head-data::-webkit-scrollbar {
+	height: 3px;
+	background-color: #F5F5F5;
+}
+
+.today-head-data::-webkit-scrollbar-thumb {
+	background-color: #000000;
+}
+
+.today-head-data .head-article-item{
+    position: relative;
+    flex-shrink: 0;
+    height: 85vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+}
+
+.today-head-data .head-article-item.noimage{
+    background: #696969 !important;
+}
+
+.today-head-data .head-article-item.noimage:nth-child(2n){
+    background: #868686 !important;
+}
+
+.today-head-data .head-article-tags {
+    position: absolute;
+    top: 20px;
+    padding: 0 0 0 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.88em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.today-head-data .head-article-tags span {
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.today-head-data .head-article-tags span:after {
+    content: '|';
+    margin: 0 5px;
+    font-weight: 500;
+}
+
+.today-head-data .head-article-tags span:nth-last-child(1):after {
+    content: '';
+    margin: 0;
+}
+
+.today-head-data .head-article-item .title {
+    display: flex;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    width: 85%;
+    margin: 20px 45px 0;
+}
+
+.today-head-data .head-article-item .article-info {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    text-transform: uppercase;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+
 .today-analysis-data{
     display: flex;
 }
@@ -48,112 +133,86 @@
 }
 
 .today-analysis-data .analysis-list{
-    width: 100%;
-    display: grid;
-    grid-gap: 1.7em;
-    grid-template-columns: repeat(auto-fill, minmax(200px,25vw));
-    margin-left: 120px;
-    margin-right: 0;
+    width: calc(100% - 90px);
+    padding: 45px;
+    background: #f7f7f7;
     margin-bottom: 60px;
-    transform: translateZ(0);
+    display: flex;
+    flex-direction: column;
 }
 
 .today-analysis-data .analysis-list .analysis-item{
     position: relative;
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
     height: auto;
     overflow: hidden;
-    -webkit-overflow-scrolling: touch;
-    transition: all 200ms ease;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    transform: translateZ(0);
+    margin-bottom: 30px;
 }
 
 .today-analysis-data .analysis-list .analysis-item .item-wrapper{
-    top: 0;
-    left: 0;
-    margin: 25px;
-    width: calc(100% - 50px);
-    height: calc(100% - 24px);
-}
-
-.today-analysis-data .analysis-list .analysis-item .item-info{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-self: baseline;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
-.today-analysis-data .analysis-list .analysis-item .item-image.exist {
-    width: calc(100% + 50px);
-    height: 25vh;
-    margin: 15px -25px 5px;
-    background-size: cover;
-}
-
-.today-analysis-data .analysis-list .analysis-item .item-theme{
+.today-analysis-data .analysis-list .analysis-item .all-article-container{
     position: relative;
     display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.today-analysis-data .analysis-list .analysis-item .all-article-item{
+    position: relative;
+    display: flex;
     flex-shrink: 0;
-    padding: 0;
-}
-
-.today-analysis-data .analysis-list .theme-header{
-    position: relative;
-    align-self: baseline;
-    font-weight: 700;
-    font-size: 1.3em;
-    padding: 2px 2px;
-    color: #000;
-}
-
-.today-analysis-data .analysis-list .analysis-item .themes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-self: baseline;
-}
-
-.today-analysis-data .analysis-list .analysis-item .item-peakinfo{
-    position: relative;
-    display: none;
-    width: 28%;
-    height: 5%;
-}
-
-.today-analysis-data .analysis-list .analysis-item .toparticle-content-container{
-    position: relative;
-    padding-top: 20px;
+    height: 320px;
+    width: 260px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    background: #fff;
 }
 
-.today-analysis-data .analysis-list .toparticle-object{
-    position: relative;
-    padding: 4px 0;
-    margin-bottom: 12px;
-    flex-shrink: 0;
+.today-analysis-data .analysis-list .analysis-item .all-article-item.noimage{
+    justify-content: center;
+}
+
+.today-analysis-data .analysis-list .analysis-item .all-article-item .article-image {
+    width: 100%;
+    height: 43%;
     background-size: cover;
-    cursor: pointer;
 }
 
-.today-analysis-data .analysis-list .toparticle-object .article-title{
-    font-size: 0.95em;
-    font-weight: 600;
+.today-analysis-data .analysis-list .analysis-item .all-article-item.noimage .article-image {
+    display: none;
 }
 
-.today-analysis-data .analysis-list .toparticle-object .article-origin{
-    font-size: 0.7em;
-    margin-top: 3px;
-    color: #8a8a8a;
+.today-analysis-data .analysis-list .analysis-item .all-article-item .title {
+    display: flex;
+    color: #000;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-align: center;
+    width: 85%;
+    margin: 30px auto 0;
 }
+
+.today-analysis-data .analysis-list .analysis-item .all-article-item.noimage .title {
+    margin: 0 auto;
+}
+
+.today-analysis-data .analysis-list .analysis-item .all-article-item .article-info {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-transform: uppercase;
+    justify-content: center;
+    color: #202020;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+
+
 
 /* tp details */
 .today-tpdetails{
@@ -242,9 +301,8 @@
 }
 
 .today-copyrights {
-    padding: 30px 0 30px 120px;
+    padding: 30px 90px 30px 90px;
     font-size: 0.7em;
-    width: 80%;
     color: #868686;
 }
 

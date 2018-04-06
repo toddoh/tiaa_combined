@@ -9,24 +9,7 @@ export function init_render() {
     document.querySelector('.minion-header li[data-sectionid="nav-section-today"]').classList.add('current');
 
     const today_hero_markup = () => html`
-    <div class="today-hero">
-        <div class="today-herotext">
-            <p class="hero1 dayinfo">Today: </p>
-            <div class="hero2">
-                <p>Updated Hourly: An unbiased content cluster of issues trending across mainstream media</p>
-            </div>
-            <p class="today-herotpdetails">More</p>
-        </div>
-    </div>
-    <div class="today-share" data-url="https://thisisallabout.com/" data-title="Today on THISISALLABOUT">
-        <div data-service="facebook" title="Today on THISISALLABOUT"></div>
-        <div data-service="twitter" data-via="" data-related=""></div>
-        <div data-service="plusone" title="Today on THISISALLABOUT"></div>
-        <div data-service="linkedin" title="Today on THISISALLABOUT"></div>
-        <div data-service="pinterest" title="Today on THISISALLABOUT"></div>
-        <div class="email" title="Today on THISISALLABOUT">
-            <div class="icon"></div>    
-        </div>
+    <div class="today-head-data">
     </div>
     <div class="today-analysis-data">
         <div class="analysis-list">
@@ -53,11 +36,11 @@ export function init_render() {
 
     render(today_hero_markup(), document.querySelector('.minion-contents'));
     render_data();
-
+    /*
     socialLikes(document.querySelector('.today-share'));
     document.querySelector('.today-share .email').addEventListener('click', function (e) {
         window.location.href = "mailto:?body=Hey, check trending issues of today: " + window.location.href;
-    });
+    });*/
 }
 
 
@@ -70,11 +53,7 @@ const check_mobile = () => {
 const render_data = () => {
     var trump_data = null;
     var dataset_url;
-    if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/dataset/today/today_data.json';
-    } else {
-        dataset_url = '//thisisallabout.com/dataset/today/today_data.json'
-    }
+    dataset_url = 'https://thisisallabout.com/dataset/today/today_data.json';
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
     fetch(dataset_url).then(response => response.text()).then(function(text) {
@@ -82,45 +61,29 @@ const render_data = () => {
         trump_data = module;
 
         var contentts = trump_data[0].timestamp;
-        var est_ts = moment.tz(contentts, "America/New_York").format("dddd: MMMM Do");
-        document.querySelector('.today-hero .dayinfo').innerHTML = est_ts;
+        var est_ts = moment.tz(contentts, "America/New_York").format("dddd, MMMM Do");
+        document.querySelector('.minion-header li[data-sectionid="nav-section-today"] a').innerHTML = est_ts;
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
-                <div class="analysis-item">
-                    <div class="item-wrapper">
-                        <div class="item-info item-cover">
-                            <div class="item-theme">
-                                <div class="themes">
-                                ${i.theme.map((t) => html`
-                                    <p class="theme-header">${t}</p>
-                                `
-                                )}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item-image item-cover"></div>
-
-                        <div class="item-toparticle-container">
-                            <div class="toparticle-content-container">
-                                ${i.toparticles.map((arti) => html`
-                                    ${arti.length > 0 ? html`
-                                        ${arti.map((a) => html`
-                                            <a href="${a.url}" target="_blank"><div class="toparticle-object" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
-                                                <div class="article-info">
-                                                    <p class="article-title">${a.title}</p>
-                                                    <p class="article-origin">${a.origin}</p>
-                                                </div>
-                                            </div></a>
-                                        `
-                                        )}
-                                    ` : ''}
-                                `
-                                )}
-                            </div>
-                        </div>
+                <div class="analysis-item" banana-keywords="${JSON.stringify(i.theme)}">
+                    <div class="all-article-container">
+                            ${i.toparticles.map((arti) => html`
+                                ${arti.length > 0 ? html`
+                                    ${arti.map((a) => html`
+                                    <div class="all-article-item analysis-article-obj" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
+                                        <div class="article-image" banana-imagesrc="${a.image}" style="background-image: url('${a.image}')"></div>
+                                        <a href="${a.url}" target="_blank">
+                                            <p class="title">${a.title}</p>
+                                        </a>
+                                        <div class="article-info">
+                                            <p class="origin">${a.origin}</p>
+                                        </div>
+                                    </div>
+                                    `)}
+                                ` : ''}
+                            `
+                            )}
                     </div>
-                    
                     <div class="item-close-action">
                         <div class="icon"></div>
                     </div>
@@ -130,35 +93,64 @@ const render_data = () => {
         `;
 
         render(analysis_markup(), document.querySelector('.today-analysis-data .analysis-list'));
+
+        const head_markup = () => html`
+            ${trump_data.map((i) => html`
+                ${i.toparticles.map((arti) => html`
+                    <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}" banana-imagesrc="${arti[0].image}" style="background-image: url('${arti[0].image}')">
+                        <a href="${arti[0].url}" target="_blank">
+                            <p class="title">${arti[0].title}</p>
+                        </a>
+                        <div class="article-info">
+                            <p class="origin">${arti[0].origin},&nbsp;</p>
+                            <p class="ts" banana-ts="${arti[0].ts}"></p>
+                        </div>
+                    </div>
+                `)}
+            `
+            )}
+        `;
+
+        render(head_markup(), document.querySelector('.today-head-data'));
         postrender_data();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 }
 
 const postrender_data = () => {
-    $('.today-analysis-data .analysis-item').each(function() {
-        if ($($(this).find('.toparticle-object')[0]).attr('banana-imagesrc') != '') {
-            $(this).find('.item-image').css('background-image', 'url(' + $($(this).find('.toparticle-object')[0]).attr('banana-imagesrc') + ')');
-            $(this).find('.item-image').addClass('exist');
+    window.addEventListener('scroll', function (e) {
+        if (this.scrollY >= window.innerHeight * 0.85) {
+            document.querySelector('.minion-header').classList.add('bright');
+        } else {
+            document.querySelector('.minion-header').classList.remove('bright');
         }
     });
-    
-    if (check_mobile()) {
-        var mobile_ithm = document.querySelectorAll('.today-analysis-data .analysis-list .item-cover');
-        for (var i=0; i < mobile_ithm.length; i++) {
-            mobile_ithm[i].addEventListener('click', function (e) {
-                var parent = getParents(this, '.analysis-item')[0];
-                if (!parent.classList.contains('selected')) {
-                    parent.classList.add('selected');
 
-                    var list = document.querySelector('.today-analysis-data .analysis-list');
-                    if (!list.classList.contains('selected')) {
-                        list.classList.add('selected');
-                    }
-                }
-            });
+    $('.today-analysis-data .analysis-list .analysis-item').each(function (i, el) {
+        $(el).find('.all-article-item:nth-child(1)').remove();
+    });
+
+    $('.today-head-data .analysis-article-obj').each(function (i, el) {
+        var ts_converted = moment.tz(moment.unix($(el).find('.article-info .ts').attr('banana-ts')), "America/New_York").format();
+        var ts_ago = moment(ts_converted).fromNow();
+        console.log(ts_ago);
+        $(el).find('.article-info .ts').text(ts_ago);
+        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'favicon'];
+        var matches = items.filter(s => $(el).attr('banana-imagesrc').toLowerCase().includes(s));
+        if (matches.length > 0) {
+            $(el).addClass('noimage');
         }
+    });
 
+    $('.today-analysis-data .analysis-list .analysis-article-obj').each(function (i, el) {
+        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'favicon'];
+        var matches = items.filter(s => $(el).find('.article-image').attr('banana-imagesrc').toLowerCase().includes(s));
+        if (matches.length > 0) {
+            $(el).addClass('noimage');
+        }
+    });
+
+    if (check_mobile()) {
         var mobile_ithm_close = document.querySelectorAll('.today-analysis-data .analysis-list .item-close-action');
         for (var i=0; i < mobile_ithm_close.length; i++) {
             mobile_ithm_close[i].addEventListener('click', function (e) {
@@ -175,6 +167,7 @@ const postrender_data = () => {
         }
     }
 
+    /*
     document.querySelector('.today-herotpdetails').addEventListener('click', function (e) {
         if (!document.querySelector('.today-tpdetails').classList.contains('opened'))
             document.querySelector('.today-tpdetails').classList.add('opened');
@@ -190,6 +183,7 @@ const postrender_data = () => {
         if (document.querySelector('.today-analysis-data').classList.contains('hidden'))
             document.querySelector('.today-analysis-data').classList.remove('hidden');
     });
+    */
 }
 
 var getClosest = function ( elem, selector ) {

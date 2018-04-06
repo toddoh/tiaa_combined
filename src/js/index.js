@@ -59,11 +59,6 @@ const render_core = () => {
                 <div class="icon"></div>
             </div>
 
-            <div class="navmenu-intro">
-                <p>This is all about</p>
-                <p>what really matters.</p>
-            </div>
-
             <div class="sections-wrapper">
                 <div class="sections-group">
                     <p class="section-guide">REGULAR</p>
@@ -141,14 +136,6 @@ const check_mobile  = () => {
     document.body.getAttribute('banana-type', 'mobile') ? status = true : status = false;
     return status;
 }
-
-window.addEventListener('scroll', function (e) {
-    if (this.scrollY >= 120) {
-        document.querySelector('.minion-header').classList.add('scroll_bar');
-    } else {
-        document.querySelector('.minion-header').classList.remove('scroll_bar');
-    }
-});
 
 document.querySelector('.minion-reveal-navmenu').addEventListener('click', function (e) {
     document.querySelector('.minion-navmenu').classList.add('opened');

@@ -47,9 +47,12 @@ body{
     z-index: 9999901;
     align-items: center;
     transition: all 150ms ease;
-    background: #f7f7f7;
+    background: rgba(41, 41, 41, 0.87)
 }
 
+.minion-header.bright{
+    background: #f7f7f7;
+}
 
 .minion-reveal-navmenu {
     position: fixed;
@@ -64,6 +67,11 @@ body{
     width: 15px;
     display: flex;
     height: 9px;
+    background-image: url('../resources/symbol_arrow_down_white.png');
+    background-size: cover;
+}
+
+.minion-header.bright .minion-reveal-navmenu > div{
     background-image: url('../resources/symbol_arrow_down.png');
     background-size: cover;
 }
@@ -78,10 +86,14 @@ body{
 .minion-tiaa-logo{
     width: 23px;
     height: 23px;
-    background-image: url('../resources/tiaa_icon.png');
+    background-image: url('../resources/section_default_white.png');
     background-size: 23px;
     flex-shrink: 0;
     text-indent: -9999px;
+}
+
+.minion-header.bright .minion-tiaa-logo{
+    background-image: url('../resources/tiaa_icon.png');
 }
 
 .minion-featured-sections{
@@ -97,10 +109,18 @@ body{
     text-transform: uppercase;
     font-size: 0.83em;
     padding: 0 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.minion-header.bright .minion-featured-sections .sections-list li {
     color: rgba(0, 0, 0, 0.7);
 }
 
 .minion-featured-sections .sections-list li.current {
+    color: rgba(255, 255, 255, 1);
+}
+
+.minion-header.bright .minion-featured-sections .sections-list li.current {
     color: rgba(0, 0, 0, 1);
 }
 
@@ -108,23 +128,23 @@ body{
 /* nav sections */
 
 .minion-navmenu{
-    display: block;
+    display: flex;
     position: fixed;
-    width: 0;
+    width: calc(100% - 90px);
+    padding: 35px 45px;
     height: 0;
     overflow: hidden;
     opacity: 0;
     font-weight: 700;
+    transition: all 200ms ease;
 }
 
 .minion-navmenu.opened {
-    width: calc(100% - 90px);
-    height: calc(100% - 70px);
+    height: 200px;
     overflow: auto;
     opacity: 1;
     z-index: 9999902;
-    padding: 35px 45px;
-    background: rgb(255, 255, 255);
+    background: #f7f7f7;
 }
 
 .minion-close-navmenu {
@@ -143,11 +163,6 @@ body{
     height: 9px;
     background-image: url('../resources/symbol_arrow_up.png');
     background-size: cover;
-}
-
-.minion-navmenu .navmenu-intro {
-    margin-top: 35px;
-    font-size: 1.3em;
 }
 
 .minion-navmenu .sections-wrapper {
