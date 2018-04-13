@@ -6,10 +6,14 @@ import moment from 'moment';
 import tz from 'moment-timezone';
 
 export function init_render() {
+    document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
+    document.body.classList.add('today');
     document.querySelector('.minion-header li[data-sectionid="nav-section-today"]').classList.add('current');
 
     const today_hero_markup = () => html`
     <div class="today-head-data">
+        <div class="head-item-container">
+        </div>
     </div>
     <div class="today-analysis-data">
         <div class="analysis-list">
@@ -55,13 +59,12 @@ const render_data = () => {
     var dataset_url;
     dataset_url = 'https://thisisallabout.com/dataset/today/today_data.json';
 
-    document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
         trump_data = module;
 
         var contentts = trump_data[0].timestamp;
-        var est_ts = moment.tz(contentts, "America/New_York").format("dddd, MMMM Do");
+        var est_ts = moment.tz(contentts, "America/New_York").format("MMM D ddd");
         document.querySelector('.minion-header li[data-sectionid="nav-section-today"] a').innerHTML = est_ts;
         const analysis_markup = () => html`
             ${trump_data.map((i) => html`
@@ -97,7 +100,8 @@ const render_data = () => {
         const head_markup = () => html`
             ${trump_data.map((i) => html`
                 ${i.toparticles.map((arti) => html`
-                    <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}" banana-imagesrc="${arti[0].image}" style="background-image: url('${arti[0].image}')">
+                    <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}">
+                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('${arti[0].image}')"></div>
                         <a href="${arti[0].url}" target="_blank">
                             <p class="title">${arti[0].title}</p>
                         </a>
@@ -111,20 +115,24 @@ const render_data = () => {
             )}
         `;
 
-        render(head_markup(), document.querySelector('.today-head-data'));
+        render(head_markup(), document.querySelector('.today-head-data .head-item-container'));
         postrender_data();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 }
 
 const postrender_data = () => {
-    window.addEventListener('scroll', function (e) {
+    /*window.addEventListener('scroll', function (e) {
         if (this.scrollY >= window.innerHeight * 0.85) {
             document.querySelector('.minion-header').classList.add('bright');
         } else {
             document.querySelector('.minion-header').classList.remove('bright');
         }
-    });
+    });*/
+    $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
+    $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
+    $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
+    $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
 
     $('.today-analysis-data .analysis-list .analysis-item').each(function (i, el) {
         $(el).find('.all-article-item:nth-child(1)').remove();
@@ -133,17 +141,17 @@ const postrender_data = () => {
     $('.today-head-data .analysis-article-obj').each(function (i, el) {
         var ts_converted = moment.tz(moment.unix($(el).find('.article-info .ts').attr('banana-ts')), "America/New_York").format();
         var ts_ago = moment(ts_converted).fromNow();
-        console.log(ts_ago);
         $(el).find('.article-info .ts').text(ts_ago);
-        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'favicon'];
-        var matches = items.filter(s => $(el).attr('banana-imagesrc').toLowerCase().includes(s));
+
+        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'https://static01.nyt.com/images/icons/t_logo_291_black.png', 'favicon', 'Twitterlogo.png', 'facebook-default-wide.jpg'];
+        var matches = items.filter(s => $(el).find('.article-image').attr('banana-imagesrc').toLowerCase().includes(s.toLowerCase()));
         if (matches.length > 0) {
             $(el).addClass('noimage');
         }
     });
 
     $('.today-analysis-data .analysis-list .analysis-article-obj').each(function (i, el) {
-        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'favicon'];
+        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'https://static01.nyt.com/images/icons/t_logo_291_black.png', 'favicon', 'Twitterlogo.png', 'facebook-default-wide.jpg'];
         var matches = items.filter(s => $(el).find('.article-image').attr('banana-imagesrc').toLowerCase().includes(s));
         if (matches.length > 0) {
             $(el).addClass('noimage');
