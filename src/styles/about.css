@@ -1,5 +1,5 @@
 .about-hero{
-    padding: 18% 120px 5%;
+    padding: 18% 80px 5%;
     display: flex;
     align-items: center;
 }
@@ -11,24 +11,26 @@
 
 .about-hero .hero2{
     color: #505050;
-    font-size: 1.15em;
+    font-size: 1.05em;
     word-wrap: break-word;
     margin-top: 23px;
 }
 
 .about-hero .hero2 > p{
-    margin-top: 12px;
+    margin-top: 7px;
 }
 
 .about-hero .hero2.contact{
     color: #000;
-    font-size: 1.0em;
-    word-wrap: break-word;
+    font-size: 0.9em;
+    align-self: baseline;
+    font-weight: 700;
+    text-transform: uppercase;
     margin-top: 20px;
 }
 
 .about-team{
-    padding: 50px 200px 50px 120px;
+    padding: 50px 150px 50px 80px;
     display: flex;
     flex-direction: column;
     background: #f9f9f9;
@@ -42,17 +44,26 @@
 
 .about-team li{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     flex-direction: column;
 }
 
+.about-team li:nth-last-child(1){
+    margin-bottom: 0;
+}
+
 .about-team li .member-title{
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 1.05em;
+    font-weight: 700;
 }
 
 .about-team li .member-desc{
     margin-top: 7px;
+    font-size: 0.95em;
+}
+
+.about-team li .member-desc p{
+    margin-bottom: 7px;
 }
 
 .about-team li .social-channels{
@@ -93,7 +104,7 @@
 }
 
 .about-technical{
-    padding: 50px 200px 50px 120px;
+    padding: 50px 150px 50px 80px;
     display: flex;
     flex-direction: column;
 }

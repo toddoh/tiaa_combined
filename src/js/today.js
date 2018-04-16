@@ -129,10 +129,28 @@ const postrender_data = () => {
             document.querySelector('.minion-header').classList.remove('bright');
         }
     });*/
-    $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
-    $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
-    $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
-    $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
+
+    if ($('.today-head-data .head-item-container .head-article-item').length == 5) {
+        $('.today-head-data .head-item-container').addClass('five');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(5)').addClass('fifth');
+    } else if ($('.today-head-data .head-item-container .head-article-item').length == 6) {
+        $('.today-head-data .head-item-container').addClass('six');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(5)').addClass('fifth');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(6)').addClass('sixth');
+    } else {
+        $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
+        $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
+    }
 
     $('.today-analysis-data .analysis-list .analysis-item').each(function (i, el) {
         $(el).find('.all-article-item:nth-child(1)').remove();

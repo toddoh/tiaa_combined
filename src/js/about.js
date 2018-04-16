@@ -26,9 +26,11 @@ export function init_render() {
         <ul>
             <li class="team-member">
                 <p class="member-title">Editor in Chief: Todd Oh</p>
-                <p class="member-desc">
-                Todd Oh is the founder, engineer, and editor-in-chief of THISISALLABOUT. He has worked on a number of projects over the years connected with news aggregation algorithms, geolocation, and mobile services. His goal is to help people get access to the right information to debate aspects of their society. Todd became involved with technology startups at an early age.  At 17 he gave a TED talk at TEDxYouth Seoul, and has since gone on to major in sociology at Yonsei University. Bilingual in English and Korean, outside of the tech world he’s still trying to master homemade pasta. 
-                </p>
+                <div class="member-desc">
+                    <p>He has worked on a number of projects over the years connected with news aggregation algorithms, geolocation, and mobile services.</p>
+                    <p>Todd became involved with technology startups at an early age. At 17 he gave a TED talk at TEDxYouth Seoul, and has since gone on to major in sociology at Yonsei University.</p>
+                    <p>And now his goal is to help people get access to the right information to debate aspects of their society. Bilingual in English and Korean, outside of the tech world he’s still trying to master homemade pasta. </p>
+                </div>
                 <div class="social-channels">
                     <a href="https://twitter.com/brklynfivefive" target="_blank"><div class="team-social twitter"></div></a>
                     <a href="mailto:brklynfivefive@gmail.com" target="_blank"><div class="team-social email"></div></a>
@@ -36,9 +38,10 @@ export function init_render() {
             </li>
             <li class="team-member">
                 <p class="member-title">Executive Editor: Trevor Stonefield</p>
-                <p class="member-desc">
-                Trevor Stonefield is the co-founder, and senior editor of THISISALLABOUT.
-                </p>
+                <div class="member-desc">
+                    <p>With a degree in communications from Boston University, his previous work includes positions at traditional media companies like Time Inc. and Meredith Corporation, as well as helping to produce documentary films that emphasized social change and justice.</p>
+                    <p>An American-Brit, he still hasn’t worked out the right way to pronounce “data.”</p>
+                </div>
             </li>
         </ul>
     </div>

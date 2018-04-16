@@ -311,7 +311,7 @@ body{
 	-webkit-filter: saturate(0.85) brightness(1.2);
     filter: saturate(0.85) brightness(1.2);
 }.about-hero{
-    padding: 18% 120px 5%;
+    padding: 18% 80px 5%;
     display: flex;
     align-items: center;
 }
@@ -323,24 +323,26 @@ body{
 
 .about-hero .hero2{
     color: #505050;
-    font-size: 1.15em;
+    font-size: 1.05em;
     word-wrap: break-word;
     margin-top: 23px;
 }
 
 .about-hero .hero2 > p{
-    margin-top: 12px;
+    margin-top: 7px;
 }
 
 .about-hero .hero2.contact{
     color: #000;
-    font-size: 1.0em;
-    word-wrap: break-word;
+    font-size: 0.9em;
+    align-self: baseline;
+    font-weight: 700;
+    text-transform: uppercase;
     margin-top: 20px;
 }
 
 .about-team{
-    padding: 50px 200px 50px 120px;
+    padding: 50px 150px 50px 80px;
     display: flex;
     flex-direction: column;
     background: #f9f9f9;
@@ -354,17 +356,26 @@ body{
 
 .about-team li{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     flex-direction: column;
 }
 
+.about-team li:nth-last-child(1){
+    margin-bottom: 0;
+}
+
 .about-team li .member-title{
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 1.05em;
+    font-weight: 700;
 }
 
 .about-team li .member-desc{
     margin-top: 7px;
+    font-size: 0.95em;
+}
+
+.about-team li .member-desc p{
+    margin-bottom: 7px;
 }
 
 .about-team li .social-channels{
@@ -405,7 +416,7 @@ body{
 }
 
 .about-technical{
-    padding: 50px 200px 50px 120px;
+    padding: 50px 150px 50px 80px;
     display: flex;
     flex-direction: column;
 }
@@ -3938,8 +3949,25 @@ div.jsoneditor .jsoneditor-search input {
     grid-template-areas: "first first first" "second third third" "fourth fourth fourth" ;
 }
 
+.today-head-data .head-item-container.five{
+    display: grid;
+    grid-gap: 13px;
+    grid-template-areas: 
+    "first first first" 
+    "second third third" 
+    "second fourth fifth" ;
+}
+
+.today-head-data .head-item-container.six{
+    display: grid;
+    grid-gap: 13px;
+    grid-template-columns: fit-content(40%);
+    grid-template-areas: "first first first" "second second third" "fourth fifth fifth" "fourth sixth sixth";
+}
+
 .today-head-data .head-item-container .second {
     grid-area: second;
+    height: auto;
 }
 
 .today-head-data .head-item-container .third {
@@ -3955,11 +3983,24 @@ div.jsoneditor .jsoneditor-search input {
     grid-area: fourth;
 }
 
+.today-head-data .head-item-container.six .fourth {
+    grid-area: fourth;
+    height: auto;
+}
+
+.today-head-data .head-item-container .fifth {
+    grid-area: fifth;
+}
+
+.today-head-data .head-item-container .sixth {
+    grid-area: sixth;
+}
+
 
 .today-head-data .head-article-item{
     position: relative;
     flex-shrink: 0;
-    height: 53vh;
+    height: 56vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -4036,26 +4077,36 @@ div.jsoneditor .jsoneditor-search input {
     font-size: 2em;
     font-weight: 700;
     width: 60%;
-    margin: 0 93px;
+    margin: 0 80px;
 }
 
-.today-head-data .head-article-item.first .title, .today-head-data .head-article-item.fourth .title {
+.today-head-data .head-article-item.first .title {
     font-size: 2.6em;
+}
+
+.today-head-data .head-item-container.five .third .title, .today-head-data .head-item-container.five .fourth .title, .today-head-data .head-item-container.five .fifth .title, .today-head-data .head-item-container.six .third .title, .today-head-data .head-item-container.six .fifth .title, .today-head-data .head-item-container.six .sixth .title{
+    margin: 0 55px;
+    width: 80%;
 }
 
 .today-head-data .head-article-item .article-info {
     display: flex;
+    flex-direction: column;
     width: 60%;
     text-transform: uppercase;
-    margin: 13px 93px 0;
+    margin: 13px 80px 0;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     font-size: 0.82em;
 }
 
+.today-head-data .head-item-container.five .third .article-info, .today-head-data .head-item-container.five .fourth .article-info, .today-head-data .head-item-container.five .fifth .article-info, .today-head-data .head-item-container.six .third .article-info,  .today-head-data .head-item-container.six .fifth .article-info, .today-head-data .head-item-container.six .sixth .article-info{
+    margin: 13px 55px 0;
+}
+
 
 .today-analysis-data{
-    display: flex;
+    display: none;
 }
 
 .today-analysis-data.hidden{

@@ -45,8 +45,25 @@
     grid-template-areas: "first first first" "second third third" "fourth fourth fourth" ;
 }
 
+.today-head-data .head-item-container.five{
+    display: grid;
+    grid-gap: 13px;
+    grid-template-areas: 
+    "first first first" 
+    "second third third" 
+    "second fourth fifth" ;
+}
+
+.today-head-data .head-item-container.six{
+    display: grid;
+    grid-gap: 13px;
+    grid-template-columns: fit-content(40%);
+    grid-template-areas: "first first first" "second second third" "fourth fifth fifth" "fourth sixth sixth";
+}
+
 .today-head-data .head-item-container .second {
     grid-area: second;
+    height: auto;
 }
 
 .today-head-data .head-item-container .third {
@@ -62,11 +79,24 @@
     grid-area: fourth;
 }
 
+.today-head-data .head-item-container.six .fourth {
+    grid-area: fourth;
+    height: auto;
+}
+
+.today-head-data .head-item-container .fifth {
+    grid-area: fifth;
+}
+
+.today-head-data .head-item-container .sixth {
+    grid-area: sixth;
+}
+
 
 .today-head-data .head-article-item{
     position: relative;
     flex-shrink: 0;
-    height: 53vh;
+    height: 56vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -143,26 +173,36 @@
     font-size: 2em;
     font-weight: 700;
     width: 60%;
-    margin: 0 93px;
+    margin: 0 80px;
 }
 
-.today-head-data .head-article-item.first .title, .today-head-data .head-article-item.fourth .title {
+.today-head-data .head-article-item.first .title {
     font-size: 2.6em;
+}
+
+.today-head-data .head-item-container.five .third .title, .today-head-data .head-item-container.five .fourth .title, .today-head-data .head-item-container.five .fifth .title, .today-head-data .head-item-container.six .third .title, .today-head-data .head-item-container.six .fifth .title, .today-head-data .head-item-container.six .sixth .title{
+    margin: 0 55px;
+    width: 80%;
 }
 
 .today-head-data .head-article-item .article-info {
     display: flex;
+    flex-direction: column;
     width: 60%;
     text-transform: uppercase;
-    margin: 13px 93px 0;
+    margin: 13px 80px 0;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     font-size: 0.82em;
 }
 
+.today-head-data .head-item-container.five .third .article-info, .today-head-data .head-item-container.five .fourth .article-info, .today-head-data .head-item-container.five .fifth .article-info, .today-head-data .head-item-container.six .third .article-info,  .today-head-data .head-item-container.six .fifth .article-info, .today-head-data .head-item-container.six .sixth .article-info{
+    margin: 13px 55px 0;
+}
+
 
 .today-analysis-data{
-    display: flex;
+    display: none;
 }
 
 .today-analysis-data.hidden{
