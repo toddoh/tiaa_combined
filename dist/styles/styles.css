@@ -4496,6 +4496,19 @@ div.jsoneditor .jsoneditor-search input {
         width: calc(100% - 70px);
         padding: 100px 35px;
     }
+
+    .today-guide-photosafetynet.opened {
+        padding: 20px 35px;
+    }
+
+    .today-guide-photosafetynet.opened .guide-text {
+        font-size: 0.95em;
+        width: auto;
+    }
+
+    .today-guide-photosafetynet.opened .guide-photosafetynet-actions {
+        text-align: center;
+    }
 }.whattrumpsaid-share.social-likes {
     z-index: 9999901;
     position: fixed;
