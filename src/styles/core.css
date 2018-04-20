@@ -47,7 +47,7 @@ body{
     z-index: 9999901;
     align-items: center;
     transition: all 150ms ease;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
@@ -55,7 +55,7 @@ body{
     position: fixed;
     left: 0;
     height: 65px;
-    padding: 0 35px 0 45px;
+    padding: 0 35px 0 35px;
     display: flex;
     align-items: center;
 }
@@ -72,7 +72,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-left: 90px;
+    margin-left: 80px;
 }
 
 .minion-tiaa-logo{
@@ -110,8 +110,8 @@ body{
 .minion-navmenu{
     display: flex;
     position: fixed;
-    width: calc(100% - 90px);
-    padding: 35px 45px;
+    width: calc(100% - 70px);
+    padding: 35px 35px;
     height: 0;
     overflow: hidden;
     opacity: 0;
@@ -133,7 +133,7 @@ body{
     left: 0;
     top: 0;
     height: 65px;
-    padding: 0 35px 0 45px;
+    padding: 0 35px 0 35px;
     display: flex;
     align-items: center;
 }

@@ -15,8 +15,15 @@ export function init_render() {
         <div class="head-item-container">
         </div>
     </div>
-    <div class="today-analysis-data">
-        <div class="analysis-list">
+    <div class="today-guide-photosafetynet">
+        <div class="guide-text">
+            <p>Our Today section is an unbiased news cluster of topics trending across mainstream media. We pick the most important stories from each topic cluster automatically through our algorithm.</p>
+            <p>Due to this, our editorial staff can't verify if the photos displayed in this section are consistent with our editorial guidelines. Hence, we offer an option to mask the background photos.</p>
+            <p>Please select your preference below to continue.</p>
+        </div>
+        <div class="guide-photosafetynet-actions">
+            <p banana-action="photosafetynet-on">Mask photos partially</p>
+            <p banana-action="photosafetynet-off">Keep photos visible</p>
         </div>
     </div>
     <div class="today-copyrights">
@@ -24,7 +31,7 @@ export function init_render() {
     </div>
     <div class="today-tpdetails">
         <div class="tpdetails-reveal">
-            <p>Technical Details</p>
+            <p>More Details</p>
         </div>
         <div class="tpdetails-text">
             <p>Our clustering system uses a sophisticated algorithm to automatically determine a reasonable and optimal size of clusters. Once the initial data processing is done, the "interpreter" unit creates a final result, ready to be published.</p>
@@ -32,9 +39,24 @@ export function init_render() {
             <p>We aggregate and process stories from CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, and Financial Times from the past 24 hours.</p>
             <p>Based on the data, the system runs a full natural language processing and clustering sequence to sort out key topics. </p>
         </div>
+        <div class="photosafetynet-reveal">
+            <p>Photo Masking Configuration</p>
+        </div>
+        <div class="photosafetynet-text">
+            <p>Our Today section is an unbiased news cluster of topics trending across mainstream media. We pick the most important stories from each topic cluster automatically through our algorithm.</p>
+            <p>Due to this, our editorial staff can't verify if the photos displayed in this section are consistent with our editorial guidelines. Hence, we offer an option to mask the background photos.</p>
+            <p>Please select your preference below to continue.</p>
+        </div>
+        <div class="photosafetynet-actions">
+            <p banana-action="photosafetynet-on">Mask photos partially</p>
+            <p banana-action="photosafetynet-off">Keep photos visible</p>
+        </div>
         <div class="tpdetails-close-action">
             <div class="icon"></div>
         </div>
+    </div>
+    <div class="today-action-revealinfo">
+        <p>DETAILS</p>
     </div>
     `;
 
@@ -66,48 +88,38 @@ const render_data = () => {
         var contentts = trump_data[0].timestamp;
         var est_ts = moment.tz(contentts, "America/New_York").format("MMM D ddd");
         document.querySelector('.minion-header li[data-sectionid="nav-section-today"] a').innerHTML = est_ts;
-        const analysis_markup = () => html`
-            ${trump_data.map((i) => html`
-                <div class="analysis-item" banana-keywords="${JSON.stringify(i.theme)}">
-                    <div class="all-article-container">
-                            ${i.toparticles.map((arti) => html`
-                                ${arti.length > 0 ? html`
-                                    ${arti.map((a) => html`
-                                    <div class="all-article-item analysis-article-obj" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
-                                        <div class="article-image" banana-imagesrc="${a.image}" style="background-image: url('${a.image}')"></div>
-                                        <a href="${a.url}" target="_blank">
-                                            <p class="title">${a.title}</p>
-                                        </a>
-                                        <div class="article-info">
-                                            <p class="origin">${a.origin}</p>
-                                        </div>
-                                    </div>
-                                    `)}
-                                ` : ''}
-                            `
-                            )}
-                    </div>
-                    <div class="item-close-action">
-                        <div class="icon"></div>
-                    </div>
-                </div>
-            `
-            )}
-        `;
-
-        render(analysis_markup(), document.querySelector('.today-analysis-data .analysis-list'));
 
         const head_markup = () => html`
             ${trump_data.map((i) => html`
                 ${i.toparticles.map((arti) => html`
                     <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}">
-                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('${arti[0].image}')"></div>
+                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('${arti[0].image}')"></div>
                         <a href="${arti[0].url}" target="_blank">
                             <p class="title">${arti[0].title}</p>
                         </a>
                         <div class="article-info">
                             <p class="origin">${arti[0].origin},&nbsp;</p>
                             <p class="ts" banana-ts="${arti[0].ts}"></p>
+                        </div>
+                        <div class="article-action-revealmore">
+                            <p>See more key stories</p>
+                        </div>
+                        <div class="article-moreitems">
+                        ${arti.length > 0 ? html`
+                            ${arti.map((a) => html`
+                            <div class="all-article-item" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
+                                <a href="${a.url}" target="_blank">
+                                    <p class="title">${a.title}</p>
+                                </a>
+                                <div class="article-info">
+                                    <p class="origin">${a.origin}</p>
+                                </div>
+                            </div>
+                            `)}
+                        ` : ''}
+                        </div>
+                        <div class="article-action-closereveal">
+                            <div class="icon"></div>
                         </div>
                     </div>
                 `)}
@@ -122,13 +134,26 @@ const render_data = () => {
 }
 
 const postrender_data = () => {
-    /*window.addEventListener('scroll', function (e) {
-        if (this.scrollY >= window.innerHeight * 0.85) {
-            document.querySelector('.minion-header').classList.add('bright');
-        } else {
-            document.querySelector('.minion-header').classList.remove('bright');
+    if (!localStorage.getItem('tiaa_visitor_photosafetynet_blur')) {
+        $('.today-guide-photosafetynet').addClass('opened');
+    } else if (localStorage.getItem('tiaa_visitor_photosafetynet_blur') == 'on') {
+        $('.today-head-data .head-article-item .article-image').each(function (i, el) {
+            $(el).addClass('blurred');
+        });
+    }
+
+    $('.today-guide-photosafetynet .guide-photosafetynet-actions > p').on('click', function (e) {
+        if ($(this).attr('banana-action') == 'photosafetynet-on') {
+            localStorage.setItem('tiaa_visitor_photosafetynet_blur', 'on');
+            $('.today-head-data .head-article-item .article-image').each(function (i, el) {
+                $(el).addClass('blurred');
+            });
+        } else if ($(this).attr('banana-action') == 'photosafetynet-off') {
+            localStorage.setItem('tiaa_visitor_photosafetynet_blur', 'off');
         }
-    });*/
+
+        $('.today-guide-photosafetynet').removeClass('opened');
+    });
 
     if ($('.today-head-data .head-item-container .head-article-item').length == 5) {
         $('.today-head-data .head-item-container').addClass('five');
@@ -152,7 +177,17 @@ const postrender_data = () => {
         $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
     }
 
-    $('.today-analysis-data .analysis-list .analysis-item').each(function (i, el) {
+    $('.today-head-data .head-article-item .article-action-revealmore').on('click', function (e) {
+        $(this).parent().addClass('moreitems-opened');
+        $(this).parent().find('.article-moreitems').addClass('opened');
+    });
+
+    $('.today-head-data .head-article-item .article-action-closereveal').on('click', function (e) {
+        $(this).parents('.head-article-item').removeClass('moreitems-opened');
+        $(this).parents('.head-article-item').find('.article-moreitems').removeClass('opened');
+    });
+
+    $('.today-head-data .head-article-item .article-moreitems').each(function (i, el) {
         $(el).find('.all-article-item:nth-child(1)').remove();
     });
 
@@ -168,11 +203,36 @@ const postrender_data = () => {
         }
     });
 
-    $('.today-analysis-data .analysis-list .analysis-article-obj').each(function (i, el) {
-        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'https://static01.nyt.com/images/icons/t_logo_291_black.png', 'favicon', 'Twitterlogo.png', 'facebook-default-wide.jpg'];
-        var matches = items.filter(s => $(el).find('.article-image').attr('banana-imagesrc').toLowerCase().includes(s));
-        if (matches.length > 0) {
-            $(el).addClass('noimage');
+    $('.today-action-revealinfo').on('click', function (e) {
+        if (!document.querySelector('.today-tpdetails').classList.contains('opened')) {
+            document.querySelector('.today-tpdetails').classList.add('opened');
+            document.documentElement.className = 'n_scroll';
+        }
+    });
+
+    $('.today-tpdetails .tpdetails-close-action').on('click', function (e) {
+        if (document.querySelector('.today-tpdetails').classList.contains('opened')) {
+            document.querySelector('.today-tpdetails').classList.remove('opened');
+            document.documentElement.className = '';
+        }
+    });
+
+    $('.today-tpdetails .photosafetynet-actions > p').on('click', function (e) {
+        if ($(this).attr('banana-action') == 'photosafetynet-on') {
+            localStorage.setItem('tiaa_visitor_photosafetynet_blur', 'on');
+            $('.today-head-data .head-article-item .article-image').each(function (i, el) {
+                $(el).addClass('blurred');
+            });
+        } else if ($(this).attr('banana-action') == 'photosafetynet-off') {
+            localStorage.setItem('tiaa_visitor_photosafetynet_blur', 'off');
+            $('.today-head-data .head-article-item .article-image').each(function (i, el) {
+                $(el).removeClass('blurred');
+            });
+        }
+
+        if (document.querySelector('.today-tpdetails').classList.contains('opened')) {
+            document.querySelector('.today-tpdetails').classList.remove('opened');
+            document.documentElement.className = '';
         }
     });
 
@@ -192,24 +252,6 @@ const postrender_data = () => {
             });
         }
     }
-
-    /*
-    document.querySelector('.today-herotpdetails').addEventListener('click', function (e) {
-        if (!document.querySelector('.today-tpdetails').classList.contains('opened'))
-            document.querySelector('.today-tpdetails').classList.add('opened');
-
-        if (!document.querySelector('.today-analysis-data').classList.contains('hidden'))
-            document.querySelector('.today-analysis-data').classList.add('hidden');
-    });
-
-    document.querySelector('.today-tpdetails .tpdetails-close-action').addEventListener('click', function (e) {
-        if (document.querySelector('.today-tpdetails').classList.contains('opened'))
-            document.querySelector('.today-tpdetails').classList.remove('opened');
-
-        if (document.querySelector('.today-analysis-data').classList.contains('hidden'))
-            document.querySelector('.today-analysis-data').classList.remove('hidden');
-    });
-    */
 }
 
 var getClosest = function ( elem, selector ) {
