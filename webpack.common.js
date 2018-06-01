@@ -2,55 +2,46 @@ const path = require('path');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
     entry: {
-        vendor: ['babel-polyfill', 'lit-html', 'lodash', 'moment', 'jquery', 'whatwg-fetch'],
+        vendor: ['babel-polyfill', 'whatwg-fetch'],
         index: ['./src/js/index.js']
     },
     plugins: [
+        new ProgressBarPlugin({
+            format: 'Build [:bar] :percent (:elapsed seconds)',
+            clear: false,
+        }),
         new CleanWebpackPlugin(['dist'], { watch: false }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "vendor",
-            minChunks: Infinity
+        new MiniCssExtractPlugin({
+            filename: 'styles/[name].[contenthash].css'
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            async: true, 
-            children: true
-        }),
-        new ExtractTextPlugin({filename: "styles/styles.css", allChunks: true}),
         new HTMLWebpackPlugin({
+            template: './src/index.html',
             title: 'THISISALLABOUT',
-            template: 'src/index.html'
+            filename: 'index.html'
         }),
-        new webpack.HashedModuleIdsPlugin()/*,
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'static'
-        })*/
+        new webpack.HashedModuleIdsPlugin()
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js',
-        chunkFilename: '[name].[chunkhash].js'
+        publicPath: "/",
+        filename: 'scripts/[name].[chunkhash].js',
+        chunkFilename: 'scripts/[name].[chunkhash].js'
     },
     module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                include: __dirname + '/src/js',
-            },
+        rules: [
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract({
-                    use: [{
-                        loader: "css-loader"
-                    }]
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader"
+                ]
             },
             {
                 test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,

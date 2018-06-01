@@ -55,7 +55,7 @@ const dynamicbg_201701 = (month, type) => {
 
     if (type == '1701c05') {
         const dynamicbg_markup = () => html`
-        <div class="graphic" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Donald_Trump_%2825953705015%29.jpg/1920px-Donald_Trump_%2825953705015%29.jpg')">
+        <div class="graphic">
             <div class="graphic-box">
                 <p>EXTREME</p>
             </div>
@@ -101,7 +101,7 @@ const dynamicbg_201703 = (month, type) => {
 
     if (type == '1703c01') {
         const dynamicbg_markup = () => html`
-        <div class="graphic" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Donald_Drumpf.jpg/1600px-Donald_Drumpf.jpg')">
+        <div class="graphic">
             <div class="graphic-box">
                 <p>MORE JOBS</p>
             </div>

@@ -279,6 +279,7 @@
     padding: 15vh 60px;
     width: calc(100% - 120px);
     height: calc(100vh - 30vh);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('../resources/donaldtrump/Donald_Trump_(25953705015).jpg');
     background-size: cover;
     background-position: left;
     color: #fff;
@@ -357,7 +358,7 @@
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .nytlogo{
     width: 350px;
     height: 50px;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png);
+    background-image: url('../resources/donaldtrump/The_New_York_Times_logo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -366,7 +367,7 @@
 .whattrumpsaid-analysis-data-dynamicbg .dynamicbg-item[banana-id="1702c02"] .cnnlogo{
     width: 190px;
     height: 90px;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png);
+    background-image: url('../resources/donaldtrump/1280px-CNN.svg.png');
     background-size: cover;
 }
 
@@ -401,6 +402,7 @@
     padding: 15vh 60px;
     width: calc(100% - 120px);
     height: calc(100vh - 30vh);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('../resources/donaldtrump/Donald_Drumpf.jpg');
     background-size: cover;
     background-position: left;
     color: #fff;
@@ -452,7 +454,6 @@
     height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
-    background-image: url('../resources/donaldtrump/whattrumpsaid_1706_trobama.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -504,7 +505,7 @@
     height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
-    background-image: url('../resources/donaldtrump/whattrumpsaid_1707_repsen.png');
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1707_repsen.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top left;
@@ -547,7 +548,7 @@
     height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
-    background-image: url('../resources/donaldtrump/whattrumpsaid_1711_trecon.png');
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1711_trecon.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top right;
@@ -573,7 +574,7 @@
     height: calc(100vh - 30vh);
     color: #fff;
     display: flex;
-    background-image: url('../resources/donaldtrump/whattrumpsaid_1712_trjones.png');
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1712_trjones.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top right;
@@ -629,6 +630,13 @@
     display: flex;
     flex-direction: column;
     width: 30vw;
+}
+
+.whattrumpsaid-analysis-data .analysis-list .analysis-item .item-img-copyright {
+    color: #b1b1b1;
+    font-size: 0.7em;
+    position: absolute;
+    bottom: 60px;
 }
 
 .whattrumpsaid-analysis-data .analysis-list .analysis-item[banana-id="1701c03"]{

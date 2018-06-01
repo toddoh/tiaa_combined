@@ -125,7 +125,7 @@ const render_list = (moindex, opt) => {
     if (process.env.NODE_ENV == 'dev') {
         dataset_url = '//localhost:3000/dataset/trumptweeted/list_data.json';
     } else {
-        dataset_url = '//thisisallabout.com/dataset/trumptweeted/list_data.json';
+        dataset_url = 'https://thisisallabout.com/dataset/trumptweeted/list_data.json';
     }
     
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -228,7 +228,7 @@ const render_data = (month) => {
     if (process.env.NODE_ENV == 'dev') {
         dataset_url = '//localhost:3000/dataset/trumptweeted/' + month + '.json';
     } else {
-        dataset_url = '//thisisallabout.com/dataset/trumptweeted/' + month + '.json';
+        dataset_url = 'https://thisisallabout.com/dataset/trumptweeted/' + month + '.json';
     }
 
     window.history.pushState({}, null, '/whattrumpsaid/' + month + '/');
@@ -276,6 +276,11 @@ const render_data = (month) => {
                             <p class="title-text">${item.header}</p>
                             ${item.msg ? html`
                             <p class="msg-text">${item.msg}</p>
+                            ` : ''}
+                            ${item.imgcopyright ? html`
+                            <div class="item-img-copyright">
+                                <p>${item.imgcopyright}</p>
+                            </div>
                             ` : ''}
                         </div>
 

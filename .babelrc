@@ -4,15 +4,13 @@
             "env",
             {
                 "targets": {
-                    "browsers": ["ie >= 10"]
+                    "safari": "8",
+                    "ie": "11"
                 }
             }
-        ],
-        "es2015",
-        "stage-0"
+        ]
     ],
     "plugins": [
-        "dynamic-import-webpack",
-        "transform-runtime"
+        "dynamic-import-webpack"
     ]
 }

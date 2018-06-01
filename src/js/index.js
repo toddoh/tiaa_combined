@@ -125,7 +125,7 @@ if (currentpath_type !== '') {
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 } else {
-    import('./today').then(module => {
+    import(/* webpackChunkName: "today" */ './today').then(module => {
         module.init_render();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });

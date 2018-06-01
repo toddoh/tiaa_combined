@@ -1,4 +1,5 @@
 const express = require('express');
+const expressStaticGzip = require("express-static-gzip");
 const app = express();
 const path = require('path');
 const url = require('url');
@@ -30,7 +31,7 @@ app.use(function (req, res, next) {
         var browserVersion = fullBrowserVersion.split(".",1).toString();
         var browserVersionNumber = Number(browserVersion);
 
-        if (browserName == 'IE' && browserVersion <= 11) {
+        if (browserName == 'IE' && browserVersion <= 10) {
             res.sendFile(path.join(__dirname, '/notice/index.html'));
         } else if (browserName == 'Mobile Safari' && browserVersion <= 9) {
             res.sendFile(path.join(__dirname, '/notice/index.html'));
@@ -43,7 +44,9 @@ app.use(function (req, res, next) {
         next();
     }
 });
-app.use(express.static(path.join(__dirname, '/dist/')));
+
+
+app.use("/", expressStaticGzip(path.join(__dirname, '/dist/'), { indexFromEmptyFile: false }));
 
 app.get('/dataset/:id/:type', function (request, response) {
     if (request.params.type) {
@@ -84,6 +87,7 @@ app.get('/*', function (request, response) {
             var param = '';
             if (request.url.split('/')[1] != '' && 
                 request.url.split('/')[2] != null) param = '?type=' + request.url.split('/')[2]
+            
             response.redirect(301, hostn + request.url.split('/')[1] + param)
         }
     }
