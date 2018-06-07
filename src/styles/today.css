@@ -35,69 +35,34 @@
 
 .today-head-data{
     width: 100%;
-    padding-top: 66px;
-    overflow: hidden;
+    padding-top: 115px;
+}
+
+.today-head-data .head-today-hero {
+    margin: 0 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.today-head-data .head-date-hero {
+    margin: 0 45px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .today-head-data .head-item-container{
     display: grid;
-    grid-gap: 13px;
-    grid-template-areas: "first first first" "second third third" "fourth fourth fourth" ;
-}
-
-.today-head-data .head-item-container.five{
-    display: grid;
-    grid-gap: 13px;
-    grid-template-areas: 
-    "first first first" 
-    "second third third" 
-    "second fourth fifth" ;
-}
-
-.today-head-data .head-item-container.six{
-    display: grid;
-    grid-gap: 13px;
-    grid-template-columns: fit-content(40%);
-    grid-template-areas: "first first first" "second second third" "fourth fifth fifth" "fourth sixth sixth";
-}
-
-.today-head-data .head-item-container .second {
-    grid-area: second;
-    height: auto;
-}
-
-.today-head-data .head-item-container .third {
-    grid-area: third;
-    position: relative;
-}
-
-.today-head-data .head-item-container .first {
-    grid-area: first;
-    height: 67vh;
-}
-
-.today-head-data .head-item-container .fourth {
-    grid-area: fourth;
-}
-
-.today-head-data .head-item-container.six .fourth {
-    grid-area: fourth;
-    height: auto;
-}
-
-.today-head-data .head-item-container .fifth {
-    grid-area: fifth;
-}
-
-.today-head-data .head-item-container .sixth {
-    grid-area: sixth;
+    margin: 25px 0;
+    grid-auto-rows: 330px;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 
 .today-head-data .head-article-item{
     position: relative;
     flex-shrink: 0;
-    height: 56vh;
+    height: 330px;
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -172,32 +137,20 @@
 .today-head-data .head-article-item > a > .title {
     display: flex;
     color: #fff;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 700;
     width: 60%;
-    margin: 0 80px;
+    margin: 0 45px;
 }
 
-.today-head-data .head-article-item.first > a > .title {
-    font-size: 2.6em;
-}
-
-.today-head-data .head-item-container.five .third > a > .title, .today-head-data .head-item-container.five .fourth > a > .title, .today-head-data .head-item-container.five .fifth > a > .title, .today-head-data .head-item-container.six .third > a > .title, .today-head-data .head-item-container.six .fifth > a > .title, .today-head-data .head-item-container.six .sixth > a > .title{
-    margin: 0 55px;
-    width: 80%;
-}
-
-.today-head-data .head-article-item > .article-info {
+.today-head-data .head-article-item .article-info {
     display: flex;
     text-transform: uppercase;
-    margin: 10px 80px 0;
+    margin: 10px 45px 0;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
     font-size: 0.79em;
-}
-
-.today-head-data .head-item-container.five .third .article-info, .today-head-data .head-item-container.five .fourth .article-info, .today-head-data .head-item-container.five .fifth .article-info, .today-head-data .head-item-container.six .third .article-info,  .today-head-data .head-item-container.six .fifth .article-info, .today-head-data .head-item-container.six .sixth .article-info{
-    margin: 13px 55px 0;
+    flex-direction: column;
 }
 
 .today-head-data .head-article-item .article-action-revealmore {
@@ -207,7 +160,7 @@
     text-transform: uppercase;
     position: absolute;
     bottom: 35px;
-    left: 80px;
+    left: 45px;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 700;
     font-size: 0.8em;
@@ -359,9 +312,9 @@
 
 /* revealinfo */
 .today-action-revealinfo{
-    position: fixed;
+    position: absolute;
     right: 25px;
-    top: 0;
+    top: 25px;
     display: flex;
     height: 65px;
     align-items: center;
@@ -378,8 +331,8 @@
 /* tp details */
 .today-tpdetails{
     position: fixed;
-    width: 80%;
-    padding: 0 10%;
+    width: calc(100% - 160px);
+    padding: 0 80px;
     height: 0;
     bottom: 0;
     left: 0;
@@ -452,13 +405,15 @@
 
 .today-tpdetails .tpdetails-close-action{
     position: fixed;
-    top: 0;
     left: 0;
-    padding: 0 35px 0 35px;
-    height: 65px;
+    top: 0;
+    padding: 10px 20px;
+    margin: 25px;
     display: flex;
     align-items: center;
     background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transform: translateZ(0);
 }
 
@@ -470,7 +425,7 @@
 }
 
 .today-copyrights {
-    padding: 30px 90px 30px 90px;
+    padding: 45px;
     font-size: 0.7em;
     color: #868686;
 }

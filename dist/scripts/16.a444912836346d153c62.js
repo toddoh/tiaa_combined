@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{"0A43":function(n,i,o){},e9uZ:function(n,i,o){"use strict";o.r(i),o.d(i,"init_render",function(){return e});o("AaG5"),o("0A43");function e(){window.location.href="https://brklynfivefive.github.io/presidentmoon_agenda/"}}}]);

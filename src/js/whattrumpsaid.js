@@ -26,19 +26,20 @@ export function init_render() {
             <p class="whattrumpsaid-content-timestamp">Updated on ...</p>
             <p class="whattrumpsaid-action-details">Details</p>
         </div>
-    </div>
-    <div class="whattrumpsaid-share" data-url="https://thisisallabout.com/whattrumpsaid" data-title="WhatTrumpSaid on THISISALLABOUT">
-        <div data-service="facebook" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div data-service="twitter" data-via="" data-related="realDonaldTrump"></div>
-        <div data-service="plusone" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div data-service="linkedin" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div data-service="pinterest" title="WhatTrumpSaid on THISISALLABOUT"></div>
-        <div class="email" title="WhatTrumpSaid on THISISALLABOUT">
-            <div class="icon"></div>    
+
+        <div class="whattrumpsaid-share" data-url="https://thisisallabout.com/whattrumpsaid" data-title="WhatTrumpSaid on THISISALLABOUT">
+            <div data-service="facebook" title="WhatTrumpSaid on THISISALLABOUT"></div>
+            <div data-service="twitter" data-via="" data-related="realDonaldTrump"></div>
+            <div data-service="plusone" title="WhatTrumpSaid on THISISALLABOUT"></div>
+            <div data-service="linkedin" title="WhatTrumpSaid on THISISALLABOUT"></div>
+            <div data-service="pinterest" title="WhatTrumpSaid on THISISALLABOUT"></div>
+            <div class="email" title="WhatTrumpSaid on THISISALLABOUT">
+                <div class="icon"></div>    
+            </div>
         </div>
     </div>
+    
     <div class="whattrumpsaid-section-monthly">
-        <p>Read by month</p>
         <div class="whattrumpsaid-analysis-group">
 
         </div>
@@ -138,7 +139,7 @@ const render_list = (moindex, opt) => {
                 const cover_markup = () => html`
                 <div class="whattrumpsaid-analysis-data-cover">
                     ${item.image ? html`
-                    <div class="cover-image" style="background-image: url('${item.image}')"></div>
+                    <div class="cover-image" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.4) 0%, rgba(0, 0, 0, 0.2) 100%), url('${item.image}')"></div>
                     ` : html`<div class="cover-image"></div>`}
                     <div class="cover-info">
                         <p class="month-title">${item.header}</p>

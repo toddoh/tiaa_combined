@@ -31,35 +31,30 @@ const render_core = () => {
     const featuredSections = [
         { id: 'nav-section-today', name: 'Today', path: '' },
         { id: 'nav-section-theyear', name: 'TheYear', path: 'theyear' },
-        { id: 'nav-section-whattrumpsaid', name: 'WhatTrumpSaid', path: 'whattrumpsaid' },
-        { id: 'nav-section-about', name: 'About us', path: 'about' }
+        { id: 'nav-section-whattrumpsaid', name: 'WhatTrumpSaid', path: 'whattrumpsaid' }
     ];
 
     const top_frame_markup = () => html`
     <div class="minion-root">
         <div class="minion-header">
-            <div class="minion-reveal-navmenu">
-                <div class="icon"></div>
-            </div>
-            <div class="header-box">
-                <div class="minion-tiaa-logo">THISISALLABOUT</div>
-                <div class="minion-featured-sections">
-                    <ul class="sections-list">
-                        ${featuredSections.map((i) => html`
-                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
-                        `
-                        )}
-                    </ul>
+            <div class="header-container">
+                <div class="minion-reveal-navmenu">
+                    <div class="icon"></div>
+                </div>
+                <div class="header-box">
+                    <div class="minion-tiaa-logo">THISISALLABOUT</div>
+                    <div class="minion-featured-sections">
+                        <ul class="sections-list">
+                            ${featuredSections.map((i) => html`
+                                <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                            `
+                            )}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="minion-navmenu">
-            <div class="minion-close-navmenu">
-                <div class="icon"></div>
-            </div>
-
-            <div class="sections-wrapper">
+            <div class="minion-sections">
                 <div class="sections-group">
                     <p class="section-guide">REGULAR</p>
                     <ul class="sections-list">
@@ -91,7 +86,6 @@ const render_core = () => {
                 </div>
 
                 <div class="sections-group">
-                    <p class="section-guide">CONNECT WITH US</p>
                     <ul class="sections-tiaainfo">
                         <li><a href="/about">About</a></li>
                         <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>
@@ -138,9 +132,5 @@ const check_mobile  = () => {
 }
 
 document.querySelector('.minion-reveal-navmenu').addEventListener('click', function (e) {
-    document.querySelector('.minion-navmenu').classList.add('opened');
-});
-
-document.querySelector('.minion-close-navmenu').addEventListener('click', function (e) {
-    document.querySelector('.minion-navmenu').classList.remove('opened');
+    (!document.querySelector('.minion-header').classList.contains('opened')) ? document.querySelector('.minion-header').classList.add('opened') : document.querySelector('.minion-header').classList.remove('opened');
 });

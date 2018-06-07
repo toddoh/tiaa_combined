@@ -42,20 +42,37 @@ body{
 .minion-header{
     position: fixed;
     display: flex;
-    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 25px;
+    padding-right: 10px;
     height: 65px;
-    z-index: 9999901;
+    z-index: 9999902;
     align-items: center;
-    transition: all 150ms ease;
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid rgb(230, 230, 230);
+    transition: all 200ms ease;
+    background: rgb(255, 255, 255);
+}
+
+.minion-header:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.minion-header.opened{
+    height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.minion-header .header-container {
+    display: flex;
 }
 
 .minion-reveal-navmenu {
-    position: fixed;
     left: 0;
     height: 65px;
-    padding: 0 35px 0 35px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
 }
@@ -68,24 +85,42 @@ body{
     background-size: cover;
 }
 
+.minion-header.opened .minion-reveal-navmenu > div{
+    width: 15px;
+    display: flex;
+    height: 9px;
+    background-image: url('../resources/symbol_arrow_up.png');
+    background-size: cover;
+}
+
 .minion-header .header-box{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-left: 80px;
+    margin: 0 10px 0 0;
 }
 
 .minion-tiaa-logo{
     width: 25px;
     height: 25px;
+    margin: 20px 0;
     background-image: url('../resources/tiaa_icon.png');
     background-size: 25px;
     flex-shrink: 0;
     text-indent: -9999px;
 }
 
-.minion-featured-sections{
+.minion-header:hover .minion-featured-sections{
     margin-left: 10px;
+    display: flex;
+}
+
+.minion-header.opened:hover .minion-featured-sections{
+    display: none;
+}
+
+.minion-featured-sections{
+    display: none;
 }
 
 .minion-featured-sections .sections-list {
@@ -107,73 +142,39 @@ body{
 
 /* nav sections */
 
-.minion-navmenu{
-    display: flex;
-    position: fixed;
-    width: calc(100% - 70px);
-    padding: 35px 35px;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    font-weight: 700;
-    transition: all 200ms ease;
+.minion-header .minion-sections {
+    display: none;
 }
 
-.minion-navmenu.opened {
-    height: 200px;
-    overflow: auto;
-    opacity: 1;
-    z-index: 9999902;
-    background: #fff;
-    border-bottom: 1px solid rgb(230, 230, 230);
-}
-
-.minion-close-navmenu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 65px;
-    padding: 0 35px 0 35px;
-    display: flex;
-    align-items: center;
-}
-
-.minion-close-navmenu > div{
-    width: 15px;
-    display: flex;
-    height: 9px;
-    background-image: url('../resources/symbol_arrow_up.png');
-    background-size: cover;
-}
-
-.minion-navmenu .sections-wrapper {
-    margin-top: 45px;
-    display: flex;
-}
-
-.minion-navmenu .sections-group {
+.minion-header.opened .minion-sections {
+    margin: 20px 0 0 21px;
     display: flex;
     flex-direction: column;
-    margin-right: 60px;
 }
 
-.minion-navmenu .section-guide{
+.minion-sections .sections-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.minion-sections .section-guide{
     font-size: 0.8em;
     align-self: baseline;
-    font-weight: 700;
-    color: #737373;
+    font-weight: 500;
+    color: #949494;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.minion-navmenu ul.sections-list{
-    font-weight: 500;
-    font-size: 0.95em;
+.minion-sections ul.sections-list{
+    font-weight: 700;
+    font-size: 0.9em;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-.minion-navmenu ul.sections-list li{
+.minion-sections ul.sections-list li{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -181,19 +182,19 @@ body{
     word-wrap: break-word;
 }
 
-.minion-navmenu ul.sections-list li.current{
+.minion-sections ul.sections-list li.current{
     color: #1976D2;
     font-weight: 700;
 }
 
-.minion-navmenu ul.sections-tiaainfo{
-    font-weight: 500;
-    font-size: 0.95em;
+.minion-sections ul.sections-tiaainfo{
+    font-weight: 600;
+    font-size: 0.85em;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-.minion-navmenu ul.sections-tiaainfo li{
+.minion-sections ul.sections-tiaainfo li{
     display: flex;
     align-items: center;
     margin-bottom: 10px;

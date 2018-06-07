@@ -1,7 +1,6 @@
 import {html, render} from 'lit-html';
 import today_style from '../styles/today.css';
-import socialLikes from 'social-likes-next';
-import social_style from 'social-likes-next/lib/social-likes_light.css';
+import today_trumpsaid_style from '../styles/today_trumpsaid.css';
 import moment from 'moment';
 import tz from 'moment-timezone';
 
@@ -11,8 +10,16 @@ export function init_render() {
     document.querySelector('.minion-header li[data-sectionid="nav-section-today"]').classList.add('current');
 
     const today_hero_markup = () => html`
-    <div class="today-head-data">
+    <div class="today-head-data">   
+        <p class="head-today-hero">Trending Topics</p>
+        <p class="head-date-hero">Today</p>
         <div class="head-item-container">
+        </div>
+    </div>
+
+    <div class="today-trumpsaid-timetravel">
+        <p class="head-trumpsaidtt-hero">This Week on WhatTrumpSaid</p>
+        <div class="trumpsaidtt-item-container">
         </div>
     </div>
     <div class="today-guide-photosafetynet">
@@ -61,14 +68,11 @@ export function init_render() {
     `;
 
     render(today_hero_markup(), document.querySelector('.minion-contents'));
-    render_data();
-    /*
-    socialLikes(document.querySelector('.today-share'));
-    document.querySelector('.today-share .email').addEventListener('click', function (e) {
-        window.location.href = "mailto:?body=Hey, check trending issues of today: " + window.location.href;
-    });*/
+    render_head_data();
+    import('./today/trumpsaid').then(module => {
+        module.init_render();
+    });
 }
-
 
 const check_mobile = () => {
     var status = false;
@@ -76,7 +80,7 @@ const check_mobile = () => {
     return status;
 }
 
-const render_data = () => {
+const render_head_data = () => {
     var trump_data = null;
     var dataset_url;
     dataset_url = 'https://thisisallabout.com/dataset/today/today_data.json';
@@ -87,22 +91,25 @@ const render_data = () => {
 
         var contentts = trump_data[0].timestamp;
         var est_ts = moment.tz(contentts, "America/New_York").format("MMM D ddd");
-        document.querySelector('.minion-header li[data-sectionid="nav-section-today"] a').innerHTML = est_ts;
+        var est_ts_hero = moment.tz(contentts, "America/New_York").format("MMMM Do hA, dddd");
+        document.querySelector('.head-date-hero').innerHTML = est_ts_hero;
 
-        const head_markup = () => html`
+        const head_markup = () => 
+        html`
             ${trump_data.map((i) => html`
                 ${i.toparticles.map((arti) => html`
                     <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}">
-                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('${arti[0].image}')"></div>
+                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.5) 0%, rgba(0, 0, 0, 0.3) 100%), url('${arti[0].image}')"></div>
                         <a href="${arti[0].url}" target="_blank">
                             <p class="title">${arti[0].title}</p>
+                            <div class="article-info">
+                                <p class="origin">${arti[0].origin},&nbsp;</p>
+                                <p class="ts" banana-ts="${arti[0].ts}"></p>
+                            </div>
                         </a>
-                        <div class="article-info">
-                            <p class="origin">${arti[0].origin},&nbsp;</p>
-                            <p class="ts" banana-ts="${arti[0].ts}"></p>
-                        </div>
+                        
                         <div class="article-action-revealmore">
-                            <p>See more key stories</p>
+                            <p>MORE</p>
                         </div>
                         <div class="article-moreitems">
                         ${arti.length > 0 ? html`
@@ -128,12 +135,12 @@ const render_data = () => {
         `;
 
         render(head_markup(), document.querySelector('.today-head-data .head-item-container'));
-        postrender_data();
+        postrender_head_data();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
 }
 
-const postrender_data = () => {
+const postrender_head_data = () => {
     if (!localStorage.getItem('tiaa_visitor_photosafetynet_blur')) {
         $('.today-guide-photosafetynet').addClass('opened');
     } else if (localStorage.getItem('tiaa_visitor_photosafetynet_blur') == 'on') {
@@ -155,26 +162,8 @@ const postrender_data = () => {
         $('.today-guide-photosafetynet').removeClass('opened');
     });
 
-    if ($('.today-head-data .head-item-container .head-article-item').length == 5) {
-        $('.today-head-data .head-item-container').addClass('five');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(5)').addClass('fifth');
-    } else if ($('.today-head-data .head-item-container .head-article-item').length == 6) {
-        $('.today-head-data .head-item-container').addClass('six');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(5)').addClass('fifth');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(6)').addClass('sixth');
-    } else {
-        $('.today-head-data .head-item-container .head-article-item:nth-child(1)').addClass('first');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(2)').addClass('second');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(3)').addClass('third');
-        $('.today-head-data .head-item-container .head-article-item:nth-child(4)').addClass('fourth');
+    if ($('.today-head-data .head-item-container .head-article-item').length == 4) {
+        $('.today-head-data .head-item-container').addClass('four');
     }
 
     $('.today-head-data .head-article-item .article-action-revealmore').on('click', function (e) {

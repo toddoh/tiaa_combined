@@ -1,36 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One');
 
 .whattrumpsaid-share.social-likes {
-    z-index: 9999901;
-    position: fixed;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 20px;
     background: #ffffff;
-    padding: 4px 0;
-    margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .whattrumpsaid-hero{
     display: flex;
-    padding: 18% 120px 5%;
-    align-items: center;
+    flex-direction: column;
+    padding: 15% 80px 5%;
+    justify-content: center;
 }
 
 .whattrumpsaid-hero .hero1{
     font-size: 3.3em;
     font-weight: 700;
-    color: #005ca2;
+    color: #b90000;
 }
 
 .whattrumpsaid-hero .hero2{
     font-size: 1.5em;
     font-weight: 600;
     word-wrap: break-word;
-    color: #003c69;
+    color: #b90000;
     margin-top: 10px;
 }
 
@@ -50,7 +44,7 @@
 .whattrumpsaid-section-monthly{
     display: flex;
     flex-wrap: wrap;
-    padding: 60px 120px;
+    padding: 30px 80px;
 }
 
 .whattrumpsaid-section-monthly > p{
@@ -68,13 +62,14 @@
     position: relative;
     box-sizing: border-box;
     display: flex;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     flex-shrink: 0;
     margin-right: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 30px;
     background: #fff;
     transition: all 160ms ease;
     transform: translateZ(0);
@@ -1031,13 +1026,13 @@
 
 .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-panelactions, .whattrumpsaid-analysis-data .whattrumpsaid-analysis-data-action-close-pre {
     position: fixed;
-    padding: 0 20px 0 20px;
-    margin: 20px 20px;
+    padding: 0 15px 0 15px;
+    margin: 25px;
     display: flex;
     align-items: center;
     background: #fff;
-    border-radius: 30px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transform: translateZ(0);
 }
 
@@ -1141,12 +1136,12 @@
     left: 0;
     top: 0;
     padding: 10px 20px;
-    margin: 20px 20px;
+    margin: 25px;
     display: flex;
     align-items: center;
     background: #fff;
-    border-radius: 30px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transform: translateZ(0);
 }
 
@@ -1190,12 +1185,12 @@
     position: fixed;
     top: 0;
     padding: 10px 20px;
-    margin: 20px 20px;
+    margin: 25px;
     display: flex;
     align-items: center;
     background: #fff;
-    border-radius: 30px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transform: translateZ(0);
 }
 
