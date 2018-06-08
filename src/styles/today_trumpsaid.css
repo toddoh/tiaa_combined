@@ -21,24 +21,23 @@
 
 .trumpsaidtt-item-container .trumpsaid-tt-item{
     width: 100%;
-}
-
-.trumpsaid-tt-item .trumpsaid-tt-image[banan-imagetarget="06082018"] {
-    
+    position: relative;
 }
 
 .trumpsaidtt-item-container .trumpsaid-tt-item .header-title{
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 700;
     margin: 0 45px;
+    width: 60%;
 }
 
 .trumpsaidtt-item-container .trumpsaid-tt-item .header-msg{
     margin: 4px 45px;
+    width: 50%;
 }
 
 .trumpsaidtt-item-container .trumpsaid-tt-item .tt-tweets-container{
-    margin: 30px 45px;
+    margin: 30px 45px 5px;
     display: grid;
     grid-gap: 1.6vw;
     grid-row-gap: 1vw;
@@ -53,12 +52,12 @@
     position: relative;
     flex-shrink: 0;
     background: #efefef;
-    align-items: center;
+    flex-direction: column;
 }
 
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(1){
     grid-area: first;
-    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(2){
@@ -67,7 +66,7 @@
 
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(3){
     grid-area: third;
-    align-items: flex-end;
+    justify-content: flex-end;
     text-align: right;
 }
 
@@ -78,12 +77,12 @@
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(5){
     grid-area: fifth;
     text-align: center;
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(6){
     grid-area: sixth;
-    align-items: flex-start;
+    justify-content: flex-start;
     text-align: right;
 }
 
@@ -122,4 +121,18 @@
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item .origin{
     font-size: 1.1em;
     font-weight: 700;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item .ts{
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    font-size: 0.79em;
+}
+
+.trumpsaid-tt-item .header-imagecopyright {
+    margin: 0 45px;
+    font-size: 0.7em;
+    color: #797979;
 }
