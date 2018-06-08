@@ -35,7 +35,7 @@
 
 .today-head-data{
     width: 100%;
-    padding-top: 115px;
+    padding-top: 120px;
 }
 
 .today-head-data .head-today-hero {
@@ -47,22 +47,21 @@
 .today-head-data .head-date-hero {
     margin: 0 45px;
     font-size: 1em;
-    font-weight: 600;
     text-transform: uppercase;
 }
 
 .today-head-data .head-item-container{
     display: grid;
-    margin: 25px 0;
-    grid-auto-rows: 330px;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 0.39vw;
+    margin: 25px 0 0;
+    grid-auto-rows: 24.7vw;
+    grid-template-columns: 24.7vw 24.7vw 24.7vw 24.7vw;
 }
-
 
 .today-head-data .head-article-item{
     position: relative;
     flex-shrink: 0;
-    height: 330px;
+    height: 24.7vw;
     width: 100%;
     display: flex;
     overflow: hidden;

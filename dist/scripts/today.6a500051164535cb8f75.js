@@ -62,8 +62,7 @@
                         <a href="${t[0].url}" target="_blank">
                             <p class="title">${t[0].title}</p>
                             <div class="article-info">
-                                <p class="origin">${t[0].origin},&nbsp;</p>
-                                <p class="ts" banana-ts="${t[0].ts}"></p>
+                                <p class="origin">${t[0].origin}</p>
                             </div>
                         </a>
                         

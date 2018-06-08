@@ -3,7 +3,7 @@
 
 .today-trumpsaid-timetravel{
     width: 100%;
-    padding-top: 45px;
+    padding-top: 90px;
 }
 
 .today-trumpsaid-timetravel .head-trumpsaidtt-hero {
@@ -20,63 +20,106 @@
 }
 
 .trumpsaidtt-item-container .trumpsaid-tt-item{
-    margin-top: 5px;
     width: 100%;
 }
 
+.trumpsaid-tt-item .trumpsaid-tt-image[banan-imagetarget="06082018"] {
+    
+}
+
 .trumpsaidtt-item-container .trumpsaid-tt-item .header-title{
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: 700;
     margin: 0 45px;
 }
 
 .trumpsaidtt-item-container .trumpsaid-tt-item .header-msg{
     margin: 4px 45px;
-    font-weight: 500;
 }
 
 .trumpsaidtt-item-container .trumpsaid-tt-item .tt-tweets-container{
-    display: flex;
-    margin-top: 30px;
-    overflow-x: scroll;
-    width: calc(100% - 90px);
-    padding: 0 45px 25px;
-}
-
-.trumpsaidtt-item-container .trumpsaid-tt-item .tt-tweets-container::-webkit-scrollbar-track {
-	background-color: #fff;
-}
-
-.trumpsaidtt-item-container .trumpsaid-tt-item .tt-tweets-container::-webkit-scrollbar {
-	height: 4px;
-	background-color: #fff;
-}
-
-.trumpsaidtt-item-container .trumpsaid-tt-item .tt-tweets-container::-webkit-scrollbar-thumb {
-	background-color: rgb(167, 167, 167);
+    margin: 30px 45px;
+    display: grid;
+    grid-gap: 1.6vw;
+    grid-row-gap: 1vw;
+    grid-template-columns: 23% 17% 22% 33%;
+    grid-template-areas: "first first second third" "fourth fifth fifth sixth" "seventh eighth nineth tenth" "eleventh twelveth thirdteenth fourteenth";
 }
 
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item{
     display: flex;
-    padding: 15px 45px;
+    padding: 25px;
+    margin-bottom: 1.6%;
     position: relative;
     flex-shrink: 0;
-    width: calc(100% - 400px);
+    background: #efefef;
+    align-items: center;
 }
 
-.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:before{
-    content: '';
-    width: 30px;
-    display: flex;
-    height: 25px;
-    background-image: url('../resources/symbol_doublequote.png');
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(1){
+    grid-area: first;
+    align-items: flex-start;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(2){
+    grid-area: second;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(3){
+    grid-area: third;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(4){
+    grid-area: fourth;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(5){
+    grid-area: fifth;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(6){
+    grid-area: sixth;
+    align-items: flex-start;
+    text-align: right;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(7){
+    grid-area: seventh;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(8){
+    grid-area: eighth;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(9){
+    grid-area: nineth;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(10){
+    grid-area: tenth;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(11){
+    grid-area: eleventh;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(12){
+    grid-area: twelveth;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(13){
+    grid-area: thirdteenth;
+}
+
+.trumpsaid-tt-item .tt-tweets-container .tt-tweet-item:nth-child(14){
+    grid-area: fourteenth;
 }
 
 .trumpsaid-tt-item .tt-tweets-container .tt-tweet-item .origin{
-    font-size: 2em;
-    font-weight: 800;
+    font-size: 1.1em;
+    font-weight: 700;
 }

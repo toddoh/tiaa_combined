@@ -103,8 +103,7 @@ const render_head_data = () => {
                         <a href="${arti[0].url}" target="_blank">
                             <p class="title">${arti[0].title}</p>
                             <div class="article-info">
-                                <p class="origin">${arti[0].origin},&nbsp;</p>
-                                <p class="ts" banana-ts="${arti[0].ts}"></p>
+                                <p class="origin">${arti[0].origin}</p>
                             </div>
                         </a>
                         

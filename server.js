@@ -64,6 +64,14 @@ app.get('/res/:type', function (request, response) {
     response.sendFile(path.join(__dirname, '/dist/res/' + request.params.type));
 });
 
+app.get('/d_assets/:id/:type', function (request, response) {
+    if (request.params.type) {
+        response.sendFile(path.join(__dirname, '/d_assets/' + request.params.id + '/' + request.params.type));
+    } else {
+        response.sendFile(path.join(__dirname, '/d_assets/' + request.params.id));
+    }
+});
+
 app.get('/styles/:type', function (request, response) {
     response.sendFile(path.join(__dirname, '/dist/styles/' + request.params.type));
 });
