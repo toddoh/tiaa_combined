@@ -41,7 +41,7 @@
 .today-head-data .head-today-hero {
     margin: 0 45px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .today-head-data .head-date-hero {
@@ -430,36 +430,20 @@
 }
 
 @media all and (max-width: 980px) {
-    .today-share.social-likes {
-        z-index: 1;
-        left: initial;
-        padding: 0 25px 0 20px;
-        margin-bottom: 20px;
-        top: initial;
-        flex-direction: row;
-        transform: none;
-        position: relative;
-    }
-
-    .minion-featured-sections .sections-list li {
+    .minion-header:hover .minion-featured-sections {
         display: none;
-    }
-
-    .minion-featured-sections .sections-list li.current {
-        display: block;
-        font-size: 0.95em;
-    }
-
-    .minion-navmenu.opened {
-        height: calc(100% - 70px);
-    }
-
-    .minion-navmenu .sections-wrapper {
-        flex-direction: column;
     }
 
     .today-head-data .head-item-container {
         display: block !important;
+    }
+
+    .today-head-data .head-today-hero {
+        margin: 0 35px;
+    }
+
+    .today-head-data .head-date-hero {
+        margin: 0 35px;
     }
 
     .today-head-data .head-article-item{
