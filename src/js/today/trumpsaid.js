@@ -10,7 +10,7 @@ export function init_render() {
         {
             "timestamp": "2018-06-07 04:11:01.413990-04:00",
             "header": "Trump Prepares The Meeting of the Century with Kim",
-            "msg": "President Trump is going to have the summit with North Korean leader Kim Jong Un this coming 12th in Singapore. Will they be able to secure a denuclearization deal after all those conflicts? Look back some of his tweets.",
+            "msg": "President Trump is going to have the summit with North Korean leader Kim Jong Un this coming 12th in Singapore. Will they be able to secure a denuclearization deal after all those conflicts? It's worth looking back at some of his tweets.",
             "image": "today_06082018.jpg",
             "imgcopyright": "Michael Vadon/Gage Skidmore, The White House",
             "style": "width: 250px; height: 135px; background-size: cover; position: absolute; right: -20px; top: -40px; transform: rotate(10deg);",
