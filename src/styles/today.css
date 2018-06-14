@@ -79,9 +79,19 @@ body.today .minion-featured-sections .sections-list li{
     width: 100%;
     height: 100%;
     display: flex;
+}
+
+.today-head-data .head-item-container:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background: #696969;
     z-index: -1;
 }
+
 
 .today-head-data .head-container-move{
     position: absolute;
