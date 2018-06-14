@@ -37,23 +37,6 @@ const render_core = () => {
     const top_frame_markup = () => html`
     <div class="minion-root">
         <div class="minion-header">
-            <div class="header-container">
-                <div class="minion-reveal-navmenu">
-                    <div class="icon"></div>
-                </div>
-                <div class="header-box">
-                    <div class="minion-tiaa-logo">THISISALLABOUT</div>
-                    <div class="minion-featured-sections">
-                        <ul class="sections-list">
-                            ${featuredSections.map((i) => html`
-                                <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
-                            `
-                            )}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
             <div class="minion-sections">
                 <div class="sections-group">
                     <p class="section-guide">REGULAR</p>
@@ -90,6 +73,19 @@ const render_core = () => {
                         <li><a href="/about">About</a></li>
                         <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>
                         <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-box">
+                <div class="minion-tiaa-logo">THISISALLABOUT</div>
+                <div class="minion-featured-sections">
+                    <ul class="sections-list">
+                        <li data-sectionid="reveal-sections">browse</li>
+                        ${featuredSections.map((i) => html`
+                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                        `
+                        )}
                     </ul>
                 </div>
             </div>
@@ -131,6 +127,14 @@ const check_mobile  = () => {
     return status;
 }
 
-document.querySelector('.minion-reveal-navmenu').addEventListener('click', function (e) {
+window.addEventListener('scroll', function (e) {
+    if (window.scrollY >= 140) {
+        document.querySelector('.minion-header').classList.add('floating');
+    } else {
+        document.querySelector('.minion-header').classList.remove('floating');
+    }
+});
+
+document.querySelector('.minion-header .header-box').addEventListener('click', function (e) {
     (!document.querySelector('.minion-header').classList.contains('opened')) ? document.querySelector('.minion-header').classList.add('opened') : document.querySelector('.minion-header').classList.remove('opened');
 });

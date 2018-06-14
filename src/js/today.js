@@ -10,10 +10,15 @@ export function init_render() {
     document.querySelector('.minion-header li[data-sectionid="nav-section-today"]').classList.add('current');
 
     const today_hero_markup = () => html`
-    <div class="today-head-data">   
-        <p class="head-today-hero">Trending Topics</p>
-        <p class="head-date-hero">Today</p>
+    <div class="today-head-data">  
+        <div class="head-hero-title">
+            <p class="head-today-hero">Key Topics</p>
+            <p class="head-date-hero">Today</p>
+        </div>
         <div class="head-item-container">
+        </div>
+        <div class="head-container-move" banana-slide-direction="right">
+            <div class="icon"></div>
         </div>
     </div>
 
@@ -62,15 +67,24 @@ export function init_render() {
             <div class="icon"></div>
         </div>
     </div>
+    <!--
     <div class="today-action-revealinfo">
         <p>DETAILS</p>
-    </div>
+    </div>-->
     `;
 
     render(today_hero_markup(), document.querySelector('.minion-contents'));
     render_head_data();
     import('./today/trumpsaid').then(module => {
         module.init_render();
+    });
+
+    window.addEventListener('scroll', function (e) {
+        if (window.scrollY >= 30) {
+            document.querySelector('.today-head-data .head-hero-title').classList.add('scrolled');
+        } else {
+            document.querySelector('.today-head-data .head-hero-title').classList.remove('scrolled');
+        }
     });
 }
 
@@ -91,8 +105,9 @@ const render_head_data = () => {
 
         var contentts = trump_data[0].timestamp;
         var est_ts = moment.tz(contentts, "America/New_York").format("MMM D ddd");
-        var est_ts_hero = moment.tz(contentts, "America/New_York").format("MMMM Do hA, dddd");
+        var est_ts_hero = moment.tz(contentts, "America/New_York").format("MMMM Do hA, ddd");
         document.querySelector('.head-date-hero').innerHTML = est_ts_hero;
+        document.querySelector('.head-today-hero').innerHTML = trump_data.length + ' key topics';
 
         const head_markup = () => 
         html`
@@ -108,7 +123,7 @@ const render_head_data = () => {
                         </a>
                         
                         <div class="article-action-revealmore">
-                            <p>MORE</p>
+                            <p>SEE RELATED STORIES</p>
                         </div>
                         <div class="article-moreitems">
                         ${arti.length > 0 ? html`
@@ -161,9 +176,57 @@ const postrender_head_data = () => {
         $('.today-guide-photosafetynet').removeClass('opened');
     });
 
-    if ($('.today-head-data .head-item-container .head-article-item').length == 4) {
-        $('.today-head-data .head-item-container').addClass('four');
+    var head_container = document.querySelector('.today-head-data .head-item-container');
+    var head_items = head_container.children;
+    head_container.setAttribute('banana-slide-index', 0);
+    var head_ind = 0;
+    
+    while (head_ind < head_items.length) {
+        head_items[head_ind].style.left = window.innerWidth * head_ind + 'px';
+        if (head_ind == 0) head_items[head_ind].classList.add('visible');
+        head_ind++;
     }
+    
+    function head_container_slide_move_right() {
+        var head_container = document.querySelector('.today-head-data .head-item-container');
+        if (parseInt(head_container.getAttribute('banana-slide-index'))+1 == head_container.children.length) {
+            head_container.setAttribute('banana-slide-index', 0);
+            var head_items = head_container.children;
+            var head_ind = 0;
+        
+            while (head_ind < head_items.length) {
+                head_items[head_ind].style.left = window.innerWidth * head_ind + 'px';
+                if (head_ind == 0) head_items[head_ind].classList.add('visible');
+                head_ind++;
+            }
+        } else {
+            head_container.setAttribute('banana-slide-index', parseInt(head_container.getAttribute('banana-slide-index'))+1);
+            var head_ind = parseInt(head_container.getAttribute('banana-slide-index'));
+            var head_ind_right = 0;
+            var head_items = head_container.children;
+
+            for (var i=0; i < head_items.length; i++) {
+                if (i <= head_ind) {
+                    head_items[i].style.left = window.innerWidth * (head_ind-i) + 'px';
+                } else {
+                    head_items[i].style.left = window.innerWidth * (head_ind+head_ind_right) + 'px';
+                    head_ind_right++;
+                }
+
+                if (i == head_container.getAttribute('banana-slide-index')) {
+                    head_items[head_ind].classList.add('visible');
+                } else {
+                    head_items[head_ind].classList.remove('visible');
+                }
+            }
+        }
+    }
+
+    $('.today-head-data .head-container-move').on('click', function (e) {
+        if (this.getAttribute('banana-slide-direction') == 'right') {
+            head_container_slide_move_right();
+        }
+    });
 
     $('.today-head-data .head-article-item .article-action-revealmore').on('click', function (e) {
         $(this).parent().addClass('moreitems-opened');

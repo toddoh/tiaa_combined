@@ -10,11 +10,11 @@
 .today-trumpsaid-timetravel .head-trumpsaidtt-hero {
     margin: 0 45px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-size: 0.9em;
+    font-weight: 700;
 }
 
 .today-trumpsaid-timetravel .trumpsaidtt-item-container{
-    margin: 5px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -39,6 +39,7 @@
 
 .trumpsaidtt-item-container .trumpsaid-tt-item .tt-tweets-container{
     margin: 30px 45px 5px;
+    width: 75%;
     display: grid;
     grid-gap: 1.6vw;
     grid-row-gap: 1vw;
