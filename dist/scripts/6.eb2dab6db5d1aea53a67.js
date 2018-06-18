@@ -4,20 +4,20 @@
             <p class="hero1 strike">#Jan2017-Jan2018</p>
             <p class="hero1">It's been a giant mess.</p>
             <div class="hero2">
-                <p>This month, to celebrate Trump's first year mark in the White House.</p>
+                <p>This month, to celebrate Trump's first year mark in the White House,</p>
                 <p>we rediscovered what has happened in our nation during then.</p>
             </div>
             <p class="theyear-herotpdetails">More</p>
         </div>
-    </div>
-    <div class="theyear-share" data-url="https://thisisallabout.com/theweek" data-title="TheWeek on THISISALLABOUT">
-        <div data-service="facebook" title="TheWeek on THISISALLABOUT"></div>
-        <div data-service="twitter" data-via="" data-related=""></div>
-        <div data-service="plusone" title="TheWeek on THISISALLABOUT"></div>
-        <div data-service="linkedin" title="TheWeek on THISISALLABOUT"></div>
-        <div data-service="pinterest" title="TheWeek on THISISALLABOUT"></div>
-        <div class="email" title="TheWeek on THISISALLABOUT">
-            <div class="icon"></div>    
+        <div class="theyear-share" data-url="https://thisisallabout.com/theweek" data-title="TheWeek on THISISALLABOUT">
+            <div data-service="facebook" title="TheWeek on THISISALLABOUT"></div>
+            <div data-service="twitter" data-via="" data-related=""></div>
+            <div data-service="plusone" title="TheWeek on THISISALLABOUT"></div>
+            <div data-service="linkedin" title="TheWeek on THISISALLABOUT"></div>
+            <div data-service="pinterest" title="TheWeek on THISISALLABOUT"></div>
+            <div class="email" title="TheWeek on THISISALLABOUT">
+                <div class="icon"></div>    
+            </div>
         </div>
     </div>
     <div class="theyear-analysis-data">
@@ -40,7 +40,7 @@
             <div class="icon"></div>
         </div>
     </div>
-    `)(),document.querySelector(".minion-contents")),render_data(),social_likes_next__WEBPACK_IMPORTED_MODULE_2___default()(document.querySelector(".theyear-share")),document.querySelector(".theyear-share .email").addEventListener("click",function(e){window.location.href="mailto:?body=Hey, check trending issues of this year: "+window.location.href})}const check_mobile=()=>{return!!document.body.getAttribute("banana-type","mobile")},render_data=()=>{var trump_data=null,dataset_url;dataset_url="//thisisallabout.com/dataset/theyear/theyear_jan2018_data.json",document.querySelector(".minion-dataload").setAttribute("status","dl_d_1"),fetch(dataset_url).then(e=>e.text()).then(function(text){var module=eval(text);trump_data=module;const analysis_markup=()=>lit_html__WEBPACK_IMPORTED_MODULE_0__["a"]`
+    `)(),document.querySelector(".minion-contents")),render_data(),social_likes_next__WEBPACK_IMPORTED_MODULE_2___default()(document.querySelector(".theyear-share")),document.querySelector(".theyear-share .email").addEventListener("click",function(e){window.location.href="mailto:?body=Hey, check trending issues of this year: "+window.location.href})}const check_mobile=()=>{return!!document.body.getAttribute("banana-type","mobile")},render_data=()=>{var trump_data=null,dataset_url;dataset_url="https://thisisallabout.com/dataset/theyear/theyear_jan2018_data.json",document.querySelector(".minion-dataload").setAttribute("status","dl_d_1"),fetch(dataset_url).then(e=>e.text()).then(function(text){var module=eval(text);trump_data=module;const analysis_markup=()=>lit_html__WEBPACK_IMPORTED_MODULE_0__["a"]`
             ${trump_data.map(e=>lit_html__WEBPACK_IMPORTED_MODULE_0__["a"]`
                 <div class="analysis-item">
                     <div class="item-info">

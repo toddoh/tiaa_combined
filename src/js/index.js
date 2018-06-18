@@ -28,12 +28,6 @@ const render_core = () => {
         { id: 'nav-section-datatodaycluster', name: 'HourlyClusters', path: 'lab?type=hourlycluster' }
     ];
 
-    const featuredSections = [
-        { id: 'nav-section-today', name: 'Today', path: '' },
-        { id: 'nav-section-theyear', name: 'TheYear', path: 'theyear' },
-        { id: 'nav-section-whattrumpsaid', name: 'WhatTrumpSaid', path: 'whattrumpsaid' }
-    ];
-
     const top_frame_markup = () => html`
     <div class="minion-root">
         <div class="minion-header">
@@ -82,10 +76,6 @@ const render_core = () => {
                 <div class="minion-featured-sections">
                     <ul class="sections-list">
                         <li data-sectionid="reveal-sections">browse</li>
-                        ${featuredSections.map((i) => html`
-                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
-                        `
-                        )}
                     </ul>
                 </div>
             </div>

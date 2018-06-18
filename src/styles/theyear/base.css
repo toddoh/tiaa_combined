@@ -1,27 +1,20 @@
 .theyear-share.social-likes {
-    z-index: 9999901;
-    position: fixed;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 20px;
     background: #ffffff;
-    padding: 4px 0;
-    margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .theyear-hero{
-    padding: 18% 0px 5% 120px;
+    padding: 18% 0px 5% 105px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .theyear-hero .hero1{
-    font-size: 2.3em;
+    font-size: 3.3em;
     font-weight: 700;
-    color: #ea2000;
+    color: #48443f;
 }
 
 .theyear-hero .hero2{
@@ -29,7 +22,7 @@
     font-weight: 600;
     word-wrap: break-word;
     margin-top: 10px;
-    color: #c31500;
+    color: #48443f;
 }
 
 .theyear-hero .theyear-herotpdetails{
@@ -42,7 +35,6 @@
 /* data */
 .theyear-analysis-data{
     display: flex;
-    padding: 60px 0;
 }
 
 .theyear-analysis-data.hidden{
@@ -66,7 +58,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     align-self: baseline;
-    margin-left: 120px;
+    margin-left: 105px;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .item-bg{
@@ -93,7 +85,7 @@
 
 .theyear-analysis-data .analysis-list .theme-header{
     align-self: baseline;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.5em;
 }
 
@@ -103,7 +95,8 @@
     flex-wrap: wrap;
     align-content: flex-start;
     align-self: baseline;
-    margin-top: 16px;
+    margin-top: 14px;
+    font-size: 0.9em;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .item-peakinfo{
@@ -164,7 +157,7 @@
 .theyear-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
     display: none;
     flex-wrap: wrap;
-    margin-left: 120px;
+    margin-left: 105px;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month.selected {
@@ -179,10 +172,12 @@
 
 .theyear-analysis-data .analysis-list .toparticle-month .toparticle-object{
     position: relative;
-    width: 20%;
+    width: 200px;
     flex-shrink: 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     background-size: cover;
+    margin: 0 15px 15px 0;
+    border-radius: 30px;
     cursor: pointer;
 }
 
@@ -201,12 +196,12 @@
 }
 
 .theyear-analysis-data .analysis-list .toparticle-month .toparticle-object .article-title{
-    font-size: 1.05em;
+    font-size: 1em;
     font-weight: 600;
 }
 
 .theyear-analysis-data .analysis-list .toparticle-month .toparticle-object .article-desc{
-    font-size: 0.9em;
+    font-size: 0.85em;
     margin-top: 3px;
 }
 

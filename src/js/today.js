@@ -12,7 +12,6 @@ export function init_render() {
     const today_hero_markup = () => html`
     <div class="today-head-data">  
         <div class="head-hero-title">
-            <p class="head-today-hero">Key Topics</p>
             <p class="head-date-hero">Today</p>
         </div>
         <div class="head-item-container">
@@ -21,12 +20,13 @@ export function init_render() {
             <div class="icon"></div>
         </div>
     </div>
-
+    <!--
     <div class="today-trumpsaid-timetravel">
         <p class="head-trumpsaidtt-hero">This Week on WhatTrumpSaid</p>
         <div class="trumpsaidtt-item-container">
         </div>
     </div>
+    -->
     <div class="today-guide-photosafetynet">
         <div class="guide-text">
             <p>Our Today section is an unbiased news cluster of topics trending across mainstream media. We pick the most important stories from each topic cluster automatically through our algorithm.</p>
@@ -67,17 +67,19 @@ export function init_render() {
             <div class="icon"></div>
         </div>
     </div>
-    <!--
+    
     <div class="today-action-revealinfo">
-        <p>DETAILS</p>
-    </div>-->
+        <div class="icon"></div>
+    </div>
     `;
 
     render(today_hero_markup(), document.querySelector('.minion-contents'));
     render_head_data();
+    /*
     import('./today/trumpsaid').then(module => {
         module.init_render();
     });
+    */
 
     window.addEventListener('scroll', function (e) {
         if (window.scrollY >= 30) {
@@ -105,16 +107,21 @@ const render_head_data = () => {
 
         var contentts = trump_data[0].timestamp;
         var est_ts = moment.tz(contentts, "America/New_York").format("MMM D ddd");
-        var est_ts_hero = moment.tz(contentts, "America/New_York").format("MMMM Do hA, ddd");
+        var est_ts_hero = moment.tz(contentts, "America/New_York").format("MMMM D hA, ddd");
         document.querySelector('.head-date-hero').innerHTML = est_ts_hero;
-        document.querySelector('.head-today-hero').innerHTML = trump_data.length + ' key topics';
 
         const head_markup = () => 
         html`
             ${trump_data.map((i) => html`
                 ${i.toparticles.map((arti) => html`
                     <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}">
-                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.5) 0%, rgba(0, 0, 0, 0.3) 100%), url('${arti[0].image}')"></div>
+                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url('${arti[0].image}')"></div>
+
+                        <div class="article-keywords">
+                            ${i.theme.map((th) => html`
+                            <p>${th}</p>
+                            `)}
+                        </div>
                         <a href="${arti[0].url}" target="_blank">
                             <p class="title">${arti[0].title}</p>
                             <div class="article-info">
@@ -122,9 +129,6 @@ const render_head_data = () => {
                             </div>
                         </a>
                         
-                        <div class="article-action-revealmore">
-                            <p>SEE RELATED STORIES</p>
-                        </div>
                         <div class="article-moreitems">
                         ${arti.length > 0 ? html`
                             ${arti.map((a) => html`
@@ -183,7 +187,10 @@ const postrender_head_data = () => {
     
     while (head_ind < head_items.length) {
         head_items[head_ind].style.left = window.innerWidth * head_ind + 'px';
-        if (head_ind == 0) head_items[head_ind].classList.add('visible');
+        if (head_ind == 0) {
+            head_items[head_ind].classList.add('visible');
+            head_items[head_ind].querySelector('.article-keywords').classList.add('focus');
+        }
         head_ind++;
     }
     
@@ -196,7 +203,10 @@ const postrender_head_data = () => {
         
             while (head_ind < head_items.length) {
                 head_items[head_ind].style.left = window.innerWidth * head_ind + 'px';
-                if (head_ind == 0) head_items[head_ind].classList.add('visible');
+                if (head_ind == 0) {
+                    head_items[head_ind].classList.add('visible');
+                    head_items[head_ind].querySelector('.article-keywords').classList.add('focus');
+                }
                 head_ind++;
             }
         } else {
@@ -213,10 +223,14 @@ const postrender_head_data = () => {
                     head_ind_right++;
                 }
 
-                if (i == head_container.getAttribute('banana-slide-index')) {
-                    head_items[head_ind].classList.add('visible');
+                if (i == head_ind) {
+                    head_items[i].classList.add('visible');
+                    head_items[i].querySelector('.article-keywords').classList.add('focus');
                 } else {
-                    head_items[head_ind].classList.remove('visible');
+                    head_items[i].classList.remove('visible');
+                    if (head_items[i].querySelector('.article-keywords').classList.contains('focus')) {
+                        head_items[i].querySelector('.article-keywords').classList.remove('focus');
+                    }
                 }
             }
         }
@@ -228,7 +242,7 @@ const postrender_head_data = () => {
         }
     });
 
-    $('.today-head-data .head-article-item .article-action-revealmore').on('click', function (e) {
+    $('.today-head-data .head-article-item .article-keywords').on('click', function (e) {
         $(this).parent().addClass('moreitems-opened');
         $(this).parent().find('.article-moreitems').addClass('opened');
     });
