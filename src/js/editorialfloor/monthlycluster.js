@@ -34,9 +34,9 @@ const render_data = (path) => {
     var dataset_d = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/dataset/' + path + '.json';
+        dataset_url = '//localhost:3000/analysis_assets/' + path + '.json';
     } else {
-        dataset_url = '//thisisallabout.com/dataset/' + path + '.json';
+        dataset_url = '//thisisallabout.com/analysis_assets/' + path + '.json';
     }
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');

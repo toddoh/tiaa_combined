@@ -5,8 +5,23 @@ body.editorial .minion-editorial-header{
     z-index: 9999901;
 }
 
-body.editorial .minion-navbox{
-    display: none;
+body.editorial .minion-header {
+    align-items: initial;
+    height: auto;
+}
+
+body.editorial .minion-header.opened {
+    align-items: initial;
+    height: 100%;
+}
+
+body.editorial .minion-header .header-box {
+    align-items: initial;
+    padding: 35px 20px 35px 35px;
+}
+
+body.editorial .minion-header.opened .header-box {
+    padding: 35px 45px;
 }
 
 .minion-stuartbox{
@@ -135,17 +150,17 @@ body.editorial .minion-navbox{
 .editorial-auth{
     width: auto;
     display: flex;
-    padding: 120px 60px 60px 60px;
+    padding: 80px 60px 60px 100px;
     align-items: center;
 }
 
 .editorial-auth .hero1{
-    font-size: 1.8em;
+    font-size: 3.3em;
     font-weight: 700;
 }
 
 .editorial-auth .hero2{
-    font-size: 1.1em;
+    font-size: 1.5em;
     margin-top: 7px;
 }
 
@@ -155,13 +170,13 @@ body.editorial .minion-navbox{
     margin: 20px auto;
     padding: 9px 0;
     margin-right: 10px;
-    width: 500px;
+    width: 400px;
     border: none;
     border-bottom: 2px solid;
 }
 
 .editorial-auth input:focus {
-    border-color: #00a1ff;
+    border-color: #FF5722;
     outline: 0;
 }
 

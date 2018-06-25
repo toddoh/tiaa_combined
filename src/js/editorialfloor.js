@@ -10,7 +10,7 @@ export function init_render() {
         var results = regex.exec( url );
         return results == null ? null : results[1];
     }
-
+    
     if (!localStorage.getItem('tiaa_stuart_edt_ac_t')) {
         import('./editorialfloor/auth').then(module => {
             module.init_render();
@@ -39,35 +39,21 @@ export function init_render() {
                     { id: 'nav-editorial-monthlycluster', name: 'MonthlyCluster Editor', path: 'editorialfloor/monthlycluster' }
                 ];
             
-                const hero_markup = () => html`
-                <div class="minion-stuart-head">
-                    <div class="stuart-sections-reveal">
-                        <p>Editorial</p>
-                        <div class="icon"></div>
-                    </div>
-                </div>
-                <div class="minion-stuartbox">
-                    <div class="stuart-sections-reveal">
-                        <p>Editorial</p>
-                        <div class="icon"></div>
-                    </div>
-                    <ul class="stuart-sections-list">
+                const sections_markup = () => html`
+                    <p class="section-guide">EDITORIALCONSOLE</p>
+                    <ul class="sections-list editorial">
                         ${editorialMenus.map((i) => html`
                             <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
                         `
                         )}
                     </ul>
-
-                    <p class="stuart-session-user fetched" banana-id="${response.userId}">${response.username}</p>
-                    <ul class="stuart-usersession-action">
-                        <li class="stuart-action-logout">Logout</li>
-                    </ul>
-                </div>
                 `;
+
                 var stuartdiv = document.createElement('div');
-                stuartdiv.setAttribute('class', 'minion-editorial-header');
-                document.querySelector('.minion-root').appendChild(stuartdiv);
-                render(hero_markup(), document.querySelector('.minion-editorial-header'));
+                stuartdiv.setAttribute('class', 'sections-group editorial');
+                var parentSections = document.querySelector('.minion-sections');
+                parentSections.querySelector('.developer').after(stuartdiv);
+                render(sections_markup(), parentSections.querySelector('.editorial'));
                 
                 $('.stuart-sections-reveal').on('click', function (e) {
                     if (!document.querySelector('.minion-stuartbox').classList.contains('opened')) {

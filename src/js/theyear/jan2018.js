@@ -71,7 +71,7 @@ const check_mobile = () => {
 const render_data = () => {
     var trump_data = null;
     var dataset_url;
-    dataset_url = 'https://thisisallabout.com/dataset/theyear/theyear_jan2018_data.json'
+    dataset_url = 'https://thisisallabout.com/analysis_assets/theyear/theyear_jan2018_data.json'
     
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');

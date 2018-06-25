@@ -18,6 +18,7 @@ exports.compare = function(encryption, credential, callback){
 		salt,
 		iterations,
 		hash.length,
+		'sha1',
 		function(err, pass){
 			if(err) throw cb(err);
 

@@ -32,7 +32,7 @@ const render_core = () => {
     <div class="minion-root">
         <div class="minion-header">
             <div class="minion-sections">
-                <div class="sections-group">
+                <div class="sections-group regular">
                     <p class="section-guide">REGULAR</p>
                     <ul class="sections-list">
                         ${contentSections.map((i) => html`
@@ -42,7 +42,7 @@ const render_core = () => {
                     </ul>
                 </div>
 
-                <div class="sections-group">
+                <div class="sections-group projects">
                     <p class="section-guide">PROJECTS</p>
                     <ul class="sections-list projects">
                         ${projectSections.map((i) => html`
@@ -52,8 +52,8 @@ const render_core = () => {
                     </ul>
                 </div>
 
-                <div class="sections-group">
-                    <p class="section-guide">LABORATORY</p>
+                <div class="sections-group developer">
+                    <p class="section-guide">DEVELOPER</p>
                     <ul class="sections-list lab">
                         ${labSections.map((i) => html`
                             <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
@@ -62,7 +62,7 @@ const render_core = () => {
                     </ul>
                 </div>
 
-                <div class="sections-group">
+                <div class="sections-group about">
                     <ul class="sections-tiaainfo">
                         <li><a href="/about">About</a></li>
                         <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>

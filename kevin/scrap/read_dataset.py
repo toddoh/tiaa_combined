@@ -1,5 +1,5 @@
 import pickle
-from parser_twitter import parse_aggregated
+from tfidf_kmeans import parse_aggregated
 import numpy as np
 import json
 import jsonpickle

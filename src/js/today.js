@@ -99,7 +99,7 @@ const check_mobile = () => {
 const render_head_data = () => {
     var trump_data = null;
     var dataset_url;
-    dataset_url = 'https://thisisallabout.com/dataset/today/today_data.json';
+    dataset_url = 'https://thisisallabout.com/analysis_assets/today/today_data.json';
 
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);

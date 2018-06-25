@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from monthly.parser_twitter import parse_aggregated
+from tfidf_kmeans import vectorize_cluster
 from datetime import datetime, timedelta
 import numpy as np
 import nltk
@@ -154,7 +154,7 @@ def sort_articles_month(item, type=None, mode=None):
             os.makedirs(datapath, exist_ok=True)
 
             if type == 'trumpsaid':
-                parsed_data = parse_aggregated(parsed_article_dict, 1, 25, datapath, 'titleonly', monthlyitem['month'])
+                parsed_data = vectorize_cluster(parsed_article_dict, 1, 25, datapath, 'titleonly', monthlyitem['month'])
 
             # print(parsed_data[0])
             parsed_data_themes = []

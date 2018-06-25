@@ -1,4 +1,4 @@
-from monthly.unit_monthly import sort_articles_month
+from monthly.monthly import sort_articles_month
 import sys
 import argparse
 
@@ -10,23 +10,32 @@ def init_task(type):
 
 
 # 168hr is 1 week
-
 ## run task
 parser = argparse.ArgumentParser()
 parser.add_argument("--target", help="run interpreter for provided target")
 args = parser.parse_args()
 
-orig_stdout = sys.stdout
-f = open('./logs/action_mon_clustering_' + vars(args)['target'] + '.txt', 'w')
-sys.stdout = f
+class Transcript(object):
+    def __init__(self, filename):
+        self.terminal = sys.stdout
+        self.logfile = open(filename, "w")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.logfile.write(message)
+
+    def flush(self):
+        pass
+
+sys.stdout = Transcript('./logs/action_mon_clustering_' + vars(args)['target'] + '.txt')
 
 print(vars(args), vars(args)['target'])
 
 if vars(args)['target'] != '':
     init_task(vars(args)['target'])
 else:
-    print('Clustering init: No argument provided, finished with none.')
+    print('ACTION_MONTHLYCLUSTERING: No argument provided, finished with none.')
 
 
-sys.stdout = orig_stdout
-f.close()
+sys.stdout.logfile.close()
+sys.stdout = sys.stdout.terminal

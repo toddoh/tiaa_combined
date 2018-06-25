@@ -48,11 +48,11 @@ app.use(function (req, res, next) {
 
 app.use("/", expressStaticGzip(path.join(__dirname, '/dist/'), { indexFromEmptyFile: false }));
 
-app.get('/dataset/:id/:type', function (request, response) {
+app.get('/analysis_assets/:id/:type', function (request, response) {
     if (request.params.type) {
-        response.sendFile(path.join(__dirname, '/dataset/' + request.params.id + '/' + request.params.type));
+        response.sendFile(path.join(__dirname, '/analysis_assets/' + request.params.id + '/' + request.params.type));
     } else {
-        response.sendFile(path.join(__dirname, '/dataset/' + request.params.id));
+        response.sendFile(path.join(__dirname, '/analysis_assets/' + request.params.id));
     }
 });
 
