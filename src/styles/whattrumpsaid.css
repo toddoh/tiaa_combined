@@ -62,12 +62,14 @@
     position: relative;
     box-sizing: border-box;
     display: flex;
-    width: 200px;
+    width: 180px;
     height: 170px;
     overflow: hidden;
     flex-shrink: 0;
-    margin: 0 35px 35px 0;
+    margin: 0 15px 15px 0;
     background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: all 160ms ease;
     transform: translateZ(0);
 }
@@ -102,7 +104,7 @@
 }
 
 .whattrumpsaid-analysis-data-cover {
-    padding: 15px;
+    padding: 15px 20px;
 }
 
 .whattrumpsaid-analysis-group.selectionmode .whattrumpsaid-analysis-data.selected .whattrumpsaid-analysis-data-cover {
