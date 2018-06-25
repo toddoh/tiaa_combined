@@ -359,7 +359,7 @@ body.today .minion-featured-sections .sections-list li{
     align-items: center;
     visibility: visible;
     overflow: auto;
-    z-index: 9999901;
+    z-index: 9999902;
 }
 
 .today-head-data .article-moreitems .all-article-item{
@@ -399,7 +399,7 @@ body.today .minion-featured-sections .sections-list li{
     position: absolute;
     top: 40px;
     right: 40px;
-    z-index: 9999901;
+    z-index: 9999902;
 }
 
 .today-head-data .head-article-item.moreitems-opened .article-action-closereveal .icon{
