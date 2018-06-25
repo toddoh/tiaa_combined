@@ -261,7 +261,7 @@ const postrender_head_data = () => {
         var ts_ago = moment(ts_converted).fromNow();
         $(el).find('.article-info .ts').text(ts_ago);
 
-        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'https://static01.nyt.com/images/icons/t_logo_291_black.png', 'favicon', 'Twitterlogo.png', 'facebook-default-wide.jpg'];
+        var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'https://static01.nyt.com/images/icons/t_logo_291_black.png', 'favicon', 'Twitterlogo.png', 'facebook-default-wide.jpg', 'social-default'];
         var matches = items.filter(s => $(el).find('.article-image').attr('banana-imagesrc').toLowerCase().includes(s.toLowerCase()));
         if (matches.length > 0) {
             $(el).addClass('noimage');
