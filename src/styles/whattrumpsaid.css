@@ -101,17 +101,8 @@
     background: #f5f5f5;
 }
 
-.whattrumpsaid-analysis-data-cover:after {
-    content: '';
-    position: absolute;
-    display: flex;
-    bottom: 10px;
-    margin-left: 1px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #616161;
-    transition: all 200ms ease;
+.whattrumpsaid-analysis-data-cover {
+    padding: 15px;
 }
 
 .whattrumpsaid-analysis-group.selectionmode .whattrumpsaid-analysis-data.selected .whattrumpsaid-analysis-data-cover {
@@ -119,15 +110,30 @@
 }
 
 .whattrumpsaid-analysis-data-cover .cover-image{
-    width: 70px;
-    height: 70px;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     background-size: cover;
     z-index: -1;
     transform: translateZ(0);
+}
+
+.whattrumpsaid-analysis-data[banana-month="2017-03"] .whattrumpsaid-analysis-data-cover .cover-image{
+    background-image: url('../resources/donaldtrump/whattrumpsaid_1703_hcare.png');
+    background-size: 60px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    right: 10px;
+    left: initial;
+    top: initial;
+    bottom: 10px;
+}
+
+.whattrumpsaid-analysis-data[banana-month="2017-01"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-02"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-06"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-07"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-08"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-09"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-11"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2017-12"] .whattrumpsaid-analysis-data-cover, .whattrumpsaid-analysis-data[banana-month="2018-01"] .whattrumpsaid-analysis-data-cover{
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .whattrumpsaid-analysis-data-cover .month-title {
@@ -144,10 +150,15 @@
 
 .whattrumpsaid-analysis-data-cover .month-tags li {
     font-weight: 700;
-    color: #000;
+    color: #fff;
     display: flex;
     align-self: baseline;
 }
+
+.whattrumpsaid-analysis-data[banana-month="2017-03"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-04"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-05"] .whattrumpsaid-analysis-data-cover .month-tags li, .whattrumpsaid-analysis-data[banana-month="2017-10"] .whattrumpsaid-analysis-data-cover .month-tags li{
+    color: #000;
+}
+
 
 .whattrumpsaid-analysis-data-dynamicbg{
     position: absolute;
