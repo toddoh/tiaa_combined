@@ -230,7 +230,7 @@ def cluster_articles(item, type=None, mode=None):
         print('MASTER CLUSTER UNIT: saved into json file.')
 
         if type == 'today':
-            from cluster_postproc import postprocess
+            from cluster.cluster_postproc import postprocess
             postprocess(type)
     else:
         print('MASTER CLUSTER UNIT: The collection is empty, unable to process.')

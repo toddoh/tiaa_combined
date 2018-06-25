@@ -100,6 +100,7 @@ def postprocess(type):
         all_results.append(result_pick_data)
         print('CLUSTER_POSTPROC: Postprocessing finished: {0}'.format(group['theme']))
 
+
         time_file = datetime.datetime.now(pytz.timezone('US/Eastern'))
         time_file_string = time_file.strftime("%Y%m%d-%H%M")
     if type == 'today':
