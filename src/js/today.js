@@ -19,6 +19,8 @@ export function init_render() {
         <div class="head-container-move" banana-slide-direction="right">
             <div class="icon"></div>
         </div>
+        <div class="head-container-slide-indicator">
+        </div>
     </div>
     <!--
     <div class="today-trumpsaid-timetravel">
@@ -130,6 +132,10 @@ const render_head_data = () => {
                         </a>
                         
                         <div class="article-moreitems">
+                            <div class="article-action-closereveal">
+                                <div class="icon"></div>
+                            </div>
+                            <p class="all-article-header">More Stories In This Cluster</p>
                         ${arti.length > 0 ? html`
                             ${arti.map((a) => html`
                             <div class="all-article-item" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
@@ -143,16 +149,23 @@ const render_head_data = () => {
                             `)}
                         ` : ''}
                         </div>
-                        <div class="article-action-closereveal">
-                            <div class="icon"></div>
-                        </div>
+                        
                     </div>
                 `)}
-            `
-            )}
+            `)}
         `;
 
         render(head_markup(), document.querySelector('.today-head-data .head-item-container'));
+
+        const head_slide_indicator_markup = () => 
+        html`
+        ${trump_data.map((i) => html`
+            <div class="slide-indicator"></div>
+        `)}
+        </div>
+        `;
+
+        render(head_slide_indicator_markup(), document.querySelector('.today-head-data .head-container-slide-indicator'));
         postrender_head_data();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
@@ -182,6 +195,8 @@ const postrender_head_data = () => {
 
     var head_container = document.querySelector('.today-head-data .head-item-container');
     var head_items = head_container.children;
+    var head_container_slide_indicators = document.querySelector('.today-head-data .head-container-slide-indicator');
+    var head_container_slide_indicator = head_container_slide_indicators.children;
     head_container.setAttribute('banana-slide-index', 0);
     var head_ind = 0;
     
@@ -189,6 +204,7 @@ const postrender_head_data = () => {
         head_items[head_ind].style.left = window.innerWidth * head_ind + 'px';
         if (head_ind == 0) {
             head_items[head_ind].classList.add('visible');
+            head_container_slide_indicator[head_ind].classList.add('visible');
             head_items[head_ind].querySelector('.article-keywords').classList.add('focus');
         }
         head_ind++;
@@ -196,6 +212,8 @@ const postrender_head_data = () => {
     
     function head_container_slide_move_right() {
         var head_container = document.querySelector('.today-head-data .head-item-container');
+        var head_container_slide_indicators = document.querySelector('.today-head-data .head-container-slide-indicator');
+        var head_container_slide_indicator = head_container_slide_indicators.children;
         if (parseInt(head_container.getAttribute('banana-slide-index'))+1 == head_container.children.length) {
             head_container.setAttribute('banana-slide-index', 0);
             var head_items = head_container.children;
@@ -205,6 +223,8 @@ const postrender_head_data = () => {
                 head_items[head_ind].style.left = window.innerWidth * head_ind + 'px';
                 if (head_ind == 0) {
                     head_items[head_ind].classList.add('visible');
+                    head_container_slide_indicator[head_ind].classList.add('visible');
+                    head_container_slide_indicator[head_container_slide_indicator.length - 1].classList.remove('visible');
                     head_items[head_ind].querySelector('.article-keywords').classList.add('focus');
                 }
                 head_ind++;
@@ -224,9 +244,11 @@ const postrender_head_data = () => {
                 }
 
                 if (i == head_ind) {
+                    head_container_slide_indicator[i].classList.add('visible');
                     head_items[i].classList.add('visible');
                     head_items[i].querySelector('.article-keywords').classList.add('focus');
                 } else {
+                    head_container_slide_indicator[i].classList.remove('visible');
                     head_items[i].classList.remove('visible');
                     if (head_items[i].querySelector('.article-keywords').classList.contains('focus')) {
                         head_items[i].querySelector('.article-keywords').classList.remove('focus');
@@ -245,10 +267,12 @@ const postrender_head_data = () => {
     $('.today-head-data .head-article-item .article-keywords').on('click', function (e) {
         $(this).parent().addClass('moreitems-opened');
         $(this).parent().find('.article-moreitems').addClass('opened');
+        $('.today-head-data').addClass('head-item-sticky');
     });
 
     $('.today-head-data .head-article-item .article-action-closereveal').on('click', function (e) {
         $(this).parents('.head-article-item').removeClass('moreitems-opened');
+        $('.today-head-data').removeClass('head-item-sticky');
         $(this).parents('.head-article-item').find('.article-moreitems').removeClass('opened');
     });
 
