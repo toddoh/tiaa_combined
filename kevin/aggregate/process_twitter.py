@@ -20,27 +20,32 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
             article.download()
             article.parse()
             data = {}
-
-            if id:
-                data['twitterid'] = id
-            data['title'] = article.title
-            data['url'] = article.url
-            if origin:
-                data['origin'] = origin
-            if ts:
-                dt = dateutil.parser.parse(ts)
-                unixts = int(time.mktime(dt.timetuple()))
-                data['ts'] = unixts
-
-            if article.text:
-                data['text'] = clean_text(article.text)
+            
+            blacklist = ['USA TODAY: Latest World and US News']
+            if any(word in article.title for word in blacklist):
+                print('AGGREGATE_TWITTER: Skiping aggregation: wrong pages')
+                return None
             else:
-                data['text'] = ''
+                if id:
+                    data['twitterid'] = id
+                data['title'] = article.title
+                data['url'] = article.url
+                if origin:
+                    data['origin'] = origin
+                if ts:
+                    dt = dateutil.parser.parse(ts)
+                    unixts = int(time.mktime(dt.timetuple()))
+                    data['ts'] = unixts
 
-            if article.top_image:
-                data['image'] = article.top_image
-            if article.authors:
-                data['authors'] = article.authors
+                if article.text:
+                    data['text'] = clean_text(article.text)
+                else:
+                    data['text'] = ''
+
+                if article.top_image:
+                    data['image'] = article.top_image
+                if article.authors:
+                    data['authors'] = article.authors
 
             return data
         except Exception as e:

@@ -217,7 +217,7 @@ const postrender_head_data = () => {
 
             for (var i=0; i < head_items.length; i++) {
                 if (i <= head_ind) {
-                    head_items[i].style.left = window.innerWidth * (head_ind-i) + 'px';
+                    head_items[i].style.left = '-' + window.innerWidth * (head_ind-i) + 'px';
                 } else {
                     head_items[i].style.left = window.innerWidth * (head_ind+head_ind_right) + 'px';
                     head_ind_right++;
