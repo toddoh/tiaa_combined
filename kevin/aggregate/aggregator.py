@@ -34,7 +34,7 @@ def aggregate_db(item):
         twitter_list_target = 'usa-trump'
 
     collection = db['aggregator_' + item]
-    if len(list(collection.find({}))):
+    if len(list(collection.find().sort('ts', -1).limit(1))):
         cursor = list(collection.find().sort('ts', -1).limit(1))
         print(cursor)
     else:
