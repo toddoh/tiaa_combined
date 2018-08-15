@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[26],{"e+Ya":function(e,i,a){},mka7:function(e,i,a){"use strict";a.r(i),a.d(i,"init_render",function(){return o});var t=a("AaG5");a("e+Ya");function o(){Object(t.b)((()=>t["a"]`
+(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{"e+Ya":function(e,i,a){},mka7:function(e,i,a){"use strict";a.r(i),a.d(i,"init_render",function(){return o});var t=a("AaG5");a("e+Ya");function o(){Object(t.b)((()=>t["a"]`
     <div class="about-hero">
         <div class="about-herotext">
             <p class="hero1">It's all about</p>

@@ -1,5 +1,5 @@
 import {html, render} from 'lit-html';
-import today_style from '../styles/today/today.css';
+import today_style from '../../styles/today/gallery.css';
 import moment from 'moment';
 import tz from 'moment-timezone';
 
@@ -13,10 +13,25 @@ export function init_render() {
     const today_hero_markup = () => html`
     <div class="today-head-data">  
         <div class="head-hero-title">
-            <p class="head-today-hero">Key Headlines</p>
             <p class="head-date-hero">Today</p>
         </div>
         <div class="head-item-container">
+        </div>
+        <div class="head-container-move" banana-slide-direction="right">
+            <div class="icon"></div>
+        </div>
+        <div class="head-container-slide-indicator">
+        </div>
+    </div>
+    <div class="today-guide-photosafetynet">
+        <div class="guide-text">
+            <p>Our Today section is an unbiased news cluster of topics trending across mainstream media. We pick the most important stories from each topic cluster automatically through our algorithm.</p>
+            <p>Due to this, our editorial staff can't verify if the photos displayed in this section are consistent with our editorial guidelines. Hence, we offer an option to mask the background photos.</p>
+            <p>Please select your preference below to continue.</p>
+        </div>
+        <div class="guide-photosafetynet-actions">
+            <p banana-action="photosafetynet-on">Mask photos partially</p>
+            <p banana-action="photosafetynet-off">Keep photos visible</p>
         </div>
     </div>
     <div class="today-copyrights">
@@ -86,19 +101,18 @@ const render_head_data = () => {
                 ${i.toparticles.map((arti) => html`
                     <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}">
                         <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url('${arti[0].image}')"></div>
-                        <div class="article-data-container">
-                            <div class="article-keywords">
-                                ${i.theme.map((th) => html`
-                                <p>${th}</p>
-                                `)}
-                            </div>
-                            <a href="${arti[0].url}" target="_blank">
-                                <p class="title">${arti[0].title}</p>
-                                <div class="article-info">
-                                    <p class="origin">${arti[0].origin}</p>
-                                </div>
-                            </a>
+
+                        <div class="article-keywords">
+                            ${i.theme.map((th) => html`
+                            <p>${th}</p>
+                            `)}
                         </div>
+                        <a href="${arti[0].url}" target="_blank">
+                            <p class="title">${arti[0].title}</p>
+                            <div class="article-info">
+                                <p class="origin">${arti[0].origin}</p>
+                            </div>
+                        </a>
                         
                         <div class="article-moreitems">
                             <div class="article-action-closereveal">
@@ -126,6 +140,15 @@ const render_head_data = () => {
 
         render(head_markup(), document.querySelector('.today-head-data .head-item-container'));
 
+        const head_slide_indicator_markup = () => 
+        html`
+        ${trump_data.map((i) => html`
+            <div class="slide-indicator"></div>
+        `)}
+        </div>
+        `;
+
+        render(head_slide_indicator_markup(), document.querySelector('.today-head-data .head-container-slide-indicator'));
         postrender_head_data();
         document.querySelector('.minion-dataload').setAttribute('status', '');
     });
@@ -153,6 +176,77 @@ const postrender_head_data = () => {
         $('.today-guide-photosafetynet').removeClass('opened');
     });
 
+    var head_container = document.querySelector('.today-head-data .head-item-container');
+    var head_items = head_container.children;
+    var head_container_slide_indicators = document.querySelector('.today-head-data .head-container-slide-indicator');
+    var head_container_slide_indicator = head_container_slide_indicators.children;
+    head_container.setAttribute('banana-slide-index', 0);
+    var head_ind = 0;
+    
+    while (head_ind < head_items.length) {
+        head_items[head_ind].style.transform = 'translate3d(' + window.innerWidth * head_ind + 'px' + ', 0, 0)';
+        if (head_ind == 0) {
+            head_items[head_ind].classList.add('visible');
+            head_container_slide_indicator[head_ind].classList.add('visible');
+            head_items[head_ind].querySelector('.article-keywords').classList.add('focus');
+        }
+        head_ind++;
+    }
+    
+    function head_container_slide_move_right() {
+        var head_container = document.querySelector('.today-head-data .head-item-container');
+        var head_container_slide_indicators = document.querySelector('.today-head-data .head-container-slide-indicator');
+        var head_container_slide_indicator = head_container_slide_indicators.children;
+        if (parseInt(head_container.getAttribute('banana-slide-index'))+1 == head_container.children.length) {
+            head_container.setAttribute('banana-slide-index', 0);
+            var head_items = head_container.children;
+            var head_ind = 0;
+        
+            while (head_ind < head_items.length) {
+                head_items[head_ind].style.transform = 'translate3d(' + window.innerWidth * head_ind + 'px' + ', 0, 0)';
+                if (head_ind == 0) {
+                    head_items[head_ind].classList.add('visible');
+                    head_container_slide_indicator[head_ind].classList.add('visible');
+                    head_container_slide_indicator[head_container_slide_indicator.length - 1].classList.remove('visible');
+                    head_items[head_ind].querySelector('.article-keywords').classList.add('focus');
+                }
+                head_ind++;
+            }
+        } else {
+            head_container.setAttribute('banana-slide-index', parseInt(head_container.getAttribute('banana-slide-index'))+1);
+            var head_ind = parseInt(head_container.getAttribute('banana-slide-index'));
+            var head_ind_right = 0;
+            var head_items = head_container.children;
+
+            for (var i=0; i < head_items.length; i++) {
+                if (i <= head_ind) {
+                    head_items[i].style.transform = 'translate3d(-' + window.innerWidth * (head_ind-i) + 'px' + ', 0, 0)';
+                } else {
+                    head_items[i].style.transform = 'translate3d(' + window.innerWidth * (head_ind+head_ind_right) + 'px' + ', 0, 0)';
+                    head_ind_right++;
+                }
+
+                if (i == head_ind) {
+                    head_container_slide_indicator[i].classList.add('visible');
+                    head_items[i].classList.add('visible');
+                    head_items[i].querySelector('.article-keywords').classList.add('focus');
+                } else {
+                    head_container_slide_indicator[i].classList.remove('visible');
+                    head_items[i].classList.remove('visible');
+                    if (head_items[i].querySelector('.article-keywords').classList.contains('focus')) {
+                        head_items[i].querySelector('.article-keywords').classList.remove('focus');
+                    }
+                }
+            }
+        }
+    }
+
+    $('.today-head-data .head-container-move').on('click', function (e) {
+        if (this.getAttribute('banana-slide-direction') == 'right') {
+            head_container_slide_move_right();
+        }
+    });
+
     $('.today-head-data .head-article-item .article-keywords').on('click', function (e) {
         $(this).parent().addClass('moreitems-opened');
         $(this).parent().find('.article-moreitems').addClass('opened');
@@ -173,8 +267,6 @@ const postrender_head_data = () => {
         var ts_converted = moment.tz(moment.unix($(el).find('.article-info .ts').attr('banana-ts')), "America/New_York").format();
         var ts_ago = moment(ts_converted).fromNow();
         $(el).find('.article-info .ts').text(ts_ago);
-        $(el).addClass('article-item-' + i);
-        (i >= 5) ? $(el).addClass('article-item-lowpriority') : '' ;
 
         var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'https://static01.nyt.com/images/icons/t_logo_291_black.png', 'favicon', 'Twitterlogo.png', 'facebook-default-wide.jpg', 'social-default'];
         var matches = items.filter(s => $(el).find('.article-image').attr('banana-imagesrc').toLowerCase().includes(s.toLowerCase()));

@@ -40,18 +40,24 @@ body{
 }
 
 .minion-header{
-    position: fixed;
+    position: absolute;
     display: flex;
-    height: 100%;
     z-index: 9999902;
     align-items: center;
-    transition: all 200ms ease;
 }
 
-.minion-header.opened{
+.minion-header.floating {
+    margin: 20px 50px 0 35px;
+    background: #000;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.minion-header.opened {
     height: 100%;
-    align-items: center;
+    align-items: baseline;
+    flex-direction: column;
     background: #fff;
+    margin: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -59,13 +65,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 35px 20px 35px 45px;
+    padding: 35px 65px;
     z-index: 9999902;
-    transition: all 200ms ease;
+}
+
+.minion-header.floating .header-box {
+    padding: 15px 100px 15px 30px;
 }
 
 .minion-header.opened .header-box{
-    padding: 35px 45px;
+    padding: 35px 65px;
 }
 
 .minion-tiaa-logo{
@@ -77,16 +86,35 @@ body{
     text-indent: -9999px;
 }
 
-.minion-header:hover .minion-featured-sections{
-    position: absolute;
-    margin-left: 65px;
+.minion-header.floating .minion-tiaa-logo{
+    width: 25px;
+    height: 25px;
+    background-image: url('../resources/tiaa_white.png');
+}
+
+.minion-header.opened .minion-tiaa-logo{
+    width: 25px;
+    height: 25px;
+    background-image: url('../resources/tiaa_black.png');
+}
+
+.minion-header:hover .minion-featured-sections, .minion-header.opened .minion-featured-sections{
+    margin-left: 15px;
     display: flex;
     background: #000;
     border-radius: 8px;
 }
 
-.minion-header.opened:hover .minion-featured-sections{
+.minion-header.opened .minion-featured-sections li[data-sectionid="reveal-sections"]{
     display: none;
+}
+
+.minion-header:hover .minion-featured-sections li[data-sectionid="close-sections"]{
+    display: none;
+}
+
+.minion-header.opened:hover .minion-featured-sections li[data-sectionid="close-sections"]{
+    display: block;
 }
 
 .minion-featured-sections{
@@ -119,7 +147,7 @@ body{
 }
 
 .minion-header.opened .minion-sections {
-    margin: 35px 45px;
+    margin: 35px 100px 35px 65px;
     opacity: 1;
     width: auto;
     height: auto;
@@ -156,7 +184,7 @@ body{
 }
 
 .minion-sections ul.sections-list li.current{
-    color: #FF5722;
+    color: #0091ff;
     font-weight: 700;
 }
 
