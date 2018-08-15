@@ -10,7 +10,7 @@
 .whattrumpsaid-hero{
     display: flex;
     flex-direction: column;
-    padding: 15% 105px 5%;
+    padding: 15% 65px 3%;
     justify-content: center;
 }
 
@@ -44,7 +44,7 @@
 .whattrumpsaid-section-monthly{
     display: flex;
     flex-wrap: wrap;
-    padding: 30px 105px;
+    padding: 30px 65px;
 }
 
 .whattrumpsaid-section-monthly > p{

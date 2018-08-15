@@ -49,7 +49,6 @@
     display: flex;
     flex-wrap: wrap;
     padding: 35px 65px 35px 65px;
-    justify-content: space-between;
 }
 
 .today-head-data .head-article-item{
@@ -61,6 +60,10 @@
     flex-direction: column;
     margin-bottom: 40px;
     transition: all 300ms ease;
+}
+
+.head-article-item.analysis-article-obj.article-item-lowpriority {
+    margin-right: 1%;
 }
 
 .today-head-data .head-article-item:nth-child(1) {

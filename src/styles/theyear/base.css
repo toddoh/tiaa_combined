@@ -6,7 +6,7 @@
 }
 
 .theyear-hero{
-    padding: 18% 0px 5% 105px;
+    padding: 15% 0px 3% 65px;
     display: flex;
     flex-direction: column;
 }
@@ -58,7 +58,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     align-self: baseline;
-    margin-left: 105px;
+    margin-left: 65px;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .item-bg{
@@ -86,7 +86,7 @@
 .theyear-analysis-data .analysis-list .theme-header{
     align-self: baseline;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .themes{
@@ -123,6 +123,7 @@
     padding: 5px 0;
     font-weight: 600;
     color: #424242;
+    position: relative;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak > p:after{
@@ -141,8 +142,21 @@
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected {
-    box-shadow: 0 2px 0 0;
     color: #ec7100;
+}
+
+.theyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.selected:after {
+    content: '';
+    width: 8px;
+    height: 3px;
+    border-radius: 25%;
+    background: #ec7100;
+    overflow: hidden;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .toparticle-month-container .toparticle-month.peak.selected{
@@ -157,7 +171,7 @@
 .theyear-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
     display: none;
     flex-wrap: wrap;
-    margin-left: 105px;
+    margin-left: 65px;
 }
 
 .theyear-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month.selected {

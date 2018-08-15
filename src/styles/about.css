@@ -1,5 +1,5 @@
 .about-hero{
-    padding: 18% 80px 5%;
+    padding: 12% 65px 5%;
     display: flex;
     align-items: center;
 }
@@ -30,7 +30,7 @@
 }
 
 .about-team{
-    padding: 50px 150px 50px 80px;
+    padding: 50px 150px 50px 65px;
     display: flex;
     flex-direction: column;
     background: #f9f9f9;
@@ -76,15 +76,15 @@
     height: 19px;
     background-image: url('../resources/symbol_twitter.png');
     background-size: cover;
-    margin-right: 10px;
+    margin-right: 13px;
 }
 
 .about-team li .social-channels a > div.email{
-    width: 19px;
-    height: 20px;
-    background-image: url('../resources/symbol_gmail.png');
+    width: 24px;
+    height: 19px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAMAAABXc8oyAAAAVFBMVEUAAABVVVVVVVVcXFxYWFhVVVVbW1tVVVVUVFRWVlZUVFRTU1NUVFRTU1NUVFRUVFRUVFRTU1NUVFRTU1NUVFRTU1NUVFRTU1NUVFRUVFRTU1NTU1MbFdYNAAAAG3RSTlMAAwwZGhscM09QcJChpbDM4ePl5uvs8/v8/f4JIfyTAAAAtklEQVR42t3UzQ6CMBAE4AEtvy5IK1jt+7+nSgmDsZVedQ8Nga/ZmQvAUbTbGS0KOFxcwowKJ5c0gnMaNLg+z2r4Zobqdc4QeWtjzLY5CIGyD7u+BDy0HiJrpk82NRm2sCsAoOjeFd8vkDd9KZbgphkyiy/FEsxOyA+Ri7hxVb2sWqPUjEK4Dc8SQchSLBGCzMasEchSLEF4Xx9ZiiUikPOj0P0TNGlOQ9KgQI2JPyko2d1uROEBa5x2oxosvp4AAAAASUVORK5CYII=");
     background-size: cover;
-    margin-right: 10px;
+    margin-right: 13px;
 }
 
 .about-team li .social-channels a > div.fb{
@@ -92,7 +92,7 @@
     height: 20px;
     background-image: url('../resources/symbol_fb.png');
     background-size: cover;
-    margin-right: 10px;
+    margin-right: 13px;
 }
 
 .about-team li .social-channels a > div.linkedin{
@@ -100,7 +100,7 @@
     height: 20px;
     background-image: url('../resources/symbol_linkedin.png');
     background-size: cover;
-    margin-right: 10px;
+    margin-right: 13px;
 }
 
 .about-technical{

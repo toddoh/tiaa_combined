@@ -1,8 +1,4 @@
-import {html, render} from 'lit-html';
-import about_style from '../styles/about.css';
-
-export function init_render() {
-    const hero_markup = () => html`
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{"e+Ya":function(e,a,i){},mka7:function(e,a,i){"use strict";i.r(a),i.d(a,"init_render",function(){return o});var t=i("AaG5");i("e+Ya");function o(){Object(t.b)((()=>t["a"]`
     <div class="about-hero">
         <div class="about-herotext">
             <p class="hero1">It's all about</p>
@@ -45,7 +41,4 @@ export function init_render() {
             </li>
         </ul>
     </div>
-    `;
-
-    render(hero_markup(), document.querySelector('.minion-contents'));
-}
+    `)(),document.querySelector(".minion-contents"))}}}]);
