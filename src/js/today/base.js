@@ -22,6 +22,17 @@ export function init_render() {
     <div class="today-copyrights">
         <p>Articles/Images copyrights CNN, Fox News, The New York Times, The Hill, Washington Post, The Wall Street Journal, NPR, Chicago Tribune, USA Today, Politico, L.A. Times, NBC News, PBS NewsHour, The Washington Times, The New Yorker, CBS News, C-SPAN, ABC News, The Atlantic, AP, The New Republic, The Boston Globe, Business Insider, CNBC, Bloomberg, Financial Times. All images belong to the publishers and the rightful owner of images. We display images based on open metadata aggregation.</p>
     </div>
+    <div class="today-guide-photosafetynet">
+        <div class="guide-text">
+            <p>Our Today section is an unbiased news cluster of topics trending across mainstream media. We pick the most important stories from each topic cluster automatically through our algorithm.</p>
+            <p>Due to this, our editorial staff can't verify if the photos displayed in this section are consistent with our editorial guidelines. Hence, we offer an option to mask the background photos.</p>
+            <p>Please select your preference below to continue.</p>
+        </div>
+        <div class="guide-photosafetynet-actions">
+            <p banana-action="photosafetynet-on">Mask photos partially</p>
+            <p banana-action="photosafetynet-off">Keep photos visible</p>
+        </div>
+    </div>
     <div class="today-tpdetails">
         <div class="tpdetails-reveal">
             <p>More Details</p>
@@ -101,10 +112,7 @@ const render_head_data = () => {
                         </div>
                         
                         <div class="article-moreitems">
-                            <div class="article-action-closereveal">
-                                <div class="icon"></div>
-                            </div>
-                            <p class="all-article-header">More Stories In This Cluster</p>
+                            <p class="all-article-header">↳ More Stories In This Cluster</p>
                         ${arti.length > 0 ? html`
                             ${arti.map((a) => html`
                             <div class="all-article-item" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
@@ -174,7 +182,7 @@ const postrender_head_data = () => {
         var ts_ago = moment(ts_converted).fromNow();
         $(el).find('.article-info .ts').text(ts_ago);
         $(el).addClass('article-item-' + i);
-        (i >= 5) ? $(el).addClass('article-item-lowpriority') : '' ;
+        (i >= 7) ? $(el).addClass('article-item-lowpriority') : '' ;
 
         var items = ['www.washingtonpost.com/pb/resources/img/twp-social-share.png', 'twt-assets.washtimes.com', 'https://static01.nyt.com/images/icons/t_logo_291_black.png', 'favicon', 'Twitterlogo.png', 'facebook-default-wide.jpg', 'social-default'];
         var matches = items.filter(s => $(el).find('.article-image').attr('banana-imagesrc').toLowerCase().includes(s.toLowerCase()));

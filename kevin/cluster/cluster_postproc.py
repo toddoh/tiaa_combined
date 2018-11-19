@@ -21,7 +21,7 @@ def postprocess(type):
         pick_toparticles = []
         peak_indexes_months = []
         pick_theme = ' '.join(group['theme'])
-        print('CLUSTER_POSTPROC: theme: ', pick_theme)
+        # print('CLUSTER_POSTPROC: theme: ', pick_theme)
 
         for item in group['groups']:
             all_documents_title = []

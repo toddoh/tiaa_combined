@@ -1,6 +1,7 @@
 from __future__ import division
 import twitter
 from newspaper import Article, Config
+from urllib.parse import urlparse
 import json
 import re
 import requests
@@ -165,18 +166,21 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
                             try:
                                 resp = session.head(status.urls[0].url, allow_redirects=True)
                                 if 'twitter.com/' not in resp.url:
-                                    parse_target = Article(resp.url)
-                                    parse_data = get_article_info(parse_target, status.user.name, status.id, status.created_at)
+                                    url_path = urlparse(resp.url).path
+                                    if (url_path != '') and (url_path != '/')
+                                        parse_target = Article(resp.url)
+                                        parse_data = get_article_info(parse_target, status.user.name, status.id, status.created_at)
 
-                                    if parse_data:
-                                        print('AGGREGATE_TWITTER: Index {0}/{1}, parsed title: {2}'.format(index, len(twitter_timeline), parse_data['title']))
-                                        parsed_article_title.append(parse_data['title'])
-                                        parsed_article_text.append(parse_data['text'])
-                                        parsed_article_data.append(parse_data)
+                                        if parse_data:
+                                            print('AGGREGATE_TWITTER: Index {0}/{1}, parsed title: {2}'.format(index, len(twitter_timeline), parse_data['title']))
+                                            parsed_article_title.append(parse_data['title'])
+                                            parsed_article_text.append(parse_data['text'])
+                                            parsed_article_data.append(parse_data)
+                                    else:
+                                        print('AGGREGATE_TWITTER: Skipped parsing: the url doesn\'t have any paths')
                                 else:
                                     print('AGGREGATE_TWITTER: Skipped parsing: the url contains twitter.com')
-                                    print('AGGREGATE_TWITTER: Index {0}/{1}, Skipped parsing: the url contains twitter.com {2}'.format(index, len(twitter_timeline),
-                                                                                                                    resp.url))
+                                    print('AGGREGATE_TWITTER: Index {0}/{1}, Skipped parsing: the url contains twitter.com {2}'.format(index, len(twitter_timeline), resp.url))
                             except requests.TooManyRedirects:
                                 print('AGGREGATE_TWITTER: Article Parse Error: too many redirects')
                             except requests.RequestException as e:
