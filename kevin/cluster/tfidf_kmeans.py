@@ -60,7 +60,7 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
 
     print("TFIDF_KMEANS: LSA Dimension reduction")
 
-    n_components = 100
+    n_components = 50
     t0 = time()
     svd = TruncatedSVD(n_components)
     normalizer = Normalizer(copy=False)
@@ -91,12 +91,12 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
         print(" Finding the best n_clusters - sparse data done in %0.3fs" % (time() - t0))
         print(' Finding the best n_clusters: {0}'.format(range_k))
         print(" Silhouette Coefficient: %0f" % silhouette_avg)
-        if silhouette_avg <= 0.09:
+        if silhouette_avg <= 0.1:
             range_n_clusters_km.append(silhouette_avg)
 
         print()
 
-    range_n_clusters_km_index_max = min(range(len(range_n_clusters_km)), key=range_n_clusters_km.__getitem__)
+    range_n_clusters_km_index_max = max(range(len(range_n_clusters_km)), key=range_n_clusters_km.__getitem__)
     km_optimal = range_n_clusters[range_n_clusters_km_index_max]
     print('TFIDF_KMEANS: Found optimal n_clusters: {0}'.format(km_optimal))
 
