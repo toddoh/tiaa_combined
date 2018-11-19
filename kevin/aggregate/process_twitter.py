@@ -167,7 +167,7 @@ def aggregator(list=None, tweetid=0, mode=None, data=None):
                                 resp = session.head(status.urls[0].url, allow_redirects=True)
                                 if 'twitter.com/' not in resp.url:
                                     url_path = urlparse(resp.url).path
-                                    if (url_path != '') and (url_path != '/')
+                                    if (url_path != '') and (url_path != '/'):
                                         parse_target = Article(resp.url)
                                         parse_data = get_article_info(parse_target, status.user.name, status.id, status.created_at)
 
