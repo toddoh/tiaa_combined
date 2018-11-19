@@ -67,7 +67,7 @@ def postprocess(type):
                 results = searcher.search(query)
 
                 if len(results):
-                    article_pick = results[0:10]
+                    article_pick = results[0:5]
 
                     for a in article_pick:
                         for article in item['articles']:

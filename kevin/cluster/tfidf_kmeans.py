@@ -45,7 +45,7 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
 
     print('TFIDF_KMEANS: Extracting features from the dataset')
     t0 = time()
-    n_features = 1000
+    n_features = 30000
     hasher = HashingVectorizer(n_features=n_features, stop_words=cachedStopWords, norm=None, binary=False)
     vectorizer = make_pipeline(hasher, TfidfTransformer())
 
@@ -60,7 +60,7 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
 
     print("TFIDF_KMEANS: LSA Dimension reduction")
 
-    n_components = 50
+    n_components = 7
     t0 = time()
     svd = TruncatedSVD(n_components)
     normalizer = Normalizer(copy=False)
@@ -70,19 +70,21 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
     print("TFIDF_KMEANS: Reduction done in %fs" % (time() - t0))
 
     explained_variance = svd.explained_variance_ratio_.sum()
-    print("TFIDF_KMEANS: Explained variance of the SVD step: {}%".format(int(explained_variance * 100)))
+    print("TFIDF_KMEANS: Explained variance of the SVD step: %s" % explained_variance)
     print()
 
     verbose = False
     print("TFIDF_KMEANS: Finding the best n_clusters value by running MinibatchKmeans...")
     range_n_clusters = range(rangeMin, rangeMax)
     range_n_clusters_km = []
+    intertia_km = []
     for range_k in range_n_clusters:
-        km = MiniBatchKMeans(n_clusters=range_k, init='k-means++', batch_size=100, verbose=verbose)
+        km = MiniBatchKMeans(n_clusters=range_k, init='k-means++', max_iter=300, verbose=verbose)
 
         print(" Finding the best n_clusters - Clustering sparse data with %s" % km)
         t0 = time()
-        km.fit_predict(X)
+        km.fit(X)
+        intertia_km.append(km.inertia_)
 
         # The silhouette_score gives the average value for all the samples.
         # This gives a perspective into the density and separation of the formed
@@ -91,16 +93,23 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
         print(" Finding the best n_clusters - sparse data done in %0.3fs" % (time() - t0))
         print(' Finding the best n_clusters: {0}'.format(range_k))
         print(" Silhouette Coefficient: %0f" % silhouette_avg)
-        if silhouette_avg <= 0.1:
+        if silhouette_avg <= 1:
             range_n_clusters_km.append(silhouette_avg)
 
         print()
+
+    #plot it
+    fig = plt.figure(figsize=(15, 5))
+    plt.plot(range_n_clusters, intertia_km)
+    plt.grid(True)
+    plt.title('Elbow curve')
+    plt.savefig('elbow.png')
 
     range_n_clusters_km_index_max = max(range(len(range_n_clusters_km)), key=range_n_clusters_km.__getitem__)
     km_optimal = range_n_clusters[range_n_clusters_km_index_max]
     print('TFIDF_KMEANS: Found optimal n_clusters: {0}'.format(km_optimal))
 
-    km_final = MiniBatchKMeans(n_clusters=km_optimal, init='k-means++', batch_size=100, verbose=verbose)
+    km_final = MiniBatchKMeans(n_clusters=km_optimal, init='k-means++', max_iter=300, verbose=verbose)
 
     print("TFIDF_KMEANS: Clustering sparse data with %s" % km_final)
     t0 = time()
@@ -113,7 +122,6 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
 
     fig = plt.figure(figsize=(8, 3))
     plt.scatter(X[:,0], X[:,1], c=km_final.labels_, cmap=plt.cm.Paired)
-
     plt.savefig('kmeans.png')
 
     cluster_assignments_dict = {}

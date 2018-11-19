@@ -124,7 +124,7 @@ def cluster_articles(item, type=None, mode=None):
 
         tfidfpath = './dataset/' + type + '/'
         if type == 'today':
-            parsed_data = vectorize_cluster(parsed_article_dict, 2, 10, tfidfpath, 'today')
+            parsed_data = vectorize_cluster(parsed_article_dict, 2, 15, tfidfpath, 'today')
         elif type == 'trumpsaid':
             parsed_data = vectorize_cluster(parsed_article_dict, 2, 25, tfidfpath, 'trumpsaid')
         else:
