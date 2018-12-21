@@ -58,14 +58,6 @@ def stem_words(words_list):
 
 
 def cluster_articles(item, type=None, mode=None):
-    run_mode = ''
-    if mode == 90000009:
-        run_mode = 'trumpsaid'
-    elif mode == 90000001:
-        run_mode = 'theyear'
-    elif mode == '24':
-        run_mode = 'today'
-    
     collection = db['aggregator_' + item]
 
     print('MASTER CLUSTER UNIT: Start loading articles from database: {0} mode'.format(mode))
