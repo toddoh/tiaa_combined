@@ -189,24 +189,30 @@ def cluster_articles(item, type=None, mode=None):
                     if '_id' in filter:
                         filter['_id'] = str(filter['_id'])
 
-                    timeformat = ''
-                    if mode <= 72:
-                        timeformat = '%Y-%m'
-                    elif mode <= 168:
-                        timeformat = '%Y-%m-%d'
-                    elif mode == 90000009:
-                        timeformat = '%Y-%m'
-                    elif mode == 90000001:
-                        timeformat = '%Y-%m'
+                    if type == 'today':
+                        timeformat = '%Y-%m' # mode <= 48
 
-                    filter['date_month'] = datetime.fromtimestamp(filter['ts'], us_eastern_time).strftime(timeformat)
-                    article_list.append(filter)
+                        filter['time_filter'] = datetime.fromtimestamp(filter['ts'], us_eastern_time).strftime(timeformat)
+                        article_list.append(filter)
+                    else:
+                        timeformat = ''
+                        if mode <= 72:
+                            timeformat = '%Y-%m'
+                        elif mode <= 168:
+                            timeformat = '%Y-%m-%d'
+                        elif mode == 90000009:
+                            timeformat = '%Y-%m'
+                        elif mode == 90000001:
+                            timeformat = '%Y-%m'
+
+                        filter['time_filter'] = datetime.fromtimestamp(filter['ts'], us_eastern_time).strftime(timeformat)
+                        article_list.append(filter)
 
             cluster_data['groups'] = []
-            sorted_articles = sorted(article_list, key=itemgetter('date_month'))
-            for key, group in itertools.groupby(sorted_articles, key=lambda x: x['date_month']):
+            sorted_articles = sorted(article_list, key=itemgetter('time_filter'))
+            for key, group in itertools.groupby(sorted_articles, key=lambda x: x['time_filter']):
                 group_articles = {}
-                group_articles['month'] = key
+                group_articles['time_filterby'] = key
                 group_articles['articles'] = list(group)
                 cluster_data['groups'].append(group_articles)
                 print('MASTER CLUSTER UNIT: total {0} articles in month {1}...'.format(key, len(list(group))))

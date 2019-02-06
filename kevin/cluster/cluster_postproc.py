@@ -1,9 +1,15 @@
 import json
 from lib import detect_peaks
 import os
+from datetime import datetime as dt, timedelta
+import itertools
+from operator import itemgetter
+import pytz
 from whoosh.index import create_in
 from whoosh.fields import *
 import whoosh.qparser
+import numpy as np
+import uuid
 import pytz
 from sklearn.decomposition import NMF, LatentDirichletAllocation
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -12,6 +18,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.pipeline import make_pipeline
 
 def postprocess(type):
+    us_eastern_time = pytz.timezone('US/Eastern')
     datapath = './dataset/' + type + '/'
     cluster_index_datapath = './cluster/' + type + '/'
     result_file = datapath + 'result.json'
@@ -19,14 +26,18 @@ def postprocess(type):
         result_data = json.load(data_file)
 
     all_results = []
+    print('\n\nCLUSTER_POSTPROC: Initiated, total {0} cluster(s) for postprocessing \n'.format(len(result_data)))
 
     for group in result_data:
         pick_list = []
-        pick_months = []
+        pick_timefiltered = []
         pick_toparticles = []
-        peak_indexes_months = []
+        peak_indexes = []
+        peak_indexes_items = []
+        peak_indexes_time = []
         pick_theme = ' '.join(group['theme'])
         lda_theme = []
+        ldathemes_combined = []
         # print('CLUSTER_POSTPROC: theme: ', pick_theme)
 
         for item in group['groups']:
@@ -41,7 +52,7 @@ def postprocess(type):
             os.makedirs(cluster_index_datapath + "indexes", exist_ok=True)
             ix = create_in(cluster_index_datapath + "indexes", schema)
             writer = ix.writer()
-
+    
             for article in item['articles']:
                 if type == 'today':
                     writer.add_document(title=article['title'], path=article['_id'], content=article['text'])
@@ -63,8 +74,8 @@ def postprocess(type):
                             all_documents_text.append(a['content'])
 
             pick_list.append(len(item['articles']))
-            pick_months.append(item['month'])
-            print('Total: {0}, Month: {1}, Query Result: {2}'.format(pick_list, pick_months, len(all_documents_title)))
+            pick_timefiltered.append(item['time_filterby'])
+            print('  -* CLUSTER_POSTPROC: Total: {0}, Month: {1}, Query Result: {2}'.format(pick_list, pick_timefiltered, len(all_documents_title)))
             querytext = ' '.join(group['theme'])
 
             article_pick = []
@@ -84,14 +95,14 @@ def postprocess(type):
                     for a in article_pick:
                         for article in item['articles']:
                             if a['path'] == article['_id']:
-                                #if 'text' in article:
-                                    # del article['text']
+                                if 'text' in article:
+                                    del article['text']
                                 toparticles_matched.append(article)
                                 toparticles_matched_text.append(article['title'])
 
             pick_toparticles.append(toparticles_matched)
             
-            print('CLUSTER_POSTPROC: Extracting features from the dataset')
+            print('  -- CLUSTER_POSTPROC: Extracting features from the dataset /lda')
             from nltk.corpus import stopwords 
             from nltk.stem.wordnet import WordNetLemmatizer
             import string
@@ -128,44 +139,80 @@ def postprocess(type):
             # print(ldamodel.print_topics(num_topics=3, num_words=5))
             for idx, topic in  ldamodel.show_topics(formatted=False, num_words=3, num_topics=3):
                 lda_theme.append([w[0] for w in topic])
+            
+            for x in lda_theme:ldathemes_combined.extend(x)
+            ldathemes_combined = np.unique(ldathemes_combined).tolist()
 
-        print('CLUSTER_POSTPROC: Detect peaks with minimum height and distance filters.')
-        peak_indexes = detect_peaks.detect_peaks(pick_list, mph=7, mpd=2).tolist()
+        print('  -- CLUSTER_POSTPROC: Detect peaks with minimum height and distance filters.')
 
+        if type == 'today':
+            article_list_peak_pre = []
+            for item in item['articles']:
+                timeformat = '%Y-%m-%d-%H' # mode <= 48
+
+                if 'text' in item:
+                    del item['text']
+                item['time_filter'] = dt.fromtimestamp(item['ts'], us_eastern_time).strftime(timeformat)
+                article_list_peak_pre.append(item)
+
+            article_list_peak_list = []
+            article_list_peak_items = []
+            article_list_peak_timekey = []
+            sorted_articles = sorted(article_list_peak_pre, key=itemgetter('time_filter'))
+            for key, gp in itertools.groupby(sorted_articles, key=lambda x: x['time_filter']):
+                group_articles = {}
+                group_articles['time_filterby'] = key
+                group_articles['articles'] = list(gp)
+                article_list_peak_list.append(len(group_articles['articles']))
+                article_list_peak_items.append(group_articles)
+                article_list_peak_timekey.append(key)
+                print('  -- CLUSTER_POSTPROC: peak time_filterby {0}, {1} article(s)'.format(key, len(group_articles['articles'])))
+
+            print('  -- CLUSTER_POSTPROC: peak time_filterby total: {0}'.format(article_list_peak_list))
+
+            peak_indexes = detect_peaks.detect_peaks(article_list_peak_list, mph=7, mpd=2).tolist()
+        else:
+            peak_indexes = detect_peaks.detect_peaks(pick_list, mph=7, mpd=2).tolist()
+        
         for item in peak_indexes:
-            peak_indexes_months.append(pick_months[int(item)])
+            peak_indexes_items.append(article_list_peak_items[int(item)])
+            peak_indexes_time.append(article_list_peak_timekey[int(item)])
 
+        print('  -- CLUSTER_POSTPROC: peak time_filterby detection result: {0} \n'.format(peak_indexes_time))
         result_pick_data = {}
-        result_pick_data['theme'] = group['theme']
-        result_pick_data['topics'] = lda_theme #group['theme']
-        result_pick_data['ne'] = group['namedentity']
-        result_pick_data['list'] = pick_list
-        result_pick_data['months'] = pick_months
-        result_pick_data['toparticles'] = pick_toparticles
-        result_pick_data['all'] = all_documents
-        result_pick_data['peaks'] = peak_indexes_months
+        result_pick_data['clusterid'] = str(uuid.uuid4())
+        result_pick_data['topics_tfidf'] = group['theme']
+        # result_pick_data['topics_lda'] = ldathemes_combined #group['theme']
+        result_pick_data['topics_lda'] = lda_theme
+        result_pick_data['namedentities'] = group['namedentity']
+        result_pick_data['counts_total'] = pick_list
+        result_pick_data['counts_highestrank'] = sum(len(x) for x in pick_toparticles)
+        result_pick_data['months'] = pick_timefiltered
+        result_pick_data['item_highestrank'] = pick_toparticles
+        result_pick_data['item_total'] = all_documents
+        result_pick_data['peaks'] = peak_indexes_time
+        result_pick_data['peaks_item'] = peak_indexes_items
 
         then = datetime.datetime.now(pytz.utc)
         timeest = str(then.astimezone(pytz.timezone('US/Eastern')))
         result_pick_data['timestamp'] = timeest
         all_results.append(result_pick_data)
-        print('CLUSTER_POSTPROC: Postprocessing finished: {0}'.format(lda_theme))
-
+        print('  -* CLUSTER_POSTPROC: Postprocessing finished for the cluster: TFIDF {0} / LDA {1} \n\n'.format(group['theme'], lda_theme))
 
         time_file = datetime.datetime.now(pytz.timezone('US/Eastern'))
         time_file_string = time_file.strftime("%Y%m%d-%H%M")
     if type == 'today':
-        os.makedirs('../analysis_assets/' + type + '/', exist_ok=True)
-        final_datapath_today = '../analysis_assets/' + type + '/' + type + '_data.json'
+        os.makedirs('../data_publish_ready/' + type + '/', exist_ok=True)
+        final_datapath_today = '../data_publish_ready/' + type + '/' + type + '_data.json'
         with open(final_datapath_today, 'w') as f:
             json.dump(all_results, f, indent=4, sort_keys=True)
 
-        os.makedirs('../analysis_assets/' + type + '/', exist_ok=True)
-        final_datapath_today = '../analysis_assets/' + type + '/' + type + '_' + time_file_string + '_data.json'
+        os.makedirs('../data_publish_ready/' + type + '/', exist_ok=True)
+        final_datapath_today = '../data_publish_ready/' + type + '/' + type + '_' + time_file_string + '_data.json'
         with open(final_datapath_today, 'w') as f:
             json.dump(all_results, f, indent=4, sort_keys=True)
     else:
-        final_datapath = '../analysis_assets/' + type + '/' + 'result.json'
+        final_datapath = '../data_publish_ready/' + type + '/' + 'result.json'
         with open(final_datapath + 'result.json', 'w') as f:
             json.dump(all_results, f, indent=4, sort_keys=True)
 

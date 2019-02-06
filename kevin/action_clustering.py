@@ -1,4 +1,5 @@
 from cluster.cluster import cluster_articles
+from processes.daily.cluster import cluster_articles as cluster_daily
 import sys
 import argparse
 
@@ -6,7 +7,7 @@ def init_task(type):
     if type == 'today':
         collection_list = ['usasociety']
         for item in collection_list:
-            cluster_articles(item, 'today', 24)
+            cluster_daily(item, 'today', 24)
     elif type == 'theyear':
         collection_list = ['theyear']
         for item in collection_list:

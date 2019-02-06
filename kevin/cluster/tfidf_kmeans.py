@@ -42,12 +42,12 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
     if type == 'trumpsaid':
         cachedStopWords.update(['great', 'MAGA', 'America', 'make', 'American', '...', 'Trump', 'Thank', 'country'])
     else:
-        cachedStopWords.update(['periscope', 'pbs', 'newshour', 'npr', 'watch', 'bloomberg', 'says', 'abc', 'news'])
+        cachedStopWords.update(['periscope', 'pbs', 'newshour', 'npr', 'watch', 'bloomberg', 'says', 'abc', 'news', 'live', 'HAPPENING', 'update', 'nbc'])
 
 
     print('TFIDF_KMEANS: Extracting features from the dataset')
     t0 = time()
-    n_features = 10000
+    n_features = 30000
     hasher = HashingVectorizer(n_features=n_features, stop_words=cachedStopWords, norm=None, binary=False)
     vectorizer = make_pipeline(hasher, TfidfTransformer())
 
@@ -60,7 +60,7 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
     print(" n_samples: %d, n_features: %d" % X.shape)
 
     print("TFIDF_KMEANS: LSA Dimension reduction")
-    n_components = 3
+    n_components = 2
     t0 = time()
     svd = TruncatedSVD(n_components)
     normalizer = Normalizer(copy=False)
@@ -81,15 +81,13 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
     # res_km = list()
     for range_k in range_n_clusters:
         km = MiniBatchKMeans(n_clusters=range_k, init='k-means++', max_iter=1000, verbose=False)
-
-        print(" Finding the best n_clusters - Clustering sparse data with %s" % range_k)
+        print("  -- Finding the best n_clusters - Clustering sparse data with %s" % range_k)
         km.fit(X)
         intertia_km.append(km.inertia_)
         # res_km.append(np.average(np.min(cdist(X, km.cluster_centers_, 'euclidean'), axis=1)))
 
         silhouette_avg = silhouette_score(X, km.labels_)
-        print(' Finding the best n_clusters: {0}'.format(range_k))
-        print(" Silhouette Coefficient: %0f" % silhouette_avg)
+        print("  -- Silhouette Coefficient: %0f" % silhouette_avg)
         if silhouette_avg <= 1:
             range_n_clusters_km.append(silhouette_avg)
 
@@ -113,8 +111,8 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
     t0 = time()
     km_final.fit(X)
     km_final_t = time() - t0
-    print(" done in %0.3fs" % (time() - t0))
-    print(" Silhouette Coefficient: %0.3f" % metrics.silhouette_score(X, km_final.labels_))
+    print("  -- done in %0.3fs" % (time() - t0))
+    print("  -- Silhouette Coefficient: %0.3f" % metrics.silhouette_score(X, km_final.labels_))
     print()
 
     cluster_assignments_dict = {}
@@ -135,32 +133,6 @@ def vectorize_cluster(dataset, rangeMin=2, rangeMax=15, tfidfpath='./dataset/', 
 
     cluster_themes_dict = {}
     for key in cluster_assignments_dict.keys():
-        from nltk.stem.wordnet import WordNetLemmatizer
-        import string
-        exclude = set(string.punctuation) 
-        lemma = WordNetLemmatizer()
-        
-        def clean_text(raw_text):
-            letters_only = re.sub('[^a-zA-Z]', ' ', str(raw_text))
-            words = letters_only.lower().split()
-            useful_words = [x for x in words if x not in cachedStopWords]
-
-            useful_words_string = ' '.join(useful_words)
-            return useful_words_string
-
-        doc_clean = [clean_text(doc).split() for doc in cluster_assignments_dict[key]] 
-
-        import gensim
-        from gensim import corpora
-        dictionary = corpora.Dictionary(doc_clean)
-        doc_term_matrix = [dictionary.doc2bow(doc) for doc in doc_clean]
-
-        Lda = gensim.models.ldamodel.LdaModel
-        ldamodel = Lda(doc_term_matrix, num_topics=3, id2word = dictionary, passes=50)
-        #print(ldamodel.print_topics(num_topics=3, num_words=3))
-        #for idx, topic in  ldamodel.show_topics(formatted=False, num_words=3, num_topics=3):
-            #print([w[0] for w in topic])
-
         current_tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words=cachedStopWords)
         current_tfs = current_tfidf.fit_transform(map(clean_text, cluster_assignments_dict[key]))
 

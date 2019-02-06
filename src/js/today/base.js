@@ -79,42 +79,50 @@ export function init_render() {
 
 
 const render_head_data = () => {
-    var trump_data = null;
+    var published_data = null;
     var dataset_url;
-    dataset_url = 'https://thisisallabout.com/analysis_assets/today/today_data.json';
+    if (process.env.NODE_ENV == 'dev') {
+        dataset_url = '//localhost:3000/data_publish_ready/today/today_data.json';
+    } else {
+        dataset_url = 'https://thisisallabout.com/data_publish_ready/today/today_data.json';
+    }
 
     fetch(dataset_url).then(response => response.text()).then(function(text) {
         var module = eval(text);
-        trump_data = module;
+        published_data = module;
 
-        var contentts = trump_data[0].timestamp;
+        var contentts = published_data[0].timestamp;
         var est_ts = moment.tz(contentts, "America/New_York").format("MMM D ddd");
         var est_ts_hero = moment.tz(contentts, "America/New_York").format("MMMM D hA, ddd");
         document.querySelector('.head-date-hero').innerHTML = est_ts_hero;
 
         const head_markup = () => html`
-            ${trump_data.map((i) => html`
-                ${i.toparticles.map((arti) => html`
-                    <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.theme)}" banana-link="${arti[0].url}" banana-articleid="${arti[0]._id}">
-                        <div class="article-image" banana-imagesrc="${arti[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url('${arti[0].image}')"></div>
+            ${published_data.map((i) => html`
+                ${i.item_highestrank.map((article) => html`
+                    <div class="head-article-item analysis-article-obj" banana-keywords="${JSON.stringify(i.topics_lda)}" banana-link="${article[0].url}" banana-articleid="${article[0]._id}">
+                        <div class="article-image" banana-imagesrc="${article[0].image}" style="background-image:  linear-gradient(to bottom, rgba(0, 0, 0 , 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url('${article[0].image}')"></div>
                         <div class="article-data-container">
                             <div class="article-keywords">
-                                ${i.theme.map((th) => html`
-                                <p>${th}</p>
+                                ${i.topics_lda.map((topiccluster) => html`
+                                <div class="keyword-cluster">
+                                    ${topiccluster.map((topic) => html`
+                                    <span>${topic}&nbsp;</span>
+                                    `)}
+                                </div>
                                 `)}
                             </div>
-                            <a href="${arti[0].url}" target="_blank">
-                                <p class="title">${arti[0].title}</p>
+                            <a href="${article[0].url}" target="_blank">
+                                <p class="title">${article[0].title}</p>
                                 <div class="article-info">
-                                    <p class="origin">${arti[0].origin}</p>
+                                    <p class="origin">${article[0].origin}</p>
                                 </div>
                             </a>
                         </div>
                         
                         <div class="article-moreitems">
                             <p class="all-article-header">↳ More Stories In This Cluster</p>
-                        ${arti.length > 0 ? html`
-                            ${arti.map((a) => html`
+                        ${article.length > 0 ? html`
+                            ${article.map((a) => html`
                             <div class="all-article-item" banana-link="${a.url}" banana-articleid="${a._id}" banana-imagesrc="${a.image}">
                                 <a href="${a.url}" target="_blank">
                                     <p class="title">${a.title}</p>
