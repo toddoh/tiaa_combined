@@ -10,3 +10,4 @@ node_modules
 **/articles_tf_idf.npz
 /dataset/today/
 /analysis_assets/today/
+/data_publish_ready/today/
