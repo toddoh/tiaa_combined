@@ -227,9 +227,9 @@ const render_data = (month) => {
     var trump_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/analysis_assets/trumptweeted/' + month + '.json';
+        dataset_url = '//localhost:3000/data_publish_ready/trumptweeted/' + month + '.json';
     } else {
-        dataset_url = 'https://thisisallabout.com/analysis_assets/trumptweeted/' + month + '.json';
+        dataset_url = 'https://thisisallabout.com/data_publish_ready/trumptweeted/' + month + '.json';
     }
 
     window.history.pushState({}, null, '/whattrumpsaid/' + month + '/');
